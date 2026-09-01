@@ -23,12 +23,12 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     if (reducedMotion) return;
 
     const instance = new Lenis({
-      duration: 1.1,
+      duration: 0.85,
       // expo-out: quick to respond, long tail — the "expensive" feel.
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 1,
-      touchMultiplier: 1.7,
+      touchMultiplier: 1,
       infinite: false,
     });
 
@@ -50,6 +50,7 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
   // Anchor links have to go through Lenis, otherwise native jump fights the loop.
   useEffect(() => {
     const onClick = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       const anchor = (event.target as HTMLElement | null)?.closest?.('a[href^="#"]');
       if (!anchor) return;
 
@@ -61,16 +62,20 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
 
       event.preventDefault();
       if (lenis) {
-        lenis.scrollTo(target as HTMLElement, { offset: -72, duration: 1.4 });
+        lenis.scrollTo(target as HTMLElement, { offset: -24, duration: 0.9 });
       } else {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'start' });
+      }
+      if (href === '#main') {
+        (target as HTMLElement).setAttribute('tabindex', '-1');
+        (target as HTMLElement).focus({ preventScroll: true });
       }
       history.replaceState(null, '', href);
     };
 
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
-  }, [lenis]);
+  }, [lenis, reducedMotion]);
 
   return <LenisContext.Provider value={lenis}>{children}</LenisContext.Provider>;
 }

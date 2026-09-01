@@ -32,7 +32,8 @@ export function Reveal({
     const el = ref.current;
     if (!el) return;
 
-    const ctx = gsap.context(() => {
+    const mm = gsap.matchMedia();
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
       const targets = stagger ? Array.from(el.children) : [el];
       if (stagger) gsap.set(el, { opacity: 1 });
 
@@ -42,16 +43,16 @@ export function Reveal({
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 0.75,
           ease: 'expo.out',
           delay,
           stagger: stagger ?? 0,
           scrollTrigger: { trigger: el, start, once: true },
         }
       );
-    }, ref);
+    });
 
-    return () => ctx.revert();
+    return () => mm.revert();
   }, [delay, y, stagger, start]);
 
   return (

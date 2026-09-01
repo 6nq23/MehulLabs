@@ -1,37 +1,28 @@
-/** Single source of truth for brand copy. Replace these with real content. */
+/** Public brand information. Configure contact details and the canonical URL before launch. */
 export const site = {
   name: 'Mehul Labs',
-  /** First name for personal, first-person copy (e.g. the hero intro). */
   founder: 'Mehul',
-  role: 'AI Product Engineer',
-  /** Mid-sentence form — lowercasing `role` would mangle the "AI" acronym. */
-  roleInline: 'AI product engineer',
-  tagline: 'I build AI products that businesses actually keep using.',
+  role: 'AI Tools & Automation for D2C Brands',
+  roleInline: 'AI tools and automation partner for D2C brands',
+  tagline: 'We give D2C founders the AI tools, Claude skills, and hands-on support to grow across every platform — without hiring a tech team.',
   location: 'Bengaluru, India',
-  email: 'hello@example.com',
-  phone: '+91 00000 00000',
-  url: 'https://example.com',
-  availability: 'Taking on 2 projects for Q3',
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || '',
+  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || '',
+  availability: 'Now onboarding founders for Q3',
 } as const;
 
+export const contactEmail =
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(site.email) && !/@example\.(com|org|net)$/i.test(site.email)
+    ? site.email
+    : '';
+
 export const navLinks = [
-  { label: 'Story', href: '#story' },
-  { label: 'About', href: '#about' },
-  { label: 'Products', href: '#products' },
-  { label: 'Work', href: '#work' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Services', href: '#services' },
+  { label: 'How it works', href: '#approach' },
+  { label: 'Community', href: '#community' },
+  { label: 'FAQs', href: '#faq' },
 ] as const;
 
-export const socials = [
-  { label: 'X', href: 'https://x.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'GitHub', href: 'https://github.com' },
-  { label: 'Dribbble', href: 'https://dribbble.com' },
-] as const;
-
-export const stats = [
-  { value: '6+', label: 'AI products shipped' },
-  { value: '40+', label: 'Client engagements' },
-  { value: '9', label: 'Years building' },
-  { value: '4.9', label: 'Average rating' },
-] as const;
+// No unverified social profiles or performance claims are displayed.
+export const socials: { label: string; href: string }[] = [];
+export const stats: { value: string; label: string }[] = [];

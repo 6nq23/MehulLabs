@@ -1,30 +1,27 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * Palette follows a strict 60 / 30 / 10 split:
- *   60% canvas (white)  •  30% surface/mist (light gray)  •  10% accent (premium red)
- * The red is deliberately rationed — it only ever appears on actions,
- * live indicators, and single-word emphasis.
+ * Warm paper, deep charcoal, and forest green connect the identity to the film.
  */
 const config: Config = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
-        canvas: '#FFFFFF',
-        surface: '#F7F7F8',
-        mist: '#F0F0F2',
-        line: '#E4E4E7',
+        canvas: '#F7F7F2',
+        surface: '#EEEFE7',
+        mist: '#E9ECE4',
+        line: '#D8DDD1',
         ink: {
-          DEFAULT: '#0A0A0B',
-          muted: '#52525B',
-          faint: '#8E8E96',
+          DEFAULT: '#202720',
+          muted: '#586056',
+          faint: '#626B5C',
         },
         accent: {
-          DEFAULT: '#C8102E',
-          bright: '#E11D34',
-          soft: '#FDF2F3',
-          ring: 'rgba(200, 16, 46, 0.22)',
+          DEFAULT: '#496546',
+          bright: '#3B5538',
+          soft: '#E7ECDD',
+          ring: 'rgba(92, 114, 98, 0.22)',
         },
       },
       fontFamily: {
@@ -39,10 +36,10 @@ const config: Config = {
         eyebrow: ['0.6875rem', { lineHeight: '1', letterSpacing: '0.18em', fontWeight: '500' }],
       },
       maxWidth: {
-        shell: '84rem',
+        shell: '96rem',
       },
       spacing: {
-        section: 'clamp(6rem, 12vw, 11rem)',
+        section: 'clamp(5rem, 9vw, 9rem)',
       },
       borderRadius: {
         xl2: '1.25rem',
@@ -55,7 +52,7 @@ const config: Config = {
       boxShadow: {
         card: '0 1px 2px rgba(10,10,11,0.04), 0 8px 24px -12px rgba(10,10,11,0.10)',
         lift: '0 2px 4px rgba(10,10,11,0.04), 0 24px 48px -20px rgba(10,10,11,0.18)',
-        accent: '0 12px 32px -12px rgba(200,16,46,0.45)',
+        accent: '0 12px 32px -12px rgba(73,101,70,0.25)',
       },
       keyframes: {
         marquee: {

@@ -2,6 +2,19 @@
   "name": "personal-brand-site",
   "version": "1.0.0",
   "private": true,
+  "description": "A cinematic, scroll-driven personal brand landing page. Next.js App Router · TypeScript · Tailwind CSS · GSAP + ScrollTrigger · Lenis.",
+  "homepage": "https://github.com/shingalaparth/Labs-landing#readme",
+  "bugs": {
+    "url": "https://github.com/shingalaparth/Labs-landing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shingalaparth/Labs-landing.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

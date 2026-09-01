@@ -1,166 +1,68 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
+import { ArrowIcon } from '@/components/ui/MagneticButton';
+import { contactEmail } from '@/data/site';
 
-import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
-import { Reveal } from '@/components/ui/Reveal';
-import { TextReveal } from '@/components/ui/TextReveal';
-import { site, socials } from '@/data/site';
-
-const budgets = ['< $10k', '$10k – $25k', '$25k – $60k', '$60k+'];
+const interests = ['Product Research', 'SEO Automation', 'Ads Analysis', 'AI Operations', 'AI Calling & WhatsApp', 'All-in-one', 'Let\u2019s figure it out'];
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
+  const [brief, setBrief] = useState('');
+  const [status, setStatus] = useState('');
+
+  function prepareEnquiry(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const fields = new FormData(event.currentTarget);
+    const text = [
+      'New enquiry — Mehul Labs', '',
+      'Name: ' + String(fields.get('name') ?? '').trim(),
+      'Email: ' + String(fields.get('email') ?? '').trim(),
+      'Brand / website: ' + String(fields.get('brand') ?? '').trim(),
+      'Interested in: ' + String(fields.get('interest') ?? 'Let\u2019s figure it out'),
+      '', String(fields.get('message') ?? '').trim(),
+    ].join('\n');
+    setBrief(text);
+    setStatus('Your enquiry is ready. Nothing has been sent yet.');
+  }
+
+  async function copyBrief() {
+    try {
+      await navigator.clipboard.writeText(brief);
+      setStatus('Enquiry copied. You can paste it into a message.');
+    } catch {
+      setStatus('Copy is unavailable. You can download your enquiry instead.');
+    }
+  }
 
   return (
-    <section id="contact" className="relative bg-canvas py-section">
-      <div className="shell">
-        <div className="grid gap-16 lg:grid-cols-[1fr_1fr] lg:gap-24">
-          <div className="flex flex-col gap-8">
-            <Reveal>
-              <span className="eyebrow-accent">Contact</span>
-            </Reveal>
-
-            <TextReveal as="h2" className="text-display-lg text-ink">
-              {'Let’s build something {worth} keeping.'}
-            </TextReveal>
-
-            <Reveal delay={0.1}>
-              <p className="max-w-md leading-relaxed text-ink-muted">
-                Placeholder copy. Tell me what is breaking, what you have tried,
-                and what &ldquo;working&rdquo; would look like. I reply to
-                everything within two working days.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.16} className="flex flex-col gap-8 pt-2">
-              <div className="flex flex-col gap-1">
-                <span className="eyebrow">Email</span>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="group inline-flex w-fit items-center gap-2 font-display text-xl tracking-tight text-ink"
-                >
-                  {site.email}
-                  <span className="h-px w-0 bg-accent transition-all duration-500 ease-premium group-hover:w-6" />
-                </a>
-              </div>
-
-              <div className="flex flex-col gap-1">
-                <span className="eyebrow">Based in</span>
-                <span className="font-display text-xl tracking-tight text-ink">
-                  {site.location}
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <span className="eyebrow">Elsewhere</span>
-                <ul className="flex flex-wrap gap-2">
-                  {socials.map((social) => (
-                    <li key={social.label}>
-                      <a
-                        href={social.href}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="inline-flex rounded-full border border-line px-4 py-2 text-sm text-ink-muted transition-colors duration-300 hover:border-accent hover:text-accent"
-                      >
-                        {social.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-          </div>
-
-          <Reveal delay={0.12}>
-            <form
-              onSubmit={(event) => {
-                event.preventDefault();
-                setSent(true);
-              }}
-              className="flex flex-col gap-6 rounded-xl3 border border-line bg-surface p-8 lg:p-10"
-            >
-              <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="eyebrow">
-                  Your name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  placeholder="Jane Doe"
-                  className="w-full rounded-xl border border-line bg-canvas px-4 py-3.5 text-[0.9375rem] text-ink outline-none transition-colors duration-300 placeholder:text-ink-faint focus:border-accent"
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="eyebrow">
-                  Work email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="jane@company.com"
-                  className="w-full rounded-xl border border-line bg-canvas px-4 py-3.5 text-[0.9375rem] text-ink outline-none transition-colors duration-300 placeholder:text-ink-faint focus:border-accent"
-                />
-              </div>
-
-              <fieldset className="flex flex-col gap-3">
-                <legend className="eyebrow mb-1">Budget range</legend>
-                <div className="flex flex-wrap gap-2">
-                  {budgets.map((budget, index) => (
-                    <label
-                      key={budget}
-                      className="cursor-pointer rounded-full border border-line bg-canvas px-4 py-2 text-sm text-ink-muted transition-colors duration-300 hover:border-ink/25 has-[:checked]:border-accent has-[:checked]:bg-accent has-[:checked]:text-white"
-                    >
-                      <input
-                        type="radio"
-                        name="budget"
-                        value={budget}
-                        defaultChecked={index === 1}
-                        className="sr-only"
-                      />
-                      {budget}
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-
-              <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="eyebrow">
-                  What are you building?
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  required
-                  placeholder="A short paragraph is plenty."
-                  className="w-full resize-none rounded-xl border border-line bg-canvas px-4 py-3.5 text-[0.9375rem] text-ink outline-none transition-colors duration-300 placeholder:text-ink-faint focus:border-accent"
-                />
-              </div>
-
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <MagneticButton type="submit" variant="primary" strength={0.26}>
-                  {sent ? 'Message noted' : 'Send enquiry'}
-                  <ArrowIcon />
-                </MagneticButton>
-
-                <p
-                  aria-live="polite"
-                  className="text-xs leading-relaxed text-ink-faint"
-                >
-                  {sent
-                    ? 'Demo form — no backend is wired up yet.'
-                    : 'Front-end demo. Wire this to your provider of choice.'}
-                </p>
-              </div>
-            </form>
-          </Reveal>
+    <section id="contact" className="contact-section section-space" aria-labelledby="contact-title">
+      <div className="shell contact-grid">
+        <div className="contact-copy">
+          <span className="section-label"><span>05 /</span> Let&apos;s get started</span>
+          <h2 id="contact-title">Ready to<br />grow your<br /><span>D2C brand?</span></h2>
+          <p>Pick a service, go all-in, or just tell us where you&apos;re stuck. We&apos;ll figure out the right setup together.</p>
+          <div className="contact-person"><span className="contact-initial" aria-hidden="true">m.</span><div><strong>Start a conversation with Mehul Labs.</strong><span>Real founders. Real support. Real growth.</span></div></div>
+          {contactEmail && <a className="contact-email text-link" href={'mailto:' + contactEmail}>{contactEmail}<ArrowIcon /></a>}
         </div>
+        <noscript><p>Please enable JavaScript to prepare an enquiry.{contactEmail && <>Or email <a href={'mailto:' + contactEmail}>{contactEmail}</a>.</>}</p></noscript>
+        <form className="enquiry-form" onSubmit={prepareEnquiry} onChange={() => { if (brief) { setBrief(''); setStatus(''); } }}>
+          <div className="form-heading"><h3>Tell us about your brand.</h3><p>No perfect brief needed. Just a place to start.</p></div>
+          <div className="form-row">
+            <div className="form-field"><label htmlFor="name">Your name <span>*</span></label><input id="name" name="name" autoComplete="name" required maxLength={100} placeholder="What should we call you?" /></div>
+            <div className="form-field"><label htmlFor="email">Email address <span>*</span></label><input id="email" name="email" type="email" autoComplete="email" required maxLength={254} placeholder="you@yourbrand.com" /></div>
+          </div>
+          <div className="form-field"><label htmlFor="brand">Brand name or website <span className="optional">Optional</span></label><input id="brand" name="brand" autoComplete="organization" maxLength={200} placeholder="Introduce us to your brand" /></div>
+          <fieldset className="interest-field"><legend>What are you interested in?</legend><div>{interests.map((interest, index) => <label key={interest}><input type="radio" name="interest" value={interest} defaultChecked={index === interests.length - 1} /><span>{interest}</span></label>)}</div></fieldset>
+          <div className="form-field"><label htmlFor="message">What&apos;s on your mind? <span>*</span></label><textarea id="message" name="message" rows={3} required minLength={10} maxLength={4000} placeholder="Tell us about your brand and what you need help with." /></div>
+          <button type="submit" className="enquiry-submit">Prepare your enquiry<ArrowIcon /></button>
+          <p className="form-privacy">{contactEmail ? 'We\u2019ll prepare an email for you to review and send from your email app.' : 'Prepare a brief to download and share. This form does not send your information.'}</p>
+          <p role="status" aria-live="polite" className="form-status">{status}</p>
+          {brief && <div className="brief-actions">
+            {contactEmail && <a href={'mailto:' + contactEmail + '?subject=' + encodeURIComponent('Interested in Mehul Labs services') + '&body=' + encodeURIComponent(brief)}>Open email draft <ArrowIcon /></a>}
+            <a href={'data:text/plain;charset=utf-8,' + encodeURIComponent(brief)} download="mehul-labs-enquiry.txt">Download enquiry <ArrowIcon /></a>
+            <button type="button" onClick={copyBrief}>Copy enquiry</button>
+          </div>}
+        </form>
       </div>
     </section>
   );

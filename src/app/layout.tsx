@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Space_Grotesk } from 'next/font/google';
+import { Inter, Manrope } from 'next/font/google';
 
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { ScrollProgress } from '@/components/layout/ScrollProgress';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
-import { Preloader } from '@/components/providers/Preloader';
-import { site } from '@/data/site';
+import { contactEmail, site } from '@/data/site';
 
 import './globals.css';
 
@@ -16,50 +15,56 @@ const inter = Inter({
   display: 'swap',
 });
 
-const spaceGrotesk = Space_Grotesk({
+const display = Manrope({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(site.url || 'http://localhost:3000'),
+  alternates: site.url ? { canonical: site.url } : undefined,
   title: {
     default: `${site.name} — ${site.role}`,
     template: `%s — ${site.name}`,
   },
   description: site.tagline,
   keywords: [
-    'AI product engineer',
-    'AI voice agent',
-    'AI automation',
-    'Next.js developer',
+    'AI tools for D2C brands',
+    'Claude skills automation',
+    'SEO automation',
+    'product research AI',
+    'D2C growth',
+    'WhatsApp automation',
+    'AI calling agent',
     site.name,
   ],
-  authors: [{ name: site.name, url: site.url }],
+  authors: [{ name: site.name, url: site.url || undefined }],
   creator: site.name,
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: site.url,
+    url: site.url || undefined,
     siteName: site.name,
     title: `${site.name} — ${site.role}`,
     description: site.tagline,
+    images: [{ url: '/og.png', width: 1731, height: 909, alt: 'Mehul Labs — AI Tools & Automation for D2C Brands' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} — ${site.role}`,
     description: site.tagline,
+    images: ['/og.png'],
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+    index: Boolean(site.url),
+    follow: Boolean(site.url),
+    googleBot: { index: Boolean(site.url), follow: Boolean(site.url), 'max-image-preview': 'large' },
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#FFFFFF',
+  themeColor: '#F7F7F2',
   colorScheme: 'light',
   width: 'device-width',
   initialScale: 1,
@@ -67,11 +72,10 @@ export const viewport: Viewport = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
+  '@type': 'Organization',
   name: site.name,
-  jobTitle: site.role,
-  url: site.url,
-  email: site.email,
+  url: site.url || undefined,
+  email: contactEmail || undefined,
   description: site.tagline,
 };
 
@@ -79,18 +83,17 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${inter.variable} ${display.variable}`}>
       <head>
-        {/* Reveal primitives start at opacity:0 and are cleared by GSAP.
-            Without JS they would never appear, so force them visible. */}
+        {/* Preserve readable content when JavaScript is unavailable. */}
         <noscript>
-          <style>{`[data-reveal],[data-word]{opacity:1!important;transform:none!important}`}</style>
+          <style>{`[data-reveal],[data-word]{opacity:1!important;transform:none!important}.film-play,.film-corner,.enquiry-form{display:none!important}`}</style>
         </noscript>
       </head>
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
         />
         <a
           href="#main"
@@ -100,7 +103,6 @@ export default function RootLayout({
         </a>
 
         <SmoothScrollProvider>
-          <Preloader />
           <ScrollProgress />
           <Navbar />
           <main id="main">{children}</main>
