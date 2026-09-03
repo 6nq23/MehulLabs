@@ -7,7 +7,7 @@ export function Approach() {
       <div className="shell">
         <div className="section-intro">
           <span className="section-label"><span>02 /</span> How it works</span>
-          <div><h2 id="approach-title" className="section-title">We don't hand you a manual.<br /><span>We set it up and teach you.</span></h2>
+          <div><h2 id="approach-title" className="section-title">We don&apos;t hand you a manual.<br /><span>We set it up and teach you.</span></h2>
           <p className="section-description">Everything gets installed on your accounts. You own it. We just make sure you know how to run it.</p></div>
         </div>
         <div className="process-grid">{processSteps.map(step => <Reveal className="process-step" key={step.number}>

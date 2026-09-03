@@ -19,8 +19,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "frames": "node scripts/build-frames.mjs"
+    "lint": "next lint"
   },
   "dependencies": {
     "clsx": "^2.1.1",

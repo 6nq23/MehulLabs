@@ -18,7 +18,7 @@ export function Services() {
               <div className="service-top"><span>{service.number}</span><span>{service.category}</span><ArrowIcon className="-rotate-45" /></div>
               <h3>{service.title}</h3><p>{service.description}</p>
               <ul>{service.items.map(item => <li key={item}><span aria-hidden="true">↗</span>{item}</li>)}</ul>
-              <a href="#contact" className="service-link" aria-label={'Discuss ' + service.category.toLowerCase()}>Let's set it up <ArrowIcon /></a>
+              <a href="#contact" className="service-link" aria-label={'Discuss ' + service.category.toLowerCase()}>Let&apos;s set it up <ArrowIcon /></a>
             </Reveal>
           ))}
         </div>

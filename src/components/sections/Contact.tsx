@@ -22,16 +22,8 @@ export function Contact() {
       '', String(fields.get('message') ?? '').trim(),
     ].join('\n');
     setBrief(text);
-    setStatus('Your enquiry is ready. Nothing has been sent yet.');
-  }
-
-  async function copyBrief() {
-    try {
-      await navigator.clipboard.writeText(brief);
-      setStatus('Enquiry copied. You can paste it into a message.');
-    } catch {
-      setStatus('Copy is unavailable. You can download your enquiry instead.');
-    }
+    setStatus('Opening WhatsApp...');
+    window.open(`https://wa.me/919426016918?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
   }
 
   return (
@@ -43,6 +35,7 @@ export function Contact() {
           <p>Pick a service, go all-in, or just tell us where you&apos;re stuck. We&apos;ll figure out the right setup together.</p>
           <div className="contact-person"><span className="contact-initial" aria-hidden="true">m.</span><div><strong>Start a conversation with Mehul Labs.</strong><span>Real founders. Real support. Real growth.</span></div></div>
           {contactEmail && <a className="contact-email text-link" href={'mailto:' + contactEmail}>{contactEmail}<ArrowIcon /></a>}
+          <a className="contact-whatsapp text-link" href="https://wa.me/919426016918" target="_blank" rel="noopener noreferrer" style={{ marginTop: '0.5rem' }}>Chat on WhatsApp <ArrowIcon /></a>
         </div>
         <noscript><p>Please enable JavaScript to prepare an enquiry.{contactEmail && <>Or email <a href={'mailto:' + contactEmail}>{contactEmail}</a>.</>}</p></noscript>
         <form className="enquiry-form" onSubmit={prepareEnquiry} onChange={() => { if (brief) { setBrief(''); setStatus(''); } }}>
@@ -54,14 +47,9 @@ export function Contact() {
           <div className="form-field"><label htmlFor="brand">Brand name or website <span className="optional">Optional</span></label><input id="brand" name="brand" autoComplete="organization" maxLength={200} placeholder="Introduce us to your brand" /></div>
           <fieldset className="interest-field"><legend>What are you interested in?</legend><div>{interests.map((interest, index) => <label key={interest}><input type="radio" name="interest" value={interest} defaultChecked={index === interests.length - 1} /><span>{interest}</span></label>)}</div></fieldset>
           <div className="form-field"><label htmlFor="message">What&apos;s on your mind? <span>*</span></label><textarea id="message" name="message" rows={3} required minLength={10} maxLength={4000} placeholder="Tell us about your brand and what you need help with." /></div>
-          <button type="submit" className="enquiry-submit">Prepare your enquiry<ArrowIcon /></button>
-          <p className="form-privacy">{contactEmail ? 'We\u2019ll prepare an email for you to review and send from your email app.' : 'Prepare a brief to download and share. This form does not send your information.'}</p>
+          <button type="submit" className="enquiry-submit">Send via WhatsApp<ArrowIcon /></button>
+          <p className="form-privacy">We&apos;ll open WhatsApp for you to review and send the message.</p>
           <p role="status" aria-live="polite" className="form-status">{status}</p>
-          {brief && <div className="brief-actions">
-            {contactEmail && <a href={'mailto:' + contactEmail + '?subject=' + encodeURIComponent('Interested in Mehul Labs services') + '&body=' + encodeURIComponent(brief)}>Open email draft <ArrowIcon /></a>}
-            <a href={'data:text/plain;charset=utf-8,' + encodeURIComponent(brief)} download="mehul-labs-enquiry.txt">Download enquiry <ArrowIcon /></a>
-            <button type="button" onClick={copyBrief}>Copy enquiry</button>
-          </div>}
         </form>
       </div>
     </section>

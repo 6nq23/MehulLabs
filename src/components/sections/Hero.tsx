@@ -14,7 +14,7 @@ export function Hero() {
         </h1>
         <div className="hero-bottom">
           <div className="hero-intro">
-            <p>AI-powered tools and automations<br />built for D2C founders who move fast.</p>
+            <p>AI-powered tools and automations<br />{' '}built for D2C founders who move fast.</p>
             <a href="#story" className="text-link hero-film-link">
               <span className="play-symbol" aria-hidden="true">▶</span>
               See how it works <span className="text-ink-faint">/ 00:10</span>

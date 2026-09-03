@@ -23,6 +23,3 @@ export const navLinks = [
   { label: 'FAQs', href: '#faq' },
 ] as const;
 
-// No unverified social profiles or performance claims are displayed.
-export const socials: { label: string; href: string }[] = [];
-export const stats: { value: string; label: string }[] = [];

@@ -22,7 +22,7 @@ export function VideoStory() {
     <section id="story" className="film-section" aria-labelledby="film-title">
       <div className="shell">
         <div className="film-frame">
-          <video ref={videoRef} src="/story-video.mp4" poster="/story-poster.webp" playsInline controls preload="none" aria-label="Mehul Labs brand film" aria-describedby="film-description" onPlay={() => setStarted(true)} onError={() => setError('The film is unavailable right now. Please try the direct link below.')}>
+          <video ref={videoRef} src="/story-video.mp4" poster="/story-poster.webp" playsInline controls preload="metadata" data-playing={started ? '' : undefined} aria-label="Mehul Labs brand film" aria-describedby="film-description" onPlay={() => setStarted(true)} onPause={() => setStarted(false)} onEnded={() => setStarted(false)} onError={() => setError('The film is unavailable right now. Please try the direct link below.')}>
             Your browser does not support this video. <a href="/story-video.mp4">Watch the brand film.</a>
           </video>
           {!started && <button type="button" className="film-play" onClick={playFilm} aria-label="Play the ten-second Mehul Labs brand film"><span className="film-play-circle" aria-hidden="true">▶</span><span>Watch the film <small>00:10</small></span></button>}

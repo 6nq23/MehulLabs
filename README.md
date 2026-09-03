@@ -13,12 +13,14 @@ npm start
 
 ## Page and content
 
-The current route is composed of Hero, VideoStory, Services, Approach, About, Faq, and Contact. The hero intentionally contains no image. The original ten-second `public/story-video.mp4` is preserved; `public/story-poster.webp` is a frame extracted from that film. Video playback is opt-in, with native controls and a text description. The animated marketplace scenes illustrate a broader D2C service offering, not an Amazon-only business.
+The current route is composed of Hero, VideoStory, Services, Approach, Community, Faq, and Contact. The hero intentionally contains no image. The ten-second `public/story-video.mp4` is preserved; `public/story-poster.webp` is its responsive poster. Video playback is opt-in, with native controls and a text description. The animated marketplace scenes illustrate a broader D2C service offering, not an Amazon-only business.
 
 - Brand and public configuration: `src/data/site.ts`
 - Service, process, and FAQ copy: `src/data/commerce.ts`
 - Page composition: `src/app/page.tsx`
 - Design tokens and component styles: `src/app/globals.css` and `tailwind.config.ts`
+- Brand film: `public/story-video.mp4`
+- Film poster: `public/story-poster.webp`
 - Social preview: `public/og.png`
 
 The old demo portfolio, products, testimonials, preloader, portrait, and frame-sequence implementation remain in the repository for reference but are not imported into the active page. Their illustrative results and quotes are not displayed, and the frame sequence is not downloaded. No client outcomes, ratings, customer logos, or partner status have been invented for the redesign.
