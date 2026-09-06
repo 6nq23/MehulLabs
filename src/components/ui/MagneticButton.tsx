@@ -19,6 +19,7 @@ interface Props {
   /** 0 disables the pull; ~0.4 is a firm but still-natural magnet. */
   strength?: number;
   ariaLabel?: string;
+  trackingLocation?: string;
 }
 
 const base =
@@ -42,6 +43,7 @@ export function MagneticButton({
   className,
   strength = 0.35,
   ariaLabel,
+  trackingLocation,
 }: Props) {
   const ref = useRef<HTMLAnchorElement & HTMLButtonElement>(null);
   const labelRef = useRef<HTMLSpanElement>(null);
@@ -98,7 +100,7 @@ export function MagneticButton({
 
   if (href) {
     return (
-      <a ref={ref} href={href} className={classes} aria-label={ariaLabel}>
+      <a ref={ref} href={href} className={classes} aria-label={ariaLabel} data-cta-location={trackingLocation}>
         {content}
       </a>
     );

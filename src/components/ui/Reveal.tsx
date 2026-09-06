@@ -21,9 +21,9 @@ export function Reveal({
   children,
   className,
   delay = 0,
-  y = 28,
+  y = 12,
   stagger,
-  start = 'top 88%',
+  start = 'top 98%',
   as: Tag = 'div',
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
@@ -35,15 +35,12 @@ export function Reveal({
     const mm = gsap.matchMedia();
     mm.add('(prefers-reduced-motion: no-preference)', () => {
       const targets = stagger ? Array.from(el.children) : [el];
-      if (stagger) gsap.set(el, { opacity: 1 });
-
       gsap.fromTo(
         targets,
-        { opacity: 0, y },
+        { y },
         {
-          opacity: 1,
           y: 0,
-          duration: 0.75,
+          duration: 0.35,
           ease: 'expo.out',
           delay,
           stagger: stagger ?? 0,

@@ -2,7 +2,7 @@
   "name": "personal-brand-site",
   "version": "1.0.0",
   "private": true,
-  "description": "A cinematic, scroll-driven personal brand landing page. Next.js App Router · TypeScript · Tailwind CSS · GSAP + ScrollTrigger · Lenis.",
+  "description": "Mehul Labs — D2C infrastructure, COD voice agents, Meta creative analysis, and SEO automation.",
   "homepage": "https://github.com/shingalaparth/Labs-landing#readme",
   "bugs": {
     "url": "https://github.com/shingalaparth/Labs-landing/issues"
@@ -18,7 +18,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "node --test tests/enquiry.test.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

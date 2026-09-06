@@ -1,49 +1,70 @@
-# Mehul Labs — D2C growth & technology studio
+# Mehul Labs — D2C infrastructure & AI automation
 
-A typography-led landing page for D2C brands across their own storefronts and marketplaces. Built with the existing Next.js App Router, TypeScript, Tailwind, GSAP, and Lenis stack.
+A responsive, frontend-only Next.js landing page for four solutions: D2C infrastructure, COD voice calling, Meta creative analysis, and SEO/blog automation. Built with TypeScript, Tailwind CSS, GSAP, and Lenis.
 
-## Run
+## Run and verify
 
 ```sh
 npm install
 npm run dev
+npm run lint
+npm test
 npm run build
 npm start
 ```
 
+The tests exercise the actual enquiry helpers locally. They do not open WhatsApp or send a message.
+
 ## Page and content
 
-The current route is composed of Hero, VideoStory, Services, Approach, Community, Faq, and Contact. The hero intentionally contains no image. The ten-second `public/story-video.mp4` is preserved; `public/story-poster.webp` is its responsive poster. Video playback is opt-in, with native controls and a text description. The animated marketplace scenes illustrate a broader D2C service offering, not an Amazon-only business.
+Hero → Brand film → Four solutions → Implementation → About → FAQs → Enquiry.
 
-- Brand and public configuration: `src/data/site.ts`
-- Service, process, and FAQ copy: `src/data/commerce.ts`
+- Brand, contact destination, and navigation: `src/data/site.ts`
+- Solutions, shared interest choices, process, and FAQs: `src/data/commerce.ts`
 - Page composition: `src/app/page.tsx`
-- Design tokens and component styles: `src/app/globals.css` and `tailwind.config.ts`
-- Brand film: `public/story-video.mp4`
-- Film poster: `public/story-poster.webp`
-- Social preview: `public/og.png`
+- Sections: `src/components/sections/`
+- Colors and responsive styles: `src/app/globals.css` and `tailwind.config.ts`
+- Brand film and poster: `public/story-video.mp4`, `public/story-poster.webp`
+- Social preview: `src/app/opengraph-image.tsx`, generated statically at build time
+- Research and implementation rationale: `docs/landing-page-plan.md`
 
-The old demo portfolio, products, testimonials, preloader, portrait, and frame-sequence implementation remain in the repository for reference but are not imported into the active page. Their illustrative results and quotes are not displayed, and the frame sequence is not downloaded. No client outcomes, ratings, customer logos, or partner status have been invented for the redesign.
+The original palette and fonts are preserved. The third section leads with infrastructure and gives the three supporting solutions their own cards. No customer outcomes, testimonials, screenshots of fictional software, or partner claims are fabricated.
 
-## Contact and launch configuration
+The 1,500+ daily orders figure describes the scale being built for. Replace it with a demonstrated-capacity statement only when the scope and supporting evidence are available. Reference image 31 was not available during implementation; the feature layout follows the approved written plan.
 
-Copy `.env.example` to `.env.local` and set:
+## Enquiry flow
+
+A brand name or website is required. Solution interest defaults to “Help me choose.” Name and a short note are optional. An optional daily-order range is shown for infrastructure, COD calling, or an undecided visitor, and omitted from Meta/SEO drafts.
+
+Each solution button preselects the matching form option. Campaign links can use `/?solution=cod-voice#cod-voice`; supported IDs are `infrastructure`, `cod-voice`, `meta-creatives`, and `seo-content`.
+
+The frontend prepares a WhatsApp draft; the visitor must review and send it. It never reports successful delivery. A fallback link and copyable message remain available if the browser does not open WhatsApp. Drafts stay in React memory and are cleared on form changes; there is no database or browser storage. A direct WhatsApp link remains available without JavaScript.
+
+## Measurement
+
+`src/lib/analytics.ts` emits local `mehul:conversion` CustomEvents for CTA clicks, solution selection, form starts, and WhatsApp handoff attempts. Payloads contain event names, locations, and solution IDs only. No contact information or message content is included. No tracking service, network transmission, persistence, or cookies are installed.
+
+A future analytics adapter can listen for these events. The current implementation does not collect or report historical conversion statistics. A WhatsApp handoff is not a confirmed message or qualified lead. Reconcile received conversations and sales outcomes separately, initially through your normal sales process.
+
+## Launch configuration
+
+Create `.env.local` from `.env.example` and set the public values:
 
 ```dotenv
 NEXT_PUBLIC_CONTACT_EMAIL=your-real-business-address
 NEXT_PUBLIC_SITE_URL=https://your-real-domain
 ```
 
-Both settings are public and embedded at build time. Use a valid email and an absolute HTTP(S) origin, then rebuild. Do not put secrets in these variables.
+Rebuild after changes. Configure the real WhatsApp destination in `src/data/site.ts`. These values are public; do not add secrets.
 
-The contact form does **not** submit to a backend. It validates fields and prepares a downloadable/copyable text enquiry. When a valid business email is configured, it also offers a `mailto:` draft for the visitor to review and send through their own email app. It never reports successful delivery. Connecting an actual form delivery provider is a separate integration.
+The site remains noindex with an empty sitemap until the canonical URL is configured. Pricing, supported integrations, capacity evidence, and service terms must reflect the actual offer. Copy currently describes discussing and agreeing the scope rather than inventing specific rates or support guarantees.
 
-The page is noindex, with an empty sitemap, until a canonical URL is configured. The configured URL drives canonical metadata, social-image URLs, robots, and sitemap. No dummy contact addresses or generic social-profile links appear in the page.
+## Accessibility and media
 
-## Accessibility and motion
+Navigation uses a native modal dialog; Escape closes it and restores focus. FAQs use native disclosure controls. Forms have visible labels, keyboard-accessible choices, clear optional fields, and live status text. Reduced motion disables smooth scrolling and reveal motion. Core content and direct contact links remain available without JavaScript.
 
-The navigation uses a native modal dialog for focus containment, Escape-to-close, and a visible close button. FAQs use native disclosure controls. Form controls are labeled and keyboard accessible. Reduced-motion preferences disable smooth scrolling and reveal motion; core copy remains readable without JavaScript. No preloader blocks the first view.
+The brand film is opt-in and uses native controls. Its video file is not preloaded; the existing poster reserves the layout while visitors explore the page.
 
 ## Deployment
 
-The existing Next.js build and package scripts are preserved. This repository does not currently include `.openai/hosting.json` or an OpenNext/Cloudflare deployment adapter. Deploy using the established Next.js hosting setup, or add and validate a compatible adapter before using Sites hosting. Do not substitute an unvalidated static or Worker build for the application.
+Use the existing Next.js deployment setup. This repository has no `.openai/hosting.json` or Cloudflare adapter. This implementation has not published the website or installed any external analytics or lead-delivery service.

@@ -1,56 +1,121 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
-import { contactEmail } from '@/data/site';
-
-const interests = ['Product Research', 'SEO Automation', 'Ads Analysis', 'AI Operations', 'AI Calling & WhatsApp', 'All-in-one', 'Let\u2019s figure it out'];
+import { isSolutionId, orderRanges, solutions, solutionSelectionEvent, type InterestId } from '@/data/commerce';
+import { contactEmail, site } from '@/data/site';
+import { trackConversion } from '@/lib/analytics';
+import { buildEnquiry, getWhatsAppDraftUrl } from '@/lib/enquiry';
 
 export function Contact() {
-  const [brief, setBrief] = useState('');
+  const [interest, setInterest] = useState<InterestId>('not-sure');
+  const [draft, setDraft] = useState('');
   const [status, setStatus] = useState('');
+  const started = useRef(false);
+  const showVolume = interest === 'infrastructure' || interest === 'cod-voice' || interest === 'not-sure';
+  const whatsappDraftUrl = draft ? getWhatsAppDraftUrl(draft) : '';
+
+  useEffect(() => {
+    function selectSolution(event: Event) {
+      const id = (event as CustomEvent<unknown>).detail;
+      if (isSolutionId(id)) {
+        setInterest(id);
+        setDraft('');
+        setStatus('');
+      }
+    }
+    const campaignSolution = new URLSearchParams(window.location.search).get('solution');
+    if (isSolutionId(campaignSolution)) setInterest(campaignSolution);
+    window.addEventListener(solutionSelectionEvent, selectSolution);
+    return () => window.removeEventListener(solutionSelectionEvent, selectSolution);
+  }, []);
+
+  function startForm() {
+    if (!started.current) {
+      started.current = true;
+      trackConversion({ name: 'form_start' });
+    }
+  }
 
   function prepareEnquiry(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const fields = new FormData(event.currentTarget);
-    const text = [
-      'New enquiry — Mehul Labs', '',
-      'Name: ' + String(fields.get('name') ?? '').trim(),
-      'Email: ' + String(fields.get('email') ?? '').trim(),
-      'Brand / website: ' + String(fields.get('brand') ?? '').trim(),
-      'Interested in: ' + String(fields.get('interest') ?? 'Let\u2019s figure it out'),
-      '', String(fields.get('message') ?? '').trim(),
-    ].join('\n');
-    setBrief(text);
-    setStatus('Opening WhatsApp...');
-    window.open(`https://wa.me/919426016918?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+    const form = event.currentTarget;
+    const fields = new FormData(form);
+    const brand = String(fields.get('brand') ?? '').trim();
+    if (!brand) {
+      const input = form.elements.namedItem('brand') as HTMLInputElement;
+      input.setCustomValidity('Please enter your brand name or website.');
+      input.reportValidity();
+      return;
+    }
+
+    const name = String(fields.get('name') ?? '').trim();
+    const message = String(fields.get('message') ?? '').trim();
+    const volume = showVolume ? String(fields.get('volume') ?? '').trim() : '';
+    const text = buildEnquiry({ brand, interest, name, message, volume });
+
+    setDraft(text);
+    setStatus('Your draft is ready. Review and send it in WhatsApp. If it didn’t open, use the link below.');
+    trackConversion({ name: 'whatsapp_handoff', location: 'form', solution: interest });
+    // A null return also occurs with noopener; always provide a fallback link.
+    try {
+      window.open(getWhatsAppDraftUrl(text), '_blank', 'noopener,noreferrer');
+    } catch {
+      setStatus('Your draft is ready. Open WhatsApp using the link below.');
+    }
+  }
+
+  async function copyDraft() {
+    try {
+      await navigator.clipboard.writeText(draft);
+      setStatus('Draft copied. Paste it into your conversation with Mehul Labs.');
+    } catch {
+      setStatus('Copy is unavailable here. You can select the draft text below or open the WhatsApp link.');
+    }
   }
 
   return (
     <section id="contact" className="contact-section section-space" aria-labelledby="contact-title">
       <div className="shell contact-grid">
         <div className="contact-copy">
-          <span className="section-label"><span>05 /</span> Let&apos;s get started</span>
-          <h2 id="contact-title">Ready to<br />grow your<br /><span>D2C brand?</span></h2>
-          <p>Pick a service, go all-in, or just tell us where you&apos;re stuck. We&apos;ll figure out the right setup together.</p>
-          <div className="contact-person"><span className="contact-initial" aria-hidden="true">m.</span><div><strong>Start a conversation with Mehul Labs.</strong><span>Real founders. Real support. Real growth.</span></div></div>
+          <span className="section-label"><span>05 /</span> Discuss my setup</span>
+          <h2 id="contact-title">What&apos;s slowing<br /><span>your D2C brand down?</span></h2>
+          <p>Tell us about your brand and where you need help: order operations, COD calls, Meta creatives, or SEO.</p>
+          <div className="contact-person"><span className="contact-initial" aria-hidden="true">m.</span><div><strong>Start a conversation with Mehul.</strong><span>Founder, Mehul Labs</span></div></div>
+          <div className="contact-expectation"><h3>What happens next?</h3><p>We discuss your current workflow and whether a solution fits. You get clarity on scope, costs, and responsibilities before any implementation.</p></div>
           {contactEmail && <a className="contact-email text-link" href={'mailto:' + contactEmail}>{contactEmail}<ArrowIcon /></a>}
-          <a className="contact-whatsapp text-link" href="https://wa.me/919426016918" target="_blank" rel="noopener noreferrer" style={{ marginTop: '0.5rem' }}>Chat on WhatsApp <ArrowIcon /></a>
+          <a className="contact-whatsapp text-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackConversion({ name: 'whatsapp_handoff', location: 'direct' })}>Prefer to chat directly? Open WhatsApp <ArrowIcon /></a>
         </div>
-        <noscript><p>Please enable JavaScript to prepare an enquiry.{contactEmail && <>Or email <a href={'mailto:' + contactEmail}>{contactEmail}</a>.</>}</p></noscript>
-        <form className="enquiry-form" onSubmit={prepareEnquiry} onChange={() => { if (brief) { setBrief(''); setStatus(''); } }}>
-          <div className="form-heading"><h3>Tell us about your brand.</h3><p>No perfect brief needed. Just a place to start.</p></div>
-          <div className="form-row">
-            <div className="form-field"><label htmlFor="name">Your name <span>*</span></label><input id="name" name="name" autoComplete="name" required maxLength={100} placeholder="What should we call you?" /></div>
-            <div className="form-field"><label htmlFor="email">Email address <span>*</span></label><input id="email" name="email" type="email" autoComplete="email" required maxLength={254} placeholder="you@yourbrand.com" /></div>
-          </div>
-          <div className="form-field"><label htmlFor="brand">Brand name or website <span className="optional">Optional</span></label><input id="brand" name="brand" autoComplete="organization" maxLength={200} placeholder="Introduce us to your brand" /></div>
-          <fieldset className="interest-field"><legend>What are you interested in?</legend><div>{interests.map((interest, index) => <label key={interest}><input type="radio" name="interest" value={interest} defaultChecked={index === interests.length - 1} /><span>{interest}</span></label>)}</div></fieldset>
-          <div className="form-field"><label htmlFor="message">What&apos;s on your mind? <span>*</span></label><textarea id="message" name="message" rows={3} required minLength={10} maxLength={4000} placeholder="Tell us about your brand and what you need help with." /></div>
-          <button type="submit" className="enquiry-submit">Send via WhatsApp<ArrowIcon /></button>
-          <p className="form-privacy">We&apos;ll open WhatsApp for you to review and send the message.</p>
-          <p role="status" aria-live="polite" className="form-status">{status}</p>
-        </form>
+        <div>
+          <noscript><p className="no-js-contact">Use the direct WhatsApp link to discuss your setup.{contactEmail && <> Or email <a href={'mailto:' + contactEmail}>{contactEmail}</a>.</>}</p></noscript>
+          <form className="enquiry-form" onSubmit={prepareEnquiry} onFocusCapture={startForm} onChange={() => { setDraft(''); setStatus(''); }}>
+            <div className="form-heading"><h3>Let&apos;s find your starting point.</h3><p>Just your brand and what you need help with.</p></div>
+            <div className="form-field">
+              <label htmlFor="brand">Brand name or website <span className="field-required">(required)</span></label>
+              <input id="brand" name="brand" autoComplete="organization" required maxLength={200} placeholder="Your brand or yourstore.com" onInput={event => event.currentTarget.setCustomValidity('')} />
+            </div>
+            <fieldset className="interest-field">
+              <legend>Where do you need help?</legend>
+              <div>
+                {solutions.map(solution => <label key={solution.id}><input type="radio" name="interest" value={solution.id} checked={interest === solution.id} onChange={() => { setInterest(solution.id); trackConversion({ name: 'solution_select', solution: solution.id, location: 'form' }); }} /><span>{solution.label}</span></label>)}
+                <label><input type="radio" name="interest" value="not-sure" checked={interest === 'not-sure'} onChange={() => { setInterest('not-sure'); trackConversion({ name: 'solution_select', solution: 'not-sure', location: 'form' }); }} /><span>Help me choose</span></label>
+              </div>
+            </fieldset>
+            {showVolume && <div className="form-field"><label htmlFor="volume">Daily order volume <span className="optional">(optional)</span></label><select id="volume" name="volume" defaultValue=""><option value="">Select a range</option>{orderRanges.map(range => <option key={range} value={range}>{range}</option>)}</select></div>}
+            <details className="form-context">
+              <summary>Add a little more context <span>(optional)</span></summary>
+              <div className="form-field"><label htmlFor="name">Your name <span className="optional">(optional)</span></label><input id="name" name="name" autoComplete="name" maxLength={100} placeholder="What should we call you?" /></div>
+              <div className="form-field"><label htmlFor="message">What would you like to improve? <span className="optional">(optional)</span></label><textarea id="message" name="message" rows={3} maxLength={600} placeholder="A sentence or two is plenty." /></div>
+            </details>
+            <button type="submit" className="enquiry-submit">Continue on WhatsApp<ArrowIcon /></button>
+            <p className="form-privacy">WhatsApp opens with a draft. Review it and send when you&apos;re ready.</p>
+            <p role="status" aria-live="polite" className="form-status">{status}</p>
+            {draft && <div className="enquiry-fallback">
+              <a href={whatsappDraftUrl} target="_blank" rel="noopener noreferrer" className="text-link" onClick={() => trackConversion({ name: 'whatsapp_handoff', location: 'fallback', solution: interest })}>Open my WhatsApp draft <ArrowIcon /></a>
+              <details><summary>View or copy the message</summary><p className="enquiry-draft">{draft}</p><button type="button" onClick={copyDraft} className="text-link">Copy draft</button></details>
+            </div>}
+          </form>
+        </div>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { ScrollProgress } from '@/components/layout/ScrollProgress';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
+import { ConversionEvents } from '@/components/providers/ConversionEvents';
 import { contactEmail, site } from '@/data/site';
 
 import './globals.css';
@@ -30,13 +31,12 @@ export const metadata: Metadata = {
   },
   description: site.tagline,
   keywords: [
-    'AI tools for D2C brands',
-    'Claude skills automation',
+    'D2C infrastructure',
+    'D2C order management',
+    'Meta creative analysis',
     'SEO automation',
-    'product research AI',
-    'D2C growth',
-    'WhatsApp automation',
-    'AI calling agent',
+    'AI blog automation',
+    'COD voice agent',
     site.name,
   ],
   authors: [{ name: site.name, url: site.url || undefined }],
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} — ${site.role}`,
     description: site.tagline,
-    images: [{ url: '/og.png', width: 1731, height: 909, alt: 'Mehul Labs — AI Tools & Automation for D2C Brands' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Mehul Labs — D2C Infrastructure & AI Automation' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} — ${site.role}`,
     description: site.tagline,
-    images: ['/og.png'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: Boolean(site.url),
@@ -103,6 +103,7 @@ export default function RootLayout({
         </a>
 
         <SmoothScrollProvider>
+          <ConversionEvents />
           <ScrollProgress />
           <Navbar />
           <main id="main">{children}</main>

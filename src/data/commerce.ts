@@ -1,42 +1,66 @@
-export const services = [
+export const solutions = [
   {
-    number: '01', title: 'Find what sells before you invest.', category: 'Product Research',
-    description: 'AI-powered product research across Amazon, Flipkart, and D2C niches. Spot winning products, analyse competition, and validate demand before you spend a rupee.',
-    items: ['AI competitor & trend analysis', 'Demand validation tools', 'Niche scoring & opportunity maps'],
+    id: 'infrastructure', number: '01', label: 'D2C infrastructure',
+    shortcut: 'Manage daily orders',
+    title: 'Give growing order volumes a better system.',
+    description: 'When daily order management becomes the bottleneck, start here. We build D2C infrastructure around how your team works and the volume you need to handle.',
+    items: ['Daily order operations as the foundation', 'Workflows shaped around your tools and team', 'Scope and volume requirements agreed up front'],
+    action: 'Discuss my order operations',
   },
   {
-    number: '02', title: 'Rank higher. Spend less time doing it.', category: 'SEO Automation',
-    description: 'Claude-powered SEO pipelines that handle keyword research, content briefs, on-page optimisation, and blog publishing — on autopilot.',
-    items: ['Automated keyword research', 'AI content generation & scheduling', 'On-page & technical SEO audits'],
+    id: 'cod-voice', number: '02', label: 'COD voice agent',
+    shortcut: 'Automate order calls',
+    title: 'Take repetitive COD calls off your team’s plate.',
+    description: 'A voice agent calls customers about their cash-on-delivery orders. Define the conversation flow and where your team needs to step in.',
+    need: 'Your team spends too much of the day making COD calls.',
+    input: 'Cash-on-delivery orders',
+    output: 'Automated customer calls',
+    action: 'Discuss COD calling',
   },
   {
-    number: '03', title: 'Stop guessing on ad spend.', category: 'Ads Analysis & Automation',
-    description: 'AI tools that monitor your ad campaigns across Meta, Google, and Amazon — flag what\'s bleeding money, and suggest what to scale.',
-    items: ['Cross-platform ad performance dashboards', 'Automated bid & budget recommendations', 'Creative analysis & A/B testing'],
+    id: 'meta-creatives', number: '03', label: 'Meta creative analysis',
+    shortcut: 'Decide what to test',
+    title: 'Turn ad results into your next creative direction.',
+    description: 'AI analyses your Meta ads and creatives to find performance patterns and recommend what to test next. Your campaigns show what actually works.',
+    need: 'You have ad data, but no clear direction for the next creative.',
+    input: 'Ad results + creatives',
+    output: 'Creative directions to test',
+    action: 'Discuss my Meta creatives',
   },
   {
-    number: '04', title: 'Run leaner. Move faster.', category: 'AI Operations',
-    description: 'Automate the repetitive work that slows your team down. From inventory alerts to order processing to reporting — let AI handle the ops.',
-    items: ['Workflow automation (Claude skills)', 'Inventory & order management', 'Connected reporting & alerts'],
-  },
-  {
-    number: '05', title: 'Support that never sleeps.', category: 'AI Calling & WhatsApp',
-    description: 'AI calling agents and WhatsApp automation that handle customer queries, order updates, and follow-ups — so your team can focus on growth.',
-    items: ['AI voice calling agent', 'WhatsApp chatbot & automation', '24/7 customer support without hiring'],
+    id: 'seo-content', number: '04', label: 'SEO & blog automation',
+    shortcut: 'Keep content moving',
+    title: 'Make useful blog content a consistent habit.',
+    description: 'AI agents help automate your SEO and blog workflow. Keep quality review in the process, with content written for people—not just search engines.',
+    need: 'SEO and blog work keeps slipping behind daily operations.',
+    input: 'Your SEO + blog workflow',
+    output: 'AI-assisted content production',
+    action: 'Discuss SEO automation',
   },
 ] as const;
 
+export type SolutionId = (typeof solutions)[number]['id'];
+export type InterestId = SolutionId | 'not-sure';
+export const solutionSelectionEvent = 'mehul:solution-select';
+
+export function isSolutionId(value: unknown): value is SolutionId {
+  return solutions.some(solution => solution.id === value);
+}
+
+export const orderRanges = ['Under 100', '100–499', '500–999', '1,000–1,499', '1,500+', 'Not live yet'] as const;
+
 export const processSteps = [
-  { number: '01', title: 'We set everything up.', body: 'We don\'t hand you a PDF and disappear. We install the tools, configure the automations, and connect them to your existing platforms. You watch, you learn, you own it.', output: 'A working system' },
-  { number: '02', title: '1 month hand-in-hand support.', body: 'For 30 days after setup, we\'re right there with you. Teaching, troubleshooting, answering questions. If something breaks, we fix it together. You\'re never left alone.', output: 'Confidence to run it yourself' },
-  { number: '03', title: 'You choose what fits.', body: 'Pick a single service, combine a few, or go all-in. No lock-in contracts, no forced bundles. Your brand, your pace, your choice.', output: 'A plan that fits your stage' },
+  { number: '01', title: 'Find the starting point.', body: 'Tell us what slows your team down, which tools you use, and what needs to change. We identify the workflow to tackle first.', output: 'One clearly defined priority' },
+  { number: '02', title: 'Agree on the scope.', body: 'Clarify the workflow, connections, costs, and responsibilities together. Know what is included before implementation starts.', output: 'An agreed implementation scope' },
+  { number: '03', title: 'Set up. Check. Hand over.', body: 'Configure the agreed workflow, validate it with your team, and explain day-to-day operation and support.', output: 'A workflow your team can operate' },
 ] as const;
 
 export const faqs = [
-  { question: 'What exactly do you set up for us?', answer: 'We set up AI tools and Claude-powered automations directly inside your business — product research dashboards, SEO pipelines, ad monitoring, operations automation, and customer support bots. Everything is configured on your accounts, so you own it fully.' },
-  { question: 'Do I need to be technical?', answer: 'Not at all. We handle the entire setup. During the 1-month hand-in-hand support period, we teach you how everything works step by step. By the end, you\'ll be running it confidently on your own.' },
-  { question: 'Can I pick just one service?', answer: 'Yes. You can choose a single service, a combo of two or three, or go all-in with the complete stack. There are no forced bundles — we build around what your brand actually needs right now.' },
-  { question: 'Is this only for Amazon sellers?', answer: 'No. We work with D2C brands across their own websites, Shopify stores, Amazon, Flipkart, and social commerce. The tools and automations adapt to wherever you sell.' },
-  { question: 'What happens after the 1-month support?', answer: 'You keep everything we set up — it\'s yours. If you need ongoing support after that, we can discuss extended arrangements. But our goal is to make you self-sufficient within that first month.' },
-  { question: 'What makes this different from hiring a marketing agency?', answer: 'We\'re not an agency. We\'re building a community of founders who share tools, strategies, and growth together. You get AI-powered systems that work 24/7, not a team you have to manage. And the community means you\'re never building alone.' },
+  { question: 'Do I need all four solutions?', answer: 'No. Start with the bottleneck you need to address. That might be order operations, COD calls, Meta creative analysis, or SEO content. We discuss the relevant scope with you; you do not need to start with all four.' },
+  { question: 'What does 1,500+ orders a day mean?', answer: 'It is the scale we are building for, not a verified throughput claim or a guarantee for every setup. Share your current and expected order volume so we can discuss the workflow and validation you need.' },
+  { question: 'Will it work with my current store and tools?', answer: 'Tell us what your team uses today. We review the connections your workflow needs and clarify what can be supported, what requires custom work, and any dependencies before agreeing on the setup.' },
+  { question: 'What can the COD voice agent handle?', answer: 'The offer focuses on calling customers about cash-on-delivery orders. We define the conversation flow with you and confirm supported languages, call handling, and situations that need your team before implementation. A completed call does not guarantee that an order will be delivered.' },
+  { question: 'Does the AI guarantee better ads or search rankings?', answer: 'No. Meta creative analysis identifies patterns and recommends what to test; your campaigns establish what works. SEO and blog automation support consistent, useful content, but rankings and business results also depend on your market, website, offer, and execution.' },
+  { question: 'How much does setup cost?', answer: 'The scope depends on the solution, your current tools, and the volume of work involved. We discuss implementation costs and clarify any usage, third-party, or ongoing support charges before work begins. Share your requirements so we can scope the right setup.' },
+  { question: 'Who operates the system after setup?', answer: 'We agree on day-to-day responsibilities, account access, and support as part of your scope. The handover explains what your team manages and when to involve us. Ask about ongoing support when we discuss your setup.' },
 ] as const;

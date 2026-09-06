@@ -47,15 +47,15 @@ export function Navbar() {
         <ul className="desktop-nav">
           {navLinks.map(link => <li key={link.href}><a href={link.href}>{link.label}</a></li>)}
         </ul>
-        <a href="#contact" className="nav-contact">Get started <ArrowIcon className="-rotate-45" /></a>
+        <a href="#contact" className="nav-contact" data-cta-location="navigation">Discuss my setup <ArrowIcon className="-rotate-45" /></a>
         <button ref={toggleRef} type="button" className="menu-toggle" onClick={() => setOpen(true)} aria-expanded={open} aria-controls="mobile-menu" aria-label="Open navigation menu">
           <span /><span />
         </button>
       </nav>
       <dialog ref={dialogRef} id="mobile-menu" className="mobile-menu" onCancel={closeMenu} onClose={() => setOpen(false)} aria-label="Navigation">
         <div className="mobile-menu-top"><span className="wordmark">mehul<span>labs</span><i aria-hidden="true" /></span><button type="button" onClick={closeMenu} className="menu-close" aria-label="Close navigation menu">×</button></div>
-        <nav aria-label="Mobile"><ul>{navLinks.map((link, i) => <li key={link.href}><a href={link.href} onClick={closeMenu}><span>0{i + 1}</span>{link.label}<ArrowIcon /></a></li>)}<li><a href="#contact" onClick={closeMenu}><span>05</span>Get started<ArrowIcon /></a></li></ul></nav>
-        <p>AI tools for D2C founders.</p>
+        <nav aria-label="Mobile"><ul>{navLinks.map((link, i) => <li key={link.href}><a href={link.href} onClick={closeMenu}><span>0{i + 1}</span>{link.label}<ArrowIcon /></a></li>)}<li><a href="#contact" onClick={closeMenu} data-cta-location="mobile-navigation"><span>05</span>Discuss my setup<ArrowIcon /></a></li></ul></nav>
+        <p>D2C infrastructure. Focused AI automation.</p>
       </dialog>
     </header>
   );

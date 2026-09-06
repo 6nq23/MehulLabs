@@ -2,7 +2,7 @@ import { Hero } from '@/components/sections/Hero';
 import { VideoStory } from '@/components/sections/VideoStory';
 import { Services } from '@/components/sections/Services';
 import { Approach } from '@/components/sections/Approach';
-import { Community } from '@/components/sections/Community';
+import { About } from '@/components/sections/About';
 import { Faq } from '@/components/sections/Faq';
 import { Contact } from '@/components/sections/Contact';
 
@@ -13,7 +13,7 @@ export default function HomePage() {
       <VideoStory />
       <Services />
       <Approach />
-      <Community />
+      <About />
       <Faq />
       <Contact />
     </>
