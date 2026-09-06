@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
  * during hydration (important for the frame set: we must not start loading
  * the 1440px sequence on a phone).
  */
-export function useMediaQuery(query: string): boolean | null {
+function useMediaQuery(query: string): boolean | null {
   const [matches, setMatches] = useState<boolean | null>(null);
 
   useEffect(() => {
