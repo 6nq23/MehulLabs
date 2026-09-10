@@ -19,7 +19,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --ext .ts,.tsx",
-    "test": "node --test tests/enquiry.test.cjs"
+    "test": "node --test tests/landing.test.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

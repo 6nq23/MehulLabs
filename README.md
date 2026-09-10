@@ -13,24 +13,25 @@ npm run build
 npm start
 ```
 
-The tests exercise the actual enquiry helpers locally. They do not open WhatsApp or send a message.
+The tests exercise the actual enquiry helpers and the operating-evidence publication checks locally. They do not open WhatsApp or send a message.
 
 ## Page and content
 
-Hero → Brand film → Four solutions → Implementation → About → FAQs → Enquiry.
+Hero → Infrastructure and operating experience → Three supporting solutions → Implementation → Founder and optional brand film → FAQs → Enquiry → Footer.
 
 - Brand, contact destination, and navigation: `src/data/site.ts`
 - Solutions, shared interest choices, process, and FAQs: `src/data/commerce.ts`
+- Owned brands and approved evidence/media: `src/data/experience.ts`
 - Page composition: `src/app/page.tsx`
 - Sections: `src/components/sections/`
 - Colors and responsive styles: `src/app/globals.css` and `tailwind.config.ts`
 - Brand film and poster: `public/story-video.mp4`, `public/story-poster.webp`
 - Social preview: `src/app/opengraph-image.tsx`, generated statically at build time
-- Research and implementation rationale: `docs/landing-page-plan.md`
+- Evidence requirements and follow-up checks: `docs/operating-evidence.md`
 
-The original palette and fonts are preserved. The third section leads with infrastructure and gives the three supporting solutions their own cards. No customer outcomes, testimonials, screenshots of fictional software, or partner claims are fabricated.
+The original palette and fonts are preserved. Infrastructure leads, with the two owned brands clearly identified as operating experience, not independent customers. The three supporting solutions have their own cards; infrastructure experience does not substantiate their results. No customer outcomes, testimonials, screenshots of fictional software, or partner claims are fabricated.
 
-The 1,500+ daily orders figure describes the scale being built for. Replace it with a demonstrated-capacity statement only when the scope and supporting evidence are available. Reference image 31 was not available during implementation; the feature layout follows the approved written plan.
+No numerical order claim is published. Add an approved figure only after the brand, reporting period, count definition, and supporting source have been verified. Missing screenshots and recordings produce no empty slots. Reference image 31 was not supplied; the layout follows the approved written plan.
 
 ## Enquiry flow
 

@@ -22,9 +22,9 @@ export function VideoStory() {
     <section id="story" className="film-section" aria-labelledby="film-title">
       <div className="shell film-layout">
         <div className="film-intro">
-          <span className="section-label">The idea behind Mehul Labs</span>
-          <h2 id="film-title">More orders.<br /><span className="muted-heading">Less busywork.</span></h2>
-          <p>Give your team a clearer way to manage the work behind growth. A short introduction to why we&apos;re building Mehul Labs.</p>
+          <span className="section-label">A short brand introduction</span>
+          <h3 id="film-title">More orders.<br /><span className="muted-heading">Less busywork.</span></h3>
+          <p>The idea behind Mehul Labs, in ten seconds. This film introduces our approach; it isn&apos;t a demonstration of the product.</p>
           <span className="film-caption">Brand film · 10 seconds · Play when you like</span>
         </div>
         <div className="film-media"><div className="film-frame">

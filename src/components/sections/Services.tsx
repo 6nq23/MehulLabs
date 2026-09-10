@@ -1,5 +1,6 @@
 import { SolutionLink } from '@/components/ui/SolutionLink';
-import { solutions } from '@/data/commerce';
+import { OperatingExperience } from '@/components/ui/OperatingExperience';
+import { setupConsiderations, solutions } from '@/data/commerce';
 
 export function Services() {
   const [infrastructure, ...supporting] = solutions;
@@ -10,8 +11,8 @@ export function Services() {
         <div className="section-intro">
           <span className="section-label"><span>01 /</span> Four focused solutions</span>
           <div>
-            <h2 id="services-title" className="section-title">Order operations first.<br /><span className="muted-heading">AI where it helps.</span></h2>
-            <p className="section-description">Build a stronger foundation for daily orders, or start with one specific bottleneck. You don&apos;t need all four solutions to begin.</p>
+            <h2 id="services-title" className="section-title">Order operations first.<br /><span className="muted-heading">Grounded in our own work.</span></h2>
+            <p className="section-description">A system we use, and a setup shaped around your business. Start with order management or a specific need for automation.</p>
           </div>
         </div>
         <article id={infrastructure.id} className="infrastructure-feature" aria-labelledby="infrastructure-title">
@@ -22,16 +23,12 @@ export function Services() {
             <ul className="solution-points">{infrastructure.items.map(item => <li key={item}><span aria-hidden="true">↗</span>{item}</li>)}</ul>
             <SolutionLink id={infrastructure.id}>{infrastructure.action}</SolutionLink>
           </div>
-          <div className="infrastructure-scale">
-            <span className="scale-label">The scale we&apos;re building for</span>
-            <p className="scale-number">1,500<span>+</span></p>
-            <p className="scale-unit">orders a day</p>
-            <div className="scale-divider" />
-            <p className="scale-description">A growth target to design around.<br />Your actual workflow sets the requirements.</p>
-            <a className="scale-note" href="#faq">What does this number mean? <span aria-hidden="true">↗</span></a>
-          </div>
+          <OperatingExperience />
         </article>
-        <div className="supporting-heading"><p>Less repetitive work. Clearer next steps.</p><span>Choose the bottleneck that sounds familiar.</span></div>
+        <dl className="setup-considerations" aria-label="What we clarify before setup">
+          {setupConsiderations.map(item => <div key={item.title}><dt>{item.title}</dt><dd>{item.body}</dd></div>)}
+        </dl>
+        <div className="supporting-heading"><p>Three focused ways to add AI.</p><span>Start with one. You don&apos;t need all four.</span></div>
         <div className="service-grid">
           {supporting.map(solution => (
             <article id={solution.id} className="service-card" key={solution.id} aria-labelledby={solution.id + '-title'}>

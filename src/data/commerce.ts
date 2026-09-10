@@ -2,9 +2,9 @@ export const solutions = [
   {
     id: 'infrastructure', number: '01', label: 'D2C infrastructure',
     shortcut: 'Manage daily orders',
-    title: 'Give growing order volumes a better system.',
-    description: 'When daily order management becomes the bottleneck, start here. We build D2C infrastructure around how your team works and the volume you need to handle.',
-    items: ['Daily order operations as the foundation', 'Workflows shaped around your tools and team', 'Scope and volume requirements agreed up front'],
+    title: 'Built around the work behind your orders.',
+    description: 'We use this infrastructure to manage orders in our jewellery and seasonal-product businesses. For your brand, we start with the daily work your team needs to handle.',
+    items: ['Order management as the foundation', 'Your workflow and volume shape the setup', 'Automation and human responsibilities defined together'],
     action: 'Discuss my order operations',
   },
   {
@@ -49,6 +49,12 @@ export function isSolutionId(value: unknown): value is SolutionId {
 
 export const orderRanges = ['Under 100', '100–499', '500–999', '1,000–1,499', '1,500+', 'Not live yet'] as const;
 
+export const setupConsiderations = [
+  { title: 'Your current tools', body: 'Share what you use today. We confirm the connections required and any custom work before agreeing on your setup.' },
+  { title: 'Your team’s role', body: 'Agree which tasks the system handles, which stay with your team, and who reviews situations that need human judgment.' },
+  { title: 'Your implementation scope', body: 'Know what is included. Setup costs, usage charges, handover, and support responsibilities are clarified before work starts.' },
+] as const;
+
 export const processSteps = [
   { number: '01', title: 'Find the starting point.', body: 'Tell us what slows your team down, which tools you use, and what needs to change. We identify the workflow to tackle first.', output: 'One clearly defined priority' },
   { number: '02', title: 'Agree on the scope.', body: 'Clarify the workflow, connections, costs, and responsibilities together. Know what is included before implementation starts.', output: 'An agreed implementation scope' },
@@ -57,7 +63,8 @@ export const processSteps = [
 
 export const faqs = [
   { question: 'Do I need all four solutions?', answer: 'No. Start with the bottleneck you need to address. That might be order operations, COD calls, Meta creative analysis, or SEO content. We discuss the relevant scope with you; you do not need to start with all four.' },
-  { question: 'What does 1,500+ orders a day mean?', answer: 'It is the scale we are building for, not a verified throughput claim or a guarantee for every setup. Share your current and expected order volume so we can discuss the workflow and validation you need.' },
+  { question: 'Where do you use the infrastructure yourselves?', answer: 'We use it for order management in Sanskrutibydiorin, our seasonal-products brand, and Diorin Demifine Jewellery. Both are our own businesses under one parent, not independent clients. Their workflows inform our experience; your setup still needs its own scope and validation.' },
+  { question: 'Will it suit my order volume?', answer: 'Tell us your normal daily volume and the peaks you need to plan for. We assess the workflow, tools, and team involved. Our own brands’ operating experience is not a guarantee of capacity or results for every business.' },
   { question: 'Will it work with my current store and tools?', answer: 'Tell us what your team uses today. We review the connections your workflow needs and clarify what can be supported, what requires custom work, and any dependencies before agreeing on the setup.' },
   { question: 'What can the COD voice agent handle?', answer: 'The offer focuses on calling customers about cash-on-delivery orders. We define the conversation flow with you and confirm supported languages, call handling, and situations that need your team before implementation. A completed call does not guarantee that an order will be delivered.' },
   { question: 'Does the AI guarantee better ads or search rankings?', answer: 'No. Meta creative analysis identifies patterns and recommends what to test; your campaigns establish what works. SEO and blog automation support consistent, useful content, but rankings and business results also depend on your market, website, offer, and execution.' },
