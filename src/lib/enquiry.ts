@@ -1,4 +1,4 @@
-import { orderRanges, solutions, type InterestId } from '@/data/commerce';
+import { needsOrderVolume, orderRanges, solutions, type InterestId } from '@/data/commerce';
 import { site } from '@/data/site';
 
 interface EnquiryFields {
@@ -14,15 +14,14 @@ export function buildEnquiry({ brand, interest, name = '', message = '', volume 
   if (!cleanBrand) throw new Error('Please enter your brand name or website.');
   const cleanName = name.trim().slice(0, 100);
   const cleanMessage = message.trim().slice(0, 600);
-  const needsVolume = interest === 'infrastructure' || interest === 'cod-voice' || interest === 'not-sure';
-  const validVolume = needsVolume && orderRanges.some(range => range === volume);
+  const validVolume = needsOrderVolume(interest) && orderRanges.some(range => range === volume);
   const label = solutions.find(solution => solution.id === interest)?.label || 'Help me choose';
 
   return [
-    'Hi Mehul Labs, I’d like to discuss my D2C setup.',
+    'Hi Mehul Labs, I’d like the free leak audit for my brand.',
     '',
     'Brand / website: ' + cleanBrand,
-    'Interested in: ' + label,
+    'Biggest pain: ' + label,
     ...(validVolume ? ['Daily orders: ' + volume] : []),
     ...(cleanName ? ['Name: ' + cleanName] : []),
     ...(cleanMessage ? ['', cleanMessage] : []),

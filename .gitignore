@@ -12,9 +12,11 @@ npm-debug.log*
 next-env.d.ts
 tsconfig.tsbuildinfo
 
+
 # Raw frame source (PNG exports) — regenerate optimized frames with `npm run frames`
 /1
 /2
 /3
 /.frames-src
 /.codex-review
+/.claude

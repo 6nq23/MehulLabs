@@ -2,9 +2,9 @@
 
 ## Implemented direction
 
-The page leads with D2C order infrastructure used in the founder's own businesses. It keeps the original visual identity, solution anchors, campaign selection, and WhatsApp draft flow. The optional brand film follows the founder introduction and is explicitly not a product demonstration.
+The page is a sales page for a free 20-minute leak audit, leading to three delivery systems and an all-in-one engagement. It keeps the original visual identity, campaign selection, and WhatsApp draft flow. The optional brand film follows the founder introduction and is explicitly not a product demonstration. See `conversion-audit.md` for the offer rationale and the section-by-section jobs.
 
-Sanskrutibydiorin and Diorin Demifine Jewellery are owned brands under one parent business, not independent clients. Their use of infrastructure does not establish results for COD calling, Meta creative analysis, or SEO/blog automation.
+Sanskrutibydiorin and Diorin Demifine Jewellery are owned brands under one parent business, not independent clients. Their use of infrastructure does not establish results for the calling agent, workflow automation, Shopify CRO, the sell agent, the smart cart, marketing, or SEO/blog automation. Collect evidence for each of those separately.
 
 ## Owner-reported figures — not published
 
@@ -12,6 +12,8 @@ Sanskrutibydiorin and Diorin Demifine Jewellery are owned brands under one paren
 - Diorin Demifine Jewellery: a separate 200-order figure. Its period, basis, and count definition still need confirmation.
 
 Do not combine these numbers, describe a peak as sustained daily throughput, or label an order received as processed or shipped. The enquiry form's `1,500+` choice asks about the visitor's business; it is not a claim about Mehul Labs.
+
+`src/data/experience.ts` carries a commented template showing the five required fields. Fill `period` and `source` only from a real dated report; an incomplete object renders nothing, and `npm test` enforces that.
 
 ## What to provide
 
@@ -55,3 +57,49 @@ No buyer interviews, live conversion experiment, deployment, or analytics instal
 - The film loads on request, plays, and stops at the end without looping. No browser warnings/errors were recorded in the tested session. No WhatsApp message was sent; draft generation was checked locally.
 - Reduced-motion CSS, the motion-preference hook, the smooth-scroll guard, and reveal conditions were reviewed in source. Reduced-motion browser emulation was unavailable, so runtime verification with that preference remains a follow-up check.
 - No duplicate IDs were detected; the film remains within the founder section. No count claim or product-media placeholder is currently published.
+
+## Published claims added with the sales page — 10 September 2026
+
+Three assurances are now published in `src/data/offer.ts`, owner-approved: the audit is free and
+non-committal; scope is fixed and agreed in writing before work starts; everything is built inside
+the client's own accounts and nothing switches off if the engagement ends. `npm test` fails if a
+refund, money-back, guarantee or results promise is added to that array. Do not add one without a
+written owner decision.
+
+Two further published statements need confirmation before launch:
+
+- `site.replyWindow` publishes "Usually within one working day". Confirm or change the string.
+- Assurance 3 assumes every module is built in accounts the client owns and retains. If any module
+  runs on Mehul Labs infrastructure the client would lose access to, rewrite the assurance first.
+
+The problem section quotes no statistic. Each of the three leaks ends with an instruction for the
+reader to measure their own dashboard. Keep it that way unless a verified figure with a named source
+becomes available.
+
+Prices are gated the same way as evidence. `startingPrice: null` publishes "Scoped after the audit".
+A published anchor requires a real amount, currency, unit and basis, and must be a number the
+business will honour.
+
+## Image slots and measured numbers — 10 September 2026
+
+`src/data/media.ts` defines three image slots: hero, proof and founder. All three currently point at
+`public/img1.png`, the brand-film poster, as a stand-in. That file is a brand illustration —
+not a photograph of anyone and not a screenshot of the system — so every slot's `alt` and `caption`
+describe it as an illustration and say a real image replaces it. Do not caption it as a photo of
+Mehul, as a product screen, or as a customer.
+
+To replace a slot: add the real file to `public/`, update `src`, `width`, `height`, `alt` and
+`caption`, and set `placeholder: false`. `npm test` fails if a slot claims to be final while still
+pointing at the poster. Each slot's `intent` field states what the replacement has to show; the proof
+slot is the one that carries the trust gate, so it wants a redacted screenshot of the live order
+system with a dated filter visible.
+
+`publishedMetrics` in `src/data/offer.ts` is the only place a measured figure may appear on the page.
+It is empty. An entry needs a value, an exact count definition, a basis (whose number, over what
+window) and a nameable source; incomplete entries render nothing, and the stat band disappears
+entirely when the array is empty.
+
+Everything numeric currently on the page is a structural count that needs no report — 2 brands,
+3 leaks, 3 systems, 8 modules, 4 steps, 3 festive peaks, 14 days, 20 minutes, 1 fixed scope, 100%
+built in your accounts. No percentage lift, no conversion figure, no RTO reduction and no revenue
+claim appears anywhere, and none may be added without a measured baseline behind it.

@@ -24,7 +24,7 @@ export function OperatingExperience() {
   return (
     <aside className="operating-experience" aria-labelledby="experience-title">
       <p className="experience-label">Our operating experience</p>
-      <h4 id="experience-title">We use it in<br />our own businesses.</h4>
+      <h4 id="experience-title">We ship our own<br />orders every day.</h4>
       <ul className="owned-brand-list">
         {ownedBrands.map(brand => (
           <li key={brand.id}>

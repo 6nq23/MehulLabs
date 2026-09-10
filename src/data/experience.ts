@@ -25,6 +25,20 @@ export interface OwnedBrandExperience {
   approvedMedia: readonly EvidenceMedia[];
 }
 
+/**
+ * To publish an order figure, add `approvedOrderEvidence` to a brand below. All five
+ * fields must be real; an incomplete object renders nothing (see `hasCompleteOrderEvidence`).
+ *
+ *   approvedOrderEvidence: {
+ *     count: 1500,                       // the verified number from the report
+ *     basis: 'peak day',                 // 'peak day' or 'daily average' — never blur the two
+ *     measure: 'orders received',        // received / managed / processed / shipped: be exact
+ *     period: '',                        // e.g. 'Ganpati 2026, 12–26 August' — dated, not vague
+ *     source: '',                        // e.g. 'Shopify order export, IST' — name the report
+ *   },
+ *
+ * See docs/operating-evidence.md before adding anything here.
+ */
 export const ownedBrands: readonly OwnedBrandExperience[] = [
   {
     id: 'sanskruti',
