@@ -18,3 +18,5 @@ tsconfig.tsbuildinfo
 /3
 /.frames-src
 /.codex-review
+
+.agents
