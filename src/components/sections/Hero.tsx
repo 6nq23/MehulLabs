@@ -1,10 +1,10 @@
+import type { ReactNode } from 'react';
 import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
-import { SlotImage } from '@/components/ui/SlotImage';
 import { credentials, pillars } from '@/data/offer';
 import { ownedBrands } from '@/data/experience';
 import { primaryCta } from '@/data/site';
 
-export function Hero() {
+export function Hero({ heroImage }: { heroImage?: ReactNode }) {
   return (
     <section id="top" className="hero" aria-labelledby="hero-title">
       <div className="shell">
@@ -62,7 +62,7 @@ export function Hero() {
               </div>
             ))}
           </dl>
-          <SlotImage id="hero" className="hero-figure" priority sizes="(max-width: 899px) 100vw, 760px" />
+          {heroImage}
         </div>
         <nav className="solution-shortcuts" aria-label="Choose where it hurts most">
           {pillars.map(pillar => (

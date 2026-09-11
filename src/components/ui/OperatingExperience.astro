@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+
+import { hasCompleteOrderEvidence, ownedBrands, ownershipDisclosure } from '@/data/experience';
+---
+
+<aside class="operating-experience" aria-labelledby="experience-title">
+  <p class="experience-label">Our operating experience</p>
+  <h4 id="experience-title">We ship our own<br />orders every day.</h4>
+  <ul class="owned-brand-list">
+    {
+      ownedBrands.map(brand => (
+        <li>
+          <span class="brand-category">{brand.category}</span>
+          <h5>{brand.name}</h5>
+          <p>{brand.context}</p>
+          {hasCompleteOrderEvidence(brand.approvedOrderEvidence) && (
+            <div class="order-evidence">
+              <p>
+                <strong>{brand.approvedOrderEvidence.count.toLocaleString('en-IN')}</strong>{' '}
+                {brand.approvedOrderEvidence.measure} · {brand.approvedOrderEvidence.basis}
+              </p>
+              <p>{brand.approvedOrderEvidence.period}</p>
+              <p>Source: {brand.approvedOrderEvidence.source}</p>
+            </div>
+          )}
+          {brand.approvedMedia.map(media => (
+            <figure class="evidence-figure">
+              {media.kind === 'image' ? (
+                <Image
+                  src={media.src}
+                  alt={media.alt}
+                  width={media.width}
+                  height={media.height}
+                  sizes="(max-width: 899px) 90vw, 40vw"
+                  loading="lazy"
+                />
+              ) : (
+                <>
+                  <video
+                    src={media.src}
+                    poster={media.poster}
+                    controls
+                    playsinline
+                    preload="none"
+                    aria-label={media.caption}
+                  >
+                    <track kind="captions" src={media.captionsSrc} srclang="en" label="English" default />
+                    Your browser cannot play this recording. <a href={media.src}>Open the workflow recording.</a>
+                  </video>
+                  <details>
+                    <summary>Read the workflow transcript</summary>
+                    <p>{media.transcript}</p>
+                  </details>
+                </>
+              )}
+              <figcaption>{media.caption}</figcaption>
+            </figure>
+          ))}
+        </li>
+      ))
+    }
+  </ul>
+  <p class="ownership-disclosure">{ownershipDisclosure}</p>
+</aside>

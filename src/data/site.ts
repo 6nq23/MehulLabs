@@ -6,8 +6,8 @@ export const site = {
   tagline:
     'Mehul Labs builds and runs the operating layer behind growing D2C brands — Shopify conversion, order operations, and demand — on one connected system, inside your own accounts. Start with a free 20-minute leak audit.',
   location: 'Bengaluru, India',
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || '',
-  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || '',
+  email: import.meta.env.PUBLIC_CONTACT_EMAIL?.trim() || '',
+  url: import.meta.env.PUBLIC_SITE_URL?.replace(/\/$/, '') || '',
   whatsappUrl: 'https://wa.me/919426016918',
   /** The reply promise published under the enquiry form. Only publish what you will hold to. */
   replyWindow: 'Usually within one working day',

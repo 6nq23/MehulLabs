@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useRef, useState } from 'react';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { useLenis } from '@/components/providers/SmoothScrollProvider';

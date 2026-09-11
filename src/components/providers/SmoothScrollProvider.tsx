@@ -1,5 +1,3 @@
-'use client';
-
 import Lenis from 'lenis';
 import { createContext, useContext, useEffect, useState } from 'react';
 

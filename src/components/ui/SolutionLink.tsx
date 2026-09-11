@@ -1,5 +1,3 @@
-'use client';
-
 import { solutionSelectionEvent, type SolutionId } from '@/data/commerce';
 import { trackConversion } from '@/lib/analytics';
 import { ArrowIcon } from './MagneticButton';

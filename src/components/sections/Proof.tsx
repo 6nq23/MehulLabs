@@ -1,5 +1,5 @@
-import { OperatingExperience } from '@/components/ui/OperatingExperience';
-import { SlotImage } from '@/components/ui/SlotImage';
+import type { ReactNode } from 'react';
+
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { isPublishableMetric, operatingFacts, publishedMetrics } from '@/data/offer';
 import { primaryCta } from '@/data/site';
@@ -25,7 +25,13 @@ function MetricBand() {
   );
 }
 
-export function Proof() {
+export function Proof({
+  proofImage,
+  operatingExperience,
+}: {
+  proofImage?: ReactNode;
+  operatingExperience?: ReactNode;
+}) {
   return (
     <section id="proof" className="proof-section section-space" aria-labelledby="proof-title">
       <div className="shell">
@@ -66,8 +72,8 @@ export function Proof() {
             </a>
           </div>
           <div className="proof-media">
-            <SlotImage id="proof" className="proof-figure" sizes="(max-width: 899px) 100vw, 640px" />
-            <OperatingExperience />
+            {proofImage}
+            {operatingExperience}
           </div>
         </div>
         <MetricBand />

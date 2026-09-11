@@ -1,5 +1,3 @@
-'use client';
-
 import { useRef, type ElementType } from 'react';
 
 import { gsap } from '@/lib/gsap';

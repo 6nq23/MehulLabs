@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+
+import { getImageSlot, type ImageSlotId } from '@/data/media';
+
+interface Props {
+  id: ImageSlotId;
+  className?: string;
+  priority?: boolean;
+  sizes: string;
+  showCaption?: boolean;
+}
+
+const { id, className, priority = false, sizes, showCaption = true } = Astro.props;
+const slot = getImageSlot(id);
+---
+
+<figure class={className} data-placeholder={slot.placeholder ? '' : undefined}>
+  <Image
+    src={slot.src}
+    alt={slot.alt}
+    width={slot.width}
+    height={slot.height}
+    sizes={sizes}
+    priority={priority}
+  />
+  {showCaption && <figcaption>{slot.caption}</figcaption>}
+</figure>

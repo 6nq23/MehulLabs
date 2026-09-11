@@ -1,10 +1,11 @@
+import type { ReactNode } from 'react';
+
 import { Reveal } from '@/components/ui/Reveal';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
-import { SlotImage } from '@/components/ui/SlotImage';
 import { primaryCta } from '@/data/site';
 import { VideoStory } from './VideoStory';
 
-export function About() {
+export function About({ founderImage }: { founderImage?: ReactNode }) {
   return (
     <section id="about" className="about-section section-space" aria-labelledby="about-title">
       <div className="shell about-grid">
@@ -12,7 +13,7 @@ export function About() {
           <span className="section-label">
             <span>07 /</span> Behind Mehul Labs
           </span>
-          <SlotImage id="founder" className="founder-figure" sizes="(max-width: 899px) 100vw, 448px" />
+          {founderImage}
           <div className="founder-caption">
             <strong>Mehul</strong>
             <span>Founder, Mehul Labs</span>

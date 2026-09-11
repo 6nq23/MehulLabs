@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --font-inter: 'Inter Variable';
+    --font-display: 'Manrope Variable';
     --canvas: #f7f7f2;
     --surface: #eeefe7;
     --line: #d8ddd1;

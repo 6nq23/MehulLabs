@@ -1,6 +1,4 @@
-'use client';
-
-import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type SubmitEvent } from 'react';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import {
   needsOrderVolume,
@@ -44,7 +42,7 @@ export function Contact() {
     }
   }
 
-  function prepareEnquiry(event: FormEvent<HTMLFormElement>) {
+  function prepareEnquiry(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const fields = new FormData(form);

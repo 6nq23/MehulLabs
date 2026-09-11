@@ -1,0 +1,52 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+import { About } from '@/components/sections/About';
+import { Approach } from '@/components/sections/Approach';
+import { Assurance } from '@/components/sections/Assurance';
+import { Contact } from '@/components/sections/Contact';
+import { Faq } from '@/components/sections/Faq';
+import { Hero } from '@/components/sections/Hero';
+import { Leaks } from '@/components/sections/Leaks';
+import { Mechanism } from '@/components/sections/Mechanism';
+import { Proof } from '@/components/sections/Proof';
+import { Services } from '@/components/sections/Services';
+import OperatingExperience from '@/components/ui/OperatingExperience.astro';
+import SlotImage from '@/components/ui/SlotImage.astro';
+---
+
+<Layout>
+  <Hero client:load>
+    <SlotImage
+      slot="hero-image"
+      id="hero"
+      className="hero-figure"
+      priority
+      sizes="(max-width: 899px) 100vw, 760px"
+    />
+  </Hero>
+  <Leaks client:visible />
+  <Mechanism client:visible />
+  <Services client:visible />
+  <Proof>
+    <SlotImage
+      slot="proof-image"
+      id="proof"
+      className="proof-figure"
+      sizes="(max-width: 899px) 100vw, 640px"
+    />
+    <OperatingExperience slot="operating-experience" />
+  </Proof>
+  <Approach client:visible />
+  <Assurance client:visible />
+  <About client:visible>
+    <SlotImage
+      slot="founder-image"
+      id="founder"
+      className="founder-figure"
+      sizes="(max-width: 899px) 100vw, 448px"
+    />
+  </About>
+  <Faq />
+  <Contact client:load />
+</Layout>

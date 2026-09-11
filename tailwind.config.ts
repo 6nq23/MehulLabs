@@ -4,7 +4,7 @@ import type { Config } from 'tailwindcss';
  * Warm paper, deep charcoal, and forest green connect the identity to the film.
  */
 const config: Config = {
-  content: ['./src/**/*.{ts,tsx,mdx}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
