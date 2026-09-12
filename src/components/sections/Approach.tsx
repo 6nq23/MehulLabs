@@ -1,13 +1,13 @@
 import { Reveal } from '@/components/ui/Reveal';
 import { processSteps } from '@/data/commerce';
 
-export function Approach() {
+export function Approach({ focused = false, sectionNumber = '05' }: { focused?: boolean; sectionNumber?: string }) {
   return (
     <section id="approach" className="approach-section section-space" aria-labelledby="approach-title">
       <div className="shell">
         <div className="section-intro">
           <span className="section-label">
-            <span>05 /</span> How it works
+            <span>{sectionNumber} /</span> How it works
           </span>
           <div>
             <h2 id="approach-title" className="section-title">
@@ -21,11 +21,11 @@ export function Approach() {
           </div>
         </div>
         <div className="process-grid">
-          {processSteps.map(step => (
+          {processSteps.map((step, index) => (
             <Reveal className="process-step" key={step.number}>
               <span className="process-number">{step.number}</span>
               <h3>{step.title}</h3>
-              <p>{step.body}</p>
+              <p>{focused && index === 0 ? '20 minutes on the area you chose and the source material behind it. We name the leaks we can see and which one to close first.' : step.body}</p>
               <span className="process-output">
                 <span aria-hidden="true">↳</span> {step.output}
               </span>

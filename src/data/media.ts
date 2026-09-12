@@ -37,7 +37,7 @@ export const imageSlots: readonly ImageSlot[] = [
     alt: posterAlt,
     width: 1280,
     height: 720,
-    caption: 'Mehul Labs will handle everything.',
+    caption: 'Brand illustration placeholder — a real system screen replaces this.',
     placeholder: true,
   },
   {

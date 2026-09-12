@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
-import { credentials, pillars } from '@/data/offer';
+import { credentials } from '@/data/offer';
 import { ownedBrands } from '@/data/experience';
+import { getServicePillar, serviceRoutes } from '@/data/services';
 import { primaryCta } from '@/data/site';
 
 export function Hero({ heroImage }: { heroImage?: ReactNode }) {
@@ -34,7 +35,7 @@ export function Hero({ heroImage }: { heroImage?: ReactNode }) {
             </h1>
             <div className="hero-intro">
               <p>
-                <strong>8 modules on 1 connected layer,We run it in our own two brands,</strong> <strong>{ownedBrands[0].name}</strong> and{' '}
+                <strong>One connected operating layer, run in our own two brands:</strong> <strong>{ownedBrands[0].name}</strong> and{' '}
                 <strong>{ownedBrands[1].name}, every day.</strong>
               </p>
             </div>
@@ -65,8 +66,9 @@ export function Hero({ heroImage }: { heroImage?: ReactNode }) {
           {heroImage}
         </div>
         <nav className="solution-shortcuts" aria-label="Choose where it hurts most">
-          {pillars.map(pillar => (
-            <a href={'#' + pillar.id} key={pillar.id}>
+          {serviceRoutes.map(service => {
+            const pillar = getServicePillar(service);
+            return <a href={`/services/${service.slug}`} key={service.slug}>
               <span className="shortcut-number" aria-hidden="true">
                 {pillar.number}
               </span>
@@ -75,8 +77,8 @@ export function Hero({ heroImage }: { heroImage?: ReactNode }) {
                 <span>{pillar.shortcut}</span>
               </span>
               <ArrowIcon />
-            </a>
-          ))}
+            </a>;
+          })}
         </nav>
       </div>
     </section>

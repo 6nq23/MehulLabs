@@ -22,8 +22,9 @@ export const solutionSelectionEvent = 'mehul:solution-select';
 const legacySolutionIds: Readonly<Record<string, SolutionId>> = {
   infrastructure: 'operations',
   'cod-voice': 'operations',
-  'meta-creatives': 'growth',
-  'seo-content': 'growth',
+  'meta-creatives': 'ai-automation',
+  'seo-content': 'ai-automation',
+  growth: 'ai-automation',
 };
 
 export function isSolutionId(value: unknown): value is SolutionId {
@@ -38,7 +39,7 @@ export function resolveSolutionId(value: unknown): SolutionId | null {
 
 /** Volume tells us how to scope everything except demand work, where catalogue size matters more. */
 export function needsOrderVolume(interest: InterestId) {
-  return interest !== 'growth';
+  return interest !== 'ai-automation';
 }
 
 export const orderRanges = ['Under 100', '100–499', '500–999', '1,000–1,499', '1,500+', 'Not live yet'] as const;
@@ -127,8 +128,8 @@ export const faqs = [
       'It depends which leak. Store conversion is most expensive to leave open exactly when traffic is at its peak, so that work usually belongs before the season. Deep operations changes are safer after it — nobody should be rewiring order flow mid-spike. Tell us your calendar and we will tell you which side of the spike your project belongs on.',
   },
   {
-    question: 'Does the AI guarantee better ads or search rankings?',
+    question: 'Does the AI guarantee better marketing results?',
     answer:
-      'No, and be careful of anyone who says otherwise. Analysis identifies patterns and tells you what to test; your campaigns establish what works. SEO automation makes useful content consistent, but rankings and revenue also depend on your market, your site, your offer and your execution. What we control is that the work actually gets done, at your catalogue’s scale, to a standard a human reviewed.',
+      'No, and be careful of anyone who says otherwise. The Claude Brain keeps approved context available and analysis identifies patterns worth testing; your campaigns establish what actually works. Results still depend on your market, offer, creative and execution. What we control is that the system begins with the right context and the work gets reviewed before it goes live.',
   },
 ] as const;

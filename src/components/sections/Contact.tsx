@@ -12,10 +12,11 @@ import { contactEmail, primaryCta, site } from '@/data/site';
 import { trackConversion } from '@/lib/analytics';
 import { buildEnquiry, getWhatsAppDraftUrl } from '@/lib/enquiry';
 
-export function Contact() {
-  const [interest, setInterest] = useState<InterestId>('not-sure');
+export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: { initialInterest?: InterestId; sectionNumber?: string }) {
+  const [interest, setInterest] = useState<InterestId>(initialInterest);
   const [draft, setDraft] = useState('');
   const [status, setStatus] = useState('');
+  const [message, setMessage] = useState('');
   const started = useRef(false);
   const showVolume = needsOrderVolume(interest);
   const whatsappDraftUrl = draft ? getWhatsAppDraftUrl(draft) : '';
@@ -29,8 +30,12 @@ export function Contact() {
         setStatus('');
       }
     }
-    const campaignSolution = resolveSolutionId(new URLSearchParams(window.location.search).get('solution'));
+    const params = new URLSearchParams(window.location.search);
+    const campaignSolution = resolveSolutionId(params.get('solution'));
     if (campaignSolution) setInterest(campaignSolution);
+    const offer = params.get('offer');
+    if (offer === 'pilot') setMessage("I'm interested in the $5,000 paid pilot.");
+    if (offer === 'custom') setMessage("I'd like to discuss a custom engagement.");
     window.addEventListener(solutionSelectionEvent, selectSolution);
     return () => window.removeEventListener(solutionSelectionEvent, selectSolution);
   }, []);
@@ -84,7 +89,7 @@ export function Contact() {
       <div className="shell contact-grid">
         <div className="contact-copy">
           <span className="section-label">
-            <span>09 /</span> Start the audit
+            <span>{sectionNumber} /</span> Start the audit
           </span>
           <h2 id="contact-title">
             Which leak is costing<br />
@@ -228,7 +233,7 @@ export function Contact() {
                 <label htmlFor="message">
                   What would you fix first? <span className="optional">(optional)</span>
                 </label>
-                <textarea id="message" name="message" rows={3} maxLength={600} placeholder="A sentence or two is plenty." />
+                <textarea id="message" name="message" rows={3} maxLength={600} placeholder="A sentence or two is plenty." value={message} onChange={event => setMessage(event.currentTarget.value)} />
               </div>
             </details>
             <button type="submit" className="enquiry-submit">

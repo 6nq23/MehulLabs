@@ -1,0 +1,70 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { ArrowIcon } from '@/components/ui/MagneticButton';
+import { formatPilotPrice, getServiceOffer } from '@/data/offers';
+import { serviceRoutes } from '@/data/services';
+---
+
+<Layout
+  title="Ready to Start?"
+  description="Choose a focused $5,000 paid pilot or talk with Mehul Labs about a custom D2C operating system."
+>
+  <div class="offers-page">
+    <section class="offers-hero" aria-labelledby="offers-title">
+      <div class="shell offers-hero-inner">
+        <p class="service-kicker"><span aria-hidden="true"></span> Start with one useful result</p>
+        <h1 id="offers-title">A focused first step.<br /><em>Or the full scope.</em></h1>
+        <div class="offers-hero-bottom">
+          <p>Every service has two ways in: a paid pilot for one priority use case, or a conversation about the broader system. Either way, the scope is written before the work begins.</p>
+          <ul><li>Built in your accounts</li><li>One fixed scope</li><li>No open-ended retainer</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="offers-list section-space" aria-labelledby="offers-list-title">
+      <div class="shell">
+        <div class="section-intro">
+          <span class="section-label"><span>01 /</span> Choose your starting point</span>
+          <div>
+            <h2 id="offers-list-title" class="section-title">Three services.<br /><span class="muted-heading">Two honest ways to begin.</span></h2>
+            <p class="section-description">The pilot is intentionally narrow. The custom option is for work that crosses modules, brands or teams.</p>
+          </div>
+        </div>
+
+        <div class="offer-service-stack">
+          {serviceRoutes.map((service, serviceIndex) => {
+            const offer = getServiceOffer(service.pillarId);
+            return (
+              <article class="offer-service" id={service.slug}>
+                <div class="offer-service-heading">
+                  <span>0{serviceIndex + 1}</span>
+                  <div><p>{service.navLabel}</p><h3>{service.navDescription}</h3></div>
+                </div>
+                <div class="offer-choice-grid">
+                  <section class="offer-card offer-card-pilot" aria-labelledby={`${service.slug}-pilot`}>
+                    <div class="offer-card-top"><span>Paid pilot</span><span>Fixed first step</span></div>
+                    <h4 id={`${service.slug}-pilot`}>{offer.pilot.name}</h4>
+                    <p class="offer-price"><strong>{formatPilotPrice()}</strong><span>USD · fixed pilot</span></p>
+                    <p class="offer-promise">{offer.pilot.promise}</p>
+                    <ul>{offer.pilot.includes.map(item => <li><span aria-hidden="true">✓</span>{item}</li>)}</ul>
+                    <a class="offer-action offer-action-primary" href={`/?solution=${service.pillarId}&offer=pilot#contact`} data-cta-location={`offer-${service.slug}-pilot`}>Start with the pilot <ArrowIcon /></a>
+                    <p class="offer-fineprint">Final inclusions are confirmed in writing. No performance guarantee is implied.</p>
+                  </section>
+                  <section class="offer-card" aria-labelledby={`${service.slug}-custom`}>
+                    <div class="offer-card-top"><span>Custom engagement</span><span>Several moving parts</span></div>
+                    <h4 id={`${service.slug}-custom`}>{offer.custom.name}</h4>
+                    <p class="offer-price"><strong>Let’s talk</strong><span>Scoped after the audit</span></p>
+                    <p class="offer-promise">{offer.custom.promise}</p>
+                    <ul>{offer.custom.includes.map(item => <li><span aria-hidden="true">✓</span>{item}</li>)}</ul>
+                    <a class="offer-action" href={`/?solution=${service.pillarId}&offer=custom#contact`} data-cta-location={`offer-${service.slug}-custom`}>Scope it with Mehul <ArrowIcon /></a>
+                    <p class="offer-fineprint">You receive a fixed number before implementation begins.</p>
+                  </section>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

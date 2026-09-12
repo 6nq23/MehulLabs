@@ -19,10 +19,12 @@ export const contactEmail =
     : '';
 
 export const navLinks = [
-  { label: 'The leaks', href: '#leaks' },
-  { label: 'What we run', href: '#services' },
-  { label: 'How it works', href: '#approach' },
-  { label: 'FAQs', href: '#faq' },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/#services' },
+  { label: 'How it works', href: '/#approach' },
+  { label: 'FAQs', href: '/#faq' },
+  { label: 'Ready to start?', href: '/offers' },
+  { label: 'Tools', href: '/tools' },
 ] as const;
 
 /** The single action every CTA on the page asks for. */

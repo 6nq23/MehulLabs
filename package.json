@@ -22,7 +22,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "test": "node --test tests/landing.test.cjs"
+    "test": "node --test \"tests/*.test.cjs\""
   },
   "dependencies": {
     "@astrojs/react": "^6.0.5",

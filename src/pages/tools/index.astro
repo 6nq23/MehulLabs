@@ -1,0 +1,56 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { tools } from '@/data/tools';
+---
+
+<Layout
+  title="Free D2C Calculators"
+  description="Six focused, math-only calculators for D2C operators: RTO, unit economics, bundles, marketing budgets, runway, and inventory."
+>
+  <div class="tools-page">
+    <section class="tools-masthead" aria-labelledby="tools-title">
+      <div class="shell tools-masthead-inner">
+        <p class="tools-kicker"><span aria-hidden="true"></span> Math-only tools for D2C operators</p>
+        <h1 id="tools-title">Make the next decision<br /><em>with the numbers.</em></h1>
+        <p class="tools-intro">Six focused calculators for the operating questions that come up every week. No logins, no spreadsheets, no external data.</p>
+        <div class="tools-proof" aria-label="Tool principles">
+          <span>Runs in your browser</span>
+          <span>Your inputs stay private</span>
+          <span>Built for Indian D2C</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-catalog" aria-labelledby="catalog-title">
+      <div class="shell">
+        <div class="tools-catalog-heading">
+          <div>
+            <p class="eyebrow-accent">The toolkit</p>
+            <h2 id="catalog-title">Six numbers worth knowing.</h2>
+          </div>
+          <p>Each calculator answers one operating question and shows the formula behind the result.</p>
+        </div>
+
+        <div class="tool-grid">
+          {tools.map((tool) => (
+            <a class="tool-card" id={tool.slug} href={`/tools/${tool.slug}`} aria-label={`Open ${tool.title}`}>
+              <div class="tool-card-top">
+                <span class="tool-number">{tool.number}</span>
+                <span class="tool-status">Open tool <span aria-hidden="true">↗</span></span>
+              </div>
+              <h3>{tool.title}</h3>
+              <p>{tool.description}</p>
+              <ul aria-label={`${tool.title} results`}>
+                {tool.outputs.map((output) => <li><span aria-hidden="true">+</span>{output}</li>)}
+              </ul>
+              <div class="tool-formula">
+                <span>Core calculation</span>
+                <code>{tool.formula}</code>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

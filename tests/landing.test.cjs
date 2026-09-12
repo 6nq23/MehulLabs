@@ -32,13 +32,34 @@ const {
 } = loadSource('src/data/offer.ts');
 const { imageSlots, getImageSlot } = loadSource('src/data/media.ts');
 const { ownedBrands, ownershipDisclosure, hasCompleteOrderEvidence } = loadSource('src/data/experience.ts');
+const { serviceOffers, pilotPrice, formatPilotPrice } = loadSource('src/data/offers.ts');
 const operatingExperienceSource = fs.readFileSync(
   path.join(__dirname, '..', 'src/components/ui/OperatingExperience.astro'),
   'utf8',
 );
+const leadPopupSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/LeadCapturePopup.tsx'), 'utf8');
+
+test('every primary service has a fixed paid pilot and a custom offer', () => {
+  assert.equal(serviceOffers.length, 3);
+  assert.equal(pilotPrice.amount, 5000);
+  assert.equal(pilotPrice.currency, 'USD');
+  assert.equal(formatPilotPrice(), '$5,000');
+  for (const offer of serviceOffers) {
+    assert.ok(offer.pilot.name.trim() && offer.pilot.promise.trim());
+    assert.ok(offer.custom.name.trim() && offer.custom.promise.trim());
+    assert.equal(offer.pilot.includes.length, 3);
+    assert.equal(offer.custom.includes.length, 3);
+  }
+});
+
+test('timed popup waits five seconds and exposes both requested paths', () => {
+  assert.match(leadPopupSource, /setTimeout\(showWhenReady, 5000\)/);
+  assert.match(leadPopupSource, /href="\/d2c-brand-pillars\.pdf" download/);
+  assert.match(leadPopupSource, /timed-popup-audit/);
+});
 
 test('the four offer pillars drive the enquiry options and their labels', () => {
-  assert.equal(Array.from(solutions, item => item.id).join(','), 'store-conversion,operations,growth,all-in-one');
+  assert.equal(Array.from(solutions, item => item.id).join(','), 'store-conversion,operations,ai-automation,all-in-one');
   assert.equal(solutions.length, pillars.length);
   for (const solution of solutions) {
     assert.equal(isSolutionId(solution.id), true);
@@ -51,8 +72,9 @@ test('the four offer pillars drive the enquiry options and their labels', () => 
 test('campaign links published before the repackaging still resolve to a pillar', () => {
   assert.equal(resolveSolutionId('infrastructure'), 'operations');
   assert.equal(resolveSolutionId('cod-voice'), 'operations');
-  assert.equal(resolveSolutionId('meta-creatives'), 'growth');
-  assert.equal(resolveSolutionId('seo-content'), 'growth');
+  assert.equal(resolveSolutionId('meta-creatives'), 'ai-automation');
+  assert.equal(resolveSolutionId('seo-content'), 'ai-automation');
+  assert.equal(resolveSolutionId('growth'), 'ai-automation');
   assert.equal(resolveSolutionId('operations'), 'operations');
   assert.equal(resolveSolutionId('unknown'), null);
   assert.equal(resolveSolutionId(null), null);
@@ -169,13 +191,13 @@ test('order volume is included only when valid and relevant', () => {
     assert.equal(needsOrderVolume(interest), true);
     assert.match(buildEnquiry({ brand: 'Local test', interest, volume: '1,500+' }), /Daily orders: 1,500\+/);
   }
-  assert.equal(needsOrderVolume('growth'), false);
-  assert.doesNotMatch(buildEnquiry({ brand: 'Local test', interest: 'growth', volume: '1,500+' }), /Daily orders:/);
+  assert.equal(needsOrderVolume('ai-automation'), false);
+  assert.doesNotMatch(buildEnquiry({ brand: 'Local test', interest: 'ai-automation', volume: '1,500+' }), /Daily orders:/);
   assert.doesNotMatch(buildEnquiry({ brand: 'Local test', interest: 'operations', volume: 'unexpected' }), /Daily orders:/);
 });
 
 test('WhatsApp draft encoding preserves special characters without sending anything', () => {
-  const draft = buildEnquiry({ brand: 'A & B + परीक्षण', interest: 'growth', message: 'https://example.com/?a=1&b=2\nSecond line' });
+  const draft = buildEnquiry({ brand: 'A & B + परीक्षण', interest: 'ai-automation', message: 'https://example.com/?a=1&b=2\nSecond line' });
   const url = new URL(getWhatsAppDraftUrl(draft));
   assert.equal(url.origin, 'https://wa.me');
   assert.equal(url.pathname, '/919426016918');

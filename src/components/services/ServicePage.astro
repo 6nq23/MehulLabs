@@ -1,0 +1,95 @@
+---
+import { Approach } from '@/components/sections/Approach';
+import { Assurance } from '@/components/sections/Assurance';
+import { Contact } from '@/components/sections/Contact';
+import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
+import Layout from '@/layouts/Layout.astro';
+import { primaryCta } from '@/data/site';
+import { getServicePillar, serviceRoutes, type ServiceRoute } from '@/data/services';
+
+interface Props { service: ServiceRoute }
+const { service } = Astro.props;
+const pillar = getServicePillar(service);
+const related = serviceRoutes.filter(item => item.slug !== service.slug);
+---
+
+<Layout title={service.navLabel} description={service.intro}>
+  <div class="service-page">
+    <section class="service-hero" aria-labelledby="service-title">
+      <div class="shell service-hero-inner">
+        <div class="service-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{service.navLabel}</span></div>
+        <div class="service-hero-grid">
+          <div>
+            <p class="service-kicker"><span aria-hidden="true"></span>{service.navLabel} for D2C brands</p>
+            <h1 id="service-title">{service.title}<br /><em>{service.accent}</em></h1>
+          </div>
+          <div class="service-hero-copy">
+            <p>{service.intro}</p>
+            <MagneticButton href="#contact" variant="primary" strength={0.12} trackingLocation={`service-${service.slug}`}>
+              {pillar.action} <ArrowIcon />
+            </MagneticButton>
+            <ul class="service-reducers" aria-label="What happens next">
+              {primaryCta.reducers.map(item => <li>{item}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-problem section-space" aria-labelledby="service-problem-title">
+      <div class="shell service-problem-grid">
+        <p class="eyebrow-accent">Where the leak starts</p>
+        <div>
+          <h2 id="service-problem-title">{service.problemTitle}</h2>
+          <p>{service.problemBody}</p>
+          <div class="service-fit"><span>A good fit when</span><p>{pillar.fit}</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-delivery section-space" aria-labelledby="service-delivery-title">
+      <div class="shell">
+        <div class="section-intro">
+          <span class="section-label"><span>02 /</span> What changes</span>
+          <div>
+            <h2 id="service-delivery-title" class="section-title">One system.<br /><span class="muted-heading">Clear jobs.</span></h2>
+            <p class="section-description">{pillar.description}</p>
+          </div>
+        </div>
+        <ol class="service-outcomes">
+          {service.outcomes.map((outcome, index) => <li><span>0{index + 1}</span><p>{outcome}</p></li>)}
+        </ol>
+        <div class="service-modules">
+          {pillar.modules.map((module, index) => (
+            <article id={module.id}>
+              <span>{pillar.number}.{index + 1}</span>
+              <h3>{module.name}</h3>
+              <p>{module.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Approach focused sectionNumber="03" client:visible />
+    <Assurance showFitCriteria={false} sectionNumber="04" client:visible />
+
+    <section class="related-services section-space" aria-labelledby="related-title">
+      <div class="shell">
+        <p class="eyebrow-accent">05 / The connected layer</p>
+        <h2 id="related-title">This leak often touches another one.</h2>
+        <div class="related-service-grid">
+          {related.map(item => (
+            <a href={`/services/${item.slug}`}>
+              <span>{item.navLabel}</span>
+              <strong>{item.navDescription}</strong>
+              <ArrowIcon />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Contact initialInterest={service.pillarId} sectionNumber="06" client:load />
+  </div>
+</Layout>

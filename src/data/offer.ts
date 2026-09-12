@@ -24,7 +24,7 @@ export interface OfferModule {
   body: string;
 }
 
-export type PillarId = 'store-conversion' | 'operations' | 'growth' | 'all-in-one';
+export type PillarId = 'store-conversion' | 'operations' | 'ai-automation' | 'all-in-one';
 
 export interface Pillar {
   id: PillarId;
@@ -108,14 +108,14 @@ export const pillars: readonly Pillar[] = [
     action: 'Fix my order operations',
   },
   {
-    id: 'growth',
+    id: 'ai-automation',
     number: '03',
-    label: 'Growth & content',
-    outcome: 'Demand you own, not demand you rent.',
-    shortcut: 'Stop renting all your traffic',
-    headline: 'One ad account should not be carrying your whole revenue.',
+    label: 'AI automation',
+    outcome: 'A marketing system that keeps what your brand learns.',
+    shortcut: 'Turn brand knowledge into action',
+    headline: 'Your marketing should not have to start from zero every Monday.',
     description:
-      'Your social presence and your catalogue content run as one job — because the thing that wins an ad is usually the thing missing from the product page.',
+      'Managed marketing handles the work in market. Your Claude Brain keeps the approved context behind it — customers, offers, voice, past decisions and what the numbers taught us.',
     modules: [
       {
         id: 'marketing',
@@ -123,14 +123,14 @@ export const pillars: readonly Pillar[] = [
         body: 'Competitor teardown, the angles worth testing, creative and content production, ads, and day-to-day social. Your whole social presence, run by us.',
       },
       {
-        id: 'seo',
-        name: 'SEO AI automation',
-        body: 'Product descriptions, collection descriptions and blogs produced at catalogue scale — written for people, and reviewed by a human before anything publishes.',
+        id: 'claude-brain',
+        name: 'Claude Brain',
+        body: 'A private, structured AI workspace built from the source material you approve, so briefs, analysis and repeat decisions begin with your brand context instead of a blank chat.',
       },
     ],
-    fit: 'Paid is the only thing bringing people in, and your product pages have looked the same since launch.',
+    fit: 'Marketing knowledge is scattered across chats, people and decks, and every new task needs the same context explained again.',
     startingPrice: null,
-    action: 'Build my demand engine',
+    action: 'Build my AI growth engine',
   },
   {
     id: 'all-in-one',

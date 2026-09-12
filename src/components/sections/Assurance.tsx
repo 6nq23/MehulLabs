@@ -2,13 +2,13 @@ import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
 import { assurances, fitCriteria } from '@/data/offer';
 import { primaryCta } from '@/data/site';
 
-export function Assurance() {
+export function Assurance({ showFitCriteria = true, sectionNumber = '06' }: { showFitCriteria?: boolean; sectionNumber?: string }) {
   return (
     <section id="assurance" className="assurance-section section-space" aria-labelledby="assurance-title">
       <div className="shell">
         <div className="section-intro">
           <span className="section-label">
-            <span>06 /</span> What you are not risking
+            <span>{sectionNumber} /</span> What you are not risking
           </span>
           <div>
             <h2 id="assurance-title" className="section-title">
@@ -34,7 +34,7 @@ export function Assurance() {
             </li>
           ))}
         </ol>
-        <div className="fit-grid">
+        {showFitCriteria && <div className="fit-grid">
           <div className="fit-column">
             <h3>Worth 20 minutes if</h3>
             <ul className="fit-yes">
@@ -57,7 +57,7 @@ export function Assurance() {
               ))}
             </ul>
           </div>
-        </div>
+        </div>}
         <div className="assurance-cta">
           <p>Still on the left-hand list? Then the next twenty minutes are worth more than the next twenty tabs.</p>
           <MagneticButton href="#contact" variant="primary" strength={0.12} trackingLocation="assurance">

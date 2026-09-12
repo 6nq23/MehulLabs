@@ -1,0 +1,56 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { CalculatorApp } from '@/components/tools/CalculatorApp';
+import { tools } from '@/data/tools';
+import { toolContent } from '@/data/toolContent';
+
+export function getStaticPaths() {
+  return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool } }));
+}
+
+type Tool = (typeof tools)[number];
+interface Props { tool: Tool }
+const { tool } = Astro.props;
+const content = toolContent[tool.slug];
+---
+
+<Layout title={tool.title} description={tool.description}>
+  <div class="calculator-page">
+    <header class="calculator-hero">
+      <div class="shell">
+        <a href="/tools" class="calculator-back"><span aria-hidden="true">←</span> All tools</a>
+        <div class="calculator-title-row">
+          <div>
+            <p class="tools-kicker"><span aria-hidden="true"></span> {content.eyebrow}</p>
+            <h1>{tool.title}</h1>
+          </div>
+          <p>{content.intro}</p>
+        </div>
+        <nav class="tool-switcher" aria-label="Choose a calculator">
+          {tools.map((item) => (
+            <a href={`/tools/${item.slug}`} aria-current={item.slug === tool.slug ? 'page' : undefined}>
+              <span>{item.number}</span>{item.title.replace(' Calculator', '').replace(' Planner', '')}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <section class="shell calculator-main" aria-label={`${tool.title} workspace`}>
+      <CalculatorApp toolId={tool.slug} client:load />
+      <div class="calculator-formula-bar">
+        <span>Core calculation</span>
+        <code>{tool.formula}</code>
+      </div>
+    </section>
+    <section class="tool-education">
+      <div class="shell">
+        <div class="education-intro"><p class="eyebrow-accent">Why it matters</p><h2>{content.whyTitle}</h2><p>{content.whyIntro}</p></div>
+        <ol class="education-grid">{content.reasons.map((reason, index) => <li><span>{String(index + 1).padStart(2, '0')}</span><h3>{reason[0]}</h3><p>{reason[1]}</p></li>)}</ol>
+      </div>
+    </section>
+    <section class="tool-faq shell" aria-labelledby="tool-faq-title">
+      <div><p class="eyebrow-accent">Frequently asked</p><h2 id="tool-faq-title">Straight answers.</h2></div>
+      <div>{content.faqs.map((faq) => <details><summary>{faq[0]}<span aria-hidden="true">+</span></summary><p>{faq[1]}</p></details>)}</div>
+    </section>
+  </div>
+</Layout>

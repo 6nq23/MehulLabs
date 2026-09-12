@@ -29,7 +29,7 @@ const keywords = [
   'AI calling agent',
   'COD confirmation calls',
   'AI workflow automation',
-  'SEO automation',
+  'Claude Brain for marketing',
   site.name,
 ].join(', ');
 const jsonLd = JSON.stringify({
@@ -94,7 +94,7 @@ const jsonLd = JSON.stringify({
       Skip to content
     </a>
 
-    <SiteRuntime client:load />
+    <SiteRuntime pathname={Astro.url.pathname} client:load />
     <main id="main"><slot /></main>
     <Footer />
   </body>
