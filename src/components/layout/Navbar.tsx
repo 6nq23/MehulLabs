@@ -11,13 +11,10 @@ function Caret() {
   return <svg className="nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 4.5 3.5 3 3.5-3" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-function RollingLabel({ children }: { children: string }) {
-  return <span className="nav-roll"><span className="nav-roll-track"><span>{children}</span><span aria-hidden="true">{children}</span></span></span>;
-}
-
 export function Navbar({ pathname = '/' }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [desktopMenu, setDesktopMenu] = useState<'services' | 'tools' | null>(null);
+  const [pastHero, setPastHero] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const lenis = useLenis();
@@ -25,6 +22,32 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   const toolsActive = pathname.startsWith('/tools');
   const offersActive = pathname === '/offers';
   const interior = serviceActive || toolsActive || offersActive;
+  const homeAnchor = (hash: string) => pathname === '/' ? hash : `/${hash}`;
+
+  useEffect(() => {
+    if (pathname !== '/') return;
+
+    const hero = document.querySelector<HTMLElement>('#top');
+    if (!hero) return;
+
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      setPastHero(hero.getBoundingClientRect().bottom <= 0);
+    };
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -56,7 +79,7 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   }
 
   return (
-    <header className={`site-header${interior ? ' interior-header' : ''}`}>
+    <header className={`site-header${interior ? ' interior-header' : ''}${pastHero ? ' is-compact' : ''}`}>
       <nav className="shell nav-inner" aria-label="Primary">
         <a href="/" className="wordmark" aria-label="Mehul Labs home">mehul<span>labs</span><i aria-hidden="true" /></a>
         <ul className="desktop-nav">
@@ -84,11 +107,11 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
               </div>
             </div>
           </li>
-          <li><a href="/#approach"><RollingLabel>How it works</RollingLabel></a></li>
-          <li><a href="/#faq"><RollingLabel>FAQs</RollingLabel></a></li>
+          <li><a href={homeAnchor('#approach')} className="nav-static-link">How it works</a></li>
+          <li><a href={homeAnchor('#faq')} className="nav-static-link">FAQs</a></li>
           <li><a href="/offers" className={offersActive ? 'active' : undefined} aria-current={offersActive ? 'page' : undefined}>Ready to start?</a></li>
         </ul>
-        <a href="/#contact" className="nav-contact" data-cta-location="navigation"><RollingLabel>{primaryCta.short}</RollingLabel> <ArrowIcon className="-rotate-45" /></a>
+        <a href={homeAnchor('#contact')} className="nav-contact nav-static-link" data-cta-location="navigation">{primaryCta.short} <ArrowIcon className="-rotate-45" /></a>
         <button ref={toggleRef} type="button" className="menu-toggle" onClick={() => setOpen(true)} aria-expanded={open} aria-controls="mobile-menu" aria-label="Open navigation menu"><span /><span /></button>
       </nav>
 
@@ -104,10 +127,10 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
             <summary><span>03</span>Tools<Caret /></summary>
             <div><a href="/tools" onClick={closeMenu} aria-current={pathname === '/tools' ? 'page' : undefined}>All calculators<ArrowIcon /></a>{tools.map(tool => <a href={`/tools/${tool.slug}`} onClick={closeMenu} aria-current={pathname === `/tools/${tool.slug}` ? 'page' : undefined} key={tool.slug}>{tool.title}<ArrowIcon /></a>)}</div>
           </details>
-          <a href="/#approach" onClick={closeMenu}><span>04</span>How it works<ArrowIcon /></a>
-          <a href="/#faq" onClick={closeMenu}><span>05</span>FAQs<ArrowIcon /></a>
+          <a href={homeAnchor('#approach')} onClick={closeMenu}><span>04</span>How it works<ArrowIcon /></a>
+          <a href={homeAnchor('#faq')} onClick={closeMenu}><span>05</span>FAQs<ArrowIcon /></a>
           <a href="/offers" onClick={closeMenu} aria-current={offersActive ? 'page' : undefined}><span>06</span>Ready to start?<ArrowIcon /></a>
-          <a href="/#contact" onClick={closeMenu} data-cta-location="mobile-navigation"><span>07</span>{primaryCta.short}<ArrowIcon /></a>
+          <a href={homeAnchor('#contact')} onClick={closeMenu} data-cta-location="mobile-navigation"><span>07</span>{primaryCta.short}<ArrowIcon /></a>
         </nav>
         <p>One connected layer. Store, operations and AI-powered growth.</p>
       </dialog>
