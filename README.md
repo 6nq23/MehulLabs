@@ -1,3 +1,17 @@
+# September 16 content refresh
+
+The current public positioning is **mlabs Growth: AI workflows, products and brand services**. The homepage provides separate service and product paths. New routes: `/products`, `/products/skill-manager`, `/about`. All three service detail pages include example scopes, handover, client requirements and measurement. The six calculator pages remain available.
+
+Skill Manager is explicitly **in development**, with a WhatsApp product-interest draft rather than checkout. Price, licence/distribution readiness, supported setup, fulfilment and support must be settled before selling software. The existing $5,000 USD service pilot is retained; it is not a software price. No revenue guarantee or invented client result is published.
+
+The timed popup is no longer mounted (its PDF target did not exist). Original SVG diagrams replace homepage placeholders and autoplay media. Service cards now stack correctly on mobile. Audit details: [content-refresh-2026-09-16.md](docs/content-refresh-2026-09-16.md).
+
+Run with Node >=22.19 (Node 24 also works): `npm ci`, `npm run dev`. Checks: `npm run check`, `npm test`, `npm run build`. The lockfile was repaired so clean installs work. Production canonical URLs default to `https://www.mlabsgrowth.com`; use `PUBLIC_SITE_URL` to override. Local review stays noindex unless configured. The WhatsApp enquiry prepares a message for the visitor to review and send; it does not store leads or confirm delivery. Conversion events are local browser events, not a connected analytics backend.
+
+Changes are local until deployed. The earlier implementation notes below describe prior iterations; this section and the dated audit take precedence where they differ.
+
+---
+
 # Mehul Labs — Astro landing page
 
 A statically generated Astro sales page with selectively hydrated React islands. The existing website copy, section order, data model, Tailwind styling, GSAP motion, and Lenis scrolling are preserved from the Next.js App Router implementation.

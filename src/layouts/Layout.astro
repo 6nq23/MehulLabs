@@ -18,7 +18,7 @@ const canonicalUrl = site.url
     ? site.url
     : new URL(Astro.url.pathname, `${site.url}/`).toString()
   : undefined;
-const socialImageUrl = new URL('/opengraph-image.png', site.url || Astro.url.origin).toString();
+const socialImageUrl = new URL('/social-preview.png', site.url || Astro.url.origin).toString();
 const robots = site.url ? 'index, follow' : 'noindex, nofollow';
 const googlebot = `${robots}, max-image-preview:large`;
 const keywords = [
@@ -95,6 +95,7 @@ const jsonLd = JSON.stringify({
     </a>
 
     <SiteRuntime pathname={Astro.url.pathname} client:load />
+    <noscript><nav class="no-js-navigation" aria-label="Page navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/products">Products</a><a href="/about">About</a><a href="/offers">Pricing &amp; scope</a><a href="/tools">Free tools</a></nav></noscript>
     <main id="main"><slot /></main>
     <Footer />
   </body>

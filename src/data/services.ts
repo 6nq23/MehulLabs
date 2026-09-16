@@ -88,7 +88,7 @@ export const serviceDelivery = {
     needs: 'Your Shopify setup, relevant store reports, product material and one person who can approve copy and design.',
     measure: 'Review conversion, add-to-cart, order value and margin together. Traffic quality and the offer still affect results.',
   },
-  'order-operations': {
+  'operations': {
     example: 'Cash-on-delivery confirmations sit in a spreadsheet. We map how orders enter the queue, which cases can follow an approved flow, and when a person needs to take over.',
     handover: ['A scoped connection or calling workflow, tested with representative cases', 'An exception queue, responsible owner and handoff rules', 'A runbook covering access, logs, usage costs and routine checks'],
     needs: 'Your order and courier tools, sample order states, existing call scripts and an operations owner. Available connections and languages are confirmed first.',
