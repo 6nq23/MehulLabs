@@ -1,7 +1,7 @@
 import { Reveal } from '@/components/ui/Reveal';
 import { processSteps } from '@/data/commerce';
 
-export function Approach({ focused = false, sectionNumber = '05' }: { focused?: boolean; sectionNumber?: string }) {
+export function Approach({ focused = false, sectionNumber = '04' }: { focused?: boolean; sectionNumber?: string }) {
   return (
     <section id="approach" className="approach-section section-space" aria-labelledby="approach-title">
       <div className="shell">
@@ -11,12 +11,12 @@ export function Approach({ focused = false, sectionNumber = '05' }: { focused?: 
           </span>
           <div>
             <h2 id="approach-title" className="section-title">
-              One workflow live<br />
-              <span>beats a six-month roadmap.</span>
+              Agree the first fix.<br />
+              <span>Build it. Test it. Hand it over.</span>
             </h2>
             <p className="section-description">
-              4 steps. Nobody rebuilds their whole operation at once, and nobody should — so we close the most
-              expensive leak first, prove it holds, and only then touch the next one.
+              We define the problem, the person who owns it, and the checks that tell us the workflow is ready.
+              Your team reviews the work before rollout.
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ export function Approach({ focused = false, sectionNumber = '05' }: { focused?: 
         </div>
         <div className="approach-note">
           <span className="status-dot" aria-hidden="true" />
-          <p>Scope, costs and responsibilities are agreed in writing before implementation — and you can stop after any step.</p>
+          <p>Scope, costs and responsibilities are agreed in writing before implementation — further work starts only with your approval.</p>
         </div>
       </div>
     </section>

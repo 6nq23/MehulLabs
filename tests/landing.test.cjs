@@ -37,7 +37,7 @@ const operatingExperienceSource = fs.readFileSync(
   path.join(__dirname, '..', 'src/components/ui/OperatingExperience.astro'),
   'utf8',
 );
-const leadPopupSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/LeadCapturePopup.tsx'), 'utf8');
+const siteRuntimeSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/SiteRuntime.tsx'), 'utf8');
 
 test('every primary service has a fixed paid pilot and a custom offer', () => {
   assert.equal(serviceOffers.length, 3);
@@ -52,10 +52,8 @@ test('every primary service has a fixed paid pilot and a custom offer', () => {
   }
 });
 
-test('timed popup waits five seconds and exposes both requested paths', () => {
-  assert.match(leadPopupSource, /setTimeout\(showWhenReady, 5000\)/);
-  assert.match(leadPopupSource, /href="\/d2c-brand-pillars\.pdf" download/);
-  assert.match(leadPopupSource, /timed-popup-audit/);
+test('reading is not interrupted by the retired popup and missing download', () => {
+  assert.doesNotMatch(siteRuntimeSource, /LeadCapturePopup|d2c-brand-pillars/);
 });
 
 test('the four offer pillars drive the enquiry options and their labels', () => {

@@ -6,13 +6,13 @@ import { hasCompleteOrderEvidence, ownedBrands, ownershipDisclosure } from '@/da
 
 <aside class="operating-experience" aria-labelledby="experience-title">
   <p class="experience-label">Our operating experience</p>
-  <h4 id="experience-title">We ship our own<br />orders every day.</h4>
+  <h3 id="experience-title">We ship our own<br />orders every day.</h3>
   <ul class="owned-brand-list">
     {
       ownedBrands.map(brand => (
         <li>
           <span class="brand-category">{brand.category}</span>
-          <h5>{brand.name}</h5>
+          <h4>{brand.name}</h4>
           <p>{brand.context}</p>
           {hasCompleteOrderEvidence(brand.approvedOrderEvidence) && (
             <div class="order-evidence">

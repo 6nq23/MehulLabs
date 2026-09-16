@@ -7,16 +7,16 @@ export function Services() {
       <div className="shell">
         <div className="section-intro">
           <span className="section-label">
-            <span>03 /</span> What we run
+            <span>01 /</span> Brand services
           </span>
           <div>
             <h2 id="services-title" className="section-title">
-              3 expensive leaks.<br />
-              <span className="muted-heading">Choose where to start.</span>
+              A better store. Smoother operations.<br />
+              <span className="muted-heading">AI that starts with your context.</span>
             </h2>
             <p className="section-description">
-              Each service now has one focused page: the problem it removes, what we build, who it fits and what happens
-              next. Start with the leak costing you the most; connect the rest only when it makes sense.
+              Start with the work that is slowing you down. Each service has a clear scope, a review with your team,
+              and a handover. Connect more workflows only when the first one is useful.
             </p>
           </div>
         </div>

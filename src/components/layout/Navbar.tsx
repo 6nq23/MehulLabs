@@ -21,7 +21,7 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   const serviceActive = pathname.startsWith('/services/');
   const toolsActive = pathname.startsWith('/tools');
   const offersActive = pathname === '/offers';
-  const interior = serviceActive || toolsActive || offersActive;
+  const interior = pathname !== '/';
   const homeAnchor = (hash: string) => pathname === '/' ? hash : `/${hash}`;
 
   useEffect(() => {
@@ -81,11 +81,11 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   return (
     <header className={`site-header${interior ? ' interior-header' : ''}${pastHero ? ' is-compact' : ''}`}>
       <nav className="shell nav-inner" aria-label="Primary">
-        <a href="/" className="wordmark" aria-label="Mehul Labs home">mehul<span>labs</span><i aria-hidden="true" /></a>
+        <a href="/" className="wordmark" aria-label="mlabs Growth home">mlabs<span>growth</span><i aria-hidden="true" /></a>
         <ul className="desktop-nav">
           <li><a href="/" className={pathname === '/' ? 'active' : undefined} aria-current={pathname === '/' ? 'page' : undefined}>Home</a></li>
-          <li className="nav-dropdown" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setDesktopMenu(null); }}>
-            <button type="button" className={serviceActive ? 'nav-parent active' : 'nav-parent'} aria-haspopup="true" aria-expanded={desktopMenu === 'services'} onClick={() => setDesktopMenu(menu => menu === 'services' ? null : 'services')}>Services <Caret /></button>
+          <li className="nav-dropdown" onKeyDown={event => { if (event.key === 'Escape') { setDesktopMenu(null); event.currentTarget.querySelector('button')?.focus(); } }} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setDesktopMenu(null); }}>
+            <button type="button" className={serviceActive ? 'nav-parent active' : 'nav-parent'} aria-expanded={desktopMenu === 'services'} onClick={() => setDesktopMenu(menu => menu === 'services' ? null : 'services')}>Services <Caret /></button>
             <div className={`nav-dropdown-panel${desktopMenu === 'services' ? ' is-open' : ''}`}>
               <p>Choose the leak to close first</p>
               {serviceRoutes.map(service => (
@@ -95,10 +95,10 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
               ))}
             </div>
           </li>
-          <li className="nav-dropdown tools-dropdown" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setDesktopMenu(null); }}>
+          <li className="nav-dropdown tools-dropdown" onKeyDown={event => { if (event.key === 'Escape') { setDesktopMenu(null); event.currentTarget.querySelector('button')?.focus(); } }} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setDesktopMenu(null); }}>
             <div className="nav-parent-group">
-              <a href="/tools" className={toolsActive ? 'nav-parent active' : 'nav-parent'} aria-current={pathname === '/tools' ? 'page' : undefined}>Tools</a>
-              <button type="button" className="nav-dropdown-toggle" aria-label="Open Tools menu" aria-haspopup="true" aria-expanded={desktopMenu === 'tools'} onClick={() => setDesktopMenu(menu => menu === 'tools' ? null : 'tools')}><Caret /></button>
+              <a href="/tools" className={toolsActive ? 'nav-parent active' : 'nav-parent'} aria-current={pathname === '/tools' ? 'page' : undefined}>Free tools</a>
+              <button type="button" className="nav-dropdown-toggle" aria-label="Open Tools menu" aria-expanded={desktopMenu === 'tools'} onClick={() => setDesktopMenu(menu => menu === 'tools' ? null : 'tools')}><Caret /></button>
             </div>
             <div className={`nav-dropdown-panel nav-tools-panel${desktopMenu === 'tools' ? ' is-open' : ''}`}>
               <div className="nav-dropdown-heading"><p>Free D2C calculators</p><a href="/tools">View all tools <span aria-hidden="true">↗</span></a></div>
@@ -107,16 +107,16 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
               </div>
             </div>
           </li>
-          <li><a href={homeAnchor('#approach')} className="nav-static-link">How it works</a></li>
-          <li><a href={homeAnchor('#faq')} className="nav-static-link">FAQs</a></li>
-          <li><a href="/offers" className={offersActive ? 'active' : undefined} aria-current={offersActive ? 'page' : undefined}>Ready to start?</a></li>
+          <li><a href="/products" className={pathname.startsWith('/products') ? 'active' : undefined} aria-current={pathname === '/products' ? 'page' : undefined}>Products</a></li>
+          <li><a href="/about" aria-current={pathname === '/about' ? 'page' : undefined}>About</a></li>
+          <li><a href="/offers" className={offersActive ? 'active' : undefined} aria-current={offersActive ? 'page' : undefined}>Pricing & scope</a></li>
         </ul>
         <a href={homeAnchor('#contact')} className="nav-contact nav-static-link" data-cta-location="navigation">{primaryCta.short} <ArrowIcon className="-rotate-45" /></a>
         <button ref={toggleRef} type="button" className="menu-toggle" onClick={() => setOpen(true)} aria-expanded={open} aria-controls="mobile-menu" aria-label="Open navigation menu"><span /><span /></button>
       </nav>
 
       <dialog ref={dialogRef} id="mobile-menu" className="mobile-menu" onCancel={closeMenu} onClose={() => setOpen(false)} aria-label="Navigation">
-        <div className="mobile-menu-top"><a href="/" className="wordmark" onClick={closeMenu}>mehul<span>labs</span><i aria-hidden="true" /></a><button type="button" onClick={closeMenu} className="menu-close" aria-label="Close navigation menu">×</button></div>
+        <div className="mobile-menu-top"><a href="/" className="wordmark" onClick={closeMenu}>mlabs<span>growth</span><i aria-hidden="true" /></a><button type="button" onClick={closeMenu} className="menu-close" aria-label="Close navigation menu">×</button></div>
         <nav aria-label="Mobile" className="mobile-primary">
           <a href="/" onClick={closeMenu} aria-current={pathname === '/' ? 'page' : undefined}><span>01</span>Home<ArrowIcon /></a>
           <details open={serviceActive}>
@@ -124,15 +124,15 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
             <div>{serviceRoutes.map(service => <a href={`/services/${service.slug}`} onClick={closeMenu} aria-current={pathname === `/services/${service.slug}` ? 'page' : undefined} key={service.slug}>{service.navLabel}<ArrowIcon /></a>)}</div>
           </details>
           <details open={toolsActive}>
-            <summary><span>03</span>Tools<Caret /></summary>
+            <summary><span>03</span>Free tools<Caret /></summary>
             <div><a href="/tools" onClick={closeMenu} aria-current={pathname === '/tools' ? 'page' : undefined}>All calculators<ArrowIcon /></a>{tools.map(tool => <a href={`/tools/${tool.slug}`} onClick={closeMenu} aria-current={pathname === `/tools/${tool.slug}` ? 'page' : undefined} key={tool.slug}>{tool.title}<ArrowIcon /></a>)}</div>
           </details>
-          <a href={homeAnchor('#approach')} onClick={closeMenu}><span>04</span>How it works<ArrowIcon /></a>
-          <a href={homeAnchor('#faq')} onClick={closeMenu}><span>05</span>FAQs<ArrowIcon /></a>
-          <a href="/offers" onClick={closeMenu} aria-current={offersActive ? 'page' : undefined}><span>06</span>Ready to start?<ArrowIcon /></a>
+          <a href="/products" onClick={closeMenu} aria-current={pathname === '/products' ? 'page' : undefined}><span>04</span>Products<ArrowIcon /></a>
+          <a href="/about" onClick={closeMenu} aria-current={pathname === '/about' ? 'page' : undefined}><span>05</span>About<ArrowIcon /></a>
+          <a href="/offers" onClick={closeMenu} aria-current={offersActive ? 'page' : undefined}><span>06</span>Pricing & scope<ArrowIcon /></a>
           <a href={homeAnchor('#contact')} onClick={closeMenu} data-cta-location="mobile-navigation"><span>07</span>{primaryCta.short}<ArrowIcon /></a>
         </nav>
-        <p>One connected layer. Store, operations and AI-powered growth.</p>
+        <p>Practical AI workflows. Products and services by Mehul.</p>
       </dialog>
     </header>
   );

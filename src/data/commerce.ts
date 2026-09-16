@@ -1,3 +1,4 @@
+import { formatPilotPrice } from '@/data/offers';
 import { pillars, type PillarId } from '@/data/offer';
 
 /**
@@ -60,76 +61,24 @@ export const processSteps = [
   {
     number: '03',
     title: 'One workflow live.',
-    body: 'We build and run the first workflow end to end, with your team, until it holds without anyone watching it.',
-    output: 'One thing working, not a roadmap',
+    body: 'We build and run the first workflow end to end, with your team, using agreed checks, monitoring and a clear route for exceptions.',
+    output: 'A tested workflow and written handover',
   },
   {
     number: '04',
     title: 'Then the next one.',
-    body: 'We add the next module only once the last is holding. You approve each step, you own each step, and you can stop after any of them.',
+    body: 'We add the next module only once the last is holding. You approve each step, you keep the agreed deliverables, and further work needs a new approval.',
     output: 'A layer that grows at your pace',
   },
 ] as const;
 
 export const faqs = [
-  {
-    question: 'What is the leak audit, exactly — and what does it cost?',
-    answer:
-      '20 minutes on WhatsApp or a call. Before it, we look at your store; during it, we ask about last month’s orders. You leave with the leaks we can see, ranked, and what it would take to close the first one. It costs nothing, and you keep the list whether or not you work with us. If the honest answer is that you do not need us yet, we will say so.',
-  },
-  {
-    question: 'You do not show client case studies. Why should I trust this?',
-    answer:
-      'Because we will not publish a result we cannot substantiate. What we can show you is the system running in our own businesses: Sanskrutibydiorin and Diorin Demifine Jewellery are our own brands under one parent business, not independent clients. On the call we walk you through the actual screens rather than a slide about them. Judge us on what you can see working, not on a testimonial you cannot check.',
-  },
-  {
-    question: 'Do I have to take all eight modules?',
-    answer:
-      'No, and most brands should not. Start with the single leak costing you the most — store conversion, order operations, or demand. We add the next module only once the last one is holding on its own. You can stop after any step.',
-  },
-  {
-    question: 'How much does it cost?',
-    answer:
-      'It depends on your catalogue size, your order volume, and how many brands you run. What we can promise about money is the shape, not the number: a fixed scope agreed in writing before work starts, with setup, usage and any third-party charges named up front. No open-ended retainer. Share your requirements and you get a real number, not a range.',
-  },
-  {
-    question: 'Will an AI agent annoy my customers?',
-    answer:
-      'It will if you let it. So the sell agent only interrupts a visit that was ending anyway, the smart cart only offers what genuinely fits the order, and the calling agent runs on your script, in your customers’ languages, with the rules about when to stop agreed with you before it dials. You approve the behaviour before it goes live, and you can change it any time.',
-  },
-  {
-    question: 'What can the calling agent actually handle?',
-    answer:
-      'The repetitive outbound calls: cash-on-delivery confirmation, NDR follow-up, abandoned cart, and delivery feedback. We define the conversation flow with you and confirm supported languages, call handling, and exactly which situations get handed to your team. A completed call is not a guarantee that an order will be delivered — it is a guarantee that somebody asked, on time, every time.',
-  },
-  {
-    question: 'We are on WooCommerce, or on our own stack. Does this still apply?',
-    answer:
-      'The order operations, calling agent and workflow automation are not Shopify-specific — they work wherever your orders live, subject to the connections your stack supports. The CRO, sell agent and smart cart are built for Shopify. Tell us what you run and we will tell you plainly which parts transfer and which do not.',
-  },
-  {
-    question: 'We only do a few hundred orders a day. Are we too small?',
-    answer:
-      'Probably not. The question that matters is not volume, it is whether the work is repetitive and whether a bad week already costs you real money. If you are pre-launch or still searching for a product people want, you are too early — and we would rather tell you that than sell you infrastructure.',
-  },
-  {
-    question: 'Who has access to my store and my customer data?',
-    answer:
-      'Everything is built inside your accounts — your Shopify, your ad accounts, your domains. We work on access you grant and can revoke, we agree what data each workflow touches as part of the scope, and access ends when the engagement does. Nothing important lives in an account you do not control.',
-  },
-  {
-    question: 'What happens if we stop working together?',
-    answer:
-      'Nothing switches off. The workflows, the accounts, the content and the configurations are yours because they were built in your accounts from day one. Handover explains what your team runs day to day and when to call us. That is the point of building it this way.',
-  },
-  {
-    question: 'Should we wait until after the festive season?',
-    answer:
-      'It depends which leak. Store conversion is most expensive to leave open exactly when traffic is at its peak, so that work usually belongs before the season. Deep operations changes are safer after it — nobody should be rewiring order flow mid-spike. Tell us your calendar and we will tell you which side of the spike your project belongs on.',
-  },
-  {
-    question: 'Does the AI guarantee better marketing results?',
-    answer:
-      'No, and be careful of anyone who says otherwise. The Claude Brain keeps approved context available and analysis identifies patterns worth testing; your campaigns establish what actually works. Results still depend on your market, offer, creative and execution. What we control is that the system begins with the right context and the work gets reviewed before it goes live.',
-  },
+  { question: 'What does the free audit include, and what does it cost?', answer: 'A 20-minute conversation about your store or workflow. We review the context you share, identify the problems we can see, and recommend what to investigate or fix first. The audit is free. You keep the next steps whether or not you hire us.' },
+  { question: 'How much does implementation cost?', answer: `The focused service pilot is ${formatPilotPrice()} USD for one agreed use case. Broader work is quoted separately after the audit. Before work begins, the written scope states deliverables, timing, payment terms, support and any applicable taxes, software, AI or usage charges. An enquiry does not purchase a pilot.` },
+  { question: 'Do I need a service engagement to use your products?', answer: 'No. Products and brand services are separate paths. Skill Manager is in development and is not yet for sale. Its pricing, included skills, supported setup and support terms will be stated before purchase becomes available. Our free calculators are available now.' },
+  { question: 'What experience can I review before I trust you with my brand?', answer: 'Sanskrutibydiorin and Diorin Demifine Jewellery are our own brands, not independent clients. They inform our operating experience. Ask which relevant workflows we can demonstrate and what evidence is available. We agree how your project will be evaluated before implementation; we do not promise a revenue result.' },
+  { question: 'Are we too small, or do we need to buy every service?', answer: 'Start with one recurring problem that is worth solving. You do not need every module or several brands. If you are pre-launch, still validating demand, or do not have a team member to own the workflow, we may recommend a simpler next step.' },
+  { question: 'How will AI use our customer data?', answer: 'We agree the data, tools, access and review rules in the scope. You grant access to the relevant accounts, and we identify third-party services used by the workflow. Calling scripts, supported languages, stopping rules and human handoff need approval before rollout. AI outputs still need appropriate review.' },
+  { question: 'What happens if we stop working together?', answer: 'You retain your accounts and the deliverables agreed in your scope. Handover covers routine use, exceptions and the subscriptions or licences the workflow depends on. Third-party services may still have fees, and ongoing maintenance or support is agreed separately.' },
+  { question: 'Can you work with our existing tools?', answer: 'Store conversion work focuses on Shopify. Order and AI workflows depend on the connections your tools support. Share your platform, courier, inventory and marketing setup; we confirm compatibility and limits before quoting. We do not ask you to replace everything before understanding the problem.' },
 ] as const;

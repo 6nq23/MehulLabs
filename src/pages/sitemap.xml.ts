@@ -17,6 +17,9 @@ export const GET = (() => {
   const paths = [
     '/',
     '/offers',
+    '/products',
+    '/products/skill-manager',
+    '/about',
     ...serviceRoutes.map(service => `/services/${service.slug}`),
     '/tools',
     ...tools.map(tool => `/tools/${tool.slug}`),

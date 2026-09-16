@@ -1,52 +1,31 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-
-import { About } from '@/components/sections/About';
-import { Approach } from '@/components/sections/Approach';
-import { Assurance } from '@/components/sections/Assurance';
-import { Contact } from '@/components/sections/Contact';
-import { Faq } from '@/components/sections/Faq';
-import { Hero } from '@/components/sections/Hero';
-import { Leaks } from '@/components/sections/Leaks';
-import { Mechanism } from '@/components/sections/Mechanism';
-import { Proof } from '@/components/sections/Proof';
 import { Services } from '@/components/sections/Services';
+import { Approach } from '@/components/sections/Approach';
+import { Faq } from '@/components/sections/Faq';
+import { Contact } from '@/components/sections/Contact';
 import OperatingExperience from '@/components/ui/OperatingExperience.astro';
-import SlotImage from '@/components/ui/SlotImage.astro';
 ---
-
 <Layout>
-  <Hero client:load>
-    <SlotImage
-      slot="hero-image"
-      id="hero"
-      className="hero-figure"
-      priority
-      sizes="(max-width: 899px) 100vw, 760px"
-    />
-  </Hero>
-  <Leaks client:visible />
-  <Mechanism client:visible />
-  <Services client:visible />
-  <Proof>
-    <SlotImage
-      slot="proof-image"
-      id="proof"
-      className="proof-figure"
-      sizes="(max-width: 899px) 100vw, 640px"
-    />
-    <OperatingExperience slot="operating-experience" />
-  </Proof>
-  <Approach client:visible />
-  <Assurance client:visible />
-  <About client:visible>
-    <SlotImage
-      slot="founder-image"
-      id="founder"
-      className="founder-figure"
-      sizes="(max-width: 899px) 100vw, 448px"
-    />
-  </About>
+  <section id="top" class="growth-hero">
+    <div class="shell growth-hero-grid">
+      <div>
+        <p class="growth-eyebrow">MLABS GROWTH · AI SYSTEMS FOR REAL WORK</p>
+        <h1>Your business is growing.<br /><em>Your to-do list<br />shouldn’t have to.</em></h1>
+        <p class="growth-lead">We help brands improve their Shopify store, connect order operations, and put repeatable AI workflows to work. Need tools for your own team? Explore the products we’re building.</p>
+        <div class="growth-actions"><a class="growth-button" href="#contact" data-cta-location="home-audit">Find my first fix <span aria-hidden="true">↗</span></a><a class="growth-text-link" href="/products">Explore products <span aria-hidden="true">↗</span></a></div>
+        <p class="growth-note">Start with a free 20-minute audit. Get a written scope before paid work.</p>
+      </div>
+      <figure class="growth-diagram"><img src="/workflow-map.svg" width="640" height="510" alt="Store, orders and marketing feed into a shared workflow, then a human reviews exceptions and decides the next action." fetchpriority="high" /><figcaption>How we scope a connected workflow · illustrative example</figcaption></figure>
+    </div>
+    <div class="shell"><div class="growth-trust"><span>Built from Mehul’s own brand operations</span><span>Start with one problem</span><span>Clear scope. Client-owned accounts.</span></div></div>
+  </section>
+  <Services />
+  <section id="proof" class="section-space growth-evidence">
+    <div class="shell growth-split"><div><p class="eyebrow-accent">THE EXPERIENCE BEHIND THE WORK</p><h2 class="section-title">We know what happens<br /><span class="muted-heading">after the order comes in.</span></h2><p>Mehul’s work spans seasonal products at Sanskrutibydiorin and daily jewellery operations at Diorin Demifine Jewellery. The questions are practical: what needs confirming, what is in stock, and who handles the next exception?</p><p>These are our own brands, not independent client case studies. We use that operating experience to ask better questions about your business and scope the work around your actual constraints.</p><a class="text-link" href="/about">Meet Mehul and see the approach ↗</a></div><OperatingExperience /></div>
+  </section>
+  <section class="section-space growth-product-band" aria-labelledby="product-heading"><div class="shell growth-split"><div><p class="eyebrow-accent">FOR PEOPLE WHO WANT TO RUN THEIR OWN WORKFLOWS</p><h2 class="section-title" id="product-heading">Useful AI work.<br /><span class="muted-heading">A place to organise it.</span></h2><p>mlabs Skill Manager is our software direction: organise skills, schedule recurring work, and review the outputs in one place. A skill is a set of instructions for a repeatable AI task, such as an audit or a content brief.</p><a href="/products/skill-manager" class="growth-button">Explore Skill Manager <span aria-hidden="true">↗</span></a></div><article class="growth-card"><span class="growth-status">IN DEVELOPMENT · NOT YET FOR SALE</span><h3>From a saved prompt<br />to a repeatable routine.</h3><ol class="growth-steps"><li><span>01</span>Choose the task and its project context.</li><li><span>02</span>Set when you want it to run.</li><li><span>03</span>Review the output before using it.</li></ol><p>Pricing, supported setup and release timing are still being finalised. Product interest is separate from a service enquiry.</p></article></div></section>
+  <Approach />
   <Faq />
   <Contact client:load />
 </Layout>

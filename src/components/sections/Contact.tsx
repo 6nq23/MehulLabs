@@ -8,11 +8,12 @@ import {
   solutionSelectionEvent,
   type InterestId,
 } from '@/data/commerce';
+import { formatPilotPrice } from '@/data/offers';
 import { contactEmail, primaryCta, site } from '@/data/site';
 import { trackConversion } from '@/lib/analytics';
 import { buildEnquiry, getWhatsAppDraftUrl } from '@/lib/enquiry';
 
-export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: { initialInterest?: InterestId; sectionNumber?: string }) {
+export function Contact({ initialInterest = 'not-sure', sectionNumber = '06' }: { initialInterest?: InterestId; sectionNumber?: string }) {
   const [interest, setInterest] = useState<InterestId>(initialInterest);
   const [draft, setDraft] = useState('');
   const [status, setStatus] = useState('');
@@ -34,7 +35,7 @@ export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: 
     const campaignSolution = resolveSolutionId(params.get('solution'));
     if (campaignSolution) setInterest(campaignSolution);
     const offer = params.get('offer');
-    if (offer === 'pilot') setMessage("I'm interested in the $5,000 paid pilot.");
+    if (offer === 'pilot') setMessage(`I'm interested in the ${formatPilotPrice()} USD paid pilot.`);
     if (offer === 'custom') setMessage("I'd like to discuss a custom engagement.");
     window.addEventListener(solutionSelectionEvent, selectSolution);
     return () => window.removeEventListener(solutionSelectionEvent, selectSolution);
@@ -78,7 +79,7 @@ export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: 
   async function copyDraft() {
     try {
       await navigator.clipboard.writeText(draft);
-      setStatus('Message copied. Paste it into your conversation with Mehul Labs.');
+      setStatus('Message copied. Paste it into your conversation with mlabs Growth.');
     } catch {
       setStatus('Copy is unavailable here. You can select the message below or open the WhatsApp link.');
     }
@@ -97,7 +98,7 @@ export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: 
           </h2>
           <p>
             Tell us your brand and where it hurts. We look at your store before we reply, then give you 20 minutes and
-            the 3 biggest leaks we can see — ranked, and yours to keep.
+            the problems we can see, with practical next steps you can keep.
           </p>
           <div className="contact-person">
             <span className="contact-initial" aria-hidden="true">
@@ -105,7 +106,7 @@ export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: 
             </span>
             <div>
               <strong>You are messaging Mehul, not a form inbox.</strong>
-              <span>Founder, Mehul Labs</span>
+              <span>Founder, mlabs Growth</span>
             </div>
           </div>
           <div className="contact-expectation">
@@ -155,7 +156,7 @@ export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: 
           >
             <div className="form-heading">
               <h3>Start my leak audit.</h3>
-              <p>Your brand and where it hurts. That is all we need to begin.</p>
+              <p>Share your brand and the area you want to improve.</p>
             </div>
             <div className="form-field">
               <label htmlFor="brand">
@@ -172,7 +173,7 @@ export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: 
               />
             </div>
             <fieldset className="interest-field">
-              <legend>Where does it hurt most?</legend>
+              <legend>What would you like help with?</legend>
               <div>
                 {solutions.map(solution => (
                   <label key={solution.id}>
@@ -219,7 +220,7 @@ export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: 
                 </select>
               </div>
             )}
-            <details className="form-context">
+            <details className="form-context" open={Boolean(message)}>
               <summary>
                 Add a little more context <span>(optional)</span>
               </summary>
@@ -231,7 +232,7 @@ export function Contact({ initialInterest = 'not-sure', sectionNumber = '09' }: 
               </div>
               <div className="form-field">
                 <label htmlFor="message">
-                  What would you fix first? <span className="optional">(optional)</span>
+                  Your requirements or preferred offer <span className="optional">(optional)</span>
                 </label>
                 <textarea id="message" name="message" rows={3} maxLength={600} placeholder="A sentence or two is plenty." value={message} onChange={event => setMessage(event.currentTarget.value)} />
               </div>

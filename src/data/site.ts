@@ -1,10 +1,10 @@
 /** Public brand information. Configure contact details and the canonical URL before launch. */
 export const site = {
-  name: 'Mehul Labs',
+  name: 'mlabs Growth',
   founder: 'Mehul',
-  role: 'The operating layer behind D2C brands',
+  role: 'AI workflows, products and brand services',
   tagline:
-    'Mehul Labs builds and runs the operating layer behind growing D2C brands — Shopify conversion, order operations, and demand — on one connected system, inside your own accounts. Start with a free 20-minute leak audit.',
+    'Practical AI systems for growing brands. Explore Shopify conversion, order operations, AI workflows and mlabs Skill Manager. Start with a free 20-minute audit.',
   location: 'Bengaluru, India',
   email: import.meta.env.PUBLIC_CONTACT_EMAIL?.trim() || '',
   url: import.meta.env.PUBLIC_SITE_URL?.replace(/\/$/, '') || '',
@@ -21,10 +21,11 @@ export const contactEmail =
 export const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/#services' },
-  { label: 'How it works', href: '/#approach' },
+  { label: 'Products', href: '/products' },
+  { label: 'About', href: '/about' },
   { label: 'FAQs', href: '/#faq' },
-  { label: 'Ready to start?', href: '/offers' },
-  { label: 'Tools', href: '/tools' },
+  { label: 'Pricing & scope', href: '/offers' },
+  { label: 'Free tools', href: '/tools' },
 ] as const;
 
 /** The single action every CTA on the page asks for. */
@@ -32,5 +33,5 @@ export const primaryCta = {
   label: 'Get my free leak audit',
   short: 'Get my leak audit',
   /** FUD reducers. These sit directly under the button, never anywhere else. */
-  reducers: ['20 minutes on WhatsApp', 'No retainer, no obligation', 'You keep the 3 leaks either way'],
+  reducers: ['20 minutes on WhatsApp', 'No retainer, no obligation', 'Practical next steps to keep'],
 } as const;

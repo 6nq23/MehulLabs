@@ -53,7 +53,7 @@ export const pillars: readonly Pillar[] = [
     label: 'Store conversion',
     outcome: 'More revenue from the traffic you already pay for.',
     shortcut: 'Sell more to the same traffic',
-    headline: 'You already bought the visit. Most of it leaves with nothing.',
+    headline: 'Help shoppers find the product, proof and next step they need.',
     description:
       'Three pieces working on the same visitor: the page they land on, the moment they try to leave, and the cart they finally reach.',
     modules: [
@@ -65,12 +65,12 @@ export const pillars: readonly Pillar[] = [
       {
         id: 'sell-agent',
         name: 'Shopify sell agent',
-        body: 'When a visitor lands on a slow product or moves to leave, the agent puts your proven sellers in front of them instead of letting them bounce.',
+        body: 'Help shoppers discover relevant products using approved store data and rules. We agree where recommendations appear and test the experience before rollout.',
       },
       {
         id: 'smart-cart',
         name: 'Shopify smart cart',
-        body: 'The cart offers the add-ons that genuinely fit the order, so order value rises without another discount code.',
+        body: 'The cart offers the add-ons that genuinely fit the order, so shoppers can find relevant extras without a blanket discount.',
       },
     ],
     fit: 'Traffic is arriving, and your conversion rate and average order value have been flat for months.',
@@ -81,26 +81,26 @@ export const pillars: readonly Pillar[] = [
     id: 'operations',
     number: '02',
     label: 'Order operations',
-    outcome: 'Ten times the orders without ten times the team.',
+    outcome: 'Less repetitive order work. More time for exceptions.',
     shortcut: 'Handle volume without hiring',
-    headline: 'The order is booked. Now something has to survive it.',
+    headline: 'Keep orders moving from confirmation to delivery.',
     description:
       'Orders, stock, brands and follow-up calls handled by one system, so your team spends the day on exceptions instead of on everything.',
     modules: [
       {
         id: 'infrastructure',
         name: 'D2C infrastructure',
-        body: 'One place for orders across brands, channels and couriers. Advanced inventory that tells you what to reorder before you run out. Several brands run without several teams.',
+        body: 'Connect supported order, stock and courier data so your team can spot dispatch delays and stock gaps. We confirm available integrations before scoping the build.',
       },
       {
         id: 'calling-agent',
         name: 'AI calling agent',
-        body: 'The calls your team makes by hand — COD confirmation, NDR follow-up, abandoned cart, delivery feedback — in your customers’ language, on your script, at your volume.',
+        body: 'Scope cash-on-delivery confirmation, failed-delivery follow-up, cart recovery or feedback calls. Confirm language support, call rules and human handoff before launch.',
       },
       {
         id: 'workflow',
         name: 'AI workflow automation',
-        body: 'The repetitive work between your tools — the copying, the updating, the chasing — handed to a system that does it the same way every time.',
+        body: 'The repetitive work between your tools — the copying, the updating, the chasing — mapped into a workflow with logs, exception rules and a named owner.',
       },
     ],
     fit: 'Your volume has outgrown spreadsheets, and every festive spike costs you a week of firefighting.',
@@ -110,7 +110,7 @@ export const pillars: readonly Pillar[] = [
   {
     id: 'ai-automation',
     number: '03',
-    label: 'AI automation',
+    label: 'AI & marketing workflows',
     outcome: 'A marketing system that keeps what your brand learns.',
     shortcut: 'Turn brand knowledge into action',
     headline: 'Your marketing should not have to start from zero every Monday.',
@@ -120,7 +120,7 @@ export const pillars: readonly Pillar[] = [
       {
         id: 'marketing',
         name: 'Marketing, managed',
-        body: 'Competitor teardown, the angles worth testing, creative and content production, ads, and day-to-day social. Your whole social presence, run by us.',
+        body: 'Competitor teardown, the angles worth testing, creative and content production, ads, and day-to-day social. Channels, deliverables and review responsibilities are agreed in your scope.',
       },
       {
         id: 'claude-brain',
@@ -145,7 +145,7 @@ export const pillars: readonly Pillar[] = [
       {
         id: 'sequenced',
         name: 'Sequenced, not dumped',
-        body: 'Nothing new is switched on until the last thing is holding without us watching it. You approve each step before it starts.',
+        body: 'We review the first workflow against agreed checks before adding another. You approve each step before it starts.',
       },
       {
         id: 'custom',
@@ -295,7 +295,7 @@ export const assurances = [
   },
   {
     title: '100% of it is built in your accounts.',
-    body: 'Your Shopify, your ad accounts, your domains, your data, your workflows. If we ever stop working together, nothing switches off and nothing walks out of the door.',
+    body: 'Your Shopify, your ad accounts, your domains, your data, your workflows. You keep your accounts and agreed deliverables. Handover identifies the subscriptions, licences and maintenance needed to keep them running.',
   },
 ] as const;
 
@@ -310,6 +310,6 @@ export const fitCriteria = {
   no: [
     'You have not launched, or you are still looking for a product people want. Fix that first — no system rescues a product nobody is buying.',
     'You want someone to take the business off your hands. We build systems your team runs; somebody on your side has to own it.',
-    'You are collecting quotes to pick the cheapest. We will not be the cheapest.',
+    'You need a guaranteed revenue outcome. We can agree deliverables and measurement, but cannot promise sales.',
   ],
 } as const;

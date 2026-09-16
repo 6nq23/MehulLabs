@@ -5,11 +5,12 @@ import { Contact } from '@/components/sections/Contact';
 import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
 import Layout from '@/layouts/Layout.astro';
 import { primaryCta } from '@/data/site';
-import { getServicePillar, serviceRoutes, type ServiceRoute } from '@/data/services';
+import { getServicePillar, serviceDelivery, serviceRoutes, type ServiceRoute } from '@/data/services';
 
 interface Props { service: ServiceRoute }
 const { service } = Astro.props;
 const pillar = getServicePillar(service);
+const delivery = serviceDelivery[service.pillarId];
 const related = serviceRoutes.filter(item => item.slug !== service.slug);
 ---
 
@@ -71,6 +72,12 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
       </div>
     </section>
 
+    <section class="section-space growth-evidence" aria-labelledby="handover-title">
+      <div class="shell growth-split">
+        <div><p class="eyebrow-accent">WHAT THIS LOOKS LIKE IN PRACTICE</p><h2 class="section-title" id="handover-title">A useful first fix.<br /><span class="muted-heading">A clear handover.</span></h2><p>{delivery.example}</p><p class="growth-note">Illustrative use case, not a client result.</p><h3 class="growth-service-detail">What we need from you</h3><p>{delivery.needs}</p></div>
+        <div class="growth-card"><h3>What your team receives</h3><ul class="growth-list">{delivery.handover.map(item => <li>{item}</li>)}</ul><p>{delivery.measure}</p><a class="text-link" href={`/offers#${service.slug}`}>See pilot pricing and custom scope ↗</a></div>
+      </div>
+    </section>
     <Approach focused sectionNumber="03" client:visible />
     <Assurance showFitCriteria={false} sectionNumber="04" client:visible />
 
