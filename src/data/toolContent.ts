@@ -1,7 +1,7 @@
 export const toolContent = {
   'unit-economics': {
     eyebrow: 'Free D2C calculator',
-    intro: 'Plug in your real numbers to estimate how much you make or loseon every order after COGS, shipping, ads, GST, gateway fees, and RTO drag.',
+    intro: 'Plug in your real numbers to estimate how much you make or lose on every order after COGS, shipping, ads, GST, gateway fees, and RTO drag.',
     whyTitle: 'Why Unit Economics Is the #1 Metric for D2C Brands',
     whyIntro: 'Scaling without knowing your unit economics is like driving blind. Topline revenue and ROAS hide the real picture; this calculator estimates contribution per order from the inputs you provide.',
     reasons: [['Uncover hidden costs', 'Gateway fees, GST, RTO drag, and packaging costs add up quickly. Seeing them together reveals the true cost per order.'], ['Set the right CAC target', 'Your maximum affordable CAC is the contribution before ad spend. Spending more means every new customer loses money.'], ['Know your break-even', 'The orders needed to cover ad spend help decide whether the current model is ready to scale.']],

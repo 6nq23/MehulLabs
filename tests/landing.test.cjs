@@ -17,6 +17,7 @@ function loadSource(relativePath) {
   const exports = {};
   vm.runInNewContext(source, {
     exports,
+    URL,
     process: { env: {} },
     require: id => id.startsWith('@/') ? loadSource('src/' + id.slice(2) + '.ts') : require(id),
   }, { filename });
@@ -272,4 +273,23 @@ test('FAQ answers the objection families a sales page has to clear', () => {
   for (const topic of ['cost', 'trust', 'stop working together', 'data', 'too small']) {
     assert.ok(questions.includes(topic), 'No FAQ covers: ' + topic);
   }
+});
+
+
+test('campaign tags reach Calendly through internal navigation without copying unrelated data', () => {
+  const { attributedHref } = loadSource('src/lib/booking.ts');
+  const page = 'https://www.mlabsgrowth.com/?utm_source=meta&utm_medium=paid_social&utm_campaign=orders&utm_content=video1&email=private&gclid=private';
+  const next = attributedHref('/services/order-operations', page);
+  const booking = new URL(attributedHref('https://calendly.com/kalathiyamehul13899/30min', next));
+  assert.equal(booking.searchParams.get('utm_source'), 'meta');
+  assert.equal(booking.searchParams.get('utm_campaign'), 'orders');
+  assert.equal(booking.searchParams.get('utm_content'), 'video1');
+  assert.equal(booking.searchParams.has('email'), false);
+  assert.equal(booking.searchParams.has('gclid'), false);
+  assert.equal(attributedHref('https://wa.me/919426016918', page), 'https://wa.me/919426016918');
+  assert.equal(attributedHref('#faq', page), '#faq');
+  const direct = new URL(attributedHref('https://calendly.com/kalathiyamehul13899/30min', 'https://www.mlabsgrowth.com/services/store-conversion'));
+  assert.equal(direct.searchParams.get('utm_content'), '/services/store-conversion');
+  const override = new URL(attributedHref('/offers?utm_campaign=existing', page));
+  assert.equal(override.searchParams.get('utm_campaign'), 'existing');
 });

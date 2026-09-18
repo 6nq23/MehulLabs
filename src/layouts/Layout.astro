@@ -2,6 +2,7 @@
 import { Footer } from '@/components/layout/Footer';
 import { SiteRuntime } from '@/components/layout/SiteRuntime';
 import { contactEmail, site } from '@/data/site';
+import { pageSeo, breadcrumbsFor } from '@/data/seo';
 import '@fontsource-variable/inter/wght.css';
 import '@fontsource-variable/manrope/wght.css';
 import '@/styles/globals.css';
@@ -9,37 +10,32 @@ import '@/styles/globals.css';
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
-const { title, description = site.tagline } = Astro.props;
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const entry = pageSeo[pathname];
+const { title = entry?.title, description = entry?.description || site.tagline, noindex = false } = Astro.props;
 const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.role}`;
-const canonicalUrl = site.url
-  ? Astro.url.pathname === '/'
-    ? site.url
-    : new URL(Astro.url.pathname, `${site.url}/`).toString()
-  : undefined;
-const socialImageUrl = new URL('/social-preview.png', site.url || Astro.url.origin).toString();
-const robots = site.url ? 'index, follow' : 'noindex, nofollow';
-const googlebot = `${robots}, max-image-preview:large`;
-const keywords = [
-  'D2C infrastructure',
-  'D2C order management',
-  'Shopify conversion rate optimization',
-  'Shopify smart cart',
-  'AI calling agent',
-  'COD confirmation calls',
-  'AI workflow automation',
-  'Claude Brain for marketing',
-  site.name,
-].join(', ');
-const jsonLd = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: site.name,
-  url: site.url || undefined,
-  email: contactEmail || undefined,
-  description: site.tagline,
-}).replace(/</g, '\\u003c');
+const canonicalUrl = site.url && !noindex ? new URL(pathname, `${site.url}/`).href : undefined;
+const socialImageUrl = new URL('/social-preview.png', site.url || Astro.url.origin).href;
+const indexable = site.indexable && !noindex;
+const robots = indexable ? 'index, follow' : 'noindex, follow';
+const googlebot = `${robots}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`;
+const breadcrumbs = breadcrumbsFor(pathname);
+const organizationId = `${site.url}/#organization`;
+const websiteId = `${site.url}/#website`;
+const graph: Record<string, unknown>[] = [
+  { '@type': 'Organization', '@id': organizationId, name: site.name, url: site.url, email: contactEmail || undefined, description: site.tagline },
+  { '@type': 'WebSite', '@id': websiteId, name: site.name, url: `${site.url}/`, publisher: { '@id': organizationId }, inLanguage: 'en' },
+  { '@type': entry?.type || 'WebPage', '@id': `${canonicalUrl}#webpage`, url: canonicalUrl, name: pageTitle, description, isPartOf: { '@id': websiteId }, publisher: { '@id': organizationId }, inLanguage: 'en', ...(breadcrumbs.length ? { breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` } } : {}) },
+];
+if (breadcrumbs.length) graph.push({ '@type': 'BreadcrumbList', '@id': `${canonicalUrl}#breadcrumb`, itemListElement: breadcrumbs.map((crumb, index) => ({ '@type': 'ListItem', position: index + 1, name: crumb.label, item: new URL(crumb.path, `${site.url || Astro.url.origin}/`).href })) });
+if (pathname.startsWith('/services/') && entry) graph.push({ '@type': 'Service', '@id': `${canonicalUrl}#service`, name: entry.title, description, url: canonicalUrl, provider: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` } });
+if (pathname.startsWith('/guides/') && entry) graph.push({ '@type': 'Article', '@id': `${canonicalUrl}#article`, headline: entry.title, description, datePublished: '2026-09-18', dateModified: '2026-09-18', author: { '@type': 'Organization', '@id': organizationId, name: site.name, url: `${site.url}/about` }, publisher: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` }, inLanguage: 'en' });
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
+const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+
 ---
 
 <!doctype html>
@@ -52,7 +48,7 @@ const jsonLd = JSON.stringify({
 
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
+    {verification && <meta name="google-site-verification" content={verification} />}
     <meta name="author" content={site.name} />
     <meta name="creator" content={site.name} />
     <meta name="robots" content={robots} />
@@ -75,9 +71,10 @@ const jsonLd = JSON.stringify({
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content="MLabs Growth — Shopify conversion, order operations and AI workflows" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
-    <script is:inline type="application/ld+json" set:html={jsonLd}></script>
+    {site.url && !noindex && <script is:inline type="application/ld+json" set:html={jsonLd}></script>}
 
     <noscript>
       <style is:inline>
@@ -95,8 +92,11 @@ const jsonLd = JSON.stringify({
     </a>
 
     <SiteRuntime pathname={Astro.url.pathname} client:load />
-    <noscript><nav class="no-js-navigation" aria-label="Page navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/products">Products</a><a href="/about">About</a><a href="/offers">Pricing &amp; scope</a><a href="/tools">Free tools</a></nav></noscript>
-    <main id="main"><slot /></main>
+    <noscript><nav class="no-js-navigation" aria-label="Page navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/products">Products</a><a href="/about">About</a><a href="/offers">Pricing &amp; scope</a><a href="/tools">Free tools</a><a href="/guides">Guides</a></nav></noscript>
+    <main id="main">
+      {breadcrumbs.length > 0 && <nav class="seo-breadcrumbs shell" aria-label="Breadcrumb"><ol>{breadcrumbs.map((crumb, index) => <li>{index === breadcrumbs.length - 1 ? <span aria-current="page">{crumb.label}</span> : <a href={crumb.path}>{crumb.label}</a>}</li>)}</ol></nav>}
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

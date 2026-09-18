@@ -1,3 +1,17 @@
+## SEO update — 18 September 2026
+
+All 19 public routes have page-specific metadata and canonical URLs. The site now includes three practical guides, calculator examples, service FAQs, structured breadcrumbs and a noindex 404. See [the SEO audit and keyword map](docs/seo-audit-2026-09-18.md) for research, verification and release steps.
+
+**The currently deployed site still blocks indexing. Deploy this updated production build to apply the fix.** Production defaults to `https://www.mlabsgrowth.com`. Vercel preview/development builds are excluded from indexing; set `PUBLIC_SITE_INDEXABLE=false` for other staging environments. `PUBLIC_SITE_URL`, if set, must be an HTTPS origin. Optional `PUBLIC_GOOGLE_SITE_VERIFICATION` accepts the Search Console HTML verification token.
+
+Run `npm run check`, `npm test`, `npm run build`, then `npm run test:seo`. To check preview output, run `VERCEL_ENV=preview npm run build` followed by `node scripts/check-seo.cjs --preview`, then rebuild production. Adding a page requires an entry in `src/data/seo.ts` (guides register from `src/data/guides.ts`) and an updated route count in the built-site audit. Maintain guide dates when content changes.
+
+## September 18 booking update
+
+All call/audit CTAs now use `site.bookingUrl`: https://calendly.com/kalathiyamehul13899/30min. The old audit form has been replaced by a direct booking card; WhatsApp remains a clearly labelled optional message channel. Call length is 30 minutes throughout. This supersedes the prior WhatsApp audit-flow notes below.
+
+`ConversionEvents` carries the five standard UTM campaign parameters through internal links and into Calendly. No cookies or session storage are used. Direct Calendly clicks include the current path as `utm_content` unless the campaign already supplies one. This does **not** capture completed bookings, configure an ad pixel, preserve click IDs, or establish cross-domain conversion attribution. See [ad-readiness-2026-09-18.md](docs/ad-readiness-2026-09-18.md) for research and launch dependencies.
+
 # September 16 content refresh
 
 The current public positioning is **mlabs Growth: AI workflows, products and brand services**. The homepage provides separate service and product paths. New routes: `/products`, `/products/skill-manager`, `/about`. All three service detail pages include example scopes, handover, client requirements and measurement. The six calculator pages remain available.

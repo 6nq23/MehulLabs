@@ -19,8 +19,8 @@ export const serviceRoutes: readonly ServiceRoute[] = [
     pillarId: 'store-conversion',
     navLabel: 'Store Conversion',
     navDescription: 'Turn more paid visits into orders.',
-    title: 'You already paid for the traffic.',
-    accent: 'Make more of it buy.',
+    title: 'Shopify conversion optimization.',
+    accent: 'Turn more visits into orders.',
     intro:
       'We improve the pages, product discovery and cart decisions that sit between an expensive click and a completed Shopify order.',
     problemTitle: 'The leak is rarely “more traffic.” It is what happens after the click.',
@@ -37,10 +37,10 @@ export const serviceRoutes: readonly ServiceRoute[] = [
     pillarId: 'operations',
     navLabel: 'Order Operations',
     navDescription: 'Handle more orders with less firefighting.',
-    title: 'More orders should not create',
-    accent: 'more operational chaos.',
+    title: 'COD confirmation & order automation.',
+    accent: 'Less chasing. Clearer handoffs.',
     intro:
-      'We connect order data, repetitive customer calls and the handoffs between your tools so your team works the exceptions instead of every order.',
+      'We connect order data, cash-on-delivery confirmation calls and failed-delivery follow-ups so your team can focus on exceptions instead of chasing every order.',
     problemTitle: 'Booked revenue is not delivered revenue.',
     problemBody:
       'Cash-on-delivery confirmations wait, failed-delivery follow-ups happen late, stock changes live in several places and people spend the day copying updates. The dashboard says growth while the team feels the drag.',
@@ -55,8 +55,8 @@ export const serviceRoutes: readonly ServiceRoute[] = [
     pillarId: 'ai-automation',
     navLabel: 'AI & Marketing',
     navDescription: 'Keep brand knowledge ready for the next brief.',
-    title: 'Your brand learns every week.',
-    accent: 'Your systems should remember.',
+    title: 'AI marketing workflow automation.',
+    accent: 'Start with your brand context.',
     intro:
       'Managed marketing puts the work into market. A structured AI workspace (your Claude Brain) keeps the approved brand context behind that work, so the next brief starts from what you already know.',
     problemTitle: 'The expensive part is not one task. It is explaining the brand again and again.',

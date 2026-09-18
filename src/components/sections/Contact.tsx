@@ -15,7 +15,7 @@ export function Contact({ sectionNumber = '06' }: { sectionNumber?: string }) {
           </div>
           <div className="contact-expectation">
             <h3>What happens next</h3>
-            <p>Choose an available time on Calendly and complete the booking there. Bring your website, the tools you use, and the problem you want to solve. Any paid work starts with a separate written scope.</p>
+            <p>Choose an available time on Calendly and complete the booking there. Add your website, the service or product you’re interested in, and the problem you want to solve to the meeting notes. Any paid work starts with a separate written scope.</p>
           </div>
           {contactEmail && <a className="contact-email text-link" href={'mailto:' + contactEmail}>{contactEmail}<ArrowIcon /></a>}
           <a className="contact-whatsapp text-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">Prefer a message? Chat on WhatsApp <ArrowIcon /></a>

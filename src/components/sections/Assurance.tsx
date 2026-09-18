@@ -59,7 +59,7 @@ export function Assurance({ showFitCriteria = true, sectionNumber = '06' }: { sh
           </div>
         </div>}
         <div className="assurance-cta">
-          <p>Still on the left-hand list? Then the next twenty minutes are worth more than the next twenty tabs.</p>
+          <p>Not sure which workflow to start with? Bring it to a free 30-minute audit call.</p>
           <MagneticButton href={site.bookingUrl} variant="primary" strength={0.12} trackingLocation="assurance">
             {primaryCta.label} <ArrowIcon />
           </MagneticButton>

@@ -4,6 +4,9 @@ import Layout from '@/layouts/Layout.astro';
 import { CalculatorApp } from '@/components/tools/CalculatorApp';
 import { tools } from '@/data/tools';
 import { toolContent } from '@/data/toolContent';
+import { toolSearchContent } from '@/data/searchContent';
+import { serviceRoutes } from '@/data/services';
+import { guides } from '@/data/guides';
 
 export function getStaticPaths() {
   return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool } }));
@@ -13,9 +16,12 @@ type Tool = (typeof tools)[number];
 interface Props { tool: Tool }
 const { tool } = Astro.props;
 const content = toolContent[tool.slug];
+const searchContent = toolSearchContent[tool.slug];
+const relatedGuide = guides.find(guide => guide.service === searchContent.service)!;
+const relatedService = serviceRoutes.find(service => service.slug === searchContent.service)!;
 ---
 
-<Layout title={tool.title} description={tool.description}>
+<Layout>
   <div class="calculator-page">
     <header class="calculator-hero">
       <div class="shell">
@@ -44,6 +50,12 @@ const content = toolContent[tool.slug];
       </div>
     </section>
     <p class="shell growth-note">Scenario estimate based on your inputs. It does not connect to your store or replace actual settlement and cost reports.</p>
+    <noscript><p class="shell growth-note">Enable JavaScript to update the calculator. The formula, worked example and explanations below remain available without it.</p></noscript>
+    <section class="section-space shell" aria-labelledby="calculation-method">
+      <h2 id="calculation-method" class="section-title">How to use this calculator</h2>
+      <div class="seo-help-grid"><div><p>{searchContent.steps}</p><h3>Worked example</h3><p>{searchContent.example}</p></div><div><h3>What the estimate leaves out</h3><p>{searchContent.limit}</p><p>Use inputs from the same reporting period and compare the result with your actual costs before making a decision.</p><a class="text-link" href={`/services/${relatedService.slug}`}>Explore {relatedService.navLabel.toLowerCase()} services ↗</a></div></div>
+    </section>
+    <p class="shell"><a class="text-link" href={`/guides/${relatedGuide.slug}`}>{relatedGuide.title} ↗</a></p>
     <section class="tool-education">
       <div class="shell">
         <div class="education-intro"><p class="eyebrow-accent">Why it matters</p><h2>{content.whyTitle}</h2><p>{content.whyIntro}</p></div>
