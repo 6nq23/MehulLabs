@@ -3,7 +3,7 @@ import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { useLenis } from '@/components/providers/SmoothScrollProvider';
 import { serviceRoutes } from '@/data/services';
 import { tools } from '@/data/tools';
-import { primaryCta } from '@/data/site';
+import { primaryCta, site } from '@/data/site';
 
 interface NavbarProps { pathname?: string }
 
@@ -22,7 +22,6 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   const toolsActive = pathname.startsWith('/tools');
   const offersActive = pathname === '/offers';
   const interior = pathname !== '/';
-  const homeAnchor = (hash: string) => pathname === '/' ? hash : `/${hash}`;
 
   useEffect(() => {
     if (pathname !== '/') return;
@@ -111,7 +110,7 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
           <li><a href="/about" aria-current={pathname === '/about' ? 'page' : undefined}>About</a></li>
           <li><a href="/offers" className={offersActive ? 'active' : undefined} aria-current={offersActive ? 'page' : undefined}>Pricing & scope</a></li>
         </ul>
-        <a href={homeAnchor('#contact')} className="nav-contact nav-static-link" data-cta-location="navigation">{primaryCta.short} <ArrowIcon className="-rotate-45" /></a>
+        <a href={site.bookingUrl} className="nav-contact nav-static-link" data-cta-location="navigation">{primaryCta.short} <ArrowIcon className="-rotate-45" /></a>
         <button ref={toggleRef} type="button" className="menu-toggle" onClick={() => setOpen(true)} aria-expanded={open} aria-controls="mobile-menu" aria-label="Open navigation menu"><span /><span /></button>
       </nav>
 
@@ -130,7 +129,7 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
           <a href="/products" onClick={closeMenu} aria-current={pathname === '/products' ? 'page' : undefined}><span>04</span>Products<ArrowIcon /></a>
           <a href="/about" onClick={closeMenu} aria-current={pathname === '/about' ? 'page' : undefined}><span>05</span>About<ArrowIcon /></a>
           <a href="/offers" onClick={closeMenu} aria-current={offersActive ? 'page' : undefined}><span>06</span>Pricing & scope<ArrowIcon /></a>
-          <a href={homeAnchor('#contact')} onClick={closeMenu} data-cta-location="mobile-navigation"><span>07</span>{primaryCta.short}<ArrowIcon /></a>
+          <a href={site.bookingUrl} onClick={closeMenu} data-cta-location="mobile-navigation"><span>07</span>{primaryCta.short}<ArrowIcon /></a>
         </nav>
         <p>Practical AI workflows. Products and services by Mehul.</p>
       </dialog>

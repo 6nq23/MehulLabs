@@ -1,3 +1,4 @@
+import { site } from '@/data/site';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { getServicePillar, serviceRoutes } from '@/data/services';
 
@@ -38,7 +39,7 @@ export function Services() {
         </div>
         <p className="solutions-note">
           Need all three connected, or not sure which leak is biggest?{' '}
-          <a href="#contact" data-cta-location="solutions">
+          <a href={site.bookingUrl} data-cta-location="solutions">
             Tell us what is slowing you down and we will rank them <span aria-hidden="true">↗</span>
           </a>
         </p>

@@ -1,4 +1,5 @@
 ---
+import { site } from '@/data/site';
 import Layout from '@/layouts/Layout.astro';
 import { Services } from '@/components/sections/Services';
 import { Approach } from '@/components/sections/Approach';
@@ -13,8 +14,8 @@ import OperatingExperience from '@/components/ui/OperatingExperience.astro';
         <p class="growth-eyebrow">MLABS GROWTH · AI SYSTEMS FOR REAL WORK</p>
         <h1>Your business is growing.<br /><em>Your to-do list<br />shouldn’t have to.</em></h1>
         <p class="growth-lead">We help brands improve their Shopify store, connect order operations, and put repeatable AI workflows to work. Need tools for your own team? Explore the products we’re building.</p>
-        <div class="growth-actions"><a class="growth-button" href="#contact" data-cta-location="home-audit">Find my first fix <span aria-hidden="true">↗</span></a><a class="growth-text-link" href="/products">Explore products <span aria-hidden="true">↗</span></a></div>
-        <p class="growth-note">Start with a free 20-minute audit. Get a written scope before paid work.</p>
+        <div class="growth-actions"><a class="growth-button" href={site.bookingUrl} data-cta-location="home-audit">Find my first fix <span aria-hidden="true">↗</span></a><a class="growth-text-link" href="/products">Explore products <span aria-hidden="true">↗</span></a></div>
+        <p class="growth-note">Start with a free 30-minute audit. Get a written scope before paid work.</p>
       </div>
       <figure class="growth-diagram"><img src="/workflow-map.svg" width="640" height="510" alt="Store, orders and marketing feed into a shared workflow, then a human reviews exceptions and decides the next action." fetchpriority="high" /><figcaption>How we scope a connected workflow · illustrative example</figcaption></figure>
     </div>

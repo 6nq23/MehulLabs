@@ -1,14 +1,15 @@
+import { site } from '@/data/site';
 import { useEffect, useRef } from 'react';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { useLenis } from '@/components/providers/SmoothScrollProvider';
 
 const popupSessionKey = 'mehul-labs:lead-popup-shown';
 
-export function LeadCapturePopup({ pathname = '/' }: { pathname?: string }) {
+export function LeadCapturePopup() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const retryRef = useRef<number | null>(null);
   const lenis = useLenis();
-  const auditHref = pathname === '/' ? '#contact' : '/#contact';
+  const auditHref = site.bookingUrl;
 
   useEffect(() => {
     let cancelled = false;
@@ -58,7 +59,7 @@ export function LeadCapturePopup({ pathname = '/' }: { pathname?: string }) {
       <p id="lead-popup-description">Choose the fastest useful next step for your D2C brand.</p>
       <div className="lead-popup-actions">
         <a href={auditHref} onClick={closePopup} data-cta-location="timed-popup-audit">
-          <span><strong>Get my free leak audit</strong><small>20 minutes · no obligation</small></span><ArrowIcon />
+          <span><strong>Get my free leak audit</strong><small>30 minutes · no obligation</small></span><ArrowIcon />
         </a>
         <a href="/d2c-brand-pillars.pdf" download onClick={closePopup} data-cta-location="timed-popup-pdf">
           <span><strong>Get the D2C Brand Pillars PDF</strong><small>Download the practical guide</small></span><ArrowIcon />

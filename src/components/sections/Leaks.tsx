@@ -1,7 +1,7 @@
 import { Reveal } from '@/components/ui/Reveal';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { leaks } from '@/data/offer';
-import { primaryCta } from '@/data/site';
+import { primaryCta, site } from '@/data/site';
 
 export function Leaks() {
   return (
@@ -38,8 +38,8 @@ export function Leaks() {
           <p>
             You can close all three by hiring. Most brands do, and it works — until the next spike, when you hire again.
           </p>
-          <a href="#contact" className="text-link" data-cta-location="leaks">
-            {primaryCta.short} — we name yours in 20 minutes <ArrowIcon />
+          <a href={site.bookingUrl} className="text-link" data-cta-location="leaks">
+            {primaryCta.short} — we name yours in 30 minutes <ArrowIcon />
           </a>
         </div>
       </div>

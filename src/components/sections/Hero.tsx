@@ -3,7 +3,7 @@ import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
 import { credentials } from '@/data/offer';
 import { ownedBrands } from '@/data/experience';
 import { getServicePillar, serviceRoutes } from '@/data/services';
-import { primaryCta } from '@/data/site';
+import { primaryCta, site } from '@/data/site';
 
 export function Hero({ heroImage }: { heroImage?: ReactNode }) {
   return (
@@ -40,7 +40,7 @@ export function Hero({ heroImage }: { heroImage?: ReactNode }) {
               </p>
             </div>
             <div className="hero-cta">
-              <MagneticButton href="#contact" variant="primary" strength={0.12} trackingLocation="hero">
+              <MagneticButton href={site.bookingUrl} variant="primary" strength={0.12} trackingLocation="hero">
                 {primaryCta.label} <ArrowIcon />
               </MagneticButton>
               <a href="#leaks" className="text-link">

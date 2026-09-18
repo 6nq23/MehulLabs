@@ -1,4 +1,5 @@
 ---
+import { site } from '@/data/site';
 import Layout from '@/layouts/Layout.astro';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { formatPilotPrice, getServiceOffer } from '@/data/offers';
@@ -21,7 +22,7 @@ import { serviceRoutes } from '@/data/services';
       </div>
     </section>
 
-    <div class="shell growth-service-detail"><p><strong>Not sure which scope fits?</strong> Start with the <a class="text-link" href="/#contact">free 20-minute audit ↗</a>. The pilot is paid implementation after you approve the scope, not the audit fee.</p><p>Looking for software? <a class="text-link" href="/products">Explore MLabs products ↗</a>. Skill Manager pricing has not been announced.</p></div>
+    <div class="shell growth-service-detail"><p><strong>Not sure which scope fits?</strong> Start with the <a class="text-link" href={site.bookingUrl}>free 30-minute audit ↗</a>. The pilot is paid implementation after you approve the scope, not the audit fee.</p><p>Looking for software? <a class="text-link" href="/products">Explore MLabs products ↗</a>. Skill Manager pricing has not been announced.</p></div>
     <section class="offers-list section-space" aria-labelledby="offers-list-title">
       <div class="shell">
         <div class="section-intro">
@@ -48,7 +49,7 @@ import { serviceRoutes } from '@/data/services';
                     <p class="offer-price"><strong>{formatPilotPrice()}</strong><span>USD · fixed pilot</span></p>
                     <p class="offer-promise">{offer.pilot.promise}</p>
                     <ul>{offer.pilot.includes.map(item => <li><span aria-hidden="true">✓</span>{item}</li>)}</ul>
-                    <a class="offer-action offer-action-primary" href={`/?solution=${service.pillarId}&offer=pilot#contact`} data-cta-location={`offer-${service.slug}-pilot`}>Discuss this pilot <ArrowIcon /></a>
+                    <a class="offer-action offer-action-primary" href={site.bookingUrl} data-cta-location={`offer-${service.slug}-pilot`}>Discuss this pilot <ArrowIcon /></a>
                     <p class="offer-fineprint">One agreed use case. Timeline, payment terms, support, applicable taxes and third-party charges are confirmed in writing before you commit.</p>
                   </section>
                   <section class="offer-card" aria-labelledby={`${service.slug}-custom`}>
@@ -57,7 +58,7 @@ import { serviceRoutes } from '@/data/services';
                     <p class="offer-price"><strong>Let’s talk</strong><span>Scoped after the audit</span></p>
                     <p class="offer-promise">{offer.custom.promise}</p>
                     <ul>{offer.custom.includes.map(item => <li><span aria-hidden="true">✓</span>{item}</li>)}</ul>
-                    <a class="offer-action" href={`/?solution=${service.pillarId}&offer=custom#contact`} data-cta-location={`offer-${service.slug}-custom`}>Scope it with Mehul <ArrowIcon /></a>
+                    <a class="offer-action" href={site.bookingUrl} data-cta-location={`offer-${service.slug}-custom`}>Scope it with Mehul <ArrowIcon /></a>
                     <p class="offer-fineprint">You receive a written quote before implementation begins. No payment is taken on this page.</p>
                   </section>
                 </div>

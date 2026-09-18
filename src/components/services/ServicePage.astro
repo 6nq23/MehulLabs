@@ -4,7 +4,7 @@ import { Assurance } from '@/components/sections/Assurance';
 import { Contact } from '@/components/sections/Contact';
 import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
 import Layout from '@/layouts/Layout.astro';
-import { primaryCta } from '@/data/site';
+import { primaryCta, site } from '@/data/site';
 import { getServicePillar, serviceDelivery, serviceRoutes, type ServiceRoute } from '@/data/services';
 
 interface Props { service: ServiceRoute }
@@ -26,7 +26,7 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
           </div>
           <div class="service-hero-copy">
             <p>{service.intro}</p>
-            <MagneticButton href="#contact" variant="primary" strength={0.12} trackingLocation={`service-${service.slug}`}>
+            <MagneticButton href={site.bookingUrl} variant="primary" strength={0.12} trackingLocation={`service-${service.slug}`}>
               {pillar.action} <ArrowIcon />
             </MagneticButton>
             <ul class="service-reducers" aria-label="What happens next">
@@ -97,6 +97,6 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
       </div>
     </section>
 
-    <Contact initialInterest={service.pillarId} sectionNumber="06" client:load />
+    <Contact sectionNumber="06" client:load />
   </div>
 </Layout>

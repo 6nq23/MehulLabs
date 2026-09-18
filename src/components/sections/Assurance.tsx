@@ -1,6 +1,6 @@
 import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
 import { assurances, fitCriteria } from '@/data/offer';
-import { primaryCta } from '@/data/site';
+import { primaryCta, site } from '@/data/site';
 
 export function Assurance({ showFitCriteria = true, sectionNumber = '06' }: { showFitCriteria?: boolean; sectionNumber?: string }) {
   return (
@@ -36,7 +36,7 @@ export function Assurance({ showFitCriteria = true, sectionNumber = '06' }: { sh
         </ol>
         {showFitCriteria && <div className="fit-grid">
           <div className="fit-column">
-            <h3>Worth 20 minutes if</h3>
+            <h3>Worth 30 minutes if</h3>
             <ul className="fit-yes">
               {fitCriteria.yes.map(item => (
                 <li key={item}>
@@ -60,7 +60,7 @@ export function Assurance({ showFitCriteria = true, sectionNumber = '06' }: { sh
         </div>}
         <div className="assurance-cta">
           <p>Still on the left-hand list? Then the next twenty minutes are worth more than the next twenty tabs.</p>
-          <MagneticButton href="#contact" variant="primary" strength={0.12} trackingLocation="assurance">
+          <MagneticButton href={site.bookingUrl} variant="primary" strength={0.12} trackingLocation="assurance">
             {primaryCta.label} <ArrowIcon />
           </MagneticButton>
           <ul className="cta-reducers" aria-label="What the audit involves">

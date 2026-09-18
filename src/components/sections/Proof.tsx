@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { isPublishableMetric, operatingFacts, publishedMetrics } from '@/data/offer';
-import { primaryCta } from '@/data/site';
+import { primaryCta, site } from '@/data/site';
 
 /** Measured figures render only once each one has a basis and a source behind it. */
 function MetricBand() {
@@ -67,7 +67,7 @@ export function Proof({
               We publish a number only once we can show you the report behind it. Until then, judge us on what you can
               see working.
             </p>
-            <a href="#contact" className="text-link" data-cta-location="proof">
+            <a href={site.bookingUrl} className="text-link" data-cta-location="proof">
               {primaryCta.short} <ArrowIcon />
             </a>
           </div>

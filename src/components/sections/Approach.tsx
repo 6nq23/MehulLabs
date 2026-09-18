@@ -25,7 +25,7 @@ export function Approach({ focused = false, sectionNumber = '04' }: { focused?: 
             <Reveal className="process-step" key={step.number}>
               <span className="process-number">{step.number}</span>
               <h3>{step.title}</h3>
-              <p>{focused && index === 0 ? '20 minutes on the area you chose and the source material behind it. We name the leaks we can see and which one to close first.' : step.body}</p>
+              <p>{focused && index === 0 ? '30 minutes on the area you chose and the source material behind it. We name the leaks we can see and which one to close first.' : step.body}</p>
               <span className="process-output">
                 <span aria-hidden="true">↳</span> {step.output}
               </span>

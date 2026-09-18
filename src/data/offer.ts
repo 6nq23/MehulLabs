@@ -286,7 +286,7 @@ export const mechanism = {
  */
 export const assurances = [
   {
-    title: '20 minutes. Zero cost. Zero commitment.',
+    title: '30 minutes. Zero cost. Zero commitment.',
     body: 'We name the leaks we can see and which one to close first. If the honest answer is that you do not need us yet, you will hear that instead of a proposal.',
   },
   {

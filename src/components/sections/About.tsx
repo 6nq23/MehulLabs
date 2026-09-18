@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 import { Reveal } from '@/components/ui/Reveal';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
-import { primaryCta } from '@/data/site';
+import { primaryCta, site } from '@/data/site';
 import { VideoStory } from './VideoStory';
 
 export function About({ founderImage }: { founderImage?: ReactNode }) {
@@ -38,7 +38,7 @@ export function About({ founderImage }: { founderImage?: ReactNode }) {
             Your brand has its own tools, its own team and its own constraints. We start there, we say plainly where our
             experience stops, and we would rather lose the work than sell you something you do not need yet.
           </p>
-          <a href="#contact" className="text-link" data-cta-location="about">
+          <a href={site.bookingUrl} className="text-link" data-cta-location="about">
             {primaryCta.short} <ArrowIcon />
           </a>
         </Reveal>

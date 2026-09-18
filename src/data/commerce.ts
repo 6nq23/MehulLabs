@@ -49,7 +49,7 @@ export const processSteps = [
   {
     number: '01',
     title: 'The leak audit.',
-    body: '20 minutes on your store and last month’s orders. We name the leaks we can see and which one is costing you the most right now.',
+    body: '30 minutes on your store and last month’s orders. We name the leaks we can see and which one is costing you the most right now.',
     output: 'Your leaks, ranked — yours to keep',
   },
   {
@@ -73,7 +73,7 @@ export const processSteps = [
 ] as const;
 
 export const faqs = [
-  { question: 'What does the free audit include, and what does it cost?', answer: 'A 20-minute conversation about your store or workflow. We review the context you share, identify the problems we can see, and recommend what to investigate or fix first. The audit is free. You keep the next steps whether or not you hire us.' },
+  { question: 'What does the free audit include, and what does it cost?', answer: 'A 30-minute conversation about your store or workflow. We review the context you share, identify the problems we can see, and recommend what to investigate or fix first. The audit is free. You keep the next steps whether or not you hire us.' },
   { question: 'How much does implementation cost?', answer: `The focused service pilot is ${formatPilotPrice()} USD for one agreed use case. Broader work is quoted separately after the audit. Before work begins, the written scope states deliverables, timing, payment terms, support and any applicable taxes, software, AI or usage charges. An enquiry does not purchase a pilot.` },
   { question: 'Do I need a service engagement to use your products?', answer: 'No. Products and brand services are separate paths. Skill Manager is in development and is not yet for sale. Its pricing, included skills, supported setup and support terms will be stated before purchase becomes available. Our free calculators are available now.' },
   { question: 'What experience can I review before I trust you with my brand?', answer: 'Sanskrutibydiorin and Diorin Demifine Jewellery are our own brands, not independent clients. They inform our operating experience. Ask which relevant workflows we can demonstrate and what evidence is available. We agree how your project will be evaluated before implementation; we do not promise a revenue result.' },

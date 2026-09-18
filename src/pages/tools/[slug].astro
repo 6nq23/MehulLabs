@@ -1,4 +1,5 @@
 ---
+import { site } from '@/data/site';
 import Layout from '@/layouts/Layout.astro';
 import { CalculatorApp } from '@/components/tools/CalculatorApp';
 import { tools } from '@/data/tools';
@@ -53,6 +54,6 @@ const content = toolContent[tool.slug];
       <div><p class="eyebrow-accent">Frequently asked</p><h2 id="tool-faq-title">Straight answers.</h2></div>
       <div>{content.faqs.map((faq) => <details><summary>{faq[0]}<span aria-hidden="true">+</span></summary><p>{faq[1]}</p></details>)}</div>
     </section>
-    <section class="section-space growth-product-band"><div class="shell growth-callout"><div><h2>Found a cost worth investigating?</h2><p>Bring the problem to a free audit. We’ll help you work out which workflow to review first.</p></div><a class="growth-button" href="/#contact" data-cta-location={`tool-${tool.slug}-audit`}>Discuss the next step ↗</a></div></section>
+    <section class="section-space growth-product-band"><div class="shell growth-callout"><div><h2>Found a cost worth investigating?</h2><p>Bring the problem to a free audit. We’ll help you work out which workflow to review first.</p></div><a class="growth-button" href={site.bookingUrl} data-cta-location={`tool-${tool.slug}-audit`}>Discuss the next step ↗</a></div></section>
   </div>
 </Layout>
