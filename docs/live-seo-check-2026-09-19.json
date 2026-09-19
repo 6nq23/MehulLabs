@@ -1,0 +1,101 @@
+[
+  {
+    "path": "/tools/rto-simulator",
+    "status": 200,
+    "title": "Free RTO Cost Calculator for Ecommerce \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/tools/rto-simulator\">"
+    ]
+  },
+  {
+    "path": "/tools/unit-economics",
+    "status": 200,
+    "title": "Free Ecommerce Unit Economics Calculator \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/tools/unit-economics\">"
+    ]
+  },
+  {
+    "path": "/tools/bundle-planner",
+    "status": 200,
+    "title": "Free Product Bundle Pricing Calculator \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/tools/bundle-planner\">"
+    ]
+  },
+  {
+    "path": "/tools/marketing-budget",
+    "status": 200,
+    "title": "Free Ecommerce Marketing Budget Calculator \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/tools/marketing-budget\">"
+    ]
+  },
+  {
+    "path": "/tools/runway-planner",
+    "status": 200,
+    "title": "Free Cash Runway &amp; Burn Rate Calculator \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/tools/runway-planner\">"
+    ]
+  },
+  {
+    "path": "/tools/inventory-planner",
+    "status": 200,
+    "title": "Free Inventory Reorder Point Calculator \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/tools/inventory-planner\">"
+    ]
+  },
+  {
+    "path": "/services/store-conversion",
+    "status": 200,
+    "title": "Shopify Conversion Rate Optimization Services \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/services/store-conversion\">"
+    ]
+  },
+  {
+    "path": "/services/order-operations",
+    "status": 200,
+    "title": "COD Confirmation &amp; Order Automation Services \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/services/order-operations\">"
+    ]
+  },
+  {
+    "path": "/services/ai-automation",
+    "status": 200,
+    "title": "AI Marketing Workflow Automation Services \u2014 mlabs Growth",
+    "robots": [
+      "<meta name=\"robots\" content=\"index, follow\">"
+    ],
+    "canonical": [
+      "<link rel=\"canonical\" href=\"https://www.mlabsgrowth.com/services/ai-automation\">"
+    ]
+  }
+]

@@ -2,6 +2,7 @@
 import { Footer } from '@/components/layout/Footer';
 import { SiteRuntime } from '@/components/layout/SiteRuntime';
 import { contactEmail, site } from '@/data/site';
+import { tools } from '@/data/tools';
 import { pageSeo, breadcrumbsFor } from '@/data/seo';
 import '@fontsource-variable/inter/wght.css';
 import '@fontsource-variable/manrope/wght.css';
@@ -33,6 +34,9 @@ const graph: Record<string, unknown>[] = [
 if (breadcrumbs.length) graph.push({ '@type': 'BreadcrumbList', '@id': `${canonicalUrl}#breadcrumb`, itemListElement: breadcrumbs.map((crumb, index) => ({ '@type': 'ListItem', position: index + 1, name: crumb.label, item: new URL(crumb.path, `${site.url || Astro.url.origin}/`).href })) });
 if (pathname.startsWith('/services/') && entry) graph.push({ '@type': 'Service', '@id': `${canonicalUrl}#service`, name: entry.title, description, url: canonicalUrl, provider: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` } });
 if (pathname.startsWith('/guides/') && entry) graph.push({ '@type': 'Article', '@id': `${canonicalUrl}#article`, headline: entry.title, description, datePublished: '2026-09-18', dateModified: '2026-09-18', author: { '@type': 'Organization', '@id': organizationId, name: site.name, url: `${site.url}/about` }, publisher: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` }, inLanguage: 'en' });
+const calculator = tools.find(tool => pathname === `/tools/${tool.slug}`);
+if (calculator) graph.push({ '@type': 'WebApplication', '@id': `${canonicalUrl}#calculator`, name: calculator.title, description: entry.description, url: canonicalUrl, applicationCategory: 'BusinessApplication', operatingSystem: 'Any', browserRequirements: 'Requires JavaScript and a modern web browser.', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, publisher: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` } });
+if (pathname === '/tools') graph.push({ '@type': 'ItemList', '@id': `${canonicalUrl}#calculators`, name: 'Free ecommerce calculators', numberOfItems: tools.length, itemListElement: tools.map((tool, index) => ({ '@type': 'ListItem', position: index + 1, name: tool.title, url: `${site.url}/tools/${tool.slug}` })) });
 const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
 const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 

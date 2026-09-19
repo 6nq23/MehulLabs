@@ -1,0 +1,13 @@
+---
+const groups = [
+  { label: 'Commerce & marketing', platforms: [['facebook', 'Facebook'], ['google', 'Google'], ['amazon', 'Amazon'], ['instagram', 'Instagram'], ['youtube', 'YouTube'], ['snapchat', 'Snapchat'], ['shopify', 'Shopify'], ['whatsapp', 'WhatsApp']] },
+  { label: 'AI & workflows', platforms: [['openai', 'OpenAI'], ['claude', 'Claude'], ['deepseek', 'DeepSeek']] },
+];
+---
+<section id="platforms" class="platform-family" aria-labelledby="platform-family-title">
+  <div class="shell">
+    <div class="platform-family-heading"><div><p class="eyebrow-accent">FAMILY OF GROWTH</p><h2 id="platform-family-title">The platforms you use.<br /><span>Working around your business.</span></h2></div><p>We work with the commerce, marketing and AI tools behind your day-to-day growth. Your goals decide the setup.</p></div>
+    {groups.map(group => <div class="platform-group"><h3>{group.label}</h3><ul>{group.platforms.map(([slug, name]) => <li><img src={`/platforms/${slug}.svg`} alt="" width="32" height="32" loading="lazy" decoding="async" /><span>{name}</span></li>)}</ul></div>)}
+    <p class="platform-family-note">Platform names describe the tools we work with, not sponsorships or official partnerships. Specific connections are confirmed in your scope.</p>
+  </div>
+</section>

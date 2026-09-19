@@ -53,6 +53,13 @@ for (const [route, {html}] of pages) {
    const article = graph.find(node => node['@type'] === 'Article');
    assert.ok(article && article.headline && article.author && article.datePublished, `${route}: article schema`);
   }
+  if (route.startsWith('/tools/')) {
+   const app = graph.find(node => node['@type'] === 'WebApplication');
+   assert.ok(app && app.isAccessibleForFree === true && app.offers.price === '0', `${route}: free calculator schema`);
+   assert.ok(!app.aggregateRating && !app.review, `${route}: no fabricated reviews`);
+   assert.ok(html.includes('id="input-definitions"'), `${route}: input explanations`);
+  }
+  if (route === '/tools') assert.equal(graph.find(node => node['@type'] === 'ItemList')?.numberOfItems, 6);
   if (route.startsWith('/services/')) assert.ok(graph.some(node => node['@type'] === 'Service'));
   assert.equal(meta('og:title')[0].content, decode(title));
  }

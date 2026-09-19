@@ -18,6 +18,14 @@ import { tools } from '@/data/tools';
       </div>
     </section>
 
+    <section class="shell section-space" aria-labelledby="choose-tool"><h2 class="section-title" id="choose-tool">Which number do you need?</h2><div class="tool-definitions">{[
+      ['What do failed deliveries cost?', 'rto-simulator', 'Compare COD and prepaid RTO costs.'],
+      ['What does an order contribute?', 'unit-economics', 'Review variable costs and ad spend per order.'],
+      ['Can this bundle support its discount?', 'bundle-planner', 'Compare bundle price, product margin and order value.'],
+      ['How should I split my ad budget?', 'marketing-budget', 'Model channel allocations and ROAS assumptions.'],
+      ['How long will current cash last?', 'runway-planner', 'Project cash balances over 24 months.'],
+      ['When should I reorder inventory?', 'inventory-planner', 'Estimate reorder points and safety stock.'],
+    ].map(([question, slug, detail]) => <article><h3><a class="text-link" href={`/tools/${slug}`}>{question} ↗</a></h3><p>{detail}</p></article>)}</div></section>
     <section class="tools-catalog" aria-labelledby="catalog-title">
       <div class="shell">
         <div class="tools-catalog-heading">
