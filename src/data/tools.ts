@@ -13,14 +13,14 @@ export const tools = [
     title: 'Unit Economics Calculator',
     description: 'Estimate contribution per order after product, fulfilment and acquisition costs.',
     formula: 'Net price − product, fulfilment, fee, tax and RTO costs − CAC',
-    outputs: ['Gross margin', 'Profit per order'],
+    outputs: ['Gross margin', 'Contribution per order'],
   },
   {
     number: '03',
     slug: 'bundle-planner',
     title: 'Bundle Pricing Calculator',
     description: 'Price multi-buy bundles and compare possible order value after the discount.',
-    formula: '(Price × quantity) × (1 − discount)',
+    formula: 'Sum of product prices × (1 − discount rate)',
     outputs: ['Bundle AOV', 'Revenue bump'],
   },
   {
@@ -28,7 +28,7 @@ export const tools = [
     slug: 'marketing-budget',
     title: 'Marketing Budget Calculator',
     description: 'Turn a spend ceiling and target ROAS into a practical revenue and order plan.',
-    formula: 'Budget × target ROAS ÷ AOV',
+    formula: 'Sum of (channel spend × channel ROAS) ÷ AOV',
     outputs: ['Expected revenue', 'Expected orders'],
   },
   {
