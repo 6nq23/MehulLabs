@@ -1,5 +1,4 @@
 ## SEO update — 18 September 2026
-
 All 19 public routes have page-specific metadata and canonical URLs. The site now includes three practical guides, calculator examples, service FAQs, structured breadcrumbs and a noindex 404. See [the SEO audit and keyword map](docs/seo-audit-2026-09-18.md) for research, verification and release steps.
 
 **The currently deployed site still blocks indexing. Deploy this updated production build to apply the fix.** Production defaults to `https://www.mlabsgrowth.com`. Vercel preview/development builds are excluded from indexing; set `PUBLIC_SITE_INDEXABLE=false` for other staging environments. `PUBLIC_SITE_URL`, if set, must be an HTTPS origin. Optional `PUBLIC_GOOGLE_SITE_VERIFICATION` accepts the Search Console HTML verification token.
