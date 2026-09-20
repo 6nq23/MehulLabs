@@ -39,6 +39,14 @@ const operatingExperienceSource = fs.readFileSync(
   'utf8',
 );
 const siteRuntimeSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/SiteRuntime.tsx'), 'utf8');
+const navbarSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/Navbar.tsx'), 'utf8');
+const blogIndexSource = fs.readFileSync(path.join(__dirname, '..', 'src/pages/blog/index.astro'), 'utf8');
+
+test('blog is linked in navigation and discovers Markdown posts newest first', () => {
+  assert.match(navbarSource, /href="\/blog"/);
+  assert.match(blogIndexSource, /import\.meta\.glob<BlogModule>\('\.\/\*\.md'/);
+  assert.match(blogIndexSource, /new Date\(b\.frontmatter\.publishedOn\).*new Date\(a\.frontmatter\.publishedOn\)/s);
+});
 
 test('every primary service has a fixed paid pilot and a custom offer', () => {
   assert.equal(serviceOffers.length, 3);

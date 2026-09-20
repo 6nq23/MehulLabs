@@ -12,18 +12,31 @@ interface Props {
   title?: string;
   description?: string;
   noindex?: boolean;
+  article?: {
+    publishedOn: string;
+    updatedOn?: string;
+    author?: string;
+    category?: string;
+    image?: string;
+    imageAlt?: string;
+    wordCount?: number;
+    faqs?: readonly { question: string; answer: string }[];
+  };
 }
 
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 const entry = pageSeo[pathname];
-const { title = entry?.title, description = entry?.description || site.tagline, noindex = false } = Astro.props;
+const { title = entry?.title, description = entry?.description || site.tagline, noindex = false, article } = Astro.props;
 const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.role}`;
 const canonicalUrl = site.url && !noindex ? new URL(pathname, `${site.url}/`).href : undefined;
-const socialImageUrl = new URL('/social-preview.png', site.url || Astro.url.origin).href;
+const socialImageUrl = new URL(article?.image || '/social-preview.png', site.url || Astro.url.origin).href;
+const socialImageAlt = article?.image && article.imageAlt ? article.imageAlt : 'mlabs Growth — practical AI workflows, products and brand services';
 const indexable = site.indexable && !noindex;
 const robots = indexable ? 'index, follow' : 'noindex, follow';
 const googlebot = `${robots}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`;
-const breadcrumbs = breadcrumbsFor(pathname);
+const breadcrumbs = article
+  ? [{ path: '/', label: 'Home' }, { path: '/blog', label: 'Blog' }, { path: pathname, label: title || 'Article' }]
+  : breadcrumbsFor(pathname);
 const organizationId = `${site.url}/#organization`;
 const websiteId = `${site.url}/#website`;
 const graph: Record<string, unknown>[] = [
@@ -34,6 +47,26 @@ const graph: Record<string, unknown>[] = [
 if (breadcrumbs.length) graph.push({ '@type': 'BreadcrumbList', '@id': `${canonicalUrl}#breadcrumb`, itemListElement: breadcrumbs.map((crumb, index) => ({ '@type': 'ListItem', position: index + 1, name: crumb.label, item: new URL(crumb.path, `${site.url || Astro.url.origin}/`).href })) });
 if (pathname.startsWith('/services/') && entry) graph.push({ '@type': 'Service', '@id': `${canonicalUrl}#service`, name: entry.title, description, url: canonicalUrl, provider: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` } });
 if (pathname.startsWith('/guides/') && entry) graph.push({ '@type': 'Article', '@id': `${canonicalUrl}#article`, headline: entry.title, description, datePublished: '2026-09-18', dateModified: '2026-09-18', author: { '@type': 'Organization', '@id': organizationId, name: site.name, url: `${site.url}/about` }, publisher: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` }, inLanguage: 'en' });
+if (article) graph.push({
+  '@type': 'BlogPosting',
+  '@id': `${canonicalUrl}#article`,
+  headline: title,
+  description,
+  datePublished: article.publishedOn,
+  dateModified: article.updatedOn || article.publishedOn,
+  author: { '@type': 'Person', '@id': `${site.url}/about#person`, name: article.author || 'Mehul', url: `${site.url}/about` },
+  publisher: { '@id': organizationId },
+  image: socialImageUrl,
+  mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` },
+  articleSection: article.category,
+  wordCount: article.wordCount,
+  inLanguage: 'en',
+});
+if (article?.faqs?.length) graph.push({
+  '@type': 'FAQPage',
+  '@id': `${canonicalUrl}#faq`,
+  mainEntity: article.faqs.map(({ question, answer }) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })),
+});
 const calculator = tools.find(tool => pathname === `/tools/${tool.slug}`);
 if (calculator) graph.push({ '@type': 'WebApplication', '@id': `${canonicalUrl}#calculator`, name: calculator.title, description: entry.description, url: canonicalUrl, applicationCategory: 'BusinessApplication', operatingSystem: 'Any', browserRequirements: 'Requires JavaScript and a modern web browser.', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, publisher: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` } });
 if (pathname === '/tools') graph.push({ '@type': 'ItemList', '@id': `${canonicalUrl}#calculators`, name: 'Free ecommerce calculators', numberOfItems: tools.length, itemListElement: tools.map((tool, index) => ({ '@type': 'ListItem', position: index + 1, name: tool.title, url: `${site.url}/tools/${tool.slug}` })) });
@@ -60,7 +93,7 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     {site.url && <link rel="author" href={site.url} />}
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={pageTitle} />
@@ -69,13 +102,15 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
     <meta property="og:image" content={socialImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="mlabs Growth — practical AI workflows, products and brand services" />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    {article && <meta property="article:published_time" content={article.publishedOn} />}
+    {article && <meta property="article:modified_time" content={article.updatedOn || article.publishedOn} />}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageUrl} />
-    <meta name="twitter:image:alt" content="MLabs Growth — Shopify conversion, order operations and AI workflows" />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
     {site.url && !noindex && <script is:inline type="application/ld+json" set:html={jsonLd}></script>}
@@ -96,7 +131,7 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
     </a>
 
     <SiteRuntime pathname={Astro.url.pathname} client:load />
-    <noscript><nav class="no-js-navigation" aria-label="Page navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/products">Products</a><a href="/about">About</a><a href="/offers">Pricing &amp; scope</a><a href="/tools">Free tools</a><a href="/guides">Guides</a></nav></noscript>
+    <noscript><nav class="no-js-navigation" aria-label="Page navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/products">Products</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/offers">Pricing &amp; scope</a><a href="/tools">Free tools</a><a href="/guides">Guides</a></nav></noscript>
     <main id="main">
       {breadcrumbs.length > 0 && <nav class="seo-breadcrumbs shell" aria-label="Breadcrumb"><ol>{breadcrumbs.map((crumb, index) => <li>{index === breadcrumbs.length - 1 ? <span aria-current="page">{crumb.label}</span> : <a href={crumb.path}>{crumb.label}</a>}</li>)}</ol></nav>}
       <slot />

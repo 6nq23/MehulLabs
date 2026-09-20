@@ -22,6 +22,15 @@ const relatedTools = tools.filter(item => (definitions.related as readonly strin
 const searchContent = toolSearchContent[tool.slug];
 const relatedGuide = guides.find(guide => guide.service === searchContent.service)!;
 const relatedService = serviceRoutes.find(service => service.slug === searchContent.service)!;
+const blogByTool = {
+  'rto-simulator': { slug: 'rto-cost-guide', label: 'Read the complete RTO cost guide' },
+  'unit-economics': { slug: 'unit-economics-guide', label: 'Read the complete unit economics guide' },
+  'bundle-planner': { slug: 'bundle-pricing-guide', label: 'Read the complete bundle pricing guide' },
+  'marketing-budget': { slug: 'marketing-budget-guide', label: 'Read the complete marketing budget guide' },
+  'runway-planner': { slug: 'cash-runway-guide', label: 'Read the complete cash runway guide' },
+  'inventory-planner': { slug: 'inventory-reorder-point-guide', label: 'Read the complete inventory reorder point guide' },
+} as const;
+const relatedBlog = blogByTool[tool.slug];
 ---
 
 <Layout>
@@ -60,7 +69,7 @@ const relatedService = serviceRoutes.find(service => service.slug === searchCont
       <h2 id="calculation-method" class="section-title">How to use this calculator</h2>
       <div class="seo-help-grid"><div><p>{searchContent.steps}</p><h3>Worked example</h3><p>{searchContent.example}</p></div><div><h3>What the estimate leaves out</h3><p>{searchContent.limit}</p><p>Use inputs from the same reporting period and compare the result with your actual costs before making a decision.</p><a class="text-link" href={`/services/${relatedService.slug}`}>Explore {relatedService.navLabel.toLowerCase()} services ↗</a></div></div>
     </section>
-    <p class="shell"><a class="text-link" href={`/guides/${relatedGuide.slug}`}>{relatedGuide.title} ↗</a></p>
+    <p class="shell"><a class="text-link" href={`/guides/${relatedGuide.slug}`}>{relatedGuide.title} ↗</a> · <a class="text-link" href={`/blog/${relatedBlog.slug}`}>{relatedBlog.label} ↗</a></p>
     <section class="section-space shell" id="input-definitions" aria-labelledby="input-definitions-title"><h2 id="input-definitions-title" class="section-title">{definitions.question}</h2><dl class="tool-definitions">{definitions.terms.map(([term, explanation]) => <div><dt>{term}</dt><dd>{explanation}</dd></div>)}</dl></section>
     <section class="tool-education">
       <div class="shell">

@@ -1,0 +1,60 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  publishedOn: string;
+  updatedOn?: string;
+  category?: string;
+  author?: string;
+  readTime?: string;
+  coverImage?: string;
+  coverImageAlt?: string;
+  wordCount?: number;
+  faqs?: readonly { question: string; answer: string }[];
+}
+
+const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
+const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(new Date(date));
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  article={{
+    publishedOn: frontmatter.publishedOn,
+    updatedOn: frontmatter.updatedOn,
+    author: frontmatter.author,
+    category: frontmatter.category,
+    image: frontmatter.coverImage,
+    imageAlt: frontmatter.coverImageAlt,
+    wordCount: frontmatter.wordCount,
+    faqs: frontmatter.faqs,
+  }}
+>
+  <article class="blog-post">
+    <header class="blog-post-header">
+      <div class="shell blog-post-header-inner">
+        <a class="blog-post-back" href="/blog"><span aria-hidden="true">←</span> All articles</a>
+        <p class="tools-kicker"><span aria-hidden="true"></span> {frontmatter.category || 'Field note'}</p>
+        <h1>{frontmatter.title}</h1>
+        <p class="blog-post-dek">{frontmatter.description}</p>
+        <div class="blog-post-meta">
+          <span>By <a href="/about">{frontmatter.author || 'Mehul'}</a></span>
+          <span>Updated <time datetime={frontmatter.updatedOn || frontmatter.publishedOn}>{formatDate(frontmatter.updatedOn || frontmatter.publishedOn)}</time></span>
+          {frontmatter.readTime && <span>{frontmatter.readTime}</span>}
+        </div>
+      </div>
+    </header>
+    <div class="shell blog-post-body">
+      <div class="blog-prose">
+        <slot />
+      </div>
+    </div>
+  </article>
+</Layout>

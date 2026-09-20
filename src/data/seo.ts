@@ -51,6 +51,12 @@ export const pageSeo: Record<string, PageSeo> = {
     "label": "Skill Manager",
     "type": "WebPage"
   },
+  "/blog": {
+    "title": "D2C & AI Automation Blog",
+    "description": "Read practical field notes from MLabs on D2C operations, Shopify conversion and useful AI automation workflows.",
+    "label": "Blog",
+    "type": "CollectionPage"
+  },
   "/tools": {
     "title": "Free Ecommerce & D2C Calculators",
     "description": "Use six free ecommerce calculators for RTO costs, unit economics, bundle pricing, marketing budgets, cash runway and inventory. No signup required.",
@@ -102,6 +108,6 @@ pageSeo['/guides'] = { title: 'D2C Growth & AI Workflow Guides', description: 'P
 
 export function breadcrumbsFor(path: string) {
   if (path === '/' || !pageSeo[path]) return [];
-  const parent = path.startsWith('/guides/') ? '/guides' : path.startsWith('/tools/') ? '/tools' : path.startsWith('/products/') ? '/products' : null;
+  const parent = path.startsWith('/blog/') ? '/blog' : path.startsWith('/guides/') ? '/guides' : path.startsWith('/tools/') ? '/tools' : path.startsWith('/products/') ? '/products' : null;
   return [{ path: '/', label: 'Home' }, ...(parent ? [{ path: parent, label: pageSeo[parent].label }] : []), { path, label: pageSeo[path].label }];
 }
