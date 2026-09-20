@@ -20,6 +20,7 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   const lenis = useLenis();
   const serviceActive = pathname.startsWith('/services/');
   const toolsActive = pathname.startsWith('/tools');
+  const blogActive = pathname.startsWith('/blog');
   const offersActive = pathname === '/offers';
   const interior = pathname !== '/';
 
@@ -65,7 +66,7 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   }, [open, lenis]);
 
   useEffect(() => {
-    const media = window.matchMedia('(min-width: 1100px)');
+    const media = window.matchMedia('(min-width: 1180px)');
     const closeOnDesktop = () => { if (media.matches) setOpen(false); };
     media.addEventListener('change', closeOnDesktop);
     return () => media.removeEventListener('change', closeOnDesktop);
@@ -107,6 +108,7 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
             </div>
           </li>
           <li><a href="/products" className={pathname.startsWith('/products') ? 'active' : undefined} aria-current={pathname === '/products' ? 'page' : undefined}>Products</a></li>
+          <li><a href="/blog" className={blogActive ? 'active' : undefined} aria-current={pathname === '/blog' ? 'page' : undefined}>Blog</a></li>
           <li><a href="/about" aria-current={pathname === '/about' ? 'page' : undefined}>About</a></li>
           <li><a href="/offers" className={offersActive ? 'active' : undefined} aria-current={offersActive ? 'page' : undefined}>Pricing & scope</a></li>
         </ul>
@@ -127,9 +129,10 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
             <div><a href="/tools" onClick={closeMenu} aria-current={pathname === '/tools' ? 'page' : undefined}>All calculators<ArrowIcon /></a>{tools.map(tool => <a href={`/tools/${tool.slug}`} onClick={closeMenu} aria-current={pathname === `/tools/${tool.slug}` ? 'page' : undefined} key={tool.slug}>{tool.title}<ArrowIcon /></a>)}</div>
           </details>
           <a href="/products" onClick={closeMenu} aria-current={pathname === '/products' ? 'page' : undefined}><span>04</span>Products<ArrowIcon /></a>
-          <a href="/about" onClick={closeMenu} aria-current={pathname === '/about' ? 'page' : undefined}><span>05</span>About<ArrowIcon /></a>
-          <a href="/offers" onClick={closeMenu} aria-current={offersActive ? 'page' : undefined}><span>06</span>Pricing & scope<ArrowIcon /></a>
-          <a href={site.bookingUrl} onClick={closeMenu} data-cta-location="mobile-navigation"><span>07</span>{primaryCta.short}<ArrowIcon /></a>
+          <a href="/blog" onClick={closeMenu} aria-current={pathname === '/blog' ? 'page' : undefined}><span>05</span>Blog<ArrowIcon /></a>
+          <a href="/about" onClick={closeMenu} aria-current={pathname === '/about' ? 'page' : undefined}><span>06</span>About<ArrowIcon /></a>
+          <a href="/offers" onClick={closeMenu} aria-current={offersActive ? 'page' : undefined}><span>07</span>Pricing & scope<ArrowIcon /></a>
+          <a href={site.bookingUrl} onClick={closeMenu} data-cta-location="mobile-navigation"><span>08</span>{primaryCta.short}<ArrowIcon /></a>
         </nav>
         <p>Practical AI workflows. Products and services by Mehul.</p>
       </dialog>

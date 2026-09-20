@@ -1,0 +1,76 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+interface BlogModule {
+  frontmatter: {
+    title: string;
+    description: string;
+    publishedOn: string;
+    category?: string;
+  };
+  url: string;
+}
+
+const modules = import.meta.glob<BlogModule>('./*.md', { eager: true });
+const posts = Object.values(modules).sort((a, b) =>
+  new Date(b.frontmatter.publishedOn).getTime() - new Date(a.frontmatter.publishedOn).getTime()
+);
+const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(new Date(date));
+---
+
+<Layout>
+  <div class="blog-page">
+    <section class="blog-masthead" aria-labelledby="blog-title">
+      <div class="shell blog-masthead-inner">
+        <p class="tools-kicker"><span aria-hidden="true"></span> Daily field notes</p>
+        <h1 id="blog-title">Useful ideas.<br /><em>One at a time.</em></h1>
+        <p>Practical notes on D2C operations, Shopify conversion, and AI automation—written for people doing the work.</p>
+      </div>
+    </section>
+
+    <section class="blog-listing" aria-labelledby="latest-posts">
+      <div class="shell">
+        <div class="blog-listing-heading">
+          <div>
+            <p class="eyebrow-accent">The journal</p>
+            <h2 id="latest-posts">Latest articles.</h2>
+          </div>
+          <p>{posts.length === 0 ? 'The first article is being prepared.' : `${posts.length} article${posts.length === 1 ? '' : 's'}, newest first.`}</p>
+        </div>
+
+        {posts.length > 0 ? (
+          <div class="blog-grid">
+            {posts.map(({ frontmatter, url }, index) => (
+              <article class="blog-card">
+                <a href={url} aria-label={`Read ${frontmatter.title}`}>
+                  <div class="blog-card-meta">
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <time datetime={frontmatter.publishedOn}>{formatDate(frontmatter.publishedOn)}</time>
+                  </div>
+                  <p>{frontmatter.category || 'Field note'}</p>
+                  <h3>{frontmatter.title}</h3>
+                  <div class="blog-card-footer">
+                    <span>{frontmatter.description}</span>
+                    <strong aria-hidden="true">↗</strong>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div class="blog-empty">
+            <span>01</span>
+            <div>
+              <h3>Fresh thinking is on the way.</h3>
+              <p>New articles will appear here automatically as they are published.</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  </div>
+</Layout>
