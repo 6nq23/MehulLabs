@@ -1,9 +1,17 @@
+## Sitemap and Google Search Console
+
+Submit **https://www.mlabsgrowth.com/sitemap.xml** in Google Search Console → Sitemaps. If the domain is already displayed beside the input, enter `sitemap.xml`. Submit it once; Google can revisit the same URL for updates.
+
+The sitemap is generated automatically with each production build and deployment. New Markdown articles under `src/pages/blog/` are discovered without editing a URL list. Use `publishedOn: "YYYY-MM-DD"` and, when the article changes substantially, `updatedOn: "YYYY-MM-DD"` in its frontmatter. The sitemap uses `updatedOn`, falling back to `publishedOn`, for each article’s `lastmod`. Adding a file locally does not update the live sitemap until you rebuild and deploy. Preview builds keep the sitemap empty.
+
+Run `npm run build` and `npm run test:seo` before deployment. The audit verifies that every indexable page appears exactly once and that blog modification dates match the article metadata.
+
 ## SEO update — 18 September 2026
 All 19 public routes have page-specific metadata and canonical URLs. The site now includes three practical guides, calculator examples, service FAQs, structured breadcrumbs and a noindex 404. See [the SEO audit and keyword map](docs/seo-audit-2026-09-18.md) for research, verification and release steps.
 
 **September 19 recheck: the live site now allows indexing and its sitemap is populated.** The historical blocker recorded below was resolved by a subsequent deployment. Today’s platform-logo and calculator-content updates remain local. See [the latest update](docs/platforms-and-tool-seo-2026-09-19.md). Production defaults to `https://www.mlabsgrowth.com`. Vercel preview/development builds are excluded from indexing; set `PUBLIC_SITE_INDEXABLE=false` for other staging environments. `PUBLIC_SITE_URL`, if set, must be an HTTPS origin. Optional `PUBLIC_GOOGLE_SITE_VERIFICATION` accepts the Search Console HTML verification token.
 
-Run `npm run check`, `npm test`, `npm run build`, then `npm run test:seo`. To check preview output, run `VERCEL_ENV=preview npm run build` followed by `node scripts/check-seo.cjs --preview`, then rebuild production. Adding a page requires an entry in `src/data/seo.ts` (guides register from `src/data/guides.ts`) and an updated route count in the built-site audit. Maintain guide dates when content changes.
+Run `npm run check`, `npm test`, `npm run build`, then `npm run test:seo`. To check preview output, run `VERCEL_ENV=preview npm run build` followed by `node scripts/check-seo.cjs --preview`, then rebuild production. Adding a regular page requires an entry in `src/data/seo.ts`; guides register from `src/data/guides.ts`, and blog Markdown pages are discovered automatically. Maintain article dates when content changes.
 
 ## September 18 booking update
 
