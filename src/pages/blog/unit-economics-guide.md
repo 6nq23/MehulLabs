@@ -30,8 +30,9 @@ The core formulas work in Canada, Australia, the USA, the UK, and India. The inp
 
 This guide gives founders and operators a practical model for both ecommerce and SaaS. It also shows how to compare countries without mistaking tax or currency differences for operational performance.
 
-<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a unit economics flow diagram">
-  <span>Image placeholder: Unit economics flow from net revenue to contribution margin, contribution after CAC, LTV, and break-even. Suggested alt text: “Unit economics calculation for startup profitability.”</span>
+<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a unit economics flow diagram" >
+  <img src="/Blogs/Unit and economic/image 1 une.png" alt="Unit economics flow diagram" loading="lazy">
+  
 </figure>
 
 > **Key takeaways**
@@ -278,8 +279,9 @@ If CAC is 700, simple payback is 10 months. The result should still be calculate
 
 The formula is universal, but country inputs must be local. Normalize tax and currency first. Then compare fulfilment, payment fees, duties, returns, support, and CAC. Otherwise, the model may attribute a tax-display difference to operational performance.
 
-<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a five-country unit economics comparison graphic">
-  <span>Image placeholder: Canada, Australia, USA, UK, and India unit economics checklist. Suggested alt text: “Country-specific unit economics considerations for five major markets.”</span>
+<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a five-country unit economics comparison graphic" >
+  <img src="/Blogs/Unit and economic/image 2 une.png" alt="Unit economics flow diagram" loading="lazy">
+
 </figure>
 
 | Market | Tax treatment to model | Operating costs to watch |

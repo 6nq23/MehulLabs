@@ -27,7 +27,7 @@ Cash runway is the length of time a business can continue before its projected c
 Runway is not a fixed ratio when revenue, costs, or working capital change. A simple cash divided by burn calculation is a helpful first check. A monthly forecast is better for decisions because it shows when growth, inventory, marketing, or payment timing changes the burn.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a cash runway line chart">
-  <span>Image placeholder: 24-month closing cash line with burn and break-even markers. Suggested alt text: “How to calculate startup cash runway month by month.”</span>
+  <img src="/Blogs/monthly cash run/monthly cash run.png" alt="How to calculate startup cash runway month by month." loading="lazy">
 </figure>
 
 > **Key takeaways**

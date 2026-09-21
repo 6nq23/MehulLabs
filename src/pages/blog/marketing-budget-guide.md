@@ -27,7 +27,7 @@ A marketing budget should connect money spent to a transparent revenue and order
 The most important discipline is separating attributed revenue from contribution and cash. A 3x ROAS can be attractive for one product and unprofitable for another because COGS, shipping, returns, discounts, and customer acquisition economics differ.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a marketing budget funnel graphic">
-  <span>Image placeholder: Budget allocation to channel revenue, projected orders, contribution, and cash. Suggested alt text: “Marketing budget planning from spend to projected orders.”</span>
+  <img src="/Blogs/Marketing Budget Guide/Budget Allocation Flow.png" alt="Marketing budget planning from spend to projected orders." loading="lazy">
 </figure>
 
 > **Key takeaways**
