@@ -27,7 +27,7 @@ Return to origin, or RTO, turns an apparently successful order into a failed del
 The most useful RTO model separates direct cash cost from revenue at risk. It also separates cash-on-delivery orders from prepaid orders. Those distinctions stop teams from treating the full order value as an accounting loss or hiding a weak COD segment inside a blended average.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for an RTO cost flow diagram">
-  <span>Image placeholder: Order placed, delivery attempt, RTO, reverse freight, and restocking flow. Suggested alt text: “How return-to-origin creates ecommerce costs.”</span>
+  <img src="/Blogs/RTO Cost Guide/RTO Flow Diagram.png" alt="How return-to-origin creates ecommerce costs." loading="lazy">
 </figure>
 
 > **Key takeaways**
@@ -138,7 +138,7 @@ Begin with diagnosis, not a blanket rule. A sharp increase may come from one pos
 Do not treat COD itself as the only problem. Removing COD can reduce accessible demand in markets where customers prefer it. Measure the net effect on delivered orders and contribution, not only the RTO percentage.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for an RTO diagnostic matrix">
-  <span>Image placeholder: RTO diagnostic matrix by courier, region, payment method, and reason code. Suggested alt text: “RTO analysis segments for ecommerce teams.”</span>
+  <img src="/Blogs/RTO Cost Guide/RTO Diagnostic Matrix.png" alt="RTO analysis segments for ecommerce teams." loading="lazy">
 </figure>
 
 ## Common RTO calculation mistakes
