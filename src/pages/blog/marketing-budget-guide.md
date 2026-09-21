@@ -121,6 +121,8 @@ A 3x attributed ROAS would leave roughly ₹66.67 after advertising per projecte
 
 This guardrail should vary by product, country, new versus returning customer, and channel. A blended company target can hide an unprofitable segment.
 
+If ChatGPT Ads is part of the test mix, use the [complete guide to ChatGPT Ads for Shopify](/blog/chatgpt-ads-shopify-guide) to separate catalog preparation, campaign objectives, attribution, and store-level profitability.
+
 ## How should you allocate the budget?
 
 Use evidence and constraints, not equal percentages by default.
