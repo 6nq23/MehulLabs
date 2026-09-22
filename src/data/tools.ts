@@ -47,4 +47,20 @@ export const tools = [
     formula: 'Daily sales × (lead time + buffer)',
     outputs: ['Reorder point', 'Safety stock'],
   },
+  {
+    number: '07',
+    slug: 'ecommerce-platform-profit',
+    title: 'E-Commerce Platform Profit Calculator',
+    description: 'Calculate profitability for marketplace selling after platform commission, returns, logistics and advertising.',
+    formula: 'Taxable revenue − commission − logistics − ads − product and return costs',
+    outputs: ['Expected profit', 'Target selling price'],
+  },
+  {
+    number: '08',
+    slug: 'website-d2c-profit',
+    title: 'Website / D2C Profit Calculator',
+    description: 'Calculate profitability for direct website sales after gateway fees, delivery, returns and advertising.',
+    formula: 'Taxable revenue − gateway fee − logistics − ads − product and return costs',
+    outputs: ['Expected profit', 'Break-even ROAS'],
+  },
 ] as const;

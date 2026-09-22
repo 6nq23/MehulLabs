@@ -936,6 +936,23 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 /* ── Expanded calculator content ────────────────────────────────────────── */
 .panel-intro { margin-top: 1rem; font-size: .875rem; color: #586056; }
+.profit-input-heading { margin-top: 1.25rem; }
+.calculator-toggle { display: flex; align-items: center; gap: .75rem; min-height: 3.5rem; margin-top: 1.25rem; padding: .8rem 1rem; border: 1px solid #cbd2c4; border-radius: 4px; background: var(--canvas); cursor: pointer; }
+.calculator-toggle input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.calculator-toggle > span { position: relative; flex: 0 0 auto; width: 2.7rem; height: 1.5rem; border-radius: 999px; background: #b9c2b2; transition: background .2s; }
+.calculator-toggle > span::after { content: ''; position: absolute; top: .2rem; left: .2rem; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(24, 32, 24, .25); transition: transform .2s; }
+.calculator-toggle input:checked + span { background: #496546; }
+.calculator-toggle input:checked + span::after { transform: translateX(1.2rem); }
+.calculator-toggle input:focus-visible + span { outline: 3px solid rgba(73, 101, 70, .25); outline-offset: 2px; }
+.calculator-toggle strong { font-size: .875rem; font-weight: 500; color: #3d463b; }
+.profit-result-sections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.profit-result-panel .detail-heading { align-items: flex-start; }
+.profit-result-panel .detail-kicker { margin-bottom: .4rem; }
+.profit-result-list > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .3rem 1rem; padding: 1rem 0; border-bottom: 1px solid #d5dacd; }
+.profit-result-list > div:last-child { border-bottom: 0; }
+.profit-result-list dt { font-size: .875rem; color: #586056; }
+.profit-result-list dd { font-size: .95rem; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.profit-result-list small { grid-column: 1 / -1; font-size: .75rem; line-height: 1.5; color: #737c6d; overflow-wrap: anywhere; }
 .auto-field { display: flex; flex-direction: column; gap: .45rem; padding: .8rem 1rem; border: 1px dashed #bfc8b8; border-radius: 4px; background: #e7ebdf; }
 .auto-field span, .product-row label > span, .product-margin > span, .sku-card-heading label > span { font-size: .875rem; font-weight: 500; color: #3d463b; }
 .auto-field strong { margin-top: auto; font-family: var(--font-display); font-size: 1.2rem; color: #496546; }
@@ -1022,7 +1039,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tool-faq details p { max-width: 42rem; padding: 0 3rem 1.5rem 0; font-size: 1rem; line-height: 1.75; color: #586056; }
 
 @media (max-width: 960px) {
-  .calculator-detail-grid, .education-intro, .tool-faq { grid-template-columns: 1fr; }
+  .calculator-detail-grid, .education-intro, .tool-faq, .profit-result-sections { grid-template-columns: 1fr; }
   .inventory-summary, .sku-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sku-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .product-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }

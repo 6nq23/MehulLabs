@@ -67,3 +67,38 @@ test('inventory reorder point includes lead-time and safety stock', () => {
   assert.equal(portfolio.criticalSkus, 1);
   assert.equal(portfolio.workingCapital, 8000);
 });
+
+const profitCommon = {
+  grossSellingPrice: 1699, salesGstRate: 3, tdsRate: .1, tcsRate: .5,
+  productCost: 500, roas: 2.3, targetProfitMargin: 10, returnRate: 10,
+  rtoRate: 5, returnProcessingCost: 0, returnedProductLossPercent: 0,
+  otherCostPerOrder: 0,
+};
+
+test('marketplace profitability matches the published sample scenario', () => {
+  const result = calculators.calculateMarketplaceProfitability({
+    ...profitCommon, platformCommission: 35, gstOnCommission: 18,
+    regularLogisticsCost: 0, returnOutwardCost: 30, returnInwardCost: 30,
+    rtoCost: 0, commissionRefunded: true,
+  });
+  assert.ok(Math.abs(result.expectedGrossRevenue - 1444.15) < 1e-9);
+  assert.ok(Math.abs(result.expectedPayout - 833.3036) < 1e-3);
+  assert.ok(Math.abs(result.expectedProfit - -273.06077) < 1e-3);
+  assert.ok(Math.abs(result.breakEvenSellingPrice - 4636.39728) < 1e-3);
+  assert.ok(Math.abs(result.targetSellingPrice - 41299.98988) < 1e-3);
+  assert.ok(Math.abs(result.breakEvenRoas - 3.64878) < 1e-3);
+});
+
+test('website profitability matches the published sample scenario', () => {
+  const result = calculators.calculateD2CProfitability({
+    ...profitCommon, paymentGatewayRate: 2, gstOnGatewayFee: 18,
+    forwardDeliveryCost: 80, returnReverseCost: 80, rtoReverseCost: 80,
+    gatewayFeeRefunded: false,
+  });
+  assert.ok(Math.abs(result.expectedPayout - 1303.642) < 1e-3);
+  assert.ok(Math.abs(result.expectedProfit - 112.41172) < 1e-3);
+  assert.ok(Math.abs(result.profitMargin - 8.01747) < 1e-3);
+  assert.ok(Math.abs(result.breakEvenSellingPrice - 1395.56186) < 1e-3);
+  assert.ok(Math.abs(result.targetSellingPrice - 1795.5389) < 1e-3);
+  assert.ok(Math.abs(result.breakEvenRoas - 1.99623) < 1e-3);
+});
