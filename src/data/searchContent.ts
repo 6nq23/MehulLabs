@@ -103,5 +103,17 @@ export const toolSearchContent = {
     "example": "At 10 units sold per day, a 14-day lead time and 7 safety days, the reorder point is 210 units. The safety-stock allowance is 70 units. Review replenishment when available stock approaches that level.",
     "limit": "Sales velocity is assumed constant. Seasonality, supplier delays, incoming orders, minimum order quantities and batch sizes need a separate review. This tool does not sync with your inventory system.",
     "service": "order-operations"
+  },
+  "ecommerce-platform-profit": {
+    "steps": "Enter the gross marketplace price, tax and recovery rates, product cost, ROAS, return and RTO assumptions. Add platform commission and logistics, then compare expected profit, target price and break-even ROAS.",
+    "example": "At ₹1,699 with 10% returns, 5% RTO, 35% refundable commission and 2.3× ROAS, the successful-order rate is 85%. With ₹500 COGS and the logistics shown in the calculator, the model estimates a loss and a much higher target price.",
+    "limit": "Marketplace fee rules, tax bases and refund policies vary. This model treats TDS, TCS and GST on commission as recoverable, excludes fixed overhead and assumes entered rates remain constant as price changes.",
+    "service": "store-conversion"
+  },
+  "website-d2c-profit": {
+    "steps": "Enter the gross website price, GST, product cost, ROAS, returns and RTO. Add gateway and delivery costs, then compare expected profit with the break-even and target-margin recommendations.",
+    "example": "At ₹1,699 with 10% returns, 5% RTO, a 2% non-refunded gateway fee, ₹80 delivery costs and 2.3× ROAS, the sample inputs produce about ₹112 expected profit and an 8% margin.",
+    "limit": "Gateway refund rules and tax treatment vary. The estimate excludes fixed overhead, discounts not reflected in selling price, warehousing, support and settlement timing. Validate it against actual orders.",
+    "service": "store-conversion"
   }
 } as const;

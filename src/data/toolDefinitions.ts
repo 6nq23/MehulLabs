@@ -125,5 +125,23 @@ export const toolDefinitions = {
       "rto-simulator",
       "runway-planner"
     ]
+  },
+  "ecommerce-platform-profit": {
+    "question": "Is this marketplace selling price actually profitable?",
+    "terms": [
+      ["Successful order rate", "The share of placed orders left after the entered return and RTO rates. Revenue, product cost and refundable commission are weighted by this rate."],
+      ["Recoverable deductions", "TDS, TCS and GST on commission reduce the expected payout shown here, but are not treated as an expense in the profit estimate."],
+      ["Target selling price", "The estimated gross price needed to reach the selected profit margin under the same return, commission, ROAS and cost assumptions."]
+    ],
+    "related": ["website-d2c-profit", "unit-economics"]
+  },
+  "website-d2c-profit": {
+    "question": "Is this direct website order profitable after all variable costs?",
+    "terms": [
+      ["Gateway fee refund", "Turn this on only when your payment provider refunds its fee for returned and RTO orders. Otherwise the fee is charged on the full placed-order value."],
+      ["Expected logistics", "Forward delivery is charged once per placed order, with return and RTO reverse costs weighted by their respective rates."],
+      ["Break-even ROAS", "The minimum return on ad spend at which modeled profit reaches zero while the other inputs stay unchanged."]
+    ],
+    "related": ["ecommerce-platform-profit", "unit-economics"]
   }
 } as const;

@@ -41,7 +41,7 @@ export const pageSeo: Record<string, PageSeo> = {
   },
   "/products": {
     "title": "AI Workflow Products & Free D2C Tools",
-    "description": "Explore MLabs Skill Manager, currently in development, and six free D2C calculators for order costs, margins, bundles, inventory and cash planning.",
+    "description": "Explore MLabs Skill Manager and eight free D2C calculators for marketplace profit, website margins, order costs, bundles, inventory and cash planning.",
     "label": "Products",
     "type": "CollectionPage"
   },
@@ -59,7 +59,7 @@ export const pageSeo: Record<string, PageSeo> = {
   },
   "/tools": {
     "title": "Free Ecommerce & D2C Calculators",
-    "description": "Use six free ecommerce calculators for RTO costs, unit economics, bundle pricing, marketing budgets, cash runway and inventory. No signup required.",
+    "description": "Use eight free ecommerce calculators for marketplace and D2C profit, RTO costs, unit economics, bundles, marketing budgets, cash runway and inventory.",
     "label": "Free calculators",
     "type": "CollectionPage"
   },
@@ -97,6 +97,18 @@ export const pageSeo: Record<string, PageSeo> = {
     "title": "Free Inventory Reorder Point Calculator",
     "description": "Calculate SKU reorder points, safety stock and stockout estimates from daily sales and supplier lead times. Plan inventory using your own inputs.",
     "label": "Inventory calculator",
+    "type": "WebPage"
+  },
+  "/tools/ecommerce-platform-profit": {
+    "title": "Free Marketplace Profit Calculator for Ecommerce",
+    "description": "Calculate marketplace profit after platform commission, GST, returns, RTO, logistics, product cost and ad spend. Find break-even price and ROAS.",
+    "label": "Marketplace profit calculator",
+    "type": "WebPage"
+  },
+  "/tools/website-d2c-profit": {
+    "title": "Free Website & D2C Profit Calculator",
+    "description": "Calculate direct website profit after payment gateway fees, GST, returns, RTO, delivery, product cost and ads. Find target price and break-even ROAS.",
+    "label": "Website profit calculator",
     "type": "WebPage"
   }
 };

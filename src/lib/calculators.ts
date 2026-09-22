@@ -84,6 +84,124 @@ export function calculateUnitEconomics(input: UnitEconomicsInputs) {
   };
 }
 
+export interface ProfitabilityCommonInputs {
+  grossSellingPrice: number;
+  salesGstRate: number;
+  tdsRate: number;
+  tcsRate: number;
+  productCost: number;
+  roas: number;
+  targetProfitMargin: number;
+  returnRate: number;
+  rtoRate: number;
+  returnProcessingCost: number;
+  returnedProductLossPercent: number;
+  otherCostPerOrder: number;
+}
+
+export interface MarketplaceProfitInputs extends ProfitabilityCommonInputs {
+  platformCommission: number;
+  gstOnCommission: number;
+  regularLogisticsCost: number;
+  returnOutwardCost: number;
+  returnInwardCost: number;
+  rtoCost: number;
+  commissionRefunded: boolean;
+}
+
+export interface D2CProfitInputs extends ProfitabilityCommonInputs {
+  paymentGatewayRate: number;
+  gstOnGatewayFee: number;
+  forwardDeliveryCost: number;
+  returnReverseCost: number;
+  rtoReverseCost: number;
+  gatewayFeeRefunded: boolean;
+}
+
+function calculateProfitability(
+  input: ProfitabilityCommonInputs,
+  feeRatePercent: number,
+  feeGstPercent: number,
+  feeRefunded: boolean,
+  logistics: number,
+) {
+  const price = nonNegative(input.grossSellingPrice);
+  const returnRate = percentage(input.returnRate);
+  const rtoRate = percentage(input.rtoRate);
+  const successfulOrderRate = Math.max(0, 1 - returnRate - rtoRate);
+  const salesGstRate = percentage(input.salesGstRate);
+  const expectedGrossRevenue = price * successfulOrderRate;
+  const expectedTaxableRevenue = expectedGrossRevenue / (1 + salesGstRate);
+  const outputGst = expectedGrossRevenue - expectedTaxableRevenue;
+  const tds = expectedTaxableRevenue * percentage(input.tdsRate);
+  const tcs = expectedTaxableRevenue * percentage(input.tcsRate);
+  const effectiveFeeRate = percentage(feeRatePercent) * (feeRefunded ? successfulOrderRate : 1);
+  const fee = price * effectiveFeeRate;
+  const feeGst = fee * percentage(feeGstPercent);
+  const expectedLogistics = nonNegative(logistics);
+  const expectedPayout = expectedGrossRevenue - tds - tcs - fee - feeGst - expectedLogistics;
+  const roas = nonNegative(input.roas);
+  const adCostPerOrder = roas > 0 ? price / roas : 0;
+  const expectedProductCost = nonNegative(input.productCost) * successfulOrderRate;
+  const returnedProductLoss = nonNegative(input.productCost) * returnRate * percentage(input.returnedProductLossPercent);
+  const returnProcessingCost = nonNegative(input.returnProcessingCost) * returnRate;
+  const otherCostPerOrder = nonNegative(input.otherCostPerOrder);
+  const fixedCosts = expectedProductCost + returnedProductLoss + expectedLogistics + returnProcessingCost + otherCostPerOrder;
+  const expectedProfit = expectedTaxableRevenue - fee - adCostPerOrder - fixedCosts;
+  const profitMargin = expectedTaxableRevenue > 0 ? expectedProfit / expectedTaxableRevenue * 100 : 0;
+  const adRate = roas > 0 ? 1 / roas : Number.POSITIVE_INFINITY;
+  const breakEvenCoefficient = successfulOrderRate / (1 + salesGstRate) - effectiveFeeRate - adRate;
+  const targetCoefficient = successfulOrderRate * (1 - percentage(input.targetProfitMargin)) / (1 + salesGstRate) - effectiveFeeRate - adRate;
+  const breakEvenSellingPrice = breakEvenCoefficient > 0 ? fixedCosts / breakEvenCoefficient : null;
+  const targetSellingPrice = targetCoefficient > 0 ? fixedCosts / targetCoefficient : null;
+  const requiredPriceIncrease = targetSellingPrice === null ? null : targetSellingPrice - price;
+  const requiredIncreasePercent = requiredPriceIncrease === null || price <= 0 ? null : requiredPriceIncrease / price * 100;
+  const maxAffordableAdCost = expectedTaxableRevenue - fee - fixedCosts;
+  const breakEvenRoas = maxAffordableAdCost > 0 ? price / maxAffordableAdCost : null;
+
+  return {
+    successfulOrderRate: successfulOrderRate * 100,
+    expectedGrossRevenue,
+    expectedTaxableRevenue,
+    outputGst,
+    tds,
+    tcs,
+    fee,
+    feeGst,
+    expectedLogistics,
+    expectedPayout,
+    netRoasAfterReturns: roas * successfulOrderRate,
+    adCostPerOrder,
+    expectedProductCost,
+    returnedProductLoss,
+    returnProcessingCost,
+    otherCostPerOrder,
+    expectedProfit,
+    profitMargin,
+    breakEvenSellingPrice,
+    targetSellingPrice,
+    requiredPriceIncrease,
+    requiredIncreasePercent,
+    maxAffordableAdCost,
+    breakEvenRoas,
+    pricingIsImpractical: targetSellingPrice !== null && price > 0 && targetSellingPrice > price * 5,
+  };
+}
+
+export function calculateMarketplaceProfitability(input: MarketplaceProfitInputs) {
+  const logistics = nonNegative(input.regularLogisticsCost)
+    + percentage(input.returnRate) * (nonNegative(input.returnOutwardCost) + nonNegative(input.returnInwardCost))
+    + percentage(input.rtoRate) * nonNegative(input.rtoCost);
+  return calculateProfitability(input, input.platformCommission, input.gstOnCommission, input.commissionRefunded, logistics);
+}
+
+export function calculateD2CProfitability(input: D2CProfitInputs) {
+  const logistics = nonNegative(input.forwardDeliveryCost)
+    + percentage(input.returnRate) * nonNegative(input.returnReverseCost)
+    + percentage(input.rtoRate) * nonNegative(input.rtoReverseCost);
+  return calculateProfitability(input, input.paymentGatewayRate, input.gstOnGatewayFee, input.gatewayFeeRefunded, logistics);
+}
+
 export interface BundleProduct { id: number; name: string; price: number; cogs: number }
 
 export function calculateBundle(products: readonly BundleProduct[], discountPercent: number, conversionUpliftPercent: number, currentMonthlyOrders: number, bundleAdoptionPercent: number) {

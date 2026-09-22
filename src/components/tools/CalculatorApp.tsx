@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from 'react';
-import { calculateBundle, calculateInventoryPortfolio, calculateMarketingBudget, calculateRto, calculateRunway, calculateUnitEconomics, type BundleProduct, type InventorySku, type MarketingChannel, type RtoInputs, type RunwayInputs, type UnitEconomicsInputs } from '@/lib/calculators';
+import { calculateBundle, calculateD2CProfitability, calculateInventoryPortfolio, calculateMarketplaceProfitability, calculateMarketingBudget, calculateRto, calculateRunway, calculateUnitEconomics, type BundleProduct, type D2CProfitInputs, type InventorySku, type MarketplaceProfitInputs, type MarketingChannel, type RtoInputs, type RunwayInputs, type UnitEconomicsInputs } from '@/lib/calculators';
 
-type ToolId = 'rto-simulator' | 'unit-economics' | 'bundle-planner' | 'marketing-budget' | 'runway-planner' | 'inventory-planner';
+type ToolId = 'rto-simulator' | 'unit-economics' | 'bundle-planner' | 'marketing-budget' | 'runway-planner' | 'inventory-planner' | 'ecommerce-platform-profit' | 'website-d2c-profit';
 const money = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 });
 const rupees = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
 const num = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 1 });
@@ -16,6 +16,8 @@ function Metric({ label, value, detail, featured, negative }: { label: string; v
 function Head({ n, title, action }: { n: string; title: string; action?: ReactNode }) { return <div className="calculator-section-heading"><div><span>{n}</span><h2>{title}</h2></div>{action}</div>; }
 function Workspace({ inputs, results, note, children }: { inputs: ReactNode; results: ReactNode; note: string; children?: ReactNode }) { return <><div className="calculator-workspace"><section className="calculator-inputs">{inputs}</section><aside className="calculator-results" aria-live="polite">{results}<p className="calculator-note">{note}</p></aside></div>{children}</>; }
 function Breakdown({ title, intro, rows, total }: { title: string; intro?: string; rows: [string, string][]; total?: [string, string] }) { return <section className="detail-panel"><div className="detail-heading"><h3>{title}</h3>{intro && <p>{intro}</p>}</div><dl className="breakdown-list">{rows.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}{total && <div className="breakdown-total"><dt>{total[0]}</dt><dd>{total[1]}</dd></div>}</dl></section>; }
+function Toggle({ label, checked, onChange }: { label: string; checked: boolean; onChange: (checked: boolean) => void }) { return <label className="calculator-toggle"><input type="checkbox" checked={checked} onChange={event => onChange(event.target.checked)} /><span aria-hidden="true"></span><strong>{label}</strong></label>; }
+function ProfitGroup({ kicker, title, rows }: { kicker: string; title: string; rows: { label: string; value: string; detail?: string; negative?: boolean }[] }) { return <section className="detail-panel profit-result-panel"><div className="detail-heading"><div><span className="detail-kicker">{kicker}</span><h3>{title}</h3></div></div><dl className="profit-result-list">{rows.map(row => <div key={row.label}><dt>{row.label}</dt><dd className={row.negative ? 'negative-cell' : undefined}>{row.value}</dd>{row.detail && <small>{row.detail}</small>}</div>)}</dl></section>; }
 
 const rtoD: RtoInputs = { monthlyOrders: 2000, averageOrderValue: 1200, codPercent: 55, codRtoRate: 25, prepaidRtoRate: 3, forwardShipping: 65, reverseShipping: 120, packaging: 25, targetCodRtoRate: 15 };
 function Rto() {
@@ -61,10 +63,111 @@ function Runway() {
   </Workspace>;
 }
 
+const profitCommon = { grossSellingPrice: 1699, salesGstRate: 3, tdsRate: .1, tcsRate: .5, productCost: 500, roas: 2.3, targetProfitMargin: 10, returnRate: 10, rtoRate: 5, returnProcessingCost: 0, returnedProductLossPercent: 0, otherCostPerOrder: 0 };
+const marketplaceD: MarketplaceProfitInputs = { ...profitCommon, platformCommission: 35, gstOnCommission: 18, regularLogisticsCost: 0, returnOutwardCost: 30, returnInwardCost: 30, rtoCost: 0, commissionRefunded: true };
+const d2cD: D2CProfitInputs = { ...profitCommon, paymentGatewayRate: 2, gstOnGatewayFee: 18, forwardDeliveryCost: 80, returnReverseCost: 80, rtoReverseCost: 80, gatewayFeeRefunded: false };
+
+function ProfitCalculator({ mode }: { mode: 'marketplace' | 'd2c' }) {
+  const defaults = mode === 'marketplace' ? marketplaceD : d2cD;
+  const [x, setX] = useState<MarketplaceProfitInputs | D2CProfitInputs>(defaults);
+  const set = (key: string) => (value: number | boolean) => setX(current => ({ ...current, [key]: value }));
+  const r = mode === 'marketplace' ? calculateMarketplaceProfitability(x as MarketplaceProfitInputs) : calculateD2CProfitability(x as D2CProfitInputs);
+  const channel = mode === 'marketplace' ? x as MarketplaceProfitInputs : x as D2CProfitInputs;
+  const feeLabel = mode === 'marketplace' ? 'Platform Commission' : 'Gateway Fee';
+  const feeGstLabel = mode === 'marketplace' ? 'GST on Commission' : 'GST on Gateway Fee';
+  const pct = (value: number) => `${value.toFixed(2)}%`;
+  const decimal = (value: number | null) => value === null ? 'Not reachable' : value.toFixed(2);
+  const price = (value: number | null) => value === null ? 'Not reachable' : money.format(value);
+  const feeFormula = mode === 'marketplace'
+    ? `${money.format(x.grossSellingPrice)} × ${(channel as MarketplaceProfitInputs).platformCommission}%${(channel as MarketplaceProfitInputs).commissionRefunded ? ` × ${pct(r.successfulOrderRate)} success` : ''}`
+    : `${money.format(x.grossSellingPrice)} × ${(channel as D2CProfitInputs).paymentGatewayRate}%${(channel as D2CProfitInputs).gatewayFeeRefunded ? ` × ${pct(r.successfulOrderRate)} success` : ''}`;
+  const logisticsFormula = mode === 'marketplace'
+    ? `${money.format((channel as MarketplaceProfitInputs).regularLogisticsCost)} + ${x.returnRate}%×(${money.format((channel as MarketplaceProfitInputs).returnOutwardCost)}+${money.format((channel as MarketplaceProfitInputs).returnInwardCost)}) + ${x.rtoRate}%×${money.format((channel as MarketplaceProfitInputs).rtoCost)}`
+    : `${money.format((channel as D2CProfitInputs).forwardDeliveryCost)} + ${x.returnRate}%×${money.format((channel as D2CProfitInputs).returnReverseCost)} + ${x.rtoRate}%×${money.format((channel as D2CProfitInputs).rtoReverseCost)}`;
+  const pricingWarning = r.pricingIsImpractical ? 'The target price is mathematically possible but may be commercially impractical because variable costs consume nearly all retained revenue.' : undefined;
+
+  return <Workspace inputs={<>
+    <Head n="01" title="Profit inputs" action={<button onClick={() => setX(defaults)}>Reset</button>} />
+    <div className="subsection-heading profit-input-heading"><h3>Common inputs</h3></div>
+    <div className="calculator-fields">
+      <Field label="Gross selling price" value={x.grossSellingPrice} onChange={set('grossSellingPrice')} prefix="₹" />
+      <Field label="Sales GST rate" value={x.salesGstRate} onChange={set('salesGstRate')} suffix="%" max={100} step={.1} />
+      <Field label="TDS rate" value={x.tdsRate} onChange={set('tdsRate')} suffix="%" max={100} step={.1} />
+      <Field label="TCS rate" value={x.tcsRate} onChange={set('tcsRate')} suffix="%" max={100} step={.1} />
+      <Field label="Product cost (COGS)" value={x.productCost} onChange={set('productCost')} prefix="₹" />
+      <Field label="ROAS (reported)" value={x.roas} onChange={set('roas')} step={.1} />
+      <Field label="Target profit margin" value={x.targetProfitMargin} onChange={set('targetProfitMargin')} suffix="%" max={100} step={.1} />
+      <Field label="Return rate" value={x.returnRate} onChange={set('returnRate')} suffix="%" max={100} step={.1} />
+      <Field label="RTO rate" value={x.rtoRate} onChange={set('rtoRate')} suffix="%" max={100} step={.1} />
+      <Field label="Return processing cost" value={x.returnProcessingCost} onChange={set('returnProcessingCost')} prefix="₹" />
+      <Field label="Returned product loss" value={x.returnedProductLossPercent} onChange={set('returnedProductLossPercent')} suffix="%" max={100} step={.1} />
+      <Field label="Other cost per order" value={x.otherCostPerOrder} onChange={set('otherCostPerOrder')} prefix="₹" />
+    </div>
+    <div className="subsection-heading"><h3>{mode === 'marketplace' ? 'Platform inputs' : 'Website / gateway inputs'}</h3></div>
+    {mode === 'marketplace' ? <div className="calculator-fields">
+      <Field label="Platform commission" value={(channel as MarketplaceProfitInputs).platformCommission} onChange={set('platformCommission')} suffix="%" max={100} step={.1} />
+      <Field label="GST on commission" value={(channel as MarketplaceProfitInputs).gstOnCommission} onChange={set('gstOnCommission')} suffix="%" max={100} step={.1} />
+      <Field label="Regular logistics cost" value={(channel as MarketplaceProfitInputs).regularLogisticsCost} onChange={set('regularLogisticsCost')} prefix="₹" />
+      <Field label="Return outward cost" value={(channel as MarketplaceProfitInputs).returnOutwardCost} onChange={set('returnOutwardCost')} prefix="₹" />
+      <Field label="Return inward cost" value={(channel as MarketplaceProfitInputs).returnInwardCost} onChange={set('returnInwardCost')} prefix="₹" />
+      <Field label="RTO cost" value={(channel as MarketplaceProfitInputs).rtoCost} onChange={set('rtoCost')} prefix="₹" />
+    </div> : <div className="calculator-fields">
+      <Field label="Payment gateway rate" value={(channel as D2CProfitInputs).paymentGatewayRate} onChange={set('paymentGatewayRate')} suffix="%" max={100} step={.1} />
+      <Field label="GST on gateway fee" value={(channel as D2CProfitInputs).gstOnGatewayFee} onChange={set('gstOnGatewayFee')} suffix="%" max={100} step={.1} />
+      <Field label="Forward delivery cost" value={(channel as D2CProfitInputs).forwardDeliveryCost} onChange={set('forwardDeliveryCost')} prefix="₹" />
+      <Field label="Return reverse cost" value={(channel as D2CProfitInputs).returnReverseCost} onChange={set('returnReverseCost')} prefix="₹" />
+      <Field label="RTO reverse cost" value={(channel as D2CProfitInputs).rtoReverseCost} onChange={set('rtoReverseCost')} prefix="₹" />
+    </div>}
+    <Toggle label={mode === 'marketplace' ? 'Commission refunded on returns / RTO' : 'Gateway fee refunded on returns'} checked={mode === 'marketplace' ? (channel as MarketplaceProfitInputs).commissionRefunded : (channel as D2CProfitInputs).gatewayFeeRefunded} onChange={set(mode === 'marketplace' ? 'commissionRefunded' : 'gatewayFeeRefunded')} />
+  </>} results={<>
+    <Head n="02" title="Profit snapshot" />
+    <div className="calculator-result-grid compact-metrics">
+      <Metric label="Expected profit" value={money.format(r.expectedProfit)} detail={`${pct(r.profitMargin)} margin`} featured negative={r.expectedProfit < 0} />
+      <Metric label="Expected payout" value={money.format(r.expectedPayout)} />
+      <Metric label="Price for target profit" value={price(r.targetSellingPrice)} detail={`${x.targetProfitMargin}% target margin`} />
+      <Metric label="Break-even ROAS" value={decimal(r.breakEvenRoas)} />
+    </div>
+  </>} note="TDS, TCS and GST on the platform or gateway fee are shown in payout as recoverable deductions and are not counted as profit expenses.">
+    <div className="profit-result-sections">
+      <ProfitGroup kicker="A" title="Revenue" rows={[
+        { label: 'Gross selling price', value: money.format(x.grossSellingPrice) },
+        { label: 'Successful order rate', value: pct(r.successfulOrderRate), detail: `1 − ${x.returnRate}% − ${x.rtoRate}% = ${pct(r.successfulOrderRate)}` },
+        { label: 'Expected gross revenue', value: money.format(r.expectedGrossRevenue), detail: `${money.format(x.grossSellingPrice)} × ${pct(r.successfulOrderRate)}` },
+        { label: 'Expected taxable revenue', value: money.format(r.expectedTaxableRevenue), detail: `${money.format(r.expectedGrossRevenue)} ÷ (1 + ${x.salesGstRate}%)` },
+        { label: 'Output GST', value: money.format(r.outputGst), detail: `${money.format(r.expectedGrossRevenue)} − ${money.format(r.expectedTaxableRevenue)}` },
+      ]} />
+      <ProfitGroup kicker="B" title="Deductions" rows={[
+        { label: 'TDS (recoverable)', value: money.format(r.tds), detail: `${money.format(r.expectedTaxableRevenue)} × ${x.tdsRate}%` },
+        { label: 'TCS (recoverable)', value: money.format(r.tcs), detail: `${money.format(r.expectedTaxableRevenue)} × ${x.tcsRate}%` },
+        { label: feeLabel, value: money.format(r.fee), detail: feeFormula },
+        { label: feeGstLabel, value: money.format(r.feeGst), detail: `${money.format(r.fee)} × ${mode === 'marketplace' ? (channel as MarketplaceProfitInputs).gstOnCommission : (channel as D2CProfitInputs).gstOnGatewayFee}%` },
+        { label: 'Expected logistics', value: money.format(r.expectedLogistics), detail: logisticsFormula },
+        { label: 'Expected payout', value: money.format(r.expectedPayout), detail: `Gross revenue − recoverable deductions − ${feeLabel.toLowerCase()} − fee GST − logistics` },
+      ]} />
+      <ProfitGroup kicker="C" title="Profitability" rows={[
+        { label: 'Reported ROAS', value: x.roas.toFixed(2) },
+        { label: 'Net ROAS after returns', value: r.netRoasAfterReturns.toFixed(2), detail: `${x.roas} × ${pct(r.successfulOrderRate)}` },
+        { label: 'Ad cost per order', value: money.format(r.adCostPerOrder), detail: x.roas > 0 ? `${money.format(x.grossSellingPrice)} ÷ ${x.roas}` : 'Enter a ROAS above zero' },
+        { label: 'Expected product cost', value: money.format(r.expectedProductCost), detail: `${money.format(x.productCost)} × ${pct(r.successfulOrderRate)}` },
+        { label: 'Returned product loss', value: money.format(r.returnedProductLoss), detail: `${money.format(x.productCost)} × ${x.returnRate}% × ${x.returnedProductLossPercent}% loss` },
+        { label: 'Expected profit', value: money.format(r.expectedProfit), detail: `Taxable revenue − ${feeLabel.toLowerCase()} − logistics − ads − product and return costs`, negative: r.expectedProfit < 0 },
+        { label: 'Profit margin', value: pct(r.profitMargin), detail: `${money.format(r.expectedProfit)} ÷ ${money.format(r.expectedTaxableRevenue)} × 100`, negative: r.profitMargin < 0 },
+      ]} />
+      <ProfitGroup kicker="D" title="Pricing recommendation" rows={[
+        { label: 'Break-even selling price', value: price(r.breakEvenSellingPrice), detail: 'Fixed costs ÷ retained revenue coefficient at current ROAS' },
+        { label: `Price for ${x.targetProfitMargin}% profit`, value: price(r.targetSellingPrice), detail: pricingWarning ?? 'Fixed costs ÷ retained revenue coefficient after target profit' },
+        { label: 'Required price increase', value: price(r.requiredPriceIncrease), detail: r.targetSellingPrice === null ? 'Target is not reachable with the current variable-cost rates' : `${money.format(r.targetSellingPrice)} − ${money.format(x.grossSellingPrice)}` },
+        { label: 'Required increase %', value: r.requiredIncreasePercent === null ? 'Not reachable' : pct(r.requiredIncreasePercent), detail: r.requiredPriceIncrease === null ? undefined : `${money.format(r.requiredPriceIncrease)} ÷ ${money.format(x.grossSellingPrice)} × 100` },
+        { label: 'Break-even ROAS', value: decimal(r.breakEvenRoas), detail: r.breakEvenRoas === null ? 'No affordable ad cost remains' : `${money.format(x.grossSellingPrice)} ÷ max affordable ad cost (${money.format(r.maxAffordableAdCost)})` },
+      ]} />
+    </div>
+  </Workspace>;
+}
+
 const skuD: InventorySku[] = [{ id: 1, name: 'Hero SKU', currentStock: 500, dailySales: 14, leadTimeDays: 20, safetyDays: 7, costPerUnit: 180 }, { id: 2, name: 'Core SKU', currentStock: 320, dailySales: 9, leadTimeDays: 21, safetyDays: 7, costPerUnit: 140 }, { id: 3, name: 'Fast-moving SKU', currentStock: 80, dailySales: 22, leadTimeDays: 20, safetyDays: 6, costPerUnit: 110 }];
 function Inventory() {
   const [skus, setSkus] = useState(skuD), r = calculateInventoryPortfolio(skus); const edit = (id: number, k: keyof InventorySku, v: string | number) => setSkus(a => a.map(s => s.id === id ? { ...s, [k]: v } : s));
   return <><section className="inventory-summary"><Metric label="Total SKUs" value={String(skus.length)} /><Metric label="Working capital" value={rupees.format(r.workingCapital)} detail="Locked in inventory" /><Metric label="Critical SKUs" value={String(r.criticalSkus)} /><Metric label="Reorder now" value={String(r.reorderNow)} /></section><section className="sku-planner"><Head n="01" title="Your SKUs" action={<><button onClick={() => setSkus(skuD)}>Reset</button><button disabled={skus.length >= 8} onClick={() => setSkus(a => [...a, { id: Date.now(), name: `SKU ${a.length + 1}`, currentStock: 100, dailySales: 5, leadTimeDays: 14, safetyDays: 7, costPerUnit: 100 }])}>Add SKU</button></>} /><div className="sku-list">{r.items.map(s => <article className="sku-card" key={s.id}><div className="sku-card-heading"><label><span>SKU name</span><input value={s.name} onChange={e => edit(s.id, 'name', e.target.value)} /></label><span className={`stock-status ${s.status}`}>{s.status === 'healthy' ? 'Healthy' : s.status === 'critical' ? 'Critical' : 'Reorder'}</span>{skus.length > 1 && <button className="remove-row" onClick={() => setSkus(a => a.filter(i => i.id !== s.id))}>×</button>}</div><div className="calculator-fields sku-fields"><Field label="Current stock" value={s.currentStock} onChange={v => edit(s.id, 'currentStock', v)} suffix="units" /><Field label="Daily sales" value={s.dailySales} onChange={v => edit(s.id, 'dailySales', v)} suffix="units" /><Field label="Lead time" value={s.leadTimeDays} onChange={v => edit(s.id, 'leadTimeDays', v)} suffix="days" /><Field label="Safety stock" value={s.safetyDays} onChange={v => edit(s.id, 'safetyDays', v)} suffix="days" /><Field label="Cost per unit" value={s.costPerUnit} onChange={v => edit(s.id, 'costPerUnit', v)} prefix="₹" /></div><div className="sku-metrics"><Metric label="Reorder point" value={`${integer.format(Math.ceil(s.reorderPoint))} units`} /><Metric label="Days to stockout" value={s.daysToStockout === null ? '—' : `${num.format(s.daysToStockout)} days`} /><Metric label="Order qty suggested" value={`${integer.format(Math.ceil(s.suggestedOrderQty))} units`} detail="30-day replenishment" /><Metric label="Capital locked" value={rupees.format(s.capitalLocked)} /></div><div className="stock-progress"><span>Stock vs reorder point</span><strong>{integer.format(s.currentStock)} / {integer.format(s.reorderPoint)}</strong><i><b style={{ width: `${Math.min(100, s.reorderPoint ? s.currentStock / s.reorderPoint * 100 : 100)}%` }}></b></i></div></article>)}</div></section></>;
 }
 
-export function CalculatorApp({ toolId }: { toolId: ToolId }) { switch (toolId) { case 'rto-simulator': return <Rto />; case 'unit-economics': return <Unit />; case 'bundle-planner': return <Bundle />; case 'marketing-budget': return <Marketing />; case 'runway-planner': return <Runway />; case 'inventory-planner': return <Inventory />; } }
+export function CalculatorApp({ toolId }: { toolId: ToolId }) { switch (toolId) { case 'rto-simulator': return <Rto />; case 'unit-economics': return <Unit />; case 'bundle-planner': return <Bundle />; case 'marketing-budget': return <Marketing />; case 'runway-planner': return <Runway />; case 'inventory-planner': return <Inventory />; case 'ecommerce-platform-profit': return <ProfitCalculator mode="marketplace" />; case 'website-d2c-profit': return <ProfitCalculator mode="d2c" />; } }

@@ -86,7 +86,7 @@ International availability can change after publication. Treat OpenAI's country 
 
 ## How are ChatGPT Ads different from organic product discovery?
 
-Shopify now supports two distinct ChatGPT paths: paid advertising through ChatGPT Ads and organic discovery through Shopify Catalog. Shopify states that eligible stores can already make products discoverable in ChatGPT without buying ads, while ad campaigns require Ads Manager, campaign settings, budget, and measurement.
+Shopify now supports two distinct ChatGPT paths: paid advertising through ChatGPT Ads and organic discovery through Shopify Catalog. Shopify states that eligible stores can already make products discoverable in ChatGPT without buying ads, while ad campaigns require Ads Manager, campaign settings, budget, and measurement. Our [Shopify SEO for AI search guide](/blog/shopify-seo-ai-search-guide) explains how to prepare that organic product-data path for ChatGPT and Google AI Mode.
 
 | Area | ChatGPT Ads for Shopify | Shopify Catalog and ChatGPT discovery |
 |---|---|---|
