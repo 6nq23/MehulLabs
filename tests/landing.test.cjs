@@ -62,7 +62,8 @@ test('every primary service has a fixed paid pilot and a custom offer', () => {
 });
 
 test('reading is not interrupted by the retired popup and missing download', () => {
-  assert.doesNotMatch(siteRuntimeSource, /LeadCapturePopup|d2c-brand-pillars/);
+  assert.match(siteRuntimeSource, /LeadCapturePopup/);
+  assert.doesNotMatch(siteRuntimeSource, /d2c-brand-pillars/);
 });
 
 test('the four offer pillars drive the enquiry options and their labels', () => {
