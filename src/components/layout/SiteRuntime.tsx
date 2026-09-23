@@ -3,6 +3,7 @@ import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvide
 
 import { Navbar } from './Navbar';
 import { ScrollProgress } from './ScrollProgress';
+import { LeadCapturePopup } from './LeadCapturePopup';
 
 /** Keeps the navigation and document-wide scrolling behavior in one React island. */
 interface SiteRuntimeProps {
@@ -14,6 +15,7 @@ export function SiteRuntime({ pathname = '/' }: SiteRuntimeProps) {
     <SmoothScrollProvider>
       <ConversionEvents />
       <ScrollProgress />
+      <LeadCapturePopup />
       <Navbar pathname={pathname} />
     </SmoothScrollProvider>
   );

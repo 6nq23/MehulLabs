@@ -61,8 +61,8 @@ export function LeadCapturePopup() {
         <a href={auditHref} onClick={closePopup} data-cta-location="timed-popup-audit">
           <span><strong>Get my free leak audit</strong><small>30 minutes · no obligation</small></span><ArrowIcon />
         </a>
-        <a href="/d2c-brand-pillars.pdf" download onClick={closePopup} data-cta-location="timed-popup-pdf">
-          <span><strong>Get the D2C Brand Pillars PDF</strong><small>Download the practical guide</small></span><ArrowIcon />
+        <a href="/D2C Revenue Leak Map.pdf" download onClick={closePopup} data-cta-location="timed-popup-pdf">
+          <span><strong>Get the D2C Revenue Leak Map</strong><small>Download the practical guide</small></span><ArrowIcon />
         </a>
       </div>
       <p className="lead-popup-note">No email gate. Pick what is useful.</p>
