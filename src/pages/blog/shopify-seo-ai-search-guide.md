@@ -40,6 +40,13 @@ There are two connected discovery paths to manage. ChatGPT can receive eligible 
 > - Feed, page and structured-data values should match.
 > - Visibility is earned, not guaranteed.
 
+<div class="blog-brand-strip" aria-label="Platforms covered in this guide">
+  <p>Platforms in this guide</p>
+  <span><img src="/platforms/openai.svg" alt="" width="18" height="18" loading="lazy">ChatGPT</span>
+  <span><img src="/platforms/google.svg" alt="" width="18" height="18" loading="lazy">Google AI Mode</span>
+  <span><img src="/platforms/shopify.svg" alt="" width="18" height="18" loading="lazy">Shopify</span>
+</div>
+
 ## In this guide
 
 - [What Shopify SEO for AI search means](#what-is-shopify-seo-for-ai-search)

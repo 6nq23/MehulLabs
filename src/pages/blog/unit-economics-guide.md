@@ -2,8 +2,8 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Unit Economics: A Guide to Profitable Growth"
 description: "Learn how to calculate unit economics across 5 markets, model contribution margin and CAC, and see whether every sale creates profitable, scalable growth."
-publishedOn: "2026-09-19"
-updatedOn: "2026-09-19"
+publishedOn: "2026-09-12"
+updatedOn: "2026-09-23"
 category: "Finance & growth"
 author: "Mehul"
 readTime: "12 min read"
@@ -31,7 +31,7 @@ The core formulas work in Canada, Australia, the USA, the UK, and India. The inp
 This guide gives founders and operators a practical model for both ecommerce and SaaS. It also shows how to compare countries without mistaking tax or currency differences for operational performance.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a unit economics flow diagram" >
-  <img src="/Blogs/Unit and economic/image 1 une.png" alt="Unit economics flow diagram" loading="lazy">
+  <img src="/Blogs/Unit and economic/image 1 une.png" alt="Unit economics flow diagram" width="1774" height="887" loading="lazy" decoding="async">
   
 </figure>
 
@@ -280,7 +280,7 @@ If CAC is 700, simple payback is 10 months. The result should still be calculate
 The formula is universal, but country inputs must be local. Normalize tax and currency first. Then compare fulfilment, payment fees, duties, returns, support, and CAC. Otherwise, the model may attribute a tax-display difference to operational performance.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a five-country unit economics comparison graphic" >
-  <img src="/Blogs/Unit and economic/image 2 une.png" alt="Unit economics flow diagram" loading="lazy">
+  <img src="/Blogs/Unit and economic/image 2 une.png" alt="Unit economics flow diagram" width="1536" height="1024" loading="lazy" decoding="async">
 
 </figure>
 

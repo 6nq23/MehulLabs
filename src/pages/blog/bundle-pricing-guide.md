@@ -27,7 +27,7 @@ Bundle pricing combines products into one offer at a defined selling price. A us
 The calculation begins with list value, discount, and total product cost. It ends with contribution, adoption, and incremental profit. Keeping those stages separate prevents an attractive revenue projection from disguising an unprofitable offer.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a bundle pricing waterfall">
-  <img src="/Blogs\bundleing\bundleing.png" alt="How to calculate an ecommerce bundle price." loading="lazy">
+  <img src="/Blogs/bundleing/bundleing.png" alt="How to calculate an ecommerce bundle price." width="1774" height="887" loading="lazy" decoding="async">
 </figure>
 
 > **Key takeaways**

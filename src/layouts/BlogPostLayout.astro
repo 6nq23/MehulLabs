@@ -13,9 +13,18 @@ interface Frontmatter {
   coverImageAlt?: string;
   wordCount?: number;
   faqs?: readonly { question: string; answer: string }[];
+  draft?: boolean;
 }
 
 const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
+
+if (frontmatter.draft) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found'
+  });
+}
+
 const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
   day: 'numeric',
   month: 'long',

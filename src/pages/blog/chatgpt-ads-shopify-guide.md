@@ -41,6 +41,13 @@ This guide explains what the integration does, how it differs from organic produ
 > - The app syncs catalog data and commerce events through OpenAI Pixel for Shopify.
 > - Start with clean product data, reliable measurement, and a controlled test budget.
 
+<div class="blog-brand-strip" aria-label="Platforms covered in this guide">
+  <p>Platforms in this guide</p>
+  <span><img src="/platforms/openai.svg" alt="" width="18" height="18" loading="lazy">ChatGPT</span>
+  <span><img src="/platforms/shopify.svg" alt="" width="18" height="18" loading="lazy">Shopify</span>
+  <span><img src="/platforms/google.svg" alt="" width="18" height="18" loading="lazy">Google Analytics</span>
+</div>
+
 ## In this guide
 
 - [What ChatGPT Ads for Shopify is](#what-is-chatgpt-ads-for-shopify)
