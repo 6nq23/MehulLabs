@@ -40,6 +40,14 @@ In Q1 2026, AI-referred orders on Shopify grew 13× year-over-year, and those sh
 > - Feed values, page content and structured data must agree—conflicting data reduces AI trust.
 > - Measurement requires separating AI referrals from paid and organic traffic.
 
+<div class="blog-brand-strip" aria-label="Platforms covered in this guide">
+  <p>Platforms in this guide</p>
+  <span><img src="/platforms/openai.svg" alt="" width="18" height="18" loading="lazy">ChatGPT</span>
+  <span><img src="/platforms/google.svg" alt="" width="18" height="18" loading="lazy">Gemini</span>
+  <span><img src="/platforms/shopify.svg" alt="" width="18" height="18" loading="lazy">Shopify</span>
+  <span><img src="/platforms/claude.svg" alt="" width="18" height="18" loading="lazy">Claude</span>
+</div>
+
 ## In this guide
 
 - [Why AI agents need different product data](#why-do-ai-shopping-agents-need-different-product-data)

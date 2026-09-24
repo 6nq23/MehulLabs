@@ -63,7 +63,7 @@ for (const [route, {html}] of pages) {
    assert.ok(!app.aggregateRating && !app.review, `${route}: no fabricated reviews`);
    assert.ok(html.includes('id="input-definitions"'), `${route}: input explanations`);
   }
-  if (route === '/tools') assert.equal(graph.find(node => node['@type'] === 'ItemList')?.numberOfItems, 6);
+  if (route === '/tools') assert.equal(graph.find(node => node['@type'] === 'ItemList')?.numberOfItems, 8);
   if (route.startsWith('/services/')) assert.ok(graph.some(node => node['@type'] === 'Service'));
   assert.equal(meta('og:title')[0].content, decode(title));
  }
@@ -74,7 +74,7 @@ for (const [route, {html}] of pages) {
   const tag = attrs(match[0]); const href = tag.href || tag.src;
   if (!href || !/^[\/#]/.test(href) || href.startsWith('//')) continue;
   const url = new URL(href, `https://audit.invalid${route}`);
-  const target = url.pathname.replace(/\/$/, '') || '/';
+  const target = decodeURIComponent(url.pathname).replace(/\/$/, '') || '/';
   const dest = pages.get(target);
   assert.ok(dest || fs.existsSync(path.join(root, target)), `${route}: missing local target ${href}`);
   if (dest && url.hash) assert.ok(dest.ids.has(decodeURIComponent(url.hash.slice(1))), `${route}: missing anchor ${href}`);

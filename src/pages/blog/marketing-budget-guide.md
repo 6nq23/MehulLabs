@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Marketing Budgets: Plan Spend Without Guesswork"
 description: "Build a 4-step marketing budget from spend, channel allocation, ROAS, and AOV while keeping revenue projections separate from profit and cash flow."
-publishedOn: "2026-09-19"
+publishedOn: "2026-09-14"
 updatedOn: "2026-09-19"
 category: "Marketing finance"
 author: "Mehul"
@@ -27,7 +27,7 @@ A marketing budget should connect money spent to a transparent revenue and order
 The most important discipline is separating attributed revenue from contribution and cash. A 3x ROAS can be attractive for one product and unprofitable for another because COGS, shipping, returns, discounts, and customer acquisition economics differ.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a marketing budget funnel graphic">
-  <img src="/Blogs/Marketing Budget Guide/Budget Allocation Flow.png" alt="Marketing budget planning from spend to projected orders." loading="lazy">
+  <img src="/Blogs/Marketing Budget Guide/Budget Allocation Flow.png" alt="Marketing budget planning from spend to projected orders." width="1536" height="1024" loading="lazy" decoding="async">
 </figure>
 
 > **Key takeaways**

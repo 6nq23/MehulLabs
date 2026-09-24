@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Inventory Reorder Points: A Practical Guide"
 description: "Calculate a reorder point in 3 steps using daily sales, lead time, and safety stock, then avoid the stockout and cash-flow mistakes a formula misses."
-publishedOn: "2026-09-19"
+publishedOn: "2026-09-15"
 updatedOn: "2026-09-19"
 category: "Inventory operations"
 author: "Mehul"
@@ -27,7 +27,7 @@ An inventory reorder point is the stock level that tells you when to place the n
 The formula is simple. The operating work is choosing reliable sales velocity, lead time, and safety stock for each SKU. A single average applied to every product can lock cash into slow stock while fast sellers still run out.
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a reorder point inventory chart">
-  <img src="/Blogs/Inventory Reorder Point Guide/Reorder Point Sawtooth Graph.png" alt="Inventory reorder point and safety stock explained." loading="lazy">
+  <img src="/Blogs/Inventory Reorder Point Guide/Reorder Point Sawtooth Graph.png" alt="Inventory reorder point and safety stock explained." width="1536" height="1024" loading="lazy" decoding="async">
 </figure>
 
 > **Key takeaways**
@@ -138,7 +138,7 @@ If a promotion begins during lead time, calculate expected demand day by day or 
 For bundles, component demand may be higher than standalone sales suggest. A product required by several bundles can block them all when it runs out. Combine the inventory plan with the [bundle pricing guide](/blog/bundle-pricing-guide).
 
 <figure class="blog-image-placeholder" role="img" aria-label="Reserved space for an SKU inventory planning table">
-  <img src="/Blogs/Inventory Reorder Point Guide/SKU-Level Dashboard Matrix.png" alt="SKU-level reorder planning dashboard." loading="lazy">
+  <img src="/Blogs/Inventory Reorder Point Guide/SKU-Level Dashboard Matrix.png" alt="SKU-level reorder planning dashboard." width="1536" height="1024" loading="lazy" decoding="async">
 </figure>
 
 ## Common reorder point mistakes

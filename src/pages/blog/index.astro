@@ -7,12 +7,13 @@ interface BlogModule {
     description: string;
     publishedOn: string;
     category?: string;
+    draft?: boolean;
   };
   url: string;
 }
 
 const modules = import.meta.glob<BlogModule>('./*.md', { eager: true });
-const posts = Object.values(modules).sort((a, b) =>
+const posts = Object.values(modules).filter(post => !post.frontmatter.draft).sort((a, b) =>
   new Date(b.frontmatter.publishedOn).getTime() - new Date(a.frontmatter.publishedOn).getTime()
 );
 const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
