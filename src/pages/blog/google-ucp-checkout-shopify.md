@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "Google UCP Checkout: What Shopify Stores Must Do Now"
 description: "The Universal Commerce Protocol puts a Buy button in Google AI Mode and Gemini. See the 3 updates since January 2026 and what Shopify stores should fix first."
-publishedOn: "2026-09-24"
-updatedOn: "2026-09-24"
+publishedOn: "2026-09-26"
+updatedOn: "2026-09-26"
 category: "AI commerce & advertising"
 author: "Mehul"
 readTime: "11 min read"
