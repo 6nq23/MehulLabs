@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "Meta Andromeda for Ecommerce: How Many Ads You Need"
 description: "Meta Andromeda rewards creative variety. Meta suggests at least 20 diversified ads per sales campaign. See how many creatives your budget can support."
 publishedOn: "2026-09-24"
