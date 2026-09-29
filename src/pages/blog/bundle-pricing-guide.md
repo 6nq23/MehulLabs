@@ -177,7 +177,7 @@ The strongest measure is usually incremental contribution per visitor, not bundl
 
 <section class="blog-cta">
   <h3>Test the price, margin, and adoption scenario</h3>
-  <p>Use the <a href="/tools/bundle-planner">MLabs Growth Bundle Pricing Calculator</a> for two to five products. It calculates list value, discounted selling price, total COGS, product-level margin, and a projected order-value scenario.</p>
+  <p>Use the <a href="/tools/bundle-planner">MlabsGrowth Bundle Pricing Calculator</a> for two to five products. It calculates list value, discounted selling price, total COGS, product-level margin, and a projected order-value scenario.</p>
   <p>Adoption and conversion uplift are assumptions, not predictions. The calculator displays INR and excludes fulfilment, fees, returns, and acquisition from bundle margin.</p>
 </section>
 

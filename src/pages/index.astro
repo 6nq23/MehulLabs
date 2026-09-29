@@ -1,36 +1,448 @@
 ---
-import { site } from '@/data/site';
-import Layout from '@/layouts/Layout.astro';
-import { guides } from '@/data/guides';
-import PlatformFamily from '@/components/sections/PlatformFamily.astro';
-import { Services } from '@/components/sections/Services';
-import { Approach } from '@/components/sections/Approach';
-import { Faq } from '@/components/sections/Faq';
-import { Contact } from '@/components/sections/Contact';
-import OperatingExperience from '@/components/ui/OperatingExperience.astro';
+import '@fontsource-variable/manrope/wght.css';
+import { contactEmail, site } from '@/data/site';
+import { pageSeo } from '@/data/seo';
+import { ownedBrands, ownershipDisclosure } from '@/data/experience';
+import { ConversionEvents } from '@/components/providers/ConversionEvents';
+import HiveNavbar from '@/components/layout/HiveNavbar.astro';
+import queen from '../../asset/individual-bees/queen-flower-throne-v1.png';
+import marketingBee from '../../asset/individual-bees/01-marketing-brain-no-name.png';
+import shopifyBee from '../../asset/individual-bees/04-shopify-sales-agent-no-name.png';
+import callingBee from '../../asset/individual-bees/05-calling-agent-no-name.png';
+import humanStrategist from '../../asset/human-creative-strategist.png';
+
+const seo = pageSeo['/'];
+const canonicalUrl = site.url ? new URL('/', site.url).href : undefined;
+const socialImageUrl = new URL('/social-preview.png', site.url || Astro.url.origin).href;
+const organizationId = `${site.url}/#organization`;
+const websiteId = `${site.url}/#website`;
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', '@id': organizationId, name: site.name, url: site.url, email: contactEmail || undefined, description: site.tagline },
+    { '@type': 'WebSite', '@id': websiteId, name: site.name, url: canonicalUrl, publisher: { '@id': organizationId }, inLanguage: 'en' },
+    { '@type': 'WebPage', '@id': `${canonicalUrl}#webpage`, url: canonicalUrl, name: `${seo.title} — ${site.name}`, description: seo.description, isPartOf: { '@id': websiteId }, publisher: { '@id': organizationId }, inLanguage: 'en' },
+  ],
+}).replace(/</g, '\\u003c');
+const specialists = [
+  {
+    title: 'Store Conversion',
+    description: 'Improve the pages and buying decisions between a visit and an order.',
+    image: shopifyBee,
+    href: '/services/store-conversion',
+    color: 'peach',
+  },
+  {
+    title: 'AI & Marketing',
+    description: 'Keep approved brand knowledge ready for the next brief and workflow.',
+    image: marketingBee,
+    href: '/services/ai-automation',
+    color: 'lilac',
+  },
+  {
+    title: 'Order Operations',
+    description: 'Connect order updates, confirmation calls and follow-ups.',
+    image: callingBee,
+    href: '/services/order-operations',
+    color: 'blue',
+  },
+] as const;
 ---
-<Layout>
-  <section id="top" class="growth-hero">
-    <div class="shell growth-hero-grid">
-      <div>
-        <p class="growth-eyebrow">MLABS GROWTH · AI SYSTEMS FOR REAL WORK</p>
-        <h1>Shopify growth.<br /><em>Smoother orders.<br />Practical AI workflows.</em></h1>
-        <p class="growth-lead">We help brands improve their Shopify store, connect order operations, and put repeatable AI workflows to work. Need tools for your own team? Explore the products we’re building.</p>
-        <div class="growth-actions"><a class="growth-button" href={site.bookingUrl} data-cta-location="home-audit">Book a free audit call <span aria-hidden="true">↗</span></a><a class="growth-text-link" href="/products">Explore products <span aria-hidden="true">↗</span></a></div>
-        <p class="growth-note">Start with a free 30-minute audit. Get a written scope before paid work.</p>
-      </div>
-      <figure class="growth-diagram"><img src="/workflow-map.svg" width="640" height="510" alt="Store, orders and marketing feed into a shared workflow, then a human reviews exceptions and decides the next action." fetchpriority="high" /><figcaption>How we scope a connected workflow · illustrative example</figcaption></figure>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="/fonts/hero/quicksand-500-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <meta name="theme-color" content="#fbfaf8" />
+    <meta name="robots" content={site.indexable ? 'index, follow' : 'noindex, follow'} />
+    <meta name="googlebot" content={`${site.indexable ? 'index, follow' : 'noindex, follow'}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
+    <meta name="author" content={site.name} />
+    <meta name="description" content={seo.description} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={`${seo.title} — ${site.name}`} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:image" content={socialImageUrl} />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${seo.title} — ${site.name}`} />
+    <meta name="twitter:description" content={seo.description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <title>{seo.title} — {site.name}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {site.url && <script is:inline type="application/ld+json" set:html={jsonLd}></script>}
+  </head>
+  <body>
+    <div class="hive-page">
+      <a class="skip-link" href="#main">Skip to content</a>
+      <ConversionEvents client:load />
+      <HiveNavbar />
+
+      <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <h1 id="hero-title"><span>More from your store.</span><span>Less work behind it.</span></h1>
+            <p class="hero-subtitle">We improve Shopify conversion, connect order operations, and build AI marketing workflows around your brand.</p>
+            <a class="pill-button hero-cta" href={site.bookingUrl} data-cta-location="home-hero">
+              <span>Book a free audit call</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span>
+            </a>
+            <p class="hero-note">Start with a free 30-minute audit. Get a written scope before paid work.</p>
+          </div>
+
+        </section>
+
+        <section id="approach" class="approach-section" aria-labelledby="approach-title">
+          <h2 id="approach-title" class="sr-only">One hive. Two ways to grow.</h2>
+          <div class="offer-grid">
+            <div class="offer-column">
+              <div class="offer-visual human-visual">
+                <span class="visual-halo" aria-hidden="true"></span>
+                <img src={humanStrategist.src} width="1149" height="1368" alt="Illustrative portrait of a human strategist" fetchpriority="high" />
+              </div>
+              <article class="offer-card">
+                <h3>Don't hire more <em>humans.</em></h3>
+                <p class="offer-description">Your team already brings the strategy, creative judgment, and final approval. Give the repeatable tasks to specialist agents instead of adding another role.</p>
+                <div class="offer-signature"><span class="signature-dot" aria-hidden="true"></span>Human-led. Brand-focused.</div>
+                <a class="pill-button offer-cta" href="/services" data-cta-location="home-hire-humans"><span>Explore services</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span></a>
+              </article>
+            </div>
+            <div class="offer-column">
+              <div class="offer-visual agents-visual">
+                <span class="visual-halo" aria-hidden="true"></span>
+                <img class="offer-bee bee-queen" src={queen.src} width="1254" height="1254" alt="The queen bee leads a hive of specialist agents." />
+                <img class="offer-bee bee-satellite-left" src={shopifyBee.src} width="1254" height="1254" alt="" aria-hidden="true" />
+                <img class="offer-bee bee-satellite-right" src={marketingBee.src} width="1254" height="1254" alt="" aria-hidden="true" />
+              </div>
+              <article class="offer-card">
+                <h3>Hire AI Agents.</h3>
+                <p class="offer-description">Bring in a specialist bee for store conversion, order follow-ups, or marketing workflows. Each agent works from your brand context, and your people review what matters.</p>
+                <div class="offer-signature"><span class="signature-bees" aria-hidden="true"><img src={shopifyBee.src} width="30" height="30" alt="" loading="lazy" /><img src={marketingBee.src} width="30" height="30" alt="" loading="lazy" /><img src={callingBee.src} width="30" height="30" alt="" loading="lazy" /></span>One queen. A connected hive.</div>
+                <a class="pill-button offer-cta" href="#services" data-cta-location="home-hire-agents"><span>Explore agents</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span></a>
+              </article>
+            </div>
+          </div>
+          <p class="approach-note">Your people stay in control. The hive helps them get more done.</p>
+        </section>
+
+        <section id="services" class="services-section" aria-labelledby="services-title">
+          <p class="eyebrow">THREE WAYS TO START</p>
+          <h2 id="services-title">Meet the bees<span class="yellow-period">.</span></h2>
+          <p class="services-intro">A different specialist for each part of the work, connected around your brand.</p>
+          <div class="specialist-grid">
+            {specialists.map((specialist) => (
+              <article class={`specialist-card ${specialist.color}`}>
+                <div class="specialist-visual"><img src={specialist.image.src} width="1254" height="1254" alt="" loading="lazy" /></div>
+                <h3>{specialist.title}</h3>
+                <p>{specialist.description}</p>
+                <a href={specialist.href}>Explore service <span aria-hidden="true">↗</span></a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="how-it-works" class="brain-section" aria-labelledby="brain-section-title">
+          <h2 id="brain-section-title">How it works.</h2>
+          <div class="brain-grid">
+            <div class="brain-copy">
+              <h3>One brain.<br />Better ideas.</h3>
+              <p>Marketing Brain brings approved brand knowledge, customer questions, and campaign learning into one working context. It shapes content ideas, creative briefs, and ad angles. Your team reviews the output; managed marketing can put approved campaigns into market.</p>
+              <a class="brain-link" href="/services/ai-automation">
+                <img src={marketingBee.src} width="1254" height="1254" alt="" loading="lazy" />
+                <span>Marketing Brain</span>
+                <span class="brain-link-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="brain-video-shell">
+              <div class="brain-video-stage">
+                <video data-brain-video autoplay muted loop playsinline preload="metadata" poster="/video/marketing-brain-flow-poster.png" aria-label="Marketing Brain animation: approved brand and campaign context becomes creative ideas for human review">
+                  <source src="/video/marketing-brain-flow.mp4" type="video/mp4" />
+                  Your browser does not support this video.
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="proof-section" aria-labelledby="proof-title">
+          <div class="proof-inner">
+            <div class="proof-heading">
+              <h2 id="proof-title">Built from real brand<br />operations.</h2>
+              <p>By <strong><span>Mlabs</span>Growth.</strong></p>
+            </div>
+            <div class="proof-stats" aria-label="How we work">
+              <div><strong>{ownedBrands.length}</strong><span>owned brands</span></div>
+              <div><strong>{specialists.length}</strong><span>service areas</span></div>
+              <div><strong>30 min</strong><span>free first audit</span></div>
+            </div>
+            <div class="proof-gallery" aria-label="Illustrations of our people, agents, and workflows">
+              <figure class="proof-image proof-person"><img src={humanStrategist.src} width="1149" height="1368" alt="Illustration of a human strategist" loading="lazy" /><figcaption>Human-led decisions</figcaption></figure>
+              <figure class="proof-image proof-queen"><img src={queen.src} width="1254" height="1254" alt="Queen bee representing the connected agents" loading="lazy" /><figcaption>One connected hive</figcaption></figure>
+              <figure class="proof-image proof-team"><img src={shopifyBee.src} width="1254" height="1254" alt="" loading="lazy" /><img src={marketingBee.src} width="1254" height="1254" alt="" loading="lazy" /><img src={callingBee.src} width="1254" height="1254" alt="" loading="lazy" /><figcaption>Specialists for the work</figcaption></figure>
+            </div>
+            <div class="proof-brands">
+              <h3>Grounded in our own businesses.</h3>
+              <div class="proof-brand-list">{ownedBrands.map(brand => <span>{brand.name}</span>)}</div>
+            </div>
+            <p class="proof-disclosure">{ownershipDisclosure}</p>
+          </div>
+        </section>
+
+        <section class="closing-cta" aria-labelledby="closing-title">
+          <div class="closing-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="closing-copy">
+            <h2 id="closing-title">Ready to make your store work harder?</h2>
+            <a class="pill-button" href={site.bookingUrl} data-cta-location="home-closing"><span>Book a free audit</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span></a>
+            <p>Bring one problem. We’ll agree on the scope before paid work begins.</p>
+          </div>
+        </section>
+      </main>
+      <footer class="preview-footer">
+        <span>© {new Date().getFullYear()} {site.name}</span>
+        <nav aria-label="Footer"><a href="/services">Services</a><a href="/products">Products</a><a href="/about">About</a></nav>
+      </footer>
     </div>
-    <div class="shell"><div class="growth-trust"><span>Built from Mehul’s own brand operations</span><span>Start with one problem</span><span>Clear scope. Client-owned accounts.</span></div></div>
-  </section>
-  <PlatformFamily />
-  <Services />
-  <section id="proof" class="section-space growth-evidence">
-    <div class="shell growth-split"><div><p class="eyebrow-accent">THE EXPERIENCE BEHIND THE WORK</p><h2 class="section-title">We know what happens<br /><span class="muted-heading">after the order comes in.</span></h2><p>Mehul’s work spans seasonal products at Sanskrutibydiorin and daily jewellery operations at Diorin Demifine Jewellery. The questions are practical: what needs confirming, what is in stock, and who handles the next exception?</p><p>These are our own brands, not independent client case studies. We use that operating experience to ask better questions about your business and scope the work around your actual constraints.</p><a class="text-link" href="/about">Meet Mehul and see the approach ↗</a></div><OperatingExperience /></div>
-  </section>
-  <section class="section-space growth-product-band" aria-labelledby="product-heading"><div class="shell growth-split"><div><p class="eyebrow-accent">FOR PEOPLE WHO WANT TO RUN THEIR OWN WORKFLOWS</p><h2 class="section-title" id="product-heading">Useful AI work.<br /><span class="muted-heading">A place to organise it.</span></h2><p>We’re building mlabs Skill Manager to help you organise AI skills, schedule recurring work, and review outputs in one place. A skill is a set of instructions for a repeatable AI task, such as an audit or a content brief.</p><a href="/products/skill-manager" class="growth-button">Explore Skill Manager <span aria-hidden="true">↗</span></a></div><article class="growth-card"><span class="growth-status">IN DEVELOPMENT · NOT YET FOR SALE</span><h3>From a saved prompt<br />to a repeatable routine.</h3><ol class="growth-steps"><li><span>01</span>Choose the task and its project context.</li><li><span>02</span>Set when you want it to run.</li><li><span>03</span>Review the output before using it.</li></ol><p>Pricing, supported setup and release timing are still being finalised. Product interest is separate from a service enquiry.</p></article></div></section>
-  <Approach />
-  <section class="section-space shell" aria-labelledby="guides-title"><p class="eyebrow-accent">START WITH A USEFUL QUESTION</p><h2 class="section-title" id="guides-title">Understand the problem.<br /><span class="muted-heading">Choose the next step.</span></h2><div class="seo-help-grid">{guides.map(guide => <article class="growth-card"><h3>{guide.title}</h3><p>{guide.description}</p><a class="text-link" href={`/guides/${guide.slug}`}>Read the guide ↗</a></article>)}</div></section>
-  <Faq />
-  <Contact />
-</Layout>
+  </body>
+</html>
+
+<style>
+  @font-face { font-family: 'Quicksand Hero'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/hero/quicksand-500-latin.woff2') format('woff2'); }
+  @font-face { font-family: Caveat; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/caveat/caveat-medium.ttf') format('truetype'); }
+  :global(*) { box-sizing: border-box; }
+  :global(html) { scroll-behavior: smooth; }
+  :global(body) { margin: 0; }
+  :global(:focus-visible) { outline: 2px solid #986500; outline-offset: 5px; }
+  .hive-page { --ink: #111116; --muted: #707178; --yellow: #ffcc1e; --cream: #f6f5f1; min-width: 320px; overflow: clip; background: var(--cream); color: var(--ink); font-family: 'Manrope Variable', Manrope, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  h1,h2,h3,p { margin-top: 0; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+  .skip-link { position: fixed; z-index: 100; top: -100px; left: 18px; padding: 12px 16px; background: #fff; border-radius: 12px; }
+  .skip-link:focus { top: 10px; }
+  .pill-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 54px; padding: 5px 5px 5px 24px; border-radius: 999px; background: var(--yellow); box-shadow: 0 8px 18px #825f0026, inset 0 -2px 3px #7f5c0024; font-size: 15px; font-weight: 800; white-space: nowrap; transition: transform .25s, box-shadow .25s; }
+  .pill-button:hover { transform: translateY(-2px); box-shadow: 0 12px 25px #825f0033, inset 0 -2px 3px #7f5c0024; }
+  .pill-arrow { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 auto; border: 1px solid #fff; border-radius: 50%; background: #ffffff61; box-shadow: 0 1px 5px #533a001f; }
+  .pill-arrow svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .hero { padding: clamp(180px,13.7vw,240px) 24px 0; }
+  .hero-copy { max-width: 900px; margin: 0 auto; text-align: center; }
+  h1 { margin-bottom: 30px; font-family: 'Quicksand Hero', 'Manrope Variable', sans-serif; font-size: clamp(46px,5vw,78px); line-height: 1.08; font-weight: 500; letter-spacing: -.065em; }
+  h1 span { display: block; text-wrap: balance; }
+  .hero-subtitle { max-width: 690px; margin: 0 auto 30px; color: var(--muted); font-size: clamp(16px,1.25vw,20px); line-height: 1.55; letter-spacing: -.025em; }
+  .hero-cta { min-width: 250px; min-height: 50px; margin: 0 auto; font-size: 14px; }
+  .hero-cta .pill-arrow { width: 40px; height: 40px; }
+  .hero-note { margin: 15px auto 0; color: #777872; font-size: 12px; line-height: 1.5; }
+  .approach-section { position: relative; padding: 145px 24px 40px; scroll-margin-top: 120px; --visual-start-scale: 1.38; --visual-scale: 1.38; --visual-start-lift: 70px; --visual-lift: 70px; }
+  .offer-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; max-width: 900px; margin: auto; }
+  .offer-column { min-width: 0; display: flex; flex-direction: column; }
+  .offer-visual { position: relative; height: 370px; isolation: isolate; transform: translateY(calc(-1 * var(--visual-lift))) scale(var(--visual-scale)); transform-origin: center bottom; transition: transform .18s ease-out; }
+  .visual-halo { position: absolute; z-index: -1; left: 50%; bottom: 0; width: 110%; height: 270px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(ellipse,#f1d9c752,transparent 70%); filter: blur(25px); }
+  .human-visual img { position: absolute; left: 50%; top: 7px; width: 440px; max-width: 112%; height: auto; transform: translateX(-50%); filter: drop-shadow(0 12px 16px #76562c0a); }
+  .agents-visual .visual-halo { background: radial-gradient(ellipse,#ffe5ad66,transparent 70%); }
+  .offer-bee { position: absolute; height: auto; filter: drop-shadow(0 14px 17px #95661c1f); }
+  .bee-queen { z-index: 1; width: 340px; max-width: 84%; top: 0; left: 0; right: 0; margin-inline: auto; animation: queen-float 7s ease-in-out infinite; }
+  .bee-satellite-left { z-index: 2; left: -13px; bottom: -8px; width: 175px; transform: rotate(-10deg); animation: satellite-left-float 6s ease-in-out infinite; }
+  .bee-satellite-right { z-index: 2; right: -10px; bottom: -18px; width: 174px; transform: rotate(10deg); animation: satellite-right-float 6.5s ease-in-out infinite; }
+  .offer-card { position: relative; z-index: 3; flex: 1; display: flex; flex-direction: column; min-height: 320px; padding: 35px 36px 34px; border: 1px solid #ffffffb3; border-radius: 23px; background: #fff; box-shadow: 0 10px 28px #4b3c1805; }
+  .offer-card h3 { margin-bottom: 16px; font-size: clamp(28px,2.5vw,36px); line-height: 1.15; font-weight: 750; letter-spacing: -.055em; }
+  .offer-card h3 em { display: inline-block; font-family: Caveat, 'Segoe Print', cursive; font-size: 1.27em; font-style: normal; font-weight: 500; line-height: .8; letter-spacing: -.04em; }
+  .offer-description { margin-bottom: 26px; color: var(--muted); font-size: 16px; line-height: 1.6; letter-spacing: -.015em; }
+  .offer-card ul { display: grid; gap: 13px; margin: 0 0 25px; padding: 20px 0 0; border-top: 1px solid #ebebe6; list-style: none; color: #45464b; font-size: 14px; line-height: 1.55; }
+  .offer-card li { position: relative; padding-left: 13px; }
+  .offer-card li::before { content: ''; position: absolute; top: .66em; left: 0; width: 3px; height: 3px; border-radius: 50%; background: #9d9d96; }
+  .offer-signature { display: inline-flex; align-items: center; align-self: flex-start; gap: 8px; min-height: 38px; margin: auto 0 27px; padding: 5px 12px; border-radius: 999px; background: #f6f5f0; color: #626159; font-size: 12px; white-space: nowrap; }
+  .signature-dot { width: 8px; height: 8px; border-radius: 50%; background: #e4b61d; box-shadow: 0 0 0 5px #f3e9c2; margin: 0 6px; }
+  .signature-bees { display: flex; padding-right: 2px; }
+  .signature-bees img { width: 28px; height: 28px; margin-right: -8px; border: 2px solid #fff; border-radius: 50%; background: #fcebc3; object-fit: cover; }
+  .signature-bees img:last-child { margin-right: 0; }
+  .offer-cta { align-self: flex-start; min-width: 210px; }
+  .approach-note { max-width: 560px; margin: 40px auto 0; color: #777872; text-align: center; font-size: 14px; line-height: 1.6; }
+  @media (min-width: 1600px) {
+    .approach-section { padding-top: 70px; }
+  }
+  .eyebrow { margin-bottom: 18px; color: #81745c; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
+  .yellow-period { color: var(--yellow); }
+  .services-section { padding: 95px 28px 120px; text-align: center; scroll-margin-top: 90px; }
+  .services-section h2 { margin-bottom: 13px; font-size: clamp(42px,5.3vw,75px); line-height: 1.04; font-weight: 600; letter-spacing: -.065em; }
+  .services-intro { margin: 0 auto 56px; max-width: 550px; color: var(--muted); font-size: 17px; line-height: 1.6; }
+  .specialist-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: stretch; gap: 18px; max-width: 1280px; margin: auto; text-align: left; }
+  .specialist-card { min-width: 0; padding: 13px 17px 30px; border: 1px solid #ece9e2; border-radius: 25px; background: #fff; box-shadow: 0 19px 40px #5841120a; }
+  .specialist-visual { display: grid; place-items: center; height: clamp(230px,25vw,330px); overflow: hidden; border-radius: 17px; background: radial-gradient(circle at 50% 50%,#ffe2ce 0,transparent 66%),#fffaf5; }
+  .specialist-card.lilac .specialist-visual { background: radial-gradient(circle at 50% 50%,#ead7ff 0,transparent 66%),#fdfaff; }
+  .specialist-card.blue .specialist-visual { background: radial-gradient(circle at 50% 50%,#d9e6ff 0,transparent 66%),#fafcff; }
+  .specialist-visual img { display: block; width: min(95%,315px); height: auto; filter: drop-shadow(0 18px 15px #805c1830); transition: transform .3s; }
+  .specialist-card:hover img { transform: translateY(-5px); }
+  .specialist-card h3 { margin: 25px 8px 8px; font-size: clamp(20px,2vw,29px); letter-spacing: -.045em; }
+  .specialist-card p { min-height: 48px; margin: 0 8px 22px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+  .specialist-card a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin: 0 8px; font-size: 13px; font-weight: 800; }
+  .specialist-card a span { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; background: #f9f5ec; font-size: 15px; font-weight: 500; }
+  .brain-section { padding: 60px 28px 100px; background: var(--cream); scroll-margin-top: 90px; }
+  .brain-section > h2 { margin: 0 auto 60px; text-align: center; font-size: clamp(36px,4vw,56px); font-weight: 600; letter-spacing: -.07em; }
+  .brain-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.08fr); align-items: center; gap: clamp(40px,5vw,80px); max-width: 1200px; margin: auto; }
+  .brain-copy h3 { margin-bottom: 22px; font-size: clamp(46px,5vw,76px); font-weight: 600; line-height: .99; letter-spacing: -.078em; }
+  .brain-copy > p { max-width: 590px; margin-bottom: 30px; color: #5c5e65; font-size: clamp(16px,1.2vw,19px); line-height: 1.55; letter-spacing: -.015em; }
+  .brain-link { display: flex; align-items: center; gap: 16px; max-width: 590px; min-height: 64px; border-top: 1px solid #dbd9d3; font-size: clamp(16px,1.4vw,20px); font-weight: 700; letter-spacing: -.035em; }
+  .brain-link > img { width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 5px 5px #65502f3d); }
+  .brain-link-arrow { display: grid; place-items: center; width: 44px; height: 44px; margin-left: auto; border-radius: 50%; background: #eae6dc; font-size: 28px; font-weight: 400; transition: transform .2s,background .2s; }
+  .brain-link:hover .brain-link-arrow { transform: translateX(3px); background: var(--yellow); }
+  .brain-video-shell { min-width: 0; padding: clamp(18px,2.2vw,32px); border-radius: 30px; background: #fff; box-shadow: 0 25px 60px #5a4f3710; }
+  .brain-video-stage { position: relative; overflow: hidden; aspect-ratio: 728/624; border-radius: 24px; background: #f7f7f6; }
+  .brain-video-stage video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .proof-section { background: radial-gradient(ellipse at 50% 0%,#292929 0%,#1b1b1b 58%,#191919 100%); color: #f8f8f7; }
+  .proof-inner { max-width: 1280px; margin: auto; padding: 78px 28px 86px; }
+  .proof-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 42px; border-bottom: 1px solid #ffffff25; }
+  .proof-heading h2 { margin: 0; font-size: clamp(25px,2.7vw,38px); font-weight: 600; line-height: 1.22; letter-spacing: -.055em; }
+  .proof-heading p { margin: 8px 0 0; color: #aaa9a6; font-size: 12px; white-space: nowrap; }
+  .proof-heading strong { margin-left: 8px; color: #f7f6f3; font-size: 17px; font-weight: 850; letter-spacing: -.06em; }
+  .proof-heading strong span { color: var(--yellow); }
+  .proof-stats { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 20px; padding: 32px 0 34px; }
+  .proof-stats div { display: flex; flex-direction: column; gap: 3px; }
+  .proof-stats strong { font-size: clamp(35px,4vw,56px); font-weight: 650; line-height: 1.05; letter-spacing: -.055em; }
+  .proof-stats div:not(:first-child) strong { font-size: clamp(27px,2.8vw,39px); }
+  .proof-stats span { color: #a5a5a4; font-size: 12px; }
+  .proof-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+  .proof-image { position: relative; display: grid; place-items: center; height: clamp(190px,19vw,255px); margin: 0; overflow: hidden; border-radius: 10px; background: radial-gradient(circle at 50% 65%,#f3e5cc 0%,#d3c5b0 64%,#9b8c79 100%); }
+  .proof-image img { display: block; width: auto; height: 96%; object-fit: contain; }
+  .proof-person img { align-self: end; height: 120%; transform: translateY(19%); }
+  .proof-queen { background: radial-gradient(circle at 50% 52%,#fff3d5 0%,#d6bb91 72%,#7e684e 100%); }
+  .proof-queen img { height: 118%; filter: drop-shadow(0 10px 16px #5e3c222b); }
+  .proof-team { background: radial-gradient(circle at 50% 55%,#ded7ee 0%,#c3b7d1 60%,#806d8c 100%); }
+  .proof-team img { position: absolute; height: 71%; filter: drop-shadow(0 10px 12px #2f243338); }
+  .proof-team img:nth-child(1) { left: -3%; bottom: 6%; }
+  .proof-team img:nth-child(2) { left: 28%; bottom: 20%; z-index: 1; }
+  .proof-team img:nth-child(3) { right: -3%; bottom: 5%; }
+  .proof-image figcaption { position: absolute; z-index: 2; left: 13px; bottom: 12px; padding: 6px 10px; border-radius: 999px; background: #1b1b1bcc; color: #fff; font-size: 11px; font-weight: 700; backdrop-filter: blur(8px); }
+  .proof-brands { display: flex; justify-content: space-between; align-items: center; gap: 40px; margin-top: 34px; padding-top: 32px; border-top: 1px solid #ffffff25; }
+  .proof-brands h3 { max-width: 330px; margin: 0; font-size: clamp(20px,2.3vw,30px); font-weight: 600; line-height: 1.18; letter-spacing: -.05em; }
+  .proof-brand-list { display: flex; justify-content: flex-end; align-items: center; gap: clamp(24px,4vw,70px); color: #c7c7c3; font-size: clamp(16px,1.7vw,24px); font-weight: 750; letter-spacing: -.04em; }
+  .proof-disclosure { margin: 24px 0 0; color: #999995; font-size: 11px; line-height: 1.5; }
+  .closing-cta { min-height: 480px; padding: 17px 24px 90px; background: var(--cream); text-align: center; }
+  .closing-lines { display: grid; justify-items: center; gap: 11px; width: 100%; }
+  .closing-lines span { display: block; height: 13px; border-radius: 99px; background: #171719; }
+  .closing-lines span:nth-child(1) { width: 100%; }
+  .closing-lines span:nth-child(2) { width: 88%; height: 10px; }
+  .closing-lines span:nth-child(3) { width: 74%; height: 7px; }
+  .closing-copy { margin: clamp(110px,10vw,170px) auto 0; }
+  .closing-copy h2 { margin: 0 auto 30px; font-family: 'Quicksand Hero','Manrope Variable',sans-serif; font-size: clamp(38px,4.3vw,65px); font-weight: 500; line-height: 1.1; letter-spacing: -.06em; }
+  .closing-copy .pill-button { margin: auto; }
+  .closing-copy p { margin: 18px auto 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .preview-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 16px max(28px,calc((100vw - 1280px)/2)); border-top: 1px solid #eae7e0; background: #fff; color: #777983; font-size: 12px; }
+  .preview-footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
+  .preview-footer a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-weight: 700; }
+  @keyframes queen-float { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-9px) rotate(1deg); } }
+  @keyframes satellite-left-float { 0%,100% { transform: translateY(0) rotate(-10deg); } 50% { transform: translateY(-7px) rotate(-6deg); } }
+  @keyframes satellite-right-float { 0%,100% { transform: translateY(0) rotate(10deg); } 50% { transform: translateY(-10px) rotate(6deg); } }
+  @media (max-width: 960px) {
+    .brain-section { padding: 72px 22px 95px; }
+    .brain-section > h2 { margin-bottom: 65px; }
+    .brain-grid { gap: 34px; }
+    .brain-copy h3 { font-size: clamp(50px,6vw,70px); }
+    .brain-copy > p { font-size: 16px; }
+    .offer-grid { max-width: 800px; gap: 22px; }
+    .offer-visual { height: 325px; }
+    .human-visual img { width: 395px; }
+    .bee-queen { width: 300px; }
+    .bee-satellite-left,.bee-satellite-right { width: 150px; }
+    .offer-card { padding: 28px; }
+    .offer-signature { font-size: 11px; padding-inline: 9px; }
+  }
+  @media (max-width: 700px) {
+    .brain-section { padding: 68px 18px 90px; }
+    .brain-section > h2 { margin-bottom: 50px; }
+    .brain-grid { grid-template-columns: 1fr; gap: 36px; max-width: 540px; }
+    .brain-copy h3 { font-size: clamp(54px,12vw,76px); }
+    .brain-copy > p { font-size: 17px; }
+    .brain-video-shell { padding: 16px; border-radius: 24px; }
+    .brain-video-stage { border-radius: 18px; }
+    .hero { padding: 150px 22px 0; }
+    h1 { font-size: clamp(34px,9vw,52px); margin-bottom: 24px; }
+    .hero-subtitle { max-width: 520px; font-size: 17px; }
+    .hero-note { max-width: 290px; }
+    .approach-section { padding: 65px 22px 25px; --visual-start-scale: 1.2; --visual-scale: 1.2; --visual-start-lift: 40px; --visual-lift: 40px; }
+    .offer-grid { grid-template-columns: 1fr; max-width: 438px; gap: 42px; }
+    .offer-visual { height: 330px; }
+    .human-visual img { width: 425px; }
+    .bee-queen { width: 320px; }
+    .bee-satellite-left,.bee-satellite-right { width: 168px; }
+    .offer-card { min-height: 0; padding: 32px; }
+    .offer-card h3 { font-size: 34px; }
+    .offer-card ul { font-size: 15px; }
+    .offer-signature { margin-top: 0; font-size: 12px; }
+    .approach-note { max-width: 400px; }
+    .specialist-grid { grid-template-columns: 1fr; max-width: 500px; }
+    .specialist-visual { height: 300px; }
+    .specialist-card p { min-height: 0; }
+    .proof-inner { padding: 68px 22px 72px; }
+    .proof-heading { gap: 20px; }
+    .proof-gallery { gap: 9px; }
+    .proof-image { height: 190px; }
+    .proof-brands { align-items: flex-start; flex-direction: column; gap: 24px; }
+    .proof-brand-list { justify-content: flex-start; flex-wrap: wrap; }
+    .closing-cta { min-height: 410px; }
+    .closing-copy { margin-top: 100px; }
+    .preview-footer { flex-direction: column; align-items: flex-start; gap: 5px; }
+  }
+  @media (max-width: 400px) {
+    .hero { padding-inline: 16px; padding-top: 135px; }
+    h1 { font-size: clamp(34px,9vw,38px); }
+    .hero-subtitle { font-size: 16px; }
+    .approach-section { padding: 52px 16px 25px; --visual-start-scale: 1.15; --visual-scale: 1.15; --visual-start-lift: 28px; --visual-lift: 28px; }
+    .offer-visual { height: 292px; }
+    .human-visual img { width: 370px; }
+    .bee-queen { width: 290px; }
+    .bee-satellite-left,.bee-satellite-right { width: 145px; }
+    .offer-card { padding: 28px 25px; }
+    .offer-card h3 { font-size: 31px; }
+    .services-section { padding: 70px 18px 90px; }
+    .services-intro { font-size: 16px; }
+    .proof-heading { flex-direction: column; gap: 8px; padding-bottom: 28px; }
+    .proof-stats { gap: 10px; padding: 26px 0; }
+    .proof-stats strong,.proof-stats div:not(:first-child) strong { font-size: 27px; }
+    .proof-stats span { font-size: 10px; }
+    .proof-gallery { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 5px; }
+    .proof-image { height: 140px; border-radius: 6px; }
+    .proof-image figcaption { left: 5px; bottom: 5px; padding: 4px 5px; font-size: 8px; }
+    .proof-brand-list { gap: 12px; font-size: 16px; }
+    .closing-cta { padding-inline: 16px; }
+    .closing-copy h2 { font-size: 35px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) { scroll-behavior: auto; }
+    .pill-button,.specialist-visual img,.offer-visual { transition: none; }
+    .offer-bee { animation: none; }
+    .approach-section { --visual-scale: 1; --visual-lift: 0px; }
+    .brain-link-arrow { transition: none; }
+  }
+</style>
+
+<script>
+  const approach = document.querySelector<HTMLElement>('.approach-section');
+  if (approach && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let frame = 0;
+    const updateVisualScale = () => {
+      frame = 0;
+      const styles = window.getComputedStyle(approach);
+      const visualTop = approach.getBoundingClientRect().top + Number.parseFloat(styles.paddingTop);
+      const start = window.innerHeight * 0.82;
+      const distance = window.innerHeight * 0.45;
+      const progress = Math.min(1, Math.max(0, (start - visualTop) / distance));
+      const initialScale = Number.parseFloat(styles.getPropertyValue('--visual-start-scale'));
+      const initialLift = Number.parseFloat(styles.getPropertyValue('--visual-start-lift'));
+      approach.style.setProperty('--visual-scale', String(initialScale - progress * (initialScale - 1)));
+      approach.style.setProperty('--visual-lift', `${initialLift * (1 - progress)}px`);
+    };
+    const queueUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(updateVisualScale);
+    };
+    updateVisualScale();
+    window.addEventListener('scroll', queueUpdate, { passive: true });
+    window.addEventListener('resize', queueUpdate);
+  }
+</script>
+
+<script>
+  const brainVideo = document.querySelector<HTMLVideoElement>('[data-brain-video]');
+  if (brainVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    brainVideo.pause();
+  }
+</script>

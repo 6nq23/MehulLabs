@@ -30,7 +30,7 @@ const { title = entry?.title, description = entry?.description || site.tagline, 
 const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.role}`;
 const canonicalUrl = site.url && !noindex ? new URL(pathname, `${site.url}/`).href : undefined;
 const socialImageUrl = new URL(article?.image || '/social-preview.png', site.url || Astro.url.origin).href;
-const socialImageAlt = article?.image && article.imageAlt ? article.imageAlt : 'mlabs Growth — practical AI workflows, products and brand services';
+const socialImageAlt = article?.image && article.imageAlt ? article.imageAlt : 'MlabsGrowth — practical AI workflows, products and brand services';
 const indexable = site.indexable && !noindex;
 const robots = indexable ? 'index, follow' : 'noindex, follow';
 const googlebot = `${robots}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`;
@@ -118,7 +118,7 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
     <noscript>
       <style is:inline>
         [data-reveal], [data-word] { opacity: 1 !important; transform: none !important; }
-        .film-play, .film-corner, .enquiry-form { display: none !important; }
+        .enquiry-form { display: none !important; }
       </style>
     </noscript>
   </head>
@@ -131,7 +131,7 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
     </a>
 
     <SiteRuntime pathname={Astro.url.pathname} client:load />
-    <noscript><nav class="no-js-navigation" aria-label="Page navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/products">Products</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/offers">Pricing &amp; scope</a><a href="/tools">Free tools</a><a href="/guides">Guides</a></nav></noscript>
+    <noscript><nav class="no-js-navigation" aria-label="Page navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/offers">Pricing &amp; scope</a><a href="/tools">Free tools</a><a href="/guides">Guides</a></nav></noscript>
     <main id="main">
       {breadcrumbs.length > 0 && <nav class="seo-breadcrumbs shell" aria-label="Breadcrumb"><ol>{breadcrumbs.map((crumb, index) => <li>{index === breadcrumbs.length - 1 ? <span aria-current="page">{crumb.label}</span> : <a href={crumb.path}>{crumb.label}</a>}</li>)}</ol></nav>}
       <slot />

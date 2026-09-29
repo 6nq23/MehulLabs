@@ -183,7 +183,7 @@ If AI traffic lands mostly on product pages and converts well, invest in product
 
 <section class="blog-cta">
   <h2>See what AI assistants really send you</h2>
-  <p>mlabs Growth sets up AI channel tracking in GA4 and Shopify, connects it to orders and margin, then shows which products and pages AI assistants are already recommending.</p>
+  <p>MlabsGrowth sets up AI channel tracking in GA4 and Shopify, connects it to orders and margin, then shows which products and pages AI assistants are already recommending.</p>
   <p><a href="/services/ai-automation">Explore AI growth and automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

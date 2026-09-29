@@ -11,7 +11,7 @@ export function Contact({ sectionNumber = '06' }: { sectionNumber?: string }) {
           <p>Book a free 30-minute call with Mehul to discuss your store, operations or AI workflows. We’ll review the problem and recommend practical next steps.</p>
           <div className="contact-person">
             <span className="contact-initial" aria-hidden="true">m.</span>
-            <div><strong>Speak directly with Mehul.</strong><span>Founder, mlabs Growth</span></div>
+            <div><strong>Speak directly with Mehul.</strong><span>Founder, MlabsGrowth</span></div>
           </div>
           <div className="contact-expectation">
             <h3>What happens next</h3>

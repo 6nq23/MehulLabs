@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell">
         <div className="footer-top"><p>Practical AI workflows. Built around the work.</p><a href="#main" className="text-link">Back to top<ArrowIcon className="-rotate-90" /></a></div>
-        <a href="/" className="footer-wordmark" aria-label="mlabs Growth home">mlabs<span>growth</span><i>.</i></a>
+        <a href="/" className="footer-wordmark" aria-label="MlabsGrowth home">Mlabs<span>Growth</span><i>.</i></a>
         <div className="footer-bottom"><p>© {new Date().getFullYear()} {site.name}</p><nav aria-label="Footer"><ul>{navLinks.map(link => <li key={link.href}><a href={link.href}>{link.label}</a></li>)}</ul></nav><span>Products & brand services by Mehul.</span></div>
       </div>
     </footer>

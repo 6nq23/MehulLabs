@@ -17,5 +17,8 @@ tsconfig.tsbuildinfo
 /.frames-src
 /.codex-review
 
+# Local Remotion source and render workspace; the published video is in public/video/.
+/video-project/
+
 .agents
 /.claude

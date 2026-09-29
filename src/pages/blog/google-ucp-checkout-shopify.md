@@ -210,7 +210,7 @@ US-based Shopify stores that sell cross-border should note one more limit: Shopi
 
 <section class="blog-cta">
   <h2>Get your catalog and reporting ready for AI checkout</h2>
-  <p>mlabs Growth builds AI marketing workflows for Shopify brands, including feed quality checks, policy audits and channel-level reporting that does not depend on browser tags.</p>
+  <p>MlabsGrowth builds AI marketing workflows for Shopify brands, including feed quality checks, policy audits and channel-level reporting that does not depend on browser tags.</p>
   <p><a href="/services/ai-automation">Explore AI marketing workflow automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

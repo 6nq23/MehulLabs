@@ -99,18 +99,13 @@ This structure is intentionally small: routes compose pages, the layout owns doc
 | `src/app/layout.tsx` | `src/layouts/Layout.astro` |
 | `src/app/globals.css` | `src/styles/globals.css` |
 | `src/app/icon.svg` | `public/favicon.svg` |
-| `src/app/opengraph-image.tsx` | `public/opengraph-image.png` |
+| `src/app/opengraph-image.tsx` | `public/social-preview.png` |
 | `src/app/robots.ts` | `src/pages/robots.txt.ts` |
 | `src/app/sitemap.ts` | `src/pages/sitemap.xml.ts` |
 
 The reusable layout now emits normal HTML title, canonical, robots, Open Graph, Twitter, theme, and JSON-LD tags. It accepts optional `title` and `description` props for future routes.
 
-All links were already standard `<a>` elements, so no link wrapper is needed. The two former `next/image` owners are now Astro components that use `<Image />` from `astro:assets`:
-
-- `src/components/ui/SlotImage.astro`
-- `src/components/ui/OperatingExperience.astro`
-
-Their public paths, dimensions, alt text, captions, loading priority, and rendered placement are unchanged. Keeping these stable URLs in `public/` makes this a low-risk migration; move approved future images into `src/assets/` only when build-time optimization is wanted.
+All links were already standard `<a>` elements, so no link wrapper is needed. The operating-experience artwork is rendered by `src/components/ui/OperatingExperience.astro`. The current homepage uses its own bee artwork and a local Marketing Brain video.
 
 ## React island policy
 
@@ -119,13 +114,11 @@ React components remain `.tsx` and are rendered by `@astrojs/react`. Hydration i
 | Root rendered by Astro | Directive | Reason |
 | --- | --- | --- |
 | `SiteRuntime` | `client:load` | Shared Lenis context, navigation dialog, conversion events, and scroll progress |
-| `Hero` | `client:load` | Above-the-fold magnetic CTA |
-| `Leaks`, `Mechanism`, `Approach` | `client:visible` | Reveal animation |
+| `Approach` | `client:visible` | Reveal animation on the Services page |
 | `Services` | `client:visible` | Solution-selection event |
 | `Assurance` | `client:visible` | Magnetic CTA |
-| `About` | `client:visible` | Reveal animation and the opt-in story video |
 | `Contact` | `client:load` | Registers the solution listener before an earlier CTA can dispatch it |
-| `Proof`, `Faq`, `Footer` | none | Static output or native HTML interaction |
+| `Faq`, `Footer` | none | Static output or native HTML interaction |
 
 `SiteRuntime` is one React island because the navbar consumes the smooth-scroll provider's React context; separate islands cannot share that context.
 
@@ -137,23 +130,20 @@ Tailwind is intentionally not upgraded during the Astro migration. The current s
 
 ## Page and content ownership
 
-The homepage order remains:
-
-Hero → the three leaks → why the usual fixes slip → what we run → who is behind it → how it works → what you are not risking → founder and optional brand film → FAQs → enquiry → footer.
+The bee-themed homepage order is: hero → approach → specialist bees → Marketing Brain → operating proof → final call to action. The earlier service-focused landing page remains at `/services`.
 
 - Brand, contact destination, navigation, and the primary CTA: `src/data/site.ts`
 - Pillars, modules, prices, problem, failed fixes, mechanism, assurances, and fit: `src/data/offer.ts`
 - Enquiry options, order ranges, process, and FAQs: `src/data/commerce.ts`
-- Page image slots, alt text, and replacement requirements: `src/data/media.ts`
 - Owned brands and approved evidence or media: `src/data/experience.ts`
-- Page composition and hydration: `src/pages/index.astro`
+- Page composition and hydration: `src/pages/index.astro` and `src/pages/services/index.astro`
 - SEO and shared document markup: `src/layouts/Layout.astro`
 - Sections: `src/components/sections/`
 - Colors and responsive styles: `src/styles/globals.css` and `tailwind.config.ts`
 - Evidence requirements: `docs/operating-evidence.md`
 - Conversion rationale and test queue: `docs/conversion-audit.md`
 
-The original palette, fonts, wording, IDs, form fields, analytics attributes, and section order are preserved. Infrastructure remains inside order operations, and the two owned brands remain identified as operating experience rather than independent customers. No outcomes, testimonials, fictional software screenshots, partner claims, or numerical order claims are added.
+The two owned brands remain identified as operating experience rather than independent customers. No outcomes, testimonials, fictional software screenshots, partner claims, or numerical order claims are added.
 
 ## Enquiry and measurement
 

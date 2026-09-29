@@ -156,7 +156,7 @@ For bundles, component demand may be higher than standalone sales suggest. A pro
 
 <section class="blog-cta">
   <h3>Turn sales velocity and lead time into a reorder trigger</h3>
-  <p>Use the <a href="/tools/inventory-planner">MLabs Growth Inventory Reorder Point Calculator</a> to model each SKU's reorder point, safety stock, days to stockout, a 30-day suggested quantity, capital locked, and current status.</p>
+  <p>Use the <a href="/tools/inventory-planner">MlabsGrowth Inventory Reorder Point Calculator</a> to model each SKU's reorder point, safety stock, days to stockout, a 30-day suggested quantity, capital locked, and current status.</p>
   <p>The calculator displays INR and assumes constant daily sales. It does not include seasonality, supplier delays, incoming purchase orders, reservations, minimums, or case packs.</p>
 </section>
 

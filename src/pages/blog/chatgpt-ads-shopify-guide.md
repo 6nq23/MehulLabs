@@ -267,7 +267,7 @@ A 30-day test should move through 4 stages: readiness, connection, controlled la
 
 <section class="blog-cta">
   <h2>Make the store ready before buying the traffic</h2>
-  <p>mlabs Growth can review the product page, catalog path, measurement assumptions, and Shopify conversion journey before a larger campaign rollout.</p>
+  <p>MlabsGrowth can review the product page, catalog path, measurement assumptions, and Shopify conversion journey before a larger campaign rollout.</p>
   <p><a href="/services/store-conversion">Explore Shopify conversion optimization</a> or <a href="/services/ai-automation">review the AI marketing workflow service</a>.</p>
 </section>
 

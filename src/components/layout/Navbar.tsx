@@ -18,7 +18,7 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const lenis = useLenis();
-  const serviceActive = pathname.startsWith('/services/');
+  const serviceActive = pathname === '/services' || pathname.startsWith('/services/');
   const toolsActive = pathname.startsWith('/tools');
   const blogActive = pathname.startsWith('/blog');
   const offersActive = pathname === '/offers';
@@ -81,13 +81,17 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
   return (
     <header className={`site-header${interior ? ' interior-header' : ''}${pastHero ? ' is-compact' : ''}`}>
       <nav className="shell nav-inner" aria-label="Primary">
-        <a href="/" className="wordmark" aria-label="mlabs Growth home">mlabs<span>growth</span><i aria-hidden="true" /></a>
+        <a href="/" className="wordmark" aria-label="MlabsGrowth home">Mlabs<span>Growth</span><i aria-hidden="true" /></a>
         <ul className="desktop-nav">
           <li><a href="/" className={pathname === '/' ? 'active' : undefined} aria-current={pathname === '/' ? 'page' : undefined}>Home</a></li>
           <li className="nav-dropdown" onKeyDown={event => { if (event.key === 'Escape') { setDesktopMenu(null); event.currentTarget.querySelector('button')?.focus(); } }} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setDesktopMenu(null); }}>
-            <button type="button" className={serviceActive ? 'nav-parent active' : 'nav-parent'} aria-expanded={desktopMenu === 'services'} onClick={() => setDesktopMenu(menu => menu === 'services' ? null : 'services')}>Services <Caret /></button>
+            <div className="nav-parent-group">
+              <a href="/services" className={serviceActive ? 'nav-parent active' : 'nav-parent'} aria-current={pathname === '/services' ? 'page' : undefined}>Services</a>
+              <button type="button" className="nav-dropdown-toggle" aria-label="Open Services menu" aria-expanded={desktopMenu === 'services'} onClick={() => setDesktopMenu(menu => menu === 'services' ? null : 'services')}><Caret /></button>
+            </div>
             <div className={`nav-dropdown-panel${desktopMenu === 'services' ? ' is-open' : ''}`}>
               <p>Choose the leak to close first</p>
+              <a href="/services" aria-current={pathname === '/services' ? 'page' : undefined}><span>Services overview</span><small>See the full scope of our work.</small><ArrowIcon /></a>
               {serviceRoutes.map(service => (
                 <a href={`/services/${service.slug}`} aria-current={pathname === `/services/${service.slug}` ? 'page' : undefined} key={service.slug}>
                   <span>{service.navLabel}</span><small>{service.navDescription}</small><ArrowIcon />
@@ -117,12 +121,12 @@ export function Navbar({ pathname = '/' }: NavbarProps) {
       </nav>
 
       <dialog ref={dialogRef} id="mobile-menu" className="mobile-menu" onCancel={closeMenu} onClose={() => setOpen(false)} aria-label="Navigation">
-        <div className="mobile-menu-top"><a href="/" className="wordmark" onClick={closeMenu}>mlabs<span>growth</span><i aria-hidden="true" /></a><button type="button" onClick={closeMenu} className="menu-close" aria-label="Close navigation menu">×</button></div>
+        <div className="mobile-menu-top"><a href="/" className="wordmark" onClick={closeMenu}>Mlabs<span>Growth</span><i aria-hidden="true" /></a><button type="button" onClick={closeMenu} className="menu-close" aria-label="Close navigation menu">×</button></div>
         <nav aria-label="Mobile" className="mobile-primary">
           <a href="/" onClick={closeMenu} aria-current={pathname === '/' ? 'page' : undefined}><span>01</span>Home<ArrowIcon /></a>
           <details open={serviceActive}>
             <summary><span>02</span>Services<Caret /></summary>
-            <div>{serviceRoutes.map(service => <a href={`/services/${service.slug}`} onClick={closeMenu} aria-current={pathname === `/services/${service.slug}` ? 'page' : undefined} key={service.slug}>{service.navLabel}<ArrowIcon /></a>)}</div>
+            <div><a href="/services" onClick={closeMenu} aria-current={pathname === '/services' ? 'page' : undefined}>Services overview<ArrowIcon /></a>{serviceRoutes.map(service => <a href={`/services/${service.slug}`} onClick={closeMenu} aria-current={pathname === `/services/${service.slug}` ? 'page' : undefined} key={service.slug}>{service.navLabel}<ArrowIcon /></a>)}</div>
           </details>
           <details open={toolsActive}>
             <summary><span>03</span>Free tools<Caret /></summary>

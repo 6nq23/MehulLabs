@@ -186,7 +186,7 @@ Also watch for Meta's Creative fatigue and Creative limited signals where they a
 
 <section class="blog-cta">
   <h2>Build a creative system that keeps pace with Andromeda</h2>
-  <p>mlabs Growth sets up AI-assisted briefing, variation, and review workflows so ecommerce teams can ship more genuinely different ads each week, with a human check before anything goes live.</p>
+  <p>MlabsGrowth sets up AI-assisted briefing, variation, and review workflows so ecommerce teams can ship more genuinely different ads each week, with a human check before anything goes live.</p>
   <p><a href="/services/ai-automation">Explore AI marketing workflow automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 
