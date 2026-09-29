@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "7 AI Marketing Workflows Small Ecommerce Teams Can Automate"
 description: "Only 17% of small EU enterprises used AI in 2025. Here are 7 AI marketing workflows a small ecommerce team can automate in 2026, each with a human review gate."
-publishedOn: "2026-09-24"
-updatedOn: "2026-09-24"
+publishedOn: "2026-09-29"
+updatedOn: "2026-09-29"
 category: "AI workflow automation"
 author: "Mehul"
 readTime: "11 min read"
