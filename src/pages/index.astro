@@ -3,14 +3,16 @@ import '@fontsource-variable/manrope/wght.css';
 import { contactEmail, site } from '@/data/site';
 import { pageSeo } from '@/data/seo';
 import { ownedBrands, ownershipDisclosure } from '@/data/experience';
+import { serviceRoutes } from '@/data/services';
 import { ConversionEvents } from '@/components/providers/ConversionEvents';
 import HiveNavbar from '@/components/layout/HiveNavbar.astro';
-import queen from '../../asset/individual-bees/queen-flower-throne-v1.png';
-import marketingBee from '../../asset/individual-bees/01-marketing-brain-no-name.png';
-import shopifyBee from '../../asset/individual-bees/04-shopify-sales-agent-no-name.png';
-import callingBee from '../../asset/individual-bees/05-calling-agent-no-name.png';
+import BeeOrbit from '@/components/bees/BeeOrbit.astro';
+import { beeCharacters, queenBee as queen } from '@/data/bees';
 import humanStrategist from '../../asset/human-creative-strategist.png';
 
+const { image: marketingBee } = beeCharacters.marketing;
+const { image: shopifyBee } = beeCharacters.shopify;
+const { image: callingBee } = beeCharacters.calling;
 const seo = pageSeo['/'];
 const canonicalUrl = site.url ? new URL('/', site.url).href : undefined;
 const socialImageUrl = new URL('/social-preview.png', site.url || Astro.url.origin).href;
@@ -24,29 +26,6 @@ const jsonLd = JSON.stringify({
     { '@type': 'WebPage', '@id': `${canonicalUrl}#webpage`, url: canonicalUrl, name: `${seo.title} — ${site.name}`, description: seo.description, isPartOf: { '@id': websiteId }, publisher: { '@id': organizationId }, inLanguage: 'en' },
   ],
 }).replace(/</g, '\\u003c');
-const specialists = [
-  {
-    title: 'Store Conversion',
-    description: 'Improve the pages and buying decisions between a visit and an order.',
-    image: shopifyBee,
-    href: '/services/store-conversion',
-    color: 'peach',
-  },
-  {
-    title: 'AI & Marketing',
-    description: 'Keep approved brand knowledge ready for the next brief and workflow.',
-    image: marketingBee,
-    href: '/services/ai-automation',
-    color: 'lilac',
-  },
-  {
-    title: 'Order Operations',
-    description: 'Connect order updates, confirmation calls and follow-ups.',
-    image: callingBee,
-    href: '/services/order-operations',
-    color: 'blue',
-  },
-] as const;
 ---
 
 <!doctype html>
@@ -128,18 +107,11 @@ const specialists = [
         </section>
 
         <section id="services" class="services-section" aria-labelledby="services-title">
-          <p class="eyebrow">THREE WAYS TO START</p>
-          <h2 id="services-title">Meet the bees<span class="yellow-period">.</span></h2>
-          <p class="services-intro">A different specialist for each part of the work, connected around your brand.</p>
-          <div class="specialist-grid">
-            {specialists.map((specialist) => (
-              <article class={`specialist-card ${specialist.color}`}>
-                <div class="specialist-visual"><img src={specialist.image.src} width="1254" height="1254" alt="" loading="lazy" /></div>
-                <h3>{specialist.title}</h3>
-                <p>{specialist.description}</p>
-                <a href={specialist.href}>Explore service <span aria-hidden="true">↗</span></a>
-              </article>
-            ))}
+          <p class="eyebrow">ONE QUEEN. ONE CONNECTED TEAM.</p>
+          <h2 id="services-title">Meet your new team<br />of AI bees<span class="yellow-period">.</span></h2>
+          <p class="services-intro">Specialist agents, working together around your brand.</p>
+          <div class="team-orbit">
+            <BeeOrbit />
           </div>
         </section>
 
@@ -147,7 +119,7 @@ const specialists = [
           <h2 id="brain-section-title">How it works.</h2>
           <div class="brain-grid">
             <div class="brain-copy">
-              <h3>One brain.<br />Better ideas.</h3>
+              <h3>Marketing Brain. <br/> For Better Ads.</h3>
               <p>Marketing Brain brings approved brand knowledge, customer questions, and campaign learning into one working context. It shapes content ideas, creative briefs, and ad angles. Your team reviews the output; managed marketing can put approved campaigns into market.</p>
               <a class="brain-link" href="/services/ai-automation">
                 <img src={marketingBee.src} width="1254" height="1254" alt="" loading="lazy" />
@@ -174,7 +146,7 @@ const specialists = [
             </div>
             <div class="proof-stats" aria-label="How we work">
               <div><strong>{ownedBrands.length}</strong><span>owned brands</span></div>
-              <div><strong>{specialists.length}</strong><span>service areas</span></div>
+              <div><strong>{serviceRoutes.length}</strong><span>service areas</span></div>
               <div><strong>30 min</strong><span>free first audit</span></div>
             </div>
             <div class="proof-gallery" aria-label="Illustrations of our people, agents, and workflows">
@@ -262,20 +234,10 @@ const specialists = [
   }
   .eyebrow { margin-bottom: 18px; color: #81745c; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
   .yellow-period { color: var(--yellow); }
-  .services-section { padding: 95px 28px 120px; text-align: center; scroll-margin-top: 90px; }
+  .services-section { padding: 95px 28px 60px; text-align: center; scroll-margin-top: 110px; }
   .services-section h2 { margin-bottom: 13px; font-size: clamp(42px,5.3vw,75px); line-height: 1.04; font-weight: 600; letter-spacing: -.065em; }
-  .services-intro { margin: 0 auto 56px; max-width: 550px; color: var(--muted); font-size: 17px; line-height: 1.6; }
-  .specialist-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: stretch; gap: 18px; max-width: 1280px; margin: auto; text-align: left; }
-  .specialist-card { min-width: 0; padding: 13px 17px 30px; border: 1px solid #ece9e2; border-radius: 25px; background: #fff; box-shadow: 0 19px 40px #5841120a; }
-  .specialist-visual { display: grid; place-items: center; height: clamp(230px,25vw,330px); overflow: hidden; border-radius: 17px; background: radial-gradient(circle at 50% 50%,#ffe2ce 0,transparent 66%),#fffaf5; }
-  .specialist-card.lilac .specialist-visual { background: radial-gradient(circle at 50% 50%,#ead7ff 0,transparent 66%),#fdfaff; }
-  .specialist-card.blue .specialist-visual { background: radial-gradient(circle at 50% 50%,#d9e6ff 0,transparent 66%),#fafcff; }
-  .specialist-visual img { display: block; width: min(95%,315px); height: auto; filter: drop-shadow(0 18px 15px #805c1830); transition: transform .3s; }
-  .specialist-card:hover img { transform: translateY(-5px); }
-  .specialist-card h3 { margin: 25px 8px 8px; font-size: clamp(20px,2vw,29px); letter-spacing: -.045em; }
-  .specialist-card p { min-height: 48px; margin: 0 8px 22px; color: var(--muted); font-size: 14px; line-height: 1.6; }
-  .specialist-card a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin: 0 8px; font-size: 13px; font-weight: 800; }
-  .specialist-card a span { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; background: #f9f5ec; font-size: 15px; font-weight: 500; }
+  .services-intro { margin: 0 auto 44px; max-width: 550px; color: var(--muted); font-size: 17px; line-height: 1.6; }
+  .team-orbit { width: 100%; max-width: 1180px; margin: 0 auto; }
   .brain-section { padding: 60px 28px 100px; background: var(--cream); scroll-margin-top: 90px; }
   .brain-section > h2 { margin: 0 auto 60px; text-align: center; font-size: clamp(36px,4vw,56px); font-weight: 600; letter-spacing: -.07em; }
   .brain-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.08fr); align-items: center; gap: clamp(40px,5vw,80px); max-width: 1200px; margin: auto; }
@@ -369,9 +331,8 @@ const specialists = [
     .offer-card ul { font-size: 15px; }
     .offer-signature { margin-top: 0; font-size: 12px; }
     .approach-note { max-width: 400px; }
-    .specialist-grid { grid-template-columns: 1fr; max-width: 500px; }
-    .specialist-visual { height: 300px; }
-    .specialist-card p { min-height: 0; }
+    .services-section { padding-inline: 22px; }
+    .services-section h2 { font-size: clamp(32px,8.7vw,50px); }
     .proof-inner { padding: 68px 22px 72px; }
     .proof-heading { gap: 20px; }
     .proof-gallery { gap: 9px; }
@@ -393,7 +354,7 @@ const specialists = [
     .bee-satellite-left,.bee-satellite-right { width: 145px; }
     .offer-card { padding: 28px 25px; }
     .offer-card h3 { font-size: 31px; }
-    .services-section { padding: 70px 18px 90px; }
+    .services-section { padding: 70px 18px 45px; }
     .services-intro { font-size: 16px; }
     .proof-heading { flex-direction: column; gap: 8px; padding-bottom: 28px; }
     .proof-stats { gap: 10px; padding: 26px 0; }
@@ -408,7 +369,7 @@ const specialists = [
   }
   @media (prefers-reduced-motion: reduce) {
     :global(html) { scroll-behavior: auto; }
-    .pill-button,.specialist-visual img,.offer-visual { transition: none; }
+    .pill-button,.offer-visual { transition: none; }
     .offer-bee { animation: none; }
     .approach-section { --visual-scale: 1; --visual-lift: 0px; }
     .brain-link-arrow { transition: none; }
