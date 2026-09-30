@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "How to Track ChatGPT and AI Traffic in GA4 (2026)"
 description: "GA4 added a native AI Assistant channel in May 2026. Learn to track ChatGPT, Perplexity, Gemini and Claude traffic in GA4 and Shopify, and tie it to revenue."
-publishedOn: "2026-09-24"
-updatedOn: "2026-09-24"
+publishedOn: "2026-09-30"
+updatedOn: "2026-09-30"
 category: "AI search & analytics"
 author: "Mehul"
 readTime: "11 min read"
