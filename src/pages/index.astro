@@ -1,11 +1,13 @@
 ---
 import '@fontsource-variable/manrope/wght.css';
 import { contactEmail, site } from '@/data/site';
+import { faqs } from '@/data/commerce';
 import { pageSeo } from '@/data/seo';
 import { ownedBrands, ownershipDisclosure } from '@/data/experience';
 import { serviceRoutes } from '@/data/services';
 import { ConversionEvents } from '@/components/providers/ConversionEvents';
 import HiveNavbar from '@/components/layout/HiveNavbar.astro';
+import { Footer } from '@/components/layout/Footer';
 import BeeOrbit from '@/components/bees/BeeOrbit.astro';
 import { beeCharacters, queenBee as queen } from '@/data/bees';
 import humanStrategist from '../../asset/human-creative-strategist.png';
@@ -13,6 +15,7 @@ import humanStrategist from '../../asset/human-creative-strategist.png';
 const { image: marketingBee } = beeCharacters.marketing;
 const { image: shopifyBee } = beeCharacters.shopify;
 const { image: callingBee } = beeCharacters.calling;
+const { image: brandBee } = beeCharacters.brand;
 const seo = pageSeo['/'];
 const canonicalUrl = site.url ? new URL('/', site.url).href : undefined;
 const socialImageUrl = new URL('/social-preview.png', site.url || Astro.url.origin).href;
@@ -117,9 +120,66 @@ const jsonLd = JSON.stringify({
 
         <section id="how-it-works" class="brain-section" aria-labelledby="brain-section-title">
           <h2 id="brain-section-title">How it works.</h2>
+          <div id="queen-brand-brain" class="brain-grid queen-grid">
+            <div class="brain-copy store-copy queen-copy">
+              <p class="store-eyebrow">THE QUEEN BEE</p>
+              <h3>Your brand's<br />second brain.</h3>
+              <p>Your approved products, customer insights, voice, and past decisions stay in one place. The Queen Bee shares the right context with every specialist.</p>
+              <ul class="store-steps" aria-label="How the Queen Bee helps the hive">
+                <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2" /><path d="M9 9h6M9 13h6M9 17h4" /></svg></span><span>Keep approved brand knowledge together</span></li>
+                <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" /><circle cx="5" cy="18" r="2" /><circle cx="19" cy="18" r="2" /><path d="M11 7 6 16m7-9 5 9" /></svg></span><span>Guide every specialist with the right context</span></li>
+                <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /><circle cx="12" cy="12" r="9" /></svg></span><span>Keep final approval with your team</span></li>
+              </ul>
+              <a class="brain-link" href="/services/ai-automation">
+                <img src={brandBee.src} width="1254" height="1254" alt="" loading="lazy" />
+                <span>Explore Brand Brain</span>
+                <span class="brain-link-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="brain-video-shell">
+              <div class="brain-video-stage">
+                <video data-showcase-video autoplay muted loop playsinline preload="metadata" poster="/video/queen-brand-brain-poster.png" aria-label="Queen Bee animation: approved brand knowledge guides specialist agents while the team reviews their work">
+                  <source src="/video/queen-brand-brain.mp4" type="video/mp4" />
+                  Your browser does not support this video.
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="shopify-growth" class="brain-section store-section" aria-labelledby="shopify-growth-title">
           <div class="brain-grid">
-            <div class="brain-copy">
-              <h3>Marketing Brain. <br/> For Better Ads.</h3>
+            <div class="brain-copy store-copy">
+              <p class="store-eyebrow">SHOPIFY STORE GROWTH</p>
+              <h3 id="shopify-growth-title">Turn visits<br />into orders.</h3>
+              <p>We improve the steps between browsing and buying, then measure conversion, order value, and margin.</p>
+              <ul class="store-steps" aria-label="Where we improve the store">
+                <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5" /><path d="m15 15 5 5" /></svg></span><span>Help shoppers find the right product</span></li>
+                <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" /><path d="M9 8h6M9 12h6M9 16h4" /></svg></span><span>Answer product questions before checkout</span></li>
+                <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h2l2 11h12l2-8H6M9 20h.01M17 20h.01" /></svg></span><span>Suggest relevant cart additions</span></li>
+              </ul>
+              <a class="brain-link" href="/services/store-conversion">
+                <img src={shopifyBee.src} width="1254" height="1254" alt="" loading="lazy" />
+                <span>Explore store conversion</span>
+                <span class="brain-link-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="brain-video-shell">
+              <div class="brain-video-stage">
+                <video data-showcase-video autoplay muted loop playsinline preload="metadata" poster="/video/shopify-growth-poster.png" aria-label="Shopify store growth animation: shoppers discover products, then product details and relevant cart additions are improved">
+                  <source src="/video/shopify-growth.mp4" type="video/mp4" />
+                  Your browser does not support this video.
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="marketing-brain" class="brain-section">
+          <div class="brain-grid">
+            <div class="brain-copy store-copy">
+              <p class="store-eyebrow">MARKETING BRAIN</p>
+              <h3>Marketing Brain.<br/>For Better Ads.</h3>
               <p>Marketing Brain brings approved brand knowledge, customer questions, and campaign learning into one working context. It shapes content ideas, creative briefs, and ad angles. Your team reviews the output; managed marketing can put approved campaigns into market.</p>
               <a class="brain-link" href="/services/ai-automation">
                 <img src={marketingBee.src} width="1254" height="1254" alt="" loading="lazy" />
@@ -129,7 +189,7 @@ const jsonLd = JSON.stringify({
             </div>
             <div class="brain-video-shell">
               <div class="brain-video-stage">
-                <video data-brain-video autoplay muted loop playsinline preload="metadata" poster="/video/marketing-brain-flow-poster.png" aria-label="Marketing Brain animation: approved brand and campaign context becomes creative ideas for human review">
+                <video data-showcase-video autoplay muted loop playsinline preload="metadata" poster="/video/marketing-brain-flow-poster.png" aria-label="Marketing Brain animation: approved brand and campaign context becomes creative ideas for human review">
                   <source src="/video/marketing-brain-flow.mp4" type="video/mp4" />
                   Your browser does not support this video.
                 </video>
@@ -170,11 +230,23 @@ const jsonLd = JSON.stringify({
             <p>Bring one problem. We’ll agree on the scope before paid work begins.</p>
           </div>
         </section>
+
+         <section id="faq" class="home-faq" aria-labelledby="faq-title">
+          <div class="faq-inner">
+            <h2 id="faq-title">FAQ<span>.</span></h2>
+            <div class="faq-list">
+              {faqs.map(faq => (
+                <details class="faq-item" name="home-faq">
+                  <summary><span>{faq.question}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary>
+                  <div class="faq-answer"><p>{faq.answer}</p></div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </main>
-      <footer class="preview-footer">
-        <span>© {new Date().getFullYear()} {site.name}</span>
-        <nav aria-label="Footer"><a href="/services">Services</a><a href="/products">Products</a><a href="/about">About</a></nav>
-      </footer>
+      <Footer ctaLocation="home-footer" />
     </div>
   </body>
 </html>
@@ -250,6 +322,21 @@ const jsonLd = JSON.stringify({
   .brain-video-shell { min-width: 0; padding: clamp(18px,2.2vw,32px); border-radius: 30px; background: #fff; box-shadow: 0 25px 60px #5a4f3710; }
   .brain-video-stage { position: relative; overflow: hidden; aspect-ratio: 728/624; border-radius: 24px; background: #f7f7f6; }
   .brain-video-stage video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .queen-grid .brain-video-shell { padding: clamp(12px,1.5vw,20px); border: 1px solid #ebe7de; box-shadow: 0 28px 70px #5a4f3717; }
+  .queen-copy h3 { font-size: clamp(46px,4.8vw,70px); }
+  .store-section { padding-top: 40px; padding-bottom: 100px; }
+  .store-section .brain-grid { grid-template-columns: minmax(0,1.08fr) minmax(0,1fr); }
+  .store-section .brain-copy { order: 2; }
+  .store-section .brain-video-shell { order: 1; padding: clamp(12px,1.5vw,20px); border: 1px solid #ebe7de; box-shadow: 0 28px 70px #5a4f3717; }
+  .store-copy .store-eyebrow { margin-bottom: 16px; color: #8b7753; font-size: 11px; font-weight: 800; letter-spacing: .15em; }
+  .store-copy > p:not(.store-eyebrow) { max-width: 500px; margin-bottom: 24px; }
+  .store-steps { display: grid; gap: 0; max-width: 590px; margin: 8px 0 0; padding: 0; list-style: none; border-top: 1px solid #dbd9d3; }
+  .store-steps li { display: flex; align-items: center; gap: 17px; min-height: 62px; padding: 9px 0; border-bottom: 1px solid #e7e4de; font-size: clamp(14px,1.15vw,17px); font-weight: 680; letter-spacing: -.025em; }
+  .store-step-icon { display: grid; place-items: center; width: 39px; height: 39px; flex: 0 0 auto; border-radius: 50%; background: #ffdf85; color: #4c3c1a; }
+  .store-steps li:nth-child(2) .store-step-icon { background: #dce6f2; color: #344b67; }
+  .store-steps li:nth-child(3) .store-step-icon { background: #e5dff4; color: #55477b; }
+  .store-step-icon svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+  .store-copy .brain-link { margin-top: 14px; }
   .proof-section { background: radial-gradient(ellipse at 50% 0%,#292929 0%,#1b1b1b 58%,#191919 100%); color: #f8f8f7; }
   .proof-inner { max-width: 1280px; margin: auto; padding: 78px 28px 86px; }
   .proof-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 42px; border-bottom: 1px solid #ffffff25; }
@@ -278,6 +365,18 @@ const jsonLd = JSON.stringify({
   .proof-brands h3 { max-width: 330px; margin: 0; font-size: clamp(20px,2.3vw,30px); font-weight: 600; line-height: 1.18; letter-spacing: -.05em; }
   .proof-brand-list { display: flex; justify-content: flex-end; align-items: center; gap: clamp(24px,4vw,70px); color: #c7c7c3; font-size: clamp(16px,1.7vw,24px); font-weight: 750; letter-spacing: -.04em; }
   .proof-disclosure { margin: 24px 0 0; color: #999995; font-size: 11px; line-height: 1.5; }
+  .home-faq { padding: clamp(50px,5vw,80px) 28px clamp(60px,5vw,90px); border-top: 1px solid #e8e5de; background: var(--cream); }
+  .faq-inner { display: grid; grid-template-columns: minmax(240px,.42fr) minmax(0,1fr); gap: clamp(40px,4vw,80px); max-width: 1280px; margin: auto; }
+  .faq-inner h2 { align-self: start; position: sticky; top: 115px; margin: -10px 0 0; font-size: clamp(36px,4vw,56px); font-weight: 700; line-height: 1.05; letter-spacing: -.085em; }
+  .faq-inner h2 span { color: var(--yellow); }
+  .faq-list { border-top: 1px solid #dedbd5; }
+  .faq-item { border-bottom: 1px solid #dedbd5; }
+  .faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 64px; padding: 15px 0; list-style: none; cursor: pointer; font-size: clamp(15px,1.1vw,18px); font-weight: 650; line-height: 1.4; letter-spacing: -.035em; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary svg { flex: 0 0 auto; width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s ease; }
+  .faq-item[open] summary svg { transform: rotate(180deg); }
+  .faq-answer { max-width: 780px; padding: 0 40px 20px 0; }
+  .faq-answer p { margin: 0; color: #5c5e65; font-size: 15px; line-height: 1.75; }
   .closing-cta { min-height: 480px; padding: 17px 24px 90px; background: var(--cream); text-align: center; }
   .closing-lines { display: grid; justify-items: center; gap: 11px; width: 100%; }
   .closing-lines span { display: block; height: 13px; border-radius: 99px; background: #171719; }
@@ -288,9 +387,6 @@ const jsonLd = JSON.stringify({
   .closing-copy h2 { margin: 0 auto 30px; font-family: 'Quicksand Hero','Manrope Variable',sans-serif; font-size: clamp(38px,4.3vw,65px); font-weight: 500; line-height: 1.1; letter-spacing: -.06em; }
   .closing-copy .pill-button { margin: auto; }
   .closing-copy p { margin: 18px auto 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
-  .preview-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 16px max(28px,calc((100vw - 1280px)/2)); border-top: 1px solid #eae7e0; background: #fff; color: #777983; font-size: 12px; }
-  .preview-footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
-  .preview-footer a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-weight: 700; }
   @keyframes queen-float { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-9px) rotate(1deg); } }
   @keyframes satellite-left-float { 0%,100% { transform: translateY(0) rotate(-10deg); } 50% { transform: translateY(-7px) rotate(-6deg); } }
   @keyframes satellite-right-float { 0%,100% { transform: translateY(0) rotate(10deg); } 50% { transform: translateY(-10px) rotate(6deg); } }
@@ -299,6 +395,9 @@ const jsonLd = JSON.stringify({
     .brain-section > h2 { margin-bottom: 65px; }
     .brain-grid { gap: 34px; }
     .brain-copy h3 { font-size: clamp(50px,6vw,70px); }
+    .queen-grid { gap: 30px; }
+    .queen-copy h3 { font-size: clamp(46px,5vw,62px); }
+    .store-section .brain-grid { gap: 30px; }
     .brain-copy > p { font-size: 16px; }
     .offer-grid { max-width: 800px; gap: 22px; }
     .offer-visual { height: 325px; }
@@ -307,15 +406,22 @@ const jsonLd = JSON.stringify({
     .bee-satellite-left,.bee-satellite-right { width: 150px; }
     .offer-card { padding: 28px; }
     .offer-signature { font-size: 11px; padding-inline: 9px; }
+    .faq-inner { grid-template-columns: minmax(180px,.32fr) minmax(0,1fr); gap: 45px; }
   }
   @media (max-width: 700px) {
     .brain-section { padding: 68px 18px 90px; }
     .brain-section > h2 { margin-bottom: 50px; }
     .brain-grid { grid-template-columns: 1fr; gap: 36px; max-width: 540px; }
     .brain-copy h3 { font-size: clamp(54px,12vw,76px); }
+    .queen-grid { grid-template-columns: 1fr; gap: 30px; padding-bottom: 70px; margin-bottom: 70px; }
+    .queen-copy h3 { font-size: clamp(46px,11vw,60px); }
+    .store-section .brain-grid { grid-template-columns: 1fr; gap: 30px; }
+    .store-section .brain-copy { order: 1; }
+    .store-section .brain-video-shell { order: 2; }
     .brain-copy > p { font-size: 17px; }
     .brain-video-shell { padding: 16px; border-radius: 24px; }
     .brain-video-stage { border-radius: 18px; }
+    .store-section { padding-top: 18px; padding-bottom: 84px; }
     .hero { padding: 150px 22px 0; }
     h1 { font-size: clamp(34px,9vw,52px); margin-bottom: 24px; }
     .hero-subtitle { max-width: 520px; font-size: 17px; }
@@ -341,7 +447,10 @@ const jsonLd = JSON.stringify({
     .proof-brand-list { justify-content: flex-start; flex-wrap: wrap; }
     .closing-cta { min-height: 410px; }
     .closing-copy { margin-top: 100px; }
-    .preview-footer { flex-direction: column; align-items: flex-start; gap: 5px; }
+    .home-faq { padding: 45px 22px 60px; }
+    .faq-inner { grid-template-columns: 1fr; gap: 28px; }
+    .faq-inner h2 { position: static; margin: 0; font-size: 40px; }
+    .faq-item summary { min-height: 56px; }
   }
   @media (max-width: 400px) {
     .hero { padding-inline: 16px; padding-top: 135px; }
@@ -366,10 +475,12 @@ const jsonLd = JSON.stringify({
     .proof-brand-list { gap: 12px; font-size: 16px; }
     .closing-cta { padding-inline: 16px; }
     .closing-copy h2 { font-size: 35px; }
+    .faq-item summary { font-size: 16px; }
+    .faq-answer { padding-right: 14px; }
   }
   @media (prefers-reduced-motion: reduce) {
     :global(html) { scroll-behavior: auto; }
-    .pill-button,.offer-visual { transition: none; }
+    .pill-button,.offer-visual,.faq-item summary svg { transition: none; }
     .offer-bee { animation: none; }
     .approach-section { --visual-scale: 1; --visual-lift: 0px; }
     .brain-link-arrow { transition: none; }
@@ -402,8 +513,18 @@ const jsonLd = JSON.stringify({
 </script>
 
 <script>
-  const brainVideo = document.querySelector<HTMLVideoElement>('[data-brain-video]');
-  if (brainVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    brainVideo.pause();
-  }
+  const showcaseVideos = document.querySelectorAll<HTMLVideoElement>('[data-showcase-video]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const videoObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      const video = entry.target as HTMLVideoElement;
+      if (reducedMotion.matches || !entry.isIntersecting) video.pause();
+      else video.play().catch(() => {});
+    }
+  }, { threshold: 0.1 });
+  showcaseVideos.forEach(video => videoObserver.observe(video));
+  reducedMotion.addEventListener('change', () => showcaseVideos.forEach(video => {
+    if (reducedMotion.matches) video.pause();
+    else if (video.getBoundingClientRect().top < innerHeight && video.getBoundingClientRect().bottom > 0) video.play().catch(() => {});
+  }));
 </script>
