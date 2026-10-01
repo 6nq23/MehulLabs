@@ -438,30 +438,36 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .offer-fineprint { margin-top: 1rem; font-size: .72rem; line-height: 1.55; color: #6b7468; }
 
 /* ── Timed lead capture ─────────────────────────────────────────────────── */
-.lead-popup { width: min(42rem, calc(100vw - 2rem)); max-width: none; max-height: calc(100dvh - 2rem); margin: auto; padding: clamp(1.5rem, 4vw, 3rem); overflow-y: auto; color: #202720; background: var(--canvas); border: 1px solid #cbd3c3; border-radius: 8px; box-shadow: 0 30px 100px rgba(8,12,9,.35); }
-.lead-popup::backdrop { background: rgba(8,12,9,.7); backdrop-filter: blur(5px); }
-.lead-popup-close { position: absolute; top: 1rem; right: 1rem; display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid var(--line); border-radius: 50%; font-size: 1.6rem; line-height: 1; color: #586056; }
-.lead-popup-kicker { display: inline-flex; align-items: center; gap: .6rem; padding-right: 3rem; font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #626b5c; }
-.lead-popup-kicker span { width: 6px; height: 6px; border-radius: 50%; background: #6f896a; }
-.lead-popup h2 { max-width: 13ch; margin-top: 2rem; font-size: clamp(2.25rem, 6vw, 4.5rem); font-weight: 600; line-height: 1.04; letter-spacing: -.065em; }
-.lead-popup h2 span { color: #61765d; font-weight: 400; }
-.lead-popup > p:nth-of-type(2) { max-width: 31rem; margin-top: 1.25rem; font-size: 1rem; line-height: 1.7; color: #586056; }
-.lead-popup-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin-top: 2rem; }
-.lead-popup-actions a { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; min-height: 8.5rem; padding: 1.25rem; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); transition: transform .25s, border-color .25s, background .25s; }
-.lead-popup-actions a:first-child { color: #fff; background: #496546; border-color: #496546; }
-.lead-popup-actions a:hover { transform: translateY(-3px); border-color: #9ead96; }
-.lead-popup-actions a span { display: flex; min-width: 0; flex-direction: column; gap: .55rem; }
-.lead-popup-actions strong { font-family: var(--font-display); font-size: 1.05rem; line-height: 1.35; }
-.lead-popup-actions small { font-size: .72rem; line-height: 1.45; color: #626b5c; }
-.lead-popup-actions a:first-child small { color: rgba(255,255,255,.7); }
-.lead-popup-note { margin-top: 1.25rem; font-size: .75rem; color: #717a6e; text-align: center; }
+.lead-popup { width: min(42rem, calc(100vw - 2rem)); max-width: none; max-height: calc(100dvh - 2rem); margin: auto; padding: clamp(2rem, 4vw, 3.5rem); overflow-y: auto; color: #111116; background: #fff; border: 1px solid #ffffffb3; border-radius: 23px; box-shadow: 0 10px 28px #4b3c1805; font-family: 'Manrope Variable', Manrope, Arial, sans-serif; }
+.lead-popup::backdrop { background: rgba(17, 17, 22, 0.4); backdrop-filter: blur(5px); }
+.lead-popup-close { position: absolute; top: 1.25rem; right: 1.25rem; display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid #ebebe6; border-radius: 50%; font-size: 1.6rem; line-height: 1; color: #707178; background: #fff; cursor: pointer; transition: background 0.2s, color 0.2s; }
+.lead-popup-close:hover { background: #ebebe6; color: #111116; }
+.lead-popup-kicker { display: inline-flex; align-items: center; gap: .6rem; padding-right: 3rem; font-size: 11px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; color: #81745c; }
+.lead-popup-kicker span { width: 8px; height: 8px; border-radius: 50%; background: #e4b61d; box-shadow: 0 0 0 4px #f3e9c2; margin-left: 4px; }
+.lead-popup h2 { max-width: 15ch; margin-top: 1.5rem; font-family: 'Quicksand Hero', 'Manrope Variable', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 500; line-height: 1.05; letter-spacing: -.065em; }
+.lead-popup h2 span { color: #707178; font-family: 'Manrope Variable', Manrope, sans-serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3rem); }
+.lead-popup > p:nth-of-type(2) { max-width: 31rem; margin-top: 1rem; font-size: 1.05rem; line-height: 1.6; color: #707178; }
+.lead-popup-actions { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+.lead-popup-actions a { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; min-height: 5.5rem; padding: 1rem 1rem 1rem 1.5rem; border: 1px solid #ffffffb3; border-radius: 999px; background: #fff; transition: transform .25s, box-shadow .25s; text-decoration: none; color: #111116; }
+.lead-popup-actions a:first-child { background: #ffcc1e; border: none; box-shadow: 0 8px 18px #825f0026, inset 0 -2px 3px #7f5c0024; }
+.lead-popup-actions a:first-child:hover { transform: translateY(-2px); box-shadow: 0 12px 25px #825f0033, inset 0 -2px 3px #7f5c0024; }
+.lead-popup-actions a:last-child { box-shadow: 0 4px 12px #00000008; border-color: #ebebe6; }
+.lead-popup-actions a:last-child:hover { transform: translateY(-2px); box-shadow: 0 8px 20px #00000012; border-color: #dcdcd6; }
+.lead-popup-actions a span { display: flex; min-width: 0; flex-direction: column; gap: .2rem; }
+.lead-popup-actions strong { font-size: 1rem; font-weight: 800; }
+.lead-popup-actions small { font-size: .8rem; line-height: 1.4; color: #707178; font-weight: 500; }
+.lead-popup-actions a:first-child small { color: #695100; }
+.lead-popup-arrow { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 auto; border: 1px solid #fff; border-radius: 50%; background: #ffffff61; box-shadow: 0 1px 5px #533a001f; }
+.lead-popup-arrow svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.lead-popup-actions a:last-child .lead-popup-arrow { border-color: #ebebe6; background: #f9f9f9; box-shadow: 0 2px 4px #00000005; }
+.lead-popup-note { margin-top: 1.5rem; font-size: .8rem; color: #999995; text-align: center; }
 
 @media (max-width: 700px) {
-  .offers-hero-bottom, .offer-choice-grid, .lead-popup-actions { grid-template-columns: 1fr; }
+  .offers-hero-bottom, .offer-choice-grid { grid-template-columns: 1fr; }
   .offers-hero-inner { min-height: auto; }
   .offers-hero h1 { font-size: clamp(2.8rem, 14vw, 4.75rem); }
   .offer-card { min-height: 32rem; }
-  .lead-popup-actions a { min-height: 6.5rem; }
+  .lead-popup-actions a { border-radius: 24px; padding: 1.25rem; }
 }
 
 /* ── Focused service pages ───────────────────────────────────────────────── */
