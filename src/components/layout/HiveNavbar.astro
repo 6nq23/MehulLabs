@@ -144,13 +144,13 @@ import { site } from '@/data/site';
 </script>
 
 <style>
-  .hive-header { --hive-scroll: 0; position: fixed; z-index: 50; inset: 0 0 auto; padding: 24px clamp(20px,4vw,40px) 0; color: #111116; pointer-events: none; }
+  .hive-header { --hive-scroll: 0; position: fixed; z-index: 50; inset: 0 0 auto; padding: 24px clamp(20px,4vw,40px) 0; color: #131313; pointer-events: none; }
   .hive-nav { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: var(--hive-nav-width, 100%); max-width: 1600px; min-height: 72px; margin-inline: auto; padding: 6px 8px 6px calc(6px + var(--hive-scroll) * 28px); border: 1px solid rgba(255, 255, 255, calc(.2 + var(--hive-scroll) * .8)); border-radius: 999px; background: rgba(255, 255, 255, calc(.3 + var(--hive-scroll) * .67)); box-shadow: 0 10px 40px rgba(0,0,0,calc(var(--hive-scroll) * .06)); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); pointer-events: auto; transition: width .4s cubic-bezier(.22,1,.36,1), box-shadow .3s, background .3s; }
   a { color: inherit; text-decoration: none; }
   a:focus-visible,summary:focus-visible { outline: 2px solid #996400; outline-offset: 4px; }
   .hive-wordmark { display: inline-flex; align-items: center; flex: 0 0 auto; min-height: 44px; font-family: var(--font-display), sans-serif; font-size: 27px; font-weight: 850; line-height: 1; letter-spacing: -.095em; }
   .hive-wordmark span { color: #ffcb16; }
-  .hive-nav-links { display: flex; align-items: center; justify-content: center; gap: clamp(16px,2.2vw,34px); font-size: 15.5px; font-weight: 600; color: #111116; }
+  .hive-nav-links { display: flex; align-items: center; justify-content: center; gap: clamp(16px,2.2vw,34px); font-size: 15.5px; font-weight: 600; color: #131313; }
   .hive-nav-links > a,.hive-services-entry > a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; transition: opacity .2s; }
   .hive-nav-links > a:hover,.hive-services-entry > a:hover { opacity: .6; }
   .hive-services-entry { position: relative; display: flex; align-items: center; }
@@ -182,7 +182,7 @@ import { site } from '@/data/site';
     .hive-nav-links,.hive-nav > .hive-nav-cta { display: none; }
     .hive-mobile-menu { display: block; }
     .hive-mobile-menu > summary { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 50px; height: 50px; border-radius: 50%; background: #ffcc1e; cursor: pointer; list-style: none; }
-    .hive-mobile-menu > summary span { display: block; width: 18px; height: 1.5px; background: #141416; transition: transform .2s; }
+    .hive-mobile-menu > summary span { display: block; width: 18px; height: 1.5px; background: #151515; transition: transform .2s; }
     .hive-mobile-menu[open] > summary span:first-child { transform: translateY(3.75px) rotate(45deg); }
     .hive-mobile-menu[open] > summary span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
     .hive-mobile-panel { position: absolute; top: calc(100% + 12px); left: 0; right: 0; display: grid; padding: 15px; max-height: calc(100svh - 124px); overflow-y: auto; border: 1px solid #ede9e1; border-radius: 25px; background: #fffefb; box-shadow: 0 15px 45px #493b1b16; }
