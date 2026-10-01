@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Break-even order loss for four return fee scenarios</title>
+  <desc id="d">Bar chart of how many fewer orders a return fee can cost before paid returns earn less than free returns. Fee $7 with no change in return rate tolerates 7 percent, fee $5 with returns falling to 23 percent tolerates 10 percent, fee $7 with returns at 21 percent tolerates 15 percent, and fee $10 with returns at 20 percent tolerates 19 percent. Illustrative assumptions.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1a1d18; }
+      .title { font-size: 52px; font-weight: 700; letter-spacing: -1px; }
+      .sub { font-size: 25px; fill: #5a6354; }
+      .rowlabel { font-size: 27px; font-weight: 600; }
+      .rowsub { font-size: 21px; fill: #5a6354; }
+      .val { font-size: 34px; font-weight: 700; }
+      .axis { font-size: 20px; fill: #5a6354; }
+      .note { font-size: 21px; fill: #3a4136; }
+      .tag { font-size: 18px; font-weight: 700; letter-spacing: 2px; fill: #496546; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <rect x="48" y="48" width="1504" height="804" rx="32" fill="#fafaf6" stroke="#d8ddd1" stroke-width="2"/>
+
+  <text class="tag" x="96" y="116">ILLUSTRATIVE BREAK-EVEN</text>
+  <text class="title" x="96" y="176">How many orders can a return fee cost you?</text>
+  <text class="sub" x="96" y="218">Maximum fall in order volume before paid returns earn less than free returns, per 100 orders.</text>
+
+  <!-- grid lines: 0..20% ; x0 = 640, 34px per 1% -->
+  <g stroke="#d8ddd1" stroke-width="2">
+    <line x1="640" y1="262" x2="640" y2="640"/>
+    <line x1="810" y1="262" x2="810" y2="640" stroke-dasharray="6 8"/>
+    <line x1="980" y1="262" x2="980" y2="640" stroke-dasharray="6 8"/>
+    <line x1="1150" y1="262" x2="1150" y2="640" stroke-dasharray="6 8"/>
+    <line x1="1320" y1="262" x2="1320" y2="640" stroke-dasharray="6 8"/>
+  </g>
+  <g class="axis">
+    <text class="axis" x="640" y="672" text-anchor="middle">0%</text>
+    <text class="axis" x="810" y="672" text-anchor="middle">5%</text>
+    <text class="axis" x="980" y="672" text-anchor="middle">10%</text>
+    <text class="axis" x="1150" y="672" text-anchor="middle">15%</text>
+    <text class="axis" x="1320" y="672" text-anchor="middle">20%</text>
+  </g>
+
+  <!-- row 1: 7% -> 238px -->
+  <text class="rowlabel" x="96" y="316">Fee $7, returns stay at 25%</text>
+  <text class="rowsub" x="96" y="346">$25.00 contribution per order</text>
+  <rect x="640" y="292" width="238" height="56" rx="10" fill="#a9c6a3"/>
+  <text class="val" x="896" y="334">7%</text>
+
+  <!-- row 2: 9.7% -> 330px -->
+  <text class="rowlabel" x="96" y="426">Fee $5, returns fall to 23%</text>
+  <text class="rowsub" x="96" y="456">$25.74 contribution per order</text>
+  <rect x="640" y="402" width="330" height="56" rx="10" fill="#a9c6a3"/>
+  <text class="val" x="988" y="444">10%</text>
+
+  <!-- row 3: 15.2% -> 517px -->
+  <text class="rowlabel" x="96" y="536">Fee $7, returns fall to 21%</text>
+  <text class="rowsub" x="96" y="566">$27.40 contribution per order</text>
+  <rect x="640" y="512" width="517" height="56" rx="10" fill="#496546"/>
+  <text class="val" x="1175" y="554">15%</text>
+
+  <!-- row 4: 18.7% -> 636px -->
+  <text class="rowlabel" x="96" y="646">Fee $10, returns fall to 20%</text>
+  <text class="rowsub" x="96" y="676">$28.60 contribution per order</text>
+  <rect x="640" y="622" width="636" height="56" rx="10" fill="#496546"/>
+  <text class="val" x="1294" y="664">19%</text>
+
+  <!-- assumptions -->
+  <rect x="96" y="716" width="1408" height="104" rx="20" fill="#eeefe7"/>
+  <text class="note" x="124" y="756">Free-returns baseline: $23.25 per order ($80 order, $40 contribution before returns, 25% return rate, about $27 lost per return).</text>
+  <text class="note" x="124" y="792">All figures are illustrative and use no store data. Replace them with your own unit economics.</text>
+</svg>

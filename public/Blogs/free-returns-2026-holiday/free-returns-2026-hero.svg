@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Free returns in 2026 concept illustration</title>
+  <desc id="d">A return policy decision with three options, free, paid and tiered, weighed against contribution margin per order.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .eyebrow { font-size: 22px; font-weight: 700; letter-spacing: 4px; fill: #496546; }
+      .h1 { font-size: 84px; font-weight: 700; fill: #1a1d18; letter-spacing: -2px; }
+      .h1g { font-size: 84px; font-weight: 700; fill: #496546; letter-spacing: -2px; }
+      .sub { font-size: 30px; fill: #3a4136; }
+      .chip { font-size: 24px; font-weight: 600; fill: #1a1d18; }
+      .card-title { font-size: 34px; font-weight: 700; fill: #1a1d18; }
+      .label { font-size: 26px; font-weight: 600; fill: #1a1d18; }
+      .small { font-size: 21px; fill: #5a6354; }
+      .num { font-size: 40px; font-weight: 700; fill: #1a1d18; }
+      .badge { font-size: 19px; font-weight: 700; fill: #496546; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="120" cy="-40" r="260" fill="#eeefe7"/>
+  <circle cx="1520" cy="-20" r="300" fill="#eeefe7"/>
+  <circle cx="1560" cy="900" r="340" fill="#a9c6a3" opacity="0.55"/>
+  <circle cx="60" cy="940" r="260" fill="#496546" opacity="0.18"/>
+
+  <!-- left copy -->
+  <line x1="72" y1="196" x2="104" y2="196" stroke="#496546" stroke-width="3"/>
+  <text class="eyebrow" x="118" y="204">HOLIDAY RETURNS POLICY</text>
+  <text class="h1" x="72" y="320">Free returns:</text>
+  <text class="h1g" x="72" y="416">keep, charge</text>
+  <text class="h1g" x="72" y="512">or tier?</text>
+  <text class="sub" x="72" y="586">Decide with contribution margin,</text>
+  <text class="sub" x="72" y="628">not with what competitors do.</text>
+
+  <g transform="translate(72 680)">
+    <rect width="170" height="54" rx="27" fill="#ffffff" stroke="#d8ddd1" stroke-width="2"/>
+    <circle cx="34" cy="27" r="11" fill="#496546"/>
+    <text class="chip" x="56" y="35">Shopify</text>
+  </g>
+  <g transform="translate(262 680)">
+    <rect width="220" height="54" rx="27" fill="#ffffff" stroke="#d8ddd1" stroke-width="2"/>
+    <circle cx="34" cy="27" r="11" fill="#a9c6a3"/>
+    <text class="chip" x="56" y="35">Return rules</text>
+  </g>
+
+  <!-- right card -->
+  <g>
+    <rect x="820" y="170" width="708" height="560" rx="36" fill="#fafaf6" stroke="#d8ddd1" stroke-width="2"/>
+    <text class="card-title" x="860" y="234">Return policy options</text>
+    <rect x="1340" y="200" width="150" height="44" rx="22" fill="#eeefe7" stroke="#d8ddd1"/>
+    <text class="badge" x="1415" y="229" text-anchor="middle">CONCEPT</text>
+
+    <!-- option 1 -->
+    <rect x="860" y="272" width="628" height="110" rx="20" fill="#eeefe7"/>
+    <circle cx="912" cy="327" r="26" fill="#496546"/>
+    <path d="M900 328 l9 9 l17 -19" fill="none" stroke="#f7f7f2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="label" x="960" y="320">Free returns</text>
+    <text class="small" x="960" y="356">Lifts conversion, raises return cost</text>
+    <text class="num" x="1460" y="342" text-anchor="end">$0</text>
+
+    <!-- option 2 -->
+    <rect x="860" y="402" width="628" height="110" rx="20" fill="#eeefe7"/>
+    <circle cx="912" cy="457" r="26" fill="#a9c6a3"/>
+    <text x="912" y="468" text-anchor="middle" font-size="32" font-weight="700" fill="#1a1d18" font-family="Inter, Arial, sans-serif">$</text>
+    <text class="label" x="960" y="450">Paid returns</text>
+    <text class="small" x="960" y="486">Recovers cost, risks lost orders</text>
+    <text class="num" x="1460" y="472" text-anchor="end">Fee</text>
+
+    <!-- option 3 -->
+    <rect x="860" y="532" width="628" height="110" rx="20" fill="#eeefe7"/>
+    <circle cx="912" cy="587" r="26" fill="#496546"/>
+    <path d="M898 580 h20 m-8 -8 l8 8 l-8 8 M926 594 h-20 m8 -8 l-8 8 l8 8" fill="none" stroke="#f7f7f2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="label" x="960" y="580">Tiered or exchange-first</text>
+    <text class="small" x="960" y="616">Free for some, fee for the rest</text>
+    <text class="num" x="1460" y="602" text-anchor="end">Mix</text>
+
+    <text class="small" x="860" y="690">Test the choice against contribution per order.</text>
+  </g>
+  <text class="small" x="72" y="840">Concept illustration, not a Shopify admin screenshot.</text>
+</svg>

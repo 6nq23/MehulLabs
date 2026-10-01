@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Contribution margin decision rule for holiday ad spend</title>
+  <desc id="d">Concept illustration of a ROAS ruler split into cut, hold and scale zones, with break-even ROAS 2.25 and target ROAS 3.40 for one illustrative product.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="120" cy="-10" r="230" fill="#eeefe7"/>
+  <circle cx="1560" cy="60" r="260" fill="#eeefe7"/>
+  <circle cx="1500" cy="930" r="300" fill="#a9c6a3" fill-opacity="0.55"/>
+  <circle cx="60" cy="900" r="170" fill="#e9c9ae" fill-opacity="0.7"/>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <line x1="72" y1="196" x2="100" y2="196" stroke="#496546" stroke-width="3"/>
+    <text x="116" y="203" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">CONTRIBUTION MARGIN · HOLIDAY ADS</text>
+
+    <text x="72" y="320" font-size="92" font-weight="700" letter-spacing="-2" fill="#1a1d18">Check margin</text>
+    <text x="72" y="418" font-size="92" font-weight="700" letter-spacing="-2" fill="#1a1d18">before you</text>
+    <text x="72" y="516" font-size="92" font-weight="700" letter-spacing="-2" fill="#496546">scale spend.</text>
+
+    <text x="72" y="584" font-size="28" fill="#2c3128">Scale, hold or cut holiday ad budgets.</text>
+
+    <g font-size="24" font-weight="600" fill="#1a1d18">
+      <rect x="72" y="628" width="130" height="50" rx="25" fill="#fbfbf7" stroke="#d8ddd1" stroke-width="2"/>
+      <circle cx="98" cy="653" r="7" fill="#496546"/>
+      <text x="114" y="662">Shopify</text>
+      <rect x="216" y="628" width="152" height="50" rx="25" fill="#fbfbf7" stroke="#d8ddd1" stroke-width="2"/>
+      <circle cx="242" cy="653" r="7" fill="#496546"/>
+      <text x="258" y="662">Meta Ads</text>
+      <rect x="382" y="628" width="172" height="50" rx="25" fill="#fbfbf7" stroke="#d8ddd1" stroke-width="2"/>
+      <circle cx="408" cy="653" r="7" fill="#496546"/>
+      <text x="424" y="662">Google Ads</text>
+    </g>
+
+    <rect x="830" y="170" width="698" height="550" rx="28" fill="#fbfbf7" stroke="#d8ddd1" stroke-width="2"/>
+    <text x="870" y="242" font-size="30" font-weight="700" fill="#1a1d18">Illustrative scale / hold / cut rule</text>
+    <text x="870" y="282" font-size="21" fill="#5b6357">One product · break-even ROAS 2.25 · target ROAS 3.40</text>
+
+    <rect x="870" y="328" width="278" height="72" fill="#e9c9ae"/>
+    <rect x="1148" y="328" width="142" height="72" fill="#d8ddd1"/>
+    <rect x="1290" y="328" width="198" height="72" fill="#496546"/>
+    <text x="1009" y="374" font-size="26" font-weight="700" text-anchor="middle" fill="#8a4a1c">CUT</text>
+    <text x="1219" y="374" font-size="26" font-weight="700" text-anchor="middle" fill="#1a1d18">HOLD</text>
+    <text x="1389" y="374" font-size="26" font-weight="700" text-anchor="middle" fill="#ffffff">SCALE</text>
+
+    <g font-size="20" fill="#2c3128">
+      <text x="870" y="436" text-anchor="start">0</text>
+      <text x="1148" y="436" text-anchor="middle" font-weight="700">2.25</text>
+      <text x="1290" y="436" text-anchor="middle" font-weight="700">3.40</text>
+      <text x="1488" y="436" text-anchor="end">5.0+</text>
+    </g>
+    <g font-size="17" fill="#5b6357">
+      <text x="1148" y="460" text-anchor="middle">break-even</text>
+      <text x="1290" y="460" text-anchor="middle">target</text>
+    </g>
+
+    <g font-size="24" fill="#2c3128">
+      <circle cx="884" cy="532" r="10" fill="#e9c9ae" stroke="#8a4a1c" stroke-width="2"/>
+      <text x="912" y="541"><tspan font-weight="700">Cut</tspan> below 2.25: loses contribution</text>
+      <circle cx="884" cy="592" r="10" fill="#d8ddd1" stroke="#5b6357" stroke-width="2"/>
+      <text x="912" y="601"><tspan font-weight="700">Hold</tspan> 2.25 to 3.40: thin cushion</text>
+      <circle cx="884" cy="652" r="10" fill="#496546"/>
+      <text x="912" y="661"><tspan font-weight="700">Scale</tspan> 3.40 and up: clears the goal</text>
+    </g>
+
+    <text x="72" y="850" font-size="20" fill="#5b6357">Concept illustration with hypothetical numbers. Not a benchmark or a screenshot.</text>
+  </g>
+</svg>

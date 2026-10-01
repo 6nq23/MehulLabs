@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Payment fees inside a 60 dollar Shopify order</title>
+  <desc id="d">Concept illustration of a 60 dollar order split into product cost, shipping, ad cost, payment fee and contribution.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="120" cy="-20" r="260" fill="#eeefe7"/>
+  <circle cx="1560" cy="-40" r="300" fill="#eeefe7"/>
+  <circle cx="1500" cy="960" r="360" fill="#a9c6a3" opacity="0.55"/>
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <line x1="80" y1="201" x2="112" y2="201" stroke="#496546" stroke-width="3"/>
+    <text x="126" y="208" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">PAYMENTS AND FEES</text>
+    <text x="80" y="320" font-size="88" font-weight="700" letter-spacing="-3" fill="#1a1d18">The fee on every</text>
+    <text x="80" y="420" font-size="88" font-weight="700" letter-spacing="-3" fill="#496546">order adds up.</text>
+    <text x="80" y="492" font-size="28" fill="#3b4237">Processor rates, Shopify transaction fees,</text>
+    <text x="80" y="530" font-size="28" fill="#3b4237">currency conversion and disputes.</text>
+
+    <g font-size="22" font-weight="600" fill="#1a1d18">
+      <rect x="80" y="590" width="126" height="48" rx="24" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="143" y="622" text-anchor="middle">Shopify</text>
+      <rect x="218" y="590" width="116" height="48" rx="24" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="276" y="622" text-anchor="middle">Stripe</text>
+      <rect x="346" y="590" width="126" height="48" rx="24" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="409" y="622" text-anchor="middle">PayPal</text>
+      <rect x="484" y="590" width="150" height="48" rx="24" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="559" y="622" text-anchor="middle">Razorpay</text>
+      <rect x="80" y="652" width="100" height="48" rx="24" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="130" y="684" text-anchor="middle">Visa</text>
+      <rect x="192" y="652" width="168" height="48" rx="24" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="276" y="684" text-anchor="middle">Mastercard</text>
+    </g>
+
+    <rect x="840" y="170" width="690" height="560" rx="26" fill="#fbfbf7" stroke="#d8ddd1" stroke-width="2"/>
+    <text x="880" y="240" font-size="34" font-weight="700" fill="#1a1d18">Where a $60 order goes</text>
+    <text x="880" y="274" font-size="20" fill="#626b5c">Illustrative unit economics, US card order</text>
+
+    <rect x="880" y="320" width="220" height="60" fill="#d8ddd1"/>
+    <rect x="1100" y="320" width="80" height="60" fill="#c3cbbd"/>
+    <rect x="1180" y="320" width="120" height="60" fill="#a9c6a3"/>
+    <rect x="1300" y="320" width="20.4" height="60" fill="#d97a3a"/>
+    <rect x="1320.4" y="320" width="159.6" height="60" fill="#496546"/>
+    <path d="M1310 312 L1310 292" stroke="#d97a3a" stroke-width="3"/>
+    <text x="1310" y="282" font-size="20" font-weight="700" text-anchor="middle" fill="#b85f22">Payment fee</text>
+
+    <g font-size="24" fill="#1a1d18">
+      <rect x="880" y="430" width="20" height="20" fill="#d8ddd1"/>
+      <text x="916" y="448">Product cost</text>
+      <text x="1480" y="448" text-anchor="end" font-weight="700">$22.00</text>
+      <rect x="880" y="480" width="20" height="20" fill="#c3cbbd"/>
+      <text x="916" y="498">Shipping and packing</text>
+      <text x="1480" y="498" text-anchor="end" font-weight="700">$8.00</text>
+      <rect x="880" y="530" width="20" height="20" fill="#a9c6a3"/>
+      <text x="916" y="548">Ad cost per order</text>
+      <text x="1480" y="548" text-anchor="end" font-weight="700">$12.00</text>
+      <rect x="880" y="580" width="20" height="20" fill="#d97a3a"/>
+      <text x="916" y="598">Payment fee (2.9% + 30¢)</text>
+      <text x="1480" y="598" text-anchor="end" font-weight="700">$2.04</text>
+      <rect x="880" y="630" width="20" height="20" fill="#496546"/>
+      <text x="916" y="648" font-weight="700">Contribution</text>
+      <text x="1480" y="648" text-anchor="end" font-weight="700" fill="#496546">$15.96</text>
+    </g>
+    <text x="880" y="700" font-size="17" fill="#626b5c">Concept illustration, not a Shopify admin screenshot.</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="t">Profit math for one accepted post-purchase offer</title>
+  <desc id="d">Waterfall from an 800 rupee offer price to 338 rupees of contribution after product cost, fulfilment, payment fee and expected returns, plus contribution per 1,000 orders at five take rates.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <rect x="72" y="62" width="36" height="3" fill="#496546"/>
+  <text x="122" y="70" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">PROFIT MATH</text>
+  <text x="72" y="130" font-size="50" font-weight="700" fill="#1a1d18" letter-spacing="-1">One accepted offer, cost by cost</text>
+  <text x="72" y="172" font-size="24" fill="#4a5045">Illustrative: ₹800 add-on, 3% payment fee, 10% return rate. Amounts in ₹.</text>
+
+  <!-- chart panel -->
+  <rect x="60" y="210" width="930" height="620" rx="24" fill="#eeefe7" stroke="#d8ddd1" stroke-width="2"/>
+  <line x1="90" y1="740" x2="960" y2="740" stroke="#c4cbbd" stroke-width="3"/>
+
+  <!-- scale 0.6 px per unit, baseline y=740 ; 800 -> 480 high, top y=260 -->
+  <!-- Price 800: y 260..740 -->
+  <rect x="100" y="260" width="110" height="480" rx="6" fill="#496546"/>
+  <text x="155" y="250" font-size="26" font-weight="700" fill="#1a1d18" text-anchor="middle">800</text>
+  <text x="155" y="772" font-size="20" fill="#1a1d18" text-anchor="middle">Offer</text>
+  <text x="155" y="796" font-size="20" fill="#1a1d18" text-anchor="middle">price</text>
+
+  <!-- Product cost 320: y 260..452 -->
+  <rect x="250" y="260" width="110" height="192" rx="6" fill="#d98a5a"/>
+  <text x="305" y="363" font-size="26" font-weight="700" fill="#1a1d18" text-anchor="middle">-320</text>
+  <text x="305" y="772" font-size="20" fill="#1a1d18" text-anchor="middle">Product</text>
+  <text x="305" y="796" font-size="20" fill="#1a1d18" text-anchor="middle">cost</text>
+
+  <!-- Fulfilment 60: y 452..488 -->
+  <rect x="400" y="452" width="110" height="36" rx="6" fill="#d98a5a"/>
+  <text x="455" y="440" font-size="26" font-weight="700" fill="#1a1d18" text-anchor="middle">-60</text>
+  <text x="455" y="772" font-size="20" fill="#1a1d18" text-anchor="middle">Pick, pack,</text>
+  <text x="455" y="796" font-size="20" fill="#1a1d18" text-anchor="middle">freight</text>
+
+  <!-- Fee 24: y 488..502.4 -->
+  <rect x="550" y="488" width="110" height="14.4" rx="4" fill="#d98a5a"/>
+  <text x="605" y="476" font-size="26" font-weight="700" fill="#1a1d18" text-anchor="middle">-24</text>
+  <text x="605" y="772" font-size="20" fill="#1a1d18" text-anchor="middle">Payment</text>
+  <text x="605" y="796" font-size="20" fill="#1a1d18" text-anchor="middle">fee (3%)</text>
+
+  <!-- Returns 58: y 502.4..537.2 -->
+  <rect x="700" y="502.4" width="110" height="34.8" rx="6" fill="#d98a5a"/>
+  <text x="755" y="490" font-size="26" font-weight="700" fill="#1a1d18" text-anchor="middle">-58</text>
+  <text x="755" y="772" font-size="20" fill="#1a1d18" text-anchor="middle">Expected</text>
+  <text x="755" y="796" font-size="20" fill="#1a1d18" text-anchor="middle">returns</text>
+
+  <!-- Contribution 338: y 537.2..740 -->
+  <rect x="850" y="537.2" width="110" height="202.8" rx="6" fill="#1f3a26"/>
+  <text x="905" y="525" font-size="26" font-weight="700" fill="#1f3a26" text-anchor="middle">338</text>
+  <text x="905" y="772" font-size="20" font-weight="700" fill="#1a1d18" text-anchor="middle">Contribution</text>
+  <text x="905" y="796" font-size="20" font-weight="700" fill="#1a1d18" text-anchor="middle">per offer</text>
+
+  <!-- connectors -->
+  <g stroke="#8d9587" stroke-width="2" stroke-dasharray="6 6">
+    <line x1="210" y1="260" x2="250" y2="260"/>
+    <line x1="360" y1="452" x2="400" y2="452"/>
+    <line x1="510" y1="488" x2="550" y2="488"/>
+    <line x1="660" y1="502.4" x2="700" y2="502.4"/>
+    <line x1="810" y1="537.2" x2="850" y2="537.2"/>
+  </g>
+  <text x="560" y="310" font-size="22" font-weight="700" fill="#1f3a26">Looks like 60% margin (800 - 320).</text>
+  <text x="560" y="342" font-size="22" fill="#4a5045">After fulfilment, fees and returns it is 42%.</text>
+
+  <!-- right panel -->
+  <rect x="1020" y="210" width="520" height="620" rx="24" fill="#ffffff" stroke="#d8ddd1" stroke-width="2"/>
+  <text x="1052" y="262" font-size="28" font-weight="700" fill="#1a1d18">Contribution per 1,000 orders</text>
+  <text x="1052" y="294" font-size="20" fill="#4a5045">338 per accepted offer, by take rate</text>
+  <line x1="1052" y1="316" x2="1508" y2="316" stroke="#d8ddd1" stroke-width="2"/>
+  <text x="1052" y="348" font-size="18" font-weight="700" letter-spacing="1" fill="#6b7265">TAKE RATE</text>
+  <text x="1310" y="348" font-size="18" font-weight="700" letter-spacing="1" fill="#6b7265" text-anchor="end">OFFERS</text>
+  <text x="1508" y="348" font-size="18" font-weight="700" letter-spacing="1" fill="#6b7265" text-anchor="end">CONTRIBUTION</text>
+
+  <g font-size="24" fill="#1a1d18">
+    <text x="1052" y="396">0.1% (P25)</text><text x="1310" y="396" text-anchor="end">1</text><text x="1508" y="396" text-anchor="end" font-weight="700">₹338</text>
+    <text x="1052" y="452">0.3% (median)</text><text x="1310" y="452" text-anchor="end">3</text><text x="1508" y="452" text-anchor="end" font-weight="700">₹1,014</text>
+    <text x="1052" y="508">0.7% (P75)</text><text x="1310" y="508" text-anchor="end">7</text><text x="1508" y="508" text-anchor="end" font-weight="700">₹2,366</text>
+    <text x="1052" y="564" fill="#496546">2% (assumed)</text><text x="1310" y="564" text-anchor="end">20</text><text x="1508" y="564" text-anchor="end" font-weight="700">₹6,760</text>
+    <text x="1052" y="620" fill="#496546">5% (assumed)</text><text x="1310" y="620" text-anchor="end">50</text><text x="1508" y="620" text-anchor="end" font-weight="700">₹16,900</text>
+  </g>
+  <g stroke="#e6e9df" stroke-width="2">
+    <line x1="1052" y1="416" x2="1508" y2="416"/><line x1="1052" y1="472" x2="1508" y2="472"/>
+    <line x1="1052" y1="528" x2="1508" y2="528"/><line x1="1052" y1="584" x2="1508" y2="584"/>
+  </g>
+
+  <rect x="1052" y="656" width="456" height="92" rx="16" fill="#eeefe7"/>
+  <text x="1072" y="692" font-size="21" font-weight="700" fill="#1f3a26">Break-even check</text>
+  <text x="1072" y="722" font-size="20" fill="#1a1d18">A ₹3,000 monthly app fee needs about 9</text>
+  <text x="1072" y="744" font-size="20" fill="#1a1d18">accepted offers, or 0.9% of 1,000 orders.</text>
+
+  <text x="1052" y="790" font-size="17" fill="#6b7265">P25, median and P75: Candy Rack data via Digismoothie,</text>
+  <text x="1052" y="812" font-size="17" fill="#6b7265">Jan to Aug 2026. Higher rates are assumptions, not benchmarks.</text>
+</svg>

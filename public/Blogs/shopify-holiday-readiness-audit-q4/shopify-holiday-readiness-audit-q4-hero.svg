@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Shopify holiday readiness audit: 15 fixes before Q4 traffic</title>
+  <desc id="d">Concept illustration of a 15-point audit panel grouped into six areas: speed and checkout, payments, shipping and returns, inventory, tracking and profit checks.</desc>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#1a1d18" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; fill: #1a1d18; }
+    .eyebrow { font-size: 20px; font-weight: 700; letter-spacing: 4px; fill: #496546; }
+    .h { font-size: 88px; font-weight: 700; letter-spacing: -3px; }
+    .hg { font-size: 88px; font-weight: 700; letter-spacing: -3px; fill: #496546; }
+    .sub { font-size: 28px; fill: #3c4339; }
+    .pill { font-size: 20px; font-weight: 600; fill: #1a1d18; }
+    .ph { font-size: 34px; font-weight: 700; letter-spacing: -1px; }
+    .row { font-size: 23px; font-weight: 600; }
+    .cnt { font-size: 21px; font-weight: 700; fill: #496546; }
+    .tag { font-size: 18px; font-weight: 700; fill: #1a1d18; }
+    .foot { font-size: 18px; fill: #5c6558; }
+  </style>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="60" cy="-20" r="300" fill="#eeefe7"/>
+  <circle cx="1560" cy="-40" r="320" fill="#eeefe7"/>
+  <circle cx="1500" cy="960" r="340" fill="#a9c6a3" opacity="0.65"/>
+  <circle cx="60" cy="980" r="230" fill="#e5e9dd"/>
+
+  <!-- Left copy -->
+  <line x1="72" y1="190" x2="100" y2="190" stroke="#496546" stroke-width="3"/>
+  <text x="114" y="197" class="eyebrow">Q4 2026 · STORE AUDIT</text>
+  <text x="72" y="320" class="h">Fix the store</text>
+  <text x="72" y="412" class="h">before the</text>
+  <text x="72" y="504" class="hg">traffic arrives.</text>
+  <text x="72" y="578" class="sub">15 checks across speed, payments, shipping,</text>
+  <text x="72" y="616" class="sub">inventory, tracking and profit.</text>
+
+  <g transform="translate(72 660)">
+    <rect width="132" height="46" rx="23" fill="#ffffff" stroke="#d8ddd1"/><text x="66" y="30" text-anchor="middle" class="pill">Shopify</text>
+    <rect x="146" width="132" height="46" rx="23" fill="#ffffff" stroke="#d8ddd1"/><text x="212" y="30" text-anchor="middle" class="pill">Meta Ads</text>
+    <rect x="292" width="190" height="46" rx="23" fill="#ffffff" stroke="#d8ddd1"/><text x="387" y="30" text-anchor="middle" class="pill">Google Analytics</text>
+    <rect x="496" width="124" height="46" rx="23" fill="#ffffff" stroke="#d8ddd1"/><text x="558" y="30" text-anchor="middle" class="pill">Checkout</text>
+  </g>
+
+  <!-- Audit panel -->
+  <g filter="url(#sh)">
+    <rect x="836" y="110" width="700" height="690" rx="28" fill="#fbfbf7" stroke="#d8ddd1"/>
+  </g>
+  <text x="876" y="176" class="ph">Holiday readiness audit</text>
+  <rect x="1318" y="146" width="178" height="40" rx="20" fill="#dfe9da"/>
+  <text x="1407" y="173" text-anchor="middle" class="tag">BF · 27 Nov 2026</text>
+  <line x1="876" y1="208" x2="1496" y2="208" stroke="#d8ddd1"/>
+
+  <g>
+    <rect x="876" y="228" width="620" height="76" rx="16" fill="#eeefe7"/>
+    <circle cx="916" cy="266" r="16" fill="#496546"/><path d="M908 266 l6 6 l11 -12" fill="none" stroke="#f7f7f2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="948" y="274" class="row">Speed &amp; checkout</text><text x="1464" y="274" text-anchor="end" class="cnt">3 checks</text>
+
+    <rect x="876" y="316" width="620" height="76" rx="16" fill="#eeefe7"/>
+    <circle cx="916" cy="354" r="16" fill="#496546"/><path d="M908 354 l6 6 l11 -12" fill="none" stroke="#f7f7f2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="948" y="362" class="row">Payments</text><text x="1464" y="362" text-anchor="end" class="cnt">2 checks</text>
+
+    <rect x="876" y="404" width="620" height="76" rx="16" fill="#eeefe7"/>
+    <circle cx="916" cy="442" r="16" fill="#496546"/><path d="M908 442 l6 6 l11 -12" fill="none" stroke="#f7f7f2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="948" y="450" class="row">Shipping &amp; returns</text><text x="1464" y="450" text-anchor="end" class="cnt">3 checks</text>
+
+    <rect x="876" y="492" width="620" height="76" rx="16" fill="#eeefe7"/>
+    <circle cx="916" cy="530" r="16" fill="#496546"/><path d="M908 530 l6 6 l11 -12" fill="none" stroke="#f7f7f2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="948" y="538" class="row">Inventory</text><text x="1464" y="538" text-anchor="end" class="cnt">2 checks</text>
+
+    <rect x="876" y="580" width="620" height="76" rx="16" fill="#eeefe7"/>
+    <circle cx="916" cy="618" r="16" fill="#496546"/><path d="M908 618 l6 6 l11 -12" fill="none" stroke="#f7f7f2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="948" y="626" class="row">Tracking</text><text x="1464" y="626" text-anchor="end" class="cnt">2 checks</text>
+
+    <rect x="876" y="668" width="620" height="76" rx="16" fill="#dfe9da"/>
+    <circle cx="916" cy="706" r="16" fill="#496546"/><path d="M908 706 l6 6 l11 -12" fill="none" stroke="#f7f7f2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="948" y="714" class="row">Profit checks</text><text x="1464" y="714" text-anchor="end" class="cnt">3 checks</text>
+  </g>
+  <text x="876" y="778" class="foot">Concept illustration, not a Shopify admin screenshot</text>
+</svg>

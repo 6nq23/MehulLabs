@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Profit-first test plan for Shopify Campaign Autopilot</title>
+  <desc id="d">Four steps: baseline, capped pilot with approval, holdout comparison, decision. A bar chart shows illustrative POAS at ROAS 2.0, 2.5, 3.0 and 4.0 against a break-even line at 1.0 for a 39 percent contribution margin after returns.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="1560" cy="-40" r="260" fill="#eeefe7"/>
+  <g font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <line x1="72" y1="92" x2="100" y2="92" stroke="#496546" stroke-width="3"/>
+    <text x="112" y="99" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">PROFIT-FIRST TEST PLAN</text>
+    <text x="72" y="170" font-size="54" font-weight="700" letter-spacing="-1.5" fill="#1a1d18">Four gates before Autopilot earns more budget</text>
+
+    <rect x="72" y="230" width="690" height="130" rx="18" fill="#eeefe7"/>
+    <circle cx="132" cy="295" r="30" fill="#1f3a22"/>
+    <text x="132" y="306" text-anchor="middle" font-size="30" font-weight="700" fill="#f7f7f2">1</text>
+    <text x="184" y="284" font-size="28" font-weight="700" fill="#1a1d18">Baseline (2 to 4 weeks)</text>
+    <text x="184" y="320" font-size="22" fill="#4a5046">Contribution per order, break-even ROAS, POAS</text>
+    <text x="184" y="348" font-size="22" fill="#4a5046">by channel. Choose the holdout regions.</text>
+
+    <rect x="72" y="380" width="690" height="130" rx="18" fill="#eeefe7"/>
+    <circle cx="132" cy="445" r="30" fill="#1f3a22"/>
+    <text x="132" y="456" text-anchor="middle" font-size="30" font-weight="700" fill="#f7f7f2">2</text>
+    <text x="184" y="434" font-size="28" font-weight="700" fill="#1a1d18">Capped pilot with approval on</text>
+    <text x="184" y="470" font-size="22" fill="#4a5046">Small monthly budget target, ROAS target above</text>
+    <text x="184" y="498" font-size="22" fill="#4a5046">break-even, review every tactic and creative.</text>
+
+    <rect x="72" y="530" width="690" height="130" rx="18" fill="#eeefe7"/>
+    <circle cx="132" cy="595" r="30" fill="#1f3a22"/>
+    <text x="132" y="606" text-anchor="middle" font-size="30" font-weight="700" fill="#f7f7f2">3</text>
+    <text x="184" y="584" font-size="28" font-weight="700" fill="#1a1d18">Holdout comparison</text>
+    <text x="184" y="620" font-size="22" fill="#4a5046">Compare pilot regions with matched holdout regions</text>
+    <text x="184" y="648" font-size="22" fill="#4a5046">on Shopify order data, after returns and refunds.</text>
+
+    <rect x="72" y="680" width="690" height="130" rx="18" fill="#1f3a22"/>
+    <circle cx="132" cy="745" r="30" fill="#a9c6a3"/>
+    <text x="132" y="756" text-anchor="middle" font-size="30" font-weight="700" fill="#1f3a22">4</text>
+    <text x="184" y="734" font-size="28" font-weight="700" fill="#f7f7f2">Decision rule, written in advance</text>
+    <text x="184" y="770" font-size="22" fill="#e3ecdf">Incremental POAS above 1.0: raise budget in steps.</text>
+    <text x="184" y="798" font-size="22" fill="#e3ecdf">Below 1.0: pause, or keep approval on and retest.</text>
+
+    <rect x="822" y="230" width="706" height="580" rx="22" fill="#fbfbf7" stroke="#d8ddd1" stroke-width="2"/>
+    <text x="860" y="284" font-size="28" font-weight="700" fill="#1a1d18">Same ROAS target, different profit</text>
+    <text x="860" y="316" font-size="20" fill="#5a6155">POAS = ROAS × contribution margin after returns (39%)</text>
+
+    <line x1="900" y1="700" x2="1490" y2="700" stroke="#d8ddd1" stroke-width="2"/>
+    <rect x="930" y="528" width="90" height="172" rx="8" fill="#c97a4a"/>
+    <rect x="1055" y="484" width="90" height="216" rx="8" fill="#c97a4a"/>
+    <rect x="1180" y="443" width="90" height="257" rx="8" fill="#496546"/>
+    <rect x="1305" y="357" width="90" height="343" rx="8" fill="#496546"/>
+    <line x1="900" y1="480" x2="1490" y2="480" stroke="#1a1d18" stroke-width="2" stroke-dasharray="8 7"/>
+    <text x="1490" y="454" text-anchor="end" font-size="20" font-weight="700" fill="#1a1d18">Break-even POAS 1.0</text>
+    <g font-size="24" font-weight="700" text-anchor="middle">
+      <text x="975" y="560" fill="#fbfbf7">0.78</text>
+      <text x="1100" y="516" fill="#fbfbf7">0.98</text>
+      <text x="1225" y="433" fill="#1a1d18">1.17</text>
+      <text x="1350" y="347" fill="#1a1d18">1.56</text>
+    </g>
+    <g font-size="22" text-anchor="middle" fill="#3b4037" font-weight="600">
+      <text x="975" y="734">ROAS 2.0</text>
+      <text x="1100" y="734">ROAS 2.5</text>
+      <text x="1225" y="734">ROAS 3.0</text>
+      <text x="1350" y="734">ROAS 4.0</text>
+    </g>
+    <text x="860" y="780" font-size="18" fill="#5a6155">Illustrative: ₹2,000 order, ₹780 contribution after returns.</text>
+  </g>
+  <text x="1528" y="868" text-anchor="end" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#5a6155">Illustrative figures, not Shopify data</text>
+</svg>

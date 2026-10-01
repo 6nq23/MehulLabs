@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Fast sales data versus settled profit data</title>
+  <desc id="d">Concept illustration: a live dashboard that updates within about a minute, next to a profit number that only settles after refunds, costs and ad attribution arrive.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="120" cy="40" r="240" fill="#eeefe7"/>
+  <circle cx="1480" cy="860" r="300" fill="#a9c6a3" opacity="0.45"/>
+  <circle cx="1500" cy="60" r="200" fill="#eeefe7"/>
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <line x1="72" y1="152" x2="100" y2="152" stroke="#496546" stroke-width="3"/>
+    <text x="114" y="159" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">REAL-TIME ANALYTICS, PROFIT-FIRST</text>
+    <text x="72" y="250" font-size="68" font-weight="700" letter-spacing="-2" fill="#1a1d18">Fast data is not</text>
+    <text x="72" y="326" font-size="68" font-weight="700" letter-spacing="-2" fill="#1a1d18">finished profit</text>
+
+    <!-- Left card: live -->
+    <rect x="72" y="400" width="680" height="380" rx="28" fill="#eeefe7" stroke="#d8ddd1" stroke-width="2"/>
+    <circle cx="116" cy="448" r="9" fill="#496546"/>
+    <text x="140" y="456" font-size="24" font-weight="700" fill="#1a1d18">Live view: about 1 minute</text>
+    <text x="112" y="520" font-size="20" fill="#5b6356">Net sales</text>
+    <text x="112" y="578" font-size="56" font-weight="700" fill="#1a1d18">₹2,00,000</text>
+    <text x="470" y="520" font-size="20" fill="#5b6356">Orders</text>
+    <text x="470" y="578" font-size="56" font-weight="700" fill="#1a1d18">100</text>
+    <!-- sparkline -->
+    <polyline points="112,700 190,680 260,690 330,650 410,660 490,620 570,630 650,590 712,600" fill="none" stroke="#496546" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="112" y="752" font-size="18" fill="#5b6356">Illustrative day. Sales and sessions arrive quickly.</text>
+
+    <!-- Arrow -->
+    <line x1="780" y1="590" x2="840" y2="590" stroke="#496546" stroke-width="5" stroke-linecap="round"/>
+    <polyline points="824,572 842,590 824,608" fill="none" stroke="#496546" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Right card: settled -->
+    <rect x="868" y="400" width="660" height="380" rx="28" fill="#ffffff" stroke="#d8ddd1" stroke-width="2"/>
+    <circle cx="912" cy="448" r="9" fill="#1a1d18"/>
+    <text x="936" y="456" font-size="24" font-weight="700" fill="#1a1d18">Settled profit: days to weeks</text>
+    <text x="908" y="520" font-size="20" fill="#5b6356">Contribution margin, day 1</text>
+    <text x="908" y="578" font-size="56" font-weight="700" fill="#5b6356">25%</text>
+    <text x="1210" y="520" font-size="20" fill="#5b6356">After refunds post</text>
+    <text x="1210" y="578" font-size="56" font-weight="700" fill="#496546">16%</text>
+    <rect x="908" y="630" width="580" height="22" rx="11" fill="#eeefe7"/>
+    <rect x="908" y="630" width="371" height="22" rx="11" fill="#496546"/>
+    <rect x="1279" y="630" width="209" height="22" rx="11" fill="#d8ddd1"/>
+    <text x="908" y="694" font-size="18" fill="#5b6356">Refunds, product cost and ad attribution land later.</text>
+    <text x="908" y="752" font-size="18" fill="#5b6356">Illustrative figures, not a store benchmark.</text>
+  </g>
+</svg>

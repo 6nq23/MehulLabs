@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">One holiday order from net revenue to contribution after ads</title>
+  <desc id="d">Waterfall chart in rupees: net revenue 2,040 minus product cost 720 gives CM1 1,320; minus shipping 210, payment fee 41 and returns allowance 163 gives CM2 906; minus ad spend 550 gives CM3 356. Illustrative figures.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="100" y="92" font-size="40" font-weight="700" letter-spacing="-0.5" fill="#1a1d18">One holiday order, from net revenue to contribution after ads</text>
+    <text x="100" y="134" font-size="22" fill="#5b6357">Illustrative figures in ₹, net of tax, for a product sold at 15% off. The CM1, CM2 and CM3 labels are one common naming.</text>
+
+    <line x1="100" y1="760" x2="1500" y2="760" stroke="#d8ddd1" stroke-width="2"/>
+
+    <!-- connectors -->
+    <g stroke="#9aa394" stroke-width="2" stroke-dasharray="6 6">
+      <line x1="228" y1="240" x2="283" y2="240"/>
+      <line x1="383" y1="423.5" x2="438" y2="423.5"/>
+      <line x1="538" y1="423.5" x2="593" y2="423.5"/>
+      <line x1="693" y1="477.1" x2="748" y2="477.1"/>
+      <line x1="848" y1="487.5" x2="903" y2="487.5"/>
+      <line x1="1003" y1="529.1" x2="1058" y2="529.1"/>
+      <line x1="1158" y1="529.1" x2="1213" y2="529.1"/>
+      <line x1="1313" y1="669.3" x2="1368" y2="669.3"/>
+    </g>
+
+    <!-- bars -->
+    <rect x="128" y="240" width="100" height="520" rx="4" fill="#496546"/>
+    <rect x="283" y="240" width="100" height="183.5" rx="4" fill="#d9a07a"/>
+    <rect x="438" y="423.5" width="100" height="336.5" rx="4" fill="#a9c6a3" stroke="#496546" stroke-width="2"/>
+    <rect x="593" y="423.5" width="100" height="53.6" rx="4" fill="#d9a07a"/>
+    <rect x="748" y="477.1" width="100" height="10.4" rx="3" fill="#d9a07a"/>
+    <rect x="903" y="487.5" width="100" height="41.6" rx="4" fill="#d9a07a"/>
+    <rect x="1058" y="529.1" width="100" height="230.9" rx="4" fill="#a9c6a3" stroke="#496546" stroke-width="2"/>
+    <rect x="1213" y="529.1" width="100" height="140.2" rx="4" fill="#d9a07a"/>
+    <rect x="1368" y="669.3" width="100" height="90.7" rx="4" fill="#496546"/>
+
+    <!-- CM tags inside bars -->
+    <g font-size="32" font-weight="700" text-anchor="middle">
+      <text x="488" y="602" fill="#1a1d18">CM1</text>
+      <text x="1108" y="656" fill="#1a1d18">CM2</text>
+      <text x="1418" y="724" fill="#ffffff">CM3</text>
+    </g>
+
+    <!-- value labels -->
+    <g font-size="26" font-weight="700" text-anchor="middle" fill="#1a1d18">
+      <text x="178" y="226">2,040</text>
+      <text x="333" y="226">−720</text>
+      <text x="488" y="409">1,320</text>
+      <text x="643" y="409">−210</text>
+      <text x="798" y="463">−41</text>
+      <text x="953" y="473">−163</text>
+      <text x="1108" y="515">906</text>
+      <text x="1263" y="515">−550</text>
+      <text x="1418" y="655">356</text>
+    </g>
+
+    <!-- category labels -->
+    <g font-size="21" font-weight="700" text-anchor="middle" fill="#1a1d18">
+      <text x="178" y="796">Net revenue</text>
+      <text x="333" y="796">Product cost</text>
+      <text x="488" y="796">CM1</text>
+      <text x="643" y="796">Shipping</text>
+      <text x="798" y="796">Payment fee</text>
+      <text x="953" y="796">Returns</text>
+      <text x="1108" y="796">CM2</text>
+      <text x="1263" y="796">Ad spend</text>
+      <text x="1418" y="796">CM3</text>
+    </g>
+    <g font-size="18" text-anchor="middle" fill="#5b6357">
+      <text x="178" y="822">after 15% off</text>
+      <text x="333" y="822">COGS</text>
+      <text x="488" y="822">64.7% of revenue</text>
+      <text x="643" y="822">pack and send</text>
+      <text x="798" y="822">2% of revenue</text>
+      <text x="953" y="822">allowance, 8%</text>
+      <text x="1108" y="822">44.4% of revenue</text>
+      <text x="1263" y="822">ROAS 3.71</text>
+      <text x="1418" y="822">17.5% of revenue</text>
+    </g>
+
+    <!-- break-even callout -->
+    <rect x="1040" y="200" width="460" height="92" rx="16" fill="#eeefe7" stroke="#d8ddd1" stroke-width="2"/>
+    <text x="1064" y="238" font-size="20" font-weight="700" fill="#1a1d18">Break-even ROAS = 2,040 ÷ 906 = 2.25</text>
+    <text x="1064" y="272" font-size="20" fill="#5b6357">At ROAS 3.71, ads left ₹356 of CM3.</text>
+
+    <text x="100" y="868" font-size="18" fill="#5b6357">Concept chart with hypothetical numbers that match the worked example in the article. Not a benchmark.</text>
+  </g>
+</svg>

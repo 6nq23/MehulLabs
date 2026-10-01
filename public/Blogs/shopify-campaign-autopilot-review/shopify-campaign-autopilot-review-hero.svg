@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Shopify Campaign Autopilot profit test concept</title>
+  <desc id="d">A guardrail card showing budget, target ROAS, approval and holdout settings beside the headline: let AI spend, make it prove the profit.</desc>
+  <defs>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#1a1d18" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="110" cy="-30" r="250" fill="#eeefe7"/>
+  <circle cx="1330" cy="-60" r="300" fill="#eeefe7"/>
+  <circle cx="1560" cy="980" r="340" fill="#a9c6a3" opacity="0.75"/>
+  <circle cx="60" cy="960" r="260" fill="#e0803f" opacity="0.9"/>
+  <g font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <line x1="72" y1="190" x2="100" y2="190" stroke="#496546" stroke-width="3"/>
+    <text x="112" y="197" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">CAMPAIGN AUTOPILOT · PROFIT TEST</text>
+    <text x="72" y="300" font-size="86" font-weight="700" letter-spacing="-2" fill="#1a1d18">Let AI spend.</text>
+    <text x="72" y="392" font-size="86" font-weight="700" letter-spacing="-2" fill="#496546">Make it prove</text>
+    <text x="72" y="484" font-size="86" font-weight="700" letter-spacing="-2" fill="#496546">the profit.</text>
+    <text x="72" y="556" font-size="28" fill="#3b4037">Holdout, POAS guardrails, budget cap, creative approval</text>
+    <g font-size="22" font-weight="600" fill="#1a1d18">
+      <rect x="72" y="610" width="130" height="46" rx="23" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="137" y="640" text-anchor="middle">Shopify</text>
+      <rect x="216" y="610" width="146" height="46" rx="23" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="289" y="640" text-anchor="middle">Meta Ads</text>
+      <rect x="376" y="610" width="196" height="46" rx="23" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="474" y="640" text-anchor="middle">Shop Campaigns</text>
+      <rect x="586" y="610" width="130" height="46" rx="23" fill="#f7f7f2" stroke="#d8ddd1" stroke-width="2"/>
+      <text x="651" y="640" text-anchor="middle">Email</text>
+    </g>
+
+    <g filter="url(#sh)">
+      <rect x="830" y="150" width="698" height="600" rx="30" fill="#fbfbf7" stroke="#d8ddd1" stroke-width="2"/>
+    </g>
+    <text x="872" y="220" font-size="36" font-weight="700" letter-spacing="-1" fill="#1a1d18">Your guardrails</text>
+    <rect x="1286" y="190" width="200" height="40" rx="20" fill="#fbe6d4"/>
+    <text x="1386" y="217" text-anchor="middle" font-size="18" font-weight="700" fill="#a8521a">Illustrative</text>
+
+    <rect x="872" y="256" width="614" height="92" rx="16" fill="#eeefe7"/>
+    <text x="900" y="296" font-size="22" font-weight="700" fill="#1a1d18">Monthly budget</text>
+    <text x="900" y="328" font-size="20" fill="#5a6155">A target, not a hard cap</text>
+    <text x="1458" y="312" text-anchor="end" font-size="26" font-weight="700" fill="#496546">Small pilot</text>
+
+    <rect x="872" y="362" width="614" height="92" rx="16" fill="#eeefe7"/>
+    <text x="900" y="402" font-size="22" font-weight="700" fill="#1a1d18">Target ROAS</text>
+    <text x="900" y="434" font-size="20" fill="#5a6155">Set from contribution margin</text>
+    <text x="1458" y="418" text-anchor="end" font-size="26" font-weight="700" fill="#496546">Above break-even</text>
+
+    <rect x="872" y="468" width="614" height="92" rx="16" fill="#eeefe7"/>
+    <text x="900" y="508" font-size="22" font-weight="700" fill="#1a1d18">Approval</text>
+    <text x="900" y="540" font-size="20" fill="#5a6155">Review every tactic before it runs</text>
+    <text x="1458" y="524" text-anchor="end" font-size="26" font-weight="700" fill="#496546">On</text>
+
+    <rect x="872" y="574" width="614" height="92" rx="16" fill="#eeefe7"/>
+    <text x="900" y="614" font-size="22" font-weight="700" fill="#1a1d18">Holdout</text>
+    <text x="900" y="646" font-size="20" fill="#5a6155">Matched regions run without Autopilot</text>
+    <text x="1458" y="630" text-anchor="end" font-size="26" font-weight="700" fill="#496546">Yes</text>
+
+    <circle cx="884" cy="705" r="7" fill="#496546"/>
+    <text x="902" y="712" font-size="20" fill="#3b4037">Pass test: incremental POAS above 1.0 after returns</text>
+  </g>
+  <rect x="1090" y="812" width="482" height="36" rx="10" fill="#eeefe7" stroke="#d8ddd1"/>
+  <text x="1331" y="836" text-anchor="middle" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#3b4037">Concept illustration, not a Shopify admin screenshot</text>
+</svg>
