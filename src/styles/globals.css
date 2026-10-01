@@ -861,8 +861,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .growth-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.4rem; margin-top: 2rem; }
 .growth-button { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 1rem; padding: .9rem 1.8rem; background: #131313; color: #fff; border-radius: 999px; font-size: .95rem; font-weight: 800; line-height: 1.5; transition: transform .25s, box-shadow .25s; box-shadow: 0 8px 18px rgba(0,0,0,0.1); }
 .growth-button:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
-.growth-hero .growth-button { background: #ffcc1e; color: #131313; box-shadow: 0 8px 18px #825f0026, inset 0 -2px 3px #7f5c0024; }
-.growth-hero .growth-button:hover { transform: translateY(-2px); box-shadow: 0 12px 25px #825f0033, inset 0 -2px 3px #7f5c0024; background: #ffcc1e; }
+.growth-hero .growth-button { background: #facc15; color: #131313; box-shadow: 0 6px 15px rgba(0,0,0,0.06), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); }
+.growth-hero .growth-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,0.08), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); background: #facc15; }
 .growth-text-link { display: inline-flex; align-items: center; min-height: 48px; gap: 1rem; font-size: .9rem; text-decoration: underline; text-underline-offset: 5px; }
 .growth-note { font-size: .78rem; line-height: 1.7; margin-top: 1rem; color: #777872; }
 .growth-hero .growth-note { color: #777872; max-width: 52ch; }

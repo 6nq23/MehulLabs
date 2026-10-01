@@ -133,7 +133,7 @@ const jsonLd = JSON.stringify({
               <a class="brain-link" href="/services/ai-automation">
                 <img src={brandBee.src} width="1254" height="1254" alt="" loading="lazy" />
                 <span>Explore Brand Brain</span>
-                <span class="brain-link-arrow" aria-hidden="true">→</span>
+                <span class="brain-link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
             </div>
             <div class="brain-video-shell">
@@ -161,7 +161,7 @@ const jsonLd = JSON.stringify({
               <a class="brain-link" href="/services/store-conversion">
                 <img src={shopifyBee.src} width="1254" height="1254" alt="" loading="lazy" />
                 <span>Explore store conversion</span>
-                <span class="brain-link-arrow" aria-hidden="true">→</span>
+                <span class="brain-link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
             </div>
             <div class="brain-video-shell">
@@ -184,7 +184,7 @@ const jsonLd = JSON.stringify({
               <a class="brain-link" href="/services/ai-automation">
                 <img src={marketingBee.src} width="1254" height="1254" alt="" loading="lazy" />
                 <span>Marketing Brain</span>
-                <span class="brain-link-arrow" aria-hidden="true">→</span>
+                <span class="brain-link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
             </div>
             <div class="brain-video-shell">
@@ -264,9 +264,10 @@ const jsonLd = JSON.stringify({
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   .skip-link { position: fixed; z-index: 100; top: -100px; left: 18px; padding: 12px 16px; background: #fff; border-radius: 12px; }
   .skip-link:focus { top: 10px; }
-  .pill-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 54px; padding: 5px 5px 5px 24px; border-radius: 999px; background: var(--yellow); box-shadow: 0 8px 18px #825f0026, inset 0 -2px 3px #7f5c0024; font-size: 15px; font-weight: 800; white-space: nowrap; transition: transform .25s, box-shadow .25s; }
-  .pill-button:hover { transform: translateY(-2px); box-shadow: 0 12px 25px #825f0033, inset 0 -2px 3px #7f5c0024; }
-  .pill-arrow { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 auto; border: 1px solid #fff; border-radius: 50%; background: #ffffff61; box-shadow: 0 1px 5px #533a001f; }
+  .pill-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 54px; padding: 5px 5px 5px 24px; border-radius: 999px; background: #facc15; box-shadow: 0 6px 15px rgba(0,0,0,0.06), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); font-size: 15px; font-weight: 800; white-space: nowrap; transition: transform .25s, box-shadow .25s; }
+  .pill-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,0.08), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); }
+  .pill-button:hover .pill-arrow { transform: scale(1.05); }
+  .pill-arrow { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 auto; border: none; border-radius: 50%; background: linear-gradient(180deg, #ffe066 0%, #ffc000 100%); box-shadow: inset 0 2px 3px rgba(255,255,255,0.9), 0 2px 5px rgba(0,0,0,0.15); transition: transform .25s; }
   .pill-arrow svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
   .hero { padding: clamp(180px,13.7vw,240px) 24px 0; }
   .hero-copy { max-width: 900px; margin: 0 auto; text-align: center; }
@@ -317,8 +318,9 @@ const jsonLd = JSON.stringify({
   .brain-copy > p { max-width: 590px; margin-bottom: 30px; color: #606060; font-size: clamp(16px,1.2vw,19px); line-height: 1.55; letter-spacing: -.015em; }
   .brain-link { display: flex; align-items: center; gap: 16px; max-width: 590px; min-height: 64px; border-top: 1px solid #dbd9d3; font-size: clamp(16px,1.4vw,20px); font-weight: 700; letter-spacing: -.035em; }
   .brain-link > img { width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 5px 5px #65502f3d); }
-  .brain-link-arrow { display: grid; place-items: center; width: 44px; height: 44px; margin-left: auto; border-radius: 50%; background: #eae6dc; font-size: 28px; font-weight: 400; transition: transform .2s,background .2s; }
-  .brain-link:hover .brain-link-arrow { transform: translateX(3px); background: var(--yellow); }
+  .brain-link-arrow { display: grid; place-items: center; width: 44px; height: 44px; margin-left: auto; border-radius: 50%; border: 1.5px solid #dcd9d1; background: transparent; color: #181818; transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .brain-link-arrow svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .brain-link:hover .brain-link-arrow { transform: translateX(5px); background: #facc15; border-color: #facc15; color: #131313; box-shadow: 0 8px 18px rgba(250, 204, 21, 0.35); }
   .brain-video-shell { min-width: 0; padding: clamp(18px,2.2vw,32px); border-radius: 30px; background: #fff; box-shadow: 0 25px 60px #5a4f3710; }
   .brain-video-stage { position: relative; overflow: hidden; aspect-ratio: 728/624; border-radius: 24px; background: #f7f7f6; }
   .brain-video-stage video { display: block; width: 100%; height: 100%; object-fit: cover; }

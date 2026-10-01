@@ -20,9 +20,9 @@ export const beeCharacters = {
 export type BeeId = keyof typeof beeCharacters;
 // Percent radii and initial angles mirror the reference's three concentric orbits.
 export const beeTracks = [
-  { radiusX: 44, radiusY: 32 },
-  { radiusX: 36, radiusY: 25 },
-  { radiusX: 25.5, radiusY: 17 },
+  { radiusX: 47, radiusY: 35 },
+  { radiusX: 38, radiusY: 28 },
+  { radiusX: 30, radiusY: 22 },
 ] as const;
 
 export const beeOrbits = [
