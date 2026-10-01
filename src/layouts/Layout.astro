@@ -1,5 +1,6 @@
 ---
 import { Footer } from '@/components/layout/Footer';
+import HiveNavbar from '@/components/layout/HiveNavbar.astro';
 import { SiteRuntime } from '@/components/layout/SiteRuntime';
 import { contactEmail, site } from '@/data/site';
 import { tools } from '@/data/tools';
@@ -131,6 +132,7 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
     </a>
 
     <SiteRuntime pathname={Astro.url.pathname} client:load />
+    <HiveNavbar />
     <noscript><nav class="no-js-navigation" aria-label="Page navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/offers">Pricing &amp; scope</a><a href="/tools">Free tools</a><a href="/guides">Guides</a></nav></noscript>
     <main id="main">
       {breadcrumbs.length > 0 && <nav class="seo-breadcrumbs shell" aria-label="Breadcrumb"><ol>{breadcrumbs.map((crumb, index) => <li>{index === breadcrumbs.length - 1 ? <span aria-current="page">{crumb.label}</span> : <a href={crumb.path}>{crumb.label}</a>}</li>)}</ol></nav>}
