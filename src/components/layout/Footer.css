@@ -1,7 +1,7 @@
 .hive-footer {
   overflow: hidden;
-  background: #f6f5f1;
-  color: #171719;
+  background: #ffcb16;
+  color: #000000;
   font-family: 'Manrope Variable', Manrope, Arial, sans-serif;
 }
 
@@ -31,7 +31,7 @@
 .hive-footer__description {
   max-width: 30rem;
   margin: 1.6rem 0 0;
-  color: #5c5e65;
+  color: #000000;
   font-size: 1.05rem;
   line-height: 1.75;
 }
@@ -45,9 +45,9 @@
   margin-top: 2rem;
   padding: 5px 5px 5px 24px;
   border-radius: 999px;
-  background: var(--yellow, #ffd23b);
+  background: var(--yellow, #ffcb16);
   box-shadow: 0 8px 18px #825f0026, inset 0 -2px 3px #7f5c0024;
-  color: #171719;
+  color: #000000;
   font-size: 15px;
   font-weight: 800;
   white-space: nowrap;
@@ -69,7 +69,7 @@
   border-radius: 50%;
   background: #ffffff61;
   box-shadow: 0 1px 5px #533a001f;
-  color: #171719;
+  color: #000000;
 }
 
 .hive-footer__cta-arrow svg {
@@ -90,7 +90,7 @@
 }
 
 .hive-footer__logo {
-  color: #171719;
+  color: #000000;
   font-size: 1.85rem;
   font-weight: 850;
   line-height: 1.1;
@@ -119,7 +119,7 @@
 
 .hive-footer__column-label {
   margin-bottom: .2rem;
-  color: #85858a;
+  color: #000000;
   font-size: .78rem;
   font-weight: 600;
   letter-spacing: .08em;
@@ -127,19 +127,19 @@
 }
 
 .hive-footer__columns a {
-  color: #4b4b50;
+  color: #000000;
   font-size: .98rem;
   line-height: 1.5;
   transition: color .2s ease, transform .2s ease;
 }
 
 .hive-footer__columns a:hover {
-  color: #8c6b00;
+  color: #ffcb16;
   transform: translateX(3px);
 }
 
 .hive-footer a:focus-visible {
-  outline: 2px solid #b78700;
+  outline: 2px solid #ffcb16;
   outline-offset: 5px;
 }
 
@@ -155,7 +155,7 @@
   z-index: 1;
   inset: 0 0 auto;
   height: 25%;
-  background: linear-gradient(#f6f5f1, #f6f5f100);
+  background: linear-gradient(#ffcb16, #f6f5f100);
   content: '';
 }
 

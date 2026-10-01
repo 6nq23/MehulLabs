@@ -8,19 +8,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        canvas: '#F7F7F2',
-        surface: '#EEEFE7',
-        line: '#D8DDD1',
+        canvas: '#ffffff',
+        surface: '#ffffff',
+        line: 'rgba(0, 0, 0, 0.1)',
         ink: {
-          DEFAULT: '#202720',
-          muted: '#586056',
-          faint: '#626B5C',
+          DEFAULT: '#000000',
+          muted: 'rgba(0, 0, 0, 0.6)',
+          faint: 'rgba(0, 0, 0, 0.4)',
         },
         accent: {
-          DEFAULT: '#496546',
-          bright: '#3B5538',
-          soft: '#E7ECDD',
-          ring: 'rgba(92, 114, 98, 0.22)',
+          DEFAULT: '#ffcb16',
+          bright: '#ffcb16',
+          soft: 'rgba(255, 203, 22, 0.1)',
+          ring: 'rgba(255, 203, 22, 0.22)',
         },
       },
       fontFamily: {
