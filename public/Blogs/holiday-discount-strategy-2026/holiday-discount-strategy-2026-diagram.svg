@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Maximum holiday discount by contribution margin</title>
+  <desc id="d">Grouped horizontal bars show two discount ceilings for contribution margins from 60 percent down to 20 percent, with reference lines at 25.1 and 30.9 percent for Adobe's 2025 peak category discounts.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="1580" cy="-20" r="240" fill="#eeefe7"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <line x1="72" y1="92" x2="104" y2="92" stroke="#496546" stroke-width="3"/>
+    <text x="116" y="99" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">MAXIMUM DISCOUNT BY MARGIN</text>
+    <text x="72" y="160" font-size="48" font-weight="800" fill="#1a1d18" letter-spacing="-1">Your ceiling is set by margin, not by the market</text>
+    <g font-size="20" fill="#3b4138">
+      <rect x="72" y="196" width="18" height="18" rx="4" fill="#496546"/><text x="100" y="211">A: keep half of normal contribution per order</text>
+      <rect x="520" y="196" width="18" height="18" rx="4" fill="#a9c6a3" stroke="#496546"/><text x="548" y="211">B: new customer breaks even (acquisition cost = 20% of list price)</text>
+    </g>
+    <!-- axis grid -->
+    <g stroke="#d8ddd1" stroke-width="1.5">
+      <line x1="420" y1="270" x2="420" y2="768"/>
+      <line x1="600" y1="270" x2="600" y2="768"/>
+      <line x1="780" y1="270" x2="780" y2="768"/>
+      <line x1="960" y1="270" x2="960" y2="768"/>
+      <line x1="1140" y1="270" x2="1140" y2="768"/>
+    </g>
+    <g font-size="18" fill="#5d6558" text-anchor="middle">
+      <text x="420" y="800">0%</text><text x="600" y="800">10%</text><text x="780" y="800">20%</text><text x="960" y="800">30%</text><text x="1140" y="800">40%</text>
+    </g>
+    <text x="780" y="832" font-size="18" fill="#5d6558" text-anchor="middle">Maximum discount as % of list price</text>
+    <!-- Adobe reference lines -->
+    <line x1="871.8" y1="262" x2="871.8" y2="768" stroke="#c4622d" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <line x1="976.2" y1="262" x2="976.2" y2="768" stroke="#c4622d" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <text x="862" y="258" font-size="17" fill="#8a4018" text-anchor="end" font-weight="600">Adobe 2025 peak, apparel: 25.1%</text>
+    <text x="986" y="258" font-size="17" fill="#8a4018" font-weight="600">Adobe 2025 peak, electronics: 30.9%</text>
+    <!-- rows -->
+    <g font-size="24" font-weight="700" fill="#1a1d18" text-anchor="end">
+      <text x="396" y="320">60% margin</text>
+      <text x="396" y="420">50% margin</text>
+      <text x="396" y="520">40% margin</text>
+      <text x="396" y="620">30% margin</text>
+      <text x="396" y="720">20% margin</text>
+    </g>
+    <g fill="#496546">
+      <rect x="420" y="290" width="540" height="30" rx="5"/>
+      <rect x="420" y="390" width="450" height="30" rx="5"/>
+      <rect x="420" y="490" width="360" height="30" rx="5"/>
+      <rect x="420" y="590" width="270" height="30" rx="5"/>
+      <rect x="420" y="690" width="180" height="30" rx="5"/>
+    </g>
+    <g fill="#a9c6a3" stroke="#496546" stroke-width="2">
+      <rect x="420" y="328" width="720" height="30" rx="5"/>
+      <rect x="420" y="428" width="540" height="30" rx="5"/>
+      <rect x="420" y="528" width="360" height="30" rx="5"/>
+      <rect x="420" y="628" width="180" height="30" rx="5"/>
+      <rect x="420" y="728" width="3" height="30" rx="1"/>
+    </g>
+    <g font-size="20" font-weight="700" fill="#1a1d18" paint-order="stroke" stroke="#f7f7f2" stroke-width="6" stroke-linejoin="round">
+      <text x="970" y="312">30%</text><text x="1152" y="350">40%</text>
+      <text x="880" y="412">25%</text><text x="970" y="450">30%</text>
+      <text x="790" y="512">20%</text><text x="790" y="550">20%</text>
+      <text x="700" y="612">15%</text><text x="610" y="650">10%</text>
+      <text x="610" y="712">10%</text><text x="436" y="750">0% (no room)</text>
+    </g>
+    <rect x="1200" y="290" width="330" height="360" rx="22" fill="#eeefe7" stroke="#d8ddd1"/>
+    <g font-size="20" fill="#3b4138">
+      <text x="1224" y="330" font-weight="700" fill="#1a1d18" font-size="22">How to read it</text>
+      <text x="1224" y="368">Take the lower of A and B</text>
+      <text x="1224" y="394">as your ceiling for each</text>
+      <text x="1224" y="420">product.</text>
+      <text x="1224" y="466">A 40% margin product</text>
+      <text x="1224" y="492">tops out near 20%, well</text>
+      <text x="1224" y="518">below the electronics peak.</text>
+      <text x="1224" y="564" font-size="17" fill="#5d6558">Illustrative model: per-unit costs</text>
+      <text x="1224" y="588" font-size="17" fill="#5d6558">fixed, volume uplift ignored.</text>
+      <text x="1224" y="612" font-size="17" fill="#5d6558">Adobe lines: large US retailers.</text>
+    </g>
+  </g>
+</svg>

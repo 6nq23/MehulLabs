@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Price for the duty, not around it</title>
+  <desc id="d">Concept illustration comparing the price needed to hold a 20% margin before and after a 20% import duty. Illustrative numbers.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, "Segoe UI", system-ui, -apple-system, Arial, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="60" cy="-20" r="300" fill="#eeefe7"/>
+  <circle cx="1300" cy="-60" r="300" fill="#eeefe7"/>
+  <circle cx="1560" cy="960" r="340" fill="#a9c6a3" opacity="0.75"/>
+  <circle cx="60" cy="960" r="230" fill="#eeefe7"/>
+
+  <!-- Left column -->
+  <rect x="72" y="178" width="28" height="3" fill="#496546"/>
+  <text x="112" y="186" font-size="19" font-weight="700" letter-spacing="3" fill="#496546">TARIFFS AND DUTIES · PRICING</text>
+  <text x="72" y="300" font-size="92" font-weight="700" letter-spacing="-3" fill="#1a1d18">Price for</text>
+  <text x="72" y="396" font-size="92" font-weight="700" letter-spacing="-3" fill="#1a1d18">the duty,</text>
+  <text x="72" y="492" font-size="92" font-weight="700" letter-spacing="-3" fill="#496546">not around it.</text>
+  <text x="72" y="560" font-size="26" fill="#3b4037">Model duty as a cost per unit, then set</text>
+  <text x="72" y="596" font-size="26" fill="#3b4037">the price that still earns your margin.</text>
+
+  <!-- Pills -->
+  <g>
+    <rect x="72" y="640" width="132" height="44" rx="22" fill="#fbfbf7" stroke="#d8ddd1"/>
+    <text x="138" y="669" font-size="20" font-weight="600" fill="#1a1d18" text-anchor="middle">Shopify</text>
+    <rect x="216" y="640" width="178" height="44" rx="22" fill="#fbfbf7" stroke="#d8ddd1"/>
+    <text x="305" y="669" font-size="20" font-weight="600" fill="#1a1d18" text-anchor="middle">DDP vs DAP</text>
+    <rect x="406" y="640" width="168" height="44" rx="22" fill="#fbfbf7" stroke="#d8ddd1"/>
+    <text x="490" y="669" font-size="20" font-weight="600" fill="#1a1d18" text-anchor="middle">US de minimis</text>
+  </g>
+
+  <!-- Card -->
+  <rect x="830" y="170" width="698" height="540" rx="18" fill="#fbfbf7" stroke="#d8ddd1"/>
+  <text x="870" y="232" font-size="30" font-weight="700" fill="#1a1d18">Price needed for a 20% margin</text>
+  <rect x="1372" y="206" width="122" height="36" rx="18" fill="#eeefe7"/>
+  <text x="1433" y="230" font-size="16" font-weight="700" fill="#496546" text-anchor="middle">Illustrative</text>
+
+  <!-- Row 1 -->
+  <text x="870" y="300" font-size="20" fill="#626b5c">Before duty</text>
+  <rect x="870" y="316" width="560" height="52" rx="8" fill="#eeefe7"/>
+  <rect x="870" y="316" width="498" height="52" rx="8" fill="#a9c6a3"/>
+  <text x="1440" y="352" font-size="28" font-weight="700" fill="#1a1d18" text-anchor="end" dx="80">$36.73</text>
+
+  <!-- Row 2 -->
+  <text x="870" y="420" font-size="20" fill="#626b5c">With a 20% duty on the goods</text>
+  <rect x="870" y="436" width="560" height="52" rx="8" fill="#eeefe7"/>
+  <rect x="870" y="436" width="560" height="52" rx="8" fill="#496546"/>
+  <text x="1440" y="472" font-size="28" font-weight="700" fill="#1a1d18" text-anchor="end" dx="80">$41.35</text>
+
+  <!-- Insight -->
+  <rect x="870" y="532" width="618" height="140" rx="12" fill="#eeefe7"/>
+  <text x="896" y="576" font-size="26" font-weight="700" fill="#1a1d18">Duty adds $2.40 per unit</text>
+  <text x="896" y="612" font-size="22" fill="#3b4037">but the price has to rise $4.62 (+12.6%),</text>
+  <text x="896" y="642" font-size="22" fill="#3b4037">because fees, returns and ads scale with price.</text>
+
+  <!-- Leaf accent -->
+  <g transform="translate(120 820)" fill="#496546">
+    <path d="M0 0 C-20 -30 -10 -60 18 -74 C30 -46 22 -16 0 0 Z"/>
+    <path d="M6 -6 C30 -14 54 -10 70 6 C46 22 18 18 6 -6 Z" opacity="0.85"/>
+  </g>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">How quickly each analytics number settles</title>
+  <desc id="d">Left: a not-to-scale timeline of documented data freshness for Shopify, Meta, Google Ads and Google Analytics 4, plus refunds that post when processed. Right: an illustrative day where contribution margin falls from 45 percent before ads to 25 percent after ads and 16 percent after a returns reserve.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="1560" cy="40" r="210" fill="#eeefe7"/>
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <line x1="72" y1="92" x2="100" y2="92" stroke="#496546" stroke-width="3"/>
+    <text x="114" y="99" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">WHEN EACH NUMBER CAN BE TRUSTED</text>
+    <text x="72" y="162" font-size="52" font-weight="700" letter-spacing="-1.5" fill="#1a1d18">Sales arrive in a minute. Profit takes longer.</text>
+
+    <!-- Left panel -->
+    <rect x="72" y="200" width="1000" height="620" rx="24" fill="#eeefe7" stroke="#d8ddd1" stroke-width="2"/>
+    <text x="104" y="246" font-size="20" font-weight="700" fill="#1a1d18">Documented freshness by source (not to scale)</text>
+
+    <!-- axis ticks -->
+    <g stroke="#d8ddd1" stroke-width="2">
+      <line x1="500" y1="282" x2="500" y2="716"/>
+      <line x1="610" y1="282" x2="610" y2="716"/>
+      <line x1="720" y1="282" x2="720" y2="716"/>
+      <line x1="830" y1="282" x2="830" y2="716"/>
+      <line x1="940" y1="282" x2="940" y2="716"/>
+      <line x1="1040" y1="282" x2="1040" y2="716"/>
+    </g>
+    <g font-size="17" fill="#5b6356" text-anchor="middle">
+      <text x="500" y="272">1 min</text>
+      <text x="610" y="272">1 hour</text>
+      <text x="720" y="272">1 day</text>
+      <text x="830" y="272">2 days</text>
+      <text x="940" y="272">1 week</text>
+      <text x="1040" y="272">weeks</text>
+    </g>
+
+    <!-- Row 1 Shopify -->
+    <text x="104" y="332" font-size="20" font-weight="700" fill="#1a1d18">Shopify overview dashboard</text>
+    <text x="104" y="356" font-size="16" fill="#5b6356">Sales, sessions, fulfilment</text>
+    <rect x="500" y="322" width="26" height="26" rx="13" fill="#496546"/>
+    <text x="540" y="342" font-size="17" fill="#1a1d18">up to date within about 1 minute</text>
+
+    <!-- Row 2 Meta -->
+    <text x="104" y="412" font-size="20" font-weight="700" fill="#1a1d18">Meta Insights</text>
+    <text x="104" y="436" font-size="16" fill="#5b6356">Refreshes every 15 minutes</text>
+    <rect x="500" y="402" width="26" height="26" rx="13" fill="#496546"/>
+    <rect x="526" y="408" width="304" height="14" rx="7" fill="#a9c6a3"/>
+    <text x="848" y="421" font-size="17" fill="#1a1d18">can keep updating for days</text>
+
+    <!-- Row 3 Google Ads -->
+    <text x="104" y="492" font-size="20" font-weight="700" fill="#1a1d18">Google Ads</text>
+    <text x="104" y="516" font-size="16" fill="#5b6356">Cost 1 h; conversions 3 to 15 h</text>
+    <rect x="500" y="482" width="110" height="26" rx="13" fill="#496546"/>
+    <rect x="610" y="488" width="110" height="14" rx="7" fill="#a9c6a3"/>
+    <text x="740" y="501" font-size="17" fill="#1a1d18">late conversions can revise later</text>
+
+    <!-- Row 4 GA4 -->
+    <text x="104" y="572" font-size="20" font-weight="700" fill="#1a1d18">Google Analytics 4</text>
+    <text x="104" y="596" font-size="16" fill="#5b6356">Realtime: minutes; standard: 24 to 48 h</text>
+    <rect x="500" y="562" width="26" height="26" rx="13" fill="#496546"/>
+    <rect x="526" y="568" width="304" height="14" rx="7" fill="#a9c6a3"/>
+    <text x="848" y="581" font-size="17" fill="#1a1d18">standard reports can change</text>
+
+    <!-- Row 5 Refunds -->
+    <text x="104" y="652" font-size="20" font-weight="700" fill="#1a1d18">Refunds and returns</text>
+    <text x="104" y="676" font-size="16" fill="#5b6356">Dated when processed</text>
+    <rect x="720" y="642" width="320" height="26" rx="13" fill="#f7f7f2" stroke="#496546" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="740" y="661" font-size="17" fill="#1a1d18">depends on your return window</text>
+
+    <text x="104" y="772" font-size="17" fill="#5b6356">Dark = documented fast figure. Light = keeps updating. Dashed = varies by store.</text>
+    <text x="104" y="798" font-size="17" fill="#5b6356">Sources: Shopify, Google and Meta help documentation. Timeline is schematic.</text>
+
+    <!-- Right panel -->
+    <rect x="1104" y="200" width="424" height="620" rx="24" fill="#ffffff" stroke="#d8ddd1" stroke-width="2"/>
+    <text x="1136" y="246" font-size="20" font-weight="700" fill="#1a1d18">One illustrative day (₹)</text>
+    <text x="1136" y="274" font-size="16" fill="#5b6356">100 orders, 2,000 average order</text>
+
+    <text x="1136" y="346" font-size="18" fill="#1a1d18">Before ads</text>
+    <rect x="1136" y="360" width="360" height="34" rx="8" fill="#eeefe7"/>
+    <rect x="1136" y="360" width="360" height="34" rx="8" fill="#a9c6a3"/>
+    <text x="1146" y="383" font-size="18" font-weight="700" fill="#1a1d18">45%  (90,000)</text>
+
+    <text x="1136" y="456" font-size="18" fill="#1a1d18">After ad spend 40,000</text>
+    <rect x="1136" y="470" width="360" height="34" rx="8" fill="#eeefe7"/>
+    <rect x="1136" y="470" width="200" height="34" rx="8" fill="#6f9169"/>
+    <text x="1146" y="493" font-size="18" font-weight="700" fill="#1a1d18">25%  (50,000)</text>
+
+    <text x="1136" y="566" font-size="18" fill="#1a1d18">After returns reserve 18,000</text>
+    <rect x="1136" y="580" width="360" height="34" rx="8" fill="#eeefe7"/>
+    <rect x="1136" y="580" width="128" height="34" rx="8" fill="#496546"/>
+    <text x="1146" y="603" font-size="18" font-weight="700" fill="#ffffff">16%</text>
+    <text x="1276" y="603" font-size="18" font-weight="700" fill="#1a1d18">(32,000)</text>
+
+    <text x="1136" y="672" font-size="18" font-weight="700" fill="#496546">POAS 2.25 before reserve</text>
+    <text x="1136" y="700" font-size="18" font-weight="700" fill="#496546">POAS 1.80 after reserve</text>
+    <text x="1136" y="752" font-size="16" fill="#5b6356">Invented numbers to show the gap.</text>
+    <text x="1136" y="776" font-size="16" fill="#5b6356">Not a benchmark for any store.</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Payment cost on the same 60 dollar order by scenario</title>
+  <desc id="d">Bar chart comparing payment cost on a 60 dollar order: Shopify Payments card 3.4 percent, PayPal Checkout 4.3 percent, PayPal cross-border with conversion 9.8 percent, and a lost dispute costing 59.04 dollars.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="80" y="108" font-size="44" font-weight="700" letter-spacing="-1" fill="#1a1d18">Same $60 order, four very different payment costs</text>
+    <text x="80" y="150" font-size="22" fill="#626b5c">Illustrative scenarios using published US rates, retrieved 1 October 2026. Your plan and rates will differ.</text>
+
+    <line x1="80" y1="184" x2="1520" y2="184" stroke="#d8ddd1" stroke-width="2"/>
+
+    <text x="80" y="246" font-size="26" font-weight="700" fill="#1a1d18">Card via Shopify Payments</text>
+    <text x="80" y="278" font-size="20" fill="#626b5c">2.9% + 30¢ (top of US range)</text>
+    <rect x="560" y="226" width="278" height="56" rx="6" fill="#a9c6a3"/>
+    <text x="856" y="264" font-size="28" font-weight="700" fill="#1a1d18">$2.04 · 3.4%</text>
+
+    <text x="80" y="366" font-size="26" font-weight="700" fill="#1a1d18">PayPal Checkout, domestic</text>
+    <text x="80" y="398" font-size="20" fill="#626b5c">3.49% + 49¢</text>
+    <rect x="560" y="346" width="352" height="56" rx="6" fill="#7fa578"/>
+    <text x="930" y="384" font-size="28" font-weight="700" fill="#1a1d18">$2.58 · 4.3%</text>
+
+    <text x="80" y="486" font-size="26" font-weight="700" fill="#1a1d18">PayPal, cross-border + FX</text>
+    <text x="80" y="518" font-size="20" fill="#626b5c">3.49% + 1.50% + 49¢ + 4.00% spread</text>
+    <rect x="560" y="466" width="800" height="56" rx="6" fill="#496546"/>
+    <text x="1378" y="504" font-size="28" font-weight="700" fill="#1a1d18">$5.88 · 9.8%</text>
+
+    <line x1="80" y1="566" x2="1520" y2="566" stroke="#d8ddd1" stroke-width="2"/>
+
+    <rect x="80" y="600" width="1440" height="200" rx="20" fill="#eeefe7" stroke="#d8ddd1" stroke-width="2"/>
+    <text x="120" y="660" font-size="26" font-weight="700" fill="#b85f22">Lost dispute on the Shopify Payments order</text>
+    <text x="120" y="706" font-size="22" fill="#3b4237">Revenue reversed ($60) while costs stay: product $22 + shipping $8 + ads $12 + processing fee $2.04 + dispute fee $15</text>
+    <text x="120" y="752" font-size="22" fill="#3b4237">Net result: −$59.04, about 3.7 normal orders of contribution ($15.96 each) to win back.</text>
+    <text x="1480" y="660" font-size="44" font-weight="700" text-anchor="end" fill="#b85f22">−$59.04</text>
+
+    <text x="80" y="850" font-size="18" fill="#626b5c">Concept illustration, not a screenshot. Order total $60, product $22, shipping $8, ads $12 are invented for the example.</text>
+  </g>
+</svg>

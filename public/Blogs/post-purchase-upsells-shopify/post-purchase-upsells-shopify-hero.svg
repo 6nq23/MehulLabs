@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="t">Post-purchase upsell flow on Shopify</title>
+  <desc id="d">Three stages: order paid, one-click offer shown before the thank-you page, and a profit check of the accepted offer.</desc>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="60" cy="40" r="260" fill="#eeefe7"/>
+  <circle cx="1480" cy="60" r="300" fill="#eeefe7"/>
+  <circle cx="1500" cy="900" r="320" fill="#a9c6a3" opacity="0.55"/>
+  <circle cx="80" cy="900" r="170" fill="#e08a4a" opacity="0.9"/>
+
+  <rect x="72" y="150" width="36" height="3" fill="#496546"/>
+  <text x="122" y="158" font-size="22" font-weight="700" letter-spacing="3" fill="#496546">POST-PURCHASE UPSELLS</text>
+  <text x="72" y="250" font-size="68" font-weight="700" fill="#1a1d18" letter-spacing="-1.5">Sell once more, after the sale</text>
+  <text x="72" y="310" font-size="30" fill="#4a5045">The offer appears after payment and before the thank-you page.</text>
+
+  <!-- Card 1 -->
+  <g>
+    <rect x="72" y="380" width="430" height="400" rx="28" fill="#eeefe7" stroke="#d8ddd1" stroke-width="2"/>
+    <rect x="72" y="690" width="430" height="90" rx="0" fill="#1f3a26"/>
+    <path d="M72 690 H502 V752 a28 28 0 0 1 -28 28 H100 a28 28 0 0 1 -28 -28 Z" fill="#1f3a26"/>
+    <rect x="72" y="690" width="430" height="6" fill="#1f3a26"/>
+    <circle cx="287" cy="500" r="56" fill="#ffffff" stroke="#d8ddd1" stroke-width="2"/>
+    <path d="M260 500 l18 18 l34 -38" fill="none" stroke="#496546" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="287" y="608" font-size="30" font-weight="700" fill="#1a1d18" text-anchor="middle">Order paid</text>
+    <text x="287" y="648" font-size="23" fill="#4a5045" text-anchor="middle">Card payment captured</text>
+    <text x="287" y="746" font-size="27" font-weight="700" fill="#f7f7f2" text-anchor="middle">Step 1</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M520 580 H578" stroke="#496546" stroke-width="5" stroke-linecap="round"/>
+  <path d="M566 564 L584 580 L566 596" fill="none" stroke="#496546" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Card 2 -->
+  <g>
+    <rect x="600" y="380" width="430" height="400" rx="28" fill="#ffffff" stroke="#496546" stroke-width="3"/>
+    <path d="M600 690 H1030 V752 a28 28 0 0 1 -28 28 H628 a28 28 0 0 1 -28 -28 Z" fill="#496546"/>
+    <rect x="650" y="410" width="330" height="36" rx="18" fill="#a9c6a3"/>
+    <text x="815" y="435" font-size="20" font-weight="700" fill="#1f3a26" text-anchor="middle">ONE-CLICK OFFER</text>
+    <rect x="690" y="470" width="110" height="110" rx="16" fill="#eeefe7" stroke="#d8ddd1" stroke-width="2"/>
+    <path d="M722 505 l23 -14 l23 14 v34 l-23 14 l-23 -14 z" fill="none" stroke="#496546" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M722 505 l23 14 l23 -14 M745 519 v34" fill="none" stroke="#496546" stroke-width="5" stroke-linejoin="round"/>
+    <text x="826" y="512" font-size="26" font-weight="700" fill="#1a1d18">Refill pack</text>
+    <text x="826" y="548" font-size="22" fill="#6b7265" text-decoration="line-through">₹940</text>
+    <text x="896" y="548" font-size="26" font-weight="700" fill="#1f3a26">₹800</text>
+    <rect x="650" y="608" width="330" height="56" rx="14" fill="#1a1d18"/>
+    <text x="815" y="645" font-size="25" font-weight="700" fill="#f7f7f2" text-anchor="middle">Pay now · ₹800</text>
+    <text x="815" y="746" font-size="27" font-weight="700" fill="#f7f7f2" text-anchor="middle">Step 2</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M1048 580 H1106" stroke="#496546" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1094 564 L1112 580 L1094 596" fill="none" stroke="#496546" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Card 3 -->
+  <g>
+    <rect x="1128" y="380" width="400" height="400" rx="28" fill="#eeefe7" stroke="#d8ddd1" stroke-width="2"/>
+    <path d="M1128 690 H1528 V752 a28 28 0 0 1 -28 28 H1156 a28 28 0 0 1 -28 -28 Z" fill="#1f3a26"/>
+    <line x1="1180" y1="600" x2="1476" y2="600" stroke="#d8ddd1" stroke-width="3"/>
+    <rect x="1190" y="450" width="56" height="150" fill="#d8ddd1"/>
+    <rect x="1266" y="510" width="56" height="90" fill="#a9c6a3"/>
+    <rect x="1342" y="540" width="56" height="60" fill="#a9c6a3"/>
+    <rect x="1418" y="520" width="56" height="80" fill="#496546"/>
+    <text x="1328" y="638" font-size="23" fill="#4a5045" text-anchor="middle">Price, costs, returns, profit</text>
+    <text x="1328" y="746" font-size="27" font-weight="700" fill="#f7f7f2" text-anchor="middle">Step 3: Profit check</text>
+  </g>
+
+  <text x="1528" y="860" font-size="20" fill="#4a5045" text-anchor="end">Illustrative flow, amounts are examples only. Not a Shopify screenshot.</text>
+</svg>

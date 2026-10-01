@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">15-point Shopify holiday readiness audit map</title>
+  <desc id="d">Diagram of 15 audit checks in six groups, each marked by risk type: loses orders, leaks margin or hides data. Shape and colour both encode risk.</desc>
+  <style>
+    text { font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; fill: #1a1d18; }
+    .eyebrow { font-size: 19px; font-weight: 700; letter-spacing: 4px; fill: #496546; }
+    .title { font-size: 54px; font-weight: 700; letter-spacing: -2px; }
+    .gh { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+    .n { font-size: 20px; font-weight: 700; fill: #496546; }
+    .nm { font-size: 21px; font-weight: 700; }
+    .mt { font-size: 17px; fill: #4b5347; }
+    .lg { font-size: 18px; font-weight: 600; }
+    .ft { font-size: 17px; fill: #5c6558; }
+  </style>
+  <rect width="1600" height="900" fill="#f7f7f2"/>
+  <circle cx="1560" cy="-30" r="260" fill="#eeefe7"/>
+  <line x1="80" y1="70" x2="108" y2="70" stroke="#496546" stroke-width="3"/>
+  <text x="122" y="77" class="eyebrow">THE 15-POINT HOLIDAY READINESS AUDIT</text>
+  <text x="80" y="140" class="title">Where each check protects the store</text>
+<circle cx="89" cy="186" r="9" fill="#d9773a"/><text x="108" y="192" class="lg">Loses orders</text>
+<rect x="282" y="178" width="16" height="16" rx="3" fill="#496546"/><text x="308" y="192" class="lg">Leaks margin or cash</text>
+<path d="M550 175 L561 186 L550 197 L539 186 Z" fill="#7c8777"/><text x="570" y="192" class="lg">Hides data</text>
+<rect x="80" y="218" width="464" height="300" rx="22" fill="#eeefe7" stroke="#d8ddd1"/>
+<text x="108" y="264" class="gh">Speed &amp; checkout</text>
+<line x1="108" y1="282" x2="516" y2="282" stroke="#d8ddd1"/>
+<circle cx="122" cy="314" r="9" fill="#d9773a"/>
+<text x="146" y="318" class="nm"><tspan class="n">1.</tspan> Core Web Vitals on mobile</text>
+<text x="146" y="342" class="mt">LCP 2.5s · INP 200ms · CLS 0.1 or better</text>
+<path d="M122 369 L133 380 L122 391 L111 380 Z" fill="#7c8777"/>
+<text x="146" y="384" class="nm"><tspan class="n">2.</tspan> Apps and legacy scripts</text>
+<text x="146" y="408" class="mt">Thank-you page tracking still fires</text>
+<circle cx="122" cy="446" r="9" fill="#d9773a"/>
+<text x="146" y="450" class="nm"><tspan class="n">3.</tspan> Mobile test orders</text>
+<text x="146" y="474" class="mt">56.4% of 2025 holiday online orders were mobile</text>
+<rect x="568" y="218" width="464" height="300" rx="22" fill="#eeefe7" stroke="#d8ddd1"/>
+<text x="596" y="264" class="gh">Payments</text>
+<line x1="596" y1="282" x2="1004" y2="282" stroke="#d8ddd1"/>
+<circle cx="610" cy="314" r="9" fill="#d9773a"/>
+<text x="634" y="318" class="nm"><tspan class="n">4.</tspan> Wallets and local methods</text>
+<text x="634" y="342" class="mt">Apple Pay, Google Pay, PayPal, BNPL</text>
+<rect x="602" y="372" width="16" height="16" rx="3" fill="#496546"/>
+<text x="634" y="384" class="nm"><tspan class="n">5.</tspan> Payouts and disputes</text>
+<text x="634" y="408" class="mt">Verify account details before peak</text>
+<rect x="1056" y="218" width="464" height="300" rx="22" fill="#eeefe7" stroke="#d8ddd1"/>
+<text x="1084" y="264" class="gh">Shipping &amp; returns</text>
+<line x1="1084" y1="282" x2="1492" y2="282" stroke="#d8ddd1"/>
+<circle cx="1098" cy="314" r="9" fill="#d9773a"/>
+<text x="1122" y="318" class="nm"><tspan class="n">6.</tspan> Total cost before checkout</text>
+<text x="1122" y="342" class="mt">40% of abandoners cite extra costs</text>
+<circle cx="1098" cy="380" r="9" fill="#d9773a"/>
+<text x="1122" y="384" class="nm"><tspan class="n">7.</tspan> Ship-by dates and cutoffs</text>
+<text x="1122" y="408" class="mt">UPS, FedEx, DHL published schedules</text>
+<rect x="1090" y="438" width="16" height="16" rx="3" fill="#496546"/>
+<text x="1122" y="450" class="nm"><tspan class="n">8.</tspan> Returns policy and reserve</text>
+<text x="1122" y="474" class="mt">17% of 2025 holiday sales returned</text>
+<rect x="80" y="538" width="464" height="300" rx="22" fill="#eeefe7" stroke="#d8ddd1"/>
+<text x="108" y="584" class="gh">Inventory</text>
+<line x1="108" y1="602" x2="516" y2="602" stroke="#d8ddd1"/>
+<circle cx="122" cy="634" r="9" fill="#d9773a"/>
+<text x="146" y="638" class="nm"><tspan class="n">9.</tspan> Hero SKU and bundle cover</text>
+<text x="146" y="662" class="mt">Lead time plus safety stock</text>
+<circle cx="122" cy="700" r="9" fill="#d9773a"/>
+<text x="146" y="704" class="nm"><tspan class="n">10.</tspan> Low-stock alerts</text>
+<text x="146" y="728" class="mt">Shopify Flow or an inventory app</text>
+<rect x="568" y="538" width="464" height="300" rx="22" fill="#eeefe7" stroke="#d8ddd1"/>
+<text x="596" y="584" class="gh">Tracking</text>
+<line x1="596" y1="602" x2="1004" y2="602" stroke="#d8ddd1"/>
+<path d="M610 623 L621 634 L610 645 L599 634 Z" fill="#7c8777"/>
+<text x="634" y="638" class="nm"><tspan class="n">11.</tspan> Purchase events deduplicated</text>
+<text x="634" y="662" class="mt">event_id match within 48 hours</text>
+<path d="M610 689 L621 700 L610 711 L599 700 Z" fill="#7c8777"/>
+<text x="634" y="704" class="nm"><tspan class="n">12.</tspan> Platform vs Shopify revenue</text>
+<text x="634" y="728" class="mt">Reconcile weekly during the sale</text>
+<rect x="1056" y="538" width="464" height="300" rx="22" fill="#eeefe7" stroke="#d8ddd1"/>
+<text x="1084" y="584" class="gh">Profit checks</text>
+<line x1="1084" y1="602" x2="1492" y2="602" stroke="#d8ddd1"/>
+<rect x="1090" y="626" width="16" height="16" rx="3" fill="#496546"/>
+<text x="1122" y="638" class="nm"><tspan class="n">13.</tspan> Margin per hero SKU</text>
+<text x="1122" y="662" class="mt">Contribution before discount and ads</text>
+<rect x="1090" y="692" width="16" height="16" rx="3" fill="#496546"/>
+<text x="1122" y="704" class="nm"><tspan class="n">14.</tspan> Discount stack test</text>
+<text x="1122" y="728" class="mt">Up to 5 product/order codes + 1 shipping</text>
+<rect x="1090" y="758" width="16" height="16" rx="3" fill="#496546"/>
+<text x="1122" y="770" class="nm"><tspan class="n">15.</tspan> Ad ceiling and cash reserve</text>
+<text x="1122" y="794" class="mt">POAS cap, returns reserve set</text>
+<text x="80" y="868" class="ft">Illustrative audit map. Stats: Baymard Institute, NRF, Adobe; thresholds: Google web.dev; discount and dedupe rules: Shopify, Meta. Not a screenshot.</text>
+</svg>
