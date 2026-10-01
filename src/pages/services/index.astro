@@ -8,8 +8,7 @@ import { Approach } from '@/components/sections/Approach';
 import { Faq } from '@/components/sections/Faq';
 import { Contact } from '@/components/sections/Contact';
 import OperatingExperience from '@/components/ui/OperatingExperience.astro';
-import { beeCharacters } from '@/data/bees';
-const { image: marketingBee } = beeCharacters.marketing;
+import salesAgentBee from '../../../asset/individual-bees/04-shopify-sales-agent-no-name.png';
 ---
 <Layout>
   <section id="top" class="growth-hero">
@@ -21,7 +20,7 @@ const { image: marketingBee } = beeCharacters.marketing;
         <div class="growth-actions"><a class="growth-button" href={site.bookingUrl} data-cta-location="home-audit">Book a free audit call <span aria-hidden="true">↗</span></a><a class="growth-text-link" href="/products">Explore products <span aria-hidden="true">↗</span></a></div>
         <p class="growth-note">Start with a free 30-minute audit. Get a written scope before paid work.</p>
       </div>
-      <figure class="growth-diagram"><img src={marketingBee.src} width="640" height="640" alt="Specialist agent workflow" fetchpriority="high" /><figcaption>How we scope a connected workflow · illustrative example</figcaption></figure>
+      <figure class="growth-diagram"><img src={salesAgentBee.src} width="640" height="640" alt="Shopify sales agent" fetchpriority="high" /><figcaption>How we scope a connected workflow · illustrative example</figcaption></figure>
     </div>
     <div class="shell"><div class="growth-trust"><span>Built from Mehul’s own brand operations</span><span>Start with one problem</span><span>Clear scope. Client-owned accounts.</span></div></div>
   </section>

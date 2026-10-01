@@ -921,13 +921,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .seo-breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
 .seo-breadcrumbs li + li::before { content: '/'; margin-right: 8px; opacity: .45; }
 .seo-breadcrumbs a { text-decoration: underline; text-underline-offset: 3px; }
-.seo-breadcrumbs + .growth-page .growth-page-hero, .seo-breadcrumbs + .service-page .service-hero, .seo-breadcrumbs + .tools-page .tools-masthead, .seo-breadcrumbs + .calculator-page .calculator-hero, .seo-breadcrumbs + .offers-page .offers-hero { padding-top: 36px; }
+.seo-breadcrumbs + .growth-hero, .seo-breadcrumbs + .growth-page .growth-page-hero, .seo-breadcrumbs + .service-page .service-hero, .seo-breadcrumbs + .tools-page .tools-masthead, .seo-breadcrumbs + .calculator-page .calculator-hero, .seo-breadcrumbs + .offers-page .offers-hero { padding-top: 36px; }
 .seo-help-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .seo-help-grid p { line-height: 1.75; }
 .seo-related { display: flex; flex-wrap: wrap; gap: 14px 24px; margin-top: 24px; }
 @media (max-width: 720px) { .seo-help-grid { grid-template-columns: 1fr; } .seo-breadcrumbs { padding-top: 95px; } }
 
-.seo-breadcrumbs + .service-page .service-hero { padding-top: 0; }
+.seo-breadcrumbs + .service-page .service-hero, .seo-breadcrumbs + .tools-page .tools-masthead { padding-top: 0; }
+.seo-breadcrumbs + .tools-page .tools-masthead-inner { min-height: 0; padding-top: 32px; }
 .seo-breadcrumbs + .service-page .service-hero-inner { min-height: 0; padding-top: 32px; }
 .seo-breadcrumbs + .service-page .service-hero-grid { min-height: 0; padding-top: 24px; align-items: center; }
 .seo-breadcrumbs + .service-page .service-hero h1 { max-width: 18ch; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1.05; }

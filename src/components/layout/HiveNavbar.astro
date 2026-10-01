@@ -9,7 +9,6 @@ import { site } from '@/data/site';
     <a class="hive-wordmark" href="/" aria-label="MlabsGrowth home"><span>Mlabs</span>Growth</a>
 
     <div class="hive-nav-links">
-      <a href="/">Home</a>
       <div class="hive-services-entry">
         <a href="/services">Services</a>
         <details class="hive-services-menu" data-hive-menu>
@@ -52,7 +51,6 @@ import { site } from '@/data/site';
     <details class="hive-mobile-menu" data-hive-menu>
       <summary aria-label="Open navigation menu"><span></span><span></span></summary>
       <div class="hive-mobile-panel">
-        <a href="/">Home</a>
         <a href="/services">Services</a>
         <div class="hive-mobile-services">
           {serviceRoutes.map((service) => <a href={`/services/${service.slug}`}>{service.navLabel}</a>)}
@@ -145,7 +143,7 @@ import { site } from '@/data/site';
 
 <style>
   .hive-header { --hive-scroll: 0; position: fixed; z-index: 50; inset: 0 0 auto; padding: 24px clamp(20px,4vw,40px) 0; color: #131313; pointer-events: none; }
-  .hive-nav { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: var(--hive-nav-width, 100%); max-width: 1600px; min-height: 72px; margin-inline: auto; padding: 6px 8px 6px calc(6px + var(--hive-scroll) * 28px); border: 1px solid rgba(255, 255, 255, calc(.2 + var(--hive-scroll) * .8)); border-radius: 999px; background: rgba(255, 255, 255, calc(.3 + var(--hive-scroll) * .67)); box-shadow: 0 10px 40px rgba(0,0,0,calc(var(--hive-scroll) * .06)); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); pointer-events: auto; transition: width .4s cubic-bezier(.22,1,.36,1), box-shadow .3s, background .3s; }
+  .hive-nav { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: var(--hive-nav-width, 100%); max-width: 1600px; min-height: 72px; margin-inline: auto; padding: 6px 8px 6px calc(6px + var(--hive-scroll) * 28px); border: 1px solid rgba(220, 220, 220, calc(var(--hive-scroll) * .5)); border-radius: 999px; background: rgba(255, 255, 255, calc(var(--hive-scroll) * .75)); box-shadow: 0 10px 40px rgba(0,0,0,calc(var(--hive-scroll) * .06)); backdrop-filter: blur(calc(var(--hive-scroll) * 20px)); -webkit-backdrop-filter: blur(calc(var(--hive-scroll) * 20px)); pointer-events: auto; transition: width .4s cubic-bezier(.22,1,.36,1), box-shadow .3s, background .3s; }
   a { color: inherit; text-decoration: none; }
   a:focus-visible,summary:focus-visible { outline: 2px solid #996400; outline-offset: 4px; }
   .hive-wordmark { display: inline-flex; align-items: center; flex: 0 0 auto; min-height: 44px; font-family: var(--font-display), sans-serif; font-size: 27px; font-weight: 850; line-height: 1; letter-spacing: -.095em; }
@@ -178,7 +176,7 @@ import { site } from '@/data/site';
   }
   @media (max-width: 1000px) {
     .hive-header { padding: 18px 20px 0; }
-    .hive-nav { width: 100%; min-height: 68px; padding: 7px 9px 7px 24px; background: rgba(255,255,255,0.97); }
+    .hive-nav { width: 100%; min-height: 68px; padding: 7px 9px 7px 24px; }
     .hive-nav-links,.hive-nav > .hive-nav-cta { display: none; }
     .hive-mobile-menu { display: block; }
     .hive-mobile-menu > summary { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 50px; height: 50px; border-radius: 50%; background: #ffcc1e; cursor: pointer; list-style: none; }
