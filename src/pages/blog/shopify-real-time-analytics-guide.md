@@ -3,8 +3,8 @@ layout: ../../layouts/BlogPostLayout.astro
 draft: false
 title: "Shopify Real-Time Analytics: What to Track Daily"
 description: "Shopify's dashboard updates within about a minute, but profit does not. See the 5 profit-first metrics to track daily and what real-time data can't show you."
-publishedOn: "2026-10-05"
-updatedOn: "2026-10-05"
+publishedOn: "2026-10-01"
+updatedOn: "2026-10-01"
 category: "Analytics"
 author: "Mehul"
 readTime: "10 min read"
