@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
   <title id="t">How quickly each analytics number settles</title>
   <desc id="d">Left: a not-to-scale timeline of documented data freshness for Shopify, Meta, Google Ads and Google Analytics 4, plus refunds that post when processed. Right: an illustrative day where contribution margin falls from 45 percent before ads to 25 percent after ads and 16 percent after a returns reserve.</desc>
-  <rect width="1600" height="900" fill="#f7f7f2"/>
-  <circle cx="1560" cy="40" r="210" fill="#eeefe7"/>
+  <style>
+    [fill="#eeefe7"] { fill: #fff4b8; }
+    [fill="#a9c6a3"] { fill: #ffd400; }
+    [fill="#496546"] { fill: #b08c00; }
+    [fill="#6f9169"] { fill: #e4b900; }
+    [fill="#1a1d18"] { fill: #0a0a0a; }
+    [fill="#5b6356"] { fill: #2b2b2b; }
+    [fill="#d8ddd1"] { fill: #e5d477; }
+    [fill="#f7f7f2"] { fill: #fffbe8; }
+    [stroke="#496546"] { stroke: #b08c00; }
+    [stroke="#d8ddd1"] { stroke: #e5d477; }
+  </style>
+  <rect width="1600" height="900" fill="#fffbe8"/>
+  <circle cx="1560" cy="40" r="210" fill="#fff4b8"/>
   <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
     <line x1="72" y1="92" x2="100" y2="92" stroke="#496546" stroke-width="3"/>
     <text x="114" y="99" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">WHEN EACH NUMBER CAN BE TRUSTED</text>
