@@ -204,7 +204,7 @@ For peak season, run the workflow for at least a month before your biggest sale.
 
 <section class="blog-cta">
   <h2>Confirm every COD order before it ships</h2>
-  <p>mlabs Growth builds COD confirmation workflows with WhatsApp, AI calling and Shopify Flow, inside your own accounts, then measures the RTO change against a hold-out group.</p>
+  <p>MlabsGrowth builds COD confirmation workflows with WhatsApp, AI calling and Shopify Flow, inside your own accounts, then measures the RTO change against a hold-out group.</p>
   <p><a href="/services/order-operations">Explore COD confirmation and order automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

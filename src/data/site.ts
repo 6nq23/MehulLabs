@@ -6,7 +6,7 @@ if (canonicalOrigin && (canonicalOrigin.protocol !== 'https:' || canonicalOrigin
 
 /** Public brand information. Configure contact details and the canonical URL before launch. */
 export const site = {
-  name: 'mlabs Growth',
+  name: 'MlabsGrowth',
   founder: 'Mehul',
   role: 'AI workflows, products and brand services',
   tagline:
@@ -28,11 +28,11 @@ export const contactEmail =
 
 export const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/#services' },
+  { label: 'Services', href: '/services' },
   { label: 'Products', href: '/products' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
-  { label: 'FAQs', href: '/#faq' },
+  { label: 'FAQs', href: '/services#faq' },
   { label: 'Pricing & scope', href: '/offers' },
   { label: 'Free tools', href: '/tools' },
   { label: 'Guides', href: '/guides' },

@@ -5,7 +5,7 @@ import { pageSeo } from '@/data/seo';
 
 interface BlogModule {
   url: string;
-  frontmatter: { publishedOn: string; updatedOn?: string };
+  frontmatter: { publishedOn: string; updatedOn?: string; draft?: boolean };
 }
 
 // Astro discovers Markdown routes at build time, including newly added articles.
@@ -23,6 +23,7 @@ const escapeXml = (value: string) =>
 export const GET = (() => {
   const routes = new Map<string, string | undefined>(Object.keys(pageSeo).map(path => [path, undefined]));
   for (const { url, frontmatter } of Object.values(posts)) {
+    if (frontmatter.draft) continue;
     const date = frontmatter.updatedOn || frontmatter.publishedOn;
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !Number.isFinite(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date) {
       throw new Error(`Invalid blog sitemap date for ${url}: expected YYYY-MM-DD`);

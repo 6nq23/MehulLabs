@@ -185,7 +185,7 @@ Prompt 10 shows the boundary: Sidekick can compare apps, but the messaging runs 
 
 <section class="blog-cta">
   <h2>Automate the work Sidekick cannot reach</h2>
-  <p>mlabs Growth builds AI workflows that connect Shopify with courier, WhatsApp, calling, ad and reporting tools, with your brand rules and approval steps built in.</p>
+  <p>MlabsGrowth builds AI workflows that connect Shopify with courier, WhatsApp, calling, ad and reporting tools, with your brand rules and approval steps built in.</p>
   <p><a href="/services/ai-automation">Explore AI marketing workflow automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

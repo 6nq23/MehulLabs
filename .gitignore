@@ -17,5 +17,10 @@ tsconfig.tsbuildinfo
 /.frames-src
 /.codex-review
 
+# Keep the editable source for the two homepage motion videos. Each Remotion
+# project's own .gitignore excludes node_modules and local render outputs.
+/video-project/*
+!/video-project/marketing-brain-flow/
+
 .agents
 /.claude

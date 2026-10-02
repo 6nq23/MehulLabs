@@ -1,0 +1,205 @@
+---
+import { serviceRoutes } from '@/data/services';
+import { tools } from '@/data/tools';
+import { site } from '@/data/site';
+---
+
+<header class="hive-header" data-hive-header>
+  <nav class="hive-nav" aria-label="Main navigation">
+    <a class="hive-wordmark" href="/" aria-label="MlabsGrowth home"><span>Mlabs</span>Growth</a>
+
+    <div class="hive-nav-links">
+      <div class="hive-services-entry">
+        <a href="/services">Services</a>
+        <details class="hive-services-menu" data-hive-menu>
+          <summary aria-label="Open Services menu">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 6.5 3.5 3 3.5-3" /></svg>
+          </summary>
+          <div class="hive-services-panel">
+            <a href="/services"><span>All services</span><small>Explore how we help your business grow.</small></a>
+            {serviceRoutes.map((service) => (
+              <a href={`/services/${service.slug}`}><span>{service.navLabel}</span><small>{service.navDescription}</small></a>
+            ))}
+          </div>
+        </details>
+      </div>
+      <div class="hive-services-entry">
+        <a href="/tools">Free tools</a>
+        <details class="hive-services-menu" data-hive-menu>
+          <summary aria-label="Open Tools menu">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 6.5 3.5 3 3.5-3" /></svg>
+          </summary>
+          <div class="hive-services-panel">
+            <a href="/tools"><span>All tools</span><small>Explore our free ecommerce calculators.</small></a>
+            {tools.map((tool) => (
+              <a href={`/tools/${tool.slug}`}><span>{tool.title}</span><small>{tool.description}</small></a>
+            ))}
+          </div>
+        </details>
+      </div>
+      <a href="/products">Products</a>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/offers">Pricing &amp; scope</a>
+    </div>
+
+    <a class="hive-nav-cta" href={site.bookingUrl} data-cta-location="home-navigation">
+      <span>Book a call</span>
+      <span class="hive-cta-arrow" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m7.5 4.5 5.5 5.5-5.5 5.5" /></svg></span>
+    </a>
+
+    <details class="hive-mobile-menu" data-hive-menu>
+      <summary aria-label="Open navigation menu"><span></span><span></span></summary>
+      <div class="hive-mobile-panel">
+        <a href="/services">Services</a>
+        <div class="hive-mobile-services">
+          {serviceRoutes.map((service) => <a href={`/services/${service.slug}`}>{service.navLabel}</a>)}
+        </div>
+        <a href="/tools">Free tools</a>
+        <div class="hive-mobile-services">
+          {tools.map((tool) => <a href={`/tools/${tool.slug}`}>{tool.title}</a>)}
+        </div>
+        <a href="/products">Products</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/offers">Pricing &amp; scope</a>
+        <a class="hive-nav-cta hive-mobile-cta" href={site.bookingUrl} data-cta-location="home-navigation">
+          <span>Book a call</span>
+          <span class="hive-cta-arrow" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m7.5 4.5 5.5 5.5-5.5 5.5" /></svg></span>
+        </a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<script>
+  const header = document.querySelector('[data-hive-header]');
+
+  if (header) {
+    const menus = [...header.querySelectorAll('[data-hive-menu]')];
+    const mobile = window.matchMedia('(max-width: 1000px)');
+    let frame = 0;
+
+    const updateHeader = () => {
+      frame = 0;
+      const progress = Math.min(Math.max(window.scrollY / 250, 0), 1);
+      const availableWidth = Math.max(280, window.innerWidth - Math.max(48, Math.min(140, window.innerWidth * .08)));
+      const wideWidth = Math.min(1600, availableWidth);
+      const compactWidth = Math.min(1100, availableWidth);
+      header.style.setProperty('--hive-nav-width', `${wideWidth - (wideWidth - compactWidth) * progress}px`);
+      header.style.setProperty('--hive-scroll', String(progress));
+    };
+
+    const scheduleUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(updateHeader);
+    };
+
+    const closeMenus = (restoreFocus = false) => {
+      menus.forEach((menu) => {
+        if (!menu.open) return;
+        menu.open = false;
+        if (restoreFocus) menu.querySelector('summary')?.focus();
+      });
+    };
+
+    menus.forEach((menu) => {
+      const summary = menu.querySelector('summary');
+      const isMobile = menu.classList.contains('hive-mobile-menu');
+      menu.addEventListener('toggle', () => {
+        summary?.setAttribute('aria-label', menu.open
+          ? (isMobile ? 'Close navigation menu' : 'Close Services menu')
+          : (isMobile ? 'Open navigation menu' : 'Open Services menu'));
+      });
+      menu.addEventListener('click', (event) => {
+        if (event.target instanceof Element && event.target.closest('a')) menu.open = false;
+      });
+    });
+
+    document.addEventListener('pointerdown', (event) => {
+      if (!(event.target instanceof Node)) return;
+      menus.forEach((menu) => {
+        if (menu.open && !menu.contains(event.target)) menu.open = false;
+      });
+    });
+    document.addEventListener('focusin', (event) => {
+      if (!(event.target instanceof Node)) return;
+      menus.forEach((menu) => {
+        if (menu.open && !menu.contains(event.target)) menu.open = false;
+      });
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menus.some((menu) => menu.open)) {
+        event.preventDefault();
+        closeMenus(true);
+      }
+    });
+    mobile.addEventListener('change', () => closeMenus());
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('pageshow', scheduleUpdate);
+    updateHeader();
+  }
+</script>
+
+<style>
+  .hive-header { --hive-scroll: 0; position: fixed; z-index: 50; inset: 0 0 auto; padding: 24px clamp(20px,4vw,40px) 0; color: #131313; pointer-events: none; }
+  .hive-nav { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: var(--hive-nav-width, 100%); max-width: 1600px; min-height: 72px; margin-inline: auto; padding: 6px 8px 6px calc(6px + var(--hive-scroll) * 28px); border: 1px solid rgba(220, 220, 220, calc(var(--hive-scroll) * .5)); border-radius: 999px; background: rgba(255, 255, 255, calc(var(--hive-scroll) * .75)); box-shadow: 0 10px 40px rgba(0,0,0,calc(var(--hive-scroll) * .06)); backdrop-filter: blur(calc(var(--hive-scroll) * 20px)); -webkit-backdrop-filter: blur(calc(var(--hive-scroll) * 20px)); pointer-events: auto; transition: width .4s cubic-bezier(.22,1,.36,1), box-shadow .3s, background .3s; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible,summary:focus-visible { outline: 2px solid #996400; outline-offset: 4px; }
+  .hive-wordmark { display: inline-flex; align-items: center; flex: 0 0 auto; min-height: 44px; font-family: var(--font-display), sans-serif; font-size: 27px; font-weight: 850; line-height: 1; letter-spacing: -.095em; }
+  .hive-wordmark span { color: #ffcb16; }
+  .hive-nav-links { display: flex; align-items: center; justify-content: center; gap: clamp(16px,2.2vw,34px); font-size: 15.5px; font-weight: 600; color: #131313; }
+  .hive-nav-links > a,.hive-services-entry > a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; transition: opacity .2s; }
+  .hive-nav-links > a:hover,.hive-services-entry > a:hover { opacity: .6; }
+  .hive-services-entry { position: relative; display: flex; align-items: center; }
+  .hive-services-menu summary { display: flex; align-items: center; justify-content: center; width: 24px; height: 44px; margin-left: 2px; cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  .hive-services-menu summary svg { width: 12px; height: 12px; transition: transform .2s; stroke-width: 2.5; }
+  .hive-services-menu[open] summary svg { transform: rotate(180deg); }
+  svg path { fill: none; stroke: currentColor; stroke-width: inherit; stroke-linecap: round; stroke-linejoin: round; }
+  .hive-services-panel { position: absolute; top: calc(100% + 15px); left: -16px; width: 335px; padding: 9px; border: 1px solid #ede9e1; border-radius: 22px; background: #fffefb; box-shadow: 0 15px 45px #493b1b16; }
+  .hive-services-panel a { display: flex; flex-direction: column; justify-content: center; gap: 5px; min-height: 66px; padding: 12px 16px; border-radius: 14px; }
+  .hive-services-panel a:hover { background: #f7f4ed; }
+  .hive-services-panel span { font-size: 14px; font-weight: 700; }
+  .hive-services-panel small { color: #76767c; font-size: 12px; line-height: 1.4; }
+  .hive-nav-cta { display: inline-flex; align-items: center; justify-content: space-between; flex: 0 0 auto; gap: 14px; min-height: 58px; padding: 5px 6px 5px 26px; border-radius: 999px; background: #facc15; font-size: 16px; font-weight: 750; white-space: nowrap; box-shadow: 0 6px 15px rgba(0,0,0,0.06), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); transition: transform .2s, box-shadow .2s; }
+  .hive-nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,0.08), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); }
+  .hive-cta-arrow { display: grid; place-items: center; flex: 0 0 auto; width: 46px; height: 46px; border: none; border-radius: 50%; background: linear-gradient(180deg, #ffe066 0%, #ffc000 100%); box-shadow: inset 0 2px 3px rgba(255,255,255,0.9), 0 2px 5px rgba(0,0,0,0.15); transition: transform .2s; }
+  .hive-nav-cta:hover .hive-cta-arrow { transform: scale(1.05); }
+  .hive-cta-arrow svg { width: 20px; height: 20px; stroke-width: 1.5; }
+  .hive-mobile-menu { display: none; }
+  @media (max-width: 1100px) {
+    .hive-nav { gap: 18px; padding-left: 24px; }
+    .hive-nav-links { gap: 14px; font-size: 14px; }
+    .hive-wordmark { font-size: 26px; }
+    .hive-nav-cta { gap: 12px; padding-left: 20px; font-size: 15px; min-height: 52px; }
+    .hive-cta-arrow { width: 40px; height: 40px; }
+  }
+  @media (max-width: 1000px) {
+    .hive-header { padding: 18px 20px 0; }
+    .hive-nav { width: 100%; min-height: 68px; padding: 7px 9px 7px 24px; }
+    .hive-nav-links,.hive-nav > .hive-nav-cta { display: none; }
+    .hive-mobile-menu { display: block; }
+    .hive-mobile-menu > summary { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 50px; height: 50px; border-radius: 50%; background: #ffcc1e; cursor: pointer; list-style: none; }
+    .hive-mobile-menu > summary span { display: block; width: 18px; height: 1.5px; background: #151515; transition: transform .2s; }
+    .hive-mobile-menu[open] > summary span:first-child { transform: translateY(3.75px) rotate(45deg); }
+    .hive-mobile-menu[open] > summary span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+    .hive-mobile-panel { position: absolute; top: calc(100% + 12px); left: 0; right: 0; display: grid; padding: 15px; max-height: calc(100svh - 124px); overflow-y: auto; border: 1px solid #ede9e1; border-radius: 25px; background: #fffefb; box-shadow: 0 15px 45px #493b1b16; }
+    .hive-mobile-panel > a:not(.hive-mobile-cta) { display: flex; align-items: center; min-height: 46px; padding: 10px 15px; border-radius: 12px; font-size: 16px; font-weight: 650; }
+    .hive-mobile-panel > a:not(.hive-mobile-cta):hover,.hive-mobile-services a:hover { background: #f7f4ed; }
+    .hive-mobile-services { display: grid; margin: 0 0 6px 15px; padding-left: 13px; border-left: 1px solid #eee7d9; }
+    .hive-mobile-services a { display: flex; align-items: center; min-height: 44px; padding: 9px 12px; border-radius: 10px; color: #73737a; font-size: 14px; }
+    .hive-mobile-cta { margin-top: 12px; padding-left: 23px; font-size: 15px; }
+  }
+  @media (max-width: 480px) {
+    .hive-header { padding: 12px 14px 0; }
+    .hive-nav { min-height: 64px; padding: 6px 7px 6px 20px; }
+    .hive-wordmark { font-size: 25px; }
+    .hive-mobile-menu > summary { width: 48px; height: 48px; }
+    .hive-mobile-panel { max-height: calc(100svh - 108px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hive-nav,.hive-nav-cta,.hive-services-menu summary svg,.hive-mobile-menu > summary span { transition: none; }
+    .hive-nav-cta:hover { transform: none; }
+  }
+</style>

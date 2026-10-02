@@ -82,17 +82,9 @@ business will honour.
 
 ## Image slots and measured numbers — 10 September 2026
 
-`src/data/media.ts` defines three image slots: hero, proof and founder. All three currently point at
-`public/img1.png`, the brand-film poster, as a stand-in. That file is a brand illustration —
-not a photograph of anyone and not a screenshot of the system — so every slot's `alt` and `caption`
-describe it as an illustration and say a real image replaces it. Do not caption it as a photo of
-Mehul, as a product screen, or as a customer.
-
-To replace a slot: add the real file to `public/`, update `src`, `width`, `height`, `alt` and
-`caption`, and set `placeholder: false`. `npm test` fails if a slot claims to be final while still
-pointing at the poster. Each slot's `intent` field states what the replacement has to show; the proof
-slot is the one that carries the trust gate, so it wants a redacted screenshot of the live order
-system with a dated filter visible.
+The current homepage uses bee illustrations to explain the service roles. They are not photographs
+of Mehul, product screenshots, or client proof. If a real operating screenshot is added later,
+redact customer details and show a dated filter and source before describing it as evidence.
 
 `publishedMetrics` in `src/data/offer.ts` is the only place a measured figure may appear on the page.
 It is empty. An entry needs a value, an exact count definition, a basis (whose number, over what
