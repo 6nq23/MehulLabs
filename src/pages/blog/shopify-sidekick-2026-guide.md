@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "Shopify Sidekick 2026: What It Automates (and What Not)"
 description: "Shopify Sidekick in 2026: what it automates, where it stops, 10 prompts to try, and when to use Shopify Flow or a custom AI workflow for your store instead."
-publishedOn: "2026-09-24"
-updatedOn: "2026-09-24"
+publishedOn: "2026-10-02"
+updatedOn: "2026-10-02"
 category: "AI automation"
 author: "Mehul"
 readTime: "11 min read"
