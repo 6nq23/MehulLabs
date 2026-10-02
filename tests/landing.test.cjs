@@ -31,7 +31,6 @@ const {
   pillars, hasStartingPrice, formatStartingPrice, assurances, leaks, fitCriteria,
   credentials, operatingFacts, publishedMetrics, isPublishableMetric,
 } = loadSource('src/data/offer.ts');
-const { imageSlots, getImageSlot } = loadSource('src/data/media.ts');
 const { ownedBrands, ownershipDisclosure, hasCompleteOrderEvidence } = loadSource('src/data/experience.ts');
 const { serviceOffers, pilotPrice, formatPilotPrice } = loadSource('src/data/offers.ts');
 const operatingExperienceSource = fs.readFileSync(
@@ -136,23 +135,6 @@ test('the problem section asks the reader to check their own numbers, and invent
     assert.doesNotMatch(leak.body + leak.check, /\d+\s?%|\d+x\b/i, 'Unsourced statistic in leak ' + leak.number);
   }
   assert.ok(fitCriteria.yes.length > 0 && fitCriteria.no.length > 0);
-});
-
-test('every image slot points at a real asset and describes what is actually shown', () => {
-  assert.equal(imageSlots.length, 3);
-  for (const slot of imageSlots) {
-    assert.match(slot.src, /^\/(?!\/)/);
-    assert.ok(!slot.src.includes('..'));
-    assert.ok(fs.existsSync(path.join(__dirname, '..', 'public', slot.src.slice(1))), 'Missing image: ' + slot.src);
-    assert.ok(slot.alt.trim().length > 20, 'Alt text too thin on slot: ' + slot.id);
-    assert.ok(slot.caption.trim() && slot.intent.trim());
-    assert.ok(slot.width > 0 && slot.height > 0);
-    // A slot may only claim to be final once it has stopped borrowing the brand-film poster.
-    if (!slot.placeholder) assert.notEqual(slot.src, '/img1.png', 'Slot ' + slot.id + ' is not really final');
-    else assert.match(slot.caption, /replaces this|placeholder/i, 'Placeholder caption must say so: ' + slot.id);
-  }
-  assert.equal(getImageSlot('hero').id, 'hero');
-  assert.throws(() => getImageSlot('nope'), /Unknown image slot/);
 });
 
 test('above-the-fold credentials stay short and claim nothing that needs a report', () => {

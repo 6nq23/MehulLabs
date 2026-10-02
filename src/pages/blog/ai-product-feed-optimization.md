@@ -262,7 +262,7 @@ For teams managing brand content at scale, the [AI brand context workflow](/guid
 
 <section class="blog-cta">
   <h2>Turn AI feed quality into a working Shopify system</h2>
-  <p>mlabs Growth can review the product-data path, feed quality and measurement plan so AI discovery connects to a store that converts the visit.</p>
+  <p>MlabsGrowth can review the product-data path, feed quality and measurement plan so AI discovery connects to a store that converts the visit.</p>
   <p><a href="/services/store-conversion">Explore Shopify conversion optimization</a> or <a href="/services/ai-automation">build a reliable AI marketing workflow</a>.</p>
 </section>
 

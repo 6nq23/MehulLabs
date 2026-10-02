@@ -224,7 +224,7 @@ Real urgency, such as a genuine sale end date or a true dispatch cut-off, is fin
 
 <section class="blog-cta">
   <h2>Find where your carts are leaking</h2>
-  <p>mlabs Growth reviews the product page, cart, checkout settings and recovery flows for Shopify brands, then prioritises the fixes most likely to reduce abandonment without cutting margin.</p>
+  <p>MlabsGrowth reviews the product page, cart, checkout settings and recovery flows for Shopify brands, then prioritises the fixes most likely to reduce abandonment without cutting margin.</p>
   <p><a href="/services/store-conversion">Explore Shopify conversion optimization</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

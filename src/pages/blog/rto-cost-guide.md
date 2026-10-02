@@ -154,7 +154,7 @@ Do not treat COD itself as the only problem. Removing COD can reduce accessible 
 
 <section class="blog-cta">
   <h3>See the direct cost behind failed deliveries</h3>
-  <p>Use the <a href="/tools/rto-simulator">MLabs Growth RTO Cost Calculator</a> to model COD and prepaid RTO orders, revenue at risk, direct freight and packaging cost, and a target-rate saving scenario.</p>
+  <p>Use the <a href="/tools/rto-simulator">MlabsGrowth RTO Cost Calculator</a> to model COD and prepaid RTO orders, revenue at risk, direct freight and packaging cost, and a target-rate saving scenario.</p>
   <p>The calculator runs in your browser and displays amounts in INR. It does not connect to your store, so use settled data from one reporting period and validate the output against courier invoices.</p>
 </section>
 

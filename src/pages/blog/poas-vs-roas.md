@@ -206,7 +206,7 @@ POAS is only as good as its inputs, and three errors appear most often: judging 
 
 <section class="blog-cta">
   <h2>Turn order data into a profit signal</h2>
-  <p>mlabs Growth builds AI marketing workflows that join Shopify orders, product costs, fees and returns into a daily profit view, then prepare margin-aware values for ad platforms.</p>
+  <p>MlabsGrowth builds AI marketing workflows that join Shopify orders, product costs, fees and returns into a daily profit view, then prepare margin-aware values for ad platforms.</p>
   <p><a href="/services/ai-automation">Explore the AI marketing workflow service</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

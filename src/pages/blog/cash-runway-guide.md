@@ -164,7 +164,7 @@ Sensitivity matters more than a precise-looking month count. Test revenue growth
 
 <section class="blog-cta">
   <h3>See how revenue and costs move cash over 24 months</h3>
-  <p>Use the <a href="/tools/runway-planner">MLabs Growth Cash Runway Calculator</a> to project closing cash, first-month burn, and a possible break-even month from your current cash, revenue, growth, fixed costs, variable costs, and marketing spend.</p>
+  <p>Use the <a href="/tools/runway-planner">MlabsGrowth Cash Runway Calculator</a> to project closing cash, first-month burn, and a possible break-even month from your current cash, revenue, growth, fixed costs, variable costs, and marketing spend.</p>
   <p>The calculator displays INR and provides a scenario, not financial advice. Add inventory timing, tax, debt, fundraising, and settlement timing in your detailed cash forecast.</p>
 </section>
 

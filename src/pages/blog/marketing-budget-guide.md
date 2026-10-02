@@ -156,7 +156,7 @@ Link the plan to the [cash runway calculator](/tools/runway-planner). Media is o
 
 <section class="blog-cta">
   <h3>Turn a spend ceiling into a transparent scenario</h3>
-  <p>Use the <a href="/tools/marketing-budget">MLabs Growth Marketing Budget Calculator</a> to allocate spend by channel and estimate projected revenue, orders, blended ROAS, and cost per order.</p>
+  <p>Use the <a href="/tools/marketing-budget">MlabsGrowth Marketing Budget Calculator</a> to allocate spend by channel and estimate projected revenue, orders, blended ROAS, and cost per order.</p>
   <p>The calculator displays INR and uses your assumptions. Actual performance depends on traffic, offer, conversion, attribution, and how channel efficiency changes with scale.</p>
 </section>
 

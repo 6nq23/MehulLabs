@@ -226,7 +226,7 @@ The [cash runway guide](/blog/cash-runway-guide) and [runway planner](/tools/run
 
 <section class="blog-cta">
   <h2>Get the store ready before peak traffic arrives</h2>
-  <p>mlabs Growth reviews product pages, offer structure, checkout friction and measurement for Shopify brands before high-spend periods such as BFCM, so paid traffic lands on a store built to convert profitably.</p>
+  <p>MlabsGrowth reviews product pages, offer structure, checkout friction and measurement for Shopify brands before high-spend periods such as BFCM, so paid traffic lands on a store built to convert profitably.</p>
   <p><a href="/services/store-conversion">Explore Shopify conversion optimization</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

@@ -1,0 +1,164 @@
+---
+import { Image } from 'astro:assets';
+import { beeCharacters, beeOrbits, beeTracks, queenBee } from '@/data/bees';
+
+interface Props {
+  /** Seconds per complete orbit. */
+  duration?: number;
+  labels?: boolean;
+  class?: string;
+}
+
+const { duration = 100, labels = true, class: className } = Astro.props;
+const description = `Brand Brain in the center, surrounded by ${beeOrbits.map(({ id }) => beeCharacters[id].label.toLowerCase()).join(', ')} bees.`;
+const seconds = Number.isFinite(duration) ? Math.max(30, duration) : 100;
+---
+
+<bee-orbit class:list={['bee-orbit', className]} data-duration={seconds}>
+  <div class="orbit-stage" role="img" aria-label={description}>
+    <div class="orbit-glow" aria-hidden="true"></div>
+    <svg class="orbit-tracks" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      {beeTracks.map(track => <ellipse cx="50" cy="45" rx={track.radiusX} ry={track.radiusY} />)}
+    </svg>
+    <div class="orbit-queen" aria-hidden="true">
+      <Image src={queenBee} alt="" widths={[256, 512, 768]} sizes="(max-width: 700px) 24vw, 280px" format="webp" loading="lazy" />
+      {labels && <span class="queen-label">Queen Bee (Brand Brain)</span>}
+    </div>
+    {beeOrbits.map(({ id, track, angle }) => {
+      const bee = beeCharacters[id];
+      const phase = angle * Math.PI / 180;
+      const { radiusX, radiusY } = beeTracks[track];
+      const depth = Math.sin(phase);
+      const x = 50 + Math.cos(phase) * radiusX;
+      const y = 45 + depth * radiusY;
+      return (
+        <div
+          class="orbit-bee"
+          data-phase={phase}
+          data-radius-x={radiusX}
+          data-radius-y={radiusY}
+          style={`left:${x}%;top:${y}%;--bee-scale:${0.94 + depth * 0.1};z-index:${depth >= 0 ? 3 : 1}`}
+          aria-hidden="true"
+        >
+          <div class="bee-body">
+            <Image src={bee.image} alt="" widths={[128, 256, 384]} sizes="(max-width: 700px) 14vw, 150px" format="webp" loading="lazy" />
+            {labels && <span class="bee-label">{bee.label}</span>}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+</bee-orbit>
+
+<style>
+  .bee-orbit { position: relative; display: block; width: 100%; aspect-ratio: 1087 / 627; isolation: isolate; container-type: inline-size; }
+  .orbit-stage { position: absolute; width: 100%; height: 100%; }
+  .orbit-glow { position: absolute; left: 50%; top: 45%; width: 38%; height: 68%; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 229, 155, 0.45), rgba(255, 237, 189, 0.2) 43%, transparent 70%); animation: orbit-glow-pulse 6s ease-in-out infinite; }
+  .orbit-tracks { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: #b9b5a9; stroke-opacity: .6; stroke-width: .075; }
+  .orbit-queen { position: absolute; z-index: 2; left: 50%; top: 42%; width: 17%; transform: translate(-50%, -50%); }
+  .orbit-queen img { display: block; width: 100%; height: auto; filter: drop-shadow(0 9px 9px #7250231a) drop-shadow(0 0 35px rgba(255, 204, 30, 0.35)); animation: queen-pulse 6s ease-in-out infinite; }
+
+  @keyframes queen-pulse {
+    0%, 100% { filter: drop-shadow(0 9px 9px #7250231a) drop-shadow(0 0 35px rgba(255, 204, 30, 0.35)); transform: translateY(0); }
+    50% { filter: drop-shadow(0 15px 12px #72502315) drop-shadow(0 0 55px rgba(255, 204, 30, 0.7)); transform: translateY(-4px); }
+  }
+
+  @keyframes orbit-glow-pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+  }
+  .orbit-bee { position: absolute; width: 10.5%; transform: translate(-50%, -50%) scale(var(--bee-scale, .94)); }
+  .bee-body { position: relative; }
+  .bee-body img { display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 5px #6b4d231a); }
+  .bee-label, .queen-label { position: absolute; top: 98%; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; color: #262626; font: 600 clamp(9px, 1.5cqw, 18px)/1.15 'Manrope Variable', sans-serif; }
+  .queen-label { top: 100%; width: 150%; font-size: clamp(10px, 1.4cqw, 18px); }
+
+  @media (max-width: 600px) {
+    .bee-orbit { aspect-ratio: 1.45; }
+    .orbit-bee { width: 14%; }
+    .orbit-queen { width: 20%; }
+    .bee-label { width: 115%; }
+    .bee-label { width: 115%; }
+  }
+</style>
+
+<script>
+  class BeeOrbit extends HTMLElement {
+    private frame = 0;
+    private elapsed = 0;
+    private previousTime = 0;
+    private visible = false;
+    private paused = false;
+    private observer?: IntersectionObserver;
+    private motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    private button: HTMLButtonElement | null = null;
+    private stage: HTMLElement | null = null;
+    private duration = 100;
+    private bees: { element: HTMLElement; phase: number; radiusX: number; radiusY: number }[] = [];
+
+    connectedCallback() {
+      this.stage = this.querySelector<HTMLElement>('.orbit-stage');
+      this.button = this.querySelector<HTMLButtonElement>('.orbit-toggle');
+      this.duration = Number(this.dataset.duration) || 100;
+      this.bees = Array.from(this.querySelectorAll<HTMLElement>('.orbit-bee'), element => ({
+        element,
+        phase: Number(element.dataset.phase),
+        radiusX: Number(element.dataset.radiusX),
+        radiusY: Number(element.dataset.radiusY),
+      }));
+      this.button?.addEventListener('click', this.toggle);
+      this.motion.addEventListener('change', this.sync);
+      document.addEventListener('visibilitychange', this.sync);
+      this.observer = new IntersectionObserver(([entry]) => {
+        this.visible = entry.isIntersecting;
+        this.sync();
+      });
+      this.observer.observe(this);
+      this.sync();
+    }
+
+    disconnectedCallback() {
+      cancelAnimationFrame(this.frame);
+      this.observer?.disconnect();
+      this.button?.removeEventListener('click', this.toggle);
+      this.motion.removeEventListener('change', this.sync);
+      document.removeEventListener('visibilitychange', this.sync);
+    }
+
+    private toggle = () => {
+      this.paused = !this.paused;
+      this.sync();
+    };
+
+    private sync = () => {
+      cancelAnimationFrame(this.frame);
+      this.previousTime = 0;
+      if (this.visible && !this.paused && !this.motion.matches && !document.hidden) {
+        this.frame = requestAnimationFrame(this.renderFrame);
+      }
+    };
+
+    private renderFrame = (time: number) => {
+      if (!this.stage) return;
+      if (this.previousTime) this.elapsed += Math.min(time - this.previousTime, 64);
+      this.previousTime = time;
+      const progress = this.elapsed / (this.duration * 1000) * Math.PI * 2;
+      // Read dimensions once per frame; transforms keep the flight path out of layout.
+      const width = this.stage.clientWidth;
+      const height = this.stage.clientHeight;
+      for (const bee of this.bees) {
+        const angle = bee.phase + progress;
+        const depth = Math.sin(angle);
+        const dx = (Math.cos(angle) - Math.cos(bee.phase)) * bee.radiusX * width / 100;
+        const dy = (depth - Math.sin(bee.phase)) * bee.radiusY * height / 100;
+        const bob = Math.sin(this.elapsed / 1400 + bee.phase) * 1.5;
+        bee.element.style.transform = `translate(-50%, -50%) translate3d(${dx}px, ${dy + bob}px, 0) scale(${0.94 + depth * 0.1})`;
+        bee.element.style.zIndex = depth >= 0 ? '3' : '1';
+      }
+      this.frame = requestAnimationFrame(this.renderFrame);
+    };
+  }
+
+  if (!customElements.get('bee-orbit')) customElements.define('bee-orbit', BeeOrbit);
+</script>

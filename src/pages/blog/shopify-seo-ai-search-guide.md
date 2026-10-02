@@ -262,7 +262,7 @@ Use a 4-week sequence so changes remain measurable. The order matters: establish
 
 <section class="blog-cta">
   <h2>Turn AI visibility into a working Shopify system</h2>
-  <p>mlabs Growth can review the product-data path, product-page experience and measurement plan so AI discovery connects to a store that can convert the visit.</p>
+  <p>MlabsGrowth can review the product-data path, product-page experience and measurement plan so AI discovery connects to a store that can convert the visit.</p>
   <p><a href="/services/store-conversion">Explore Shopify conversion optimization</a> or <a href="/services/ai-automation">build a reliable AI marketing workflow</a>.</p>
 </section>
 

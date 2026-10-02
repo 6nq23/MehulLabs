@@ -1,6 +1,5 @@
 import { site } from '@/data/site';
 import { useEffect, useRef } from 'react';
-import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { useLenis } from '@/components/providers/SmoothScrollProvider';
 
 const popupSessionKey = 'mehul-labs:lead-popup-shown';
@@ -59,10 +58,12 @@ export function LeadCapturePopup() {
       <p id="lead-popup-description">Choose the fastest useful next step for your D2C brand.</p>
       <div className="lead-popup-actions">
         <a href={auditHref} onClick={closePopup} data-cta-location="timed-popup-audit">
-          <span><strong>Get my free leak audit</strong><small>30 minutes · no obligation</small></span><ArrowIcon />
+          <span><strong>Get my free leak audit</strong><small>30 minutes · no obligation</small></span>
+          <span className="lead-popup-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span>
         </a>
         <a href="/D2C Revenue Leak Map.pdf" download onClick={closePopup} data-cta-location="timed-popup-pdf">
-          <span><strong>Get the D2C Revenue Leak Map</strong><small>Download the practical guide</small></span><ArrowIcon />
+          <span><strong>Get the D2C Revenue Leak Map</strong><small>Download the practical guide</small></span>
+          <span className="lead-popup-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span>
         </a>
       </div>
       <p className="lead-popup-note">No email gate. Pick what is useful.</p>
