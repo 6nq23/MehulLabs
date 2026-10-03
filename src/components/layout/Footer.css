@@ -122,15 +122,6 @@
   gap: 1.1rem;
 }
 
-.hive-footer__column-label {
-  margin-bottom: .2rem;
-  color: #85858a;
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
 .hive-footer__columns a {
   color: #4d4d4d;
   font-size: .98rem;

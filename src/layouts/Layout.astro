@@ -4,6 +4,7 @@ import HiveNavbar from '@/components/layout/HiveNavbar.astro';
 import { SiteRuntime } from '@/components/layout/SiteRuntime';
 import { contactEmail, site } from '@/data/site';
 import { tools } from '@/data/tools';
+import { metaPixelNoscriptSrc, metaPixelScript } from '@/data/metaPixel';
 import { pageSeo, breadcrumbsFor } from '@/data/seo';
 import '@fontsource-variable/inter/wght.css';
 import '@fontsource-variable/manrope/wght.css';
@@ -115,6 +116,7 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
     {site.url && !noindex && <script is:inline type="application/ld+json" set:html={jsonLd}></script>}
+    {site.indexable && <script is:inline set:html={metaPixelScript}></script>}
 
     <noscript>
       <style is:inline>
@@ -124,6 +126,7 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
     </noscript>
   </head>
   <body>
+    {site.indexable && <noscript><img height="1" width="1" style="display:none" alt="" src={metaPixelNoscriptSrc} /></noscript>}
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:text-white"

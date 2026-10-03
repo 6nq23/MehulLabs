@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "BFCM 2026 Checklist: Protect Profit, Not Just Revenue"
 description: "A BFCM 2026 checklist in 7 phases, from October planning to December returns, to protect margin, stock and cash across Black Friday and Cyber Monday sales."
-publishedOn: "2026-09-24"
-updatedOn: "2026-09-24"
+publishedOn: "2026-10-03"
+updatedOn: "2026-10-03"
 category: "Ecommerce planning"
 author: "Mehul"
 readTime: "11 min read"

@@ -13,7 +13,7 @@ export function Footer({ ctaLocation = 'footer' }: Props) {
           <h2>Every part of your brand,<br />working together.</h2>
           <p className="hive-footer__description">Shopify, order operations and AI workflows, connected around what your brand actually needs.</p>
           <a className="hive-footer__cta" href={site.bookingUrl} data-cta-location={ctaLocation}>
-            <span>Talk about your brand</span>
+            <span>Book my free audit call</span>
             <span className="hive-footer__cta-arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg>
             </span>
