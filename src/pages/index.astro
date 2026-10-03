@@ -3,6 +3,7 @@ import '@fontsource-variable/manrope/wght.css';
 import { contactEmail, site } from '@/data/site';
 import { faqs } from '@/data/commerce';
 import { pageSeo } from '@/data/seo';
+import { metaPixelNoscriptSrc, metaPixelScript } from '@/data/metaPixel';
 import { ownedBrands, ownershipDisclosure } from '@/data/experience';
 import { serviceRoutes } from '@/data/services';
 import { ConversionEvents } from '@/components/providers/ConversionEvents';
@@ -56,8 +57,10 @@ const jsonLd = JSON.stringify({
     <title>{seo.title} — {site.name}</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {site.url && <script is:inline type="application/ld+json" set:html={jsonLd}></script>}
+    {site.indexable && <script is:inline set:html={metaPixelScript}></script>}
   </head>
   <body>
+    {site.indexable && <noscript><img height="1" width="1" style="display:none" alt="" src={metaPixelNoscriptSrc} /></noscript>}
     <div class="hive-page">
       <a class="skip-link" href="#main">Skip to content</a>
       <ConversionEvents client:load />
