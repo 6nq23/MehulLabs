@@ -24,13 +24,11 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
 ---
 
 <Layout>
-  <div class="blog-page">
-    <section class="blog-masthead" aria-labelledby="blog-title">
-      <div class="shell blog-masthead-inner">
-        <p class="tools-kicker"><span aria-hidden="true"></span> Daily field notes</p>
-        <h1 id="blog-title">Useful ideas.<br /><em>One at a time.</em></h1>
-        <p>Practical notes on D2C operations, Shopify conversion, and AI automation—written for people doing the work.</p>
-      </div>
+  <div class="growth-page">
+    <section class="growth-page-hero shell" aria-labelledby="blog-title">
+      <p class="eyebrow-accent">DAILY FIELD NOTES</p>
+      <h1 id="blog-title">Useful ideas.<br /><em>One at a time.</em></h1>
+      <p class="growth-lead">Practical notes on D2C operations, Shopify conversion, and AI automation—written for people doing the work.</p>
     </section>
 
     <section class="blog-listing" aria-labelledby="latest-posts">
@@ -49,7 +47,7 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
               <article class="blog-card">
                 <a href={url} aria-label={`Read ${frontmatter.title}`}>
                   <div class="blog-card-meta">
-                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <span>{String(posts.length - index).padStart(2, '0')}</span>
                     <time datetime={frontmatter.publishedOn}>{formatDate(frontmatter.publishedOn)}</time>
                   </div>
                   <p>{frontmatter.category || 'Field note'}</p>

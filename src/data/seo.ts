@@ -9,6 +9,12 @@ export const pageSeo: Record<string, PageSeo> = {
     "label": "Home",
     "type": "WebPage"
   },
+  "/services": {
+    "title": "Shopify Growth, Order Operations & AI Services",
+    "description": "Explore MlabsGrowth services for Shopify conversion, order operations and practical AI marketing workflows. Start with a free 30-minute audit.",
+    "label": "Services",
+    "type": "CollectionPage"
+  },
   "/services/store-conversion": {
     "title": "Shopify Conversion Rate Optimization Services",
     "description": "Improve Shopify product pages, product discovery and cart journeys with MLabs. Start with a free audit, then agree a focused implementation scope.",
@@ -34,8 +40,8 @@ export const pageSeo: Record<string, PageSeo> = {
     "type": "CollectionPage"
   },
   "/about": {
-    "title": "About Mehul & MLabs Growth",
-    "description": "Meet Mehul, the founder of MLabs Growth. Learn how operating D2C brands shapes our Shopify, order automation and AI marketing workflow services.",
+    "title": "About Mehul & MlabsGrowth",
+    "description": "Meet Mehul, the founder of MlabsGrowth. Learn how operating D2C brands shapes our Shopify, order automation and AI marketing workflow services.",
     "label": "About Mehul",
     "type": "AboutPage"
   },
@@ -120,6 +126,6 @@ pageSeo['/guides'] = { title: 'D2C Growth & AI Workflow Guides', description: 'P
 
 export function breadcrumbsFor(path: string) {
   if (path === '/' || !pageSeo[path]) return [];
-  const parent = path.startsWith('/blog/') ? '/blog' : path.startsWith('/guides/') ? '/guides' : path.startsWith('/tools/') ? '/tools' : path.startsWith('/products/') ? '/products' : null;
+  const parent = path.startsWith('/blog/') ? '/blog' : path.startsWith('/guides/') ? '/guides' : path.startsWith('/tools/') ? '/tools' : path.startsWith('/products/') ? '/products' : path.startsWith('/services/') ? '/services' : null;
   return [{ path: '/', label: 'Home' }, ...(parent ? [{ path: parent, label: pageSeo[parent].label }] : []), { path, label: pageSeo[path].label }];
 }

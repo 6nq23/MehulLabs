@@ -187,7 +187,7 @@ Before peak season, align this work with your offer and stock planning. Our [BFC
 
 <section class="blog-cta">
   <h2>Get your store ready for AI shopping agents</h2>
-  <p>mlabs Growth audits Shopify product data, agentic storefront settings and AI channel tracking, then fixes the gaps that stop AI assistants from recommending your products.</p>
+  <p>MlabsGrowth audits Shopify product data, agentic storefront settings and AI channel tracking, then fixes the gaps that stop AI assistants from recommending your products.</p>
   <p><a href="/services/ai-automation">Explore AI growth and automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

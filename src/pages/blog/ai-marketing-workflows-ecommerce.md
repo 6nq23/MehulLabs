@@ -195,7 +195,7 @@ Retire any workflow that saves time but moves nothing after two cycles. For plan
 
 <section class="blog-cta">
   <h2>Build your first AI workflow with a review gate</h2>
-  <p>mlabs Growth sets up brand context, AI workflows and review steps for ecommerce teams, inside your own Shopify, Meta and AI accounts, then measures what each workflow saves and moves.</p>
+  <p>MlabsGrowth sets up brand context, AI workflows and review steps for ecommerce teams, inside your own Shopify, Meta and AI accounts, then measures what each workflow saves and moves.</p>
   <p><a href="/services/ai-automation">Explore AI marketing workflow automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

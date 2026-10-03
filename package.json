@@ -2,7 +2,7 @@
   "name": "personal-brand-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Mehul Labs \u2014 D2C infrastructure, COD voice agents, Meta creative analysis, and SEO automation.",
+  "description": "Mehul Labs — D2C infrastructure, COD voice agents, Meta creative analysis, and SEO automation.",
   "homepage": "https://github.com/shingalaparth/Labs-landing#readme",
   "bugs": {
     "url": "https://github.com/shingalaparth/Labs-landing/issues"
@@ -35,6 +35,7 @@
     "lenis": "^1.1.20",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sharp": "^0.35.5",
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {

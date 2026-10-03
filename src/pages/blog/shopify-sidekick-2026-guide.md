@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "Shopify Sidekick 2026: What It Automates (and What Not)"
 description: "Shopify Sidekick in 2026: what it automates, where it stops, 10 prompts to try, and when to use Shopify Flow or a custom AI workflow for your store instead."
-publishedOn: "2026-09-24"
-updatedOn: "2026-09-24"
+publishedOn: "2026-10-02"
+updatedOn: "2026-10-02"
 category: "AI automation"
 author: "Mehul"
 readTime: "11 min read"
@@ -185,7 +185,7 @@ Prompt 10 shows the boundary: Sidekick can compare apps, but the messaging runs 
 
 <section class="blog-cta">
   <h2>Automate the work Sidekick cannot reach</h2>
-  <p>mlabs Growth builds AI workflows that connect Shopify with courier, WhatsApp, calling, ad and reporting tools, with your brand rules and approval steps built in.</p>
+  <p>MlabsGrowth builds AI workflows that connect Shopify with courier, WhatsApp, calling, ad and reporting tools, with your brand rules and approval steps built in.</p>
   <p><a href="/services/ai-automation">Explore AI marketing workflow automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 

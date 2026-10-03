@@ -9,18 +9,18 @@ const config: Config = {
     extend: {
       colors: {
         canvas: '#F7F7F2',
-        surface: '#EEEFE7',
-        line: '#D8DDD1',
+        surface: '#efede7',
+        line: '#dddad1',
         ink: {
-          DEFAULT: '#202720',
-          muted: '#586056',
-          faint: '#626B5C',
+          DEFAULT: '#18181b',
+          muted: '#605d56',
+          faint: '#6b675c',
         },
         accent: {
-          DEFAULT: '#496546',
-          bright: '#3B5538',
-          soft: '#E7ECDD',
-          ring: 'rgba(92, 114, 98, 0.22)',
+          DEFAULT: '#ffcb16',
+          bright: '#facc15',
+          soft: '#ebe8dd',
+          ring: 'rgba(113, 108, 92, 0.22)',
         },
       },
       fontFamily: {

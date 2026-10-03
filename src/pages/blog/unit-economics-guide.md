@@ -343,7 +343,7 @@ The first action is to calculate one representative order with current inputs. Y
 
 <section class="blog-cta">
   <h3>Run the numbers without another spreadsheet</h3>
-  <p>Use the <a href="/tools/unit-economics">MLabs Growth Unit Economics Calculator</a> to estimate net selling price, gross margin, contribution margin, CAC, RTO drag per order, and break-even orders.</p>
+  <p>Use the <a href="/tools/unit-economics">MlabsGrowth Unit Economics Calculator</a> to estimate net selling price, gross margin, contribution margin, CAC, RTO drag per order, and break-even orders.</p>
   <p>The calculator focuses on immediate order economics. It does not calculate LTV or CAC payback, because those require observed repeat-purchase, retention, churn, and cohort contribution data.</p>
 </section>
 

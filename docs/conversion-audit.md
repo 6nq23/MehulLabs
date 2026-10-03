@@ -166,12 +166,9 @@ before work; client-owned accounts. No refund, no performance guarantee, no resu
    dated report, a count definition and a named source before anything renders — see
    `docs/operating-evidence.md` and the template comment in `src/data/experience.ts`. Gate 4 (proof)
    is the weakest gate on the page and this is what closes it.
-3. **Real images for the three slots.** `src/data/media.ts` defines three slots — hero, proof and
-   founder — each with an `intent` describing exactly what the replacement has to show. All three
-   currently borrow the brand-film poster, which is a brand illustration, not a screenshot and not a
-   photograph. The `alt` and `caption` say so honestly. Replacing them, especially the hero and proof
-   slots, will do more for perceived value than any further copy. Redaction rules are in
-   `docs/operating-evidence.md`.
+3. **Real operating evidence.** The bee artwork on the current homepage explains the service roles;
+   it is illustration rather than a screenshot or photograph. A dated, redacted image of a real
+   workflow would strengthen the proof section. Redaction rules are in `docs/operating-evidence.md`.
 4. **Delivery feasibility of the audit.** The whole front end assumes you can give 20 focused
    minutes per qualified lead, having looked at their store first. If that stops being true at
    volume, the offer breaks before the page does. Decide the ceiling now.
