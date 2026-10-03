@@ -180,3 +180,4 @@ npm install --save-dev @astrojs/check @types/node @types/react @types/react-dom 
 ```
 
 Then bring over the `src/components`, `src/data`, `src/hooks`, `src/lib`, `public`, and stylesheet files; add the layout and route files shown above; copy this repository's PostCSS and Tailwind configurations; configure the `@/*` alias in `tsconfig.json`; and apply hydration at the route or layout boundary according to actual interactivity.
+
