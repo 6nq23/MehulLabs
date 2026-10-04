@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "AI Calling for COD Orders: Cut RTO Without a Call Team"
 description: "COD orders returned at 58% in India's festive quarter vs under 15% for prepaid. See how AI calls and WhatsApp confirm COD orders before dispatch."
-publishedOn: "2026-09-24"
-updatedOn: "2026-09-24"
+publishedOn: "2026-10-04"
+updatedOn: "2026-10-04"
 category: "COD & order operations"
 author: "Mehul"
 readTime: "12 min read"
