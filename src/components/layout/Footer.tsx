@@ -10,8 +10,8 @@ export function Footer({ ctaLocation = 'footer' }: Props) {
     <footer id="footer" className="hive-footer">
       <div className="hive-footer__content">
         <div className="hive-footer__story">
-         <h2>Every part of your brand,<br />working together.</h2>
-          <p className="hive-footer__description">Store conversion, order operations and AI marketing — on one layer that reads your live orders. Start with a free 30-minute audit; the ranked list of leaks is yours to keep.</p>
+          <h2>Every part of your brand,<br />working together.</h2>
+          <p className="hive-footer__description">Shopify, order operations and AI workflows, connected around what your brand actually needs.</p>
           <a className="hive-footer__cta" href={site.bookingUrl} data-cta-location={ctaLocation}>
             <span>Book my free audit call</span>
             <span className="hive-footer__cta-arrow" aria-hidden="true">
@@ -25,13 +25,11 @@ export function Footer({ ctaLocation = 'footer' }: Props) {
           </a>
           <div className="hive-footer__columns">
             <nav aria-label="Explore">
-              <span className="hive-footer__column-label">Explore</span>
               <a href="/services">Services</a>
               <a href="/products">Products</a>
               <a href="/tools">Free tools</a>
             </nav>
             <nav aria-label="Company">
-              <span className="hive-footer__column-label">Company</span>
               <a href="/about">About us</a>
               <a href="/offers">Pricing &amp; scope</a>
               <a href="/blog">Journal</a>
