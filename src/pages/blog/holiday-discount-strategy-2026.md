@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "Holiday Discount Strategy 2026: How Deep Can You Go?"
 description: "How deep can a Shopify store discount this holiday season? Use margin ceilings, segment rules and Shopify's combination limits to set offers that still profit."
-publishedOn: "2026-10-14"
-updatedOn: "2026-10-14"
+publishedOn: "2026-10-06"
+updatedOn: "2026-10-06"
 category: "Pricing and promotions"
 author: "Mehul"
 readTime: "10 min read"
