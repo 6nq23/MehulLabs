@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "Contribution Margin: Check It Before Scaling Holiday Ads"
 description: "Learn CM1, CM2 and CM3, work out break-even ROAS from contribution margin, and use a scale, hold or cut rule before raising holiday ad spend on Meta or Google."
-publishedOn: "2026-10-11"
-updatedOn: "2026-10-11"
+publishedOn: "2026-10-05"
+updatedOn: "2026-10-05"
 category: "Unit economics"
 author: "Mehul"
 readTime: "10 min read"

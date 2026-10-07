@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "Landed Cost Calculator: The Real Cost of Every Product You Sell"
 description: "Use this landed cost calculator guide to add freight, duty, import tax, brokerage and returns to every SKU, with a worked Shopify example and copyable formula."
-publishedOn: "2026-10-03"
-updatedOn: "2026-10-03"
+publishedOn: "2026-10-07"
+updatedOn: "2026-10-07"
 category: "Unit economics"
 author: "Mehul"
 readTime: "10 min read"

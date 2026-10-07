@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Supplier price growing into landed cost and loaded cost</title>
+  <desc id="d">Concept illustration of three stacked bars: an $8.00 supplier price, a $10.34 landed cost after freight, duty and other import costs, and a $12.28 loaded cost after payment fees and a returns allowance. Illustrative figures.</desc>
+  <rect width="1600" height="900" fill="#fffaf0"/>
+  <circle cx="120" cy="-10" r="230" fill="#fff4b8"/>
+  <circle cx="1560" cy="60" r="260" fill="#fff4b8"/>
+  <circle cx="1500" cy="930" r="300" fill="#ffe69a" fill-opacity="0.55"/>
+  <circle cx="60" cy="900" r="170" fill="#f3e1bd" fill-opacity="0.7"/>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <!-- left: headline -->
+    <line x1="72" y1="196" x2="100" y2="196" stroke="#d4aa24" stroke-width="3"/>
+    <text x="116" y="203" font-size="20" font-weight="700" letter-spacing="3" fill="#6b5400">LANDED COST · UNIT ECONOMICS</text>
+
+    <text x="72" y="320" font-size="92" font-weight="700" letter-spacing="-2" fill="#1a1d18">Price from</text>
+    <text x="72" y="418" font-size="92" font-weight="700" letter-spacing="-2" fill="#1a1d18">landed cost,</text>
+    <text x="72" y="516" font-size="92" font-weight="700" letter-spacing="-2" fill="#6b5400">not invoice.</text>
+
+    <text x="72" y="584" font-size="28" fill="#2c3128">An $8.00 supplier price becomes $12.28 loaded.</text>
+
+    <g font-size="24" font-weight="600" fill="#1a1d18">
+      <rect x="72" y="628" width="136" height="50" rx="25" fill="#ffffff" stroke="#e4d29b" stroke-width="2"/>
+      <circle cx="98" cy="653" r="7" fill="#f2ce5b"/>
+      <text x="114" y="662">Freight</text>
+      <rect x="222" y="628" width="108" height="50" rx="25" fill="#ffffff" stroke="#e4d29b" stroke-width="2"/>
+      <circle cx="248" cy="653" r="7" fill="#f2ce5b"/>
+      <text x="264" y="662">Duty</text>
+      <rect x="344" y="628" width="158" height="50" rx="25" fill="#ffffff" stroke="#e4d29b" stroke-width="2"/>
+      <circle cx="370" cy="653" r="7" fill="#f2ce5b"/>
+      <text x="386" y="662">Shopify</text>
+    </g>
+
+    <!-- right: card with stacked bars -->
+    <rect x="830" y="170" width="698" height="550" rx="28" fill="#ffffff" stroke="#e4d29b" stroke-width="2"/>
+    <text x="870" y="242" font-size="30" font-weight="700" fill="#1a1d18">Cost per unit, step by step</text>
+    <text x="870" y="282" font-size="21" fill="#5b513b">Illustrative · US import by sea · USD</text>
+
+    <!-- row 1: supplier price (8.00 x 48 = 384) -->
+    <text x="870" y="334" font-size="22" font-weight="700" fill="#1a1d18">Supplier price</text>
+    <text x="1488" y="334" font-size="24" font-weight="700" text-anchor="end" fill="#1a1d18">$8.00</text>
+    <rect x="870" y="348" width="384" height="56" rx="8" fill="#f2ce5b" stroke="#d4aa24" stroke-width="2"/>
+    <text x="1062" y="384" font-size="22" font-weight="700" text-anchor="middle" fill="#1a1d18">8.00</text>
+
+    <!-- row 2: landed cost (10.34 x 48 = 496) -->
+    <text x="870" y="438" font-size="22" font-weight="700" fill="#1a1d18">Landed cost</text>
+    <text x="1488" y="438" font-size="24" font-weight="700" text-anchor="end" fill="#6b5400">$10.34</text>
+    <g stroke="#ffffff" stroke-width="2">
+      <rect x="870" y="452" width="384" height="56" fill="#f2ce5b"/>
+      <rect x="1254" y="452" width="52.8" height="56" fill="#ffe69a"/>
+      <rect x="1306.8" y="452" width="38.4" height="56" fill="#e9b949"/>
+      <rect x="1345.2" y="452" width="20.8" height="56" fill="#b48b18"/>
+    </g>
+    <rect x="870" y="452" width="496" height="56" rx="8" fill="none" stroke="#d4aa24" stroke-width="2"/>
+    <g font-size="20" font-weight="700" text-anchor="middle" fill="#1a1d18">
+      <text x="1062" y="488">8.00</text>
+      <text x="1280.4" y="488" font-size="18">1.10</text>
+      <text x="1326" y="488" font-size="16">0.80</text>
+    </g>
+
+    <!-- row 3: loaded cost (12.28 x 48 = 589.4) -->
+    <text x="870" y="542" font-size="22" font-weight="700" fill="#1a1d18">Loaded cost</text>
+    <text x="1488" y="542" font-size="24" font-weight="700" text-anchor="end" fill="#6b5400">$12.28</text>
+    <g stroke="#ffffff" stroke-width="2">
+      <rect x="870" y="556" width="384" height="56" fill="#f2ce5b"/>
+      <rect x="1254" y="556" width="52.8" height="56" fill="#ffe69a"/>
+      <rect x="1306.8" y="556" width="38.4" height="56" fill="#e9b949"/>
+      <rect x="1345.2" y="556" width="20.8" height="56" fill="#b48b18"/>
+      <rect x="1366" y="556" width="54.7" height="56" fill="#f1d8b5"/>
+      <rect x="1420.7" y="556" width="38.7" height="56" fill="#d9a07a"/>
+    </g>
+    <rect x="870" y="556" width="589.4" height="56" rx="8" fill="none" stroke="#d4aa24" stroke-width="2"/>
+    <g font-size="20" font-weight="700" text-anchor="middle" fill="#1a1d18">
+      <text x="1062" y="592">8.00</text>
+      <text x="1280.4" y="592" font-size="18">1.10</text>
+      <text x="1326" y="592" font-size="16">0.80</text>
+      <text x="1393.3" y="592" font-size="18">1.14</text>
+      <text x="1440" y="592" font-size="16">0.80</text>
+    </g>
+
+    <!-- legend -->
+    <g font-size="18" fill="#2c3128">
+      <rect x="870" y="643" width="16" height="16" rx="4" fill="#f2ce5b" stroke="#d4aa24" stroke-width="1.5"/>
+      <text x="894" y="657">Supplier price</text>
+      <rect x="1060" y="643" width="16" height="16" rx="4" fill="#ffe69a" stroke="#d4aa24" stroke-width="1.5"/>
+      <text x="1084" y="657">Freight</text>
+      <rect x="1250" y="643" width="16" height="16" rx="4" fill="#e9b949"/>
+      <text x="1274" y="657">Duty</text>
+      <rect x="870" y="679" width="16" height="16" rx="4" fill="#b48b18"/>
+      <text x="894" y="693">Fees, brokerage, handling</text>
+      <rect x="1140" y="679" width="16" height="16" rx="4" fill="#f1d8b5" stroke="#d4aa24" stroke-width="1.5"/>
+      <text x="1164" y="693">Payment fee</text>
+      <rect x="1300" y="679" width="16" height="16" rx="4" fill="#d9a07a"/>
+      <text x="1324" y="693">Returns</text>
+    </g>
+
+    <text x="72" y="850" font-size="20" fill="#5b513b">Concept illustration with hypothetical numbers. Not a benchmark or a screenshot.</text>
+  </g>
+</svg>

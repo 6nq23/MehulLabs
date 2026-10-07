@@ -1,6 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
   <title id="t">Contribution margin decision rule for holiday ad spend</title>
   <desc id="d">Concept illustration of a ROAS ruler split into cut, hold and scale zones, with break-even ROAS 2.25 and target ROAS 3.40 for one illustrative product.</desc>
+  <style>
+    [fill="#f7f7f2"] { fill: #fffaf0; }
+    [fill="#eeefe7"] { fill: #fff4b8; }
+    [fill="#a9c6a3"] { fill: #ffe69a; }
+    [fill="#e9c9ae"] { fill: #f3e1bd; }
+    [fill="#496546"] { fill: #f2ce5b; }
+    text[fill="#496546"] { fill: #6b5400; }
+    [fill="#fbfbf7"] { fill: #ffffff; }
+    [fill="#d8ddd1"] { fill: #f2e3b5; }
+    [fill="#ffffff"] { fill: #1a1a1a; }
+    [fill="#8a4a1c"] { fill: #765900; }
+    [fill="#5b6357"] { fill: #5b513b; }
+    [stroke="#496546"] { stroke: #d4aa24; }
+    [stroke="#d8ddd1"] { stroke: #e4d29b; }
+    [stroke="#8a4a1c"] { stroke: #b48b18; }
+    [stroke="#5b6357"] { stroke: #8c7c55; }
+  </style>
   <rect width="1600" height="900" fill="#f7f7f2"/>
   <circle cx="120" cy="-10" r="230" fill="#eeefe7"/>
   <circle cx="1560" cy="60" r="260" fill="#eeefe7"/>

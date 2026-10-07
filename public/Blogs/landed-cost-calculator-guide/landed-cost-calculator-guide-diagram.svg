@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+  <title id="t">One unit from supplier price to landed cost to loaded cost</title>
+  <desc id="d">Waterfall chart in dollars: supplier price 8.00 plus freight 1.10, insurance 0.05, duty 0.80, customs fees 0.04, brokerage 0.15 and inbound handling 0.20 gives landed cost 10.34; plus payment fee 1.14 and returns allowance 0.80 gives loaded cost 12.28. On a 29.00 sale the margin before shipping and ads is 16.72, or 57.7 percent. Illustrative figures.</desc>
+  <rect width="1600" height="900" fill="#fffaf0"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="100" y="82" font-size="40" font-weight="700" letter-spacing="-0.5" fill="#1a1d18">From supplier price to loaded cost, per unit</text>
+    <text x="100" y="122" font-size="22" fill="#5b513b">Illustrative figures in USD for one product imported into the US by sea. Landed cost stops when stock is ready to sell.</text>
+
+    <!-- margin callout -->
+    <rect x="100" y="156" width="780" height="96" rx="16" fill="#fff4b8" stroke="#e4d29b" stroke-width="2"/>
+    <text x="124" y="196" font-size="24" font-weight="700" fill="#1a1d18">Margin before shipping and ads: $16.72 (57.7%)</text>
+    <text x="124" y="230" font-size="19" fill="#5b513b">$29.00 selling price − $12.28 loaded cost. Supplier price alone suggests 72.4%.</text>
+
+    <!-- import costs bracket -->
+    <g stroke="#b48b18" stroke-width="2" fill="none">
+      <path d="M247 312 V302 H970 V312"/>
+    </g>
+    <text x="608" y="288" font-size="20" font-weight="700" text-anchor="middle" fill="#6b5400">Import costs: +$2.34 (+29%)</text>
+
+    <!-- baseline -->
+    <line x1="100" y1="740" x2="1500" y2="740" stroke="#e4d29b" stroke-width="2"/>
+
+    <!-- connectors -->
+    <g stroke="#cdbd90" stroke-width="2" stroke-dasharray="6 6">
+      <line x1="207.5" y1="436" x2="246.5" y2="436"/>
+      <line x1="334.5" y1="394.2" x2="373.5" y2="394.2"/>
+      <line x1="461.5" y1="392.3" x2="500.5" y2="392.3"/>
+      <line x1="588.5" y1="361.9" x2="627.5" y2="361.9"/>
+      <line x1="715.5" y1="360.4" x2="754.5" y2="360.4"/>
+      <line x1="842.5" y1="354.7" x2="881.5" y2="354.7"/>
+      <line x1="969.5" y1="347.1" x2="1008.5" y2="347.1"/>
+      <line x1="1096.5" y1="347.1" x2="1135.5" y2="347.1"/>
+      <line x1="1223.5" y1="303.8" x2="1262.5" y2="303.8"/>
+      <line x1="1350.5" y1="273.4" x2="1389.5" y2="273.4"/>
+    </g>
+
+    <!-- bars -->
+    <rect x="119.5" y="436" width="88" height="304" rx="4" fill="#f2ce5b" stroke="#d4aa24" stroke-width="2"/>
+    <g fill="#ffe69a" stroke="#d4aa24" stroke-width="1.5">
+      <rect x="246.5" y="394.2" width="88" height="41.8" rx="3"/>
+      <rect x="373.5" y="392.3" width="88" height="1.9" rx="1"/>
+      <rect x="500.5" y="361.9" width="88" height="30.4" rx="3"/>
+      <rect x="627.5" y="360.4" width="88" height="1.5" rx="1"/>
+      <rect x="754.5" y="354.7" width="88" height="5.7" rx="2"/>
+      <rect x="881.5" y="347.1" width="88" height="7.6" rx="2"/>
+    </g>
+    <rect x="1008.5" y="347.1" width="88" height="392.9" rx="4" fill="#f2ce5b" stroke="#d4aa24" stroke-width="2.5"/>
+    <g fill="#f1d8b5" stroke="#b48b18" stroke-width="1.5">
+      <rect x="1135.5" y="303.8" width="88" height="43.3" rx="3"/>
+      <rect x="1262.5" y="273.4" width="88" height="30.4" rx="3"/>
+    </g>
+    <rect x="1389.5" y="273.4" width="88" height="466.6" rx="4" fill="#e0b83a" stroke="#b48b18" stroke-width="2.5"/>
+
+    <!-- tags inside total bars -->
+    <g font-size="19" font-weight="700" letter-spacing="1" text-anchor="middle" fill="#1a1d18">
+      <text x="163.5" y="600">FOB</text>
+      <text x="1052.5" y="560">LANDED</text>
+      <text x="1433.5" y="560">LOADED</text>
+    </g>
+
+    <!-- value labels -->
+    <g font-size="24" font-weight="700" text-anchor="middle" fill="#1a1d18">
+      <text x="163.5" y="422">$8.00</text>
+      <text x="290.5" y="380">+1.10</text>
+      <text x="417.5" y="378" font-size="22">+0.05</text>
+      <text x="544.5" y="348">+0.80</text>
+      <text x="671.5" y="346" font-size="22">+0.04</text>
+      <text x="798.5" y="340">+0.15</text>
+      <text x="925.5" y="333">+0.20</text>
+      <text x="1052.5" y="333" fill="#6b5400">$10.34</text>
+      <text x="1179.5" y="290">+1.14</text>
+      <text x="1306.5" y="259">+0.80</text>
+      <text x="1433.5" y="259" fill="#6b5400">$12.28</text>
+    </g>
+
+    <!-- category labels -->
+    <g font-size="20" font-weight="700" text-anchor="middle" fill="#1a1d18">
+      <text x="163.5" y="778">Supplier</text>
+      <text x="290.5" y="778">Freight</text>
+      <text x="417.5" y="778">Insurance</text>
+      <text x="544.5" y="778">Duty</text>
+      <text x="671.5" y="778">Customs</text>
+      <text x="798.5" y="778">Brokerage</text>
+      <text x="925.5" y="778">Handling</text>
+      <text x="1052.5" y="778">Landed cost</text>
+      <text x="1179.5" y="778">Payment</text>
+      <text x="1306.5" y="778">Returns</text>
+      <text x="1433.5" y="778">Loaded cost</text>
+    </g>
+    <g font-size="17" text-anchor="middle" fill="#5b513b">
+      <text x="163.5" y="803">price (FOB)</text>
+      <text x="290.5" y="803">allocated</text>
+      <text x="417.5" y="803">cargo</text>
+      <text x="544.5" y="803">10% of FOB</text>
+      <text x="671.5" y="803">MPF + HMF</text>
+      <text x="798.5" y="803">entry fee</text>
+      <text x="925.5" y="803">inbound</text>
+      <text x="1052.5" y="803">per unit</text>
+      <text x="1179.5" y="803">2.9% + $0.30</text>
+      <text x="1306.5" y="803">10% rate</text>
+      <text x="1433.5" y="803">per unit</text>
+    </g>
+
+    <text x="100" y="868" font-size="18" fill="#5b513b">Concept chart with hypothetical numbers that match the worked example in the article. Not a benchmark.</text>
+  </g>
+</svg>
