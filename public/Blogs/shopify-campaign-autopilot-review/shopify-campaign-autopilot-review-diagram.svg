@@ -1,8 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
   <title id="t">Profit-first test plan for Shopify Campaign Autopilot</title>
   <desc id="d">Four steps: baseline, capped pilot with approval, holdout comparison, decision. A bar chart shows illustrative POAS at ROAS 2.0, 2.5, 3.0 and 4.0 against a break-even line at 1.0 for a 39 percent contribution margin after returns.</desc>
+  <style>
+    [fill="#f7f7f2"] { fill: #fffaf0; }
+    [fill="#eeefe7"] { fill: #fff4b8; }
+    [fill="#a9c6a3"] { fill: #ffe69a; }
+    [fill="#e3ecdf"] { fill: #f3e1bd; }
+    [fill="#496546"] { fill: #f2ce5b; }
+    text[fill="#496546"] { fill: #6b5400; }
+    [fill="#1f3a22"] { fill: #d4aa24; }
+    text[fill="#1f3a22"] { fill: #1a1a1a; }
+    [fill="#fbfbf7"] { fill: #ffffff; }
+    [fill="#d8ddd1"] { fill: #f2e3b5; }
+    [fill="#ffffff"] { fill: #1a1a1a; }
+    [fill="#d9773a"] { fill: #765900; }
+    [fill="#4a5046"], [fill="#5a6155"], [fill="#3b4037"] { fill: #5b513b; }
+    [stroke="#496546"] { stroke: #d4aa24; }
+    [stroke="#d8ddd1"] { stroke: #e4d29b; }
+  </style>
   <rect width="1600" height="900" fill="#f7f7f2"/>
   <circle cx="1560" cy="-40" r="260" fill="#eeefe7"/>
+  <circle cx="60" cy="940" r="220" fill="#a9c6a3" opacity="0.4"/>
   <g font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
     <line x1="72" y1="92" x2="100" y2="92" stroke="#496546" stroke-width="3"/>
     <text x="112" y="99" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">PROFIT-FIRST TEST PLAN</text>
@@ -41,8 +59,8 @@
     <text x="860" y="316" font-size="20" fill="#5a6155">POAS = ROAS × contribution margin after returns (39%)</text>
 
     <line x1="900" y1="700" x2="1490" y2="700" stroke="#d8ddd1" stroke-width="2"/>
-    <rect x="930" y="528" width="90" height="172" rx="8" fill="#c97a4a"/>
-    <rect x="1055" y="484" width="90" height="216" rx="8" fill="#c97a4a"/>
+    <rect x="930" y="528" width="90" height="172" rx="8" fill="#d9773a"/>
+    <rect x="1055" y="484" width="90" height="216" rx="8" fill="#d9773a"/>
     <rect x="1180" y="443" width="90" height="257" rx="8" fill="#496546"/>
     <rect x="1305" y="357" width="90" height="343" rx="8" fill="#496546"/>
     <line x1="900" y1="480" x2="1490" y2="480" stroke="#1a1d18" stroke-width="2" stroke-dasharray="8 7"/>
