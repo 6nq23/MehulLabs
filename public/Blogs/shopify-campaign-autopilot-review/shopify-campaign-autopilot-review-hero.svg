@@ -6,11 +6,26 @@
       <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#1a1d18" flood-opacity="0.10"/>
     </filter>
   </defs>
+  <style>
+    [fill="#f7f7f2"] { fill: #fffaf0; }
+    [fill="#eeefe7"] { fill: #fff4b8; }
+    [fill="#a9c6a3"] { fill: #ffe69a; }
+    [fill="#dfe9da"] { fill: #f3e1bd; }
+    [fill="#496546"] { fill: #f2ce5b; }
+    text[fill="#496546"] { fill: #6b5400; }
+    [fill="#fbfbf7"] { fill: #ffffff; }
+    [fill="#d8ddd1"] { fill: #f2e3b5; }
+    [fill="#ffffff"] { fill: #1a1a1a; }
+    [fill="#3b4037"] { fill: #5b513b; }
+    [fill="#5a6155"] { fill: #5b513b; }
+    [stroke="#496546"] { stroke: #d4aa24; }
+    [stroke="#d8ddd1"] { stroke: #e4d29b; }
+  </style>
   <rect width="1600" height="900" fill="#f7f7f2"/>
   <circle cx="110" cy="-30" r="250" fill="#eeefe7"/>
   <circle cx="1330" cy="-60" r="300" fill="#eeefe7"/>
   <circle cx="1560" cy="980" r="340" fill="#a9c6a3" opacity="0.75"/>
-  <circle cx="60" cy="960" r="260" fill="#e0803f" opacity="0.9"/>
+  <circle cx="60" cy="960" r="260" fill="#dfe9da" opacity="0.8"/>
   <g font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
     <line x1="72" y1="190" x2="100" y2="190" stroke="#496546" stroke-width="3"/>
     <text x="112" y="197" font-size="20" font-weight="700" letter-spacing="3" fill="#496546">CAMPAIGN AUTOPILOT · PROFIT TEST</text>
@@ -33,8 +48,8 @@
       <rect x="830" y="150" width="698" height="600" rx="30" fill="#fbfbf7" stroke="#d8ddd1" stroke-width="2"/>
     </g>
     <text x="872" y="220" font-size="36" font-weight="700" letter-spacing="-1" fill="#1a1d18">Your guardrails</text>
-    <rect x="1286" y="190" width="200" height="40" rx="20" fill="#fbe6d4"/>
-    <text x="1386" y="217" text-anchor="middle" font-size="18" font-weight="700" fill="#a8521a">Illustrative</text>
+    <rect x="1286" y="190" width="200" height="40" rx="20" fill="#dfe9da"/>
+    <text x="1386" y="217" text-anchor="middle" font-size="18" font-weight="700" fill="#496546">Illustrative</text>
 
     <rect x="872" y="256" width="614" height="92" rx="16" fill="#eeefe7"/>
     <text x="900" y="296" font-size="22" font-weight="700" fill="#1a1d18">Monthly budget</text>

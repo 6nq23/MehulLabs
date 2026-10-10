@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "Shopify Campaign Autopilot: Does AI Marketing Make Money?"
 description: "Shopify Campaign Autopilot runs Meta, Shop and email campaigns for you. What we know, what is unproven, and a profit-first test plan with holdout and POAS guardrails."
-publishedOn: "2026-10-09"
-updatedOn: "2026-10-09"
+publishedOn: "2026-10-08"
+updatedOn: "2026-10-08"
 category: "AI marketing"
 author: "Mehul"
 readTime: "11 min read"

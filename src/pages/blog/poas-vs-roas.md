@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-draft: true
+draft: false
 title: "POAS vs ROAS: The Profit Metric Ecommerce Ads Need"
 description: "POAS vs ROAS explained with formulas, a 2-product worked example and break-even ROAS, plus how to send profit data to Google Ads and Meta without guesswork."
-publishedOn: "2026-09-24"
-updatedOn: "2026-09-24"
+publishedOn: "2026-10-10"
+updatedOn: "2026-10-10"
 category: "Ecommerce finance"
 author: "Mehul"
 readTime: "11 min read"
