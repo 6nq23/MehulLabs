@@ -8,6 +8,7 @@ import { ownedBrands, ownershipDisclosure } from '@/data/experience';
 import { ConversionEvents } from '@/components/providers/ConversionEvents';
 import HiveNavbar from '@/components/layout/HiveNavbar.astro';
 import { Footer } from '@/components/layout/Footer';
+import WhatsAppButton from '@/components/layout/WhatsAppButton.astro';
 import BeeOrbit from '@/components/bees/BeeOrbit.astro';
 import { beeCharacters, queenBee as queen } from '@/data/bees';
 import humanStrategist from '../../asset/human-creative-strategist.png';
@@ -309,6 +310,7 @@ const jsonLd = JSON.stringify({
       </main>
       <Footer ctaLocation="home-footer" />
     </div>
+    <WhatsAppButton />
   </body>
 </html>
 

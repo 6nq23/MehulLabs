@@ -1,0 +1,172 @@
+---
+import { site } from '@/data/site';
+
+const message = 'I have an inquiry about AI automations and marketing related to my business.';
+const whatsappHref = `${site.whatsappUrl}?text=${encodeURIComponent(message)}`;
+---
+
+<a
+  class="whatsapp-float"
+  href={whatsappHref}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+  title="Chat with us on WhatsApp — drag to move"
+  data-whatsapp-float
+>
+  <img src="/platforms/whatsapp.svg" alt="" width="30" height="30" draggable="false" />
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    z-index: 90;
+    display: grid;
+    width: 4.5rem;
+    height: 4.5rem;
+    place-items: center;
+    border: 2px solid rgba(255, 255, 255, .92);
+    border-radius: 50%;
+    background: #25d366;
+    box-shadow: 0 10px 28px rgba(15, 23, 20, .26);
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: box-shadow .2s ease, transform .2s ease;
+  }
+
+  .whatsapp-float:hover {
+    box-shadow: 0 13px 34px rgba(15, 23, 20, .34);
+    transform: translateY(-2px);
+  }
+
+  .whatsapp-float:active,
+  .whatsapp-float[data-dragging='true'] {
+    cursor: grabbing;
+    box-shadow: 0 8px 22px rgba(15, 23, 20, .3);
+    transform: none;
+  }
+
+  .whatsapp-float img {
+    width: 2.25rem;
+    height: 2.25rem;
+    filter: brightness(0) invert(1);
+    pointer-events: none;
+  }
+
+  @media (max-width: 480px) {
+    .whatsapp-float {
+      right: max(1rem, env(safe-area-inset-right));
+      bottom: max(1rem, env(safe-area-inset-bottom));
+      width: 4.25rem;
+      height: 4.25rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .whatsapp-float { transition: none; }
+  }
+</style>
+
+<script>
+  const button = document.querySelector<HTMLElement>('[data-whatsapp-float]');
+
+  if (button) {
+    const edgeGap = 12;
+    const dragThreshold = 8;
+    let pointerId: number | null = null;
+    let pointerStartX = 0;
+    let pointerStartY = 0;
+    let elementStartX = 0;
+    let elementStartY = 0;
+    let dragged = false;
+    let hasCustomPosition = false;
+
+    const clampToViewport = (x: number, y: number) => {
+      const rect = button.getBoundingClientRect();
+      const viewport = window.visualViewport;
+      const viewportLeft = viewport?.offsetLeft ?? 0;
+      const viewportTop = viewport?.offsetTop ?? 0;
+      const viewportWidth = viewport?.width ?? window.innerWidth;
+      const viewportHeight = viewport?.height ?? window.innerHeight;
+      const minX = viewportLeft + edgeGap;
+      const minY = viewportTop + edgeGap;
+      const maxX = Math.max(minX, viewportLeft + viewportWidth - rect.width - edgeGap);
+      const maxY = Math.max(minY, viewportTop + viewportHeight - rect.height - edgeGap);
+
+      return {
+        x: Math.min(Math.max(minX, x), maxX),
+        y: Math.min(Math.max(minY, y), maxY),
+      };
+    };
+
+    const placeButton = (x: number, y: number) => {
+      const position = clampToViewport(x, y);
+      button.style.left = `${position.x}px`;
+      button.style.top = `${position.y}px`;
+      button.style.right = 'auto';
+      button.style.bottom = 'auto';
+    };
+
+    button.addEventListener('pointerdown', event => {
+      if (event.button !== 0) return;
+
+      const rect = button.getBoundingClientRect();
+      pointerId = event.pointerId;
+      pointerStartX = event.clientX;
+      pointerStartY = event.clientY;
+      elementStartX = rect.left;
+      elementStartY = rect.top;
+      dragged = false;
+      button.dataset.dragging = 'true';
+      button.setPointerCapture(event.pointerId);
+    });
+
+    button.addEventListener('pointermove', event => {
+      if (event.pointerId !== pointerId) return;
+
+      const deltaX = event.clientX - pointerStartX;
+      const deltaY = event.clientY - pointerStartY;
+      if (Math.hypot(deltaX, deltaY) >= dragThreshold) {
+        dragged = true;
+        hasCustomPosition = true;
+      }
+      if (dragged) placeButton(elementStartX + deltaX, elementStartY + deltaY);
+    });
+
+    const finishDrag = (event: PointerEvent) => {
+      if (event.pointerId !== pointerId) return;
+      if (button.hasPointerCapture(event.pointerId)) button.releasePointerCapture(event.pointerId);
+      pointerId = null;
+      delete button.dataset.dragging;
+    };
+
+    button.addEventListener('pointerup', finishDrag);
+    button.addEventListener('pointercancel', finishDrag);
+    button.addEventListener('dragstart', event => event.preventDefault());
+    button.addEventListener('click', event => {
+      if (!dragged) return;
+      event.preventDefault();
+      dragged = false;
+    });
+
+    const keepPositionOnScreen = () => {
+      if (!hasCustomPosition) {
+        button.style.removeProperty('left');
+        button.style.removeProperty('top');
+        button.style.removeProperty('right');
+        button.style.removeProperty('bottom');
+        return;
+      }
+
+      const rect = button.getBoundingClientRect();
+      placeButton(rect.left, rect.top);
+    };
+
+    window.addEventListener('resize', keepPositionOnScreen);
+    window.visualViewport?.addEventListener('resize', keepPositionOnScreen);
+  }
+</script>
