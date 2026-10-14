@@ -16,7 +16,7 @@ export const site = {
   url: canonicalOrigin?.origin || (import.meta.env.PROD ? 'https://www.mlabsgrowth.com' : ''),
   indexable: import.meta.env.PROD && import.meta.env.PUBLIC_SITE_INDEXABLE !== 'false' && !['preview', 'development'].includes(import.meta.env.PUBLIC_DEPLOY_ENV || ''),
   bookingUrl: 'https://calendly.com/kalathiyamehul13899/30min',
-  whatsappUrl: 'https://wa.me/919426016918',
+  whatsappUrl: 'https://wa.me/919979538416',
   /** The reply promise published under the enquiry form. Only publish what you will hold to. */
   replyWindow: 'Usually within one working day',
 } as const;

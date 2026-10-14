@@ -190,7 +190,7 @@ test('WhatsApp draft encoding preserves special characters without sending anyth
   const draft = buildEnquiry({ brand: 'A & B + परीक्षण', interest: 'ai-automation', message: 'https://example.com/?a=1&b=2\nSecond line' });
   const url = new URL(getWhatsAppDraftUrl(draft));
   assert.equal(url.origin, 'https://wa.me');
-  assert.equal(url.pathname, '/919426016918');
+  assert.equal(url.pathname, '/919979538416');
   assert.equal(url.searchParams.get('text'), draft);
   assert.equal([...url.searchParams].length, 1);
 });
@@ -277,7 +277,7 @@ test('campaign tags reach Calendly through internal navigation without copying u
   assert.equal(booking.searchParams.get('utm_content'), 'video1');
   assert.equal(booking.searchParams.has('email'), false);
   assert.equal(booking.searchParams.has('gclid'), false);
-  assert.equal(attributedHref('https://wa.me/919426016918', page), 'https://wa.me/919426016918');
+  assert.equal(attributedHref('https://wa.me/919979538416', page), 'https://wa.me/919979538416');
   assert.equal(attributedHref('#faq', page), '#faq');
   const direct = new URL(attributedHref('https://calendly.com/kalathiyamehul13899/30min', 'https://www.mlabsgrowth.com/services/store-conversion'));
   assert.equal(direct.searchParams.get('utm_content'), '/services/store-conversion');

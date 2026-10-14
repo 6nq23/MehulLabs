@@ -2,6 +2,7 @@
 import { Footer } from '@/components/layout/Footer';
 import HiveNavbar from '@/components/layout/HiveNavbar.astro';
 import { SiteRuntime } from '@/components/layout/SiteRuntime';
+import WhatsAppButton from '@/components/layout/WhatsAppButton.astro';
 import { contactEmail, site } from '@/data/site';
 import { tools } from '@/data/tools';
 import { metaPixelNoscriptSrc, metaPixelScript } from '@/data/metaPixel';
@@ -158,5 +159,6 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
       <slot />
     </main>
     <Footer />
+    <WhatsAppButton />
   </body>
 </html>
