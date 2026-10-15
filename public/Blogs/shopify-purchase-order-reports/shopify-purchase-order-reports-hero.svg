@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify purchase order reports weekly control plan</title>
+  <desc id="desc">Three report cards for purchase order costs, transfers, and purchases on order feed a weekly operations review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8d8"/>
+      <stop offset="0.55" stop-color="#fffdf5"/>
+      <stop offset="1" stop-color="#f3f0e8"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fffaf0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#241f16" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M1 1l10 5-10 5z" fill="#24221f"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" rx="48" fill="url(#bg)"/>
+  <circle cx="1460" cy="92" r="210" fill="#ffcb16" opacity="0.24"/>
+  <circle cx="120" cy="820" r="260" fill="#ff9d2e" opacity="0.11"/>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#24221f">
+    <text x="110" y="118" font-size="30" font-weight="800" letter-spacing="3">SHOPIFY OPERATIONS</text>
+    <text x="110" y="190" font-size="62" font-weight="850">Purchase order reports</text>
+    <text x="110" y="242" font-size="30" fill="#655f55">Three views. One weekly control plan.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="110" y="330" width="380" height="270" rx="30" fill="url(#card)" stroke="#ded8ca" stroke-width="3"/>
+      <rect x="610" y="330" width="380" height="270" rx="30" fill="url(#card)" stroke="#ded8ca" stroke-width="3"/>
+      <rect x="1110" y="330" width="380" height="270" rx="30" fill="url(#card)" stroke="#ded8ca" stroke-width="3"/>
+    </g>
+
+    <g>
+      <circle cx="175" cy="402" r="35" fill="#ffcb16"/>
+      <path d="M158 403h34M167 388v30M181 388v30" stroke="#24221f" stroke-width="6" stroke-linecap="round"/>
+      <text x="225" y="397" font-size="25" font-weight="800">Purchase order</text>
+      <text x="225" y="429" font-size="25" font-weight="800">costs</text>
+      <text x="155" y="501" font-size="22" fill="#655f55">Quantities · supplier cost</text>
+      <text x="155" y="535" font-size="22" fill="#655f55">Tax · destination · SKU</text>
+    </g>
+
+    <g>
+      <circle cx="675" cy="402" r="35" fill="#ffcb16"/>
+      <path d="M657 411h37l-5-20h-27zM665 411v10M686 411v10" fill="none" stroke="#24221f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="725" y="397" font-size="25" font-weight="800">Purchase order</text>
+      <text x="725" y="429" font-size="25" font-weight="800">transfers</text>
+      <text x="655" y="501" font-size="22" fill="#655f55">Shipment · expected date</text>
+      <text x="655" y="535" font-size="22" fill="#655f55">Accepted · rejected</text>
+    </g>
+
+    <g>
+      <circle cx="1175" cy="402" r="35" fill="#ffcb16"/>
+      <path d="M1158 388h34v31h-34zM1167 398h17M1167 408h12" fill="none" stroke="#24221f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1225" y="397" font-size="25" font-weight="800">Purchases</text>
+      <text x="1225" y="429" font-size="25" font-weight="800">on order</text>
+      <text x="1155" y="501" font-size="22" fill="#655f55">Open ordered POs</text>
+      <text x="1155" y="535" font-size="22" fill="#655f55">without linked transfers</text>
+    </g>
+
+    <path d="M300 622v80h930v-80" fill="none" stroke="#24221f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+    <path d="M800 702v42" fill="none" stroke="#24221f" stroke-width="6" marker-end="url(#arrow)"/>
+    <rect x="450" y="764" width="700" height="82" rx="41" fill="#24221f"/>
+    <text x="800" y="816" text-anchor="middle" font-size="29" font-weight="800" fill="#ffffff">Weekly exceptions → owners → decisions</text>
+  </g>
+</svg>
