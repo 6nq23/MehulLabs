@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Purchase order weekly control map</title>
+  <desc id="desc">A four-stage process separates the supplier agreement, inventory movement, receiving outcome, and weekly management decision.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf5"/>
+      <stop offset="1" stop-color="#f5f2ea"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#241f16" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrow2" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M1 1l10 5-10 5z" fill="#7a7267"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" rx="48" fill="url(#bg2)"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#24221f">
+    <text x="100" y="105" font-size="30" font-weight="800" letter-spacing="3">WEEKLY CONTROL MAP</text>
+    <text x="100" y="175" font-size="54" font-weight="850">Keep four business states separate</text>
+    <text x="100" y="224" font-size="27" fill="#655f55">Each stage has different evidence, exceptions, and owners.</text>
+
+    <g filter="url(#shadow2)">
+      <rect x="80" y="310" width="330" height="360" rx="32" fill="#ffffff" stroke="#ddd7cb" stroke-width="3"/>
+      <rect x="450" y="310" width="330" height="360" rx="32" fill="#ffffff" stroke="#ddd7cb" stroke-width="3"/>
+      <rect x="820" y="310" width="330" height="360" rx="32" fill="#ffffff" stroke="#ddd7cb" stroke-width="3"/>
+      <rect x="1190" y="310" width="330" height="360" rx="32" fill="#24221f"/>
+    </g>
+
+    <path d="M410 490h40M780 490h40M1150 490h40" stroke="#7a7267" stroke-width="5" marker-end="url(#arrow2)"/>
+
+    <g>
+      <rect x="115" y="350" width="66" height="66" rx="20" fill="#ffcb16"/>
+      <text x="148" y="395" text-anchor="middle" font-size="30" font-weight="900">1</text>
+      <text x="115" y="470" font-size="29" font-weight="850">Agreement</text>
+      <text x="115" y="518" font-size="22" fill="#655f55">Products · quantity</text>
+      <text x="115" y="552" font-size="22" fill="#655f55">Supplier cost · tax</text>
+      <text x="115" y="586" font-size="22" fill="#655f55">Payment terms</text>
+      <text x="115" y="633" font-size="19" font-weight="750" fill="#9a6700">PURCHASE ORDER</text>
+    </g>
+
+    <g>
+      <rect x="485" y="350" width="66" height="66" rx="20" fill="#ffcb16"/>
+      <text x="518" y="395" text-anchor="middle" font-size="30" font-weight="900">2</text>
+      <text x="485" y="470" font-size="29" font-weight="850">Movement</text>
+      <text x="485" y="518" font-size="22" fill="#655f55">Shipment · tracking</text>
+      <text x="485" y="552" font-size="22" fill="#655f55">Expected delivery</text>
+      <text x="485" y="586" font-size="22" fill="#655f55">Multiple shipments</text>
+      <text x="485" y="633" font-size="19" font-weight="750" fill="#9a6700">LINKED TRANSFER</text>
+    </g>
+
+    <g>
+      <rect x="855" y="350" width="66" height="66" rx="20" fill="#ffcb16"/>
+      <text x="888" y="395" text-anchor="middle" font-size="30" font-weight="900">3</text>
+      <text x="855" y="470" font-size="29" font-weight="850">Receiving</text>
+      <text x="855" y="518" font-size="22" fill="#655f55">Accepted · rejected</text>
+      <text x="855" y="552" font-size="22" fill="#655f55">Canceled · outstanding</text>
+      <text x="855" y="586" font-size="22" fill="#655f55">Available quantity</text>
+      <text x="855" y="633" font-size="19" font-weight="750" fill="#9a6700">WAREHOUSE EVIDENCE</text>
+    </g>
+
+    <g fill="#ffffff">
+      <rect x="1225" y="350" width="66" height="66" rx="20" fill="#ffcb16"/>
+      <text x="1258" y="395" text-anchor="middle" font-size="30" font-weight="900" fill="#24221f">4</text>
+      <text x="1225" y="470" font-size="29" font-weight="850">Decision</text>
+      <text x="1225" y="518" font-size="22" fill="#efe9dc">Chase · credit · replace</text>
+      <text x="1225" y="552" font-size="22" fill="#efe9dc">Reprice · delay campaign</text>
+      <text x="1225" y="586" font-size="22" fill="#efe9dc">Approve next buy</text>
+      <text x="1225" y="633" font-size="19" font-weight="750" fill="#ffcb16">OWNER + REVIEW DATE</text>
+    </g>
+
+    <rect x="255" y="754" width="1090" height="78" rx="39" fill="#ffcb16"/>
+    <text x="800" y="804" text-anchor="middle" font-size="27" font-weight="850">Ordered ≠ shipped ≠ received ≠ available ≠ paid</text>
+  </g>
+</svg>
