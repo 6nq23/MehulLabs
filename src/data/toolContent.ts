@@ -1,10 +1,10 @@
 export const toolContent = {
   'unit-economics': {
     eyebrow: 'Free D2C calculator',
-    intro: 'Plug in your real numbers to estimate how much you make or lose on every order after COGS, shipping, ads, GST, gateway fees, and RTO drag.',
+    intro: 'Plug in your real numbers to estimate how much you make or lose on every order after COGS, shipping, ads, sales tax (GST/VAT), gateway fees, and RTO drag.',
     whyTitle: 'Why Unit Economics Is the #1 Metric for D2C Brands',
     whyIntro: 'Scaling without knowing your unit economics is like driving blind. Topline revenue and ROAS hide the real picture; this calculator estimates contribution per order from the inputs you provide.',
-    reasons: [['Uncover hidden costs', 'Gateway fees, GST, RTO drag, and packaging costs add up quickly. Seeing them together reveals the true cost per order.'], ['Set the right CAC target', 'Your maximum affordable CAC is the contribution before ad spend. Spending more means every new customer loses money.'], ['Know your break-even', 'The orders needed to cover ad spend help decide whether the current model is ready to scale.']],
+    reasons: [['Uncover hidden costs', 'Gateway fees, sales tax, RTO drag, and packaging costs add up quickly. Seeing them together reveals the true cost per order.'], ['Set the right CAC target', 'Your maximum affordable CAC is the contribution before ad spend. Spending more means every new customer loses money.'], ['Know your break-even', 'The orders needed to cover ad spend help decide whether the current model is ready to scale.']],
     faqs: [['What is unit economics and why does it matter for D2C?', 'Unit economics measures the revenue and variable costs attached to one order. It tells you whether growth creates profit or simply scales a loss.'], ['How is Contribution Margin different from Gross Margin?', 'Gross margin subtracts COGS from net selling price. Contribution margin also subtracts fulfilment, fees, taxes, expected RTO drag, and CAC.'], ['Why do you factor in RTO costs?', 'RTO creates expected cost across all orders. Multiplying the failed-order logistics cost by your RTO rate shows that average drag per placed order.'], ['What is a healthy Contribution Margin for D2C brands?', 'There is no universal target. The useful benchmark is a positive margin that can also cover fixed overheads and leave room for reinvestment.']],
   },
   'bundle-planner': {
@@ -39,7 +39,7 @@ export const toolContent = {
   },
   'ecommerce-platform-profit': {
     eyebrow: 'Free marketplace calculator',
-    intro: 'Calculate expected profit for marketplace orders after commission, GST, returns, RTO, logistics, product cost and advertising.',
+    intro: 'Calculate expected profit for marketplace orders after commission, sales tax (GST/VAT), returns, RTO, logistics, product cost and advertising.',
     whyTitle: 'See What Marketplace Revenue Leaves Behind',
     whyIntro: 'A marketplace selling price can look healthy before commission, failed deliveries and ad cost are included. This view brings those moving parts into one order-level model.',
     reasons: [['Separate payout from profit', 'Settlement deductions and recoverable taxes affect cash received, while operating costs determine the modeled profit.'], ['Test price before listing', 'Compare the current price with break-even and target-margin prices before committing inventory or ad spend.'], ['Set a workable ROAS floor', 'Use the break-even ROAS to see how much advertising cost the order can support under the same assumptions.']],

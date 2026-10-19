@@ -16,7 +16,12 @@ const { service } = Astro.props;
 const pillar = getServicePillar(service);
 const delivery = serviceDelivery[service.pillarId];
 const searchContent = serviceSearchContent[service.slug as keyof typeof serviceSearchContent];
-const relatedGuide = guides.find(guide => guide.service === service.slug)!;
+const relatedGuide = guides.find(guide => guide.service === service.slug);
+// Services without a guide point to the blog article that owns the topic.
+const blogReading: Record<string, { href: string; title: string }> = {
+  'order-operations': { href: '/blog/rto-cost-guide', title: 'RTO costs: a practical guide for ecommerce' },
+};
+const relatedReading = relatedGuide ? { href: `/guides/${relatedGuide.slug}`, title: relatedGuide.title } : blogReading[service.slug];
 const relatedTools = tools.filter(tool => (searchContent.tools as readonly string[]).includes(tool.slug));
 const related = serviceRoutes.filter(item => item.slug !== service.slug);
 ---
@@ -92,7 +97,7 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
       <h2 id="service-search-title" class="section-title">{searchContent.heading}</h2>
       <p class="section-description">{searchContent.body}</p>
       <div class="tool-faq">{searchContent.faqs.map(([question, answer]) => <details><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div>
-      <p><a class="text-link" href={`/guides/${relatedGuide.slug}`}>{relatedGuide.title} ↗</a></p>
+      {relatedReading && <p><a class="text-link" href={relatedReading.href}>{relatedReading.title} ↗</a></p>}
       <h3>Put numbers behind the next decision</h3>
       <nav class="seo-related" aria-label="Related free calculators">{relatedTools.map(tool => <a class="text-link" href={`/tools/${tool.slug}`}>{tool.title} ↗</a>)}</nav>
     </section>

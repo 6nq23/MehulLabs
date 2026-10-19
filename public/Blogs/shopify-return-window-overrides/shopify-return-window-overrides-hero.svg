@@ -8,7 +8,7 @@
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/><circle cx="1390" cy="100" r="230" fill="#f4c84b" opacity=".08"/><circle cx="120" cy="820" r="280" fill="#ff7a59" opacity=".07"/>
   <g font-family="Inter, Arial, sans-serif">
-    <text x="110" y="120" fill="#f4c84b" font-size="24" font-weight="700" letter-spacing="4">MLABS GROWTH · POLICY CONTROL</text>
+    <text x="110" y="120" fill="#f4c84b" font-size="24" font-weight="700" letter-spacing="4">MLABSGROWTH · POLICY CONTROL</text>
     <text x="110" y="194" fill="#fffaf0" font-size="58" font-weight="750">One return policy.</text><text x="110" y="258" fill="#fffaf0" font-size="58" font-weight="750">Clear exceptions.</text><text x="110" y="310" fill="#c9c4b8" font-size="25">Design the rule before the holiday order arrives.</text>
     <g filter="url(#shadow)"><rect x="110" y="390" width="370" height="220" rx="28" fill="#fffaf0"/><rect x="110" y="390" width="370" height="12" rx="6" fill="url(#accent)"/><text x="150" y="455" fill="#27251f" font-size="21" font-weight="700" letter-spacing="2">DEFAULT POLICY</text><text x="150" y="530" fill="#11110f" font-size="54" font-weight="800">30 days</text><text x="150" y="570" fill="#665f52" font-size="21">The baseline when no override applies</text></g>
     <path d="M480 500H570" stroke="#f4c84b" stroke-width="6" stroke-linecap="round"/><path d="M555 483l22 17-22 17" fill="none" stroke="#f4c84b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>

@@ -28,10 +28,19 @@ export function LeadCapturePopup() {
       lenis?.stop();
     }
 
-    const timer = window.setTimeout(showWhenReady, 5000);
+    // Google demotes pages whose content is covered by an interstitial, especially on mobile.
+    // So: desktop only, and only once the visitor has read half the page or stayed 45 seconds.
+    const desktop = window.matchMedia('(min-width: 1024px)').matches;
+    const onScroll = () => {
+      const depth = (window.scrollY + window.innerHeight) / Math.max(document.documentElement.scrollHeight, 1);
+      if (depth >= 0.5) { window.removeEventListener('scroll', onScroll); showWhenReady(); }
+    };
+    const timer = desktop ? window.setTimeout(showWhenReady, 45000) : 0;
+    if (desktop) window.addEventListener('scroll', onScroll, { passive: true });
     return () => {
       cancelled = true;
       window.clearTimeout(timer);
+      window.removeEventListener('scroll', onScroll);
       if (retryRef.current) window.clearTimeout(retryRef.current);
       lenis?.start();
     };

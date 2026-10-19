@@ -149,7 +149,7 @@
   }
 }
 
-/* Mehul Labs: a restrained, type-led identity for independent brands. */
+/* MlabsGrowth: a restrained, type-led identity for independent brands. */
 section[id], article[id] { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 .text-link { display: inline-flex; align-items: center; gap: .65rem; min-height: 44px; font-size: .875rem; font-weight: 500; }
 .text-link:hover { color: #1a1a1a; }
@@ -574,6 +574,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .calculator-section-heading button:hover { color: #fff; background: #1a1a1a; }
 .calculator-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
 .calculator-field { display: flex; flex-direction: column; min-width: 0; gap: .55rem; }
+.calculator-currency { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-bottom: 1rem; }
+.calculator-currency label { display: inline-flex; align-items: center; gap: .6rem; font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.calculator-currency select { min-height: 2.5rem; padding: .4rem 2rem .4rem .8rem; border: 1px solid #d2cec3; border-radius: 999px; background: #fff; color: #18181b; font: inherit; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.calculator-currency small { color: #707178; font-size: .82rem; }
 .calculator-label { font-size: .875rem; font-weight: 500; color: #45433b; }
 .calculator-field small { font-size: .75rem; line-height: 1.45; color: #707178; }
 .calculator-input-wrap { position: relative; display: flex; align-items: center; }
@@ -848,7 +852,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .sku-fields { grid-template-columns: 1fr; }.sku-card-heading { grid-template-columns: 1fr auto; }.sku-card-heading label { grid-column: 1 / -1; }
 }
 
-/* Content-first MLabs pages: static headlines, short reading widths, clear paths. */
+/* Content-first MlabsGrowth pages: static headlines, short reading widths, clear paths. */
 .growth-hero { padding: calc(var(--nav-h) + 4rem) 0 0; background: #f6f5f1; color: #131313; }
 .growth-hero-grid { display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 5rem); }
 .growth-eyebrow, .growth-status { font-size: .7rem; font-weight: 600; letter-spacing: .12em; line-height: 1.6; }
@@ -1005,8 +1009,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .blog-post-header .tools-kicker { color: #81745c; }
 .blog-post-header h1 { max-width: 16ch; margin-top: 1.25rem; font-family: var(--font-display), sans-serif; font-size: clamp(2.8rem, 6.8vw, 6.4rem); font-weight: 600; line-height: .98; letter-spacing: -.06em; }
 .blog-post-dek { max-width: 48rem; margin-top: 2rem; color: #606060; font-size: clamp(1.05rem, 1.6vw, 1.28rem); line-height: 1.75; }
-.blog-post-meta { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; margin-top: 2.25rem; color: #bdb9ac; font-size: .78rem; letter-spacing: .03em; text-transform: uppercase; }
-.blog-post-meta a { color: #ede9dc; text-decoration: underline; text-underline-offset: .22em; }
+.blog-post-meta { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; margin-top: 2.25rem; color: #6b6a64; font-size: .78rem; letter-spacing: .03em; text-transform: uppercase; }
+.blog-post-meta a { color: #18181b; text-decoration: underline; text-underline-offset: .22em; }
 .blog-post-body { max-width: 900px; padding-top: clamp(3.5rem, 7vw, 6.5rem); padding-bottom: clamp(5rem, 9vw, 9rem); }
 .blog-prose { font-size: 1.06rem; line-height: 1.85; }
 .blog-prose > :first-child { margin-top: 0; }
@@ -1036,14 +1040,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .blog-callout { margin: 2.5rem 0; padding: clamp(1.35rem, 3vw, 2rem); border: 1px solid #d2cec3; border-radius: 6px; background: #f2f0ec; }
 .blog-callout > :first-child { margin-top: 0; }
 .blog-callout > :last-child { margin-bottom: 0; }
-.blog-cta { margin: 3rem 0; padding: clamp(1.5rem, 4vw, 2.75rem); border-radius: 6px; color: #131313; background: #1a1a1a; }
+.blog-cta { margin: 3rem 0; padding: clamp(1.5rem, 4vw, 2.75rem); border-radius: 6px; color: #f6f5f1; background: #1a1a1a; }
 .blog-cta h2, .blog-cta h3, .blog-cta p, .blog-cta strong { color: inherit; }
 .blog-cta h2, .blog-cta h3 { margin-top: 0; padding-top: 0; border-top: 0; }
-.blog-cta a { color: #e7e0c6; }
+.blog-cta a { color: #facc15; }
 .blog-brand-strip { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin: 2.25rem 0; }
 .blog-brand-strip p { flex-basis: 100%; margin: 0 0 .15rem; color: #707178; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; }
 .blog-brand-strip span { display: inline-flex; gap: .5rem; align-items: center; padding: .42rem .85rem; border: 1px solid #d2cec3; border-radius: 999px; background: #f8f7f3; color: #18181b; font-size: .86rem; font-weight: 550; line-height: 1.2; }
 .blog-brand-strip img { display: block; width: 18px; height: 18px; object-fit: contain; }
+.blog-author-card { margin-top: 3.5rem; padding: clamp(1.35rem, 3vw, 2rem); border: 1px solid #d2cec3; border-radius: 6px; background: #f8f7f3; font-size: .98rem; line-height: 1.7; }
+.blog-author-card p { margin: 0 0 .6rem; }
+.blog-author-card p:last-child { margin-bottom: 0; }
+.blog-author-card a { color: #2a2a2a; text-decoration: underline; text-underline-offset: .22em; }
+.blog-author-kicker { color: #707178; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; }
+.blog-related { margin-top: 3rem; }
+.blog-related h2 { margin: 0 0 1.1rem; font-size: 1.35rem; letter-spacing: -.02em; }
+.blog-related ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.blog-related a { display: flex; flex-direction: column; gap: .5rem; height: 100%; padding: 1.15rem 1.2rem; border: 1px solid #d2cec3; border-radius: 6px; background: #fff; color: #18181b; transition: border-color .2s, transform .2s; }
+.blog-related a:hover { border-color: #18181b; transform: translateY(-2px); }
+.blog-related span { color: #707178; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+.blog-related strong { font-size: 1rem; line-height: 1.35; }
+@media (max-width: 720px) { .blog-related ul { grid-template-columns: 1fr; } }
 @media (max-width: 720px) {
   .blog-post-back { margin-bottom: 2rem; }
   .blog-post-meta { flex-direction: column; }

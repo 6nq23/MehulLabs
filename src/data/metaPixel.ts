@@ -1,4 +1,4 @@
-/** Meta Pixel (dataset "mlabsgrowth.com", business Mlabs Growth). Single source for every page shell. */
+/** Meta Pixel (dataset "mlabsgrowth.com", business MlabsGrowth). Single source for every page shell. */
 export const metaPixelId = '1822371592232423';
 
 export const metaPixelScript = `!function(f,b,e,v,n,t,s)

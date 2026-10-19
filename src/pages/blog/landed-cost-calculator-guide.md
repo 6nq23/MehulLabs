@@ -4,13 +4,12 @@ draft: false
 title: "Landed Cost Calculator: The Real Cost of Every Product You Sell"
 description: "Use this landed cost calculator guide to add freight, duty, import tax, brokerage and returns to every SKU, with a worked Shopify example and copyable formula."
 publishedOn: "2026-10-07"
-updatedOn: "2026-10-07"
-category: "Unit economics"
+updatedOn: "2026-10-19"
+category: "Ecommerce profit & finance"
 author: "Mehul"
 readTime: "10 min read"
 coverImage: "/Blogs/landed-cost-calculator-guide/landed-cost-calculator-guide-hero.svg"
 coverImageAlt: "Stacked bar showing a product's supplier price growing into its full landed cost after freight, duty, brokerage and handling"
-wordCount: 2150
 faqs:
   - question: "What is landed cost in ecommerce?"
     answer: "Landed cost is the total cost of getting a product from the supplier to your warehouse, ready to sell. It covers the supplier price, international freight, insurance, customs duty, non-recoverable import taxes, customs fees, brokerage and inbound handling. Many stores also add payment fees and a returns allowance to see the fully loaded cost per unit."
@@ -26,21 +25,14 @@ faqs:
 
 Landed cost is the full price you pay to get a product sold-ready in your warehouse, not the figure on the supplier's invoice. It adds freight, insurance, duty, customs fees, brokerage and inbound handling to the product cost, and it is the number your pricing and margins should be built on.
 
-Most stores know their supplier price to the cent and guess everything after it. That gap is where margin disappears: a product that looks like a 70% gross margin on paper can earn far less once freight, duty and returns are counted.
+Most stores know their supplier price to the cent and guess everything after it. That gap is where margin disappears.
 
-This guide gives you the formula, a worked example, a spreadsheet layout you can copy, and a way to keep the number current in Shopify.
+A product that looks like a 70% gross margin on paper can earn far less once freight, duty and returns are counted. In the illustrative example below, an $8.00 supplier price becomes a $10.34 landed cost and a $12.28 loaded cost, cutting margin from 72% to 58%. This guide gives you the formula behind that, a spreadsheet layout you can copy, and a way to keep the number current in Shopify.
 
 <figure class="blog-feature-image">
   <img src="/Blogs/landed-cost-calculator-guide/landed-cost-calculator-guide-hero.svg" alt="Stacked bar showing a product's supplier price growing into its full landed cost after freight, duty, brokerage and handling" width="1600" height="900" fetchpriority="high" decoding="async">
   <figcaption>Concept illustration: a supplier price growing into landed cost as each import cost is added. This is not a Shopify admin screenshot.</figcaption>
 </figure>
-
-> **Key takeaways**
->
-> - Landed cost equals product cost plus every cost needed to get sellable stock into your warehouse. Divide by sellable units, not units ordered.
-> - In our illustrative example, a $8.00 supplier price becomes a $10.34 landed cost and a $12.28 loaded cost, cutting margin from 72% to 58%.
-> - Import VAT or GST is a cost only when you cannot reclaim it. Duty is always a cost.
-> - Recalculate whenever a purchase order lands, and store the result where your profit reports can use it.
 
 <div class="blog-brand-strip" aria-label="Platforms covered in this guide">
   <p>Platforms in this guide</p>
@@ -53,14 +45,14 @@ This guide gives you the formula, a worked example, a spreadsheet layout you can
 ## In this guide
 
 - [What landed cost includes](#what-is-landed-cost-and-what-does-it-include)
-- [The landed cost formula](#what-is-the-landed-cost-formula)
+- [The landed cost formula](#the-landed-cost-formula)
 - [Incoterms and who pays what](#how-do-incoterms-change-what-lands-on-your-cost-sheet)
-- [Duty and import tax by market](#how-do-duty-and-import-tax-change-landed-cost)
-- [A worked landed-cost table](#what-does-a-worked-landed-cost-example-look-like)
-- [Spreadsheet layout](#what-should-your-landed-cost-spreadsheet-look-like)
+- [Duty and import tax by market](#duty-and-import-tax-by-market)
+- [A worked landed-cost table](#a-worked-example-from-800-to-1034)
+- [Spreadsheet layout](#a-spreadsheet-layout-you-can-copy)
 - [Allocating shared costs](#how-do-you-split-shared-costs-across-skus)
-- [Sensitivity: what moves margin most](#how-much-can-freight-duty-and-returns-move-your-margin)
-- [Keeping the number current](#how-do-you-keep-landed-cost-current-in-shopify)
+- [Sensitivity: what moves margin most](#what-moves-margin-most-freight-duty-or-returns)
+- [Keeping the number current](#keeping-landed-cost-current-in-shopify)
 - [Frequently asked questions](#frequently-asked-questions)
 
 ## What is landed cost, and what does it include?
@@ -75,11 +67,11 @@ Each cost comes from a different document, which is why it is rarely in one plac
 - **Brokerage:** the customs broker's invoice for filing the entry and clearing the goods.
 - **Inbound handling:** your warehouse or 3PL's receiving and put-away charge.
 
-Shopify's own guidance on [duties and import taxes](https://help.shopify.com/en/manual/international/duties-and-import-taxes) notes that customs authorities set the amount from a product's classification, its origin and the destination's rules. Tariff rates change often, so this guide treats them as inputs. For the policy picture, read our post on [tariffs, duties and Shopify pricing](/blog/tariffs-duties-shopify-pricing).
+Shopify's own guidance on [duties and import taxes](https://help.shopify.com/en/manual/international/duties-and-import-taxes) notes that customs authorities set the amount from a product's classification, its origin and the destination's rules. Tariff rates change often, so this guide treats them as inputs. Check the current rate for each destination before you re-price.
 
-## What is the landed cost formula?
+## The landed cost formula
 
-Landed cost per unit equals total shipment cost divided by sellable units received. Total shipment cost is the product cost plus freight, insurance, duty, customs fees, brokerage, inbound handling and any non-recoverable import tax. Using sellable units matters because damaged or short-shipped stock still carries its share of the bill.
+Divide total shipment cost by sellable units received, and you have landed cost per unit. The shipment total is the product cost plus freight, insurance, duty, customs fees, brokerage, inbound handling and any non-recoverable import tax. Using sellable units matters because damaged or short-shipped stock still carries its share of the bill.
 
 ```
 Total shipment cost = Product cost + Freight + Insurance + Duty
@@ -111,9 +103,11 @@ The [ICC Academy explains](https://academy.iccwbo.org/incoterms/article/incoterm
 
 Compare quotes on a landed basis, not a per-unit supplier price. A DDP quote can beat an FOB quote on paper and still lose once you check what tariff rate and value the supplier assumed.
 
-## How do duty and import tax change landed cost?
+## Duty and import tax by market
 
-Duty is always a cost, but import VAT or GST often is not. The bigger trap is valuation: the US generally excludes separately identified international freight and insurance from the dutiable value, while the UK and EU add them. The same shipment can therefore carry different duty depending on where it lands.
+Duty is always a cost, but import VAT or GST often is not.
+
+The bigger trap is valuation. The US generally excludes separately identified international freight and insurance from the dutiable value, while the UK and EU add them, so the same shipment can carry different duty depending on where it lands.
 
 In the US, [19 CFR 152.103](https://www.law.cornell.edu/cfr/text/19/152.103) gives an example where a $2,000 invoice includes $150 of ocean freight and insurance, and that $150 is excluded from transaction value. The UK works differently: [GOV.UK's guidance on valuing goods for import VAT](https://www.gov.uk/guidance/how-to-value-goods-for-import-vat) bases the VAT value on the customs value plus duty and incidental expenses such as transport up to the first UK destination.
 
@@ -132,9 +126,9 @@ Three details that affect the maths:
 
 Small parcels need extra care. CBP [ended duty-free de minimis treatment](https://www.cbp.gov/newsroom/national-media-release/cbp-modernizes-low-value-shipment-processing) for low-value shipments from 29 August 2025, so sub-$800 parcels that once entered duty-free are now dutiable.
 
-## What does a worked landed-cost example look like?
+## A worked example: from $8.00 to $10.34
 
-The example below follows one product imported into the US by sea. A $8.00 supplier price becomes a $10.34 landed cost, a 29% uplift, and a $12.28 loaded cost once payment fees and a returns allowance are included. Every figure is illustrative, so replace each with your own quotes.
+The example below follows one product imported into the US by sea. Its $8.00 supplier price becomes a $10.34 landed cost, a 29% uplift, and a $12.28 loaded cost once payment fees and a returns allowance are included. Every figure is illustrative, so replace each with your own quotes.
 
 **Illustrative assumptions (USD, per unit):** 1,000 units shipped, FOB supplier price $8.00, selling price $29.00, duty rate 10% on FOB value (a placeholder, not a real tariff rate), broker fee $150 per entry, payment fee of 2.9% plus $0.30, return rate of 10% at $8.00 net cost per return.
 
@@ -165,11 +159,11 @@ The supplier price alone suggests a $21.00 margin per unit. The loaded view says
   <strong>A simple rule:</strong> never price a product from its supplier cost. Price it from landed cost, then subtract payment fees, returns, outbound shipping and ads to see what is left.
 </aside>
 
-Payment fees vary by provider and plan. Shopify's [Shopify Payments fee page](https://help.shopify.com/en/manual/payments/shopify-payments/onboarding/cost-of-shopify-payments) says rates depend on your plan and that using a third-party provider alongside Shopify Payments changes the fees. Our guide to [Shopify payment gateway fees](/blog/shopify-payment-gateway-fees) covers the comparison.
+Payment fees vary by provider and plan. Shopify's [Shopify Payments fee page](https://help.shopify.com/en/manual/payments/shopify-payments/onboarding/cost-of-shopify-payments) says rates depend on your plan and that using a third-party provider alongside Shopify Payments changes the fees. Add your actual fee rate to the [website profit calculator](/tools/website-d2c-profit) to see its effect per order.
 
-## What should your landed-cost spreadsheet look like?
+## A spreadsheet layout you can copy
 
-A landed-cost sheet needs one row per SKU per shipment, with shared costs allocated into that row. Copy the layout below into Google Sheets or Excel. Columns A to L give landed cost per sellable unit, and columns M to Q turn it into margin before outbound shipping and ads.
+Give the sheet one row per SKU per shipment, with shared costs allocated into that row. Copy the layout below into Google Sheets or Excel: columns A to L give landed cost per sellable unit, and columns M to Q turn it into margin before outbound shipping and ads.
 
 | Col | Field | Formula or input |
 |---|---|---|
@@ -208,9 +202,11 @@ Duty is best assigned line by line from the customs entry, because different pro
 
 Bulky, light items are where allocation errors hurt most. A bulky bundle component allocated freight by value will look cheaper than it is. If you sell bundles, recalculate each component's landed cost before setting the bundle price. Our [bundle pricing guide](/blog/bundle-pricing-guide) shows how to test that.
 
-## How much can freight, duty and returns move your margin?
+## What moves margin most: freight, duty or returns
 
-Margin moves most when several costs shift together. Using the worked example, a 50% freight increase lowers margin from 57.7% to 55.8%, a jump from 10% to 25% duty takes it to 53.5%, and doubling the return rate takes it to 54.9%. All three at once leave 48.9%.
+Margin moves most when several costs shift together.
+
+Using the worked example, a 50% freight increase lowers margin from 57.7% to 55.8%, a jump from 10% to 25% duty takes it to 53.5%, and doubling the return rate takes it to 54.9%. All three at once leave 48.9%.
 
 | Scenario (illustrative) | Loaded cost ($) | Margin before shipping and ads |
 |---|---|---|
@@ -224,7 +220,7 @@ Returns deserve their own line because they behave differently from freight. The
 
 Cost surprises also reach the shopper. Baymard's [cart abandonment research](https://baymard.com/lists/cart-abandonment-rate) found that extra costs being too high was the top reason for abandonment, cited by 40% of shoppers who were not just browsing. If duties or fees appear only at delivery, that risk sits with your customer experience as well as your margin.
 
-## How do you keep landed cost current in Shopify?
+## Keeping landed cost current in Shopify
 
 Store the latest landed cost where your reports can use it, and update it each time a purchase order lands. Shopify's [product details page](https://help.shopify.com/en/manual/products/details/product-details-page) explains that the cost per item field drives projected profit and margin on each product, and its [profit reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports) use recorded costs.
 
@@ -235,15 +231,11 @@ A four-step routine keeps the number honest:
 1. **On each receiving note,** replace estimates with actual invoices and record sellable units.
 2. **Blend old and new stock** using a weighted average, or track batches when costs differ sharply.
 3. **Re-price** any SKU whose landed cost moved enough to push margin under your floor.
-4. **Feed it forward** into reorder quantities and cash planning. The [inventory reorder point guide](/blog/inventory-reorder-point-guide) covers timing, [Q4 inventory planning under tariffs](/blog/q4-inventory-planning-tariffs) covers holiday buys, and the [cash runway guide](/blog/cash-runway-guide) shows how to keep cash for duty and freight invoices.
+4. **Feed it forward** into reorder quantities and cash planning. The [inventory reorder point guide](/blog/inventory-reorder-point-guide) covers timing for holiday buys, and the [cash runway guide](/blog/cash-runway-guide) shows how to keep cash for duty and freight invoices.
 
 When landed cost feeds contribution margin, it also changes ad decisions, because a real margin sets the profit-on-ad-spend ceiling for each SKU. See [POAS versus ROAS](/blog/poas-vs-roas) for how that works.
 
-<section class="blog-cta">
-  <h2>See the real margin behind every SKU and ad</h2>
-  <p>mlabs Growth helps Shopify brands connect product cost, conversion and order data so pages, offers and ad spend are judged on contribution, not on revenue alone.</p>
-  <p><a href="/services/store-conversion">Explore Shopify conversion optimization</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
-</section>
+A supplier price is a starting point, not a cost. Start with your top five SKUs this week: build the sheet above, run the landed cost through the [unit economics calculator](/tools/unit-economics) to see contribution per order, and compare it with what you assumed. Use the gap to reset prices, supplier quotes and ad ceilings, then carry the number into Q4 budgets with our [contribution margin guide for holiday ad spend](/blog/contribution-margin-holiday-ad-spend).
 
 ## Frequently asked questions
 
@@ -267,11 +259,11 @@ Usually not. Landed cost stops when stock is ready to sell in your warehouse or 
 
 Update it every time a purchase order lands, and review it whenever freight rates, duty rates or exchange rates change. If new stock arrives at a different cost from older stock, use a weighted average or track costs by batch so your margin reports do not rely on a number from last season.
 
-## The bottom line
-
-A supplier price is a starting point, not a cost. The stores with dependable margins are the ones that add freight, duty, fees, brokerage, handling and returns to every SKU, divide by sellable units, and refresh the result with each shipment.
-
-Start with your top five SKUs this week. Build the sheet above, then run the landed cost through the [unit economics calculator](/tools/unit-economics) to see contribution per order. Compare it with what you assumed, and use the gap to reset prices, supplier quotes and ad ceilings. Our [contribution margin guide for holiday ad spend](/blog/contribution-margin-holiday-ad-spend) shows how to carry the number into Q4 budgets.
+<section class="blog-cta">
+  <h2>See the real margin behind every SKU and ad</h2>
+  <p>MlabsGrowth helps Shopify brands connect product cost, conversion and order data so pages, offers and ad spend are judged on contribution, not on revenue alone.</p>
+  <p><a href="/services/store-conversion">Protect margin on your Shopify product pages</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
+</section>
 
 ## Source notes
 

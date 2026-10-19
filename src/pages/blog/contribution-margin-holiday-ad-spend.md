@@ -4,13 +4,12 @@ draft: false
 title: "Contribution Margin: Check It Before Scaling Holiday Ads"
 description: "Learn CM1, CM2 and CM3, work out break-even ROAS from contribution margin, and use a scale, hold or cut rule before raising holiday ad spend on Meta or Google."
 publishedOn: "2026-10-05"
-updatedOn: "2026-10-05"
-category: "Unit economics"
+updatedOn: "2026-10-19"
+category: "Ecommerce profit & finance"
 author: "Mehul"
 readTime: "10 min read"
 coverImage: "/Blogs/contribution-margin-holiday-ad-spend/contribution-margin-hero.svg"
 coverImageAlt: "ROAS ruler split into cut, hold and scale zones with break-even ROAS 2.25 and target ROAS 3.40 for holiday ad budgets"
-wordCount: 2100
 faqs:
   - question: "What is the difference between CM1, CM2 and CM3?"
     answer: "CM1 is net revenue minus product cost. CM2 subtracts variable order costs such as shipping, payment fees and a returns allowance. CM3 subtracts advertising. Naming varies by company, and some teams stop at two levels, so write down which costs sit in each level and use the same definition all season."
@@ -26,21 +25,14 @@ faqs:
 
 Contribution margin is the profit left from an order after the costs that rise with each sale, and it is the number to check before you raise holiday ad spend. It tells you the highest ad cost an order can absorb, which ROAS and revenue alone cannot show.
 
-Most stores scale on platform ROAS because it is on screen and moves quickly. The trouble is that ROAS is a revenue ratio. A 4.0 can be profitable on one product and loss-making on another, and holiday discounts push the break-even point higher just as traffic gets more expensive.
+Most stores scale on platform ROAS because it is on screen and moves quickly. The trouble is that ROAS is a revenue ratio, and platform reports count attributed revenue, not profit. A 4.0 can be profitable on one product and loss-making on another, and holiday discounts push the break-even point higher just as traffic gets more expensive.
 
-This guide defines CM1, CM2 and CM3, walks through one order, turns the result into break-even and target ROAS, and ends with a scale, hold or cut rule. It builds on the [BFCM 2026 profit checklist](/blog/bfcm-2026-profit-checklist) and stays on the budget decision itself.
+This guide defines CM1, CM2 and CM3, walks through one order, turns the result into break-even and target ROAS, and sets a scale, hold or cut rule judged on marginal ROAS. It builds on the [BFCM 2026 profit checklist](/blog/bfcm-2026-profit-checklist) and stays on the budget decision itself.
 
 <figure class="blog-feature-image">
   <img src="/Blogs/contribution-margin-holiday-ad-spend/contribution-margin-hero.svg" alt="ROAS ruler split into cut, hold and scale zones with break-even ROAS 2.25 and target ROAS 3.40 for holiday ad budgets" width="1600" height="900" fetchpriority="high" decoding="async">
   <figcaption>Concept illustration: a scale, hold or cut rule built from break-even and target ROAS. The numbers are hypothetical, and this is not an ad platform screenshot.</figcaption>
 </figure>
-
-> **Key takeaways**
->
-> - CM1 is net revenue minus product cost, CM2 adds variable order costs, and CM3 subtracts ad spend. Naming varies, so define each level in writing.
-> - Break-even ROAS is 1 divided by CM2 as a share of net revenue. Deeper discounts raise it.
-> - Judge budget increases by marginal ROAS. An average ROAS above break-even can hide extra spend that loses money.
-> - Platform reports count attributed revenue, not profit. Reconcile them to store orders and a returns allowance before you scale.
 
 <div class="blog-brand-strip" aria-label="Platforms covered in this guide">
   <p>Platforms in this guide</p>
@@ -48,17 +40,6 @@ This guide defines CM1, CM2 and CM3, walks through one order, turns the result i
   <span><img src="/platforms/facebook.svg" alt="" width="18" height="18" loading="lazy">Meta Ads</span>
   <span><img src="/platforms/googleads.svg" alt="" width="18" height="18" loading="lazy">Google Ads</span>
 </div>
-
-## In this guide
-
-- [What CM1, CM2 and CM3 mean](#what-are-cm1-cm2-and-cm3-in-ecommerce)
-- [A worked holiday order](#what-does-one-holiday-order-look-like-in-contribution-margin)
-- [Break-even and target ROAS](#how-do-you-calculate-break-even-and-target-roas-from-contribution-margin)
-- [Average versus marginal ROAS](#why-is-average-roas-the-wrong-number-for-scaling)
-- [The scale, hold or cut rule](#what-is-a-scale-hold-or-cut-rule-for-holiday-ad-budgets)
-- [Meta and Google versus contribution truth](#how-do-meta-and-google-ads-reporting-differ-from-contribution-margin)
-- [Keeping the numbers honest live](#how-do-you-keep-the-numbers-honest-during-the-sale)
-- [Frequently asked questions](#frequently-asked-questions)
 
 ## What are CM1, CM2 and CM3 in ecommerce?
 
@@ -72,11 +53,13 @@ Use these working definitions and keep them fixed for the whole season:
 | **CM2** | CM1 − shipping and packaging − payment fees − returns and RTO allowance | What can one order afford to spend on advertising? |
 | **CM3** | CM2 − ad spend | Did the order actually make money after marketing? |
 
-Net revenue means after discounts and excluding tax. Fixed costs such as salaries, rent and software stay out, because they do not change when you add one order. The [unit economics guide](/blog/unit-economics-guide) explains why, and the [landed cost calculator guide](/blog/landed-cost-calculator-guide) covers what belongs in product cost.
+Net revenue means after discounts and excluding tax. Fixed costs such as salaries, rent and software stay out, because they do not change when you add one order.
+
+The [unit economics guide](/blog/unit-economics-guide) explains why, and the [landed cost calculator guide](/blog/landed-cost-calculator-guide) covers what belongs in product cost.
 
 Shopify can supply part of CM1. Its [profit reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports) depend on the cost per item you enter, and Shopify notes that they leave out ad spend and transaction fees. Treat them as a CM1 source, not as CM2 or CM3.
 
-## What does one holiday order look like in contribution margin?
+## One holiday order, line by line
 
 Take a product listed at ₹2,400 and sold at 15% off. Net revenue is ₹2,040. After product cost, shipping, payment fees and a returns allowance, CM2 is ₹906, or 44.4% of net revenue. Ad spend of ₹550 per order leaves a CM3 of ₹356.
 
@@ -96,14 +79,16 @@ Take a product listed at ₹2,400 and sold at 15% off. Net revenue is ₹2,040. 
 | Ad spend per order | | −550 | |
 | **CM3** | 906 − 550 | **356** | 17.5% |
 
-Every input here is hypothetical. The returns allowance is an averaged expected loss across all orders, not the refund rate. The [RTO cost guide](/blog/rto-cost-guide) shows how to build it for cash-on-delivery orders.
+Every input here is hypothetical. The returns allowance is an averaged expected loss across all orders, not the refund rate; the [RTO cost guide](/blog/rto-cost-guide) shows how to build it for cash-on-delivery orders.
 
 <figure class="blog-feature-image blog-feature-image--inline">
   <img src="/Blogs/contribution-margin-holiday-ad-spend/contribution-margin-diagram.svg" alt="Waterfall chart taking one holiday order from net revenue of 2,040 rupees to CM1 of 1,320, CM2 of 906 and CM3 of 356 after ad spend" width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>Concept illustration: the worked order above as a waterfall from net revenue to CM3. The figures are hypothetical, and this is not a Shopify or ad platform screenshot.</figcaption>
 </figure>
 
-A 55% gross margin looks comfortable on a product page. By CM3 it is 17.5%, and on a smaller basket or a higher ad cost it could be negative.
+A 55% gross margin looks comfortable on a product page.
+
+By CM3 it is 17.5%, and on a smaller basket or a higher ad cost it could be negative.
 
 ## How do you calculate break-even and target ROAS from contribution margin?
 
@@ -142,11 +127,13 @@ Marginal ROAS here is ₹40,000 ÷ ₹20,000 = 2.0, below the 2.25 break-even. A
 
 This is also why budget rises should come in steps. Raise spend, let the data settle, compute marginal ROAS and decide on the next step. The [marketing budget guide](/blog/marketing-budget-guide) and [marketing budget calculator](/tools/marketing-budget) help set the ceiling for each step.
 
-One boundary: a first order priced below break-even can still make sense if repeat purchases repay it. That is a payback decision, covered in the [CAC payback period guide](/blog/cac-payback-period-guide). Keep it separate from a cold holiday scale decision, which rests on first-order CM2.
+One boundary: a first order priced below break-even can still make sense if repeat purchases repay it. That is a payback decision; model repeat orders separately with the [unit economics guide](/blog/unit-economics-guide). Keep it separate from a cold holiday scale decision, which rests on first-order CM2.
 
-## What is a scale, hold or cut rule for holiday ad budgets?
+## A scale, hold or cut rule for holiday budgets
 
-Scale a campaign when reconciled ROAS clears your target and the last budget step cleared break-even. Hold it when ROAS sits between break-even and target. Cut it when ROAS or marginal ROAS falls below break-even across a full review period. Set the thresholds before the sale so they are not negotiated mid-weekend.
+Scale a campaign when reconciled ROAS clears your target and the last budget step cleared break-even. Hold it when ROAS sits between break-even and target. Cut it when ROAS or marginal ROAS falls below break-even across a full review period.
+
+Set the thresholds before the sale so they are not negotiated mid-weekend.
 
 Using the thresholds from the worked example:
 
@@ -164,7 +151,7 @@ Three conditions sit under the rule:
 
 The same logic applies to the ad set, campaign and product-family levels. Use one set of thresholds per margin band, not one for the whole store.
 
-## How do Meta and Google Ads reporting differ from contribution margin?
+## Where Meta and Google reporting part ways with contribution
 
 Ad platforms report the conversion value you send, credited to their own ads under their own attribution rules. They do not know your shipping cost, payment fees, returns or other channels. Contribution margin is built from store data, so the two will disagree, and the gap is what you need to manage.
 
@@ -181,13 +168,13 @@ Some specifics are worth knowing:
 - **Meta changed what counts as a click.** In a [3 March 2026 announcement](https://www.facebook.com/business/news/click-attribution), Meta said click-through attribution for website and in-store conversions would include only link clicks, with other interactions moving to a new engage-through category. It said the change would roll out from later in March 2026. Comparisons against earlier periods may not be like for like.
 - **Meta points to incrementality.** The same announcement calls experiments such as Conversion Lift "the gold standard in measurement". Attribution settings, explained in Meta's [attribution help page](https://www.facebook.com/business/help/460276478298895), describe credit, not what would have happened anyway.
 
-Check what value your tag sends. If it includes tax or shipping, break-even ROAS on net revenue will not match what the dashboard shows. Add up platform-reported purchases for a day and compare them with store orders. If the platforms claim more orders than you received, credit is overlapping.
+Check what value your tag sends. If it includes tax or shipping, break-even ROAS on net revenue will not match what the dashboard shows. Then add up platform-reported purchases for a day and compare them with store orders: if the platforms claim more orders than you received, credit is overlapping.
 
-## How do you keep the numbers honest during the sale?
+## Keeping the numbers honest during the sale
 
-Keep a single daily sheet that starts from store orders and ends at CM3. Refresh the inputs that move fastest, which are discount depth, shipping cost per order and the returns allowance. Returns are the slowest to show, so use a forward allowance now and true it up later.
+Keep a single daily sheet that starts from store orders and ends at CM3, and refresh the inputs that move fastest: discount depth, shipping cost per order and the returns allowance. Returns are the slowest to show, so use a forward allowance now and true it up later.
 
-For the returns allowance, avoid your year-round rate. The NRF [expected 17% of 2025 holiday sales](https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025) to be returned, with an estimated 19.3% of online sales returned across 2025. Those are US retail-wide numbers, not your store, but they are a reason to check your holiday rate by category. See [free returns in the 2026 holiday season](/blog/free-returns-2026-holiday) for policy choices.
+For the returns allowance, avoid your year-round rate. The NRF [expected 17% of 2025 holiday sales](https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025) to be returned, with an estimated 19.3% of online sales returned across 2025. Those are US retail-wide numbers, not your store, but they are a reason to check your holiday rate by category. Shopify's [return window override guide](/blog/shopify-return-window-overrides) covers holiday return policy choices.
 
 A daily routine that fits into 15 minutes:
 
@@ -199,10 +186,25 @@ A daily routine that fits into 15 minutes:
 
 The [unit economics calculator](/tools/unit-economics) gives the CM2 baseline per product, and the [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) helps confirm that purchase tracking is sound before you trust the dashboards.
 
+## A pre-sale margin check
+
+Before you raise any budget this season, work through this list for your top products at their holiday prices. Each line comes from a rule above.
+
+- **CM1, CM2 and CM3 are written down,** with the costs in each level defined in writing and fixed for the season.
+- **Break-even and target ROAS are set per product or margin band,** not one figure for the whole store, and recalculated for every discount level you plan to run.
+- **The returns allowance uses a holiday rate checked by category,** not your year-round rate.
+- **Scale, hold and cut thresholds are agreed,** along with the minimum number of purchases or days before any decision.
+- **Budget rises are planned in steps,** each judged on marginal ROAS against break-even rather than on the campaign average.
+- **Stock cover is confirmed** for anything you expect to scale.
+- **The tag value is checked** for tax and shipping, and a day of platform-reported purchases has been compared with store orders.
+- **The daily sheet from store orders to CM3 is ready,** with the fast-moving inputs in one place.
+
+Platform dashboards remain useful for speed, but they count attributed revenue, not profit. With the list done, the budget decision is already made when the sale gets busy.
+
 <section class="blog-cta">
   <h2>See contribution margin before you raise the budget</h2>
   <p>mlabs Growth reviews product pages, offer structure, checkout friction and measurement for Shopify brands, so holiday ad spend is judged on contribution, not just on platform ROAS.</p>
-  <p><a href="/services/store-conversion">Explore Shopify conversion optimization</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
+  <p><a href="/services/store-conversion">Raise conversion without buying more traffic</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 
 ## Frequently asked questions
@@ -226,12 +228,6 @@ Set it above break-even by the profit you want to keep. Divide 1 by your CM2 per
 ### How often should I review holiday ad spend against contribution?
 
 Daily during the live sale week, using reconciled store orders rather than only platform dashboards, and avoid judging a campaign on a partial day. Returns arrive later, so apply a returns allowance now and true it up against actual refunds in December and January.
-
-## The bottom line
-
-Holiday ad budgets should grow where contribution grows. CM2 gives each product a break-even ROAS, your CM3 goal turns it into a target, and marginal ROAS tells you whether the next rupee earns its place. Platform dashboards remain useful for speed, but they count attributed revenue, not profit.
-
-Before you raise any budget this season, write down CM1, CM2 and CM3 for your top products at their holiday prices. Then set the scale, hold and cut thresholds, so the decision is already made when the sale gets busy.
 
 ## Source notes
 

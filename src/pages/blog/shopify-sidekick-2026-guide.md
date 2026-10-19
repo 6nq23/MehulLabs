@@ -4,13 +4,12 @@ draft: false
 title: "Shopify Sidekick 2026: What It Automates (and What Not)"
 description: "Shopify Sidekick in 2026: what it automates, where it stops, 10 prompts to try, and when to use Shopify Flow or a custom AI workflow for your store instead."
 publishedOn: "2026-10-02"
-updatedOn: "2026-10-02"
-category: "AI automation"
+updatedOn: "2026-10-19"
+category: "AI marketing & automation"
 author: "Mehul"
 readTime: "11 min read"
 coverImage: "/Blogs/shopify-sidekick-2026-guide/shopify-sidekick-hero.png"
 coverImageAlt: "Concept illustration of the redesigned Shopify admin with Sidekick as a floating AI chat assistant"
-wordCount: 2300
 faqs:
   - question: "Is Shopify Sidekick free?"
     answer: "Shopify says Sidekick is included with your Shopify plan at no additional cost, but features and usage limits vary by plan. For example, generating custom apps with Sidekick is limited to the Grow, Advanced and Shopify Plus plans, with hourly and weekly limits, and image generation limits also depend on the plan."
@@ -186,7 +185,7 @@ Prompt 10 shows the boundary: Sidekick can compare apps, but the messaging runs 
 <section class="blog-cta">
   <h2>Automate the work Sidekick cannot reach</h2>
   <p>MlabsGrowth builds AI workflows that connect Shopify with courier, WhatsApp, calling, ad and reporting tools, with your brand rules and approval steps built in.</p>
-  <p><a href="/services/ai-automation">Explore AI marketing workflow automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
+  <p><a href="/services/ai-automation">Plan AI automation beyond Sidekick</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 
 ## Frequently asked questions

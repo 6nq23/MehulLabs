@@ -1,4 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/blog/ai-product-feed-optimization", "destination": "/blog/shopify-seo-ai-search-guide", "permanent": true },
+    { "source": "/blog/shipping-cost-increases-q4-2026", "destination": "/blog/holiday-shipping-deadlines-2026", "permanent": true },
+    { "source": "/guides/calculate-cod-rto-cost", "destination": "/blog/rto-cost-guide", "permanent": true }
+  ]
 }

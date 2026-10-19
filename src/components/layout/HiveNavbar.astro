@@ -78,10 +78,10 @@ import { site } from '@/data/site';
 </header>
 
 <script>
-  const header = document.querySelector('[data-hive-header]');
+  const header = document.querySelector<HTMLElement>('[data-hive-header]');
 
   if (header) {
-    const menus = [...header.querySelectorAll('[data-hive-menu]')];
+    const menus = [...header.querySelectorAll<HTMLDetailsElement>('[data-hive-menu]')];
     const mobile = window.matchMedia('(max-width: 1000px)');
     let frame = 0;
 
@@ -121,15 +121,17 @@ import { site } from '@/data/site';
     });
 
     document.addEventListener('pointerdown', (event) => {
-      if (!(event.target instanceof Node)) return;
+      const target = event.target;
+      if (!(target instanceof Node)) return;
       menus.forEach((menu) => {
-        if (menu.open && !menu.contains(event.target)) menu.open = false;
+        if (menu.open && !menu.contains(target)) menu.open = false;
       });
     });
     document.addEventListener('focusin', (event) => {
-      if (!(event.target instanceof Node)) return;
+      const target = event.target;
+      if (!(target instanceof Node)) return;
       menus.forEach((menu) => {
-        if (menu.open && !menu.contains(event.target)) menu.open = false;
+        if (menu.open && !menu.contains(target)) menu.open = false;
       });
     });
     document.addEventListener('keydown', (event) => {

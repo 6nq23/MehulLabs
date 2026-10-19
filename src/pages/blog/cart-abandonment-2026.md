@@ -4,13 +4,12 @@ draft: false
 title: "Cart Abandonment in 2026: Why 70% of Carts Still Leak"
 description: "The cart abandonment rate in 2026 still averages 70.22% per Baymard. See the checkout reasons behind it, how to measure yours in Shopify and the fixes that work."
 publishedOn: "2026-09-25"
-updatedOn: "2026-09-25"
+updatedOn: "2026-10-19"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "11 min read"
 coverImage: "/Blogs/cart-abandonment-2026/cart-abandonment-hero.png"
 coverImageAlt: "Shopping cart funnel leaking shoppers between add to cart, checkout and purchase"
-wordCount: 2380
 faqs:
   - question: "What is the average cart abandonment rate in 2026?"
     answer: "Baymard Institute's benchmark is 70.22%, an average of 50 studies published between 2006 and 2025. As of 24 September 2026, the page was last updated on 22 September 2025. It is a cross-industry average, so use it as context and compare your own store against its own history instead."
@@ -50,27 +49,17 @@ This guide explains what the 70% figure does and does not tell you, how to measu
   <span><img src="/platforms/facebook.svg" alt="" width="18" height="18" loading="lazy">Meta Ads</span>
 </div>
 
-## In this guide
-
-- [What the 70% figure means](#what-is-the-cart-abandonment-rate-in-2026)
-- [Why shoppers abandon](#why-do-shoppers-abandon-their-carts)
-- [How to measure your own rate](#how-do-you-measure-cart-abandonment-in-shopify)
-- [Fixes mapped to each reason](#which-fix-matches-each-abandonment-reason)
-- [Payments, delivery and trust](#how-do-payments-delivery-dates-and-trust-affect-checkout)
-- [Recovery flows](#how-should-you-recover-abandoned-carts)
-- [Order value and free shipping](#can-bundles-and-free-shipping-thresholds-reduce-abandonment)
-- [What not to do](#what-should-you-avoid-when-reducing-abandonment)
-- [Frequently asked questions](#frequently-asked-questions)
-
 ## What is the cart abandonment rate in 2026?
 
 Baymard Institute's [cart abandonment rate list](https://baymard.com/lists/cart-abandonment-rate) puts the average documented rate at 70.22%, calculated from 50 studies published between 2006 and 2025. As of 24 September 2026, the page shows a last update of 22 September 2025, so the benchmark is the most recent widely cited figure, not a fresh 2026 measurement.
 
-Treat the number as a cross-industry reference point. It averages studies with different methods, sample periods and store types, so it cannot tell you whether your own rate is good. A fashion store with heavy browsing traffic and a replenishment brand selling to repeat customers will sit in very different places.
+Treat the number as a cross-industry reference point. It averages studies with different methods, sample periods and store types, so it cannot tell you whether your own rate is good.
+
+A fashion store with heavy browsing traffic and a replenishment brand selling to repeat customers will sit in very different places.
 
 Baymard is also direct about what the average includes. Its page says a large portion of abandonment comes from window shopping, price comparison, saving items for later and exploring gift options, and calls these "largely unavoidable". Baymard does not publish a separate adjusted abandonment rate. Instead, it removes the just-browsing group before analysing the reasons a checkout can influence.
 
-Baymard's own estimate of the upside is still large. Focusing only on checkout usability issues it has documented as solvable, it says the average large ecommerce site can gain a 35.26% increase in conversion rate through better checkout design.
+Even so, Baymard's own estimate of the upside is large. Focusing only on checkout usability issues it has documented as solvable, it says the average large ecommerce site can gain a 35.26% increase in conversion rate through better checkout design.
 
 ## Why do shoppers abandon their carts?
 
@@ -94,16 +83,14 @@ Here is the full distribution of checkout abandonment reasons from Baymard's pag
 
 The shares add up to well over 100%, so many shoppers named more than one reason. Read the table as a list of friction sources, not a pie chart.
 
-Notice how many of these are about money and certainty rather than design polish. Extra costs and an unclear total together describe a shopper who found out the real price too late. Slow delivery and a weak returns policy describe a shopper who could not judge the risk of buying.
-
-On checkout length, Baymard's benchmark says the average US checkout shows 23.48 form elements by default, while an ideal flow can be as short as 12 to 14.
+Notice how many of these are about money and certainty rather than design polish. Extra costs and an unclear total together describe a shopper who found out the real price too late. Slow delivery and a weak returns policy describe a shopper who could not judge the risk of buying. On checkout length, Baymard's benchmark says the average US checkout shows 23.48 form elements by default, while an ideal flow can be as short as 12 to 14.
 
 <!-- [UNIQUE INSIGHT] -->
 <aside class="blog-callout">
   <strong>A practical reading of the data:</strong> about half of the top reasons are settled before the shopper ever reaches checkout. Price, delivery speed, returns and trust signals belong on the product page and in the cart. Checkout is where a shopper confirms a decision, not where they should first discover its cost.
 </aside>
 
-## How do you measure cart abandonment in Shopify?
+## Measuring your own rate in Shopify
 
 Shopify's [Conversion rate breakdown report](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/behaviour-reports) shows the path from sessions to cart, checkout and purchase. The three fields you need are sessions with cart additions, sessions that reached checkout and sessions that completed checkout. Divide one step by another to get each drop-off rate.
 
@@ -123,13 +110,17 @@ Shopify's report also shows added-to-cart rate and reached-checkout rate, but it
 | Sessions that completed checkout | 600 | 40% |
 | **Cart abandonment rate** | | **70%** |
 
-In this illustrative example, the store loses as many carts before checkout as it does inside it, so the first fixes belong in the cart and on the product page. Split the same report by device and by traffic source. A mobile rate far above desktop usually points to a layout or payment problem, while a paid-social spike often signals browsing intent.
+In this illustrative example, the store loses as many carts before checkout as it does inside it, so the first fixes belong in the cart and on the product page.
+
+Split the same report by device and by traffic source. A mobile rate far above desktop usually points to a layout or payment problem, while a paid-social spike often signals browsing intent.
 
 Shopify also lists individual [abandoned checkouts](https://help.shopify.com/en/manual/orders/abandoned-checkouts) under **Orders > Abandoned checkouts**. A checkout appears there when the customer has provided an email address and has not finished for more than ten minutes. If you also use GA4, keep its funnel separate from Shopify's session counts; our guide to [tracking AI traffic in GA4](/blog/track-ai-traffic-ga4) covers channel set-up. For a wider baseline, work through the [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) before changing anything.
 
-## Which fix matches each abandonment reason?
+## A fix for each abandonment reason
 
-Each Baymard reason has a specific owner in a Shopify store. Extra costs are a pricing and shipping-rate decision, account creation is a checkout setting, and delivery speed is a fulfilment promise shown at checkout. Matching the fix to the reason stops teams from redesigning pages when the real problem is a shipping fee.
+Each Baymard reason has a specific owner in a Shopify store. Extra costs are a pricing and shipping-rate decision, account creation is a checkout setting, and delivery speed is a fulfilment promise shown at checkout.
+
+Matching the fix to the reason stops teams from redesigning pages when the real problem is a shipping fee.
 
 | Abandonment reason | Fix | Where in Shopify |
 |---|---|---|
@@ -146,7 +137,7 @@ Each Baymard reason has a specific owner in a Shopify store. Extra costs are a p
 
 Shopify's [checkout form options](https://help.shopify.com/en/manual/checkout-settings/checkout-form-options) page confirms that "Require customers to sign in to their account before checkout" sits under **Settings > Checkout**. It also warns that when sign-in is required, accelerated options such as Apple Pay are not displayed in the online store cart. Company name, address line 2 and shipping phone number can each be set to "Don't include", "Optional" or "Required", and Shopify notes that requiring company name may hide some accelerated checkout options.
 
-## How do payments, delivery dates and trust affect checkout?
+## Payments, delivery dates and trust
 
 Payment choice, delivery certainty and trust account for four of Baymard's reasons: trust (19%), slow delivery (20%), declined cards (10%) and too few payment methods (9%). Shopify handles much of this natively through accelerated checkouts, manual methods such as cash on delivery and automated delivery dates in eligible countries.
 
@@ -165,6 +156,22 @@ Shopify's [automated delivery dates](https://help.shopify.com/en/manual/fulfillm
 ### Trust signals
 
 Trust is not a badge. Show a real business name and contact route, recent reviews next to the purchase button and a returns summary a shopper can read in ten seconds. Make sure the checkout domain, logo and colours match the storefront, because a sudden change of look at payment is exactly when a cautious shopper hesitates.
+
+## Pressure tactics regulators already flag
+
+Avoid pressure tactics that are not true. The US Federal Trade Commission's 2022 dark patterns report flagged countdown timers on offers that are not actually time-limited, and India's consumer regulator lists false urgency, drip pricing and basket sneaking among 13 specified dark patterns.
+
+The [FTC's report announcement](https://www.ftc.gov/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick-trap-consumers) also criticises advertising part of a price and revealing mandatory charges late, which is Baymard's top abandonment reason described from the regulator's side. India's Central Consumer Protection Authority issued its [Guidelines for Prevention and Regulation of Dark Patterns, 2023](https://pib.gov.in/PressReleasePage.aspx?PRID=1983994) on 30 November 2023.
+
+In practice, avoid:
+
+- Countdown timers that reset on reload or apply to an offer that never ends.
+- "Only 2 left" messages not linked to real inventory.
+- Pre-ticked add-ons such as insurance or gift wrap added to the cart without consent.
+- Fees that appear for the first time at the payment step.
+- Discount codes in every recovery message, which teach customers to abandon on purpose.
+
+Real urgency, such as a genuine sale end date or a true dispatch cut-off, is fine. Show it plainly and let it expire when you said it would.
 
 ## How should you recover abandoned carts?
 
@@ -195,37 +202,25 @@ This timing is illustrative, a starting point to test against a hold-out group r
 
 Stop the sequence as soon as the customer orders. Meta retargeting of cart abandoners can run alongside, but it depends on the same consent signals as your pixel, so keep it within your cookie-consent set-up.
 
-## Can bundles and free-shipping thresholds reduce abandonment?
+## Free-shipping thresholds, bundles and what to fix first
 
-A free-shipping threshold addresses Baymard's largest reason, extra costs at 40%, and can raise average order value at the same time. Shopify lets you set a minimum order value on a price-based shipping rate or on a free-shipping discount. The threshold only helps if the margin on the extra units covers the shipping you absorb.
+A free-shipping threshold addresses Baymard's largest reason, extra costs at 40%, and can raise average order value at the same time. Shopify lets you set a minimum order value on a price-based shipping rate or on a free-shipping discount.
+
+The threshold only helps if the margin on the extra units covers the shipping you absorb.
 
 Set the threshold slightly above your current average order value, then give shoppers an easy way to reach it: a small add-on, a refill pack or a two-item bundle shown in the cart. The [bundle planner](/tools/bundle-planner) helps you test bundle prices against cost, and the [bundle pricing guide](/blog/bundle-pricing-guide) explains how to avoid discounting away the margin. Check the result in the [unit economics calculator](/tools/unit-economics) before you publish the threshold.
 
 For peak season, plan thresholds and shipping cut-off dates together. Our [BFCM 2026 profit checklist](/blog/bfcm-2026-profit-checklist) covers the offer and delivery decisions to lock in before traffic peaks.
 
+Step back from the individual fixes and the pattern is simple. Seven in ten carts are still abandoned, and a large share of that is ordinary browsing no store can prevent. The part you can influence is mostly surprise costs, delivery certainty, trust and friction, and most of those fixes are settings and page content rather than a redesign. Measure your own funnel in Shopify, fix the reason behind your biggest drop-off, then add consented recovery messages, and judge every change by completed orders and contribution rather than by how many reminders were sent.
+
 <!-- [UNIQUE INSIGHT] -->
 > **Order of operations:** fix the price shock first, recover second. A recovery flow that brings a shopper back to the same surprise shipping fee usually repeats the abandonment, and adds a message cost to it.
-
-## What should you avoid when reducing abandonment?
-
-Avoid pressure tactics that are not true. The US Federal Trade Commission's 2022 dark patterns report flagged countdown timers on offers that are not actually time-limited, and India's consumer regulator lists false urgency, drip pricing and basket sneaking among 13 specified dark patterns.
-
-The [FTC's report announcement](https://www.ftc.gov/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick-trap-consumers) also criticises advertising part of a price and revealing mandatory charges late, which is Baymard's top abandonment reason described from the regulator's side. India's Central Consumer Protection Authority issued its [Guidelines for Prevention and Regulation of Dark Patterns, 2023](https://pib.gov.in/PressReleasePage.aspx?PRID=1983994) on 30 November 2023.
-
-In practice, avoid:
-
-- Countdown timers that reset on reload or apply to an offer that never ends.
-- "Only 2 left" messages not linked to real inventory.
-- Pre-ticked add-ons such as insurance or gift wrap added to the cart without consent.
-- Fees that appear for the first time at the payment step.
-- Discount codes in every recovery message, which teach customers to abandon on purpose.
-
-Real urgency, such as a genuine sale end date or a true dispatch cut-off, is fine. Show it plainly and let it expire when you said it would.
 
 <section class="blog-cta">
   <h2>Find where your carts are leaking</h2>
   <p>MlabsGrowth reviews the product page, cart, checkout settings and recovery flows for Shopify brands, then prioritises the fixes most likely to reduce abandonment without cutting margin.</p>
-  <p><a href="/services/store-conversion">Explore Shopify conversion optimization</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
+  <p><a href="/services/store-conversion">Fix cart and checkout drop-off on Shopify</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 
 ## Frequently asked questions
@@ -249,12 +244,6 @@ Yes, if the customer has opted in to messages from your business. Meta's opt-in 
 ### Should abandoned cart emails include a discount?
 
 Not by default. Baymard's reasons point to costs, delivery, trust and checkout friction, so fix those first. If you test a discount, hold it back until a later message, measure incremental orders against a control group and check margin with a unit economics calculator before rolling it out.
-
-## The bottom line
-
-Seven in ten carts are still abandoned, and a large share of that is ordinary browsing no store can prevent. The part you can influence is mostly about surprise costs, delivery certainty, trust and friction, and most of those fixes are settings and page content rather than a redesign.
-
-Measure your own funnel in Shopify, fix the reason that matches your biggest drop-off, then add consented recovery messages across email, SMS and WhatsApp. Judge every change by completed orders and contribution, not by how many reminders were sent.
 
 ## Source notes
 

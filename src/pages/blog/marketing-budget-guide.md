@@ -3,12 +3,12 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "Marketing Budgets: Plan Spend Without Guesswork"
 description: "Build a 4-step marketing budget from spend, channel allocation, ROAS, and AOV while keeping revenue projections separate from profit and cash flow."
 publishedOn: "2026-09-14"
-updatedOn: "2026-09-19"
-category: "Marketing finance"
+updatedOn: "2026-10-19"
+category: "Ecommerce profit & finance"
 author: "Mehul"
 readTime: "8 min read"
+coverImage: "/Blogs/marketing-budget-guide/budget-allocation-flow.webp"
 coverImageAlt: "Marketing budget allocation model with channel spend, ROAS, revenue and orders"
-wordCount: 1257
 faqs:
   - question: "How do you calculate projected marketing revenue?"
     answer: "Multiply each channel's allocated spend by its expected ROAS, then add the channel revenue estimates."
@@ -22,12 +22,12 @@ faqs:
     answer: "Review pacing and leading indicators weekly, reconcile attributed results monthly, and reset assumptions when spend, offer, channel mix, or tracking changes materially."
 ---
 
-A marketing budget should connect money spent to a transparent revenue and order scenario. The basic model allocates a total budget across channels, multiplies each allocation by expected return on ad spend, and divides projected revenue by average order value. It is a planning tool, not a promise.
+A marketing budget should connect money spent to a transparent revenue and order scenario. The basic model allocates a total budget across channels, multiplies each allocation by expected return on ad spend, and divides projected revenue by average order value.
 
-The most important discipline is separating attributed revenue from contribution and cash. A 3x ROAS can be attractive for one product and unprofitable for another because COGS, shipping, returns, discounts, and customer acquisition economics differ.
+It is a planning tool, not a promise. The most important discipline is separating attributed revenue from contribution and cash: a 3x ROAS can be attractive for one product and unprofitable for another because COGS, shipping, returns, discounts, and customer acquisition economics differ.
 
-<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a marketing budget funnel graphic">
-  <img src="/Blogs/Marketing Budget Guide/Budget Allocation Flow.png" alt="Marketing budget planning from spend to projected orders." width="1536" height="1024" loading="lazy" decoding="async">
+<figure class="blog-feature-image">
+  <img src="/Blogs/marketing-budget-guide/budget-allocation-flow.webp" alt="Marketing budget planning from channel spend to projected orders" width="1536" height="1024" loading="lazy" decoding="async">
 </figure>
 
 > **Key takeaways**
@@ -44,9 +44,9 @@ A marketing budget model translates a spend ceiling into channel allocations and
 
 Google Ads Help's *Glossary* defines ROAS as conversion value divided by cost. That is useful, but conversion value is not the same as cash collected or profit retained. Attribution settings, delayed conversions, cancellations, refunds, tax, and cross-channel overlap can all change the business result.
 
-Use the model for budget negotiation, channel mix planning, scenario comparison, and target setting. Do not use it as proof that a channel will deliver the assumed return.
+Use the model for budget negotiation, channel mix planning, scenario comparison, and target setting, but not as proof that a channel will deliver the assumed return.
 
-## How do you calculate a marketing budget scenario?
+## Calculating a budget scenario in four steps
 
 ### 1. Allocate spend by channel
 
@@ -54,7 +54,7 @@ Use the model for budget negotiation, channel mix planning, scenario comparison,
 Channel spend = total marketing budget x channel allocation %
 ```
 
-The allocations should total 100%. If they total less, some budget is unassigned. If they exceed 100%, the plan spends more than the stated ceiling.
+The allocations should total 100%. If they total less, some budget is unassigned; if they exceed 100%, the plan spends more than the stated ceiling.
 
 ### 2. Estimate attributed revenue
 
@@ -84,7 +84,7 @@ Projected cost per order = total spend / projected orders
 
 The model calls the last measure cost per order, not measured CAC. New-customer CAC needs the number of newly acquired customers and the full acquisition cost definition.
 
-## What does a worked example look like?
+## A worked example at ₹50,000 a month
 
 Assume a ₹50,000 monthly marketing budget, an average order value of ₹1,000, and a blended planning assumption of 3x ROAS.
 
@@ -104,7 +104,9 @@ A channel plan might make the assumptions visible:
 | Retargeting | 10% | ₹5,000 | 4.25x | ₹21,250 |
 | **Total** | **100%** | **₹50,000** | **3.0x blended** | **₹150,000** |
 
-These are illustrative assumptions, not benchmarks. Retargeting can appear efficient because it reaches people influenced elsewhere, and attribution across channels may overlap. An incrementality test asks a different question: how much additional demand did the advertising cause? Google Ads Help's *Understand your Conversion Lift based on users measurement data* describes a method for measuring incremental conversions and incremental ROAS.
+These are illustrative assumptions, not benchmarks. Retargeting can appear efficient because it reaches people influenced elsewhere, and attribution across channels may overlap.
+
+An incrementality test asks a different question: how much additional demand did the advertising cause? Google Ads Help's *Understand your Conversion Lift based on users measurement data* describes a method for measuring incremental conversions and incremental ROAS.
 
 ## How do you turn ROAS into a profit guardrail?
 
@@ -119,7 +121,7 @@ Break-even ROAS = ₹1,000 / ₹400 = 2.5x
 
 A 3x attributed ROAS would leave roughly ₹66.67 after advertising per projected order in this simplified example. A 2x ROAS would not cover the modelled pre-ad contribution. For a complete cost map, calculate [unit economics](/blog/unit-economics-guide) first.
 
-This guardrail should vary by product, country, new versus returning customer, and channel. A blended company target can hide an unprofitable segment.
+This guardrail should vary by product, country, new versus returning customer, and channel, since a blended company target can hide an unprofitable segment.
 
 If ChatGPT Ads is part of the test mix, use the [complete guide to ChatGPT Ads for Shopify](/blog/chatgpt-ads-shopify-guide) to separate catalog preparation, campaign objectives, attribution, and store-level profitability.
 
@@ -152,14 +154,6 @@ Link the plan to the [cash runway calculator](/tools/runway-planner). Media is o
   <strong>Practical review:</strong> Compare planned spend, actual spend, attributed revenue, settled net revenue, contribution, and cash timing in one monthly reconciliation.
 </aside>
 
-## Build a channel plan
-
-<section class="blog-cta">
-  <h3>Turn a spend ceiling into a transparent scenario</h3>
-  <p>Use the <a href="/tools/marketing-budget">MlabsGrowth Marketing Budget Calculator</a> to allocate spend by channel and estimate projected revenue, orders, blended ROAS, and cost per order.</p>
-  <p>The calculator displays INR and uses your assumptions. Actual performance depends on traffic, offer, conversion, attribution, and how channel efficiency changes with scale.</p>
-</section>
-
 ## Frequently asked questions
 
 ### How do you calculate projected marketing revenue?
@@ -182,9 +176,15 @@ Divide projected attributed revenue by average order value. The result is a scen
 
 Review pacing and leading indicators weekly, reconcile attributed and settled results monthly, and reset assumptions when spend, offer, channel mix, or tracking changes materially.
 
-## The bottom line
+## Build a channel plan
 
-A useful marketing budget makes every assumption visible. Allocate the full spend, project channel revenue, translate it into orders, and compare the result with contribution and cash constraints. ROAS starts the conversation; it does not finish the financial analysis.
+ROAS starts the conversation; it does not finish the financial analysis. Build the plan so every assumption stays visible, then hold it against contribution and cash.
+
+<section class="blog-cta">
+  <h3>Turn a spend ceiling into a transparent scenario</h3>
+  <p>Use the <a href="/tools/marketing-budget">MlabsGrowth Marketing Budget Calculator</a> to allocate spend by channel and estimate projected revenue, orders, blended ROAS, and cost per order.</p>
+  <p>The calculator works in your chosen currency and uses your assumptions. Actual performance depends on traffic, offer, conversion, attribution, and how channel efficiency changes with scale.</p>
+</section>
 
 ## Source notes
 

@@ -16,7 +16,7 @@ const modules = import.meta.glob<BlogModule>('./*.md', { eager: true });
 const posts = Object.values(modules).filter(post => !post.frontmatter.draft).sort((a, b) =>
   new Date(b.frontmatter.publishedOn).getTime() - new Date(a.frontmatter.publishedOn).getTime()
 );
-const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
+const formatDate = (date: string) => new Intl.DateTimeFormat('en-GB', {
   day: 'numeric',
   month: 'long',
   year: 'numeric',
@@ -26,9 +26,9 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
 <Layout>
   <div class="growth-page">
     <section class="growth-page-hero shell" aria-labelledby="blog-title">
-      <p class="eyebrow-accent">DAILY FIELD NOTES</p>
-      <h1 id="blog-title">Useful ideas.<br /><em>One at a time.</em></h1>
-      <p class="growth-lead">Practical notes on D2C operations, Shopify conversion, and AI automation—written for people doing the work.</p>
+      <p class="eyebrow-accent">ECOMMERCE GROWTH BLOG</p>
+      <h1 id="blog-title">Shopify, COD &amp; AI growth guides.<br /><em>Written by operators.</em></h1>
+      <p class="growth-lead">Practical guides on Shopify conversion rate optimization, COD and RTO, order operations, ecommerce profit and AI marketing workflows — written by a founder who runs two D2C brands, for ecommerce teams in any country.</p>
     </section>
 
     <section class="blog-listing" aria-labelledby="latest-posts">
