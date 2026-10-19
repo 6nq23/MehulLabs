@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify batch fulfillment workflow</title>
+  <desc id="desc">A group of compatible orders moves through pick, print, scan, and pack stages, while exception orders are separated for review.</desc>
+  <defs>
+    <linearGradient id="hero-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7d4"/>
+      <stop offset="0.58" stop-color="#fffdf6"/>
+      <stop offset="1" stop-color="#efede5"/>
+    </linearGradient>
+    <filter id="hero-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="15" stdDeviation="18" flood-color="#211f1a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="hero-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M1 1l10 5-10 5z" fill="#756f65"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" rx="48" fill="url(#hero-bg)"/>
+  <circle cx="1460" cy="90" r="220" fill="#ffcb16" opacity="0.26"/>
+  <circle cx="115" cy="845" r="260" fill="#f5a63b" opacity="0.11"/>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#24221f">
+    <text x="105" y="112" font-size="29" font-weight="800" letter-spacing="3">SHOPIFY · ORDER OPERATIONS</text>
+    <text x="105" y="186" font-size="60" font-weight="850">One batch. Four visible handoffs.</text>
+    <text x="105" y="238" font-size="28" fill="#655f55">Group compatible orders, then keep every exception outside the main lane.</text>
+
+    <g filter="url(#hero-shadow)">
+      <rect x="95" y="340" width="300" height="292" rx="30" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="485" y="340" width="215" height="292" rx="30" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="750" y="340" width="215" height="292" rx="30" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="1015" y="340" width="215" height="292" rx="30" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="1280" y="340" width="225" height="292" rx="30" fill="#24221f"/>
+    </g>
+
+    <g>
+      <rect x="135" y="385" width="108" height="78" rx="15" fill="#ffcb16"/>
+      <rect x="158" y="410" width="108" height="78" rx="15" fill="#ffe37b" stroke="#24221f" stroke-width="3"/>
+      <rect x="181" y="435" width="108" height="78" rx="15" fill="#ffffff" stroke="#24221f" stroke-width="3"/>
+      <path d="M201 459h61M201 478h45" stroke="#24221f" stroke-width="6" stroke-linecap="round"/>
+      <text x="135" y="556" font-size="28" font-weight="850">Compatible orders</text>
+      <text x="135" y="592" font-size="24" fill="#655f55">One location · one lane</text>
+    </g>
+
+    <path d="M395 486h90M700 486h50M965 486h50M1230 486h50" stroke="#756f65" stroke-width="5" marker-end="url(#hero-arrow)"/>
+
+    <g text-anchor="middle">
+      <circle cx="593" cy="420" r="40" fill="#ffcb16"/><text x="593" y="432" font-size="30" font-weight="900">1</text>
+      <text x="593" y="518" font-size="30" font-weight="850">Pick</text>
+      <text x="593" y="556" font-size="24" fill="#655f55">Shared list</text>
+      <text x="593" y="590" font-size="24" fill="#655f55">Named owner</text>
+
+      <circle cx="858" cy="420" r="40" fill="#ffcb16"/><text x="858" y="432" font-size="30" font-weight="900">2</text>
+      <text x="858" y="518" font-size="30" font-weight="850">Print</text>
+      <text x="858" y="556" font-size="24" fill="#655f55">Labels</text>
+      <text x="858" y="590" font-size="24" fill="#655f55">Documents</text>
+
+      <circle cx="1123" cy="420" r="40" fill="#ffcb16"/><text x="1123" y="432" font-size="30" font-weight="900">3</text>
+      <text x="1123" y="518" font-size="30" font-weight="850">Verify</text>
+      <text x="1123" y="556" font-size="24" fill="#655f55">Scan or check</text>
+      <text x="1123" y="590" font-size="24" fill="#655f55">Wrong item stops</text>
+    </g>
+
+    <g text-anchor="middle" fill="#ffffff">
+      <circle cx="1393" cy="420" r="40" fill="#ffcb16"/><text x="1393" y="432" font-size="30" font-weight="900" fill="#24221f">4</text>
+      <text x="1393" y="518" font-size="30" font-weight="850">Pack</text>
+      <text x="1393" y="556" font-size="24" fill="#eee7d9">Close batch</text>
+      <text x="1393" y="590" font-size="24" fill="#eee7d9">Tracking visible</text>
+    </g>
+
+    <path d="M858 632v72" stroke="#756f65" stroke-width="5" marker-end="url(#hero-arrow)"/>
+    <rect x="470" y="710" width="775" height="103" rx="35" fill="#ffcb16"/>
+    <text x="858" y="753" text-anchor="middle" font-size="25" font-weight="850">EXCEPTION LANE</text>
+    <text x="858" y="788" text-anchor="middle" font-size="24" fill="#514b42">Remove · name the reason · assign the next action</text>
+  </g>
+</svg>
