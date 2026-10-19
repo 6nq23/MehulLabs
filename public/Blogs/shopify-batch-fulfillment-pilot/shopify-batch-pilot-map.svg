@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Seven-step Shopify batch fulfillment pilot</title>
+  <desc id="desc">Seven connected pilot gates cover eligibility, cohort, data, workflow, rehearsal, live batch, and reconciliation, with failed orders sent to an exception lane.</desc>
+  <defs>
+    <linearGradient id="map-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf6"/>
+      <stop offset="1" stop-color="#f1eee6"/>
+    </linearGradient>
+    <filter id="map-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#211f1a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="map-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M1 1l10 5-10 5z" fill="#756f65"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" rx="48" fill="url(#map-bg)"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#24221f">
+    <text x="92" y="103" font-size="29" font-weight="800" letter-spacing="3">PEAK-SEASON PILOT</text>
+    <text x="92" y="172" font-size="54" font-weight="850">Seven gates before you scale the batch</text>
+    <text x="92" y="219" font-size="26" fill="#655f55">Move forward only when the current gate produces a clear, reviewable result.</text>
+
+    <g filter="url(#map-shadow)">
+      <rect x="78" y="320" width="185" height="238" rx="27" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="285" y="320" width="185" height="238" rx="27" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="492" y="320" width="185" height="238" rx="27" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="699" y="320" width="185" height="238" rx="27" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="906" y="320" width="185" height="238" rx="27" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="1113" y="320" width="185" height="238" rx="27" fill="#ffffff" stroke="#ddd7ca" stroke-width="3"/>
+      <rect x="1320" y="320" width="202" height="238" rx="27" fill="#24221f"/>
+    </g>
+
+    <path d="M263 439h22M470 439h22M677 439h22M884 439h22M1091 439h22M1298 439h22" stroke="#756f65" stroke-width="4" marker-end="url(#map-arrow)"/>
+
+    <g>
+      <rect x="106" y="350" width="52" height="52" rx="16" fill="#ffcb16"/><text x="132" y="386" text-anchor="middle" font-size="25" font-weight="900">1</text>
+      <text x="106" y="455" font-size="23" font-weight="850">Eligibility</text>
+      <text x="106" y="494" font-size="23" fill="#655f55">Location</text><text x="106" y="528" font-size="23" fill="#655f55">Carrier</text>
+
+      <rect x="313" y="350" width="52" height="52" rx="16" fill="#ffcb16"/><text x="339" y="386" text-anchor="middle" font-size="25" font-weight="900">2</text>
+      <text x="313" y="455" font-size="23" font-weight="850">Cohort</text>
+      <text x="313" y="494" font-size="23" fill="#655f55">One lane</text><text x="313" y="528" font-size="23" fill="#655f55">Known handling</text>
+
+      <rect x="520" y="350" width="52" height="52" rx="16" fill="#ffcb16"/><text x="546" y="386" text-anchor="middle" font-size="25" font-weight="900">3</text>
+      <text x="520" y="455" font-size="23" font-weight="850">Data</text>
+      <text x="520" y="494" font-size="23" fill="#655f55">SKU · weight</text><text x="520" y="528" font-size="23" fill="#655f55">Address · pack</text>
+
+      <rect x="727" y="350" width="52" height="52" rx="16" fill="#ffcb16"/><text x="753" y="386" text-anchor="middle" font-size="25" font-weight="900">4</text>
+      <text x="727" y="455" font-size="23" font-weight="850">Workflow</text>
+      <text x="727" y="494" font-size="23" fill="#655f55">Steps</text><text x="727" y="528" font-size="23" fill="#655f55">Owners</text>
+
+      <rect x="934" y="350" width="52" height="52" rx="16" fill="#ffcb16"/><text x="960" y="386" text-anchor="middle" font-size="25" font-weight="900">5</text>
+      <text x="934" y="455" font-size="23" font-weight="850">Rehearse</text>
+      <text x="934" y="494" font-size="23" fill="#655f55">Right item</text><text x="934" y="528" font-size="23" fill="#655f55">Wrong item</text>
+
+      <rect x="1141" y="350" width="52" height="52" rx="16" fill="#ffcb16"/><text x="1167" y="386" text-anchor="middle" font-size="25" font-weight="900">6</text>
+      <text x="1141" y="455" font-size="23" font-weight="850">Live batch</text>
+      <text x="1141" y="494" font-size="23" fill="#655f55">Small count</text><text x="1141" y="528" font-size="23" fill="#655f55">Inspect all</text>
+    </g>
+
+    <g fill="#ffffff">
+      <rect x="1348" y="350" width="52" height="52" rx="16" fill="#ffcb16"/><text x="1374" y="386" text-anchor="middle" font-size="25" font-weight="900" fill="#24221f">7</text>
+      <text x="1348" y="455" font-size="23" font-weight="850">Reconcile</text>
+      <text x="1348" y="494" font-size="23" fill="#eee7d9">Order · label</text><text x="1348" y="528" font-size="23" fill="#eee7d9">Pack · tracking</text>
+    </g>
+
+    <path d="M1421 558v87H800" fill="none" stroke="#756f65" stroke-width="5" marker-end="url(#map-arrow)"/>
+    <rect x="350" y="651" width="900" height="110" rx="35" fill="#ffcb16"/>
+    <text x="800" y="696" text-anchor="middle" font-size="26" font-weight="850">EXCEPTION LANE</text>
+    <text x="800" y="733" text-anchor="middle" font-size="24" fill="#514b42">Remove from batch · preserve fulfillment status · assign the next action</text>
+    <rect x="290" y="807" width="1020" height="49" rx="25" fill="#24221f"/>
+    <text x="800" y="840" text-anchor="middle" font-size="23" font-weight="750" fill="#ffffff">Scale the rule only when the next team member can run it without memory</text>
+  </g>
+</svg>

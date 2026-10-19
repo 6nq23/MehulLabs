@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Six-gate Shopify Rollouts BFCM test plan</title>
+  <desc id="desc">A six-stage process from a commercial hypothesis through rollout type, isolated change, audience boundaries, profit guardrails, and a scale or rollback decision.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf7eb"/><stop offset="1" stop-color="#eee5cf"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#28251e" flood-opacity=".13"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="90" y="100" fill="#a6412c" font-size="22" font-weight="800" letter-spacing="4">PROFIT-FIRST BFCM TEST PLAN</text>
+    <text x="90" y="165" fill="#191815" font-size="48" font-weight="800">Six gates before traffic enters the rollout</text>
+    <text x="90" y="208" fill="#625c50" font-size="22">One decision moves left to right. Exceptions leave the main lane.</text>
+    <path d="M190 390H1410" stroke="#b9ad93" stroke-width="8" stroke-linecap="round"/>
+    <g filter="url(#shadow)">
+      <g transform="translate(80 285)"><rect width="220" height="230" rx="26" fill="#1b1a17"/><circle cx="45" cy="45" r="24" fill="#f4c84b"/><text x="45" y="54" text-anchor="middle" fill="#1b1a17" font-size="24" font-weight="900">1</text><text x="30" y="108" fill="#fffaf0" font-size="25" font-weight="800">Hypothesis</text><text x="30" y="150" fill="#c9c4b8" font-size="18">Shopper</text><text x="30" y="180" fill="#c9c4b8" font-size="18">Change</text><text x="30" y="210" fill="#c9c4b8" font-size="18">Outcome</text></g>
+      <g transform="translate(325 285)"><rect width="220" height="230" rx="26" fill="#fffaf0"/><circle cx="45" cy="45" r="24" fill="#f4c84b"/><text x="45" y="54" text-anchor="middle" fill="#1b1a17" font-size="24" font-weight="900">2</text><text x="30" y="108" fill="#191815" font-size="25" font-weight="800">Type</text><text x="30" y="150" fill="#625c50" font-size="18">Launch</text><text x="30" y="180" fill="#625c50" font-size="18">Event</text><text x="30" y="210" fill="#625c50" font-size="18">Experiment</text></g>
+      <g transform="translate(570 285)"><rect width="220" height="230" rx="26" fill="#fffaf0"/><circle cx="45" cy="45" r="24" fill="#f4c84b"/><text x="45" y="54" text-anchor="middle" fill="#1b1a17" font-size="24" font-weight="900">3</text><text x="30" y="108" fill="#191815" font-size="25" font-weight="800">One change</text><text x="30" y="150" fill="#625c50" font-size="18">Isolate cause</text><text x="30" y="180" fill="#625c50" font-size="18">Keep scope</text><text x="30" y="210" fill="#625c50" font-size="18">reviewable</text></g>
+      <g transform="translate(815 285)"><rect width="220" height="230" rx="26" fill="#fffaf0"/><circle cx="45" cy="45" r="24" fill="#f4c84b"/><text x="45" y="54" text-anchor="middle" fill="#1b1a17" font-size="24" font-weight="900">4</text><text x="30" y="108" fill="#191815" font-size="25" font-weight="800">Audience</text><text x="30" y="150" fill="#625c50" font-size="18">Market</text><text x="30" y="180" fill="#625c50" font-size="18">Traffic split</text><text x="30" y="210" fill="#625c50" font-size="18">Channels</text></g>
+      <g transform="translate(1060 285)"><rect width="220" height="230" rx="26" fill="#fffaf0"/><circle cx="45" cy="45" r="24" fill="#ff936f"/><text x="45" y="54" text-anchor="middle" fill="#1b1a17" font-size="24" font-weight="900">5</text><text x="30" y="108" fill="#191815" font-size="25" font-weight="800">Guardrails</text><text x="30" y="150" fill="#625c50" font-size="18">Margin</text><text x="30" y="180" fill="#625c50" font-size="18">Experience</text><text x="30" y="210" fill="#625c50" font-size="18">Errors</text></g>
+      <g transform="translate(1305 285)"><rect width="220" height="230" rx="26" fill="#1b1a17"/><circle cx="45" cy="45" r="24" fill="#ff936f"/><text x="45" y="54" text-anchor="middle" fill="#1b1a17" font-size="24" font-weight="900">6</text><text x="30" y="108" fill="#fffaf0" font-size="25" font-weight="800">Decision</text><text x="30" y="150" fill="#c9c4b8" font-size="18">Scale</text><text x="30" y="180" fill="#c9c4b8" font-size="18">Hold</text><text x="30" y="210" fill="#c9c4b8" font-size="18">Roll back</text></g>
+    </g>
+    <rect x="90" y="650" width="1420" height="125" rx="28" fill="#ded4bd"/>
+    <text x="140" y="705" fill="#191815" font-size="22" font-weight="800">EXCEPTION LANE</text>
+    <text x="140" y="747" fill="#4e493f" font-size="21">Offer mismatch · checkout error · feed lag · margin floor breach · unclear ownership → pause and review</text>
+  </g>
+</svg>

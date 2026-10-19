@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify Rollouts BFCM control panel</title>
+  <desc id="desc">A dark release-control dashboard showing Launch, Event, and Experiment paths feeding one reviewed BFCM store change.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#11110f"/><stop offset="1" stop-color="#252219"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f4c84b"/><stop offset="1" stop-color="#ff936f"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><circle cx="1430" cy="70" r="250" fill="#f4c84b" opacity=".07"/><circle cx="80" cy="850" r="300" fill="#ff7a59" opacity=".06"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="100" y="110" fill="#f4c84b" font-size="23" font-weight="800" letter-spacing="4">MLABS GROWTH · BFCM RELEASE CONTROL</text>
+    <text x="100" y="184" fill="#fffaf0" font-size="58" font-weight="800">Test the change.</text><text x="100" y="250" fill="#fffaf0" font-size="58" font-weight="800">Protect the decision.</text>
+    <text x="100" y="300" fill="#c9c4b8" font-size="24">Shopify Rollouts turns one store change into a controlled release.</text>
+    <g filter="url(#shadow)">
+      <rect x="100" y="380" width="350" height="235" rx="28" fill="#fffaf0"/><rect x="100" y="380" width="350" height="10" rx="5" fill="#f4c84b"/>
+      <text x="140" y="445" fill="#27251f" font-size="21" font-weight="800" letter-spacing="2">LAUNCH</text><text x="140" y="500" fill="#11110f" font-size="34" font-weight="800">Make it permanent</text><text x="140" y="546" fill="#665f52" font-size="20">Gradual or all at once</text><text x="140" y="580" fill="#665f52" font-size="20">No treatment split</text>
+      <rect x="625" y="380" width="350" height="235" rx="28" fill="#302c23" stroke="#5e5645" stroke-width="2"/><rect x="625" y="380" width="350" height="10" rx="5" fill="#ff936f"/>
+      <text x="665" y="445" fill="#ffb39d" font-size="21" font-weight="800" letter-spacing="2">EVENT</text><text x="665" y="500" fill="#fffaf0" font-size="34" font-weight="800">Run, then roll back</text><text x="665" y="546" fill="#c9c4b8" font-size="20">Fixed start and end</text><text x="665" y="580" fill="#c9c4b8" font-size="20">Built for timed changes</text>
+      <rect x="1150" y="380" width="350" height="235" rx="28" fill="#fffaf0"/><rect x="1150" y="380" width="350" height="10" rx="5" fill="url(#gold)"/>
+      <text x="1190" y="445" fill="#a8412c" font-size="21" font-weight="800" letter-spacing="2">EXPERIMENT</text><text x="1190" y="500" fill="#11110f" font-size="34" font-weight="800">Control vs treatment</text><text x="1190" y="546" fill="#665f52" font-size="20">50/50 is the default</text><text x="1190" y="580" fill="#665f52" font-size="20">Grow plan or higher</text>
+    </g>
+    <path d="M275 635v48h500" fill="none" stroke="#f4c84b" stroke-width="5" stroke-linecap="round"/><path d="M800 635v48" stroke="#f4c84b" stroke-width="5" stroke-linecap="round"/><path d="M1325 635v48H825" fill="none" stroke="#f4c84b" stroke-width="5" stroke-linecap="round"/>
+    <path d="M800 670l0 28" stroke="#f4c84b" stroke-width="5"/><path d="M787 687l13 14 13-14" fill="none" stroke="#f4c84b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="365" y="710" width="870" height="110" rx="25" fill="#171613" stroke="#4f493c" stroke-width="2"/><circle cx="430" cy="765" r="22" fill="#f4c84b"/><path d="M419 765l8 8 15-19" fill="none" stroke="#171613" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="475" y="755" fill="#fffaf0" font-size="24" font-weight="800">ONE REVIEWED CHANGE</text><text x="475" y="790" fill="#c9c4b8" font-size="21">theme · checkout · catalog · discount · owner · rollback</text>
+  </g>
+</svg>
