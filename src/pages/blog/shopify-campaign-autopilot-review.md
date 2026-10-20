@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 draft: false
 title: "Shopify Campaign Autopilot: Does AI Marketing Make Money?"
-description: "Shopify Campaign Autopilot runs Meta, Shop and email campaigns for you. What we know, what is unproven, and a profit-first test plan with holdout and POAS guardrails."
+description: "Shopify Campaign Autopilot runs Meta, Shop and email campaigns for you. What we know, what is unproven, and a profit-first test plan with POAS guardrails."
 publishedOn: "2026-10-08"
 updatedOn: "2026-10-19"
 category: "AI marketing & automation"
@@ -177,7 +177,7 @@ Campaign Autopilot may well save time, and Shopify has made its controls easy to
 
 **Switch it on now, as a pilot,** if you know your break-even ROAS, have a clean baseline and can afford the budget target being exceeded. Cap the pilot, keep approval on, hold out matched regions and judge the result on incremental POAS after returns. Shopify's own [real-time analytics](/blog/shopify-real-time-analytics-guide) are a helpful way to watch orders as the pilot runs.
 
-**Keep testing before you scale.** Treat the pilot as an experiment with a pass mark. If it clears that bar, scale in steps. If it does not, you have paid a small, known price to find out.
+**Test before you scale** if the pilot is running but the result is not yet settled. Treat the pilot as an experiment with a pass mark. If it clears that bar, scale in steps. If it does not, you have paid a small, known price to find out.
 
 **Wait** if your margins are thin, your product-cost data is unreliable, your COD refusal rates are high or you have no clean baseline. Autopilot optimises what it can see, and if your cost and returns data are unreliable, you cannot tell whether its results are real. Wait, too, if you are in the middle of a sale or a tracking migration, or if you cannot afford an overshoot. Start instead with contribution per order by channel, which the [unit economics guide](/blog/unit-economics-guide) walks through.
 

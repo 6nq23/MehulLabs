@@ -1,7 +1,6 @@
 import Lenis from 'lenis';
 import { createContext, useContext, useEffect, useState } from 'react';
 
-import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { usePrefersReducedMotion } from '@/hooks/useMediaQuery';
 
 const LenisContext = createContext<Lenis | null>(null);
@@ -28,18 +27,14 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       wheelMultiplier: 1,
       touchMultiplier: 1,
       infinite: false,
+      // Lenis runs its own rAF loop, so the site-wide island does not need GSAP's ticker.
+      // Section animations that use ScrollTrigger still follow the native scroll events Lenis emits.
+      autoRaf: true,
     });
 
     setLenis(instance);
 
-    // Single rAF loop for both libraries — two loops means two different
-    // clocks and visible jitter on scrubbed timelines.
-    instance.on('scroll', ScrollTrigger.update);
-    const tick = (time: number) => instance.raf(time * 1000);
-    gsap.ticker.add(tick);
-
     return () => {
-      gsap.ticker.remove(tick);
       instance.destroy();
       setLenis(null);
     };

@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Cash Runway: A Practical Guide for Founders"
 description: "Model 24 months of cash using revenue, growth, fixed costs, variable costs, and marketing spend, then separate runway from accounting profit."
 publishedOn: "2026-09-17"
@@ -24,7 +25,7 @@ faqs:
 
 Cash runway is the length of time a business can continue before its projected cash balance reaches zero. A useful runway model starts with current cash, adds expected cash inflows, subtracts monthly cash costs, and repeats the calculation period by period.
 
-Runway is not a fixed ratio when revenue, costs, or working capital change. A simple cash divided by burn calculation is a helpful first check, but a monthly forecast is better for decisions because it shows when growth, inventory, marketing, or payment timing changes the burn.
+Runway is not a fixed ratio when revenue, costs, or working capital change. A simple [cash divided by burn](https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/templates-business-guides/glossary/cash-runway) calculation is a helpful first check, but a monthly forecast is better for decisions because it shows when growth, inventory, marketing, or payment timing changes the burn.
 
 <figure class="blog-feature-image">
   <img src="/Blogs/cash-runway-guide/cash-runway-chart.webp" alt="How to calculate startup cash runway month by month" width="1536" height="1024" loading="lazy" decoding="async">
@@ -40,9 +41,7 @@ Runway differs from profit. A business can report profit but run short of cash b
 
 The Australian Government's *Guide to managing cash flow* recommends using a cash flow statement to see money moving in and out, plan future costs, and identify seasonal patterns through regular updates. A runway view applies that discipline to the date at which available cash could be exhausted.
 
-Runway also differs from break-even. The U.S. Small Business Administration's *Break-even point* explains the relationship between fixed costs, selling price, and variable cost. In a monthly runway model, the break-even month is the first month when revenue covers the modelled monthly costs.
-
-Earlier cash losses still remain.
+Runway also differs from break-even. The U.S. Small Business Administration's *Break-even point* explains the relationship between fixed costs, selling price, and variable cost. In a monthly runway model, the break-even month is the first month when revenue covers the modelled monthly costs. Earlier cash losses still remain.
 
 ## How do you calculate cash runway?
 
@@ -87,6 +86,11 @@ Now use a monthly scenario:
 | Marketing spend | ₹90,000 |
 | Month-one total costs | ₹400,000 |
 | Month-one burn | ₹100,000 |
+
+<figure class="blog-feature-image">
+  <img src="/Blogs/cash-runway-guide/cash-runway-months.svg" alt="Bar chart of closing cash falling from ₹600,000 to zero over six months at a ₹100,000 monthly burn" width="1600" height="900" loading="lazy" decoding="async">
+  <figcaption>The simple runway case: ₹100,000 of burn each month empties ₹600,000 of cash after six months if nothing else changes.</figcaption>
+</figure>
 
 With zero revenue growth, the simple six-month result holds. With positive growth, revenue and variable cost both rise, so the improvement in cash depends on contribution after variable cost. With negative growth, runway can shorten.
 
@@ -154,19 +158,15 @@ Sensitivity matters more than a precise-looking month count. Test revenue growth
 - Reading “24+ months” as unlimited runway.
 - Waiting until cash is nearly exhausted before defining actions.
 
-## When to rerun the model, and what to watch
+## Keep the forecast current
 
 Cash runway is a dated scenario, not a permanent fact. The month count is only as current as the opening cash and assumptions behind it, so treat the model as something you rerun rather than something you build once.
 
 <aside class="blog-callout">
-  <strong>Operating rule:</strong> Update actual opening cash and the next 13 weeks frequently, then retain the 24-month view for strategic decisions.
+  <strong>Operating rule:</strong> Update actual opening cash and a [13-week rolling cash flow forecast](https://www.bdc.ca/en/articles-tools/blog/preparing-your-finances-for-economic-slowdown) frequently, then retain the 24-month view for strategic decisions.
 </aside>
 
-Each time you rerun it, watch three things:
-
-- **The inputs that move the date.** Revenue growth, variable cost rate, marketing, payroll timing, and one-off inventory orders.
-- **Cash-timing events.** Purchase orders, supplier deposits, tax payments, debt repayments, renewals, and any fundraise only once it is committed.
-- **Your decision triggers.** Closing cash against the minimum buffer, experimental media against its contribution threshold, and the most likely runway against the time financing work needs.
+Each time you rerun it, recheck the sensitivity inputs, the cash-timing events listed above, and your decision triggers.
 
 Build it month by month, connect revenue to variable cost, and define actions early enough for the forecast to change a decision.
 
@@ -175,6 +175,7 @@ Build it month by month, connect revenue to variable cost, and define actions ea
 <section class="blog-cta">
   <h3>See how revenue and costs move cash over 24 months</h3>
   <p>Use the <a href="/tools/runway-planner">MlabsGrowth Cash Runway Calculator</a> to project closing cash, first-month burn, and a possible break-even month from your current cash, revenue, growth, fixed costs, variable costs, and marketing spend.</p>
+  <p>If refunds, returns, or marketing judged on booked rather than collected revenue are eating into cash, see <a href="/services/b2c">growth and order automation for D2C brands</a>.</p>
   <p>The calculator works in your chosen currency and provides a scenario, not financial advice. Add inventory timing, tax, debt, fundraising, and settlement timing in your detailed cash forecast.</p>
 </section>
 
@@ -204,3 +205,5 @@ It means projected cash stays above zero through the calculator's 24-month horiz
 
 - [U.S. Small Business Administration, *Break-even point*](https://legacy.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs/break-even-point), retrieved 2026-09-19.
 - [Australian Government, business.gov.au, *Guide to managing cash flow*](https://business.gov.au/guide/guide-to-managing-cash-flow), retrieved 2026-09-19.
+- [Business Development Bank of Canada, *Cash runway* (glossary)](https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/templates-business-guides/glossary/cash-runway), published 2025-04-04, retrieved 2026-10-19.
+- [Business Development Bank of Canada, *Preparing your finances for an economic slowdown*](https://www.bdc.ca/en/articles-tools/blog/preparing-your-finances-for-economic-slowdown), published 2023-02-17, retrieved 2026-10-19.

@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Shopify SEO for AI Search: ChatGPT & Google AI Mode"
 description: "Shopify AI search visibility depends on 2 connected data paths. Learn how to optimize product feeds, pages and measurement for ChatGPT and Google AI Mode."
 publishedOn: "2026-09-22"
@@ -7,7 +8,7 @@ updatedOn: "2026-10-19"
 category: "AI search & commerce"
 author: "Mehul"
 readTime: "13 min read"
-coverImage: "/Blogs/shopify-seo-ai-search/shopify-seo-ai-search-hero.png"
+coverImage: "/Blogs/shopify-seo-ai-search-guide/shopify-seo-ai-search-hero.webp"
 coverImageAlt: "Editorial illustration of a Shopify product appearing in ChatGPT and Google AI Mode shopping results"
 faqs:
   - question: "Can Shopify products appear in ChatGPT?"
@@ -27,7 +28,7 @@ Shopify SEO for AI search is the work of making product information accurate, st
 There are two connected discovery paths to manage. ChatGPT can receive eligible product data through Shopify Catalog. Google AI Mode and Gemini use the Google & YouTube sales channel or Google Merchant Center. Both can also learn from publicly accessible product pages, so feed optimization and on-site SEO need to agree.
 
 <figure class="blog-feature-image">
-  <img src="/Blogs/shopify-seo-ai-search/shopify-seo-ai-search-hero.png" alt="Editorial illustration of a Shopify product appearing in ChatGPT and Google AI Mode shopping results" width="1734" height="907" fetchpriority="high" decoding="async">
+  <img src="/Blogs/shopify-seo-ai-search-guide/shopify-seo-ai-search-hero.webp" alt="Editorial illustration of a Shopify product appearing in ChatGPT and Google AI Mode shopping results" width="1734" height="907" fetchpriority="high" decoding="async">
   <figcaption>Concept illustration: accurate Shopify product data can support discovery in ChatGPT and Google AI Mode. It is not a platform screenshot or a promise of placement.</figcaption>
 </figure>
 
@@ -85,7 +86,7 @@ Shopify's [agentic storefront documentation](https://help.shopify.com/en/manual/
 For Google, Shopify says [AI Mode and Gemini](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/google) can support Shopify-powered direct checkout for eligible stores and users. That rollout isn't universal. Product discovery still depends on accurate Merchant Center data and eligibility.
 
 <figure class="blog-feature-image blog-feature-image--inline">
-  <img src="/Blogs/shopify-seo-ai-search/shopify-ai-search-workflow.png" alt="Five-stage workflow from Shopify product data through Catalog and Merchant Center to ChatGPT, Google AI Mode, checkout and measurement" width="1672" height="941" loading="lazy" decoding="async">
+  <img src="/Blogs/shopify-seo-ai-search-guide/shopify-ai-search-workflow.webp" alt="Five-stage workflow from Shopify product data through Catalog and Merchant Center to ChatGPT, Google AI Mode, checkout and measurement" width="1672" height="941" loading="lazy" decoding="async">
   <figcaption>AI shopping visibility is a connected operating loop: product data, distribution, discovery, checkout and measurement.</figcaption>
 </figure>
 
@@ -249,7 +250,7 @@ Use a 4-week sequence so changes remain measurable. The order matters: establish
 - Evaluate revenue with the [unit economics calculator](/tools/unit-economics).
 - Create a monthly feed and policy review owner.
 
-By the end of the month the store should look less like an "AI SEO" project and more like product-data operations on top of sound ecommerce SEO. ChatGPT and Google AI Mode take different primary distribution paths, but both reward the same discipline: complete records, consistent facts, crawlable pages, clear policies and a trustworthy checkout. Keep organic AI discovery measured apart from paid media, and let commercial outcomes rather than visibility alone decide what to improve next.
+By the end of the month the store should look less like an "AI SEO" project and more like product-data operations on top of sound ecommerce SEO. ChatGPT and Google AI Mode take different primary distribution paths, but both benefit from the same discipline: complete records, consistent facts, crawlable pages, clear policies and a trustworthy checkout. Keep organic AI discovery measured apart from paid media, and let commercial outcomes rather than visibility alone decide what to improve next.
 
 <section class="blog-cta">
   <h2>Turn AI visibility into a working Shopify system</h2>
@@ -282,16 +283,16 @@ Use Shopify channel or referrer attribution, consistent UTMs and Merchant Center
 
 ## Source notes
 
-- [Shopify Help Center, *Shopify agentic storefronts*](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts), retrieved 2026-09-22.
-- [Shopify Help Center, *Shopify Catalog and product discovery for agentic storefronts*](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/products), retrieved 2026-09-22.
-- [Shopify Help Center, *Optimizing your products for AI platforms*](https://help.shopify.com/en/manual/shopify-catalog/optimizing-products), retrieved 2026-09-22.
-- [Shopify Help Center, *Selling on Google AI Mode and Gemini*](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/google), retrieved 2026-09-22.
-- [OpenAI Help Center, *Shopping from Shopify merchants in ChatGPT*](https://help.openai.com/en/articles/20001241-shopping-from-shopify-merchants-in-chatgpt), retrieved 2026-09-22.
-- [Google Search Central, *Optimizing your website for generative AI features on Google Search*](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), retrieved 2026-09-22.
-- [Google Search Central, *Introduction to Product structured data*](https://developers.google.com/search/docs/appearance/structured-data/product), updated 2025-12-10, retrieved 2026-09-22.
-- [Google Search Central, *Merchant listing structured data*](https://developers.google.com/search/docs/appearance/structured-data/merchant-listing), retrieved 2026-09-22.
-- [Google Search Central, *Where ecommerce content can appear on Google*](https://developers.google.com/search/docs/specialty/ecommerce/where-ecommerce-data-can-appear-on-google), retrieved 2026-09-22.
-- [Google Merchant Center Help, *About AI performance insights*](https://support.google.com/merchants/answer/17200695), retrieved 2026-09-22.
-- [Google Merchant Center Help, *Supported structured data attributes and values*](https://support.google.com/merchants/answer/6386198), retrieved 2026-09-22.
-- [Google Merchant Center Help, *Product detail attribute*](https://support.google.com/merchants/answer/9218260), retrieved 2026-09-22.
-- [Google Merchant Center Help, *AI-generated content*](https://support.google.com/merchants/answer/14743464), retrieved 2026-09-22.
+- [Shopify agentic storefronts](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts). Shopify Help Center. Accessed 22 September 2026.
+- [Shopify Catalog and product discovery for agentic storefronts](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/products). Shopify Help Center. Accessed 22 September 2026.
+- [Optimizing your products for AI platforms](https://help.shopify.com/en/manual/shopify-catalog/optimizing-products). Shopify Help Center. Accessed 22 September 2026.
+- [Selling on Google AI Mode and Gemini](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/google). Shopify Help Center. Accessed 22 September 2026.
+- [Shopping from Shopify merchants in ChatGPT](https://help.openai.com/en/articles/20001241-shopping-from-shopify-merchants-in-chatgpt). OpenAI Help Center. Accessed 22 September 2026.
+- [Optimizing your website for generative AI features on Google Search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide). Google Search Central. Accessed 22 September 2026.
+- [Introduction to Product structured data](https://developers.google.com/search/docs/appearance/structured-data/product). Google Search Central, updated 10 December 2025. Accessed 22 September 2026.
+- [Merchant listing structured data](https://developers.google.com/search/docs/appearance/structured-data/merchant-listing). Google Search Central. Accessed 22 September 2026.
+- [Where ecommerce content can appear on Google](https://developers.google.com/search/docs/specialty/ecommerce/where-ecommerce-data-can-appear-on-google). Google Search Central. Accessed 22 September 2026.
+- [About AI performance insights](https://support.google.com/merchants/answer/17200695). Google Merchant Center Help. Accessed 22 September 2026.
+- [Supported structured data attributes and values](https://support.google.com/merchants/answer/6386198). Google Merchant Center Help. Accessed 22 September 2026.
+- [Product detail attribute](https://support.google.com/merchants/answer/9218260). Google Merchant Center Help. Accessed 22 September 2026.
+- [AI-generated content](https://support.google.com/merchants/answer/14743464). Google Merchant Center Help. Accessed 22 September 2026.

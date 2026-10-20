@@ -50,6 +50,11 @@ if (!field('coverImageAlt')) errors.push('coverImageAlt is required.');
 if (!fs.existsSync(path.join(root, 'public/Blogs', slug, 'og-card.png'))) errors.push('Missing social card: run `npm run og:images`.');
 const faqCount = (fm.match(/^\s+- question:/gm) || []).length;
 if (faqCount > 5) warnings.push(`${faqCount} FAQs; keep 0-5 genuine questions.`);
+// FAQ schema comes from the frontmatter, so every question must also be visible as an H3 in the body.
+const faqQuestions = [...fm.matchAll(/^\s+- question:\s*"(.*)"\s*$/gm)].map(m => m[1].replace(/\\"/g, '"'));
+const bodyH3 = new Set([...raw.slice(fmMatch[0].length).matchAll(/^###\s+(.+)$/gm)].map(m => m[1].trim()));
+const hiddenFaqs = faqQuestions.filter(q => !bodyH3.has(q));
+if (hiddenFaqs.length) errors.push(`FAQ schema questions not shown as H3s in the body (must match word for word): ${hiddenFaqs.join(' | ')}`);
 
 // --- Structure -----------------------------------------------------------------------------
 const lines = body.split('\n');

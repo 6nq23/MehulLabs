@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 draft: false
-title: "Landed Cost Calculator: The Real Cost of Every Product You Sell"
+title: "Landed Cost Calculator: The Real Cost of Every Product"
 description: "Use this landed cost calculator guide to add freight, duty, import tax, brokerage and returns to every SKU, with a worked Shopify example and copyable formula."
 publishedOn: "2026-10-07"
 updatedOn: "2026-10-19"
@@ -235,6 +235,8 @@ A four-step routine keeps the number honest:
 
 When landed cost feeds contribution margin, it also changes ad decisions, because a real margin sets the profit-on-ad-spend ceiling for each SKU. See [POAS versus ROAS](/blog/poas-vs-roas) for how that works.
 
+## Start with your top five SKUs
+
 A supplier price is a starting point, not a cost. Start with your top five SKUs this week: build the sheet above, run the landed cost through the [unit economics calculator](/tools/unit-economics) to see contribution per order, and compare it with what you assumed. Use the gap to reset prices, supplier quotes and ad ceilings, then carry the number into Q4 budgets with our [contribution margin guide for holiday ad spend](/blog/contribution-margin-holiday-ad-spend).
 
 ## Frequently asked questions
@@ -267,19 +269,20 @@ Update it every time a purchase order lands, and review it whenever freight rate
 
 ## Source notes
 
-- [International Chamber of Commerce, *Incoterms Rules*](https://iccwbo.org/business-solutions/incoterms-rules/), retrieved 2026-10-01.
-- [ICC Academy, *DAP and DDP Incoterms 2020 explained*](https://academy.iccwbo.org/incoterms/article/incoterms-2020-dap-or-ddp/), retrieved 2026-10-01.
-- [Cornell Legal Information Institute, *19 CFR 152.103 Transaction value*](https://www.law.cornell.edu/cfr/text/19/152.103), retrieved 2026-10-01.
-- [GOV.UK, *How to value goods for import VAT*](https://www.gov.uk/guidance/how-to-value-goods-for-import-vat), retrieved 2026-10-01.
-- [GOV.UK, *Paying VAT on imports*](https://www.gov.uk/guidance/vat-imports-acquisitions-and-purchases-from-abroad), retrieved 2026-10-01.
-- [CBIC, *Guidance note for importers and exporters under GST*](https://cbic-gst.gov.in/hindi/pdf/faq-manual/guidnce-note-imprtrs-exprtrs.pdf), retrieved 2026-10-01.
-- [U.S. Customs and Border Protection, *User Fee Table*](https://www.cbp.gov/trade/basic-import-export/user-fee-table), retrieved 2026-10-01.
-- [Federal Register, *Customs User Fees To Be Adjusted for Inflation in Fiscal Year 2027*](https://www.federalregister.gov/documents/2026/07/31/2026-15530/customs-user-fees-to-be-adjusted-for-inflation-in-fiscal-year-2027), published 2026-07-31, retrieved 2026-10-01.
-- [U.S. Customs and Border Protection, *CBP modernizes low-value shipment processing*](https://www.cbp.gov/newsroom/national-media-release/cbp-modernizes-low-value-shipment-processing), retrieved 2026-10-01.
-- [Shopify Help Center, *Duties and import taxes*](https://help.shopify.com/en/manual/international/duties-and-import-taxes), retrieved 2026-10-01.
-- [Shopify Help Center, *Shopify Payments fees*](https://help.shopify.com/en/manual/payments/shopify-payments/onboarding/cost-of-shopify-payments), retrieved 2026-10-01.
-- [Shopify Help Center, *Product details page*](https://help.shopify.com/en/manual/products/details/product-details-page) and [*Profit reports*](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports), retrieved 2026-10-01.
-- [NRF, *Consumers Expected to Return Nearly $850 Billion in Merchandise in 2025*](https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025), published 2025-10-15, retrieved 2026-10-01.
-- [Baymard Institute, *Cart Abandonment Rate Statistics*](https://baymard.com/lists/cart-abandonment-rate), retrieved 2026-10-01.
-- [iContainers, *Landed cost: formula, example and calculation guide*](https://www.icontainers.com/help/what-is-landed-cost-how-to-calculate/), retrieved 2026-10-01.
+- International Chamber of Commerce: [Incoterms Rules](https://iccwbo.org/business-solutions/incoterms-rules/) (accessed 1 October 2026).
+- ICC Academy: [DAP and DDP Incoterms 2020 explained](https://academy.iccwbo.org/incoterms/article/incoterms-2020-dap-or-ddp/) (accessed 1 October 2026).
+- Cornell Legal Information Institute: [19 CFR 152.103 Transaction value](https://www.law.cornell.edu/cfr/text/19/152.103) (accessed 1 October 2026).
+- GOV.UK: [How to value goods for import VAT](https://www.gov.uk/guidance/how-to-value-goods-for-import-vat) (accessed 1 October 2026).
+- GOV.UK: [Paying VAT on imports](https://www.gov.uk/guidance/vat-imports-acquisitions-and-purchases-from-abroad) (accessed 1 October 2026).
+- CBIC: [Guidance note for importers and exporters under GST](https://cbic-gst.gov.in/hindi/pdf/faq-manual/guidnce-note-imprtrs-exprtrs.pdf) (accessed 1 October 2026).
+- U.S. Customs and Border Protection: [User Fee Table](https://www.cbp.gov/trade/basic-import-export/user-fee-table) (accessed 1 October 2026).
+- Federal Register: [Customs User Fees To Be Adjusted for Inflation in Fiscal Year 2027](https://www.federalregister.gov/documents/2026/07/31/2026-15530/customs-user-fees-to-be-adjusted-for-inflation-in-fiscal-year-2027) (published 31 July 2026; accessed 1 October 2026).
+- U.S. Customs and Border Protection: [CBP modernizes low-value shipment processing](https://www.cbp.gov/newsroom/national-media-release/cbp-modernizes-low-value-shipment-processing) (accessed 1 October 2026).
+- Shopify Help Center: [Duties and import taxes](https://help.shopify.com/en/manual/international/duties-and-import-taxes) (accessed 1 October 2026).
+- Shopify Help Center: [Shopify Payments fees](https://help.shopify.com/en/manual/payments/shopify-payments/onboarding/cost-of-shopify-payments) (accessed 1 October 2026).
+- Shopify Help Center: [Product details page](https://help.shopify.com/en/manual/products/details/product-details-page) (accessed 1 October 2026).
+- Shopify Help Center: [Profit reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports) (accessed 1 October 2026).
+- NRF: [Consumers Expected to Return Nearly $850 Billion in Merchandise in 2025](https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025) (published 15 October 2025; accessed 1 October 2026).
+- Baymard Institute: [Cart Abandonment Rate Statistics](https://baymard.com/lists/cart-abandonment-rate) (accessed 1 October 2026).
+- iContainers: [Landed cost: formula, example and calculation guide](https://www.icontainers.com/help/what-is-landed-cost-how-to-calculate/) (accessed 1 October 2026).
 - Worked example figures (supplier price, freight, insurance, duty rate, broker fee, payment fee, return rate) are illustrative assumptions by the author, not sourced data.

@@ -234,23 +234,23 @@ Stacking makes it worse. If a 20% product discount combines with a 10% order dis
 
 If you run paid acquisition, apply the same test to your ad ceiling in the [marketing budget calculator](/tools/marketing-budget), and include payment gateway fees in the [website profit calculator](/tools/website-d2c-profit), because they change the math on discounted orders. Cash-on-delivery stores should add a refusal allowance using the [RTO cost guide](/blog/rto-cost-guide), because discounted impulse orders are refused more often.
 
-That sets the order for building holiday offers. Start with contribution per order for your top SKUs, write the maximum effective discount next to each one, and only then build the offers underneath it: choose the discount type that matches the goal, give new and repeat customers different offers, and test how Shopify stacks everything before launch. The deepest discount is rarely the best one.
+Put together, the order for building holiday offers is simple. Start with contribution per order for your top SKUs, write the maximum effective discount next to each one, and only then build the offers underneath it: choose the discount type that matches the goal, give new and repeat customers different offers, and test how Shopify stacks everything before launch. The deepest discount is rarely the best one.
 
 <section class="blog-cta">
   <h2>See the contribution behind every offer</h2>
-  <p>mlabs Growth reviews your offers, product pages and checkout together, so discounts are set against real contribution per order instead of guesswork, before holiday traffic arrives.</p>
+  <p>MlabsGrowth reviews your offers, product pages and checkout together, so discounts are set against real contribution per order instead of guesswork, before holiday traffic arrives.</p>
   <p><a href="/services/store-conversion">Test holiday offers with Shopify conversion support</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 
 ## Source notes
 
-- [Adobe, *Holiday Shopping Season Drove a Record $257.8 Billion Online*](https://news.adobe.com/news/2026/01/adobe-holiday-shopping-season), published 2026-01-07, retrieved 2026-10-01.
-- [Adobe, *Cyber Monday Hits Record $14.25 Billion in Online Spending*](https://news.adobe.com/news/2025/12/adobe-cyber-monday-hits-record), published 2025-12-02, retrieved 2026-10-01.
-- [Shopify Help Center, *Discount combinations*](https://help.shopify.com/en/manual/discounts/discount-combinations), retrieved 2026-10-01.
-- [Shopify Help Center, *Amount off discounts*](https://help.shopify.com/en/manual/discounts/discount-types/percentage-fixed-amount), retrieved 2026-10-01.
-- [Shopify Help Center, *Buy X get Y discounts*](https://help.shopify.com/en/manual/discounts/discount-types/buy-x-get-y), retrieved 2026-10-01.
-- [Shopify Help Center, *Free shipping discounts*](https://help.shopify.com/en/manual/discounts/discount-types/free-shipping), retrieved 2026-10-01.
-- [Shopify Help Center, *Automatic discounts*](https://help.shopify.com/en/manual/discounts/automatic-discounts), retrieved 2026-10-01.
-- [Baymard Institute, *Cart Abandonment Rate Statistics*](https://baymard.com/lists/cart-abandonment-rate), retrieved 2026-10-01.
-- [del Rio Olivares, Wittkowski, Aspara, Falk and Mattila, *Relational Price Discounts*, Journal of Marketing 82(1), 2018](https://research.aalto.fi/en/publications/relational-price-discounts-consumers-metacognitions-and-nonlinear/), retrieved 2026-10-01.
-- [Mela, Gupta and Lehmann, *The Long-Term Impact of Promotion and Advertising on Consumer Brand Choice*, Journal of Marketing Research 34(2), 1997](https://scholars.duke.edu/publication/1485948), retrieved 2026-10-01.
+- [Holiday Shopping Season Drove a Record $257.8 Billion Online](https://news.adobe.com/news/2026/01/adobe-holiday-shopping-season). Adobe, published 7 January 2026. Accessed 1 October 2026.
+- [Cyber Monday Hits Record $14.25 Billion in Online Spending](https://news.adobe.com/news/2025/12/adobe-cyber-monday-hits-record). Adobe, published 2 December 2025. Accessed 1 October 2026.
+- [Discount combinations](https://help.shopify.com/en/manual/discounts/discount-combinations). Shopify Help Center. Accessed 1 October 2026.
+- [Amount off discounts](https://help.shopify.com/en/manual/discounts/discount-types/percentage-fixed-amount). Shopify Help Center. Accessed 1 October 2026.
+- [Buy X get Y discounts](https://help.shopify.com/en/manual/discounts/discount-types/buy-x-get-y). Shopify Help Center. Accessed 1 October 2026.
+- [Free shipping discounts](https://help.shopify.com/en/manual/discounts/discount-types/free-shipping). Shopify Help Center. Accessed 1 October 2026.
+- [Automatic discounts](https://help.shopify.com/en/manual/discounts/automatic-discounts). Shopify Help Center. Accessed 1 October 2026.
+- [Cart Abandonment Rate Statistics](https://baymard.com/lists/cart-abandonment-rate). Baymard Institute. Accessed 1 October 2026.
+- [Relational Price Discounts](https://research.aalto.fi/en/publications/relational-price-discounts-consumers-metacognitions-and-nonlinear/). del Rio Olivares, Wittkowski, Aspara, Falk and Mattila, *Journal of Marketing* 82(1), 2018. Accessed 1 October 2026.
+- [The Long-Term Impact of Promotion and Advertising on Consumer Brand Choice](https://scholars.duke.edu/publication/1485948). Mela, Gupta and Lehmann, *Journal of Marketing Research* 34(2), 1997. Accessed 1 October 2026.

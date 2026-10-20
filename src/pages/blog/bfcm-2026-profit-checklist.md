@@ -25,13 +25,13 @@ faqs:
 
 A profitable BFCM 2026 plan starts with contribution margin, not sales targets. Black Friday falls on 27 November 2026 and Cyber Monday on 30 November, so a store has about nine weeks to set discount limits, place stock orders, prepare ads and checkout, and reserve cash for December returns.
 
-Most Black Friday advice focuses on selling more, but revenue is the easy number to grow. A 30% sitewide discount, expensive peak-week traffic and a wave of cash-on-delivery refusals can produce a record sales day and a weaker month. Stock and ad decisions therefore need to be made in October, and cash for returns, RTO and supplier payments set aside before any BFCM revenue is treated as profit.
+Most Black Friday advice focuses on selling more, but revenue is the easy number to grow. A 30% sitewide discount, expensive peak-week traffic and a wave of cash-on-delivery refusals can produce a record sales day and a weaker month. Stock and ad decisions need to be made in October, and cash for returns, RTO and supplier payments should be set aside before any BFCM revenue is treated as profit.
 
 This checklist runs week by week from October planning to December returns. It shows the discount maths, where bundles beat flat discounts, how to order stock against lead times, and what to watch once the sale is live.
 
 <figure class="blog-feature-image">
   <img src="/Blogs/bfcm-2026-profit-checklist/bfcm-2026-hero.png" alt="BFCM 2026 countdown calendar comparing revenue growth with protected profit margin for a Shopify store" width="1600" height="900" fetchpriority="high" decoding="async">
-  <figcaption>Concept illustration: revenue and protected margin tracked side by side through the BFCM 2026 window. This is not a Shopify admin screenshot.</figcaption>
+  <figcaption>Concept illustration: revenue and protected margin tracked side by side through the BFCM 2026 window, drawn as a concept rather than taken from the Shopify admin.</figcaption>
 </figure>
 
 <div class="blog-brand-strip" aria-label="Platforms covered in this guide">
@@ -152,7 +152,7 @@ Timing matters on Meta. Meta's help centre on [significant edits and the learnin
 
 For BFCM, that means:
 
-- Test creative and offers in October and early November, not on Black Friday.
+- Test creative and offers in October and early November, not on Black Friday. On Shopify, a [profit-first Rollouts test](/blog/shopify-rollouts-bfcm-testing) keeps those offer tests measurable.
 - Enter the live week with ad sets already out of learning.
 - Raise budgets in measured steps and avoid swapping creative mid-weekend.
 - Warm up owned channels, such as email, SMS, WhatsApp and Instagram followers, before the sale so part of the demand arrives without paid clicks.
@@ -212,7 +212,7 @@ Work through this list in the first two weeks of December:
 
 The [cash runway guide](/blog/cash-runway-guide) and [runway planner](/tools/runway-planner) help turn the season's results into a January budget.
 
-This review is where the season is judged. A store can beat its revenue report and still finish weaker; the ones that finish stronger capped discount depth with maths, used bundles to lift order value, ordered stock against real lead times and entered the live week with ads and checkout already tested. Record the contribution per order each offer actually earned, because next year's checklist starts from that number.
+This review is where the season is judged. A store can top the revenue report and still finish the season weaker; the ones that finish stronger capped discount depth with maths, used bundles to lift order value, ordered stock against real lead times and entered the live week with ads and checkout already tested. Record the contribution per order each offer actually earned, because next year's checklist starts from that number.
 
 <section class="blog-cta">
   <h2>Get the store ready before peak traffic arrives</h2>
@@ -244,15 +244,15 @@ Hold back cash for refunds before spending BFCM revenue. The NRF expected 17% of
 
 ## Source notes
 
-- [Adobe, *Holiday Shopping Season Drove a Record $257.8 Billion Online*](https://news.adobe.com/news/2026/01/adobe-holiday-shopping-season), published 2026-01-07, retrieved 2026-09-24.
-- [Adobe, *Cyber Monday Hits Record $14.25 Billion in Online Spending*](https://news.adobe.com/news/2025/12/adobe-cyber-monday-hits-record), published 2025-12-02, retrieved 2026-09-24.
-- [Shopify, *Shopify merchants generate record-breaking $14.6 billion in Black Friday Cyber Monday sales*](https://www.shopify.com/news/bfcm-data-2025), published 2025-12-02, retrieved 2026-09-24.
-- [Deloitte, *Deloitte Forecasts Holiday Retail Sales to Reach $1.70 Trillion to $1.71 Trillion*](https://www.deloitte.com/us/en/about/press-room/deloitte-forecasts-holiday-retail-sales.html), published 2026-09-10, retrieved 2026-09-24.
-- [Salesforce, *AI and Agents Propel Cyber Week to Record $336.6B in Global Spend*](https://www.salesforce.com/news/press-releases/2025/12/05/cyber-week-ai-agents-sales/), published 2025-12-05, retrieved 2026-09-24.
-- [Salesforce, *2026 Holiday Predictions*](https://www.salesforce.com/blog/holiday-retail-predictions-2026/), published 2026-07-20, retrieved 2026-09-24.
-- [NRF, *Consumers Expected to Return Nearly $850 Billion in Merchandise in 2025*](https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025), published 2025-10-15, retrieved 2026-09-24.
-- [Baymard Institute, *Cart Abandonment Rate Statistics*](https://baymard.com/lists/cart-abandonment-rate), retrieved 2026-09-24.
-- [Google, Deloitte Digital and Fifty-Five, *Milliseconds Make Millions*](https://www.thinkwithgoogle.com/_qs/documents/9757/Milliseconds_Make_Millions_report_hQYAbZJ.pdf), 2020, retrieved 2026-09-24.
-- [Meta Business Help Center, *Significant Edits and Learning Phase*](https://www.facebook.com/business/help/316478108955072), retrieved 2026-09-24.
-- [Shopify Help Center, *Shopify Bundles*](https://help.shopify.com/en/manual/products/bundles/shopify-bundles), retrieved 2026-09-24.
-- [Shopify Help Center, *Setting up inventory tracking*](https://help.shopify.com/en/manual/products/inventory/getting-started-with-inventory/set-up-inventory-tracking), retrieved 2026-09-24.
+- [Holiday Shopping Season Drove a Record $257.8 Billion Online](https://news.adobe.com/news/2026/01/adobe-holiday-shopping-season), from Adobe (published 7 January 2026, accessed 24 September 2026).
+- [Cyber Monday Hits Record $14.25 Billion in Online Spending](https://news.adobe.com/news/2025/12/adobe-cyber-monday-hits-record), from Adobe (published 2 December 2025, accessed 24 September 2026).
+- [Shopify merchants generate record-breaking $14.6 billion in Black Friday Cyber Monday sales](https://www.shopify.com/news/bfcm-data-2025), from Shopify (published 2 December 2025, accessed 24 September 2026).
+- [Deloitte Forecasts Holiday Retail Sales to Reach $1.70 Trillion to $1.71 Trillion](https://www.deloitte.com/us/en/about/press-room/deloitte-forecasts-holiday-retail-sales.html), from Deloitte (published 10 September 2026, accessed 24 September 2026).
+- [AI and Agents Propel Cyber Week to Record $336.6B in Global Spend](https://www.salesforce.com/news/press-releases/2025/12/05/cyber-week-ai-agents-sales/), from Salesforce (published 5 December 2025, accessed 24 September 2026).
+- [2026 Holiday Predictions](https://www.salesforce.com/blog/holiday-retail-predictions-2026/), from Salesforce (published 20 July 2026, accessed 24 September 2026).
+- [Consumers Expected to Return Nearly $850 Billion in Merchandise in 2025](https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025), from NRF (published 15 October 2025, accessed 24 September 2026).
+- [Cart Abandonment Rate Statistics](https://baymard.com/lists/cart-abandonment-rate), from Baymard Institute (accessed 24 September 2026).
+- [Milliseconds Make Millions](https://www.thinkwithgoogle.com/_qs/documents/9757/Milliseconds_Make_Millions_report_hQYAbZJ.pdf), from Google, Deloitte Digital and Fifty-Five (accessed 24 September 2026).
+- [Significant Edits and Learning Phase](https://www.facebook.com/business/help/316478108955072), from Meta Business Help Center (accessed 24 September 2026).
+- [Shopify Bundles](https://help.shopify.com/en/manual/products/bundles/shopify-bundles), from Shopify Help Center (accessed 24 September 2026).
+- [Setting up inventory tracking](https://help.shopify.com/en/manual/products/inventory/getting-started-with-inventory/set-up-inventory-tracking), from Shopify Help Center (accessed 24 September 2026).

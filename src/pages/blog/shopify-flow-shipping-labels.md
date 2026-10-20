@@ -12,13 +12,15 @@ coverImage: "/Blogs/shopify-flow-shipping-labels/shopify-flow-shipping-labels-he
 coverImageAlt: "Shopify Flow checking an eligible order before automatically buying a shipping label"
 faqs:
   - question: "Can Shopify Flow buy shipping labels automatically?"
-    answer: "Yes. Shopify added a Purchase shipping label action on October 15, 2026. A workflow can choose the carrier and service, package, weight, ship date, and customer-notification timing for an eligible fulfillment order that Shopify fulfills directly."
-  - question: "Does the Shopify Flow action work with a 3PL?"
-    answer: "Not for fulfillment orders assigned to a third-party fulfillment service. Shopify says the action supports orders fulfilled directly through Shopify. Mixed setups should filter by assigned location or fulfillment service before the purchase step and leave ineligible orders for the existing 3PL process."
-  - question: "Can Shopify Flow buy labels in bulk?"
-    answer: "The purchase action buys one label for one fulfillment. Shopify says a workflow must use a For each action to loop through fulfillment orders for bulk automation. Start with a narrow order segment and verify every label before increasing the number of eligible orders."
-  - question: "Does native Shopify label automation work in India?"
-    answer: "Shopify Flow is available in India, but Shopify's current list of fulfillment locations with native carrier-account labels does not include India. Indian stores should keep their courier or aggregator workflow unless their own admin shows an eligible Shopify Shipping service."
+    answer: "Yes. The Purchase shipping label action was released on October 15, 2026. It can select the service, package, weight, ship date, and notification timing for an eligible fulfillment order."
+  - question: "Does the action work with a 3PL?"
+    answer: "Not for orders assigned to a third-party fulfillment service. Mixed operations should filter by location or fulfillment service and keep a separate path for the 3PL."
+  - question: "Can it buy several labels at once?"
+    answer: "One action buys one label for one fulfillment. Shopify says bulk automation needs a For each action that loops through fulfillment orders."
+  - question: "Is Shopify Flow free?"
+    answer: "Shopify describes Flow as a free app available on Basic, Grow, Advanced, and Plus plans. Stores still pay for labels, and Flow usage limits follow the store plan's API limits."
+  - question: "What if a live run fails?"
+    answer: "Open the run details, correct the workflow or source data, then decide whether to retry. Shopify supports manual retries after the original issue has been fixed."
 ---
 
 Shopify Flow can now buy shipping labels as eligible orders become ready to fulfill. The October 15, 2026 release removes a repetitive admin step, but it also moves a paid shipping decision into an automated workflow. The right launch is a narrow rule, verified shipment data, and a clear exception queue.
@@ -81,7 +83,7 @@ Use six gates before broad activation. Shopify provides one action per fulfillme
 
 List the locations and services that actually buy labels through Shopify. The action will not run for an order assigned to a third-party fulfillment service, even when the fulfillment order is otherwise valid.
 
-For a mixed operation, add a condition that checks assigned location or fulfillment service. The passing branch can purchase a label. The other branch should tag the order or notify the operations owner without buying anything.
+For a mixed operation, add a condition that checks assigned location or fulfillment service. The passing branch can purchase a label. The other branch should tag the order or notify the operations owner without buying anything. Teams that pick and pack in waves can pair this with a [Shopify batch fulfillment pilot](/blog/shopify-batch-fulfillment-pilot).
 
 ### 2. Fix package and weight inputs
 
@@ -132,7 +134,9 @@ The action also offers a cheapest-service option. Use it only when the eligible 
 
 To protect unit economics, compare the final label and failure costs in the [website and D2C profit calculator](/tools/website-d2c-profit). For peak-season timing, pair the workflow with the [2026 holiday shipping deadline playbook](/blog/holiday-shipping-deadlines-2026).
 
-Handled this way, Flow removes a repetitive purchase step from a stable fulfillment lane without hiding the orders that need judgement. Start with eligible Shopify-fulfilled orders, trustworthy package data, one narrow rule, and two test paths, then verify a small live pilot and give every exception an owner.
+## Where to start
+
+Launched through the six gates above, Flow can remove a repetitive purchase step from a stable fulfillment lane without hiding the orders that need judgement. Start with eligible Shopify-fulfilled orders, trustworthy package data, one narrow rule, and two test paths, then verify a small live pilot and give every exception an owner.
 
 <section class="blog-cta">
   <h2>Map the exceptions before you automate the purchase</h2>

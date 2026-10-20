@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Unit Economics: A Guide to Profitable Growth"
 description: "Learn how to calculate unit economics across 5 markets, model contribution margin and CAC, and see whether every sale creates profitable, scalable growth."
 publishedOn: "2026-09-12"
@@ -12,8 +13,6 @@ coverImageAlt: "Unit economics model showing how revenue becomes contribution ma
 faqs:
   - question: "What is a good unit economics ratio?"
     answer: "There is no universal ratio. A good result produces positive contribution, covers fixed costs at a realistic volume, and recovers CAC within the company's cash constraints."
-  - question: "What is the difference between gross margin and contribution margin?"
-    answer: "Gross margin subtracts cost of goods sold from net revenue. Contribution margin also subtracts the other costs that change with each sale, such as payment fees, fulfilment, shipping, returns, marketplace commission, and variable support."
   - question: "Should GST, HST, VAT, or sales tax count as revenue?"
     answer: "Tax collected for a government generally should not be treated as economic revenue. Remove pass-through tax from the customer payment, exclude recoverable input tax from unit cost, and include duties or taxes that the business cannot recover."
   - question: "How often should a company recalculate unit economics?"
@@ -349,10 +348,6 @@ Every metric should have an owner and a decision attached. CAC without a budget 
 
 There is no universal ratio for every business. A good result produces positive contribution, covers fixed costs at a realistic volume, and recovers CAC within the company's cash constraints. Compare the result with your own cohorts, channels, products, and payback capacity before relying on an industry convention.
 
-### What is the difference between gross margin and contribution margin?
-
-Gross margin subtracts COGS from net revenue. Contribution margin also subtracts other costs that change with the sale, including payment fees, fulfilment, shipping subsidies, returns, and variable support. A product can show a healthy gross margin but weak contribution once the cost of completing the sale is included.
-
 ### Should GST, HST, VAT, or sales tax count as revenue?
 
 Tax collected for a government generally should not count as economic revenue. Remove pass-through tax from the customer payment. Keep recoverable input tax outside unit cost, and include duties or taxes the business cannot recover. Final treatment depends on registration, classification, place of supply, and local rules.
@@ -371,17 +366,18 @@ Yes. Positive unit economics means each additional unit contributes something af
 
 ## Calculate unit economics before you scale
 
-The first action is to calculate one representative order with current inputs. You do not need a perfect forecasting system. Start with the last complete month, reconcile the result with settlement and cost reports, then split it into the segments that can change a decision.
+The first action is to calculate one representative order with current inputs. You do not need a perfect forecasting system. Start with the last complete month, reconcile the result with settlement and cost reports.
 
 <section class="blog-cta">
   <h3>Run the numbers without another spreadsheet</h3>
   <p>Use the <a href="/tools/unit-economics">MlabsGrowth Unit Economics Calculator</a> to estimate net selling price, gross margin, contribution margin, CAC, RTO drag per order, and break-even orders.</p>
+  <p>If the numbers show that conversion or order value is the weak link, our <a href="/services/store-conversion">Shopify conversion optimization service</a> works on the pages and cart decisions between the paid click and the completed order.</p>
   <p>The calculator focuses on immediate order economics. It does not calculate LTV or CAC payback, because those require observed repeat-purchase, retention, churn, and cohort contribution data.</p>
 </section>
 
 The calculator lets you pick your currency. Whichever market you model, enter every monetary input in that one currency and read the outputs as a scenario model. Confirm the final local-currency treatment in your own finance records.
 
-Once that first order reconciles, segment it. Product, channel, country, cohort, and new-versus-returning status can produce very different answers, and the point is not the most detailed spreadsheet. It is a reliable answer to one operating question: does the next order or customer make the business stronger, or does growth only scale a loss?
+Once that first order reconciles, segment it. Product, channel, country, cohort, and new-versus-returning status can produce very different answers. The point is not the most detailed spreadsheet; it is a reliable answer to one operating question: does the next order or customer make the business stronger, or does growth only scale a loss?
 
 ## Source notes
 

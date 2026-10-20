@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Bundle Pricing: A Practical Ecommerce Guide"
 description: "Use a 5-step bundle pricing model to protect margin, raise order value, and test discounts without confusing projected adoption with actual demand."
 publishedOn: "2026-09-19"
@@ -22,7 +23,7 @@ faqs:
     answer: "Use the smallest set that solves a clear customer need. The calculator accepts two to five products, but choice clarity matters more than item count."
 ---
 
-Bundle pricing combines products into one offer at a defined selling price. A useful bundle can raise average order value, simplify a buying decision, and move complementary stock. A weak bundle merely gives away margin on products customers would have bought anyway.
+Bundle pricing combines products into one offer at a defined selling price, which Google Merchant Center also treats as a distinct [bundle product type](https://support.google.com/merchants/answer/6324449?hl=en). A useful bundle can raise average order value, simplify a buying decision, and move complementary stock. A weak bundle merely gives away margin on products customers would have bought anyway.
 
 The calculation begins with list value, discount, and total product cost. It ends with contribution, adoption, and incremental profit. Keeping those stages separate, and checking cash margin and margin percentage rather than only the new order value, prevents an attractive revenue projection from disguising an unprofitable offer.
 
@@ -105,7 +106,12 @@ Assume two complementary products sell individually for ₹600 and ₹400, with 
 | Product-level margin | ₹900 - ₹450 | ₹450 |
 | Product-level margin rate | ₹450 / ₹900 | 50% |
 
-The customer saves ₹100 and the seller retains ₹450 before fulfilment, fees, returns, and acquisition. If those additional variable costs total ₹190, contribution becomes ₹260, and that is the number to compare with a single-item order and with fixed-cost requirements.
+<figure class="blog-feature-image">
+  <img src="/Blogs/bundle-pricing-guide/bundle-contribution-waterfall.svg" alt="Waterfall from a ₹1,000 bundle list value through a 10% discount and product costs to ₹260 contribution per order" width="1600" height="900" loading="lazy" decoding="async">
+  <figcaption>The worked example as a waterfall: the discount and product costs come off first, then fulfilment, fees, returns and acquisition.</figcaption>
+</figure>
+
+The customer saves ₹100 and the seller retains ₹450 before fulfilment, fees, returns, and acquisition. If those additional variable costs total ₹190, [contribution](https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin) becomes ₹260, and that is the number to compare with a single-item order and with fixed-cost requirements.
 
 Suppose the current average product price is ₹500. A ₹900 bundle can lift the value of adopted orders, but not every customer will choose it.
 
@@ -193,14 +199,17 @@ Use the smallest set that solves a clear customer need. The calculator accepts t
 
 ## Model a bundle before launch
 
-Bundle pricing works when the customer sees useful value and the business keeps adequate contribution, so run the list value, discount, product cost, and margin first, then add order-level costs and test adoption against a baseline.
+Bundle pricing works when the customer sees useful value and the business keeps adequate contribution. Calculate the list value, discount, product cost, and margin first. Then add order-level costs and test adoption against a baseline.
 
 <section class="blog-cta">
   <h3>Test the price, margin, and adoption scenario</h3>
   <p>Use the <a href="/tools/bundle-planner">MlabsGrowth Bundle Pricing Calculator</a> for two to five products. It calculates list value, discounted selling price, total COGS, product-level margin, and a projected order-value scenario.</p>
+  <p>To test bundles and other cart additions against order value and margin on a live store, see our <a href="/services/store-conversion">Shopify conversion optimization service</a>.</p>
   <p>Adoption and conversion uplift are assumptions, not predictions. The calculator works in your chosen currency and excludes fulfilment, fees, returns, and acquisition from bundle margin.</p>
 </section>
 
 ## Source notes
 
 - [Shopify Help Center, *Product bundles*](https://help.shopify.com/en/manual/products/bundles), retrieved 2026-09-19.
+- [Google Merchant Center Help, *Bundle [is_bundle]*](https://support.google.com/merchants/answer/6324449?hl=en), retrieved 2026-10-19.
+- [OpenStax, *Principles of Accounting, Volume 2: Managerial Accounting*, section 3.1 on contribution margin](https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin), published 2019-02-14, retrieved 2026-10-19.

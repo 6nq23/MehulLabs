@@ -201,7 +201,7 @@ For peak season, run the workflow for at least a month before your biggest sale.
 
 ## The first week of rollout
 
-COD will keep winning orders where shoppers prefer to pay at the door, and most of the RTO cost is decided before the parcel leaves the warehouse. A first week spent on set-up moves that decision to the cheapest moment, the first hours after checkout:
+COD will keep winning orders where shoppers prefer to pay at the door, and most of the RTO cost is decided before the parcel leaves the warehouse. A WhatsApp message and an AI call move that decision to the cheapest moment, the first hours after checkout. Set it up in the first week:
 
 1. **Add the consent line at checkout.** Tell customers you will contact them by phone or WhatsApp to confirm the order, and use the number only for that purpose.
 2. **Build the hold first.** Set Shopify Flow to hold every new COD order and to release, cancel or escalate it on the outcome tags. Test it with your shipping and COD apps installed.

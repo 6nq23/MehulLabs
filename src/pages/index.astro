@@ -38,23 +38,28 @@ const jsonLd = JSON.stringify({
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-J6P4JDHNVJ"></script>
+    <meta charset="utf-8" />
+    <!-- Google tag (gtag.js), Microsoft Clarity and the Meta Pixel: calls queue immediately; the vendor scripts download on the
+         visitor's first interaction or 1.5s after the load event, whichever comes first, so they never delay the first paint. -->
     <script is:inline>
+      (function(w,d){
+        var queue=[],started=false,events=['pointerdown','keydown','touchstart','scroll'];
+        function start(){if(started)return;started=true;events.forEach(function(e){w.removeEventListener(e,start,true);});for(var i=0;i<queue.length;i++)queue[i]();queue=[];}
+        w.__mlgThirdParty=function(fn){started?fn():queue.push(fn);};
+        events.forEach(function(e){w.addEventListener(e,start,{capture:true,passive:true});});
+        function arm(){setTimeout(start,1500);}
+        if(d.readyState==='complete')arm();else w.addEventListener('load',arm);
+      })(window,document);
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-J6P4JDHNVJ');
-    </script>
-    <!-- Microsoft Clarity -->
-    <script is:inline type="text/javascript">
-      (function(c,l,a,r,i,t,y){
+      (function(c,l,a,r,i){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        function add(src){var t=l.createElement(r);t.async=1;t.src=src;var y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}
+        c.__mlgThirdParty(function(){add("https://www.googletagmanager.com/gtag/js?id=G-J6P4JDHNVJ");add("https://www.clarity.ms/tag/"+i);});
       })(window, document, "clarity", "script", "yss8eahqun");
     </script>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preload" href="/fonts/hero/quicksand-500-latin.woff2" as="font" type="font/woff2" crossorigin />
     <meta name="theme-color" content="#fbfaf8" />
@@ -122,9 +127,9 @@ const jsonLd = JSON.stringify({
             <div class="offer-column">
               <div class="offer-visual agents-visual">
                 <span class="visual-halo" aria-hidden="true"></span>
-                <Image class="offer-bee bee-queen" src={queen} widths={[340, 510, 680]} sizes="(max-width: 700px) 70vw, 340px" format="webp" loading="eager" alt="The queen bee AI agent leading a team of specialist ecommerce agents" />
-                <Image class="offer-bee bee-satellite-left" src={shopifyBee} widths={[175, 350]} sizes="175px" format="webp" loading="eager" alt="" aria-hidden="true" />
-                <Image class="offer-bee bee-satellite-right" src={marketingBee} widths={[175, 350]} sizes="175px" format="webp" loading="eager" alt="" aria-hidden="true" />
+                <Image class="offer-bee bee-queen" src={queen} widths={[340, 510, 680]} sizes="(max-width: 700px) 70vw, 340px" format="webp" loading="lazy" alt="The queen bee AI agent leading a team of specialist ecommerce agents" />
+                <Image class="offer-bee bee-satellite-left" src={shopifyBee} widths={[175, 350]} sizes="175px" format="webp" loading="lazy" alt="" aria-hidden="true" />
+                <Image class="offer-bee bee-satellite-right" src={marketingBee} widths={[175, 350]} sizes="175px" format="webp" loading="lazy" alt="" aria-hidden="true" />
               </div>
               <article class="offer-card">
                 <h3>Hire AI Agents.</h3>
@@ -355,7 +360,7 @@ const jsonLd = JSON.stringify({
   :global(html) { scroll-behavior: smooth; }
   :global(body) { margin: 0; }
   :global(:focus-visible) { outline: 2px solid #986500; outline-offset: 5px; }
-  .hive-page { --ink: #131313; --muted: #707178; --yellow: #ffcc1e; --cream: #f6f5f1; min-width: 320px; overflow: clip; background: var(--cream); color: var(--ink); font-family: 'Manrope Variable', Manrope, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  .hive-page { --ink: #131313; --muted: #66676e; --yellow: #ffcc1e; --cream: #f6f5f1; min-width: 320px; overflow: clip; background: var(--cream); color: var(--ink); font-family: 'Manrope Variable', Manrope, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
   h1,h2,h3,p { margin-top: 0; }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
@@ -370,7 +375,7 @@ const jsonLd = JSON.stringify({
   .hero-copy { max-width: 900px; margin: 0 auto; text-align: center; }
   h1 { margin-bottom: 30px; font-family: 'Quicksand Hero', 'Manrope Variable', sans-serif; font-size: clamp(46px,5vw,78px); line-height: 1.08; font-weight: 500; letter-spacing: -.065em; }
   h1 span { display: block; text-wrap: balance; }
-  h1 .hero-kicker { margin-bottom: 18px; color: #81745c; font-family: 'Manrope Variable', Manrope, Arial, sans-serif; font-size: 12px; font-weight: 800; line-height: 1.4; letter-spacing: .17em; text-transform: uppercase; }
+  h1 .hero-kicker { margin-bottom: 18px; color: #6f6350; font-family: 'Manrope Variable', Manrope, Arial, sans-serif; font-size: 12px; font-weight: 800; line-height: 1.4; letter-spacing: .17em; text-transform: uppercase; }
   .home-latest { padding: 90px 28px 40px; background: var(--cream); }
   .latest-inner { max-width: 1200px; margin: auto; }
   .latest-heading { max-width: 640px; margin-bottom: 36px; }
@@ -379,7 +384,7 @@ const jsonLd = JSON.stringify({
   .latest-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
   .latest-card { display: flex; flex-direction: column; gap: 12px; padding: 28px; border: 1px solid #ebe7de; border-radius: 22px; background: #fff; box-shadow: 0 10px 28px #4b3c1805; transition: transform .25s, box-shadow .25s; }
   .latest-card:hover { transform: translateY(-3px); box-shadow: 0 18px 40px #4b3c1812; }
-  .latest-category { color: #8b7753; font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+  .latest-category { color: #72613f; font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
   .latest-card h3 { margin: 0; font-size: 21px; font-weight: 700; line-height: 1.25; letter-spacing: -.035em; }
   .latest-card p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
   .latest-more { margin-top: auto; padding-top: 8px; font-size: 14px; font-weight: 800; }
@@ -389,7 +394,7 @@ const jsonLd = JSON.stringify({
   .hero-subtitle { max-width: 690px; margin: 0 auto 30px; color: var(--muted); font-size: clamp(16px,1.25vw,20px); line-height: 1.55; letter-spacing: -.025em; }
   .hero-cta { min-width: 250px; min-height: 50px; margin: 0 auto; font-size: 14px; }
   .hero-cta .pill-arrow { width: 40px; height: 40px; }
-  .hero-note { margin: 15px auto 0; color: #777872; font-size: 12px; line-height: 1.5; }
+  .hero-note { margin: 15px auto 0; color: #62635d; font-size: 12px; line-height: 1.5; }
   .approach-section { position: relative; padding: 145px 24px 40px; scroll-margin-top: 120px; --visual-start-scale: 1.38; --visual-scale: 1.38; --visual-start-lift: 70px; --visual-lift: 70px; }
   .offer-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; max-width: 900px; margin: auto; }
   .offer-column { min-width: 0; display: flex; flex-direction: column; }
@@ -414,11 +419,11 @@ const jsonLd = JSON.stringify({
   .signature-bees img { width: 28px; height: 28px; margin-right: -8px; border: 2px solid #fff; border-radius: 50%; background: #fcebc3; object-fit: cover; }
   .signature-bees img:last-child { margin-right: 0; }
   .offer-cta { align-self: flex-start; min-width: 210px; }
-  .approach-note { max-width: 560px; margin: 40px auto 0; color: #777872; text-align: center; font-size: 14px; line-height: 1.6; }
+  .approach-note { max-width: 560px; margin: 40px auto 0; color: #62635d; text-align: center; font-size: 14px; line-height: 1.6; }
   @media (min-width: 1600px) {
     .approach-section { padding-top: 70px; }
   }
-  .eyebrow { margin-bottom: 18px; color: #81745c; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
+  .eyebrow { margin-bottom: 18px; color: #6f6350; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
   .yellow-period { color: var(--yellow); }
   .services-section { padding: 95px 28px 60px; text-align: center; scroll-margin-top: 110px; }
   .services-section h2 { margin-bottom: 13px; font-size: clamp(42px,5.3vw,75px); line-height: 1.04; font-weight: 600; letter-spacing: -.065em; }
@@ -443,7 +448,7 @@ const jsonLd = JSON.stringify({
   .store-section .brain-grid { grid-template-columns: minmax(0,1.08fr) minmax(0,1fr); }
   .store-section .brain-copy { order: 2; }
   .store-section .brain-video-shell { order: 1; padding: clamp(12px,1.5vw,20px); border: 1px solid #ebe7de; box-shadow: 0 28px 70px #5a4f3717; }
-  .store-copy .store-eyebrow { margin-bottom: 16px; color: #8b7753; font-size: 11px; font-weight: 800; letter-spacing: .15em; }
+  .store-copy .store-eyebrow { margin-bottom: 16px; color: #72613f; font-size: 11px; font-weight: 800; letter-spacing: .15em; }
   .store-copy > p:not(.store-eyebrow) { max-width: 500px; margin-bottom: 24px; }
   .store-steps { display: grid; gap: 0; max-width: 590px; margin: 8px 0 0; padding: 0; list-style: none; border-top: 1px solid #dbd9d3; }
   .store-steps li { display: flex; align-items: center; gap: 17px; min-height: 62px; padding: 9px 0; border-bottom: 1px solid #e7e4de; font-size: clamp(14px,1.15vw,17px); font-weight: 680; letter-spacing: -.025em; }

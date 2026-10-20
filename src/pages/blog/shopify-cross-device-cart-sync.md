@@ -61,7 +61,9 @@ Shopify describes eligible storefronts as "participating online stores" without 
 
 Shopify documents three limits.
 
-First, carts do not merge. If the destination already contains a cart, Shopify says that cart is not replaced. Only one cart syncs at a time. Second, product availability still follows the sales channel, so a Shop-exclusive item can appear after the cart reaches the online store but cannot necessarily be purchased there.
+First, carts do not merge. If the destination already contains a cart, Shopify says that cart is not replaced. Only one cart syncs at a time.
+
+Second, product availability still follows the sales channel, so a Shop-exclusive item can appear after the cart reaches the online store but cannot necessarily be purchased there.
 
 Third, cart sync can be limited by region. A shopper who creates a cart in one region and continues from another might not see the same cart.
 

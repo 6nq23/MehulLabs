@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "ChatGPT Ads for Shopify: The Complete 2026 Guide for Ecommerce Brands"
+draft: false
+title: "ChatGPT Ads for Shopify: A 2026 Setup Guide for Brands"
 description: "ChatGPT Ads offers 3 campaign objectives for Shopify brands. Learn setup, product-feed preparation, measurement, privacy and launch checks for 2026."
 publishedOn: "2026-09-21"
 updatedOn: "2026-10-19"
 category: "AI search & commerce"
 author: "Mehul"
 readTime: "12 min read"
-coverImage: "/Blogs/chatgpt-ads-shopify/chatgpt-ads-shopify-hero.png"
+coverImage: "/Blogs/chatgpt-ads-shopify-guide/chatgpt-ads-shopify-hero.webp"
 coverImageAlt: "Illustration of a sponsored Shopify product appearing separately beneath a ChatGPT shopping answer"
 faqs:
   - question: "Can Shopify stores advertise in ChatGPT?"
@@ -29,7 +30,7 @@ The channel is new, and the details are changing quickly. On 16 September 2026, 
 This guide explains what the integration does, how it differs from organic product discovery, how to set it up, and how to measure it without confusing attributed revenue with profit.
 
 <figure class="blog-feature-image">
-  <img src="/Blogs/chatgpt-ads-shopify/chatgpt-ads-shopify-hero.png" alt="Illustration of a sponsored Shopify product appearing separately beneath a ChatGPT shopping answer" width="1733" height="907" fetchpriority="high" decoding="async">
+  <img src="/Blogs/chatgpt-ads-shopify-guide/chatgpt-ads-shopify-hero.webp" alt="Illustration of a sponsored Shopify product appearing separately beneath a ChatGPT shopping answer" width="1733" height="907" fetchpriority="high" decoding="async">
   <figcaption>Concept illustration: ChatGPT Ads are labeled placements shown separately from ChatGPT's organic answer. This is not a product screenshot.</figcaption>
 </figure>
 
@@ -102,7 +103,7 @@ The distinction carries into reporting. Organic ChatGPT referrals should not be 
 OpenAI's setup guide lists 3 connected data groups: product inventory and catalog information, store updates that keep product information current, and eligible commerce events sent through OpenAI Pixel for Shopify. These inputs support product-ad creation, campaign optimization, and performance reporting.
 
 <figure class="blog-feature-image blog-feature-image--inline">
-  <img src="/Blogs/chatgpt-ads-shopify/chatgpt-ads-shopify-workflow.png" alt="Workflow showing a Shopify catalog connecting to ChatGPT Ads Manager, a sponsored placement, checkout, and measurement" width="1680" height="907" loading="lazy" decoding="async">
+  <img src="/Blogs/chatgpt-ads-shopify-guide/chatgpt-ads-shopify-workflow.webp" alt="Workflow showing a Shopify catalog connecting to ChatGPT Ads Manager, a sponsored placement, checkout, and measurement" width="1672" height="941" loading="lazy" decoding="async">
   <figcaption>The working flow: Shopify catalog and inventory feed Ads Manager, a labeled ad sends the shopper to checkout, and connected events support measurement.</figcaption>
 </figure>
 
@@ -118,7 +119,7 @@ This is not a closed reporting loop by default. A campaign can show revenue whil
 
 ## Store preparation before the first campaign
 
-Shopify lists at least 7 product-data areas that influence AI discovery. They are the title, description, images and organization, plus barcode, variants, and option names.
+Shopify lists at least 7 product-data areas that influence AI discovery. They are title, description, images, organization, barcode, variants and option names.
 
 Paid product ads also depend on accurate catalog data. Clean the feed before sending traffic rather than using advertising to compensate for weak product information.
 

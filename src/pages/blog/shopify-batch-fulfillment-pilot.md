@@ -13,12 +13,12 @@ coverImageAlt: "A batch of Shopify orders moving through pick, print, scan, and 
 faqs:
   - question: "What is Shopify batch fulfillment?"
     answer: "Shopify batch fulfillment is a native workflow for grouping up to 250 fulfillments, then moving them through customizable steps. The default workflow creates a pick list, buys and prints labels and documents, and uses scanning or manual quantity checks before packing is completed."
-  - question: "Is Shopify batch fulfillment the same as bulk fulfillment?"
-    answer: "No. Shopify's bulk actions change the status or location of several fulfillments. Batch fulfillment organizes the work itself, including pick lists, shipping labels, printable documents, staff assignments, and scan-to-verify checks. Use bulk actions for status changes and batches for a controlled pick, print, and pack process."
-  - question: "Can Shopify batch fulfillment handle more than 250 orders?"
-    answer: "One batch can contain up to 250 fulfillments. Shopify's automatic recent-order option covers the 250 most recent unfulfilled orders from the last 14 days. Older orders can still be selected manually or added to an existing batch. Split larger queues into clear, named batches."
+  - question: "Is batch fulfillment the same as bulk fulfillment?"
+    answer: "No. Bulk actions change the status or location of several fulfillments. Batch fulfillment organizes the work itself, including pick lists, labels, documents, staff assignments, and scan checks. Use bulk actions for status changes and batches for a controlled pick, print, and pack process."
+  - question: "Can one batch handle more than 250 orders?"
+    answer: "One batch can contain up to 250 fulfillments. The automatic recent-order option covers the 250 most recent unfulfilled orders from the last 14 days. Older orders can still be selected manually or added to an existing batch. Split larger queues into clearly named batches."
   - question: "Is Shopify batch fulfillment available in India?"
-    answer: "Not for an India-only fulfillment location under Shopify's current eligibility rules. Batch fulfillment requires a merchant-managed location in a country where labels can be bought in Shopify admin. Shopify lists the United States and United Kingdom, but not India, in its current carrier table."
+    answer: "Not for an India-only fulfillment location under the current eligibility rules. The feature requires a merchant-managed location where labels can be bought in Shopify admin. Shopify lists the United States and United Kingdom, but not India, in its current carrier table."
 ---
 
 Shopify batch fulfillment can now group up to 250 fulfillments into one customizable pick, print, and pack workflow. Shopify announced the feature on October 16, 2026, just as D2C teams are preparing for holiday order peaks.
@@ -132,7 +132,9 @@ Keep these groups outside the first pilot:
 
 Peak-season pressure makes a visible exception queue more valuable, not less. Pair the batch design with the [2026 holiday shipping deadline playbook](/blog/holiday-shipping-deadlines-2026), then use the [D2C profit calculator](/tools/website-d2c-profit) to keep handling, shipping, returns, and advertising costs in one order-level view.
 
-With the exception lane kept visible, batch fulfillment turns separate picking, document, label, and packing tasks into one visible process. Begin with an eligible location, one compatible cohort, reliable source data, and a small live batch; keep exceptions out, reconcile every result, and expand only when the workflow works without heroics.
+## Scaling the pilot
+
+With the exception lane kept visible, batch fulfillment can turn separate picking, document, label, and packing tasks into one shared process. Begin with an eligible location, one compatible cohort, reliable source data, and a small live batch; keep exceptions out, reconcile every result, and expand only when the workflow works without heroics.
 
 <section class="blog-cta">
   <h2>Map the exception lane before peak volume</h2>

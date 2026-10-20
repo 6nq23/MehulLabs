@@ -12,13 +12,13 @@ coverImage: "/Blogs/shopify-return-window-overrides/shopify-return-window-overri
 coverImageAlt: "A Shopify return policy dashboard branching from one default window into holiday, core-range, and final-sale rules"
 faqs:
   - question: "What are Shopify return window overrides?"
-    answer: "Return window overrides let a merchant assign a different return period to selected collections, products, or variants instead of using only the default window. Shopify also supports market-specific return rules for eligible early-access merchants. When several overrides match one item, the shortest matching window applies."
+    answer: "Return window overrides assign a different return period to selected collections, products, or variants instead of using only the default. Shopify also supports market policies for eligible early-access merchants. When several overrides match one item, the shortest matching window applies."
   - question: "Can I set a shorter return window for holiday products?"
-    answer: "Yes. Shopify's announcement uses a 14-day holiday collection as an example against a 90-day storewide default. The shorter period must still respect the consumer rights that apply in the buyer's market, and the written policy should match the configured rule before the campaign starts."
-  - question: "What happens when two Shopify return overrides match?"
-    answer: "Shopify applies the shortest matching return-window override. That makes overlapping collections risky: a product placed in both a 30-day gift collection and a 14-day clearance collection receives the 14-day rule. Build a small rule matrix and test products that sit in more than one collection."
-  - question: "Does a final-sale rule override a return window?"
-    answer: "Yes, Shopify says final sale takes precedence over a return-window override. A final-sale label cannot remove rights granted by applicable consumer law, however. Treat final sale as an operational setting that still needs a market-level legal and customer-communication review."
+    answer: "Yes. Shopify's announcement uses a 14-day holiday collection against a 90-day storewide default. The shorter period must still respect consumer rights in the buyer's market, and the written policy should match the configured rule before the campaign starts."
+  - question: "What happens when two return overrides match?"
+    answer: "Shopify applies the shortest matching window. A product in both a 30-day gift collection and a 14-day clearance collection receives the 14-day rule. Test products that sit in more than one collection before launch."
+  - question: "Does final sale override a return window?"
+    answer: "Yes, Shopify says final sale takes priority over an override. Final sale cannot remove rights granted by applicable consumer law. Treat it as an operational setting that still needs a market-level legal and customer-communication review."
 ---
 
 Shopify return window overrides let merchants assign a different return period to a market, collection, product, or variant. Shopify released the feature on September 29, 2026, in time for holiday assortments that don't fit one storewide rule.
@@ -117,7 +117,9 @@ In the United States, the Federal Trade Commission's [online-shopping guidance](
 
 India's official [Consumer Protection (E-Commerce) Rules, 2020](https://consumeraffairs.nic.in/sites/default/files/E%20commerce%20rules_0.pdf) require clear, accessible information about returns, refunds, exchanges, and return-shipping costs. Across markets, the operational lesson is the same: use Shopify's market layer only after confirming the law and wording for that audience.
 
-That is the wider point about overrides. They make product-level policy easier to operate, but they also make hidden conflicts easier to create. Start with one justified exception, map the precedence, check market obligations, align every customer-facing message, and test real products before holiday volume arrives.
+## Before holiday volume arrives
+
+Return window overrides make product-level policy easier to operate, but they also make hidden conflicts easier to create. Start with one justified exception, map the precedence, check market obligations, align every customer-facing message, and test real products before holiday volume arrives.
 
 The [order operations service](/services/order-operations) shows where return operations fit beside conversion and automation work. Model the order-level effect with the [website D2C profit calculator](/tools/website-d2c-profit) before treating a shorter window as a margin fix.
 

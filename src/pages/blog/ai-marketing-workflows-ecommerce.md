@@ -55,9 +55,7 @@ What follows are seven AI marketing workflows a small ecommerce team can automat
 
 Small teams use AI as a chat tool rather than a workflow. Each task starts with a blank prompt, the brand is explained again, and the output is edited by whoever has time.
 
-Eurostat's 2025 data shows the scale of the gap: 17% of small enterprises used AI, compared with 30.36% of medium and 55.03% of large ones.
-
-Eurostat's [enterprise AI statistics](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises) also show where companies that do use AI apply it: 34.70% of them use it for marketing or sales, the most common purpose on the list. In the US, the Census Bureau's [May 2026 analysis](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) found overall business AI use between 17% and 20%, with fewer than 20% of firms with four or fewer employees using it, against 37% of firms with at least 250.
+Eurostat's 2025 data also puts medium-sized enterprises at 30.36%, between small and large ones. The same [enterprise AI statistics](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises) show where companies that do use AI apply it: 34.70% of them use it for marketing or sales, the most common purpose on the list. In the US, the Census Bureau's [May 2026 analysis](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) found overall business AI use between 17% and 20%, with fewer than 20% of firms with four or fewer employees using it, against 37% of firms with at least 250.
 
 Large companies close that gap with process: shared context, defined inputs, review steps and someone who owns the result. A small team can copy the process without copying the headcount. That is what a workflow is: the same task, done the same way, with AI doing the first draft and a person doing the last check.
 
@@ -101,7 +99,7 @@ Google's [guidance on generative AI content](https://developers.google.com/searc
 
 ### 2. Ad creative briefs for Meta
 
-AI turns customer language, reviews and product facts into briefs: angle, hook, format and script. Under its Andromeda retrieval system, Meta's [creative diversification guidance](https://www.facebook.com/business/news/the-creative-advantage-unlocking-the-power-of-diversification-with-meta-andromeda) treats a wide range of themes, messages and visuals as the best lever for reaching relevant audiences, and briefs are where that range starts.
+AI turns customer language, reviews and product facts into briefs: angle, hook, format and script. Meta's [creative diversification guidance](https://www.facebook.com/business/news/the-creative-advantage-unlocking-the-power-of-diversification-with-meta-andromeda) treats a wide range of themes, messages and visuals as the best lever for reaching relevant audiences under its Andromeda retrieval system, and briefs are where that range starts.
 
 Meta's [Advantage+ creative](https://www.facebook.com/business/ads/meta-advantage-plus/creative) tools can then generate text variations, backgrounds and image expansions inside Ads Manager. Our [Meta Andromeda guide](/blog/meta-andromeda-ecommerce-creatives) covers how many distinct concepts to test.
 
@@ -222,22 +220,22 @@ Before building it, write down the hours you expect to save and the business num
 
 ## Source notes
 
-- [Eurostat, *Use of artificial intelligence in enterprises*](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises), updated December 2025, retrieved 2026-09-24.
-- [US Census Bureau, *Large Firms With at Least 20 Employees Biggest AI Users*](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html), published 2026-05-26, retrieved 2026-09-24.
-- [Anthropic, *Claude Skills*](https://claude.com/blog/skills), published 2025-10-16, retrieved 2026-09-24.
-- [Claude Help Center, *What are projects?*](https://support.claude.com/en/articles/9517075-what-are-projects), retrieved 2026-09-24.
-- [Claude Help Center, *Get started with custom connectors using remote MCP*](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp), retrieved 2026-09-24.
-- [OpenAI Help Center, *Projects in ChatGPT*](https://help.openai.com/en/articles/10169521-projects-in-chatgpt), retrieved 2026-09-24.
-- [Shopify Help Center, *Shopify Flow*](https://help.shopify.com/en/manual/shopify-flow), retrieved 2026-09-24.
-- [Shopify Help Center, *Creating a workflow*](https://help.shopify.com/en/manual/shopify-flow/create/create-workflow), retrieved 2026-09-24.
-- [Shopify Help Center, *Generating product descriptions with Shopify Magic*](https://help.shopify.com/en/manual/products/details/product-descriptions/shopify-magic), retrieved 2026-09-24.
-- [Shopify Help Center, *Shopify Messaging email pricing*](https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/email/pricing), retrieved 2026-09-24.
-- [Meta for Business, *The Creative Advantage: Unlocking the Power of Diversification with Meta Andromeda*](https://www.facebook.com/business/news/the-creative-advantage-unlocking-the-power-of-diversification-with-meta-andromeda), published 2025-04-22, retrieved 2026-09-24.
-- [Meta for Business, *Meta Advantage+ creative*](https://www.facebook.com/business/ads/meta-advantage-plus/creative), retrieved 2026-09-24.
-- [Meta for Developers, *WhatsApp template category guidelines*](https://developers.facebook.com/docs/whatsapp/updates-to-pricing/new-template-guidelines/), retrieved 2026-09-24.
-- [Google Search Central, *Using generative AI content*](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content), updated 2025-12-10, retrieved 2026-09-24.
-- [Google Search Central, *Spam policies for Google web search*](https://developers.google.com/search/docs/essentials/spam-policies), updated 2026-08-28, retrieved 2026-09-24.
-- [National Bureau of Economic Research, *Generative AI at Work*](https://www.nber.org/papers/w31161), revised November 2023, retrieved 2026-09-24.
-- [Boston Consulting Group, *How People Can Create—and Destroy—Value with Generative AI*](https://www.bcg.com/publications/2023/how-people-create-and-destroy-value-with-gen-ai), published 2023-09-21, retrieved 2026-09-24.
-- [US Federal Trade Commission, *Final rule banning fake reviews and testimonials*](https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials), published 2024-08-14, retrieved 2026-09-24.
-- [EU Artificial Intelligence Act, *Article 50: Transparency obligations*](https://artificialintelligenceact.eu/article/50/), retrieved 2026-09-24.
+- [Use of artificial intelligence in enterprises](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises). Eurostat. Accessed 24 September 2026.
+- [Large Firms With at Least 20 Employees Biggest AI Users](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html). US Census Bureau, published 26 May 2026. Accessed 24 September 2026.
+- [Claude Skills](https://claude.com/blog/skills). Anthropic, published 16 October 2025. Accessed 24 September 2026.
+- [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects). Claude Help Center. Accessed 24 September 2026.
+- [Get started with custom connectors using remote MCP](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp). Claude Help Center. Accessed 24 September 2026.
+- [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt). OpenAI Help Center. Accessed 24 September 2026.
+- [Shopify Flow](https://help.shopify.com/en/manual/shopify-flow). Shopify Help Center. Accessed 24 September 2026.
+- [Creating a workflow](https://help.shopify.com/en/manual/shopify-flow/create/create-workflow). Shopify Help Center. Accessed 24 September 2026.
+- [Generating product descriptions with Shopify Magic](https://help.shopify.com/en/manual/products/details/product-descriptions/shopify-magic). Shopify Help Center. Accessed 24 September 2026.
+- [Shopify Messaging email pricing](https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/email/pricing). Shopify Help Center. Accessed 24 September 2026.
+- [The Creative Advantage: Unlocking the Power of Diversification with Meta Andromeda](https://www.facebook.com/business/news/the-creative-advantage-unlocking-the-power-of-diversification-with-meta-andromeda). Meta for Business, published 22 April 2025. Accessed 24 September 2026.
+- [Meta Advantage+ creative](https://www.facebook.com/business/ads/meta-advantage-plus/creative). Meta for Business. Accessed 24 September 2026.
+- [WhatsApp template category guidelines](https://developers.facebook.com/docs/whatsapp/updates-to-pricing/new-template-guidelines/). Meta for Developers. Accessed 24 September 2026.
+- [Using generative AI content](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content). Google Search Central, updated 10 December 2025. Accessed 24 September 2026.
+- [Spam policies for Google web search](https://developers.google.com/search/docs/essentials/spam-policies). Google Search Central, updated 28 August 2026. Accessed 24 September 2026.
+- [Generative AI at Work](https://www.nber.org/papers/w31161). National Bureau of Economic Research. Accessed 24 September 2026.
+- [How People Can Create—and Destroy—Value with Generative AI](https://www.bcg.com/publications/2023/how-people-create-and-destroy-value-with-gen-ai). Boston Consulting Group, published 21 September 2023. Accessed 24 September 2026.
+- [Final rule banning fake reviews and testimonials](https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials). US Federal Trade Commission, published 14 August 2024. Accessed 24 September 2026.
+- [Article 50: Transparency obligations](https://artificialintelligenceact.eu/article/50/). EU Artificial Intelligence Act. Accessed 24 September 2026.

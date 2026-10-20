@@ -52,7 +52,7 @@ Google announced UCP on 11 January 2026 and has expanded it twice since, in Marc
 - [What to prepare in Merchant Center](#getting-your-feed-and-policies-ready)
 - [How to measure in-chat orders](#measuring-orders-that-browser-tags-miss)
 - [UCP versus OpenAI's Agentic Commerce Protocol](#how-does-ucp-compare-with-openais-agentic-commerce-protocol)
-- [What non-US merchants should do now](#outside-the-us-a-preparation-window)
+- [Outside the US: a preparation window](#outside-the-us-a-preparation-window)
 - [A checklist for this quarter](#your-ucp-checklist-for-this-quarter)
 - [Frequently asked questions](#frequently-asked-questions)
 
@@ -82,7 +82,7 @@ Google has made three public UCP announcements in 2026: the launch on 11 January
 | 20 May 2026 | UCP checkout to roll out in Canada and Australia "in the coming months" and later the UK. Universal Cart announced, plus buy now, pay later through Affirm and Klarna. Shopify merchants Fenty and Steve Madden named among checkout retailers. | [Google, *Shopping updates from Google Marketing Live*](https://blog.google/products-and-platforms/products/shopping/shopping-updates-google-marketing-live/) |
 | 24 September 2026 | Merchant Center help page covers products eligible in the US, Canada and Australia, for select participating merchants. | [Google Merchant Center Help](https://support.google.com/merchants/answer/16837055) |
 
-The March post named Commerce Inc, Salesforce and Stripe as partners helping merchants onboard. It did not name Shopify in that list, which matters for the next section: Shopify stores reach Google through Shopify's own channel rather than a separate UCP build.
+The March post named Commerce Inc, Salesforce and Stripe as partners helping merchants onboard. It did not name Shopify in that list, which matters for the Shopify route covered below: Shopify stores reach Google through Shopify's own channel rather than a separate UCP build.
 
 ## Where does UCP checkout run, and who is eligible?
 
@@ -237,17 +237,17 @@ UCP was launched by Google with retail co-developers and powers checkout in AI M
 
 ## Source notes
 
-- [Google, *New tech and tools for retailers to succeed in an agentic shopping era*](https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/), published 2026-01-11, retrieved 2026-09-24.
-- [Google, *Universal Commerce Protocol updates improve AI shopping for retailers*](https://blog.google/products-and-platforms/products/shopping/ucp-updates/), published 2026-03-19, retrieved 2026-09-24.
-- [Google, *How we're helping retailers thrive with new Universal Commerce Protocol features and AI tools on Google*](https://blog.google/products-and-platforms/products/shopping/shopping-updates-google-marketing-live/), published 2026-05-20, retrieved 2026-09-24.
-- [Google Merchant Center Help, *About the Universal Commerce Protocol (UCP) and UCP-powered checkout feature on Google*](https://support.google.com/merchants/answer/16837055), retrieved 2026-09-24.
-- [Google for Developers, *UCP FAQ*](https://developers.google.com/merchant/ucp/faq), retrieved 2026-09-24.
-- [Universal Commerce Protocol, *ucp.dev*](https://ucp.dev/), retrieved 2026-09-24.
-- [Shopify News, *AI commerce at scale*](https://www.shopify.com/news/ai-commerce-at-scale), published 2026-01-11, retrieved 2026-09-24.
-- [Shopify Help Center, *Selling on Google AI Mode and Gemini*](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/google), retrieved 2026-09-24.
-- [Google Merchant Center Help, *Set up your return policies (for Shopify users)*](https://support.google.com/merchants/answer/14232691?hl=en), retrieved 2026-09-24.
-- [Google Merchant Center Help, *GTIN*](https://support.google.com/merchants/answer/6324461), retrieved 2026-09-24.
-- [Google Search Central, *Merchant listing (Product, Offer) structured data*](https://developers.google.com/search/docs/appearance/structured-data/merchant-listing), retrieved 2026-09-24.
-- [Stripe Newsroom, *Stripe powers Instant Checkout in ChatGPT and releases Agentic Commerce Protocol codeveloped with OpenAI*](https://stripe.com/newsroom/news/stripe-openai-instant-checkout), published 2025-09-29, retrieved 2026-09-24.
-- [OpenAI Developers, *Agentic Commerce key concepts*](https://developers.openai.com/commerce/guides/key-concepts), retrieved 2026-09-24.
-- [Digital Commerce 360, *OpenAI shifts checkout plans in its agentic commerce strategy*](https://www.digitalcommerce360.com/2026/03/06/openai-shifts-checkout-plans-agentic-commerce-strategy/), published 2026-03-06, retrieved 2026-09-24.
+- [New tech and tools for retailers to succeed in an agentic shopping era](https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/). Google, 11 January 2026. Accessed 24 September 2026.
+- [Universal Commerce Protocol updates improve AI shopping for retailers](https://blog.google/products-and-platforms/products/shopping/ucp-updates/). Google, 19 March 2026. Accessed 24 September 2026.
+- [How we're helping retailers thrive with new Universal Commerce Protocol features and AI tools on Google](https://blog.google/products-and-platforms/products/shopping/shopping-updates-google-marketing-live/). Google, 20 May 2026. Accessed 24 September 2026.
+- [About the Universal Commerce Protocol (UCP) and UCP-powered checkout feature on Google](https://support.google.com/merchants/answer/16837055). Google Merchant Center Help. Accessed 24 September 2026.
+- [UCP FAQ](https://developers.google.com/merchant/ucp/faq). Google for Developers. Accessed 24 September 2026.
+- [ucp.dev](https://ucp.dev/). Universal Commerce Protocol. Accessed 24 September 2026.
+- [AI commerce at scale](https://www.shopify.com/news/ai-commerce-at-scale). Shopify News, 11 January 2026. Accessed 24 September 2026.
+- [Selling on Google AI Mode and Gemini](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/google). Shopify Help Center. Accessed 24 September 2026.
+- [Set up your return policies (for Shopify users)](https://support.google.com/merchants/answer/14232691?hl=en). Google Merchant Center Help. Accessed 24 September 2026.
+- [GTIN](https://support.google.com/merchants/answer/6324461). Google Merchant Center Help. Accessed 24 September 2026.
+- [Merchant listing (Product, Offer) structured data](https://developers.google.com/search/docs/appearance/structured-data/merchant-listing). Google Search Central. Accessed 24 September 2026.
+- [Stripe powers Instant Checkout in ChatGPT and releases Agentic Commerce Protocol codeveloped with OpenAI](https://stripe.com/newsroom/news/stripe-openai-instant-checkout). Stripe Newsroom, 29 September 2025. Accessed 24 September 2026.
+- [Agentic Commerce key concepts](https://developers.openai.com/commerce/guides/key-concepts). OpenAI Developers. Accessed 24 September 2026.
+- [OpenAI shifts checkout plans in its agentic commerce strategy](https://www.digitalcommerce360.com/2026/03/06/openai-shifts-checkout-plans-agentic-commerce-strategy/). Digital Commerce 360, 6 March 2026. Accessed 24 September 2026.

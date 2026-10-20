@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Inventory Reorder Points: A Practical Guide"
 description: "Calculate a reorder point in 3 steps using daily sales, lead time, and safety stock, then avoid the stockout and cash-flow mistakes a formula misses."
 publishedOn: "2026-09-15"
@@ -38,7 +39,7 @@ The reorder point is the on-hand or inventory-position level at which a replenis
 
 Shopify's *Reorder Point Formula: A Retailer's Guide* expresses the formula as sales velocity multiplied by lead time, plus safety stock. When safety stock is entered as days, the same relationship becomes daily sales multiplied by lead time plus buffer days.
 
-The trigger level and the quantity to purchase are different decisions. Supplier minimums, case packs, demand forecasts, shelf life, storage, cash, and incoming purchase orders determine how much to buy.
+The trigger level and the quantity to purchase are different decisions, a split that [inventory planning software](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-handling-reordering-policies) also makes. Supplier minimums, case packs, demand forecasts, shelf life, storage, cash, and incoming purchase orders determine how much to buy.
 
 ## How do you calculate a reorder point?
 
@@ -100,9 +101,9 @@ On-hand stock alone can mislead. A more complete inventory position is:
 Inventory position = on hand + confirmed incoming - allocated or backordered units
 ```
 
-Use the inventory measure that matches how your operation reserves and receives stock. If 200 units are physically present but 120 are committed to open orders, only 80 may be available. If a confirmed purchase order arrives tomorrow, ignoring it can create a duplicate order.
+Use the inventory measure that matches how your operation reserves and receives stock. If 200 units are physically present but 120 are [committed to open orders](https://help.shopify.com/en/manual/inventory-and-locations/fundamentals/inventory-states), only 80 may be available. If a confirmed purchase order arrives tomorrow, ignoring it can create a duplicate order.
 
-The free calculator uses current stock and does not sync incoming purchase orders or reservations, so review those items before committing cash.
+The free calculator uses current stock and does not sync incoming purchase orders or reservations, so review those items before committing cash. On Shopify, the [purchase order reports](/blog/shopify-purchase-order-reports) show which open orders, transfers and receipts are still outstanding.
 
 ## Choosing safety stock: service versus cash
 
@@ -157,6 +158,7 @@ A reorder point makes replenishment repeatable: expected lead-time demand plus a
 <section class="blog-cta">
   <h3>Turn sales velocity and lead time into a reorder trigger</h3>
   <p>Use the <a href="/tools/inventory-planner">MlabsGrowth Inventory Reorder Point Calculator</a> to model each SKU's reorder point, safety stock, days to stockout, a 30-day suggested quantity, capital locked, and current status.</p>
+  <p>When stock and order updates live in several tools, our <a href="/services/order-operations">order automation service</a> brings them into one reliable order view.</p>
   <p>The calculator works in your chosen currency and assumes constant daily sales. It does not include seasonality, supplier delays, incoming purchase orders, reservations, minimums, or case packs.</p>
 </section>
 
@@ -185,3 +187,5 @@ No. It uses current stock and constant daily sales. Confirm open purchase orders
 ## Source notes
 
 - [Shopify, *Reorder Point Formula: A Retailer's Guide*](https://www.shopify.com/blog/reorder-point), retrieved 2026-09-19.
+- [Shopify Help Center, *Understanding inventory states*](https://help.shopify.com/en/manual/inventory-and-locations/fundamentals/inventory-states), retrieved 2026-10-19.
+- [Microsoft Learn, *Design details: Handling reordering policies* (Business Central)](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-handling-reordering-policies), updated 2026-06-02, retrieved 2026-10-19.

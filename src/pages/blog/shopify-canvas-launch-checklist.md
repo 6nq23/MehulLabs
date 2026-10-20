@@ -32,7 +32,7 @@ Shopify introduced Canvas on October 1, 2026. The early-access feature is limite
   <figcaption>Concept illustration: a Canvas draft passes compatibility, customer-journey, quality, approval, and rollback checks before publication.</figcaption>
 </figure>
 
-> **What you need to know:** Canvas is early access, desktop-only, and limited to eligible stores. Shopify-developed and custom themes are supported; third-party Theme Store themes are not. Test apps, localization, mobile behavior, accessibility, speed, checkout, and analytics outside the visual preview, because automatic saving is not publication. A person still owns approval, launch, and rollback.
+> **What you need to know:** Canvas is early access, desktop-only, and limited to eligible stores. Shopify-developed and custom themes are supported; third-party Theme Store themes are not. Test apps, localization, mobile behavior, accessibility, speed, checkout, and analytics outside the visual preview. Automatic saving is not publication. A person still owns approval, launch, and rollback.
 
 ## The new Canvas workspace, explained
 

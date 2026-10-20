@@ -13,6 +13,9 @@ import { metaPixelNoscriptSrc, metaPixelScript } from '@/data/metaPixel';
 import { pageSeo, breadcrumbsFor } from '@/data/seo';
 import '@fontsource-variable/inter/wght.css';
 import '@fontsource-variable/manrope/wght.css';
+// Preload the Latin files of the two body fonts so text does not reflow when they arrive.
+import interLatinUrl from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import manropeLatinUrl from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
 import '@/styles/globals.css';
 
 interface Props {
@@ -62,7 +65,7 @@ const graph: Record<string, unknown>[] = [
 if (breadcrumbs.length) graph.push({ '@type': 'BreadcrumbList', '@id': `${canonicalUrl}#breadcrumb`, itemListElement: breadcrumbs.map((crumb, index) => ({ '@type': 'ListItem', position: index + 1, name: crumb.label, item: new URL(crumb.path, `${site.url || Astro.url.origin}/`).href })) });
 if (pathname.startsWith('/services/') && entry) graph.push({ '@type': 'Service', '@id': `${canonicalUrl}#service`, name: entry.title, description, url: canonicalUrl, provider: { '@id': organizationId }, areaServed: site.areaServed, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` } });
 const guide = guides.find(item => pathname === `/guides/${item.slug}`);
-if (guide && entry) graph.push({ '@type': 'Article', '@id': `${canonicalUrl}#article`, headline: entry.title, description, datePublished: guide.publishedOn, dateModified: guide.updatedOn || guide.publishedOn, author: { '@id': personId }, publisher: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` }, inLanguage: 'en' });
+if (guide && entry) graph.push({ '@type': 'Article', '@id': `${canonicalUrl}#article`, headline: entry.title, description, datePublished: guide.publishedOn, dateModified: guide.updatedOn || guide.publishedOn, author: { '@id': personId }, publisher: { '@id': organizationId }, image: socialImageUrl, mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` }, inLanguage: 'en' });
 if (article) graph.push({
   '@type': 'BlogPosting',
   '@id': `${canonicalUrl}#article`,
@@ -94,24 +97,31 @@ const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-J6P4JDHNVJ"></script>
+    <meta charset="UTF-8" />
+    <!-- Google tag (gtag.js), Microsoft Clarity and the Meta Pixel: calls queue immediately; the vendor scripts download on the
+         visitor's first interaction or 1.5s after the load event, whichever comes first, so they never delay the first paint. -->
     <script is:inline>
+      (function(w,d){
+        var queue=[],started=false,events=['pointerdown','keydown','touchstart','scroll'];
+        function start(){if(started)return;started=true;events.forEach(function(e){w.removeEventListener(e,start,true);});for(var i=0;i<queue.length;i++)queue[i]();queue=[];}
+        w.__mlgThirdParty=function(fn){started?fn():queue.push(fn);};
+        events.forEach(function(e){w.addEventListener(e,start,{capture:true,passive:true});});
+        function arm(){setTimeout(start,1500);}
+        if(d.readyState==='complete')arm();else w.addEventListener('load',arm);
+      })(window,document);
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-J6P4JDHNVJ');
-    </script>
-    <!-- Microsoft Clarity -->
-    <script is:inline type="text/javascript">
-      (function(c,l,a,r,i,t,y){
+      (function(c,l,a,r,i){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        function add(src){var t=l.createElement(r);t.async=1;t.src=src;var y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);}
+        c.__mlgThirdParty(function(){add("https://www.googletagmanager.com/gtag/js?id=G-J6P4JDHNVJ");add("https://www.clarity.ms/tag/"+i);});
       })(window, document, "clarity", "script", "yss8eahqun");
     </script>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href={manropeLatinUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interLatinUrl} as="font" type="font/woff2" crossorigin />
     <meta name="theme-color" content="#ffcb16" />
     <meta name="color-scheme" content="light" />
 

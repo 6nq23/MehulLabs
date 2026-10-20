@@ -8,7 +8,7 @@ updatedOn: "2026-10-19"
 category: "Ecommerce profit & finance"
 author: "Mehul"
 readTime: "11 min read"
-coverImage: "/Blogs/poas-vs-roas/poas-vs-roas-hero.png"
+coverImage: "/Blogs/poas-vs-roas/poas-vs-roas-hero.webp"
 coverImageAlt: "Two gauges comparing ROAS and POAS for the same ecommerce ad campaign"
 faqs:
   - question: "What is the difference between POAS and ROAS?"
@@ -30,11 +30,11 @@ The gap matters most when a store sells products with different margins. A 4.0 R
 This guide covers the formulas, a worked example, the costs to include, and what Google Ads and Meta actually support for profit data as of 24 September 2026.
 
 <figure class="blog-feature-image">
-  <img src="/Blogs/poas-vs-roas/poas-vs-roas-hero.png" alt="Two gauges comparing ROAS and POAS for the same ecommerce ad campaign" width="1600" height="900" fetchpriority="high" decoding="async">
+  <img src="/Blogs/poas-vs-roas/poas-vs-roas-hero.webp" alt="Two gauges comparing ROAS and POAS for the same ecommerce ad campaign" width="1024" height="1024" fetchpriority="high" decoding="async">
   <figcaption>Illustration: the same campaign can look healthy on ROAS and weak on POAS once product and fulfilment costs are removed.</figcaption>
 </figure>
 
-> **Quick answer:** ROAS measures revenue per unit of ad spend and POAS measures profit per unit of ad spend, and because break-even ROAS equals 1 divided by contribution margin, every product has its own floor. Google Ads can report gross profit when cart data and COGS are connected, though its profit goals are in beta. Meta optimises on the value you send, so profit-based signals there need careful design and labelling.
+> **Quick answer:** ROAS measures revenue per unit of ad spend; POAS measures profit per unit of ad spend. Because break-even ROAS equals 1 divided by contribution margin, every product has its own floor. Google Ads can report gross profit when cart data and COGS are connected, though its profit goals are in beta. Meta optimises on the value you send, so profit-based signals there need careful design and labelling.
 
 <div class="blog-brand-strip" aria-label="Platforms covered in this guide">
   <p>Platforms in this guide</p>
@@ -90,7 +90,7 @@ Two products can report an identical 4.0 ROAS while one earns ₹42,000 after ad
 All figures are illustrative, not benchmarks. Replace them with your own order data.
 
 <figure class="blog-feature-image blog-feature-image--inline">
-  <img src="/Blogs/poas-vs-roas/poas-vs-roas-example.png" alt="Worked example showing how revenue becomes contribution profit after product, shipping, fees, returns and ad spend" width="1600" height="900" loading="lazy" decoding="async">
+  <img src="/Blogs/poas-vs-roas/poas-vs-roas-example.webp" alt="Worked example showing how revenue becomes contribution profit after product, shipping, fees, returns and ad spend" width="1024" height="1024" loading="lazy" decoding="async">
   <figcaption>Illustrative walk from revenue to contribution after ads. The numbers are hypothetical and match the table above.</figcaption>
 </figure>
 
@@ -158,7 +158,7 @@ What you can control:
 - **[Value rules](https://developers.facebook.com/documentation/ads-commerce/marketing-api/bidding/value-rules).** Meta's documentation lists criteria such as age, gender, location, operating system, device platform, placement and audience labels, with increases of 1% to 1,000% and decreases of 1% to 90%. Like Google's value rules, they adjust by audience, not by product margin.
 - **Catalogue structure.** Low-margin products in their own product sets and campaigns can carry a stricter ROAS target.
 
-The [Meta Andromeda creative guide](/blog/meta-andromeda-ecommerce-creatives) covers how to keep control of which products get promoted as creative volume grows.
+The [Meta Andromeda creative guide](/blog/meta-andromeda-ecommerce-creatives) covers how to keep control of which products get promoted as creative volume grows. Shopify's AI-run campaigns need the same care: our [Campaign Autopilot review](/blog/shopify-campaign-autopilot-review) sets out a test plan with POAS guardrails.
 
 ## Server-side tracking and privacy
 
@@ -205,7 +205,7 @@ Meta value optimisation uses the purchase value you send through the Meta Pixel 
 
 ## Which metric to steer by
 
-ROAS tells you whether advertising produces sales; POAS tells you whether those sales produce money. The decision between them comes down to how uneven your margins are.
+ROAS tells you whether advertising produces sales; POAS tells you whether those sales produce money. The decision between them mostly comes down to how uneven your margins are.
 
 **Stay on ROAS when margins are flat.** If margins are similar across the products a campaign promotes, POAS moves in step with ROAS. A store selling one hero product, or a catalogue where every item keeps roughly the same contribution margin, gains little from rebuilding its tracking around profit.
 
@@ -213,7 +213,7 @@ ROAS tells you whether advertising produces sales; POAS tells you whether those 
 
 **Move to POAS when margins diverge.** That means margins that differ widely across the catalogue, heavy discounting that changes margin by season, or returns and RTO that vary sharply by product. Peak trading is a common trigger; the [BFCM 2026 profit checklist](/blog/bfcm-2026-profit-checklist) covers the discount side.
 
-Whichever side you land on, start with break-even ROAS per product family, group products into margin bands, and connect COGS to Google Ads for gross profit reporting. Add shipping, fees and returns in your own reporting, and change the values sent to ad platforms only when the numbers are reliable and clearly labelled.
+If you move to POAS, start with break-even ROAS per product family, group products into margin bands, and connect COGS to Google Ads for gross profit reporting. Add shipping, fees and returns in your own reporting, and change the values sent to ad platforms only when the numbers are reliable and clearly labelled.
 
 <section class="blog-cta">
   <h2>Turn order data into a profit signal</h2>
@@ -223,15 +223,15 @@ Whichever side you land on, start with break-even ROAS per product family, group
 
 ## Source notes
 
-- [Google Ads Help, *About conversions with cart data*](https://support.google.com/google-ads/answer/9028254), retrieved 2026-09-24.
-- [Google Ads Help, *Step 2: Provide cost of goods sold (COGS) feed attribute to report on profit margins*](https://support.google.com/google-ads/answer/14943482?hl=en), retrieved 2026-09-24.
-- [Google Merchant Center Help, *Cost of goods sold [cost_of_goods_sold]*](https://support.google.com/merchants/answer/9017895?hl=en), retrieved 2026-09-24.
-- [Google Ads Help, *Top tips to optimize for the holiday season and beyond with Google AI*](https://support.google.com/google-ads/answer/15302774), retrieved 2026-09-24.
-- [Google Ads Help, *About conversion value rules*](https://support.google.com/google-ads/answer/10518330?hl=en), retrieved 2026-09-24.
-- [Google Ads Help, *About conversion adjustments*](https://support.google.com/google-ads/answer/7686447?hl=en), retrieved 2026-09-24.
-- [Google Ads Help, *About customer lifecycle goals*](https://support.google.com/google-ads/answer/12080169?hl=en), retrieved 2026-09-24.
-- [Google Ads Help, *About consent mode*](https://support.google.com/google-ads/answer/10000067?hl=en), retrieved 2026-09-24.
-- [Meta for Developers, *Conversions API: custom data parameters*](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data), retrieved 2026-09-24.
-- [Meta for Developers, *Value rules*](https://developers.facebook.com/documentation/ads-commerce/marketing-api/bidding/value-rules), retrieved 2026-09-24.
-- [Meta for Developers, *Conversions API*](https://developers.facebook.com/docs/marketing-api/conversions-api/), retrieved 2026-09-24.
-- [Shopify Help Center, *Profit reports*](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports), retrieved 2026-09-24.
+- Google Ads Help: [About conversions with cart data](https://support.google.com/google-ads/answer/9028254) (accessed 24 September 2026).
+- Google Ads Help: [Step 2: Provide cost of goods sold (COGS) feed attribute to report on profit margins](https://support.google.com/google-ads/answer/14943482?hl=en) (accessed 24 September 2026).
+- Google Merchant Center Help: [Cost of goods sold [cost_of_goods_sold]](https://support.google.com/merchants/answer/9017895?hl=en) (accessed 24 September 2026).
+- Google Ads Help: [Top tips to optimize for the holiday season and beyond with Google AI](https://support.google.com/google-ads/answer/15302774) (accessed 24 September 2026).
+- Google Ads Help: [About conversion value rules](https://support.google.com/google-ads/answer/10518330?hl=en) (accessed 24 September 2026).
+- Google Ads Help: [About conversion adjustments](https://support.google.com/google-ads/answer/7686447?hl=en) (accessed 24 September 2026).
+- Google Ads Help: [About customer lifecycle goals](https://support.google.com/google-ads/answer/12080169?hl=en) (accessed 24 September 2026).
+- Google Ads Help: [About consent mode](https://support.google.com/google-ads/answer/10000067?hl=en) (accessed 24 September 2026).
+- Meta for Developers: [Conversions API: custom data parameters](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) (accessed 24 September 2026).
+- Meta for Developers: [Value rules](https://developers.facebook.com/documentation/ads-commerce/marketing-api/bidding/value-rules) (accessed 24 September 2026).
+- Meta for Developers: [Conversions API](https://developers.facebook.com/docs/marketing-api/conversions-api/) (accessed 24 September 2026).
+- Shopify Help Center: [Profit reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports) (accessed 24 September 2026).

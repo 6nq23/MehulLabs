@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 draft: false
 title: "Cart Abandonment in 2026: Why 70% of Carts Still Leak"
-description: "The cart abandonment rate in 2026 still averages 70.22% per Baymard. See the checkout reasons behind it, how to measure yours in Shopify and the fixes that work."
+description: "The cart abandonment rate in 2026 still averages 70.22% per Baymard. See the checkout reasons behind it, how to measure yours in Shopify and which fixes work."
 publishedOn: "2026-09-25"
 updatedOn: "2026-10-19"
 category: "Shopify conversion"
@@ -112,7 +112,7 @@ Shopify's report also shows added-to-cart rate and reached-checkout rate, but it
 
 In this illustrative example, the store loses as many carts before checkout as it does inside it, so the first fixes belong in the cart and on the product page.
 
-Split the same report by device and by traffic source. A mobile rate far above desktop usually points to a layout or payment problem, while a paid-social spike often signals browsing intent.
+Split the same report by device and by traffic source. A mobile rate far above desktop usually points to a layout or payment problem, while a paid-social spike often signals browsing intent. If many shoppers research on one device and buy on another, read what [Shopify cross-device cart sync](/blog/shopify-cross-device-cart-sync) changes and how to measure it.
 
 Shopify also lists individual [abandoned checkouts](https://help.shopify.com/en/manual/orders/abandoned-checkouts) under **Orders > Abandoned checkouts**. A checkout appears there when the customer has provided an email address and has not finished for more than ten minutes. If you also use GA4, keep its funnel separate from Shopify's session counts; our guide to [tracking AI traffic in GA4](/blog/track-ai-traffic-ga4) covers channel set-up. For a wider baseline, work through the [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) before changing anything.
 
@@ -212,10 +212,10 @@ Set the threshold slightly above your current average order value, then give sho
 
 For peak season, plan thresholds and shipping cut-off dates together. Our [BFCM 2026 profit checklist](/blog/bfcm-2026-profit-checklist) covers the offer and delivery decisions to lock in before traffic peaks.
 
-Step back from the individual fixes and the pattern is simple. Seven in ten carts are still abandoned, and a large share of that is ordinary browsing no store can prevent. The part you can influence is mostly surprise costs, delivery certainty, trust and friction, and most of those fixes are settings and page content rather than a redesign. Measure your own funnel in Shopify, fix the reason behind your biggest drop-off, then add consented recovery messages, and judge every change by completed orders and contribution rather than by how many reminders were sent.
-
 <!-- [UNIQUE INSIGHT] -->
 > **Order of operations:** fix the price shock first, recover second. A recovery flow that brings a shopper back to the same surprise shipping fee usually repeats the abandonment, and adds a message cost to it.
+
+Step back from the individual fixes and the pattern is simple. Seven in ten carts are still abandoned, and a large share of that is ordinary browsing no store can prevent. The part you can influence is mostly surprise costs, delivery certainty, trust and friction, and most of those fixes are settings and page content rather than a redesign. Measure your own funnel in Shopify, fix the reason behind your biggest drop-off, then add consented recovery messages, and judge every change by completed orders and contribution rather than by how many reminders were sent.
 
 <section class="blog-cta">
   <h2>Find where your carts are leaking</h2>
@@ -247,17 +247,17 @@ Not by default. Baymard's reasons point to costs, delivery, trust and checkout f
 
 ## Source notes
 
-- [Baymard Institute, *Cart Abandonment Rate Statistics*](https://baymard.com/lists/cart-abandonment-rate), last updated 2025-09-22, retrieved 2026-09-24.
-- [Shopify Help Center, *Behavior reports*](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/behaviour-reports), retrieved 2026-09-24.
-- [Shopify Help Center, *Analytics data points (fields) reference*](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/analytics-fields), retrieved 2026-09-24.
-- [Shopify Help Center, *Abandoned checkouts*](https://help.shopify.com/en/manual/orders/abandoned-checkouts), retrieved 2026-09-24.
-- [Shopify Help Center, *Editing the checkout form options*](https://help.shopify.com/en/manual/checkout-settings/checkout-form-options), retrieved 2026-09-24.
-- [Shopify Help Center, *Accelerated checkouts*](https://help.shopify.com/en/manual/payments/accelerated-checkouts), retrieved 2026-09-24.
-- [Shopify Help Center, *Manual payment methods*](https://help.shopify.com/en/manual/payments/manual-payments), retrieved 2026-09-24.
-- [Shopify Help Center, *Setting up automated delivery dates*](https://help.shopify.com/en/manual/fulfillment/setup/processing-time-and-delivery-dates/automatic-delivery-dates), retrieved 2026-09-24.
-- [Shopify Help Center, *Creating and managing marketing automations in Shopify Messaging*](https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create), retrieved 2026-09-24.
-- [Shopify Help Center, *Requirements and guidelines for sending SMS marketing campaigns*](https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/sms/requirements), retrieved 2026-09-24.
-- [Meta for Developers, *WhatsApp Business Platform: Get opt-in for WhatsApp*](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in), retrieved 2026-09-24.
-- [Meta for Developers, *WhatsApp template category guidelines*](https://developers.facebook.com/docs/whatsapp/updates-to-pricing/new-template-guidelines), retrieved 2026-09-24.
-- [US Federal Trade Commission, *FTC Report Shows Rise in Sophisticated Dark Patterns Designed to Trick and Trap Consumers*](https://www.ftc.gov/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick-trap-consumers), published 2022-09-15, retrieved 2026-09-24.
-- [Press Information Bureau, Government of India, *Central Consumer Protection Authority issues Guidelines for Prevention and Regulation of Dark Patterns, 2023*](https://pib.gov.in/PressReleasePage.aspx?PRID=1983994), retrieved 2026-09-24.
+- [Cart Abandonment Rate Statistics](https://baymard.com/lists/cart-abandonment-rate). Baymard Institute, updated 22 September 2025. Accessed 24 September 2026.
+- [Behavior reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/behaviour-reports). Shopify Help Center. Accessed 24 September 2026.
+- [Analytics data points (fields) reference](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/analytics-fields). Shopify Help Center. Accessed 24 September 2026.
+- [Abandoned checkouts](https://help.shopify.com/en/manual/orders/abandoned-checkouts). Shopify Help Center. Accessed 24 September 2026.
+- [Editing the checkout form options](https://help.shopify.com/en/manual/checkout-settings/checkout-form-options). Shopify Help Center. Accessed 24 September 2026.
+- [Accelerated checkouts](https://help.shopify.com/en/manual/payments/accelerated-checkouts). Shopify Help Center. Accessed 24 September 2026.
+- [Manual payment methods](https://help.shopify.com/en/manual/payments/manual-payments). Shopify Help Center. Accessed 24 September 2026.
+- [Setting up automated delivery dates](https://help.shopify.com/en/manual/fulfillment/setup/processing-time-and-delivery-dates/automatic-delivery-dates). Shopify Help Center. Accessed 24 September 2026.
+- [Creating and managing marketing automations in Shopify Messaging](https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create). Shopify Help Center. Accessed 24 September 2026.
+- [Requirements and guidelines for sending SMS marketing campaigns](https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/sms/requirements). Shopify Help Center. Accessed 24 September 2026.
+- [WhatsApp Business Platform: Get opt-in for WhatsApp](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in). Meta for Developers. Accessed 24 September 2026.
+- [WhatsApp template category guidelines](https://developers.facebook.com/docs/whatsapp/updates-to-pricing/new-template-guidelines). Meta for Developers. Accessed 24 September 2026.
+- [FTC Report Shows Rise in Sophisticated Dark Patterns Designed to Trick and Trap Consumers](https://www.ftc.gov/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick-trap-consumers). US Federal Trade Commission, published 15 September 2022. Accessed 24 September 2026.
+- [Central Consumer Protection Authority issues Guidelines for Prevention and Regulation of Dark Patterns, 2023](https://pib.gov.in/PressReleasePage.aspx?PRID=1983994). Press Information Bureau, Government of India. Accessed 24 September 2026.

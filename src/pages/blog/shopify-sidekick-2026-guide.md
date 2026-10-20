@@ -25,21 +25,15 @@ faqs:
 
 Shopify Sidekick automates a growing list of jobs inside the Shopify admin: ShopifyQL sales reports, product and marketing content, order edits, Shopify Flow automations, theme settings and admin-only apps. It does not run work that lives outside Shopify, and it does not replace the judgment a brand applies before anything goes live.
 
-The timing matters. On 15 September 2026, Shopify began rolling out a redesigned admin in which Sidekick moved from a side panel to a floating chat at the bottom of every page. Now it is on every screen, so it is worth knowing where it helps and where it stops.
+The timing matters. On 15 September 2026, Shopify began rolling out a redesigned admin in which Sidekick moved from a side panel to a floating chat at the bottom of every page. Now it is on every screen, so it is worth knowing where it helps and where it stops. Every change it makes still needs your approval, and plans, permissions and early-access status limit some features.
 
-This guide lists only features we verified in Shopify's documentation, with dates, plus a decision table and 10 prompts.
+We list only features we verified in Shopify's documentation, with dates, plus a decision table and 10 prompts.
 
 <figure class="blog-feature-image">
   <img src="/Blogs/shopify-sidekick-2026-guide/shopify-sidekick-hero.png" alt="Concept illustration of the redesigned Shopify admin with Sidekick as a floating AI chat assistant" width="1600" height="900" fetchpriority="high" decoding="async">
   <figcaption>Concept illustration of Sidekick as a floating chat in the redesigned Shopify admin. This is not a product screenshot.</figcaption>
 </figure>
 
-> **Key takeaways**
->
-> - Sidekick became a floating chat on every admin page in the redesign that began rolling out on 15 September 2026.
-> - It can report, write, edit orders, build Shopify Flow workflows and adjust themes, but every change needs your approval.
-> - Plans, permissions and early-access status limit some features, including app generation and Sidekick Pulse.
-> - Work that crosses couriers, WhatsApp, calling, ad accounts or finance tools still needs a custom AI workflow.
 
 <div class="blog-brand-strip" aria-label="Platforms covered in this guide">
   <p>Platforms in this guide</p>
@@ -53,24 +47,26 @@ This guide lists only features we verified in Shopify's documentation, with date
 ## In this guide
 
 - [What Sidekick is in 2026](#what-is-shopify-sidekick-in-2026)
-- [The September 2026 admin redesign](#what-changed-in-the-september-2026-admin-redesign)
+- [The September 2026 admin redesign](#the-september-2026-admin-redesign)
 - [What Sidekick can do now](#what-can-shopify-sidekick-do-right-now)
-- [Plans, languages and access](#which-plans-languages-and-staff-can-use-sidekick)
+- [Plans, languages and access](#plans-languages-and-staff-access)
 - [Where Sidekick stops](#where-does-shopify-sidekick-stop)
-- [Sidekick, Flow or a custom workflow](#when-should-you-use-sidekick-shopify-flow-or-a-custom-ai-workflow)
-- [Using Sidekick safely](#how-do-you-use-sidekick-safely)
-- [10 prompts to try](#which-sidekick-prompts-are-worth-trying-first)
+- [Sidekick, Flow or a custom workflow](#sidekick-shopify-flow-or-a-custom-ai-workflow)
+- [Using Sidekick safely](#using-sidekick-safely)
+- [10 prompts to try](#ten-prompts-worth-trying-first)
 - [Frequently asked questions](#frequently-asked-questions)
 
 ## What is Shopify Sidekick in 2026?
 
 Sidekick is Shopify's AI assistant built into the admin. The [Shopify Help Center's Sidekick overview](https://help.shopify.com/en/manual/ai-powered-tools/sidekick) describes it as a way to get guidance, generate content, build apps and complete tasks in plain language, on desktop, mobile and even Apple Watch, by text, voice or screen sharing.
 
-Two shifts define the 2026 version. It acts rather than only answers, filling forms, editing orders and creating workflows for your review. It also reaches into other apps. Shopify's [Spring '26 Edition announcement](https://www.shopify.com/news/spring-26-edition-merchant), published on 17 June 2026, says Sidekick App Extensions were live for 15+ partners, including Klaviyo, Loop and Smile.
+Two shifts define the 2026 version. First, it acts rather than only answers, filling forms, editing orders and creating workflows for your review.
+
+Second, it reaches into other apps. Shopify's [Spring '26 Edition announcement](https://www.shopify.com/news/spring-26-edition-merchant), published on 17 June 2026, says Sidekick App Extensions were live for 15+ partners, including Klaviyo, Loop and Smile.
 
 Shopify's [memory and personalization page](https://help.shopify.com/en/manual/ai-powered-tools/sidekick/memory) adds that Sidekick keeps conversation history for about 3 months and recent admin activity for about 12 hours, and will forget details on request.
 
-## What changed in the September 2026 admin redesign?
+## The September 2026 admin redesign
 
 Shopify's changelog post [*A new look for the Shopify admin*](https://changelog.shopify.com/posts/see-the-shopify-admin-s-new-look), dated 15 September 2026, says the redesign rolls out gradually with no setup. It brings new colour, type and icons, moves search and notifications into a collapsible side navigation, and makes Sidekick a floating chat on every page.
 
@@ -103,7 +99,7 @@ Theme edits change settings on sections and blocks already on the page, such as 
 
 [Sidekick Pulse](https://help.shopify.com/en/manual/ai-powered-tools/sidekick/pulse) researches store data and shows up to 5 suggested actions as cards on the admin Home page. As of 24 September 2026, it is in early access, needs recent sales activity and Shopify Network Intelligence, and is limited to the owner or staff with admin access.
 
-## Which plans, languages and staff can use Sidekick?
+## Plans, languages and staff access
 
 Shopify's [Sidekick product page](https://www.shopify.com/sidekick) says Sidekick is included with every Shopify plan at no extra cost, but features and usage limits vary by plan. App generation is restricted to Grow, Advanced and Plus, while Flow generation is listed for Basic, Shopify, Advanced and Plus.
 
@@ -131,7 +127,7 @@ Sidekick's boundary is the Shopify admin plus the supported apps you connect. No
   <strong>A simple test:</strong> ask where the data starts and where the action ends. If both sit inside the Shopify admin, try Sidekick. If the job repeats on a trigger, save it as a Flow workflow. If either end sits in another system, or the output depends on brand rules a prompt cannot hold, you need a custom AI workflow.
 </aside>
 
-## When should you use Sidekick, Shopify Flow or a custom AI workflow?
+## Sidekick, Shopify Flow or a custom AI workflow
 
 Sidekick suits one-off questions and edits, Shopify Flow suits repeatable rules triggered by Shopify events, and a custom AI workflow suits multi-system jobs needing brand context and approvals. Since December 2025 Sidekick can build Flow workflows, so the two work together.
 
@@ -153,7 +149,7 @@ Sidekick suits one-off questions and edits, Shopify Flow suits repeatable rules 
 
 General assistants such as Claude or ChatGPT fit the third column once connected to your data and given written brand rules. Our [AI brand context workflow guide](/guides/ai-brand-context-workflow) explains how to package that context, and [Skill Manager](/products/skill-manager) keeps those instructions reusable. For more examples, see [AI marketing workflows for ecommerce](/blog/ai-marketing-workflows-ecommerce).
 
-## How do you use Sidekick safely?
+## Using Sidekick safely
 
 Shopify's [getting started guide](https://help.shopify.com/en/manual/ai-powered-tools/sidekick/set-up) states that Sidekick cannot change your store without approval and only presents options for review. That approval step is the control, so read what you approve.
 
@@ -165,7 +161,7 @@ Shopify's [getting started guide](https://help.shopify.com/en/manual/ai-powered-
 
 If a theme or product change will affect conversion, run it past the [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) before you publish.
 
-## Which Sidekick prompts are worth trying first?
+## Ten prompts worth trying first
 
 The best first prompts use features Shopify documents today: ShopifyQL reports, draft orders, Flow generation, theme settings and form filling. Each of these 10 prompts names a concrete outcome and a limit, so Sidekick has less to guess. Adjust the numbers for your store.
 
@@ -181,6 +177,8 @@ The best first prompts use features Shopify documents today: ShopifyQL reports, 
 10. "Find apps that can send order updates on WhatsApp, compare the top 3 and show me the key differences."
 
 Prompt 10 shows the boundary: Sidekick can compare apps, but the messaging runs outside it. For AI agents that shop on behalf of customers, see our [agentic commerce guide for Shopify](/blog/agentic-commerce-shopify-guide).
+
+Run a few of these and the pattern is clear. Sidekick in 2026 is a capable operator inside the admin, writing reports, drafting content, editing orders, building Flow workflows and adjusting themes, and every change still waits for a person to approve it. Use it for admin work you can check, turn the rules that repeat into Shopify Flow, and keep custom workflows for jobs that cross systems or depend on brand context.
 
 <section class="blog-cta">
   <h2>Automate the work Sidekick cannot reach</h2>
@@ -210,11 +208,6 @@ Sidekick Pulse is a feature that researches your store's data and shows up to 5 
 
 Use a custom workflow when the job crosses systems Sidekick does not reach, such as courier portals, WhatsApp, calling tools, ad accounts or accounting software, or when output depends on detailed brand rules and a human approval chain. Keep Sidekick for questions and edits that start and finish inside the Shopify admin.
 
-## The bottom line
-
-Shopify Sidekick in 2026 is a capable operator inside the admin. It writes reports, drafts content, edits orders, builds Flow workflows and adjusts themes, and the September redesign puts it on every page. Every change still waits for a person to approve it.
-
-Use it for admin work you can check. Turn repeatable rules into Shopify Flow, and build custom workflows for jobs that cross systems or depend on brand context.
 
 ## Source notes
 

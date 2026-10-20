@@ -81,7 +81,7 @@ Shopify agentic storefronts let customers discover and buy a store's products in
 
 Shopify [introduced agentic storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) in its Winter '26 Edition on 10 December 2025, launching with ChatGPT, Perplexity and Microsoft Copilot. The current help page lists the channels above, so check your own admin for Perplexity's status. Meta became an AI channel in the admin on 8 September 2026, according to the [Shopify changelog](https://changelog.shopify.com/posts/meta-is-now-an-ai-channel-in-your-admin), which says products are shared with Meta by default through Shopify Catalog.
 
-The point of one agentic section is that a merchant manages product eligibility, data and reporting once rather than integrating with each AI company separately. Shopify syndicates the catalogue; each AI channel then decides relevance and ranking with its own logic.
+The point of one agentic section is that a merchant manages product eligibility, data and reporting once rather than integrating with each AI company separately. Shopify syndicates the catalogue; each AI channel then decides relevance and ranking with its own logic. Price data travels the same way, so check [how Shopify Catalog now passes compare-at prices to AI agents](/blog/shopify-compare-at-prices-ai-agents) before a sale.
 
 ## Which AI channels can Shopify stores sell in?
 
@@ -187,7 +187,7 @@ Check eligibility, fix product data on your best sellers, fill in policies and s
 | Week 3 | Complete store policies, collect reviews on key products, map metafields with Catalog Mapping |
 | Week 4 | Set up AI channel tracking in GA4, build a monthly AI orders and margin report, and test prompts in ChatGPT and Gemini |
 
-Eligibility is still mostly US-first, but none of these four weeks depends on it. Complete product data, clear policies, real reviews and margin-level measurement count in every market, so a store outside the US can do the same work before checkout arrives.
+Eligibility is still mostly US-first, but most of this work does not depend on it. Complete product data, clear policies, real reviews and margin-level measurement count in every market, so a store outside the US can do the same work before checkout arrives.
 
 Before peak season, align this work with your offer and stock planning. Our [BFCM 2026 profit checklist](/blog/bfcm-2026-profit-checklist) covers the dates to plan around.
 

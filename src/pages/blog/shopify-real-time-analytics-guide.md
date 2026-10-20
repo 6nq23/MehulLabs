@@ -189,7 +189,7 @@ Shopify's dashboard is fast, and that is useful for spotting breakages and traff
 
 - **Read it today.** Orders, sessions, conversion and ad cost, plus anything that looks broken, such as a checkout error. Live View and the overview dashboard are built for this.
 - **Read it today, labelled provisional.** Contribution margin and POAS with the returns reserve applied. Watch the trend, and move budget only on a 3 to 7 day rolling window.
-- **Wait for it.** Settled margin, cohort refund rate, POAS by product, CAC payback and channel reconciliation. Review these 7 to 14 days after the week ends, and reconcile cohorts monthly.
+- **Wait for it.** Settled margin, cohort refund rate, POAS by product, CAC payback and channel reconciliation. Review these 7 to 14 days after the week ends, depending on your return window, and reconcile cohorts monthly.
 
 If you change one thing this week, write your returns reserve into the contribution margin formula.
 

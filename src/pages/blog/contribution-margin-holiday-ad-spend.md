@@ -53,9 +53,7 @@ Use these working definitions and keep them fixed for the whole season:
 | **CM2** | CM1 − shipping and packaging − payment fees − returns and RTO allowance | What can one order afford to spend on advertising? |
 | **CM3** | CM2 − ad spend | Did the order actually make money after marketing? |
 
-Net revenue means after discounts and excluding tax. Fixed costs such as salaries, rent and software stay out, because they do not change when you add one order.
-
-The [unit economics guide](/blog/unit-economics-guide) explains why, and the [landed cost calculator guide](/blog/landed-cost-calculator-guide) covers what belongs in product cost.
+Net revenue means after discounts and excluding tax. Fixed costs such as salaries, rent and software stay out, because they do not change when you add one order. The [unit economics guide](/blog/unit-economics-guide) explains why, and the [landed cost calculator guide](/blog/landed-cost-calculator-guide) covers what belongs in product cost.
 
 Shopify can supply part of CM1. Its [profit reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports) depend on the cost per item you enter, and Shopify notes that they leave out ad spend and transaction fees. Treat them as a CM1 source, not as CM2 or CM3.
 
@@ -86,9 +84,7 @@ Every input here is hypothetical. The returns allowance is an averaged expected 
   <figcaption>Concept illustration: the worked order above as a waterfall from net revenue to CM3. The figures are hypothetical, and this is not a Shopify or ad platform screenshot.</figcaption>
 </figure>
 
-A 55% gross margin looks comfortable on a product page.
-
-By CM3 it is 17.5%, and on a smaller basket or a higher ad cost it could be negative.
+A 64.7% gross margin looks comfortable on a product page. By CM3 it is 17.5%, and on a smaller basket or a higher ad cost it could be negative.
 
 ## How do you calculate break-even and target ROAS from contribution margin?
 
@@ -203,7 +199,7 @@ Platform dashboards remain useful for speed, but they count attributed revenue, 
 
 <section class="blog-cta">
   <h2>See contribution margin before you raise the budget</h2>
-  <p>mlabs Growth reviews product pages, offer structure, checkout friction and measurement for Shopify brands, so holiday ad spend is judged on contribution, not just on platform ROAS.</p>
+  <p>MlabsGrowth looks at your margins, offers, product pages and checkout together, so each holiday budget decision is judged on contribution per order, not just on platform ROAS.</p>
   <p><a href="/services/store-conversion">Raise conversion without buying more traffic</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 
@@ -231,10 +227,10 @@ Daily during the live sale week, using reconciled store orders rather than only 
 
 ## Source notes
 
-- [Google Ads Help, *About Target ROAS bidding*](https://support.google.com/google-ads/answer/6268637), retrieved 2026-10-01.
-- [Google Ads Help, *About conversions with cart data*](https://support.google.com/google-ads/answer/9028254), retrieved 2026-10-01.
-- [Google Ads Help, *Provide cost of goods sold (COGS) feed attribute to report on profit margins*](https://support.google.com/google-ads/answer/14943482), retrieved 2026-10-01.
-- [Meta for Business, *Simplifying Ad Measurement for a Social-First World*](https://www.facebook.com/business/news/click-attribution), published 2026-03-03, retrieved 2026-10-01.
-- [Meta Business Help Center, *About Attribution Models and Attribution Settings*](https://www.facebook.com/business/help/460276478298895), linked for reference, retrieved 2026-10-01.
-- [Shopify Help Center, *Profit reports*](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports), retrieved 2026-10-01.
-- [NRF, *Consumers Expected to Return Nearly $850 Billion in Merchandise in 2025*](https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025), published 2025-10-15, retrieved 2026-10-01.
+- [About Target ROAS bidding](https://support.google.com/google-ads/answer/6268637). Google Ads Help. Accessed 1 October 2026.
+- [About conversions with cart data](https://support.google.com/google-ads/answer/9028254). Google Ads Help. Accessed 1 October 2026.
+- [Provide cost of goods sold (COGS) feed attribute to report on profit margins](https://support.google.com/google-ads/answer/14943482). Google Ads Help. Accessed 1 October 2026.
+- [Simplifying Ad Measurement for a Social-First World](https://www.facebook.com/business/news/click-attribution). Meta for Business, published 3 March 2026. Accessed 1 October 2026.
+- [About Attribution Models and Attribution Settings](https://www.facebook.com/business/help/460276478298895). Meta Business Help Center. Accessed 1 October 2026.
+- [Profit reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports). Shopify Help Center. Accessed 1 October 2026.
+- [Consumers Expected to Return Nearly $850 Billion in Merchandise in 2025](https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025). NRF, published 15 October 2025. Accessed 1 October 2026.

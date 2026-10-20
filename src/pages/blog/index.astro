@@ -45,7 +45,7 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en-GB', {
           <div class="blog-grid">
             {posts.map(({ frontmatter, url }, index) => (
               <article class="blog-card">
-                <a href={url} aria-label={`Read ${frontmatter.title}`}>
+                <a href={url}>
                   <div class="blog-card-meta">
                     <span>{String(posts.length - index).padStart(2, '0')}</span>
                     <time datetime={frontmatter.publishedOn}>{formatDate(frontmatter.publishedOn)}</time>

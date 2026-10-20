@@ -39,7 +39,7 @@ Below: what Andromeda does, what "different" creative means, a practical 2026 ac
 > - Retrieval now runs through Andromeda, the ad retrieval engine Meta announced on 2 December 2024.
 > - The ad count goes up: Meta recommends at least 20 diversified ads in Advantage+ sales campaigns.
 > - Similar-looking ads may be treated as the same ad and shown to the same people, so variety has to be real.
-> - Creative testing is sized to budget, and winners are judged on contribution margin, not ROAS alone.
+> - Size creative testing to budget, and judge winners on contribution margin, not ROAS alone.
 
 <div class="blog-brand-strip" aria-label="Platforms covered in this guide">
   <p>Platforms in this guide</p>

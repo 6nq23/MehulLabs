@@ -133,7 +133,7 @@ The reports become operational only when each exception changes a decision. A ri
 
 If purchasing commitments threaten near-term liquidity, pair the review with the [cash runway guide](/blog/cash-runway-guide). Ordered cost, invoice due date, and cash leaving the bank are related, but they are not the same timestamp.
 
-Run that way, the three reports give the team a clearer weekly starting point. The supplier agreement, stock movement, receiving result, and cash decision stay separate, and missing transfers, late shipments, rejected units, and changing costs become named actions.
+Run that way, the three reports give the team a clearer weekly starting point. Keep the supplier agreement, stock movement, receiving result, and cash decision separate, then turn missing transfers, late shipments, rejected units, and changing costs into named actions.
 
 <section class="blog-cta">
   <h2>Turn the report into an owned weekly workflow</h2>

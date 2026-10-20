@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Marketing Budgets: Plan Spend Without Guesswork"
 description: "Build a 4-step marketing budget from spend, channel allocation, ROAS, and AOV while keeping revenue projections separate from profit and cash flow."
 publishedOn: "2026-09-14"
@@ -42,7 +43,7 @@ It is a planning tool, not a promise. The most important discipline is separatin
 
 A marketing budget model translates a spend ceiling into channel allocations and possible outcomes. It answers: if each channel performs at an explicit ROAS assumption, what revenue, orders, blended ROAS, and cost per order could the plan produce?
 
-Google Ads Help's *Glossary* defines ROAS as conversion value divided by cost. That is useful, but conversion value is not the same as cash collected or profit retained. Attribution settings, delayed conversions, cancellations, refunds, tax, and cross-channel overlap can all change the business result.
+Google Ads Help's *Glossary* defines ROAS as conversion value divided by cost. That is useful, but conversion value is not the same as cash collected or profit retained. [Attribution settings](https://support.google.com/google-ads/answer/6259715?hl=en), delayed conversions, cancellations, refunds, tax, and cross-channel overlap can all change the business result.
 
 Use the model for budget negotiation, channel mix planning, scenario comparison, and target setting, but not as proof that a channel will deliver the assumed return.
 
@@ -104,6 +105,11 @@ A channel plan might make the assumptions visible:
 | Retargeting | 10% | ₹5,000 | 4.25x | ₹21,250 |
 | **Total** | **100%** | **₹50,000** | **3.0x blended** | **₹150,000** |
 
+<figure class="blog-feature-image">
+  <img src="/Blogs/marketing-budget-guide/channel-spend-vs-revenue.svg" alt="Paired bars comparing spend and projected revenue for paid search, paid social, creators and retargeting in a ₹50,000 budget" width="1600" height="900" loading="lazy" decoding="async">
+  <figcaption>Spend against projected revenue for each channel in the worked example. Every ROAS figure is a planning assumption.</figcaption>
+</figure>
+
 These are illustrative assumptions, not benchmarks. Retargeting can appear efficient because it reaches people influenced elsewhere, and attribution across channels may overlap.
 
 An incrementality test asks a different question: how much additional demand did the advertising cause? Google Ads Help's *Understand your Conversion Lift based on users measurement data* describes a method for measuring incremental conversions and incremental ROAS.
@@ -136,7 +142,7 @@ Use evidence and constraints, not equal percentages by default.
 5. **Separate acquisition and retention.** Their economics and attribution behave differently.
 6. **Plan a range.** Compare conservative, base, and upside ROAS rather than one exact number.
 
-Link the plan to the [cash runway calculator](/tools/runway-planner). Media is often paid before every order settles, refund window closes, or repeat purchase occurs.
+Link the plan to the [cash runway calculator](/tools/runway-planner). Media is often paid before every order settles, the refund window closes, or a repeat purchase occurs.
 
 ## Common marketing budget mistakes
 
@@ -148,7 +154,7 @@ Link the plan to the [cash runway calculator](/tools/runway-planner). Media is o
 - Dividing spend by all orders and calling it new-customer CAC.
 - Ignoring taxes, refunds, cancellations, discounts, and returns.
 - Planning demand without checking inventory and fulfilment capacity.
-- Changing budgets faster than conversion delays can settle.
+- Changing budgets faster than [conversion delays](https://support.google.com/google-ads/answer/6239119?hl=en) can settle.
 
 <aside class="blog-callout">
   <strong>Practical review:</strong> Compare planned spend, actual spend, attributed revenue, settled net revenue, contribution, and cash timing in one monthly reconciliation.
@@ -183,6 +189,7 @@ ROAS starts the conversation; it does not finish the financial analysis. Build t
 <section class="blog-cta">
   <h3>Turn a spend ceiling into a transparent scenario</h3>
   <p>Use the <a href="/tools/marketing-budget">MlabsGrowth Marketing Budget Calculator</a> to allocate spend by channel and estimate projected revenue, orders, blended ROAS, and cost per order.</p>
+  <p>If the plan needs a team to brief, produce and run the campaigns from your approved brand context, see our <a href="/services/ai-automation">AI marketing workflow automation service</a>.</p>
   <p>The calculator works in your chosen currency and uses your assumptions. Actual performance depends on traffic, offer, conversion, attribution, and how channel efficiency changes with scale.</p>
 </section>
 
@@ -190,3 +197,5 @@ ROAS starts the conversation; it does not finish the financial analysis. Build t
 
 - [Google Ads Help, *Glossary*](https://support.google.com/google-ads/answer/12851704?hl=en), retrieved 2026-09-19.
 - [Google Ads Help, *Understand your Conversion Lift based on users measurement data*](https://support.google.com/google-ads/answer/14102450?hl=en), retrieved 2026-09-19.
+- [Google Ads Help, *Find out how long it takes for your customers to convert*](https://support.google.com/google-ads/answer/6239119?hl=en), retrieved 2026-10-19.
+- [Google Ads Help, *About attribution models*](https://support.google.com/google-ads/answer/6259715?hl=en), retrieved 2026-10-19.
