@@ -1,19 +1,18 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Unit Economics: A Guide to Profitable Growth"
 description: "Learn how to calculate unit economics across 5 markets, model contribution margin and CAC, and see whether every sale creates profitable, scalable growth."
 publishedOn: "2026-09-12"
-updatedOn: "2026-09-23"
-category: "Finance & growth"
+updatedOn: "2026-10-19"
+category: "Ecommerce profit & finance"
 author: "Mehul"
 readTime: "12 min read"
+coverImage: "/Blogs/unit-economics-guide/unit-economics-flow.webp"
 coverImageAlt: "Unit economics model showing how revenue becomes contribution margin after variable costs"
-wordCount: 3100
 faqs:
   - question: "What is a good unit economics ratio?"
     answer: "There is no universal ratio. A good result produces positive contribution, covers fixed costs at a realistic volume, and recovers CAC within the company's cash constraints."
-  - question: "What is the difference between gross margin and contribution margin?"
-    answer: "Gross margin subtracts cost of goods sold from net revenue. Contribution margin also subtracts the other costs that change with each sale, such as payment fees, fulfilment, shipping, returns, marketplace commission, and variable support."
   - question: "Should GST, HST, VAT, or sales tax count as revenue?"
     answer: "Tax collected for a government generally should not be treated as economic revenue. Remove pass-through tax from the customer payment, exclude recoverable input tax from unit cost, and include duties or taxes that the business cannot recover."
   - question: "How often should a company recalculate unit economics?"
@@ -24,18 +23,20 @@ faqs:
     answer: "Yes. Positive unit economics means each additional unit contributes something after variable costs. The business can still lose money when total contribution is not yet large enough to cover salaries, rent, software, and other fixed costs."
 ---
 
-Unit economics tells you whether one more sale makes the business financially stronger. It measures the revenue and variable costs attached to one order, customer, subscription, shipment, or transaction. Revenue can grow while every extra unit quietly destroys cash. This calculation exposes that problem early.
+Unit economics tells you whether one more sale makes the business financially stronger. It measures the revenue and variable costs attached to one order, customer, subscription, shipment, or transaction.
+
+Revenue can grow while every extra unit quietly destroys cash, and this calculation exposes that problem early.
 
 The core formulas work in Canada, Australia, the USA, the UK, and India. The inputs do not. Tax treatment, payment fees, fulfilment, returns, duties, customer acquisition, and local buying behaviour can turn the same customer-facing price into five different contribution outcomes.
 
 This guide gives founders and operators a practical model for both ecommerce and SaaS. It also shows how to compare countries without mistaking tax or currency differences for operational performance.
 
-<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a unit economics flow diagram" >
-  <img src="/Blogs/Unit and economic/image 1 une.png" alt="Unit economics flow diagram" width="1774" height="887" loading="lazy" decoding="async">
+<figure class="blog-feature-image">
+  <img src="/Blogs/unit-economics-guide/unit-economics-flow.webp" alt="Unit economics flow from selling price to contribution margin per order" width="1774" height="887" loading="lazy" decoding="async">
   
 </figure>
 
-> **Key takeaways**
+> **In brief**
 >
 > - Choose one meaningful unit before calculating anything.
 > - Use net revenue after discounts, refunds, and pass-through tax.
@@ -46,14 +47,14 @@ This guide gives founders and operators a practical model for both ecommerce and
 ## In this guide
 
 - [What unit economics means](#what-are-unit-economics)
-- [Why founders need it](#why-is-unit-economics-needed)
+- [Why founders need it](#why-revenue-growth-alone-can-mislead)
 - [The formulas and cost layers](#how-do-you-calculate-unit-economics)
-- [A worked ecommerce example](#what-does-a-worked-ecommerce-example-look-like)
-- [Ecommerce and SaaS differences](#how-should-ecommerce-and-saas-models-differ)
+- [A worked ecommerce example](#a-worked-ecommerce-example)
+- [Ecommerce and SaaS differences](#ecommerce-and-saas-same-logic-different-units)
 - [Canada, Australia, USA, UK, and India](#what-changes-in-canada-australia-the-usa-the-uk-and-india)
-- [A weekly, monthly, and quarterly review rhythm](#how-do-you-make-unit-economics-part-of-operations)
-- [The free unit economics calculator](#calculate-unit-economics-before-you-scale)
+- [A weekly, monthly, and quarterly review rhythm](#building-the-model-into-operations)
 - [Frequently asked questions](#frequently-asked-questions)
+- [The free unit economics calculator](#calculate-unit-economics-before-you-scale)
 
 ## What are unit economics?
 
@@ -68,15 +69,17 @@ A useful unit reflects how the business actually earns and spends money:
 
 Choosing the wrong unit produces a polished but misleading answer. A retailer that measures paid orders before returns will overstate contribution. A SaaS company that mixes free users with paying accounts will understate revenue per economic unit.
 
-The time period must also match. Monthly acquisition spend should be divided by new customers acquired in the same period. Subscription contribution, churn, and retention should be compared by cohort. Mixing annual costs with one month of results can make an efficient channel look expensive.
+The time period must also match. Monthly acquisition spend should be divided by new customers acquired in the same period, and subscription contribution, churn, and retention should be compared by cohort.
+
+Mixing annual costs with one month of results can make an efficient channel look expensive.
 
 <aside class="blog-callout">
   <strong>Useful distinction:</strong> Gross margin explains the product or service layer. Contribution margin explains fulfilment and delivery. Contribution after acquisition explains growth. Keeping these layers separate shows where the business model is leaking.
 </aside>
 
-## Why is unit economics needed?
+## Why revenue growth alone can mislead
 
-This measure is needed because total revenue cannot show whether the next customer is worth acquiring. It turns pricing, marketing, fulfilment, retention, and expansion into decisions grounded in contribution. The U.S. Small Business Administration's *Break-even point* guidance uses the same relationship between price, variable cost, fixed cost, and profit.
+Total revenue cannot show whether the next customer is worth acquiring. Unit economics can: it turns pricing, marketing, fulfilment, retention, and expansion into decisions grounded in contribution. The U.S. Small Business Administration's *Break-even point* guidance uses the same relationship between price, variable cost, fixed cost, and profit.
 
 Founders use unit economics to answer questions such as:
 
@@ -88,15 +91,15 @@ Founders use unit economics to answer questions such as:
 - Is a first-order loss supported by real repeat purchasing?
 - Will international expansion improve contribution after tax, duties, and fulfilment?
 
-Imagine revenue grows 40%, but each new order loses $4 after variable costs and acquisition. Growth increases the loss. The sales dashboard looks healthy while cash gets tighter.
-
-The reverse can also be true. A company with slower revenue growth may generate strong contribution, recover acquisition cost quickly, and fund its next growth cycle internally.
+Imagine revenue grows 40%, but each new order loses $4 after variable costs and acquisition. Growth increases the loss. The sales dashboard looks healthy while cash gets tighter. The reverse can also be true: a company with slower revenue growth may generate strong contribution, recover acquisition cost quickly, and fund its next growth cycle internally.
 
 Unit economics does not replace a profit and loss statement, cash-flow forecast, or working-capital plan. It connects individual activity to those company-level outcomes. A business may have positive contribution per order and remain unprofitable because total contribution has not yet covered salaries, rent, software, and other fixed costs.
 
 ## How do you calculate unit economics?
 
-Calculate unit economics in layers. Start with net revenue, subtract costs caused by the unit, then compare the remaining contribution with acquisition cost and fixed costs. Do not jump straight to LTV:CAC. A ratio built on weak revenue or cost definitions creates false confidence.
+Calculate unit economics in layers. Start with net revenue, subtract costs caused by the unit, then compare the remaining contribution with acquisition cost and fixed costs.
+
+Do not jump straight to LTV:CAC. A ratio built on weak revenue or cost definitions creates false confidence.
 
 ### 1. Net revenue per unit
 
@@ -178,7 +181,7 @@ Expected RTO drag per order = RTO rate x net cost of one RTO shipment
 
 The net cost may include forward shipping, reverse shipping, payment losses, handling, damaged inventory, and non-recoverable packaging. Subtract inventory value that can genuinely be recovered.
 
-For a deeper operating example, use the [guide to calculating COD RTO costs](/guides/calculate-cod-rto-cost) alongside this allowance.
+For a deeper operating example, use the [RTO cost guide](/blog/rto-cost-guide) alongside this allowance.
 
 ### Costs founders often miss
 
@@ -213,9 +216,9 @@ Break-even units = fixed costs / contribution margin per unit
 
 Always round break-even units up. Use contribution-based LTV, not revenue-based LTV. For a young company, realised cohort contribution over a fixed horizon is more defensible than an unsupported lifetime forecast.
 
-## What does a worked ecommerce example look like?
+## A worked ecommerce example
 
-A worked example makes the margin layers visible. Assume a product sells for 110 in a market with 10% tax included in the customer payment. All figures below use one consistent, illustrative currency. The example is a model, not a benchmark.
+The margin layers are easier to see with numbers in them. Assume a product sells for 110 in a market with 10% tax included in the customer payment. All figures below use one consistent, illustrative currency. The example is a model, not a benchmark.
 
 | Item | Calculation | Amount |
 |---|---:|---:|
@@ -242,9 +245,9 @@ First-order contribution after CAC = 46.50 - 30 = 16.50
 
 If monthly fixed costs are 18,600, the break-even volume depends on the order mix. Before new-customer acquisition, the model needs 400 orders because `18,600 / 46.50 = 400`. If every order belongs to a newly acquired customer with a CAC of 30, the model needs 1,128 orders because `18,600 / 16.50 = 1,127.27`, rounded up.
 
-Why show both? A blended store normally serves new and returning customers. Applying CAC to every order understates repeat-order economics. Ignoring CAC overstates growth economics. A useful dashboard separates first orders, repeat orders, and the blended company result.
+Both figures matter because a blended store normally serves new and returning customers. Applying CAC to every order understates repeat-order economics; ignoring CAC overstates growth economics. A useful dashboard separates first orders, repeat orders, and the blended company result.
 
-## How should ecommerce and SaaS models differ?
+## Ecommerce and SaaS: same logic, different units
 
 Ecommerce and SaaS use the same logic but different units and cost drivers. Ecommerce usually focuses on retained orders, fulfilment, returns, marketplace charges, and repeat purchasing. SaaS usually focuses on paid accounts, service delivery, churn, expansion, and CAC payback.
 
@@ -273,14 +276,16 @@ For example, an account with 100 in monthly revenue, an 80% gross margin, and 10
 Monthly contribution = 100 x 80% - 10 = 70
 ```
 
-If CAC is 700, simple payback is 10 months. The result should still be calculated by cohort. Enterprise accounts may cost more to acquire but retain longer. Self-serve customers may have low CAC but higher churn. One blended average can describe neither segment well.
+If CAC is 700, simple payback is 10 months. The result should still be calculated by cohort, because enterprise accounts may cost more to acquire but retain longer, while self-serve customers may have low CAC but higher churn.
+
+One blended average can describe neither segment well.
 
 ## What changes in Canada, Australia, the USA, the UK, and India?
 
 The formula is universal, but country inputs must be local. Normalize tax and currency first. Then compare fulfilment, payment fees, duties, returns, support, and CAC. Otherwise, the model may attribute a tax-display difference to operational performance.
 
-<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a five-country unit economics comparison graphic" >
-  <img src="/Blogs/Unit and economic/image 2 une.png" alt="Unit economics flow diagram" width="1536" height="1024" loading="lazy" decoding="async">
+<figure class="blog-feature-image">
+  <img src="/Blogs/unit-economics-guide/unit-economics-country-comparison.webp" alt="Unit economics for the same product compared across five countries" width="1536" height="1024" loading="lazy" decoding="async">
 
 </figure>
 
@@ -300,9 +305,9 @@ Recoverable input tax generally should not be treated as an economic cost. Unrec
 
 Tax registration, place-of-supply, marketplace, and cross-border rules change. Use this table for operating analysis, then confirm the accounting treatment with a qualified local adviser.
 
-## How do you make unit economics part of operations?
+## Building the model into operations
 
-Unit economics becomes useful when it is reviewed on a schedule and tied to decisions. A static spreadsheet ages quickly. Prices, discounts, fees, return rates, acquisition costs, churn, and currency can all move while the formula stays unchanged.
+Unit economics becomes useful when it is reviewed on a schedule and tied to decisions. A static spreadsheet ages quickly: prices, discounts, fees, return rates, acquisition costs, churn, and currency can all move while the formula stays unchanged.
 
 ### Evidence to collect before the review
 
@@ -337,27 +342,11 @@ Preserve definitions in a shared data dictionary with named fields, source syste
 
 Every metric should have an owner and a decision attached. CAC without a budget rule is reporting. Contribution margin without a pricing, product, or channel action is also reporting.
 
-## Calculate unit economics before you scale
-
-The first action is to calculate one representative order with current inputs. You do not need a perfect forecasting system. Start with the last complete month, reconcile the result with settlement and cost reports, then split it into the segments that can change a decision.
-
-<section class="blog-cta">
-  <h3>Run the numbers without another spreadsheet</h3>
-  <p>Use the <a href="/tools/unit-economics">MlabsGrowth Unit Economics Calculator</a> to estimate net selling price, gross margin, contribution margin, CAC, RTO drag per order, and break-even orders.</p>
-  <p>The calculator focuses on immediate order economics. It does not calculate LTV or CAC payback, because those require observed repeat-purchase, retention, churn, and cohort contribution data.</p>
-</section>
-
-The current calculator displays amounts in INR. If you are modelling Canada, Australia, the USA, or the UK, enter every monetary input in one consistent currency and read the numeric outputs as a scenario model. Confirm the final local-currency treatment in your own finance records.
-
 ## Frequently asked questions
 
 ### What is a good unit economics ratio?
 
 There is no universal ratio for every business. A good result produces positive contribution, covers fixed costs at a realistic volume, and recovers CAC within the company's cash constraints. Compare the result with your own cohorts, channels, products, and payback capacity before relying on an industry convention.
-
-### What is the difference between gross margin and contribution margin?
-
-Gross margin subtracts COGS from net revenue. Contribution margin also subtracts other costs that change with the sale, including payment fees, fulfilment, shipping subsidies, returns, and variable support. A product can show a healthy gross margin but weak contribution once the cost of completing the sale is included.
 
 ### Should GST, HST, VAT, or sales tax count as revenue?
 
@@ -375,11 +364,20 @@ Yes, but only when later contribution reliably recovers the first-order loss. Ec
 
 Yes. Positive unit economics means each additional unit contributes something after variable costs. The business can still lose money when total contribution is not large enough to cover salaries, rent, software, and other fixed costs. That is why break-even volume belongs beside contribution margin.
 
-## The bottom line
+## Calculate unit economics before you scale
 
-Unit economics tells you whether growth creates contribution or scales a loss. Define one meaningful unit, remove pass-through tax, separate gross margin from contribution, include acquisition and return costs where they occur, and compare the result with fixed costs.
+The first action is to calculate one representative order with current inputs. You do not need a perfect forecasting system. Start with the last complete month, reconcile the result with settlement and cost reports.
 
-Then segment it. Product, channel, country, cohort, and new-versus-returning status can produce very different answers. The goal is not the most detailed spreadsheet. It is a reliable answer to one operating question: does the next order or customer make the business stronger?
+<section class="blog-cta">
+  <h3>Run the numbers without another spreadsheet</h3>
+  <p>Use the <a href="/tools/unit-economics">MlabsGrowth Unit Economics Calculator</a> to estimate net selling price, gross margin, contribution margin, CAC, RTO drag per order, and break-even orders.</p>
+  <p>If the numbers show that conversion or order value is the weak link, our <a href="/services/store-conversion">Shopify conversion optimization service</a> works on the pages and cart decisions between the paid click and the completed order.</p>
+  <p>The calculator focuses on immediate order economics. It does not calculate LTV or CAC payback, because those require observed repeat-purchase, retention, churn, and cohort contribution data.</p>
+</section>
+
+The calculator lets you pick your currency. Whichever market you model, enter every monetary input in that one currency and read the outputs as a scenario model. Confirm the final local-currency treatment in your own finance records.
+
+Once that first order reconciles, segment it. Product, channel, country, cohort, and new-versus-returning status can produce very different answers. The point is not the most detailed spreadsheet; it is a reliable answer to one operating question: does the next order or customer make the business stronger, or does growth only scale a loss?
 
 ## Source notes
 

@@ -1,32 +1,28 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
-import { gsap, ScrollTrigger } from '@/lib/gsap';
-import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
-
+/** A 2px reading-progress bar. Native scroll + rAF, so the site-wide island does not ship GSAP. */
 export function ScrollProgress() {
   const barRef = useRef<HTMLDivElement>(null);
 
-  useIsomorphicLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        barRef.current,
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: document.documentElement,
-            start: 'top top',
-            end: 'bottom bottom',
-            scrub: 0.25,
-            invalidateOnRefresh: true,
-          },
-        }
-      );
-    });
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const root = document.documentElement;
+      const max = root.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      if (barRef.current) barRef.current.style.transform = `scaleX(${progress})`;
+    };
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
 
-    ScrollTrigger.refresh();
-    return () => ctx.revert();
+    update();
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    return () => {
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   return (

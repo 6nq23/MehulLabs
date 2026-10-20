@@ -19,11 +19,14 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/generate-og-images.cjs",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
     "test": "node --test \"tests/*.test.cjs\"",
-    "test:seo": "node scripts/check-seo.cjs"
+    "test:seo": "node scripts/check-seo.cjs",
+    "og:images": "node scripts/generate-og-images.cjs",
+    "check:post": "node scripts/check-blog-post.cjs"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.5",

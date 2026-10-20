@@ -4,13 +4,12 @@ draft: false
 title: "How to Track ChatGPT and AI Traffic in GA4 (2026)"
 description: "GA4 added a native AI Assistant channel in May 2026. Learn to track ChatGPT, Perplexity, Gemini and Claude traffic in GA4 and Shopify, and tie it to revenue."
 publishedOn: "2026-09-30"
-updatedOn: "2026-09-30"
-category: "AI search & analytics"
+updatedOn: "2026-10-19"
+category: "AI search & commerce"
 author: "Mehul"
 readTime: "11 min read"
 coverImage: "/Blogs/track-ai-traffic-ga4/ai-traffic-ga4-hero.png"
 coverImageAlt: "GA4 traffic acquisition report with an AI assistants channel grouping ChatGPT, Perplexity, Gemini, Copilot and Claude referrals"
-wordCount: 2411
 faqs:
   - question: "Does GA4 track ChatGPT traffic automatically?"
     answer: "Partly. Since 13 May 2026, GA4's default channel group includes an AI Assistant channel for traffic from sources such as ChatGPT, Gemini, DeepSeek, Copilot and Grok. Google has not published the full list of recognised referrers, so check your Session source report and add a custom channel group for anything the native channel misses."
@@ -26,21 +25,15 @@ faqs:
 
 ChatGPT, Perplexity, Gemini and Claude now send shoppers to online stores every day, but most analytics setups still file those visits under Referral or Direct. The result is a channel that store owners hear about constantly and cannot see in their own numbers.
 
-That changed partly in May 2026. Google Analytics added a native AI Assistant channel to its default channel group, and Shopify's reports can filter AI answer engines by referrer. Neither view is complete on its own, and some AI visits still arrive with no source at all.
+That changed partly in May 2026. Google Analytics added a native AI Assistant channel to its default channel group, and Shopify's reports can filter AI answer engines by referrer. Neither view is complete on its own. Google's own AI Overviews and AI Mode are not in the new channel at all, and some AI visits still arrive with no source.
 
-This guide shows how to track AI traffic in GA4 in 2026: what the native channel covers, how to build a custom channel group for the rest, how to cross-check in Shopify and how to connect AI visits to revenue rather than sessions.
+What follows covers how to track AI traffic in GA4 in 2026: what the native channel catches, how to build a custom channel group with a tested regex for the rest, how to cross-check in Shopify, and how to judge AI visits by orders and revenue rather than sessions.
 
 <figure class="blog-feature-image">
   <img src="/Blogs/track-ai-traffic-ga4/ai-traffic-ga4-hero.png" alt="GA4 traffic acquisition report with an AI assistants channel grouping ChatGPT, Perplexity, Gemini, Copilot and Claude referrals" width="1600" height="900" fetchpriority="high" decoding="async">
   <figcaption>Concept illustration with illustrative data: AI assistants grouped as their own channel in a GA4 traffic acquisition report.</figcaption>
 </figure>
 
-> **Key takeaways**
->
-> - Since 13 May 2026, GA4's default channel group includes an AI Assistant channel.
-> - Google AI Overviews and AI Mode are counted as Organic Search, not as AI Assistant.
-> - Add a custom channel group with a tested regex to catch AI sources the native channel misses.
-> - Some AI clicks still arrive as Direct; judge the channel by orders and revenue, not sessions alone.
 
 <div class="blog-brand-strip" aria-label="Platforms covered in this guide">
   <p>Platforms in this guide</p>
@@ -52,23 +45,13 @@ This guide shows how to track AI traffic in GA4 in 2026: what the native channel
   <span><img src="/platforms/shopify.svg" alt="" width="18" height="18" loading="lazy">Shopify</span>
 </div>
 
-## In this guide
+## Why AI traffic deserves its own channel
 
-- [Why AI traffic matters](#why-should-you-track-ai-traffic-separately)
-- [The native AI Assistant channel](#does-ga4-track-chatgpt-traffic-automatically)
-- [Building a custom channel group](#how-do-you-build-an-ai-channel-group-in-ga4)
-- [A regex that works](#which-regex-should-you-use-for-ai-sources)
-- [AI Overviews and AI Mode](#where-do-google-ai-overviews-and-ai-mode-clicks-go)
-- [Traffic hiding in Direct](#why-does-some-ai-traffic-show-up-as-direct)
-- [Checking in Shopify](#how-do-you-see-ai-traffic-in-shopify)
-- [Connecting AI traffic to revenue](#how-do-you-prove-ai-traffic-drives-revenue)
-- [Frequently asked questions](#frequently-asked-questions)
+AI traffic is small but growing fast, and it behaves differently from search or social visits. Shopify reported that AI referral sessions to its stores grew more than 8 times year on year in Q1 2026 and AI-referred orders grew nearly 13 times.
 
-## Why should you track AI traffic separately?
+Mixing those visits into Referral hides a channel that may deserve its own budget and content plan.
 
-AI traffic is small but growing fast, and it behaves differently from search or social visits. Shopify reported that AI referral sessions to its stores grew more than 8 times year on year in Q1 2026 and AI-referred orders grew nearly 13 times. Mixing those visits into Referral hides a channel that may deserve its own budget and content plan.
-
-Shopify's [AI search insights](https://www.shopify.com/enterprise/blog/ai-search-insights), published 11 May 2026, also found that 55% of AI sessions start on a product page, and that those sessions convert nearly 50% higher than organic search at a 14% higher average order value. Adobe data reported by [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/19/adobe-ai-referral-traffic-data-july-2026/) showed AI referrals to US retail sites up 62% year on year in July 2026, converting 60% better than non-AI traffic.
+The same Shopify [AI search insights](https://www.shopify.com/enterprise/blog/ai-search-insights) report, released on 11 May 2026, found that 55% of AI sessions start on a product page. Those sessions convert nearly 50% higher than organic search, with a 14% higher average order value. Adobe data reported by [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/19/adobe-ai-referral-traffic-data-july-2026/) showed AI referrals to US retail sites up 62% year on year in July 2026, converting 60% better than non-AI traffic.
 
 Similarweb's [AI referral traffic analysis](https://aisearch.similarweb.com/blog/ai-referral-traffic-by-industry/) estimates AI platforms sent an average of 770.7 million visits a month worldwide between June 2025 and May 2026, up 117.4% year on year, with ChatGPT responsible for more than 80% of AI referrals to the top 1,000 domains.
 
@@ -93,7 +76,7 @@ Three gaps remain:
 
 Open **Reports > Acquisition > Traffic acquisition**, switch the dimension to Session default channel group and look for AI Assistant. Then switch to Session source and search for AI domains that still appear under Referral. Anything you find there is the case for a custom channel group.
 
-## How do you build an AI channel group in GA4?
+## Building an AI channel group in GA4
 
 Create a custom channel group by copying the default group, adding an "AI assistants" channel and placing it above Referral. Google's [custom channel groups documentation](https://support.google.com/analytics/answer/13051316) says custom groups apply to reports retroactively, and traffic is assigned to the first channel whose definition it matches, so order decides the result.
 
@@ -110,7 +93,7 @@ Create a custom channel group by copying the default group, adding an "AI assist
 
 Standard GA4 properties allow 2 custom channel groups in addition to the default, and 360 properties allow 5, with up to 50 channels per group. Google notes that custom channel groups cannot be used in the Key events paths report.
 
-## Which regex should you use for AI sources?
+## A regex for AI sources, and how it behaves
 
 Use a full-match pattern that wraps the AI domains in `.*` on both sides. Google's [regex documentation](https://support.google.com/analytics/answer/1034324) says GA4 uses RE2 syntax, matches the full value by default and is case-sensitive. A pattern without `.*` only matches sources that equal a domain exactly.
 
@@ -140,7 +123,7 @@ Google Search Central's [AI features documentation](https://developers.google.co
 
 For a Shopify store, that means two different AI reports: GA4's AI channel for assistants like ChatGPT and Claude, and Search Console for Google's own AI features. Our [Shopify SEO for AI search guide](/blog/shopify-seo-ai-search-guide) covers how to earn visibility in both, and the [Google UCP checkout guide](/blog/google-ucp-checkout-shopify) explains what changes when shoppers can buy inside AI Mode.
 
-## Why does some AI traffic show up as Direct?
+## AI traffic that hides in Direct
 
 GA4 can only assign a source when the browser sends a referrer or the link carries UTM parameters. Clicks from mobile apps, copied links and links marked `noreferrer` arrive with neither, so GA4 records them as Direct. Seer Interactive's [analysis of AI traffic](https://www.seerinteractive.com/insights/are-ai-sites-like-chatgpt-sending-your-website-traffic) warns that ChatGPT visits without UTMs or referral data will likely appear as Direct.
 
@@ -163,7 +146,7 @@ According to Shopify, filter **Referrer channel** for ChatGPT, Perplexity and Co
 
 Expect GA4 and Shopify to disagree. They use different session definitions, consent handling and attribution windows. Pick one as the source of truth for AI revenue, usually Shopify for orders and GA4 for behaviour, and compare trends rather than exact totals. Our [agentic commerce guide](/blog/agentic-commerce-shopify-guide) explains how AI channels reach the Shopify checkout in the first place.
 
-## How do you prove AI traffic drives revenue?
+## From sessions to revenue and margin
 
 Report AI traffic by revenue, orders and contribution per session, split by landing page type. Sessions alone tell you the channel exists. Revenue per session and margin tell you whether to invest in it, and the landing page split shows whether shoppers arrive ready to buy or still researching.
 
@@ -179,7 +162,19 @@ Build one monthly view with these columns:
 
 Run the contribution figures through the [unit economics calculator](/tools/unit-economics) so AI orders are judged on profit after product, shipping and payment costs. The [POAS vs ROAS guide](/blog/poas-vs-roas) explains why that matters more than revenue once ChatGPT Ads and other paid AI placements enter the mix.
 
-If AI traffic lands mostly on product pages and converts well, invest in product data: our [AI product feed optimization guide](/blog/ai-product-feed-optimization) is the next step. If it lands mostly on guides, invest in answer-first content.
+If AI traffic lands mostly on product pages and converts well, invest in product data: our [Shopify SEO for AI search guide](/blog/shopify-seo-ai-search-guide) is the next step. If it lands mostly on guides, invest in answer-first content.
+
+## A monthly AI traffic routine
+
+Once the channel group exists, the same short check each month keeps the numbers honest:
+
+1. In **Traffic acquisition**, look at AI Assistant under Session default channel group, then switch to Session source and search for AI domains still sitting in Referral.
+2. Add any new assistant to the regex, and test the change in **Explore** with a Session source filter before saving it.
+3. Cross-check Shopify's Sessions by referrer report and agentic storefront orders, comparing trends rather than exact totals.
+4. Watch Direct sessions that land deep on product pages against the AI channel trend, and read the post-purchase survey answers to size what is hiding.
+5. Fill in the monthly view of sessions, landing page type, revenue per session, orders and contribution per order, then decide whether the next investment is product data or answer-first content.
+
+That routine is what turns "ChatGPT is sending us traffic" into a budget decision.
 
 <section class="blog-cta">
   <h2>See what AI assistants really send you</h2>
@@ -209,11 +204,6 @@ A visit only gets a source when the browser passes a referrer or the link carrie
 
 Open the Sessions by referrer report and filter Referrer channel for AI answer engines such as ChatGPT, Perplexity and Copilot, according to Shopify. For Gemini, filter Referrer host for gemini.google.com. Orders from Shopify's agentic storefronts show channel or referrer attribution in the admin.
 
-## The bottom line
-
-AI assistants are now a measurable channel, but only if you set GA4 up to see them. Start with the native AI Assistant channel, add a custom channel group with a tested regex for the sources it misses, and remember that Google's own AI features stay inside Organic Search.
-
-Then cross-check in Shopify, accept that some AI traffic hides in Direct, and judge the channel by orders and contribution per session. That is what turns "ChatGPT is sending us traffic" into a budget decision.
 
 ## Source notes
 

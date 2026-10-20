@@ -8,7 +8,7 @@
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/><circle cx="1430" cy="70" r="250" fill="#f4c84b" opacity=".07"/><circle cx="80" cy="850" r="300" fill="#ff7a59" opacity=".06"/>
   <g font-family="Inter, Arial, sans-serif">
-    <text x="100" y="110" fill="#f4c84b" font-size="23" font-weight="800" letter-spacing="4">MLABS GROWTH · BFCM RELEASE CONTROL</text>
+    <text x="100" y="110" fill="#f4c84b" font-size="23" font-weight="800" letter-spacing="4">MLABSGROWTH · BFCM RELEASE CONTROL</text>
     <text x="100" y="184" fill="#fffaf0" font-size="58" font-weight="800">Test the change.</text><text x="100" y="250" fill="#fffaf0" font-size="58" font-weight="800">Protect the decision.</text>
     <text x="100" y="300" fill="#c9c4b8" font-size="24">Shopify Rollouts turns one store change into a controlled release.</text>
     <g filter="url(#shadow)">

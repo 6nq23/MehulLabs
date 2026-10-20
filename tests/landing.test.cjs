@@ -38,7 +38,7 @@ const operatingExperienceSource = fs.readFileSync(
   'utf8',
 );
 const siteRuntimeSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/SiteRuntime.tsx'), 'utf8');
-const navbarSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/Navbar.tsx'), 'utf8');
+const navbarSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/HiveNavbar.astro'), 'utf8');
 const blogIndexSource = fs.readFileSync(path.join(__dirname, '..', 'src/pages/blog/index.astro'), 'utf8');
 
 test('blog is linked in navigation and discovers Markdown posts newest first', () => {
