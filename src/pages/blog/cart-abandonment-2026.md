@@ -4,7 +4,7 @@ draft: false
 title: "Cart Abandonment in 2026: Why 70% of Carts Still Leak"
 description: "The cart abandonment rate in 2026 still averages 70.22% per Baymard. See the checkout reasons behind it, how to measure yours in Shopify and the fixes that work."
 publishedOn: "2026-09-25"
-updatedOn: "2026-09-25"
+updatedOn: "2026-10-20"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "11 min read"
@@ -197,7 +197,7 @@ Stop the sequence as soon as the customer orders. Meta retargeting of cart aband
 
 ## Can bundles and free-shipping thresholds reduce abandonment?
 
-A free-shipping threshold addresses Baymard's largest reason, extra costs at 40%, and can raise average order value at the same time. Shopify lets you set a minimum order value on a price-based shipping rate or on a free-shipping discount. The threshold only helps if the margin on the extra units covers the shipping you absorb.
+A [free-shipping threshold calculated from margin and delivery cost](/blog/free-shipping-threshold) addresses Baymard's largest reason, extra costs at 40%, and can raise average order value at the same time. Shopify lets you set a minimum order value on a price-based shipping rate or on a free-shipping discount. The threshold only helps if the margin on the extra units covers the shipping you absorb.
 
 Set the threshold slightly above your current average order value, then give shoppers an easy way to reach it: a small add-on, a refill pack or a two-item bundle shown in the cart. The [bundle planner](/tools/bundle-planner) helps you test bundle prices against cost, and the [bundle pricing guide](/blog/bundle-pricing-guide) explains how to avoid discounting away the margin. Check the result in the [unit economics calculator](/tools/unit-economics) before you publish the threshold.
 
