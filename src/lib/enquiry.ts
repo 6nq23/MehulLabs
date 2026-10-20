@@ -18,7 +18,7 @@ export function buildEnquiry({ brand, interest, name = '', message = '', volume 
   const label = solutions.find(solution => solution.id === interest)?.label || 'Help me choose';
 
   return [
-    'Hi Mehul Labs, I’d like the free leak audit for my brand.',
+    'Hi MlabsGrowth, I’d like the free leak audit for my brand.',
     '',
     'Brand / website: ' + cleanBrand,
     'Biggest pain: ' + label,

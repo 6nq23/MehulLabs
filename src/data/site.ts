@@ -19,7 +19,40 @@ export const site = {
   whatsappUrl: 'https://wa.me/919979538416',
   /** The reply promise published under the enquiry form. Only publish what you will hold to. */
   replyWindow: 'Usually within one working day',
+  /** Square brand mark used for Organization schema and search favicons. */
+  logo: '/mlabsgrowth-icon.png',
+  /** Spellings people may search for. One public name (MlabsGrowth) everywhere else. */
+  alternateNames: ['Mlabs Growth', 'MLabs Growth'],
+  /** Remote-first service business: clients in any country. */
+  areaServed: 'Worldwide',
+  /**
+   * Official profiles that prove this is a real business (LinkedIn page, Instagram, X, YouTube,
+   * Clutch, Shopify Partner directory). Add full https URLs only; empty entries are ignored.
+   */
+  sameAs: [] as string[],
 } as const;
+
+/**
+ * The person behind the byline. A full name and public profiles are strong trust signals for
+ * Google: set `fullName` (for example "Mehul <Surname>") and add LinkedIn/X URLs to `sameAs`.
+ */
+export const founder = {
+  name: 'Mehul',
+  fullName: '',
+  jobTitle: 'Founder, MlabsGrowth',
+  image: '',
+  sameAs: [] as string[],
+  knowsAbout: [
+    'Shopify conversion rate optimization',
+    'Cash on delivery (COD) order confirmation',
+    'Return to origin (RTO) reduction',
+    'Ecommerce order operations',
+    'AI marketing workflows',
+    'D2C unit economics',
+  ],
+} as const;
+
+export const founderDisplayName = founder.fullName.trim() || founder.name;
 
 export const contactEmail =
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(site.email) && !/@example\.(com|org|net)$/i.test(site.email)

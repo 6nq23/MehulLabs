@@ -4,13 +4,12 @@ draft: false
 title: "Shopify Purchase Order Reports: A Weekly Control Plan"
 description: "Shopify added 3 purchase order reports in October 2026. Use this weekly review to track supplier costs, inbound stock, receiving gaps, and cash risk early."
 publishedOn: "2026-10-15"
-updatedOn: "2026-10-15"
-category: "Inventory operations"
+updatedOn: "2026-10-19"
+category: "Inventory & planning"
 author: "Mehul"
 readTime: "8 min read"
 coverImage: "/Blogs/shopify-purchase-order-reports/shopify-purchase-order-reports-hero.svg"
 coverImageAlt: "Three Shopify purchase order reports feeding a weekly inventory control plan"
-wordCount: 1720
 faqs:
   - question: "What are the three Shopify purchase order reports?"
     answer: "Shopify added Purchase order costs, Purchase order transfers, and Purchases on order. Together they cover ordered quantities and supplier costs, linked shipments and receiving, plus open ordered purchase orders without linked transfers. Availability can vary by store, so confirm the reports in Shopify Analytics."
@@ -22,7 +21,7 @@ faqs:
     answer: "No demand forecast is described in Shopify's release. The reports explain purchasing commitments and inbound movement already recorded in Shopify. Pair them with sales velocity, stock on hand, supplier lead time, and your reorder policy before placing another order."
 ---
 
-Shopify purchase order reports now bring supplier commitments, inbound movement, and receiving data into Shopify Analytics. The update is useful because it can replace a stitched-together weekly review with three defined report views. It does not turn ordered stock into available stock or make the next purchasing decision automatically.
+Shopify purchase order reports now bring supplier commitments, inbound movement, and receiving data into Shopify Analytics. The update is useful because it can replace a stitched-together weekly review with three defined report views. It does not turn ordered stock into available stock or make the next purchasing decision automatically. Treat the reports as an exception list, not a demand forecast or an accounting ledger.
 
 Shopify announced the reports on October 6, 2026. Search results across US, UK, India, and global-English queries show the same practical intent: merchants want to understand the three reports, find stock gaps, compare supplier costs, and know what the data cannot prove. This guide turns that intent into one weekly control plan.
 
@@ -31,14 +30,7 @@ Shopify announced the reports on October 6, 2026. Search results across US, UK, 
   <figcaption>Concept illustration: three new report views support one weekly review of purchasing cost, inbound movement, and receiving exceptions.</figcaption>
 </figure>
 
-> **Key takeaways**
->
-> - Shopify added three purchase order reports on October 6, 2026.
-> - Purchase orders record the agreement; linked transfers track physical movement.
-> - Accepted, rejected, and outstanding quantities need different actions.
-> - Use the reports as an exception list, not a demand forecast or accounting ledger.
-
-## What changed in Shopify purchase order reporting?
+## Three new report views in Shopify Analytics
 
 In October 2026, Shopify's *Analyze purchase orders in Shopify Analytics* announcement introduced three default reports and the ability to export purchase order data. The release also added summary measures on the Purchase Orders page, including total items ordered, acceptance rate, and shipments due soon.
 
@@ -69,7 +61,7 @@ The costs report converts supplier-currency metrics into store currency. Shopify
 
 For the buying trigger itself, use the [inventory reorder point guide](/blog/inventory-reorder-point-guide) and the [free inventory planner](/tools/inventory-planner). The reports explain what has already been ordered; reorder logic estimates when another commitment might be needed.
 
-## How do purchase orders, transfers, and receipts connect?
+## From purchase order to sellable stock
 
 Shopify separates one supplier order into two linked records. The purchase order holds products, quantities, costs, payment terms, and supplier details. A linked inventory transfer then tracks shipments, receiving, and cost adjustments. This split keeps the commercial agreement apart from the physical movement of goods.
 
@@ -104,22 +96,7 @@ Shopify's troubleshooting notes explain why this matters. Zero cost can mean tha
 
 For full product economics, compare these supplier records with the [landed cost guide](/blog/landed-cost-calculator-guide). Freight, customs, receiving, payment fees, returns, and advertising do not become complete merely because a purchase order has a total.
 
-## How should a team run the weekly review?
-
-Run five views in the same order each week: unlinked orders, transfers, costs, demand, and assigned exceptions. The reports supply the evidence, but the team still makes the decision. Every review should end with one owner and one next action for each material exception.
-
-1. **Open Purchases on order.** Check high-priority ordered POs without linked transfers. Confirm whether each is awaiting supplier shipment, missing setup, or stale.
-2. **Open Purchase order transfers.** Review shipments due soon, late movement, partial receipts, rejected units, and unresolved quantities.
-3. **Open Purchase order costs.** Compare spend and ordered quantity by supplier and SKU. Investigate material unit-cost changes.
-4. **Compare demand and availability.** Add sales velocity, current available stock, campaign commitments, and reorder points before approving another buy.
-5. **Assign exceptions.** Give each late, rejected, unlinked, or cost-change item one owner and one review date.
-
-<!-- [UNIQUE INSIGHT] -->
-The reports become operational only when each exception changes a decision. A rising supplier cost should trigger a margin review. A late shipment should trigger a merchandising contingency. Rejected stock should trigger a supplier credit, replacement, or write-off decision.
-
-If purchasing commitments threaten near-term liquidity, pair the review with the [cash runway guide](/blog/cash-runway-guide). Ordered cost, invoice due date, and cash leaving the bank are related, but they are not the same timestamp.
-
-## What should US, UK, India, and global teams verify?
+## Checks for US, UK, India, and global teams
 
 Across four English-language markets, the search intent stays operational: merchants want setup guidance, report definitions, and clear limits. The same three Shopify reports support those questions, while tax treatment, supplier terms, currencies, duties, and accounting rules remain local business inputs.
 
@@ -141,10 +118,27 @@ The boundary matters. Shopify's [inventory transfer reporting documentation](htt
 
 Before buying another app, write the missing decision in one sentence. If the gap is "show ordered POs without linked transfers," the native report may cover it. If the gap is "forecast the next twelve weeks across marketplaces and allocate cash," define the extra data and controls first.
 
+## A five-step weekly review routine
+
+Run five views in the same order each week: unlinked orders, transfers, costs, demand, and assigned exceptions. The reports supply the evidence, but the team still makes the decision. Every review should end with one owner and one next action for each material exception.
+
+1. **Open Purchases on order.** Check high-priority ordered POs without linked transfers. Confirm whether each is awaiting supplier shipment, missing setup, or stale.
+2. **Open Purchase order transfers.** Review shipments due soon, late movement, partial receipts, rejected units, and unresolved quantities.
+3. **Open Purchase order costs.** Compare spend and ordered quantity by supplier and SKU. Investigate material unit-cost changes.
+4. **Compare demand and availability.** Add sales velocity, current available stock, campaign commitments, and reorder points before approving another buy.
+5. **Assign exceptions.** Give each late, rejected, unlinked, or cost-change item one owner and one review date.
+
+<!-- [UNIQUE INSIGHT] -->
+The reports become operational only when each exception changes a decision. A rising supplier cost should trigger a margin review. A late shipment should trigger a merchandising contingency. Rejected stock should trigger a supplier credit, replacement, or write-off decision.
+
+If purchasing commitments threaten near-term liquidity, pair the review with the [cash runway guide](/blog/cash-runway-guide). Ordered cost, invoice due date, and cash leaving the bank are related, but they are not the same timestamp.
+
+Run that way, the three reports give the team a clearer weekly starting point. Keep the supplier agreement, stock movement, receiving result, and cash decision separate, then turn missing transfers, late shipments, rejected units, and changing costs into named actions.
+
 <section class="blog-cta">
   <h2>Turn the report into an owned weekly workflow</h2>
   <p>MlabsGrowth can map the handoffs, exceptions, and human approvals around your existing Shopify and order stack before automation is scoped.</p>
-  <p><a href="/services">Explore Shopify and order operations services</a>.</p>
+  <p><a href="/services/order-operations">See how we automate purchase orders and stock checks</a> or browse <a href="/services">all MlabsGrowth services</a>.</p>
 </section>
 
 ## Frequently asked questions
@@ -164,14 +158,6 @@ Not necessarily. Verify shipping, customs, receiving, and other adjustments befo
 ### Can Shopify purchase order reports forecast demand?
 
 No forecast is described in Shopify's release. Pair the reports with sales velocity, available stock, lead time, and reorder rules before buying.
-
-## The bottom line
-
-Shopify's three purchase order reports give operations teams a clearer weekly starting point. Keep the supplier agreement, stock movement, receiving result, and cash decision separate. Then turn missing transfers, late shipments, rejected units, and changing costs into named actions.
-
-<aside class="blog-callout">
-  <strong>About the author:</strong> Mehul runs MlabsGrowth and operates two D2C brands. He writes about Shopify conversion, ecommerce operations, and reviewable AI workflows. See the operating context on the <a href="/about">About page</a>.
-</aside>
 
 ## Source notes
 
