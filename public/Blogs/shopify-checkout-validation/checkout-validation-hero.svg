@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify checkout validation without lost sales</title>
+  <desc id="desc">A checkout path sends valid orders forward while routing fixable and blocked orders to clear next steps.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="90" y="78" width="1420" height="744" rx="44" fill="#f6f5f1" stroke="#131313" stroke-width="6"/>
+  <text x="150" y="172" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#707178">SHOPIFY CHECKOUT VALIDATION</text>
+  <text x="150" y="252" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800" fill="#131313">Protect the order.</text>
+  <text x="150" y="322" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800" fill="#131313">Keep the buyer moving.</text>
+  <rect x="150" y="410" width="390" height="208" rx="28" fill="#facc15" stroke="#131313" stroke-width="5"/>
+  <text x="345" y="480" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#131313">ORDER CHECK</text>
+  <text x="345" y="535" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" fill="#131313">Can the buyer fix it?</text>
+  <text x="345" y="580" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" fill="#131313">Must the order stop?</text>
+  <path d="M540 514 H690" fill="none" stroke="#131313" stroke-width="7"/>
+  <path d="M670 492 L700 514 L670 536" fill="none" stroke="#131313" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="710" y="370" width="330" height="144" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+  <circle cx="770" cy="442" r="25" fill="#facc15" stroke="#131313" stroke-width="4"/>
+  <text x="820" y="435" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#131313">VALID</text>
+  <text x="820" y="475" font-family="Inter, Arial, sans-serif" font-size="23" fill="#707178">Continue checkout</text>
+  <rect x="710" y="548" width="330" height="144" rx="24" fill="#f6f5f1" stroke="#707178" stroke-width="5"/>
+  <path d="M758 602 H790 M774 586 V618" stroke="#131313" stroke-width="6" stroke-linecap="round"/>
+  <text x="820" y="613" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#131313">FIXABLE</text>
+  <text x="820" y="653" font-family="Inter, Arial, sans-serif" font-size="23" fill="#707178">Explain the recovery</text>
+  <path d="M1040 442 H1140" fill="none" stroke="#131313" stroke-width="7"/>
+  <path d="M1120 420 L1150 442 L1120 464" fill="none" stroke="#131313" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1040 620 H1140" fill="none" stroke="#707178" stroke-width="7"/>
+  <path d="M1120 598 L1150 620 L1120 642" fill="none" stroke="#707178" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1160" y="360" width="280" height="342" rx="30" fill="#131313"/>
+  <text x="1300" y="430" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#facc15">NEXT STEP</text>
+  <text x="1300" y="497" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#f6f5f1">Purchase</text>
+  <line x1="1215" y1="532" x2="1385" y2="532" stroke="#707178" stroke-width="3"/>
+  <text x="1300" y="586" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" fill="#f6f5f1">Correct field</text>
+  <text x="1300" y="630" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" fill="#f6f5f1">Change option</text>
+  <text x="1300" y="674" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" fill="#f6f5f1">Contact support</text>
+  <text x="150" y="760" font-family="Inter, Arial, sans-serif" font-size="25" fill="#707178">Block only when operations cannot repair the order after purchase.</text>
+</svg>

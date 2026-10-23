@@ -4,7 +4,7 @@ draft: false
 title: "Cart Abandonment in 2026: Why 70% of Carts Still Leak"
 description: "The cart abandonment rate in 2026 still averages 70.22% per Baymard. See the checkout reasons behind it, how to measure yours in Shopify and the fixes that work."
 publishedOn: "2026-09-25"
-updatedOn: "2026-10-20"
+updatedOn: "2026-10-23"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "11 min read"
@@ -125,7 +125,7 @@ Shopify's report also shows added-to-cart rate and reached-checkout rate, but it
 
 In this illustrative example, the store loses as many carts before checkout as it does inside it, so the first fixes belong in the cart and on the product page. Split the same report by device and by traffic source. A mobile rate far above desktop usually points to a layout or payment problem, while a paid-social spike often signals browsing intent.
 
-Shopify also lists individual [abandoned checkouts](https://help.shopify.com/en/manual/orders/abandoned-checkouts) under **Orders > Abandoned checkouts**. A checkout appears there when the customer has provided an email address and has not finished for more than ten minutes. If you also use GA4, keep its funnel separate from Shopify's session counts; our guide to [tracking AI traffic in GA4](/blog/track-ai-traffic-ga4) covers channel set-up. For a wider baseline, work through the [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) before changing anything.
+Shopify also lists individual [abandoned checkouts](https://help.shopify.com/en/manual/orders/abandoned-checkouts) under **Orders > Abandoned checkouts**. A checkout appears there when the customer has provided an email address and has not finished for more than ten minutes. If a new rule is creating the drop-off, the [Shopify checkout validation guide](/blog/shopify-checkout-validation) shows how to choose block, warn or review behavior and test the recovery path. If you also use GA4, keep its funnel separate from Shopify's session counts; our guide to [tracking AI traffic in GA4](/blog/track-ai-traffic-ga4) covers channel set-up. For a wider baseline, work through the [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) before changing anything.
 
 ## Which fix matches each abandonment reason?
 

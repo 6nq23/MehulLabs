@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Purchase Order Reports: A Weekly Control Plan"
 description: "Shopify added 3 purchase order reports in October 2026. Use this weekly review to track supplier costs, inbound stock, receiving gaps, and cash risk early."
 publishedOn: "2026-10-15"
-updatedOn: "2026-10-15"
+updatedOn: "2026-10-21"
 category: "Inventory operations"
 author: "Mehul"
 readTime: "8 min read"
@@ -138,6 +138,8 @@ Do not use this article as tax or accounting advice. The safe cross-market rule 
 Shopify's three default reports are a good fit when the platform already holds purchase orders and receiving records your team trusts. A separate system may still be needed for demand forecasting, warehouse bin locations, lot traceability, supplier invoice matching, accounting entries, or multi-channel purchasing.
 
 The boundary matters. Shopify's [inventory transfer reporting documentation](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/inventory-transfers-and-shipments) supports shipment status, expected delivery, accepted quantity, rejected quantity, and acceptance rate. It does not prove a physical count is correct or an invoice should be paid.
+
+When a receiving exception points to a shelf mismatch, use a [variance-first Shopify stock count](/blog/shopify-stock-count) before changing replenishment or availability.
 
 Before buying another app, write the missing decision in one sentence. If the gap is "show ordered POs without linked transfers," the native report may cover it. If the gap is "forecast the next twelve weeks across marketplaces and allocate cash," define the extra data and controls first.
 
