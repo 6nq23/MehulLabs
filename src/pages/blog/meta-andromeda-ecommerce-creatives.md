@@ -4,13 +4,12 @@ draft: false
 title: "Meta Andromeda for Ecommerce: How Many Ads You Need"
 description: "Meta Andromeda rewards creative variety. Meta suggests at least 20 diversified ads per sales campaign. See how many creatives your budget can support."
 publishedOn: "2026-09-28"
-updatedOn: "2026-09-28"
-category: "Paid social"
+updatedOn: "2026-10-19"
+category: "AI marketing & automation"
 author: "Mehul"
 readTime: "11 min read"
 coverImage: "/Blogs/meta-andromeda-ecommerce-creatives/meta-andromeda-hero.png"
 coverImageAlt: "Grid of diverse ecommerce ad creatives feeding Meta's Andromeda ad retrieval system"
-wordCount: 2380
 faqs:
   - question: "What is Meta Andromeda?"
     answer: "Andromeda is Meta's machine learning system for ad retrieval, the first stage of ad delivery. Meta's engineering team says retrieval narrows tens of millions of candidate ads to a few thousand relevant ones before ranking. Meta introduced it publicly on 2 December 2024 as a way to strengthen Advantage+ automation."
@@ -28,19 +27,19 @@ Most small and mid-sized ecommerce brands need a consolidated sales campaign wit
 
 Meta Andromeda, the retrieval system Meta introduced in December 2024, decides which ads are shortlisted for each person. Because Meta now relies on your creative to find buyers, a thin or repetitive ad set gives it little to work with.
 
-This guide covers what Andromeda does, what "different" creative means, a practical 2026 account structure, and how to tie creative volume to budget.
+Below: what Andromeda does, what "different" creative means, a practical 2026 account structure, and how to tie creative volume to budget, ending with where to start if your account already runs.
 
 <figure class="blog-feature-image">
   <img src="/Blogs/meta-andromeda-ecommerce-creatives/meta-andromeda-hero.png" alt="Grid of diverse ecommerce ad creatives feeding Meta's Andromeda ad retrieval system" width="1600" height="900" fetchpriority="high" decoding="async">
   <figcaption>Concept illustration: a varied set of ecommerce creatives feeding Meta's ad retrieval stage. This is not a screenshot of Meta Ads Manager.</figcaption>
 </figure>
 
-> **Key takeaways**
+> **What changes in your account**
 >
-> - Andromeda is Meta's ad retrieval engine, announced on 2 December 2024.
-> - Meta recommends at least 20 diversified ads in Advantage+ sales campaigns.
-> - Similar-looking ads may be treated as the same ad and shown to the same people.
-> - Size creative testing to budget and judge winners on contribution margin, not ROAS alone.
+> - Retrieval now runs through Andromeda, the ad retrieval engine Meta announced on 2 December 2024.
+> - The ad count goes up: Meta recommends at least 20 diversified ads in Advantage+ sales campaigns.
+> - Similar-looking ads may be treated as the same ad and shown to the same people, so variety has to be real.
+> - Size creative testing to budget, and judge winners on contribution margin, not ROAS alone.
 
 <div class="blog-brand-strip" aria-label="Platforms covered in this guide">
   <p>Platforms in this guide</p>
@@ -52,12 +51,13 @@ This guide covers what Andromeda does, what "different" creative means, a practi
 ## In this guide
 
 - [What Meta Andromeda is](#what-is-meta-andromeda)
-- [Why creative now beats targeting](#why-does-creative-diversity-matter-more-than-audience-targeting)
+- [Why creative now beats targeting](#creative-now-does-the-targeting)
 - [What genuinely different creative means](#what-counts-as-a-genuinely-different-creative)
-- [A practical account structure](#how-should-you-structure-a-meta-ads-account-in-2026)
+- [A practical account structure](#a-consolidated-account-structure-for-2026)
 - [How many creatives your budget supports](#how-many-creatives-per-ad-set-does-your-budget-support)
-- [A creative production workflow](#how-do-you-produce-enough-creative-without-losing-quality)
-- [How to measure creative performance](#how-should-you-measure-creative-performance)
+- [A creative production workflow](#a-weekly-creative-production-cycle)
+- [How to measure creative performance](#measuring-creative-from-hook-rate-to-margin)
+- [Where to start with an existing account](#where-to-start-with-an-account-that-already-runs)
 - [Frequently asked questions](#frequently-asked-questions)
 
 ## What is Meta Andromeda?
@@ -72,11 +72,11 @@ For an advertiser, retrieval is a filter. If your ad never makes the shortlist f
   <strong>A common confusion:</strong> "Andromeda" has become a catch-all label for every change in Meta ads performance. It is specifically the retrieval engine. Advantage+ settings, bidding, and ranking are related but separate parts of the system.
 </aside>
 
-## Why does creative diversity matter more than audience targeting?
+## Creative now does the targeting
 
 Meta says it directly. Its April 2025 article on creative diversification states that the focus has shifted "from niche targeting to creative diversification" as the best lever for finding relevant audiences. When targeting is broad, the ad itself tells the system who might care, so each distinct creative opens a different pocket of buyers.
 
-In [*The Creative Advantage: Unlocking the Power of Diversification with Meta Andromeda*](https://www.facebook.com/business/news/the-creative-advantage-unlocking-the-power-of-diversification-with-meta-andromeda), Meta describes diversification as producing creatives "with different themes, messages, and visuals" for different audience segments. The same article reports that advertisers saw a 9% lower average cost per action with the new streamlined Advantage+ sales campaign setup.
+In that [April 2025 article on Andromeda and diversification](https://www.facebook.com/business/news/the-creative-advantage-unlocking-the-power-of-diversification-with-meta-andromeda), Meta describes diversification as producing creatives "with different themes, messages, and visuals" for different audience segments. It also reports that advertisers saw a 9% lower average cost per action with the new streamlined Advantage+ sales campaign setup.
 
 Consultant Jon Loomer puts the practical effect well in his [breakdown of Andromeda and creative diversification](https://www.jonloomer.com/meta-andromeda-creative-diversification/): many detailed targeting inputs now act as suggestions, and speaking to specific pain points in the ad is how you reach the right person.
 
@@ -100,7 +100,7 @@ Loomer's [seven examples](https://www.jonloomer.com/meta-andromeda-creative-dive
 <!-- [UNIQUE INSIGHT] -->
 > **A quick test we use:** describe each ad in one sentence without mentioning colours, fonts, or crop. If two ads produce the same sentence, count them as one concept. Most accounts that claim 30 active ads have fewer than 10 concepts by this test.
 
-## How should you structure a Meta ads account in 2026?
+## A consolidated account structure for 2026
 
 For most small and mid-sized ecommerce brands, the working structure is one main Advantage+ sales campaign for prospecting and retained demand, a small testing lane for new concepts, and very few ad sets. Meta renamed Advantage+ shopping campaigns to Advantage+ sales campaigns in 2025, and its product page reports a 20% lower average cost per result.
 
@@ -118,7 +118,9 @@ A practical layout looks like this:
 3. **Optional catalogue campaign:** for larger catalogues, a product-set campaign using your Shopify feed.
 4. **Exclusions and settings:** handle legal, geographic, and existing-customer rules at campaign level instead of creating new ad sets for each audience idea.
 
-Fragmentation hurts because learning happens at the ad set level. Meta's help documentation on [last significant edit](https://www.facebook.com/business/help/942374239243867) advises waiting for about 50 optimisation events after a significant edit before reading costs as stable. Ten small ad sets rarely reach that point. One well-funded ad set does.
+Fragmentation hurts because learning happens at the ad set level. Meta's help documentation on [last significant edit](https://www.facebook.com/business/help/942374239243867) advises waiting for about 50 optimisation events after a significant edit before reading costs as stable.
+
+Ten small ad sets rarely reach that point. One well-funded ad set does.
 
 ## How many creatives per ad set does your budget support?
 
@@ -143,7 +145,7 @@ These numbers are illustrative only; change the target CPA and the table moves. 
 
 To set the budget itself, use the [marketing budget calculator](/tools/marketing-budget) and the method in our [marketing budget guide](/blog/marketing-budget-guide). If you are planning for the sale season, the [BFCM 2026 profit checklist](/blog/bfcm-2026-profit-checklist) covers how to load new creative before costs rise.
 
-## How do you produce enough creative without losing quality?
+## A weekly creative production cycle
 
 A sustainable workflow runs weekly: review results, write briefs from what worked, produce new concepts from creators, founders, and AI-assisted tools, then run a human review before launch. Meta's own three-step guide describes this loop and reports that businesses using partnership ads with creators reduced CPAs by 19% on average.
 
@@ -161,7 +163,7 @@ The review step is not optional. AI tools can invent claims, misstate sizing or 
 
 Consistent briefs depend on consistent inputs. Our [AI brand context workflow](/guides/ai-brand-context-workflow) shows how to give AI tools a reusable brand, product, and customer file. For the wider set of automations around this cycle, see [AI marketing workflows for ecommerce](/blog/ai-marketing-workflows-ecommerce).
 
-## How should you measure creative performance?
+## Measuring creative from hook rate to margin
 
 Measure each creative at three levels: attention (hook rate), response (click-through and conversion rate), and profit (contribution margin per order). Motion defines hook rate as 3-second video plays divided by impressions. A creative that wins on attention but loses on profit is not a winner for the business.
 
@@ -184,10 +186,22 @@ Most creative reporting stops before profit. A discount-led creative may show st
 
 Also watch for Meta's Creative fatigue and Creative limited signals where they appear. They usually mean the set is too narrow, and the fix is a new concept rather than a new crop.
 
+## Where to start with an account that already runs
+
+Andromeda did not make targeting worthless, but it moved the main lever to creative. If your account was built for the older interest-based approach, work through it in this order:
+
+1. **Count real concepts.** Describe each active ad in one sentence without colours, fonts or crop, and merge the ads that produce the same sentence.
+2. **Consolidate.** Fold small interest-based ad sets into one main Advantage+ sales campaign, with a separate testing lane taking a fixed share of spend.
+3. **Size the testing.** Use the concepts-per-month formula with your own target cost per purchase, so every new concept gets enough spend to be read.
+4. **Start the weekly cycle.** Brief by persona, blocker, angle and format, tag each ad name with those labels, and keep the human review before launch.
+5. **Judge on profit.** Pick winners on contribution margin after ad cost, not ROAS alone.
+
+A smaller set of truly different ideas will beat a large pile of near-duplicates.
+
 <section class="blog-cta">
   <h2>Build a creative system that keeps pace with Andromeda</h2>
   <p>MlabsGrowth sets up AI-assisted briefing, variation, and review workflows so ecommerce teams can ship more genuinely different ads each week, with a human check before anything goes live.</p>
-  <p><a href="/services/ai-automation">Explore AI marketing workflow automation</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
+  <p><a href="/services/ai-automation">Build an AI creative-brief workflow for Meta ads</a> or <a href="https://calendly.com/kalathiyamehul13899/30min">book a 30-minute call</a>.</p>
 </section>
 
 ## Frequently asked questions
@@ -212,11 +226,6 @@ It still has a role for exclusions, legal limits, and market settings, but Meta 
 
 Review spend share, hook rate (3-second video plays divided by impressions), click-through rate, cost per purchase, and conversion rate for each ad. Then check contribution margin after product, shipping, returns, and ad cost, because a high-ROAS creative can still attract unprofitable orders.
 
-## The bottom line
-
-Andromeda did not make targeting worthless, but it moved the main lever to creative. Give Meta a consolidated structure, enough budget per ad set to learn, and a steady supply of ads that differ in concept, angle, persona, and format.
-
-Size your testing to what your budget can read, review every AI-assisted ad before launch, and pick winners on contribution margin. A smaller set of truly different ideas will beat a large pile of near-duplicates.
 
 ## Source notes
 

@@ -1,14 +1,15 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Cash Runway: A Practical Guide for Founders"
 description: "Model 24 months of cash using revenue, growth, fixed costs, variable costs, and marketing spend, then separate runway from accounting profit."
 publishedOn: "2026-09-17"
-updatedOn: "2026-09-19"
-category: "Cash flow & planning"
+updatedOn: "2026-10-19"
+category: "Ecommerce profit & finance"
 author: "Mehul"
 readTime: "8 min read"
+coverImage: "/Blogs/cash-runway-guide/cash-runway-chart.webp"
 coverImageAlt: "Cash runway forecast showing monthly revenue, costs, burn and closing cash"
-wordCount: 1372
 faqs:
   - question: "How do you calculate cash runway?"
     answer: "Project each month's closing cash as opening cash plus cash revenue minus fixed, variable, marketing, and other cash costs. Runway ends when closing cash reaches zero or below."
@@ -24,25 +25,19 @@ faqs:
 
 Cash runway is the length of time a business can continue before its projected cash balance reaches zero. A useful runway model starts with current cash, adds expected cash inflows, subtracts monthly cash costs, and repeats the calculation period by period.
 
-Runway is not a fixed ratio when revenue, costs, or working capital change. A simple cash divided by burn calculation is a helpful first check. A monthly forecast is better for decisions because it shows when growth, inventory, marketing, or payment timing changes the burn.
+Runway is not a fixed ratio when revenue, costs, or working capital change. A simple [cash divided by burn](https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/templates-business-guides/glossary/cash-runway) calculation is a helpful first check, but a monthly forecast is better for decisions because it shows when growth, inventory, marketing, or payment timing changes the burn.
 
-<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a cash runway line chart">
-  <img src="/Blogs/monthly cash run/monthly cash run.png" alt="How to calculate startup cash runway month by month." width="1536" height="1024" loading="lazy" decoding="async">
+<figure class="blog-feature-image">
+  <img src="/Blogs/cash-runway-guide/cash-runway-chart.webp" alt="How to calculate startup cash runway month by month" width="1536" height="1024" loading="lazy" decoding="async">
 </figure>
 
-> **Key takeaways**
->
-> - Calculate closing cash month by month, not only cash divided by current burn.
-> - Separate fixed costs, variable costs, and marketing so each assumption can change.
-> - Break-even month does not recover cash already spent.
-> - Add payment timing, inventory, tax, debt, and fundraising to a detailed cash forecast.
-> - Compare conservative, base, and upside scenarios before committing spend.
+> **In one minute:** calculate closing cash month by month, not only cash divided by current burn, and keep fixed costs, variable costs, and marketing separate so each assumption can change. Break-even month does not recover cash already spent. A detailed cash forecast adds payment timing, inventory, tax, debt, and fundraising, and you should compare conservative, base, and upside scenarios before committing spend.
 
 ## What is cash runway?
 
 Cash runway describes how long available cash can support operations under a stated scenario. It answers a survival question: if the business follows these revenue and cost assumptions, in which month does closing cash reach zero or below?
 
-Runway differs from profit. A business can report profit but run short of cash because customers pay later or inventory is purchased earlier. It can also show an accounting loss while cash lasts longer because of upfront customer payments or financing.
+Runway differs from profit. A business can report profit but run short of cash because customers pay later or inventory is purchased earlier, or show an accounting loss while cash lasts longer because of upfront customer payments or financing.
 
 The Australian Government's *Guide to managing cash flow* recommends using a cash flow statement to see money moving in and out, plan future costs, and identify seasonal patterns through regular updates. A runway view applies that discipline to the date at which available cash could be exhausted.
 
@@ -72,7 +67,7 @@ Closing cash = opening cash + revenue - total monthly costs
 
 The next month begins with the previous closing cash. In the free calculator, revenue changes by the entered month-over-month growth rate while fixed and marketing costs remain constant. The projection runs for 24 months.
 
-## What does a worked runway example look like?
+## A worked runway example
 
 If a company has ₹600,000 in cash and spends ₹100,000 more than it receives every month, the simple runway is six months.
 
@@ -92,7 +87,14 @@ Now use a monthly scenario:
 | Month-one total costs | ₹400,000 |
 | Month-one burn | ₹100,000 |
 
-With zero revenue growth, the simple six-month result holds. With positive growth, revenue and variable cost both rise, so the improvement in cash depends on contribution after variable cost. With negative growth, runway can shorten. This is why changing only the revenue line without its related costs creates false confidence.
+<figure class="blog-feature-image">
+  <img src="/Blogs/cash-runway-guide/cash-runway-months.svg" alt="Bar chart of closing cash falling from ₹600,000 to zero over six months at a ₹100,000 monthly burn" width="1600" height="900" loading="lazy" decoding="async">
+  <figcaption>The simple runway case: ₹100,000 of burn each month empties ₹600,000 of cash after six months if nothing else changes.</figcaption>
+</figure>
+
+With zero revenue growth, the simple six-month result holds. With positive growth, revenue and variable cost both rise, so the improvement in cash depends on contribution after variable cost. With negative growth, runway can shorten.
+
+That is why changing only the revenue line without its related costs creates false confidence.
 
 ## Which inputs matter most?
 
@@ -116,7 +118,7 @@ This represents costs that rise with revenue, such as product cost, fees, fulfil
 
 Keep planned marketing separate because it is a management decision and may be paid before revenue settles. Use the [marketing budget guide](/blog/marketing-budget-guide) to make the expected return explicit.
 
-## What does the simple model leave out?
+## What the simple model leaves out
 
 The calculator is a clean operating scenario. A full cash forecast should include material timing and financing events:
 
@@ -133,7 +135,7 @@ The calculator is a clean operating scenario. A full cash forecast should includ
 
 If inventory is a major use of cash, pair the forecast with the [inventory reorder point calculator](/tools/inventory-planner). A profitable reorder can still create a short-term cash gap.
 
-## How should founders use runway scenarios?
+## Running conservative, base, and upside scenarios
 
 Create at least three versions using the same structure:
 
@@ -143,11 +145,7 @@ Create at least three versions using the same structure:
 
 Then add decision triggers. For example, pause a hire if closing cash falls below a minimum buffer, reduce experimental media if its contribution misses a threshold, or begin financing work before the most likely runway becomes urgent.
 
-Sensitivity matters more than a precise-looking month count. Test revenue growth, variable cost rate, marketing, payroll timing, and one-off inventory orders. Focus on assumptions that can move the cash-out date materially.
-
-<aside class="blog-callout">
-  <strong>Operating rule:</strong> Update actual opening cash and the next 13 weeks frequently, then retain the 24-month view for strategic decisions.
-</aside>
+Sensitivity matters more than a precise-looking month count. Test revenue growth, variable cost rate, marketing, payroll timing, and one-off inventory orders, and focus on the assumptions that can move the cash-out date materially.
 
 ## Common runway mistakes
 
@@ -160,12 +158,25 @@ Sensitivity matters more than a precise-looking month count. Test revenue growth
 - Reading “24+ months” as unlimited runway.
 - Waiting until cash is nearly exhausted before defining actions.
 
+## Keep the forecast current
+
+Cash runway is a dated scenario, not a permanent fact. The month count is only as current as the opening cash and assumptions behind it, so treat the model as something you rerun rather than something you build once.
+
+<aside class="blog-callout">
+  <strong>Operating rule:</strong> Update actual opening cash and a [13-week rolling cash flow forecast](https://www.bdc.ca/en/articles-tools/blog/preparing-your-finances-for-economic-slowdown) frequently, then retain the 24-month view for strategic decisions.
+</aside>
+
+Each time you rerun it, recheck the sensitivity inputs, the cash-timing events listed above, and your decision triggers.
+
+Build it month by month, connect revenue to variable cost, and define actions early enough for the forecast to change a decision.
+
 ## Model your cash runway
 
 <section class="blog-cta">
   <h3>See how revenue and costs move cash over 24 months</h3>
   <p>Use the <a href="/tools/runway-planner">MlabsGrowth Cash Runway Calculator</a> to project closing cash, first-month burn, and a possible break-even month from your current cash, revenue, growth, fixed costs, variable costs, and marketing spend.</p>
-  <p>The calculator displays INR and provides a scenario, not financial advice. Add inventory timing, tax, debt, fundraising, and settlement timing in your detailed cash forecast.</p>
+  <p>If refunds, returns, or marketing judged on booked rather than collected revenue are eating into cash, see <a href="/services/b2c">growth and order automation for D2C brands</a>.</p>
+  <p>The calculator works in your chosen currency and provides a scenario, not financial advice. Add inventory timing, tax, debt, fundraising, and settlement timing in your detailed cash forecast.</p>
 </section>
 
 ## Frequently asked questions
@@ -190,11 +201,9 @@ Yes for a cash forecast. The simple calculator uses a variable-cost percentage, 
 
 It means projected cash stays above zero through the calculator's 24-month horizon, not that the business has unlimited runway.
 
-## The bottom line
-
-Cash runway is a dated scenario, not a permanent fact. Build it month by month, connect revenue to variable cost, and include every material cash-timing event in the detailed forecast. Then define actions early enough for the forecast to change a decision.
-
 ## Source notes
 
 - [U.S. Small Business Administration, *Break-even point*](https://legacy.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs/break-even-point), retrieved 2026-09-19.
 - [Australian Government, business.gov.au, *Guide to managing cash flow*](https://business.gov.au/guide/guide-to-managing-cash-flow), retrieved 2026-09-19.
+- [Business Development Bank of Canada, *Cash runway* (glossary)](https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/templates-business-guides/glossary/cash-runway), published 2025-04-04, retrieved 2026-10-19.
+- [Business Development Bank of Canada, *Preparing your finances for an economic slowdown*](https://www.bdc.ca/en/articles-tools/blog/preparing-your-finances-for-economic-slowdown), published 2023-02-17, retrieved 2026-10-19.

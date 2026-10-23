@@ -24,3 +24,6 @@ tsconfig.tsbuildinfo
 
 .agents
 /.claude
+
+# Scratch drafts from the daily blog automation
+.drafts/
