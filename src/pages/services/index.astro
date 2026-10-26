@@ -24,8 +24,8 @@ import growWithAgent from '../../../asset/illustrations/grow-with-agent-white.pn
       <div class="services-hero-image"><Image src={growWithAgent} widths={[640, 960, 1280, 1672]} sizes="(max-width: 760px) 140vw, min(100vw, 1680px)" format="webp" alt="" loading="eager" fetchpriority="high" decoding="async" /></div>
       </figure>
   </section>
-  <PlatformFamily />
   <Services />
+  <PlatformFamily />
   <section id="who-its-for" class="audience-section section-space" aria-labelledby="who-its-for-title">
     <div class="shell">
       <div class="section-intro">
@@ -63,7 +63,6 @@ import growWithAgent from '../../../asset/illustrations/grow-with-agent-white.pn
   .services-hero-copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding-bottom: clamp(.75rem, 1.5vw, 1.5rem); text-align: center; }
 
   /* Same headline look as the home hero: one ink colour, Quicksand, only the closing full stop in brand yellow. */
-  @font-face { font-family: 'Quicksand Hero'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/hero/quicksand-500-latin.woff2') format('woff2'); }
   .services-hero h1 { max-width: none; color: #131313; font-family: 'Quicksand Hero', 'Manrope Variable', sans-serif; font-size: clamp(40px, 4.3vw, 66px); font-weight: 500; line-height: 1.08; letter-spacing: -.065em; margin-bottom: 1rem; }
   .services-hero h1 em { color: inherit; }
   .services-hero .hero-dot { color: #ffcc1e; }

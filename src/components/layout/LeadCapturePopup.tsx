@@ -11,6 +11,8 @@ export function LeadCapturePopup() {
   const auditHref = site.bookingUrl;
 
   useEffect(() => {
+    // Reading pages and calculators are never interrupted: skip blog articles entirely.
+    if (window.location.pathname.startsWith('/blog/')) return;
     let cancelled = false;
 
     function showWhenReady() {
@@ -19,7 +21,8 @@ export function LeadCapturePopup() {
       if (!dialog) return;
       const anotherDialogIsOpen = Array.from(document.querySelectorAll<HTMLDialogElement>('dialog[open]'))
         .some(item => item !== dialog);
-      if (anotherDialogIsOpen) {
+      const typing = document.activeElement instanceof HTMLElement && document.activeElement.matches('input, textarea, select, [contenteditable="true"]');
+      if (anotherDialogIsOpen || typing) {
         retryRef.current = window.setTimeout(showWhenReady, 2500);
         return;
       }
