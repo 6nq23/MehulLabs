@@ -56,7 +56,7 @@ for (const [route, {html}] of pages) {
   if (route !== '/') {
    const crumbs = graph.find(node => node['@type'] === 'BreadcrumbList');
    assert.ok(crumbs && crumbs.itemListElement.length >= 2, `${route}: breadcrumbs`);
-   assert.ok(html.includes('aria-label="Breadcrumb"'));
+   assert.ok(!html.includes('aria-label="Breadcrumb"'), `${route}: visible breadcrumbs should be removed`);
    assert.equal(crumbs.itemListElement.at(-1).item, url.href);
   }
   if (route.startsWith('/guides/') || route.startsWith('/blog/')) {

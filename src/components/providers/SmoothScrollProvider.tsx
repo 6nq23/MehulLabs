@@ -55,7 +55,7 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
 
       event.preventDefault();
       if (lenis) {
-        const headerOffset = document.querySelector<HTMLElement>('.site-header')?.offsetHeight ?? 0;
+        const headerOffset = document.querySelector<HTMLElement>('[data-hive-header]')?.offsetHeight ?? 0;
         lenis.scrollTo(target as HTMLElement, { offset: -(headerOffset + 16), duration: 0.9 });
       } else {
         target.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'start' });

@@ -11,21 +11,18 @@ import { Contact } from '@/components/sections/Contact';
 import OperatingExperience from '@/components/ui/OperatingExperience.astro';
 import { audiences } from '@/data/audiences';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
-import salesAgentBee from '../../../asset/individual-bees/04-shopify-sales-agent-no-name.png';
+import growWithAgent from '../../../asset/illustrations/grow-with-agent-white.png';
 ---
 <Layout>
-  <section id="top" class="growth-hero">
-    <div class="shell growth-hero-grid">
-      <div>
-        <p class="growth-eyebrow">MlabsGrowth · BRAND SERVICES FOR D2C</p>
-        <h1>Fix what happens<br /><em>after the click,<br />and after the order.</em></h1>
-        <p class="growth-lead">Three services for D2C brands on Shopify: the pages that lose the sale, the COD orders that never turn into delivered revenue, and the marketing that restarts from zero every Monday. Start with the one costing you the most.</p>
-        <div class="growth-actions"><a class="growth-button" href={site.bookingUrl} data-cta-location="home-audit">Book my free audit call <span aria-hidden="true">↗</span></a><a class="growth-text-link" href="/products">Prefer to run it yourself? See products <span aria-hidden="true">↗</span></a></div>
-        <p class="growth-note">Free 30-minute audit. We rank the leaks we can see — the list is yours to keep. Written scope before any paid work.</p>
+  <section id="top" class="growth-hero services-hero">
+    <div class="shell services-hero-copy">
+      <h1>Fix what happens<br /><em>after the click and after the order<span class="hero-dot">.</span></em></h1>
+      <p class="growth-lead">Three services for D2C brands on Shopify: the pages that lose the sale, the COD orders that never turn into delivered revenue, and the marketing that restarts from zero every Monday. Start with the one costing you the most.</p>
+      <div class="growth-actions"><a class="growth-button" href={site.bookingUrl} data-cta-location="home-audit">Book my free audit call <span aria-hidden="true">↗</span></a><a class="growth-text-link" href="/products">Prefer to run it yourself? See products <span aria-hidden="true">↗</span></a></div>
       </div>
-      <figure class="growth-diagram"><Image src={salesAgentBee} widths={[320, 640]} sizes="(max-width: 700px) 80vw, 640px" format="webp" alt="Shopify sales agent" fetchpriority="high" /><figcaption>How we scope a connected workflow · illustrative example</figcaption></figure>
-    </div>
-    <div class="shell"><div class="growth-trust"><span>We run 2 D2C brands ourselves</span><span>One fixed scope, in writing</span><span>Built in your accounts, not ours</span></div></div>
+    <figure class="services-hero-art">
+      <div class="services-hero-image"><Image src={growWithAgent} widths={[640, 960, 1280, 1672]} sizes="(max-width: 760px) 140vw, min(100vw, 1680px)" format="webp" alt="" loading="eager" fetchpriority="high" decoding="async" /></div>
+      </figure>
   </section>
   <PlatformFamily />
   <Services />
@@ -60,3 +57,40 @@ import salesAgentBee from '../../../asset/individual-bees/04-shopify-sales-agent
   <Faq />
   <Contact />
 </Layout>
+
+<style>
+  .services-hero { overflow: hidden; padding-top: var(--hero-top); background: #fff; }
+  .services-hero-copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding-bottom: clamp(.75rem, 1.5vw, 1.5rem); text-align: center; }
+
+  /* Same headline look as the home hero: one ink colour, Quicksand, only the closing full stop in brand yellow. */
+  @font-face { font-family: 'Quicksand Hero'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/hero/quicksand-500-latin.woff2') format('woff2'); }
+  .services-hero h1 { max-width: none; color: #131313; font-family: 'Quicksand Hero', 'Manrope Variable', sans-serif; font-size: clamp(40px, 4.3vw, 66px); font-weight: 500; line-height: 1.08; letter-spacing: -.065em; margin-bottom: 1rem; }
+  .services-hero h1 em { color: inherit; }
+  .services-hero .hero-dot { color: #ffcc1e; }
+  .services-hero .growth-lead { margin: 0 auto; }
+  .services-hero .growth-actions { justify-content: center; margin-top: 1.4rem; }
+
+  /* The artwork's empty top half sits behind the text; the box below only frames the lower half with the bees. */
+  .services-hero-art { margin: 0; }
+  .services-hero-image { position: relative; max-width: 1680px; margin-inline: auto; aspect-ratio: 1672 / 520; pointer-events: none; }
+  .services-hero-image :global(img) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%), linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, transparent, #000 20%), linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-composite: intersect;
+  }
+
+  @media (max-width: 700px) {
+    .services-hero h1 { font-size: clamp(34px, 9vw, 52px); }
+  }
+
+  @media (max-width: 760px) {
+    .services-hero-image { aspect-ratio: 2.3 / 1; }
+    .services-hero-image :global(img) { left: 50%; width: 140%; max-width: none; transform: translateX(-50%); }
+  }
+</style>

@@ -24,7 +24,7 @@ export function Footer({ ctaLocation = 'footer' }: Props) {
             <span>Mlabs</span>Growth
           </a>
           <div className="hive-footer__columns">
-            <nav aria-label="Explore">
+            <nav aria-label=  "Explore">
               <a href="/services">Services</a>
               <a href="/products">Products</a>
               <a href="/tools">Free tools</a>
@@ -38,10 +38,10 @@ export function Footer({ ctaLocation = 'footer' }: Props) {
         </div>
       </div>
       <div className="hive-footer__garden" aria-hidden="true">
-        <img className="hive-footer__landscape" src="/footer-garden.webp" width="1920" height="695" alt="" loading="lazy" decoding="async" />
-        <img className="hive-footer__bee hive-footer__bee--shopify" src="/footer-shopify-bee.webp" width="240" height="240" alt="" loading="lazy" decoding="async" />
-        <img className="hive-footer__bee hive-footer__bee--queen" src="/footer-queen.webp" width="420" height="420" alt="" loading="lazy" decoding="async" />
-        <img className="hive-footer__bee hive-footer__bee--marketing" src="/footer-marketing-bee.webp" width="240" height="240" alt="" loading="lazy" decoding="async" />
+        <img className="hive-footer__landscape" src="/footer/garden.webp" width="1920" height="695" alt="" loading="lazy" decoding="async" />
+        <img className="hive-footer__bee hive-footer__bee--shopify" src="/footer/shopify-bee.webp" width="240" height="240" alt="" loading="lazy" decoding="async" />
+        <img className="hive-footer__bee hive-footer__bee--queen" src="/footer/queen.webp" width="420" height="420" alt="" loading="lazy" decoding="async" />
+        <img className="hive-footer__bee hive-footer__bee--marketing" src="/footer/marketing-bee.webp" width="240" height="240" alt="" loading="lazy" decoding="async" />
       </div>
     </footer>
   );
