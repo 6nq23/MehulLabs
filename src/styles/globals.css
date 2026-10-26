@@ -525,8 +525,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .services-section { padding-block: clamp(4rem, 7vw, 7rem); }
 .service-route-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(2.5rem, 5vw, 4rem); }
-.service-route-card { display: flex; min-width: 0; min-height: 28rem; flex-direction: column; padding: clamp(1.5rem, 2.5vw, 2.5rem); background: #ffffff; border: 1px solid #ebebe6; border-radius: 6px; transition: transform .3s cubic-bezier(.22, 1, .36, 1), border-color .3s, background .3s; }
+.service-route-card { position: relative; display: flex; min-width: 0; min-height: 28rem; flex-direction: column; padding: clamp(1.5rem, 2.5vw, 2.5rem); background: #ffffff; border: 1px solid #ebebe6; border-radius: 6px; transition: transform .3s cubic-bezier(.22, 1, .36, 1), border-color .3s, background .3s; }
 .service-route-card:hover { transform: translateY(-4px); background: #f6f5f1; border-color: #ebebe6; }
+.service-route-bee { position: absolute; top: clamp(1.25rem, 2vw, 2rem); right: clamp(1.25rem, 2vw, 2rem); width: 4.5rem; height: 4.5rem; object-fit: contain; pointer-events: none; }
 .service-route-card h3 { margin-top: clamp(2.5rem, 4vw, 4rem); font-size: clamp(1.55rem, 2.25vw, 2.2rem); font-weight: 600; line-height: 1.18; letter-spacing: -.05em; }
 .service-route-card > p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; color: #66676e; }
 .service-route-card ul { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }

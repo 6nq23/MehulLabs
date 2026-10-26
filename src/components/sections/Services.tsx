@@ -2,7 +2,7 @@ import { site } from '@/data/site';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import { getServicePillar, serviceRoutes } from '@/data/services';
 
-export function Services() {
+export function Services({ bees = {} }: { bees?: Record<string, string> }) {
   return (
     <section id="services" className="services-section section-space" aria-labelledby="services-title">
       <div className="shell">
@@ -26,6 +26,7 @@ export function Services() {
             const pillar = getServicePillar(service);
             return (
               <a id={pillar.id} href={`/services/${service.slug}`} className="service-route-card" key={service.slug}>
+                {bees[service.slug] && <img className="service-route-bee" src={bees[service.slug]} width={160} height={160} alt="" loading="lazy" decoding="async" />}
                 <div className="service-top"><span>{pillar.number}</span><span>{service.navLabel}</span></div>
                 <h3>{service.navDescription}</h3>
                 <p>{pillar.outcome}</p>

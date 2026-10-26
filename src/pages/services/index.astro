@@ -1,7 +1,8 @@
 ---
 import { site } from '@/data/site';
 import Layout from '@/layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
+import { relatedBee } from '@/data/relatedBees';
 import { guides } from '@/data/guides';
 import PlatformFamily from '@/components/sections/PlatformFamily.astro';
 import { Services } from '@/components/sections/Services';
@@ -12,6 +13,7 @@ import OperatingExperience from '@/components/ui/OperatingExperience.astro';
 import { audiences } from '@/data/audiences';
 import { ArrowIcon } from '@/components/ui/MagneticButton';
 import growWithAgent from '../../../asset/illustrations/grow-with-agent-white.png';
+const serviceBees = Object.fromEntries(await Promise.all((['store-conversion', 'order-operations', 'ai-automation'] as const).map(async slug => [slug, (await getImage({ src: relatedBee[slug], width: 160, height: 160, format: 'webp' })).src])));
 ---
 <Layout>
   <section id="top" class="growth-hero services-hero">
@@ -24,7 +26,7 @@ import growWithAgent from '../../../asset/illustrations/grow-with-agent-white.pn
       <div class="services-hero-image"><Image src={growWithAgent} widths={[640, 960, 1280, 1672]} sizes="(max-width: 760px) 140vw, min(100vw, 1680px)" format="webp" alt="" loading="eager" fetchpriority="high" decoding="async" /></div>
       </figure>
   </section>
-  <Services />
+  <Services bees={serviceBees} />
   <PlatformFamily />
   <section id="who-its-for" class="audience-section section-space" aria-labelledby="who-its-for-title">
     <div class="shell">
