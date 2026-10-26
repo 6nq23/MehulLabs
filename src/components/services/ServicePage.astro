@@ -4,6 +4,8 @@ import { Assurance } from '@/components/sections/Assurance';
 import { Contact } from '@/components/sections/Contact';
 import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
 import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { relatedBee, type RelatedBeeSlug } from '@/data/relatedBees';
 import { serviceSearchContent } from '@/data/searchContent';
 import { tools } from '@/data/tools';
 import { guides } from '@/data/guides';
@@ -117,8 +119,11 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
         <div class="related-service-grid">
           {related.map(item => (
             <a href={`/services/${item.slug}`}>
-              <span>{item.navLabel}</span>
-              <strong>{item.navDescription}</strong>
+              <Image src={relatedBee[item.slug as RelatedBeeSlug]} width={64} height={64} format="webp" alt="" loading="lazy" />
+              <div>
+                <span>{item.navLabel}</span>
+                <strong>{item.navDescription}</strong>
+              </div>
               <ArrowIcon />
             </a>
           ))}
