@@ -270,9 +270,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (min-width: 1920px) {
   :root { --shell-x: clamp(5rem, 7vw, 10rem); }
+  .shell { max-width: 112rem; }
   .section-description { font-size: 1rem; }
 }
 
+@media (min-width: 2560px) {
+  .shell { max-width: 120rem; }
+}
 @media (prefers-reduced-motion: reduce) {
   [data-reveal], [data-word] { opacity: 1 !important; transform: none !important; }
 }

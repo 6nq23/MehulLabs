@@ -31,7 +31,7 @@ const config: Config = {
         eyebrow: ['0.6875rem', { lineHeight: '1', letterSpacing: '0.18em', fontWeight: '500' }],
       },
       maxWidth: {
-        shell: '80rem',
+        shell: '96rem',
       },
       transitionTimingFunction: {
         premium: 'cubic-bezier(0.22, 1, 0.36, 1)',
