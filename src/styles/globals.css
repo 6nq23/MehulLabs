@@ -294,6 +294,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .offer-service-heading > span { padding-top: .25rem; font-size: .75rem; color: #66676e; }
 .offer-service-heading p { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #131313; }
 .offer-service-heading h3 { max-width: 24ch; margin-top: .6rem; font-size: clamp(1.7rem, 3vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -.05em; }
+@media (min-width: 701px) {
+  .offers-page .offer-choice-grid { row-gap: 0; }
+  .offers-page .offer-card { display: grid; grid-row: span 7; grid-template-rows: subgrid; row-gap: 0; min-height: 0; }
+}
+.guide-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; }
+.guide-card .text-link { margin-top: auto; }
+.guide-card .text-link::after { content: ''; position: absolute; inset: 0; }
 .offer-choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
 .offer-card { display: flex; min-width: 0; min-height: 35rem; flex-direction: column; padding: clamp(1.5rem, 3vw, 3rem); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
 .offer-card-pilot { background: #f6f5f1; border-color: #ebebe6; }
@@ -411,6 +418,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tool-status { display: inline-flex; align-items: center; gap: .4rem; padding: .4rem .7rem; border: 1px solid #ebebe6; border-radius: 999px; font-size: .75rem; line-height: 1; color: #131313; }
 .tool-card h3 { max-width: 14ch; margin-top: clamp(2.5rem, 4vw, 4rem); font-size: clamp(1.5rem, 2vw, 2rem); font-weight: 600; line-height: 1.2; letter-spacing: -.045em; }
 .tool-card > p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; color: #66676e; }
+@media (min-width: 1200px) { .tool-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } .tool-card { min-height: 26rem; } .tool-card h3 { font-size: 1.4rem; } }
+@media (min-width: 701px) and (max-width: 1199px) { .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .tool-card ul { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid #ebebe6; }
 .tool-card li { display: inline-flex; gap: .45rem; font-size: .8125rem; line-height: 1.5; color: #66676e; }
 .tool-card li span { color: #131313; }
