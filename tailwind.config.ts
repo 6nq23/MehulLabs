@@ -8,18 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        canvas: '#F7F7F2',
-        surface: '#efede7',
-        line: '#dddad1',
+        canvas: '#f6f5f1',
+        surface: '#ffffff',
+        line: '#ebebe6',
         ink: {
-          DEFAULT: '#18181b',
-          muted: '#605d56',
-          faint: '#6b675c',
+          DEFAULT: '#131313',
+          muted: '#66676e',
+          faint: '#66676e',
         },
         accent: {
-          DEFAULT: '#ffcb16',
+          DEFAULT: '#facc15',
           bright: '#facc15',
-          soft: '#ebe8dd',
+          soft: '#f6f5f1',
           ring: 'rgba(113, 108, 92, 0.22)',
         },
       },

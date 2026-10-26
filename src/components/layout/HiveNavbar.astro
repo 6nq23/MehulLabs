@@ -151,8 +151,6 @@ import { site } from '@/data/site';
 <style>
   /* Flat and transparent at the top; the pill (background, border, blur) fades in as --hive-scroll grows. */
   .hive-header { --hive-scroll: 0; --hive-speed: 1; --hive-ink-top: #131313; --hive-pill: min(1, calc(var(--hive-scroll) * var(--hive-speed))); --hive-ink: #131313; position: fixed; z-index: 50; inset: 0 0 auto; padding: 24px clamp(20px,4vw,40px) 0; color: #131313; color: var(--hive-ink); pointer-events: none; }
-  /* Pages that open on a dark hero: white text while transparent, dark text once the white pill has formed. */
-  :global(body:has(.service-hero, .offers-hero, .tools-masthead, .calculator-hero)) .hive-header { --hive-speed: 3; --hive-ink-top: #fff; --hive-ink: color-mix(in srgb, #131313 calc(var(--hive-pill) * 100%), var(--hive-ink-top)); }
   .hive-nav { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: var(--hive-nav-width, 100%); max-width: 1600px; min-height: 72px; margin-inline: auto; padding: 6px 8px 6px calc(6px + var(--hive-scroll) * 28px); border: 1px solid rgba(220, 220, 220, calc(var(--hive-pill) * .5)); border-radius: 999px; background: rgba(255, 255, 255, calc(var(--hive-pill) * .75)); box-shadow: 0 10px 40px rgba(0,0,0,calc(var(--hive-pill) * .06)); backdrop-filter: blur(calc(var(--hive-pill) * 20px)); -webkit-backdrop-filter: blur(calc(var(--hive-pill) * 20px)); pointer-events: auto; transition: width .4s cubic-bezier(.22,1,.36,1), box-shadow .3s, background .3s; }
   a { color: inherit; text-decoration: none; }
   a:focus-visible,summary:focus-visible { outline: 2px solid #996400; outline-offset: 4px; }
