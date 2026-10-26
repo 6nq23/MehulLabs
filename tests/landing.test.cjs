@@ -38,7 +38,7 @@ const operatingExperienceSource = fs.readFileSync(
   'utf8',
 );
 const siteRuntimeSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/SiteRuntime.tsx'), 'utf8');
-const navbarSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/Navbar.tsx'), 'utf8');
+const navbarSource = fs.readFileSync(path.join(__dirname, '..', 'src/components/layout/HiveNavbar.astro'), 'utf8');
 const blogIndexSource = fs.readFileSync(path.join(__dirname, '..', 'src/pages/blog/index.astro'), 'utf8');
 
 test('blog is linked in navigation and discovers Markdown posts newest first', () => {
@@ -190,7 +190,7 @@ test('WhatsApp draft encoding preserves special characters without sending anyth
   const draft = buildEnquiry({ brand: 'A & B + परीक्षण', interest: 'ai-automation', message: 'https://example.com/?a=1&b=2\nSecond line' });
   const url = new URL(getWhatsAppDraftUrl(draft));
   assert.equal(url.origin, 'https://wa.me');
-  assert.equal(url.pathname, '/919426016918');
+  assert.equal(url.pathname, '/919979538416');
   assert.equal(url.searchParams.get('text'), draft);
   assert.equal([...url.searchParams].length, 1);
 });
@@ -277,10 +277,39 @@ test('campaign tags reach Calendly through internal navigation without copying u
   assert.equal(booking.searchParams.get('utm_content'), 'video1');
   assert.equal(booking.searchParams.has('email'), false);
   assert.equal(booking.searchParams.has('gclid'), false);
-  assert.equal(attributedHref('https://wa.me/919426016918', page), 'https://wa.me/919426016918');
+  assert.equal(attributedHref('https://wa.me/919979538416', page), 'https://wa.me/919979538416');
   assert.equal(attributedHref('#faq', page), '#faq');
   const direct = new URL(attributedHref('https://calendly.com/kalathiyamehul13899/30min', 'https://www.mlabsgrowth.com/services/store-conversion'));
   assert.equal(direct.searchParams.get('utm_content'), '/services/store-conversion');
   const override = new URL(attributedHref('/offers?utm_campaign=existing', page));
   assert.equal(override.searchParams.get('utm_campaign'), 'existing');
+});
+
+test('B2C and B2B pages invent no numbers, link real services and promise nothing unapproved', () => {
+  const { audiences } = loadSource('src/data/audiences.ts');
+  const { serviceRoutes } = loadSource('src/data/services.ts');
+  const slugs = serviceRoutes.map(service => service.slug);
+  assert.equal(audiences.map(audience => audience.id).join(','), 'b2c,b2b');
+  for (const audience of audiences) {
+    assert.ok(!slugs.includes(audience.slug), 'Audience page collides with a service page: ' + audience.slug);
+    assert.ok(fs.existsSync(path.join(__dirname, '..', 'src/pages/services', audience.slug + '.astro')), 'Missing page for ' + audience.slug);
+    assert.ok(audience.faqs.length >= 3, 'Too few FAQs on ' + audience.slug);
+  }
+  for (const audience of audiences) {
+    assert.equal(audience.leaks.length, 3);
+    for (const leak of audience.leaks) {
+      assert.ok(leak.check.startsWith('Check it yourself:'));
+      assert.doesNotMatch(leak.title + leak.body + leak.check, /\d+\s?%|\d+x\b/i, 'Unsourced statistic in ' + audience.id + ' leak');
+    }
+    for (const useCase of audience.useCases) assert.ok(slugs.includes(useCase.serviceSlug), 'Unknown service: ' + useCase.serviceSlug);
+    if (audience.research) {
+      assert.match(audience.research.url, /^https:\/\//);
+      assert.ok(audience.research.source.trim() && audience.research.quote.trim());
+    }
+    const { research, ...copy } = audience;
+    const text = JSON.stringify(copy).toLowerCase();
+    for (const phrase of ['money back', 'refund', 'guarantee', 'roi', 'double your', 'compliant', '%']) {
+      assert.ok(!text.includes(phrase), 'Unapproved claim in ' + audience.id + ': ' + phrase);
+    }
+  }
 });

@@ -1,14 +1,15 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
+draft: false
 title: "Inventory Reorder Points: A Practical Guide"
 description: "Calculate a reorder point in 3 steps using daily sales, lead time, and safety stock, then avoid the stockout and cash-flow mistakes a formula misses."
 publishedOn: "2026-09-15"
-updatedOn: "2026-09-19"
+updatedOn: "2026-10-22"
 category: "Inventory operations"
 author: "Mehul"
 readTime: "8 min read"
+coverImage: "/Blogs/inventory-reorder-point-guide/reorder-point-sawtooth-graph.webp"
 coverImageAlt: "Inventory level falling toward a reorder point and safety stock buffer"
-wordCount: 1321
 faqs:
   - question: "What is the reorder point formula?"
     answer: "A simple reorder point is average daily sales multiplied by supplier lead time plus safety days. The same formula can be expressed as lead-time demand plus safety stock."
@@ -24,19 +25,13 @@ faqs:
 
 An inventory reorder point is the stock level that tells you when to place the next purchase order. The basic calculation covers expected demand during supplier lead time plus a safety buffer. It helps a business reorder early enough to reduce stockouts without buying simply because a shelf looks low.
 
-The formula is simple. The operating work is choosing reliable sales velocity, lead time, and safety stock for each SKU. A single average applied to every product can lock cash into slow stock while fast sellers still run out.
+The formula is simple. The operating work is choosing reliable sales velocity, lead time, and safety stock for each SKU, and treating that safety stock as a service-versus-cash decision rather than free insurance.
 
-<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for a reorder point inventory chart">
-  <img src="/Blogs/Inventory Reorder Point Guide/Reorder Point Sawtooth Graph.png" alt="Inventory reorder point and safety stock explained." width="1536" height="1024" loading="lazy" decoding="async">
+A single average applied to every product can lock cash into slow stock while fast sellers still run out.
+
+<figure class="blog-feature-image">
+  <img src="/Blogs/inventory-reorder-point-guide/reorder-point-sawtooth-graph.webp" alt="Inventory reorder point and safety stock shown on a sawtooth stock graph" width="1536" height="1024" loading="lazy" decoding="async">
 </figure>
-
-> **Key takeaways**
->
-> - Reorder point equals lead-time demand plus safety stock.
-> - The trigger level and the quantity to purchase are different decisions.
-> - Calculate each SKU with its own sales velocity and lead time.
-> - Adjust for seasonality, incoming orders, supplier constraints, and reserved stock.
-> - Treat safety stock as a service-versus-cash decision, not free insurance.
 
 ## What is an inventory reorder point?
 
@@ -44,7 +39,7 @@ The reorder point is the on-hand or inventory-position level at which a replenis
 
 Shopify's *Reorder Point Formula: A Retailer's Guide* expresses the formula as sales velocity multiplied by lead time, plus safety stock. When safety stock is entered as days, the same relationship becomes daily sales multiplied by lead time plus buffer days.
 
-The trigger is not a purchasing recommendation by itself. Supplier minimums, case packs, demand forecasts, shelf life, storage, cash, and incoming purchase orders determine how much to buy.
+The trigger level and the quantity to purchase are different decisions, a split that [inventory planning software](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-handling-reordering-policies) also makes. Supplier minimums, case packs, demand forecasts, shelf life, storage, cash, and incoming purchase orders determine how much to buy.
 
 ## How do you calculate a reorder point?
 
@@ -76,9 +71,9 @@ Or equivalently:
 Reorder point = lead-time demand + safety stock
 ```
 
-## What does a worked reorder example look like?
+## A worked reorder example
 
-A SKU sells 10 units per day on average. The supplier lead time is 14 days, and the business chooses seven safety days.
+A SKU sells 10 units per day on average, the supplier lead time is 14 days, and the business chooses seven safety days.
 
 | Measure | Calculation | Result |
 |---|---:|---:|
@@ -94,7 +89,9 @@ If current stock is 300 units:
 Days to stockout = 300 / 10 = 30 days
 ```
 
-The calculator also shows a simple suggested quantity for a 30-day replenishment cycle. That is a planning convenience, not an economic order quantity. Confirm minimum order quantities, case packs, available cash, storage, incoming units, and forecast changes.
+The calculator also shows a simple suggested quantity for a 30-day replenishment cycle. That is a planning convenience, not an economic order quantity.
+
+Confirm minimum order quantities, case packs, available cash, storage, incoming units, and forecast changes.
 
 ## Which inventory number should trigger the order?
 
@@ -104,11 +101,11 @@ On-hand stock alone can mislead. A more complete inventory position is:
 Inventory position = on hand + confirmed incoming - allocated or backordered units
 ```
 
-Use the inventory measure that matches how your operation reserves and receives stock. If 200 units are physically present but 120 are committed to open orders, only 80 may be available. If a confirmed purchase order arrives tomorrow, ignoring it can create a duplicate order.
+Use the inventory measure that matches how your operation reserves and receives stock. If 200 units are physically present but 120 are [committed to open orders](https://help.shopify.com/en/manual/inventory-and-locations/fundamentals/inventory-states), only 80 may be available. If a confirmed purchase order arrives tomorrow, ignoring it can create a duplicate order.
 
-The free calculator uses current stock and does not sync incoming purchase orders or reservations. Review those items before committing cash.
+The free calculator uses current stock and does not sync incoming purchase orders or reservations, so review those items before committing cash. On Shopify, the [purchase order reports](/blog/shopify-purchase-order-reports) show which open orders, transfers and receipts are still outstanding.
 
-## How should you choose safety stock?
+## Choosing safety stock: service versus cash
 
 Safety days are a practical buffer when demand and lead time are fairly stable. More volatile products need a method based on demand and lead-time variability, desired service level, or forecast error.
 
@@ -129,16 +126,18 @@ Reduce or tightly control it when:
 
 Every extra safety unit ties up cash. Multiply stock by unit cost to see capital locked in the SKU, then use the [cash runway guide](/blog/cash-runway-guide) to evaluate the timing effect.
 
-## How do seasonality and promotions change the formula?
+## When seasonality and promotions break the average
 
-Historical average daily sales is a poor predictor when demand is about to change. Use forward-looking daily demand for the lead-time window. Account for planned promotions, holidays, marketplace events, wholesale orders, new listings, price changes, and product launches.
+Historical average daily sales is a poor predictor when demand is about to change. Use forward-looking daily demand for the lead-time window, and account for planned promotions, holidays, marketplace events, wholesale orders, new listings, price changes, and product launches.
 
 If a promotion begins during lead time, calculate expected demand day by day or use a weighted forecast. Reorder points should also be revised after a structural change, not only at a fixed annual review.
 
-For bundles, component demand may be higher than standalone sales suggest. A product required by several bundles can block them all when it runs out. Combine the inventory plan with the [bundle pricing guide](/blog/bundle-pricing-guide).
+For bundles, component demand may be higher than standalone sales suggest. A product required by several bundles can block them all when it runs out.
 
-<figure class="blog-image-placeholder" role="img" aria-label="Reserved space for an SKU inventory planning table">
-  <img src="/Blogs/Inventory Reorder Point Guide/SKU-Level Dashboard Matrix.png" alt="SKU-level reorder planning dashboard." width="1536" height="1024" loading="lazy" decoding="async">
+Combine the inventory plan with the [bundle pricing guide](/blog/bundle-pricing-guide).
+
+<figure class="blog-feature-image">
+  <img src="/Blogs/inventory-reorder-point-guide/sku-reorder-dashboard.webp" alt="SKU-level reorder planning dashboard" width="1536" height="1024" loading="lazy" decoding="async">
 </figure>
 
 ## Common reorder point mistakes
@@ -154,10 +153,13 @@ For bundles, component demand may be higher than standalone sales suggest. A pro
 
 ## Calculate reorder points by SKU
 
+A reorder point makes replenishment repeatable: expected lead-time demand plus a deliberate buffer. Calculate it at SKU level, use a complete inventory position, and update it when demand or lead time changes. Then decide order quantity with cash, storage, supplier, and obsolescence constraints in view.
+
 <section class="blog-cta">
   <h3>Turn sales velocity and lead time into a reorder trigger</h3>
   <p>Use the <a href="/tools/inventory-planner">MlabsGrowth Inventory Reorder Point Calculator</a> to model each SKU's reorder point, safety stock, days to stockout, a 30-day suggested quantity, capital locked, and current status.</p>
-  <p>The calculator displays INR and assumes constant daily sales. It does not include seasonality, supplier delays, incoming purchase orders, reservations, minimums, or case packs.</p>
+  <p>When stock and order updates live in several tools, our <a href="/services/order-operations">order automation service</a> brings them into one reliable order view.</p>
+  <p>The calculator works in your chosen currency and assumes constant daily sales. It does not include seasonality, supplier delays, incoming purchase orders, reservations, minimums, or case packs.</p>
 </section>
 
 ## Frequently asked questions
@@ -189,3 +191,5 @@ A reorder point makes replenishment repeatable: expected lead-time demand plus a
 ## Source notes
 
 - [Shopify, *Reorder Point Formula: A Retailer's Guide*](https://www.shopify.com/blog/reorder-point), retrieved 2026-09-19.
+- [Shopify Help Center, *Understanding inventory states*](https://help.shopify.com/en/manual/inventory-and-locations/fundamentals/inventory-states), retrieved 2026-10-19.
+- [Microsoft Learn, *Design details: Handling reordering policies* (Business Central)](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-handling-reordering-policies), updated 2026-06-02, retrieved 2026-10-19.

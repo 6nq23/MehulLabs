@@ -5,7 +5,7 @@ export type PageSeo = { title: string; description: string; label: string; type:
 export const pageSeo: Record<string, PageSeo> = {
   "/": {
     "title": "Shopify CRO & AI Automation for D2C Brands",
-    "description": "MLabs helps D2C brands improve Shopify conversion, automate COD order operations and build AI marketing workflows. Book a free 30-minute audit.",
+    "description": "MlabsGrowth helps ecommerce brands worldwide lift Shopify conversion, automate COD order confirmation and run AI marketing workflows. Book a free audit.",
     "label": "Home",
     "type": "WebPage"
   },
@@ -17,25 +17,37 @@ export const pageSeo: Record<string, PageSeo> = {
   },
   "/services/store-conversion": {
     "title": "Shopify Conversion Rate Optimization Services",
-    "description": "Improve Shopify product pages, product discovery and cart journeys with MLabs. Start with a free audit, then agree a focused implementation scope.",
+    "description": "Improve Shopify product pages, product discovery and cart journeys with MlabsGrowth. Start with a free audit, then agree a focused implementation scope.",
     "label": "Shopify conversion",
     "type": "WebPage"
   },
   "/services/order-operations": {
     "title": "COD Confirmation & Order Automation Services",
-    "description": "Connect COD confirmation calls, order data and failed-delivery follow-ups. MLabs scopes order automation with human handoffs for D2C teams.",
+    "description": "Connect COD confirmation calls, order data and failed-delivery follow-ups. MlabsGrowth scopes order automation with human handoffs for D2C teams.",
     "label": "Order operations",
     "type": "WebPage"
   },
   "/services/ai-automation": {
     "title": "AI Marketing Workflow Automation Services",
-    "description": "Build a brand knowledge workspace and repeatable AI marketing workflows. MLabs helps teams create briefs, review outputs and keep context current.",
+    "description": "Build a brand knowledge workspace and repeatable AI marketing workflows. MlabsGrowth helps teams create briefs, review outputs and keep context current.",
     "label": "AI marketing workflows",
+    "type": "WebPage"
+  },
+  "/services/b2c": {
+    "title": "Growth & Order Automation for B2C Brands",
+    "description": "For B2C and D2C brands: confirm COD orders, chase failed deliveries, fix the pages your ads land on and judge marketing on delivered orders.",
+    "label": "For B2C brands",
+    "type": "WebPage"
+  },
+  "/services/b2b": {
+    "title": "Sales & Order Automation for B2B Businesses",
+    "description": "For manufacturers, wholesalers and distributors: call back enquiries, capture dealer reorders, draft quotes from approved data and automate payment reminders.",
+    "label": "For B2B businesses",
     "type": "WebPage"
   },
   "/offers": {
     "title": "AI & Shopify Services: Pricing and Scope",
-    "description": "Compare MLabs Shopify, order operations and AI workflow services. Explore the $5,000 USD pilot, deliverables, custom scope and free audit call.",
+    "description": "Compare MlabsGrowth Shopify, order operations and AI workflow services. Explore the $5,000 USD pilot, deliverables, custom scope and free audit call.",
     "label": "Pricing & scope",
     "type": "CollectionPage"
   },
@@ -47,19 +59,19 @@ export const pageSeo: Record<string, PageSeo> = {
   },
   "/products": {
     "title": "AI Workflow Products & Free D2C Tools",
-    "description": "Explore MLabs Skill Manager and eight free D2C calculators for marketplace profit, website margins, order costs, bundles, inventory and cash planning.",
+    "description": "Explore MlabsGrowth Skill Manager and eight free D2C calculators for marketplace profit, website margins, order costs, bundles, inventory and cash planning.",
     "label": "Products",
     "type": "CollectionPage"
   },
   "/products/skill-manager": {
-    "title": "MLabs Skill Manager: AI Skills & Recurring Tasks",
-    "description": "Explore MLabs Skill Manager, in development for organising AI skills, scheduling recurring work and reviewing outputs. Pricing and release are pending.",
+    "title": "MlabsGrowth Skill Manager: AI Skills & Recurring Tasks",
+    "description": "Explore MlabsGrowth Skill Manager, in development for organising AI skills, scheduling recurring work and reviewing outputs. Pricing and release are pending.",
     "label": "Skill Manager",
     "type": "WebPage"
   },
   "/blog": {
-    "title": "D2C & AI Automation Blog",
-    "description": "Read practical field notes from MLabs on D2C operations, Shopify conversion and useful AI automation workflows.",
+    "title": "Ecommerce Growth Blog: Shopify, COD & AI",
+    "description": "Practical guides from MlabsGrowth on Shopify conversion rate optimization, COD and RTO, order operations, ecommerce profit and AI marketing workflows.",
     "label": "Blog",
     "type": "CollectionPage"
   },
@@ -107,13 +119,13 @@ export const pageSeo: Record<string, PageSeo> = {
   },
   "/tools/ecommerce-platform-profit": {
     "title": "Free Marketplace Profit Calculator for Ecommerce",
-    "description": "Calculate marketplace profit after platform commission, GST, returns, RTO, logistics, product cost and ad spend. Find break-even price and ROAS.",
+    "description": "Calculate marketplace profit after platform commission, sales tax (GST/VAT), returns, RTO, logistics, product cost and ad spend. Find break-even price and ROAS.",
     "label": "Marketplace profit calculator",
     "type": "WebPage"
   },
   "/tools/website-d2c-profit": {
     "title": "Free Website & D2C Profit Calculator",
-    "description": "Calculate direct website profit after payment gateway fees, GST, returns, RTO, delivery, product cost and ads. Find target price and break-even ROAS.",
+    "description": "Calculate website profit after gateway fees, sales tax (GST/VAT), returns, RTO, delivery, product cost and ads. Find target price and break-even ROAS.",
     "label": "Website profit calculator",
     "type": "WebPage"
   }
@@ -122,7 +134,7 @@ export const pageSeo: Record<string, PageSeo> = {
 for (const guide of guides) {
   pageSeo[`/guides/${guide.slug}`] = { title: guide.title, description: guide.description, label: guide.title, type: 'WebPage' };
 }
-pageSeo['/guides'] = { title: 'D2C Growth & AI Workflow Guides', description: 'Practical MLabs guides to Shopify conversion audits, COD return-to-origin costs and repeatable AI marketing workflows. Explore checklists and examples.', label: 'Guides', type: 'CollectionPage' };
+pageSeo['/guides'] = { title: 'D2C Growth & AI Workflow Guides', description: 'Practical MlabsGrowth guides to Shopify conversion audits, COD return-to-origin costs and repeatable AI marketing workflows. Explore checklists and examples.', label: 'Guides', type: 'CollectionPage' };
 
 export function breadcrumbsFor(path: string) {
   if (path === '/' || !pageSeo[path]) return [];

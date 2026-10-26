@@ -1,5 +1,8 @@
 ---
+import fs from 'node:fs';
 import Layout from '@/layouts/Layout.astro';
+import { founder, founderDisplayName } from '@/data/site';
+import { getRelatedPosts, readingStats } from '@/lib/blog';
 
 interface Frontmatter {
   title: string;
@@ -11,12 +14,11 @@ interface Frontmatter {
   readTime?: string;
   coverImage?: string;
   coverImageAlt?: string;
-  wordCount?: number;
   faqs?: readonly { question: string; answer: string }[];
   draft?: boolean;
 }
 
-const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
+const { frontmatter, file } = Astro.props as { frontmatter: Frontmatter; file?: string };
 
 if (frontmatter.draft) {
   return new Response(null, {
@@ -25,7 +27,13 @@ if (frontmatter.draft) {
   });
 }
 
-const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
+const pathname = Astro.url.pathname.replace(/\/$/, '');
+const slug = pathname.split('/').pop()!;
+const updated = frontmatter.updatedOn && frontmatter.updatedOn !== frontmatter.publishedOn ? frontmatter.updatedOn : undefined;
+// Measured from the source file at build time, so schema wordCount and read time stay honest.
+const stats = file && fs.existsSync(file) ? readingStats(fs.readFileSync(file, 'utf8')) : undefined;
+const related = await getRelatedPosts(pathname, frontmatter.category, frontmatter.title);
+const formatDate = (date: string) => new Intl.DateTimeFormat('en-GB', {
   day: 'numeric',
   month: 'long',
   year: 'numeric',
@@ -38,11 +46,12 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
   article={{
     publishedOn: frontmatter.publishedOn,
     updatedOn: frontmatter.updatedOn,
-    author: frontmatter.author,
+    author: founderDisplayName,
     category: frontmatter.category,
     image: frontmatter.coverImage,
     imageAlt: frontmatter.coverImageAlt,
-    wordCount: frontmatter.wordCount,
+    ogImage: `/Blogs/${slug}/og-card.png`,
+    wordCount: stats?.words,
     faqs: frontmatter.faqs,
   }}
 >
@@ -54,9 +63,10 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
         <h1>{frontmatter.title}</h1>
         <p class="blog-post-dek">{frontmatter.description}</p>
         <div class="blog-post-meta">
-          <span>By <a href="/about">{frontmatter.author || 'Mehul'}</a></span>
-          <span>Updated <time datetime={frontmatter.updatedOn || frontmatter.publishedOn}>{formatDate(frontmatter.updatedOn || frontmatter.publishedOn)}</time></span>
-          {frontmatter.readTime && <span>{frontmatter.readTime}</span>}
+          <span>By <a href="/about" rel="author">{founderDisplayName}</a></span>
+          <span>Published <time datetime={frontmatter.publishedOn}>{formatDate(frontmatter.publishedOn)}</time></span>
+          {updated && <span>Updated <time datetime={updated}>{formatDate(updated)}</time></span>}
+          {(stats?.readTime || frontmatter.readTime) && <span>{stats?.readTime || frontmatter.readTime}</span>}
         </div>
       </div>
     </header>
@@ -64,6 +74,27 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en-IN', {
       <div class="blog-prose">
         <slot />
       </div>
+      <aside class="blog-author-card" aria-label="About the author">
+        <p class="blog-author-kicker">About the author</p>
+        <p><strong><a href="/about">{founderDisplayName}</a></strong> · {founder.jobTitle}</p>
+        <p>{founder.name} runs two D2C brands and builds the systems underneath them: Shopify conversion, COD and delivery follow-up, and reviewable AI marketing workflows. MlabsGrowth builds the same layer for ecommerce brands in any country.</p>
+        <p><a href="/services">See what we fix</a> · <a href="/about">More about {founder.name}</a></p>
+      </aside>
+      {related.length > 0 && (
+        <nav class="blog-related" aria-labelledby="related-title">
+          <h2 id="related-title">Keep reading</h2>
+          <ul>
+            {related.map(post => (
+              <li>
+                <a href={post.url}>
+                  <span>{post.frontmatter.category || 'Field note'}</span>
+                  <strong>{post.frontmatter.title}</strong>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </div>
   </article>
 </Layout>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify return window override policy map</title>
+  <desc id="desc">A dark ecommerce operations dashboard showing a default return window branching into holiday, core-range, and final-sale rules, with market and legal checks beneath.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#11110f"/><stop offset="1" stop-color="#24221c"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f4c84b"/><stop offset="1" stop-color="#ff7a59"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><circle cx="1390" cy="100" r="230" fill="#f4c84b" opacity=".08"/><circle cx="120" cy="820" r="280" fill="#ff7a59" opacity=".07"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="110" y="120" fill="#f4c84b" font-size="24" font-weight="700" letter-spacing="4">MLABSGROWTH · POLICY CONTROL</text>
+    <text x="110" y="194" fill="#fffaf0" font-size="58" font-weight="750">One return policy.</text><text x="110" y="258" fill="#fffaf0" font-size="58" font-weight="750">Clear exceptions.</text><text x="110" y="310" fill="#c9c4b8" font-size="25">Design the rule before the holiday order arrives.</text>
+    <g filter="url(#shadow)"><rect x="110" y="390" width="370" height="220" rx="28" fill="#fffaf0"/><rect x="110" y="390" width="370" height="12" rx="6" fill="url(#accent)"/><text x="150" y="455" fill="#27251f" font-size="21" font-weight="700" letter-spacing="2">DEFAULT POLICY</text><text x="150" y="530" fill="#11110f" font-size="54" font-weight="800">30 days</text><text x="150" y="570" fill="#665f52" font-size="21">The baseline when no override applies</text></g>
+    <path d="M480 500H570" stroke="#f4c84b" stroke-width="6" stroke-linecap="round"/><path d="M555 483l22 17-22 17" fill="none" stroke="#f4c84b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <g filter="url(#shadow)"><rect x="600" y="360" width="890" height="310" rx="30" fill="#2e2b24" stroke="#5a5447" stroke-width="2"/><text x="650" y="420" fill="#f4c84b" font-size="21" font-weight="700" letter-spacing="2">TARGETED OVERRIDES</text>
+      <rect x="650" y="465" width="235" height="145" rx="20" fill="#171613"/><text x="680" y="510" fill="#fffaf0" font-size="24" font-weight="700">Holiday</text><text x="680" y="557" fill="#ff936f" font-size="34" font-weight="800">14 days</text><text x="680" y="590" fill="#bdb6aa" font-size="17">Seasonal collection</text>
+      <rect x="925" y="465" width="235" height="145" rx="20" fill="#171613"/><text x="955" y="510" fill="#fffaf0" font-size="24" font-weight="700">Core range</text><text x="955" y="557" fill="#f4c84b" font-size="34" font-weight="800">30 days</text><text x="955" y="590" fill="#bdb6aa" font-size="17">Default continues</text>
+      <rect x="1200" y="465" width="240" height="145" rx="20" fill="#171613"/><text x="1230" y="510" fill="#fffaf0" font-size="24" font-weight="700">Final sale</text><text x="1230" y="557" fill="#ff936f" font-size="34" font-weight="800">No return</text><text x="1230" y="590" fill="#bdb6aa" font-size="17">When law permits</text></g>
+    <rect x="110" y="720" width="1380" height="90" rx="22" fill="#171613" stroke="#4a453a" stroke-width="2"/><circle cx="165" cy="765" r="19" fill="#f4c84b"/><path d="M156 765l7 7 13-16" fill="none" stroke="#171613" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="205" y="756" fill="#fffaf0" font-size="22" font-weight="700">Before launch:</text><text x="205" y="789" fill="#c9c4b8" font-size="21">check precedence · match the written policy · test each market · protect statutory rights</text>
+  </g>
+</svg>

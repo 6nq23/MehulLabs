@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="title desc">
+  <title id="title">Six-step Shopify compare-at price audit</title>
+  <desc id="desc">A six-card process checks the reference source, every variant, contribution margin, target markets, customer-facing surfaces, and the Shopify Catalog sharing setting before a sale reaches AI shopping agents.</desc>
+  <defs>
+    <filter id="cardShadow" x="-12%" y="-12%" width="124%" height="140%">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#2b2414" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#fffaf0"/>
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif">
+    <text x="84" y="88" font-size="20" font-weight="750" letter-spacing="3" fill="#765900">SIX CHECKS BEFORE THE SWITCH</text>
+    <text x="84" y="158" font-size="52" font-weight="760" letter-spacing="-1.5" fill="#1a1a18">Follow the price from evidence to agent</text>
+    <text x="84" y="202" font-size="22" fill="#5b513b">Each gate should have an owner, a recorded decision, and a clean pass.</text>
+
+    <g fill="none" stroke="#d4aa24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M514 365 H558"/>
+      <path d="M1070 365 H1114"/>
+      <path d="M1320 500 V548"/>
+      <path d="M1114 680 H1070"/>
+      <path d="M558 680 H514"/>
+    </g>
+    <g fill="#d4aa24">
+      <path d="M548 353 L566 365 L548 377 Z"/>
+      <path d="M1104 353 L1122 365 L1104 377 Z"/>
+      <path d="M1308 538 L1320 556 L1332 538 Z"/>
+      <path d="M1080 668 L1062 680 L1080 692 Z"/>
+      <path d="M524 668 L506 680 L524 692 Z"/>
+    </g>
+
+    <g filter="url(#cardShadow)">
+      <rect x="84" y="258" width="430" height="214" rx="24" fill="#ffffff" stroke="#e3d39f" stroke-width="2"/>
+      <rect x="570" y="258" width="500" height="214" rx="24" fill="#ffffff" stroke="#e3d39f" stroke-width="2"/>
+      <rect x="1126" y="258" width="390" height="214" rx="24" fill="#ffffff" stroke="#e3d39f" stroke-width="2"/>
+      <rect x="1126" y="574" width="390" height="214" rx="24" fill="#ffffff" stroke="#e3d39f" stroke-width="2"/>
+      <rect x="570" y="574" width="500" height="214" rx="24" fill="#ffffff" stroke="#e3d39f" stroke-width="2"/>
+      <rect x="84" y="574" width="430" height="214" rx="24" fill="#1a1a18" stroke="#1a1a18" stroke-width="2"/>
+    </g>
+
+    <g font-size="22" font-weight="780">
+      <circle cx="132" cy="309" r="28" fill="#f2ce5b"/><text x="132" y="317" text-anchor="middle" fill="#352900">1</text>
+      <circle cx="618" cy="309" r="28" fill="#f2ce5b"/><text x="618" y="317" text-anchor="middle" fill="#352900">2</text>
+      <circle cx="1174" cy="309" r="28" fill="#f2ce5b"/><text x="1174" y="317" text-anchor="middle" fill="#352900">3</text>
+      <circle cx="1174" cy="625" r="28" fill="#f2ce5b"/><text x="1174" y="633" text-anchor="middle" fill="#352900">4</text>
+      <circle cx="618" cy="625" r="28" fill="#f2ce5b"/><text x="618" y="633" text-anchor="middle" fill="#352900">5</text>
+      <circle cx="132" cy="625" r="28" fill="#fff4bf"/><text x="132" y="633" text-anchor="middle" fill="#352900">6</text>
+    </g>
+
+    <g fill="#1a1a18">
+      <text x="176" y="316" font-size="29" font-weight="760">Source</text>
+      <text x="662" y="316" font-size="29" font-weight="760">Variants</text>
+      <text x="1218" y="316" font-size="29" font-weight="760">Margin</text>
+      <text x="1218" y="632" font-size="29" font-weight="760">Markets</text>
+      <text x="662" y="632" font-size="29" font-weight="760">Surfaces</text>
+    </g>
+    <text x="176" y="632" font-size="29" font-weight="760" fill="#fff8df">Share</text>
+
+    <g font-size="20" fill="#5b513b">
+      <text x="124" y="374">Is the original price genuine?</text>
+      <text x="124" y="408">Record the reason and dates.</text>
+
+      <text x="610" y="374">Check every size, colour,</text>
+      <text x="610" y="408">pack, bundle, blank, and zero.</text>
+
+      <text x="1166" y="374">Test contribution after costs,</text>
+      <text x="1166" y="408">returns, and acquisition.</text>
+
+      <text x="1166" y="690">Review currency, fixed prices,</text>
+      <text x="1166" y="724">tax display, and sale dates.</text>
+
+      <text x="610" y="690">Match collection, product, cart,</text>
+      <text x="610" y="724">checkout, and owned feeds.</text>
+    </g>
+    <g font-size="20" fill="#e9dfc5">
+      <text x="124" y="690">Review Catalog Mapping.</text>
+      <text x="124" y="724">Turn on, preview, document.</text>
+    </g>
+
+    <rect x="84" y="826" width="1432" height="44" rx="22" fill="#fff0a8"/>
+    <text x="800" y="855" text-anchor="middle" font-size="19" font-weight="740" fill="#6b5000">PASS CONDITION: the same defensible offer survives every step.</text>
+  </g>
+</svg>

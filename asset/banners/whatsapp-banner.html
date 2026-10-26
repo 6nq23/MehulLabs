@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>MlabsGrowth WhatsApp banner</title>
+<!-- Source for whatsapp-banner-1211x681.png. Render with a headless browser at 1211×681, scale factor 1. -->
+<style>
+  @font-face { font-family: 'Quicksand Hero'; font-weight: 500; src: url('../../public/fonts/hero/quicksand-500-latin.woff2') format('woff2'); }
+  @font-face { font-family: 'Manrope Variable'; font-weight: 200 800; src: url('../../node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2') format('woff2'); }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1211px; height: 681px; overflow: hidden; }
+  body {
+    position: relative;
+    background:
+      radial-gradient(circle at 76% 50%, #ffe27a 0, #fff0bd 21%, rgba(255, 244, 205, 0) 47%),
+      radial-gradient(circle at 0% 100%, #fbf3dc 0, rgba(251, 243, 220, 0) 40%),
+      #f6f5f1;
+    color: #131313;
+    font-family: 'Manrope Variable', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .honeycomb { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; }
+
+  /* Left column */
+  .copy { position: absolute; left: 76px; top: 64px; width: 600px; }
+  .logo { display: block; height: 37px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 9px;
+    margin-top: 82px; padding: 8px 15px 8px 12px;
+    border-radius: 999px; background: #fff; box-shadow: 0 4px 14px rgba(73, 59, 27, .07);
+    color: #8b7753; font-size: 13px; font-weight: 800; letter-spacing: .14em;
+  }
+  .eyebrow i { width: 9px; height: 9px; border-radius: 50%; background: #ffcb16; box-shadow: 0 0 0 4px #fff2c2; }
+  h1 {
+    margin-top: 22px;
+    font-family: 'Quicksand Hero', sans-serif; font-weight: 500;
+    font-size: 60px; line-height: 1.08; letter-spacing: -.065em;
+  }
+  h1 span { display: block; white-space: nowrap; }
+  h1 mark { position: relative; z-index: 0; background: none; color: inherit; }
+  h1 mark::after {
+    content: ''; position: absolute; z-index: -1; left: -4px; right: -2px; bottom: 7px; height: 17px;
+    border-radius: 6px; background: #ffd84a;
+  }
+  .sub {
+    margin-top: 24px; max-width: 520px;
+    color: #5f6067; font-size: 19px; font-weight: 500; line-height: 1.5; letter-spacing: -.02em;
+  }
+  .actions { display: flex; align-items: center; gap: 22px; margin-top: 38px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 18px;
+    height: 58px; padding: 5px 6px 5px 26px; border-radius: 999px; background: #facc15;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08), inset 0 -3px 5px rgba(220,160,0,.35), inset 0 3px 5px rgba(255,255,255,.5);
+    font-size: 17px; font-weight: 800; letter-spacing: -.01em; white-space: nowrap;
+  }
+  .pill b {
+    display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+    background: linear-gradient(180deg, #ffe066 0%, #ffc000 100%);
+    box-shadow: inset 0 2px 3px rgba(255,255,255,.9), 0 2px 5px rgba(0,0,0,.15);
+  }
+  .pill svg { width: 20px; height: 20px; fill: none; stroke: #131313; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .site { display: flex; flex-direction: column; gap: 3px; font-size: 13px; color: #7a7b80; font-weight: 600; }
+  .site strong { color: #131313; font-size: 17px; font-weight: 800; letter-spacing: -.02em; }
+
+  /* Right: the hive */
+  .hive { position: absolute; left: 676px; top: 0; width: 535px; height: 681px; }
+  .orbit { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .bee { position: absolute; filter: drop-shadow(0 14px 18px rgba(120, 84, 0, .16)); }
+  .queen { left: 108px; top: 132px; width: 330px; }
+  .shopify { left: 4px; top: 380px; width: 176px; }
+  .marketing { left: 352px; top: 46px; width: 160px; }
+  .calling { left: 352px; top: 388px; width: 158px; }
+  .tag {
+    position: absolute; display: inline-flex; align-items: center; gap: 7px;
+    padding: 7px 12px; border-radius: 999px; background: #fff;
+    box-shadow: 0 6px 16px rgba(73, 59, 27, .1);
+    font-size: 12.5px; font-weight: 800; letter-spacing: -.01em; white-space: nowrap;
+  }
+  .tag i { width: 7px; height: 7px; border-radius: 50%; background: #2bb673; }
+  .tag-shopify { left: 34px; top: 560px; }
+  .tag-marketing { left: 368px; top: 200px; }
+  .tag-calling { left: 380px; top: 548px; }
+  .tag-queen { left: 186px; top: 92px; background: #131313; color: #fff; }
+  .tag-queen i { background: #ffcb16; }
+</style>
+</head>
+<body>
+  <svg class="honeycomb" viewBox="0 0 1211 681" aria-hidden="true">
+    <defs>
+      <pattern id="hex" width="56" height="97" patternUnits="userSpaceOnUse" patternTransform="translate(690 12)">
+        <path d="M28 0 56 16.2v32.3L28 64.7 0 48.5V16.2zM0 48.5v48.5M56 48.5v48.5" fill="none" stroke="#e9c75a" stroke-width="1.2" />
+      </pattern>
+      <radialGradient id="fade" cx="76%" cy="50%" r="42%">
+        <stop offset="0" stop-color="#fff" stop-opacity="1" />
+        <stop offset=".75" stop-color="#fff" stop-opacity=".35" />
+        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+      </radialGradient>
+      <mask id="m"><rect width="1211" height="681" fill="url(#fade)" /></mask>
+    </defs>
+    <rect width="1211" height="681" fill="url(#hex)" mask="url(#m)" />
+  </svg>
+
+  <div class="copy">
+    <img class="logo" src="../logo/mlabsgrowth-logo.svg" alt="MlabsGrowth" />
+    <div class="eyebrow"><i></i>AI AGENTS FOR D2C BRANDS</div>
+    <h1><span>More delivered orders.</span><span><mark>Less work</mark> behind them.</span></h1>
+    <p class="sub">Shopify conversion, COD &amp; delivery follow-up and AI marketing, connected on one layer.</p>
+    <div class="actions">
+      <div class="pill">Book a free 30-min audit<b><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></b></div>
+      <div class="site">Or visit<strong>mlabsgrowth.com</strong></div>
+    </div>
+  </div>
+
+  <div class="hive">
+    <svg class="orbit" viewBox="0 0 535 681" aria-hidden="true">
+      <ellipse cx="272" cy="330" rx="232" ry="214" fill="none" stroke="#d9b23c" stroke-width="1.6" stroke-dasharray="2 9" stroke-linecap="round" />
+      <ellipse cx="272" cy="330" rx="176" ry="160" fill="#fffaf0" fill-opacity=".55" stroke="#e6c565" stroke-width="1.2" />
+    </svg>
+    <img class="bee queen" src="../individual-bees/queen-flower-throne-v1.png" alt="" />
+    <img class="bee marketing" src="../individual-bees/01-marketing-brain-no-name.png" alt="" />
+    <img class="bee shopify" src="../individual-bees/04-shopify-sales-agent-no-name.png" alt="" />
+    <img class="bee calling" src="../individual-bees/05-calling-agent-no-name.png" alt="" />
+    <span class="tag tag-queen"><i></i>Brand Brain</span>
+    <span class="tag tag-marketing"><i></i>Marketing Brain</span>
+    <span class="tag tag-shopify"><i></i>Shopify Agent</span>
+    <span class="tag tag-calling"><i></i>Calling Agent</span>
+  </div>
+</body>
+</html>

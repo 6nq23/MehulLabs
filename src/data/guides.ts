@@ -2,6 +2,8 @@
 export const guides = [
   {
     "slug": "shopify-conversion-audit-checklist",
+    "publishedOn": "2026-09-18",
+    "updatedOn": "2026-10-19",
     "title": "Shopify Conversion Audit Checklist",
     "description": "A practical Shopify CRO checklist for reviewing landing pages, product information, mobile carts and measurement before choosing an implementation.",
     "intro": "Start with one buying journey, not a store-wide redesign. This checklist helps a D2C team identify what a shopper needs to understand, where the journey breaks and which change deserves a measured test.",
@@ -63,59 +65,9 @@ export const guides = [
     ]
   },
   {
-    "slug": "calculate-cod-rto-cost",
-    "title": "How to Calculate COD RTO Costs",
-    "description": "Separate return-to-origin logistics costs from revenue at risk. Use a worked COD and prepaid example, then identify the order workflow to investigate.",
-    "intro": "A returned shipment creates more than one number. Separate the cost already incurred from the sale that did not complete, then decide which operational step to investigate. This guide uses an illustrative scenario, not MLabs client results.",
-    "service": "order-operations",
-    "tool": "rto-simulator",
-    "sections": [
-      {
-        "id": "define",
-        "title": "1. Define the order group before calculating a rate",
-        "body": "Use one cohort of dispatched orders and allow enough time for delivery outcomes to settle. Separate cash-on-delivery orders from prepaid orders. Dividing this week\u2019s returns by this week\u2019s new orders can mix shipments from different periods.",
-        "items": [
-          "Keep placed, confirmed, dispatched, delivered and returned counts separate.",
-          "Use the same denominator and observation window in comparisons.",
-          "Record unresolved shipments separately instead of treating them as delivered."
-        ]
-      },
-      {
-        "id": "cost",
-        "title": "2. Separate direct cost from revenue at risk",
-        "body": "For the calculator\u2019s simplified direct-cost estimate, multiply returned orders by forward freight, reverse freight and packaging per return. Calculate revenue at risk separately as returned orders multiplied by average order value. Lost sales value is not the same as lost profit.",
-        "items": [
-          "Use your actual courier settlement costs where available.",
-          "Review damaged stock, handling effort and payment fees separately.",
-          "Avoid counting recoverable product cost as a complete loss if the item can be sold again."
-        ]
-      },
-      {
-        "id": "example",
-        "title": "3. Work through a COD and prepaid example",
-        "body": "Suppose 1,000 orders include 600 COD orders and 400 prepaid orders. With a 20% COD RTO rate and 5% prepaid RTO rate, the scenario has 120 COD returns and 20 prepaid returns. At \u20b980 forward freight, \u20b980 reverse freight and \u20b920 packaging, direct cost is 140 \u00d7 \u20b9180 = \u20b925,200.",
-        "items": [
-          "At \u20b91,000 AOV, revenue at risk is \u20b9140,000, shown separately.",
-          "If COD RTO falls from 20% to 15%, the scenario avoids 30 returns.",
-          "That means \u20b95,400 lower direct cost under these inputs, not a guaranteed saving."
-        ]
-      },
-      {
-        "id": "workflow",
-        "title": "4. Investigate the cause before choosing automation",
-        "body": "Group unsuccessful deliveries by recorded reason. Unreachable customers, incorrect details and delayed follow-ups may need different workflows from courier delays or product dissatisfaction. Give each exception a named owner and record whether the follow-up changed the delivery outcome.",
-        "items": [
-          "Review the confirmation flow before dispatch.",
-          "Keep unsuccessful delivery attempts distinct from completed returns.",
-          "Agree when automated calls or messages must hand over to a person.",
-          "Compare delivery outcomes and handling effort against the original cohort."
-        ]
-      }
-    ],
-    "sources": []
-  },
-  {
     "slug": "ai-brand-context-workflow",
+    "publishedOn": "2026-09-18",
+    "updatedOn": "2026-10-19",
     "title": "How to Build an AI Brand Context Workflow",
     "description": "Organise approved brand knowledge, create a repeatable marketing brief and define human review before automating recurring AI work for your team.",
     "intro": "The first useful AI workflow is usually a well-defined task with clear inputs and a reviewer. A brand context workspace gives that task approved information to work from, instead of asking someone to explain the business in every conversation.",
