@@ -4,7 +4,7 @@ draft: false
 title: "Holiday Discount Strategy 2026: How Deep Can You Go?"
 description: "How deep can a Shopify store discount this holiday season? Use margin ceilings, segment rules and Shopify's combination limits to set offers that still profit."
 publishedOn: "2026-10-06"
-updatedOn: "2026-10-19"
+updatedOn: "2026-10-27"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "10 min read"
@@ -143,7 +143,7 @@ Shopify calculates product discounts first, then order discounts on the revised 
 - A merchant can have a maximum of 25 active automatic discounts.
 - When discounts cannot combine, Shopify applies the best discount or combination for the customer's cart.
 
-Because the combination settings live inside each discount, the risk grows with every offer you add. A sitewide code, an automatic bundle discount and a VIP code can each seem reasonable alone.
+Because the combination settings live inside each discount, the risk grows with every offer you add; use the [Shopify discount-code failure test](/blog/shopify-discount-code-not-working) before a campaign goes live. A sitewide code, an automatic bundle discount and a VIP code can each seem reasonable alone.
 
 Build a matrix before launch: list every live offer, mark which ones may combine, and place a test order for each pair on a mobile device. Record the final price next to the unit cost.
 

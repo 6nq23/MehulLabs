@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify discount code failure gates</title>
+  <desc id="desc">A discount tag moves through status, cart, customer, market, combination, channel, and app gates before reaching an accepted checkout.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="92" y="86" width="1416" height="728" rx="44" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <text x="150" y="190" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800" fill="#131313">A discount code is a chain of gates</text>
+  <text x="150" y="248" font-family="Inter, Arial, sans-serif" font-size="28" fill="#707178">The first failed rule determines the checkout message and the fix.</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">
+    <rect x="150" y="350" width="168" height="92" rx="20" fill="#facc15" stroke="#131313" stroke-width="3"/>
+    <text x="234" y="405" fill="#131313">STATUS</text>
+    <path d="M318 396h48" stroke="#131313" stroke-width="5"/>
+    <path d="m354 384 16 12-16 12" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="374" y="350" width="168" height="92" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="458" y="405" fill="#131313">CART</text>
+    <path d="M542 396h48" stroke="#131313" stroke-width="5"/>
+    <path d="m578 384 16 12-16 12" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="598" y="350" width="168" height="92" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="682" y="405" fill="#131313">CUSTOMER</text>
+    <path d="M766 396h48" stroke="#131313" stroke-width="5"/>
+    <path d="m802 384 16 12-16 12" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="822" y="350" width="168" height="92" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="906" y="405" fill="#131313">MARKET</text>
+    <path d="M990 396h48" stroke="#131313" stroke-width="5"/>
+    <path d="m1026 384 16 12-16 12" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="1046" y="350" width="168" height="92" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="1130" y="405" fill="#131313">STACKING</text>
+    <path d="M1214 396h48" stroke="#131313" stroke-width="5"/>
+    <path d="m1250 384 16 12-16 12" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="1270" y="350" width="168" height="92" rx="20" fill="#131313"/>
+    <text x="1354" y="405" fill="#f6f5f1">CHECKOUT</text>
+  </g>
+  <path d="M150 530h1288" stroke="#707178" stroke-width="3" stroke-dasharray="10 14"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="150" y="590" width="408" height="132" rx="26" fill="#131313"/>
+    <text x="190" y="644" font-size="28" font-weight="800" fill="#facc15">FAILURE</text>
+    <text x="190" y="686" font-size="24" fill="#f6f5f1">Stop at the first rejected rule.</text>
+    <rect x="596" y="590" width="408" height="132" rx="26" fill="#facc15" stroke="#131313" stroke-width="3"/>
+    <text x="636" y="644" font-size="28" font-weight="800" fill="#131313">CONTROL</text>
+    <text x="636" y="686" font-size="24" fill="#131313">Change one condition per test.</text>
+    <rect x="1042" y="590" width="396" height="132" rx="26" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="1082" y="644" font-size="28" font-weight="800" fill="#131313">PROOF</text>
+    <text x="1082" y="686" font-size="24" fill="#707178">Repeat the pass in a fresh cart.</text>
+  </g>
+</svg>

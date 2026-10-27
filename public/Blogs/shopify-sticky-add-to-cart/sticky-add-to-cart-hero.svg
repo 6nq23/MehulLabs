@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify sticky add to cart product-page test</title>
+  <desc id="desc">A mobile product page with product details, variant controls, and a yellow sticky add to cart bar connected to the original form.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="120" y="120" width="850" height="660" rx="36" fill="#f6f5f1" stroke="#131313" stroke-width="8"/>
+  <rect x="170" y="175" width="350" height="410" rx="24" fill="#facc15"/>
+  <path d="M238 476 L332 372 L405 437 L463 330" fill="none" stroke="#131313" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="296" cy="288" r="44" fill="#131313"/>
+  <text x="575" y="215" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="3">PRODUCT PAGE</text>
+  <rect x="575" y="250" width="285" height="34" rx="17" fill="#131313"/>
+  <rect x="575" y="312" width="205" height="22" rx="11" fill="#707178"/>
+  <rect x="575" y="370" width="250" height="62" rx="16" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+  <text x="608" y="410" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">SELECT VARIANT</text>
+  <rect x="575" y="467" width="335" height="22" rx="11" fill="#707178"/>
+  <rect x="575" y="511" width="265" height="22" rx="11" fill="#707178"/>
+  <rect x="170" y="647" width="740" height="92" rx="22" fill="#facc15" stroke="#131313" stroke-width="6"/>
+  <text x="250" y="705" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">ADD TO CART</text>
+  <path d="M1035 281 C1160 281 1155 400 1260 400" fill="none" stroke="#707178" stroke-width="8" stroke-dasharray="18 16"/>
+  <path d="M1226 374 L1263 400 L1224 423" fill="none" stroke="#707178" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1135" y="452" width="345" height="184" rx="28" fill="#131313"/>
+  <text x="1192" y="517" fill="#facc15" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">SAME ORDER STATE</text>
+  <text x="1192" y="565" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="24">Variant • price • quantity</text>
+  <text x="1192" y="606" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="24">Availability • cart result</text>
+</svg>

@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Canvas: 8 Tests Before You Publish"
 description: "Shopify Canvas is early access. Use this 8-step checklist to test theme fit, apps, mobile, accessibility, checkout, analytics and rollback before launch."
 publishedOn: "2026-10-12"
-updatedOn: "2026-10-19"
+updatedOn: "2026-10-26"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "7 min read"
@@ -68,11 +68,13 @@ Verify Canvas access, plan support, theme source, and editor permission. Record 
 
 ### 2. Define one customer problem
 
-Start with a buying question, not a visual trend. For example: "Show the delivery date before add to cart without moving price or variants." The [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) helps define the test.
+Start with a buying question, not a visual trend. For example: "Show the delivery date before add to cart without moving price or variants." For apparel and other fitted products, the [Shopify size chart decision framework](/blog/shopify-size-chart) shows how to connect measurement data, regional labels, and variant selection. The [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) helps define the test.
 
 ### 3. Review every affected template
 
 Inspect every template touched by shared settings or blocks. Include variants, sale and out-of-stock states, plus any revenue-critical bundle or subscription.
+
+Collection controls deserve their own pass: the [Shopify filters diagnostic guide](/blog/shopify-filters-not-showing) separates theme settings, catalog values, platform limits, indexing, markets, and code conflicts before anyone rewrites the theme.
 
 ### 4. Test apps and localization outside Canvas
 

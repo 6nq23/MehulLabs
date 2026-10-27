@@ -4,7 +4,7 @@ draft: false
 title: "Cart Abandonment in 2026: Why 70% of Carts Still Leak"
 description: "The cart abandonment rate in 2026 still averages 70.22% per Baymard. See the checkout reasons behind it, how to measure yours in Shopify and which fixes work."
 publishedOn: "2026-09-25"
-updatedOn: "2026-10-23"
+updatedOn: "2026-10-25"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "11 min read"
@@ -112,7 +112,7 @@ Shopify's report also shows added-to-cart rate and reached-checkout rate, but it
 
 In this illustrative example, the store loses as many carts before checkout as it does inside it, so the first fixes belong in the cart and on the product page.
 
-Split the same report by device and by traffic source. A mobile rate far above desktop usually points to a layout or payment problem, while a paid-social spike often signals browsing intent. If many shoppers research on one device and buy on another, read what [Shopify cross-device cart sync](/blog/shopify-cross-device-cart-sync) changes and how to measure it.
+Split the same report by device and by traffic source. A mobile rate far above desktop usually points to a layout or payment problem, while a paid-social spike often signals browsing intent. If product-page shoppers scroll past the main purchase control, the [Shopify sticky add to cart test plan](/blog/shopify-sticky-add-to-cart) shows how to test the shortcut without losing variant, cart, or profit accuracy. If many shoppers research on one device and buy on another, read what [Shopify cross-device cart sync](/blog/shopify-cross-device-cart-sync) changes and how to measure it.
 
 Shopify also lists individual [abandoned checkouts](https://help.shopify.com/en/manual/orders/abandoned-checkouts) under **Orders > Abandoned checkouts**. A checkout appears there when the customer has provided an email address and has not finished for more than ten minutes. If a new rule is creating the drop-off, the [Shopify checkout validation guide](/blog/shopify-checkout-validation) shows how to choose block, warn or review behavior and test the recovery path. If you also use GA4, keep its funnel separate from Shopify's session counts; our guide to [tracking AI traffic in GA4](/blog/track-ai-traffic-ga4) covers channel set-up. For a wider baseline, work through the [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) before changing anything.
 

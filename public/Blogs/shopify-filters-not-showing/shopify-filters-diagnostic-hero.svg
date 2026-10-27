@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify filters diagnostic layers</title>
+  <desc id="desc">A collection filter panel passes through theme, product data, platform rules, indexing, and storefront code before reaching shoppers.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="120" y="128" font-size="66" font-weight="800">Shopify filters not showing?</text>
+    <text x="120" y="184" font-size="30" fill="#707178">Trace the first layer that fails.</text>
+    <rect x="118" y="250" width="400" height="500" rx="28" fill="#131313"/>
+    <text x="166" y="312" font-size="26" font-weight="700" fill="#f6f5f1">COLLECTION FILTERS</text>
+    <g font-size="25" fill="#f6f5f1">
+      <rect x="166" y="360" width="304" height="62" rx="16" fill="#facc15"/>
+      <text x="194" y="400" fill="#131313" font-weight="700">Availability</text>
+      <rect x="166" y="446" width="304" height="62" rx="16" fill="#f6f5f1"/>
+      <text x="194" y="486" fill="#131313">Color</text>
+      <rect x="166" y="532" width="304" height="62" rx="16" fill="#f6f5f1"/>
+      <text x="194" y="572" fill="#131313">Size</text>
+      <rect x="166" y="618" width="304" height="62" rx="16" fill="none" stroke="#707178" stroke-width="3" stroke-dasharray="10 10"/>
+      <text x="194" y="658" fill="#707178">Missing value</text>
+    </g>
+    <path d="M550 500H650" stroke="#131313" stroke-width="8"/>
+    <path d="M638 480l28 20-28 20" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <g font-size="25" font-weight="700">
+      <rect x="700" y="248" width="336" height="82" rx="20" fill="#facc15"/><text x="742" y="299">THEME DISPLAY</text>
+      <rect x="1080" y="248" width="336" height="82" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="1122" y="299">PRODUCT DATA</text>
+      <rect x="700" y="382" width="336" height="82" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="742" y="433">PLATFORM RULES</text>
+      <rect x="1080" y="382" width="336" height="82" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="1122" y="433">SEARCH INDEX</text>
+      <rect x="700" y="516" width="336" height="82" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="742" y="567">MARKET SETUP</text>
+      <rect x="1080" y="516" width="336" height="82" rx="20" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="1122" y="567">APPS + CODE</text>
+    </g>
+    <rect x="700" y="650" width="716" height="100" rx="24" fill="#131313"/>
+    <text x="748" y="714" font-size="30" fill="#f6f5f1" font-weight="700">Fix the first failed layer. Then retest.</text>
+  </g>
+</svg>

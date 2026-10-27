@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify filter diagnostic decision flow</title>
+  <desc id="desc">A decision flow checks theme support, product data, documented platform limits, indexing, markets, and custom code before choosing a repair.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="800" y="92" text-anchor="middle" font-size="54" font-weight="800">Find the first failed filter gate</text>
+    <text x="800" y="138" text-anchor="middle" font-size="26" fill="#707178">Test one collection, one product, and one value.</text>
+    <g stroke="#131313" stroke-width="5" fill="none">
+      <path d="M320 280H470"/><path d="M700 280H850"/><path d="M1080 280H1230"/>
+      <path d="M320 500H470"/><path d="M700 500H850"/><path d="M1080 500H1230"/>
+    </g>
+    <g font-size="24" font-weight="700">
+      <rect x="80" y="220" width="240" height="120" rx="22" fill="#131313"/><text x="200" y="270" text-anchor="middle" fill="#f6f5f1">Theme supports</text><text x="200" y="304" text-anchor="middle" fill="#f6f5f1">filters?</text>
+      <rect x="470" y="220" width="230" height="120" rx="22" fill="#facc15"/><text x="585" y="270" text-anchor="middle">Filter source</text><text x="585" y="304" text-anchor="middle">has values?</text>
+      <rect x="850" y="220" width="230" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="965" y="270" text-anchor="middle">Below native</text><text x="965" y="304" text-anchor="middle">limits?</text>
+      <rect x="1230" y="220" width="290" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="1375" y="270" text-anchor="middle">Index and URL</text><text x="1375" y="304" text-anchor="middle">agree?</text>
+      <rect x="80" y="440" width="240" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="200" y="490" text-anchor="middle">Language and</text><text x="200" y="524" text-anchor="middle">currency pass?</text>
+      <rect x="470" y="440" width="230" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="585" y="490" text-anchor="middle">Clean theme</text><text x="585" y="524" text-anchor="middle">works?</text>
+      <rect x="850" y="440" width="230" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="3"/><text x="965" y="490" text-anchor="middle">App or code</text><text x="965" y="524" text-anchor="middle">isolated?</text>
+      <rect x="1230" y="440" width="290" height="120" rx="22" fill="#131313"/><text x="1375" y="490" text-anchor="middle" fill="#f6f5f1">Repair, split,</text><text x="1375" y="524" text-anchor="middle" fill="#f6f5f1">or replace</text>
+    </g>
+    <g font-size="23">
+      <rect x="80" y="650" width="440" height="132" rx="20" fill="#facc15"/>
+      <text x="112" y="700" font-weight="700">Documented native checks</text>
+      <text x="112" y="740">5,000 products · 100 visible values</text>
+      <text x="112" y="770">25 filters · default-currency price filter</text>
+      <rect x="560" y="650" width="960" height="132" rx="20" fill="#131313"/>
+      <text x="600" y="700" fill="#f6f5f1" font-weight="700">Pass condition</text>
+      <text x="600" y="740" fill="#f6f5f1">Panel appears · value appears · URL changes · grid updates · clear restores</text>
+      <text x="600" y="770" fill="#707178">Source for limits: Shopify Help Center, retrieved 2026-10-26</text>
+    </g>
+  </g>
+</svg>
