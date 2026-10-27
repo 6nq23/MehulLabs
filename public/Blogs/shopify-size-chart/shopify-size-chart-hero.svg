@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify size chart decision interface</title>
+  <desc id="desc">An illustrative product card, measuring guide, regional labels, and selected medium variant connected by a clear decision path.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <path d="M100 124H1500" stroke="#131313" stroke-width="4"/>
+  <text x="100" y="88" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="2">SHOPIFY PRODUCT DECISION</text>
+  <text x="100" y="208" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800">From measurement to the right variant</text>
+  <text x="100" y="266" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="30">A useful chart connects product fit, regional labels, and a choice the shopper can make.</text>
+
+  <rect x="100" y="340" width="390" height="430" rx="28" fill="#131313"/>
+  <rect x="134" y="374" width="322" height="218" rx="18" fill="#facc15"/>
+  <path d="M236 430l56-30 58 30 54 2-30 62-20-11v82H278v-82l-20 11-30-62z" fill="#f6f5f1" stroke="#131313" stroke-width="5" stroke-linejoin="round"/>
+  <text x="134" y="646" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Relaxed cotton shirt</text>
+  <text x="134" y="690" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="24">Body chest 96 cm / 37.8 in</text>
+  <rect x="134" y="714" width="126" height="40" rx="20" fill="#facc15"/>
+  <text x="168" y="742" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">SIZE M</text>
+
+  <path d="M530 555H616" stroke="#131313" stroke-width="6"/>
+  <path d="M598 537l24 18-24 18" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="650" y="340" width="850" height="430" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <rect x="650" y="340" width="850" height="78" rx="26" fill="#facc15"/>
+  <path d="M650 392V418H1500V392" fill="#facc15"/>
+  <text x="694" y="391" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">SIZE AND FIT</text>
+  <text x="1024" y="391" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">BODY MEASUREMENTS</text>
+  <path d="M650 506H1500M650 594H1500M650 682H1500" stroke="#131313" stroke-width="3"/>
+  <path d="M810 418V770M1045 418V770M1270 418V770" stroke="#131313" stroke-width="3"/>
+  <g fill="#707178" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">
+    <text x="700" y="470">VARIANT</text><text x="858" y="470">CHEST</text><text x="1094" y="470">UK / US</text><text x="1320" y="470">EU</text>
+  </g>
+  <g fill="#131313" font-family="Inter, Arial, sans-serif" font-size="27">
+    <text x="716" y="560">S</text><text x="855" y="560">90–94 cm</text><text x="1135" y="560">S</text><text x="1338" y="560">46</text>
+    <text x="716" y="648" font-weight="800">M</text><text x="855" y="648" font-weight="800">94–98 cm</text><text x="1132" y="648" font-weight="800">M</text><text x="1338" y="648" font-weight="800">48</text>
+    <text x="716" y="736">L</text><text x="855" y="736">98–102 cm</text><text x="1138" y="736">L</text><text x="1338" y="736">50</text>
+  </g>
+  <rect x="666" y="607" width="818" height="72" rx="14" fill="none" stroke="#facc15" stroke-width="7"/>
+  <text x="100" y="828" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="2">ILLUSTRATIVE EXAMPLE — REGIONAL LABELS ARE NOT A UNIVERSAL CONVERSION</text>
+  <text x="100" y="870" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800">MEASURE → TRANSLATE → SELECT → VERIFY ON MOBILE</text>
+</svg>

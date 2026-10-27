@@ -7,6 +7,7 @@ interface BlogModule {
     description: string;
     publishedOn: string;
     category?: string;
+    coverImage?: string;
     draft?: boolean;
   };
   url: string;
@@ -50,6 +51,7 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en-GB', {
                     <span>{String(posts.length - index).padStart(2, '0')}</span>
                     <time datetime={frontmatter.publishedOn}>{formatDate(frontmatter.publishedOn)}</time>
                   </div>
+                  {frontmatter.coverImage && <img class="blog-card-cover" src={frontmatter.coverImage} width="1200" height="675" alt="" loading="lazy" decoding="async" />}
                   <p>{frontmatter.category || 'Field note'}</p>
                   <h3>{frontmatter.title}</h3>
                   <div class="blog-card-footer">

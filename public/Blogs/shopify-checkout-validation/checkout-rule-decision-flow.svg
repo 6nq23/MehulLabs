@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Checkout rule decision flow</title>
+  <desc id="desc">A flowchart chooses block, warn, or review based on whether an order problem is certain and customer-fixable.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="100" y="105" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" fill="#131313">Choose the least restrictive safe action</text>
+  <text x="100" y="155" font-family="Inter, Arial, sans-serif" font-size="25" fill="#707178">Start with the operational consequence, then decide what the buyer needs.</text>
+  <rect x="100" y="225" width="360" height="156" rx="28" fill="#facc15" stroke="#131313" stroke-width="5"/>
+  <text x="280" y="272" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#131313">IS THE ORDER</text>
+  <text x="280" y="307" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#131313">IMPOSSIBLE</text>
+  <text x="280" y="342" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#131313">OR UNSAFE?</text>
+  <text x="280" y="372" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" fill="#131313">Use evidence, not suspicion</text>
+  <path d="M460 303 H585" stroke="#131313" stroke-width="7"/>
+  <path d="M565 281 L595 303 L565 325" fill="none" stroke="#131313" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="518" y="282" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#131313">YES</text>
+  <rect x="605" y="225" width="360" height="156" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+  <text x="785" y="287" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#131313">CAN THE BUYER</text>
+  <text x="785" y="328" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#131313">FIX IT NOW?</text>
+  <text x="785" y="365" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" fill="#707178">Field, quantity or option</text>
+  <path d="M965 303 H1090" stroke="#131313" stroke-width="7"/>
+  <path d="M1070 281 L1100 303 L1070 325" fill="none" stroke="#131313" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1023" y="282" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#131313">YES</text>
+  <rect x="1110" y="225" width="390" height="156" rx="28" fill="#131313"/>
+  <text x="1305" y="287" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#facc15">BLOCK</text>
+  <text x="1305" y="334" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" fill="#f6f5f1">Name the exact recovery</text>
+  <path d="M785 381 V504" stroke="#707178" stroke-width="7"/>
+  <path d="M763 484 L785 514 L807 484" fill="none" stroke="#707178" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="824" y="456" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#707178">NO</text>
+  <rect x="590" y="524" width="390" height="156" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+  <text x="785" y="586" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" fill="#131313">BLOCK + ALTERNATIVE</text>
+  <text x="785" y="633" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" fill="#707178">Offer another valid route</text>
+  <path d="M280 381 V714 H590" fill="none" stroke="#707178" stroke-width="7"/>
+  <path d="M570 692 L600 714 L570 736" fill="none" stroke="#707178" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="315" y="430" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#707178">NO</text>
+  <rect x="610" y="700" width="390" height="130" rx="28" fill="#f6f5f1" stroke="#707178" stroke-width="5"/>
+  <text x="805" y="755" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#131313">WARN OR REVIEW</text>
+  <text x="805" y="798" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="23" fill="#707178">Let checkout continue</text>
+  <rect x="1060" y="524" width="440" height="306" rx="30" fill="#facc15" stroke="#131313" stroke-width="5"/>
+  <text x="1110" y="585" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#131313">LAUNCH CONTROLS</text>
+  <circle cx="1125" cy="638" r="10" fill="#131313"/>
+  <text x="1155" y="646" font-family="Inter, Arial, sans-serif" font-size="23" fill="#131313">Market scope</text>
+  <circle cx="1125" cy="690" r="10" fill="#131313"/>
+  <text x="1155" y="698" font-family="Inter, Arial, sans-serif" font-size="23" fill="#131313">Recovery copy</text>
+  <circle cx="1125" cy="742" r="10" fill="#131313"/>
+  <text x="1155" y="750" font-family="Inter, Arial, sans-serif" font-size="23" fill="#131313">Failure behavior</text>
+  <circle cx="1125" cy="794" r="10" fill="#131313"/>
+  <text x="1155" y="802" font-family="Inter, Arial, sans-serif" font-size="23" fill="#131313">Rollback owner</text>
+</svg>

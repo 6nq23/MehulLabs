@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Back-in-stock decision map</title>
+  <desc id="desc">A flowchart routes a sold-out Shopify variant to an alert, preorder, or substitute based on whether it will return and whether timing is dependable.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="90" y="105" font-size="52" font-weight="800">Choose from supply certainty</text>
+    <text x="90" y="154" font-size="25" fill="#707178">The safe path is the one that matches what operations actually knows.</text>
+
+    <rect x="90" y="240" width="300" height="120" rx="22" fill="#131313"/>
+    <text x="240" y="292" text-anchor="middle" font-size="27" font-weight="700" fill="#f6f5f1">SOLD-OUT</text>
+    <text x="240" y="329" text-anchor="middle" font-size="23" fill="#f6f5f1">variant</text>
+
+    <path d="M390 300h150" stroke="#131313" stroke-width="7"/>
+    <path d="M516 276l28 24-28 24" fill="none" stroke="#131313" stroke-width="7" stroke-linecap="round"/>
+
+    <rect x="565" y="225" width="350" height="150" rx="24" fill="#facc15"/>
+    <text x="740" y="285" text-anchor="middle" font-size="27" font-weight="800">WILL IT RETURN?</text>
+    <text x="740" y="326" text-anchor="middle" font-size="22">Use a real buying decision</text>
+
+    <path d="M915 300h120" stroke="#131313" stroke-width="7"/>
+    <text x="965" y="278" font-size="22" font-weight="700">NO</text>
+    <rect x="1060" y="225" width="430" height="150" rx="24" fill="#f6f5f1" stroke="#707178" stroke-width="4"/>
+    <text x="1275" y="285" text-anchor="middle" font-size="27" font-weight="800">SHOW A SUBSTITUTE</text>
+    <text x="1275" y="326" text-anchor="middle" font-size="22" fill="#707178">Do not collect false hope</text>
+
+    <path d="M740 375v120" stroke="#131313" stroke-width="7"/>
+    <text x="758" y="437" font-size="22" font-weight="700">YES</text>
+    <rect x="565" y="520" width="350" height="150" rx="24" fill="#131313"/>
+    <text x="740" y="579" text-anchor="middle" font-size="27" font-weight="800" fill="#f6f5f1">DATE DEPENDABLE?</text>
+    <text x="740" y="620" text-anchor="middle" font-size="22" fill="#f6f5f1">Can fulfilment keep the promise?</text>
+
+    <path d="M565 595H400" stroke="#131313" stroke-width="7"/>
+    <text x="457" y="573" font-size="22" font-weight="700">NO</text>
+    <rect x="90" y="520" width="285" height="150" rx="24" fill="#facc15"/>
+    <text x="232" y="579" text-anchor="middle" font-size="28" font-weight="800">ALERT</text>
+    <text x="232" y="620" text-anchor="middle" font-size="22">Capture interest</text>
+
+    <path d="M915 595h120" stroke="#131313" stroke-width="7"/>
+    <text x="959" y="573" font-size="22" font-weight="700">YES</text>
+    <rect x="1060" y="520" width="430" height="150" rx="24" fill="#131313"/>
+    <text x="1275" y="579" text-anchor="middle" font-size="28" font-weight="800" fill="#f6f5f1">PREORDER</text>
+    <text x="1275" y="620" text-anchor="middle" font-size="22" fill="#f6f5f1">State dispatch timing clearly</text>
+
+    <rect x="90" y="760" width="1400" height="64" rx="20" fill="#facc15"/>
+    <text x="790" y="802" text-anchor="middle" font-size="25" font-weight="700">Then test the exact variant, market, trigger, message, link and opt-out.</text>
+  </g>
+</svg>

@@ -149,13 +149,15 @@ import { site } from '@/data/site';
 </script>
 
 <style>
-  .hive-header { --hive-scroll: 0; position: fixed; z-index: 50; inset: 0 0 auto; padding: 24px clamp(20px,4vw,40px) 0; color: #131313; pointer-events: none; }
-  .hive-nav { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: var(--hive-nav-width, 100%); max-width: 1600px; min-height: 72px; margin-inline: auto; padding: 6px 8px 6px calc(6px + var(--hive-scroll) * 28px); border: 1px solid rgba(220, 220, 220, calc(var(--hive-scroll) * .5)); border-radius: 999px; background: rgba(255, 255, 255, calc(var(--hive-scroll) * .75)); box-shadow: 0 10px 40px rgba(0,0,0,calc(var(--hive-scroll) * .06)); backdrop-filter: blur(calc(var(--hive-scroll) * 20px)); -webkit-backdrop-filter: blur(calc(var(--hive-scroll) * 20px)); pointer-events: auto; transition: width .4s cubic-bezier(.22,1,.36,1), box-shadow .3s, background .3s; }
+  /* Flat and transparent at the top; the pill (background, border, blur) fades in as --hive-scroll grows. */
+  .hive-header { --hive-scroll: 0; --hive-speed: 1; --hive-ink-top: #131313; --hive-pill: min(1, calc(var(--hive-scroll) * var(--hive-speed))); --hive-ink: #131313; position: fixed; z-index: 50; inset: 0 0 auto; padding: 24px clamp(20px,4vw,40px) 0; color: #131313; color: var(--hive-ink); pointer-events: none; }
+  .hive-nav { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: var(--hive-nav-width, 100%); max-width: 1600px; min-height: 72px; margin-inline: auto; padding: 6px 8px 6px calc(6px + var(--hive-scroll) * 28px); border: 1px solid rgba(220, 220, 220, calc(var(--hive-pill) * .5)); border-radius: 999px; background: rgba(255, 255, 255, calc(var(--hive-pill) * .75)); box-shadow: 0 10px 40px rgba(0,0,0,calc(var(--hive-pill) * .06)); backdrop-filter: blur(calc(var(--hive-pill) * 20px)); -webkit-backdrop-filter: blur(calc(var(--hive-pill) * 20px)); pointer-events: auto; transition: width .4s cubic-bezier(.22,1,.36,1), box-shadow .3s, background .3s; }
   a { color: inherit; text-decoration: none; }
   a:focus-visible,summary:focus-visible { outline: 2px solid #996400; outline-offset: 4px; }
   .hive-wordmark { display: inline-flex; align-items: center; flex: 0 0 auto; min-height: 44px; font-family: var(--font-display), sans-serif; font-size: 27px; font-weight: 850; line-height: 1; letter-spacing: -.095em; }
   .hive-wordmark span { color: #ffcb16; }
-  .hive-nav-links { display: flex; align-items: center; justify-content: center; gap: clamp(16px,2.2vw,34px); font-size: 15.5px; font-weight: 600; color: #131313; }
+  .hive-nav-links { display: flex; align-items: center; justify-content: center; gap: clamp(16px,2.2vw,34px); font-size: 15.5px; font-weight: 600; color: inherit; }
+  .hive-services-panel, .hive-mobile-panel { color: #131313; }
   .hive-nav-links > a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; transition: opacity .2s; }
   .hive-nav-links > a:hover { opacity: .6; }
   .hive-services-entry { position: relative; display: flex; align-items: center; }
@@ -170,7 +172,7 @@ import { site } from '@/data/site';
   .hive-services-panel a:hover { background: #f7f4ed; }
   .hive-services-panel span { font-size: 14px; font-weight: 700; }
   .hive-services-panel small { color: #76767c; font-size: 12px; line-height: 1.4; }
-  .hive-nav-cta { display: inline-flex; align-items: center; justify-content: space-between; flex: 0 0 auto; gap: 14px; min-height: 58px; padding: 5px 6px 5px 26px; border-radius: 999px; background: #facc15; font-size: 16px; font-weight: 750; white-space: nowrap; box-shadow: 0 6px 15px rgba(0,0,0,0.06), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); transition: transform .2s, box-shadow .2s; }
+  .hive-nav-cta { display: inline-flex; align-items: center; justify-content: space-between; flex: 0 0 auto; gap: 14px; min-height: 58px; padding: 5px 6px 5px 26px; border-radius: 999px; background: #facc15; color: #131313; font-size: 16px; font-weight: 750; white-space: nowrap; box-shadow: 0 6px 15px rgba(0,0,0,0.06), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); transition: transform .2s, box-shadow .2s; }
   .hive-nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,0.08), inset 0 -3px 5px rgba(220,160,0,0.35), inset 0 3px 5px rgba(255,255,255,0.5); }
   .hive-cta-arrow { display: grid; place-items: center; flex: 0 0 auto; width: 46px; height: 46px; border: none; border-radius: 50%; background: linear-gradient(180deg, #ffe066 0%, #ffc000 100%); box-shadow: inset 0 2px 3px rgba(255,255,255,0.9), 0 2px 5px rgba(0,0,0,0.15); transition: transform .2s; }
   .hive-nav-cta:hover .hive-cta-arrow { transform: scale(1.05); }

@@ -4,6 +4,8 @@ import { Assurance } from '@/components/sections/Assurance';
 import { Contact } from '@/components/sections/Contact';
 import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
 import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { relatedBee, type RelatedBeeSlug } from '@/data/relatedBees';
 import { serviceSearchContent } from '@/data/searchContent';
 import { tools } from '@/data/tools';
 import { guides } from '@/data/guides';
@@ -49,7 +51,7 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
       </div>
     </section>
 
-    <section class="service-problem section-space" aria-labelledby="service-problem-title">
+    <section id="problem" class="service-problem section-space" aria-labelledby="service-problem-title">
       <div class="shell service-problem-grid">
         <p class="eyebrow-accent">Where the leak starts</p>
         <div>
@@ -60,7 +62,7 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
       </div>
     </section>
 
-    <section class="service-delivery section-space" aria-labelledby="service-delivery-title">
+    <section id="delivery" class="service-delivery section-space" aria-labelledby="service-delivery-title">
       <div class="shell">
         <div class="section-intro">
           <span class="section-label"><span>02 /</span> What changes</span>
@@ -84,35 +86,44 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
       </div>
     </section>
 
-    <section class="section-space growth-evidence" aria-labelledby="handover-title">
+    <section id="practice" class="section-space growth-evidence" aria-labelledby="handover-title">
       <div class="shell growth-split">
         <div><p class="eyebrow-accent">WHAT THIS LOOKS LIKE IN PRACTICE</p><h2 class="section-title" id="handover-title">A useful first fix.<br /><span class="muted-heading">A clear handover.</span></h2><p>{delivery.example}</p><p class="growth-note">Illustrative use case, not a client result.</p><h3 class="growth-service-detail">What we need from you</h3><p>{delivery.needs}</p></div>
         <div class="growth-card"><h3>What your team receives</h3><ul class="growth-list">{delivery.handover.map(item => <li>{item}</li>)}</ul><p>{delivery.measure}</p><a class="text-link" href={`/offers#${service.slug}`}>See pilot pricing and custom scope ↗</a></div>
       </div>
     </section>
-    <section class="section-space growth-evidence" aria-labelledby="service-questions">
+    <section id="before-you-book" class="section-space growth-evidence" aria-labelledby="service-questions">
       <div class="shell growth-split"><div><p class="eyebrow-accent">BEFORE YOU BOOK</p><h2 class="section-title" id="service-questions">Know what the call<br />is for.</h2><p>Mehul brings experience from our own brands, Sanskrutibydiorin and Diorin Demifine Jewellery. These are owned businesses, not independent client case studies. Ask to see a relevant workflow before agreeing to implementation.</p></div><div class="growth-card"><h3>Bring your problem and your setup.</h3><p class="growth-note">Share your website, current tools and what keeps getting missed. In a free 30-minute call we discuss fit and next steps. You do not need to buy every service, and if the honest answer is that you do not need us yet, you will hear that instead of a proposal.</p><p class="growth-note">Choose a date on Calendly, check the time zone, and add your website and the service you’re interested in to the meeting notes. You’ll confirm the booking there.</p><a class="text-link" href={site.whatsappUrl}>No suitable time? Message Mehul ↗</a></div></div>
     </section>
-    <section class="section-space shell" aria-labelledby="service-search-title">
-      <h2 id="service-search-title" class="section-title">{searchContent.heading}</h2>
-      <p class="section-description">{searchContent.body}</p>
-      <div class="tool-faq">{searchContent.faqs.map(([question, answer]) => <details><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div>
-      {relatedReading && <p><a class="text-link" href={relatedReading.href}>{relatedReading.title} ↗</a></p>}
-      <h3>Put numbers behind the next decision</h3>
-      <nav class="seo-related" aria-label="Related free calculators">{relatedTools.map(tool => <a class="text-link" href={`/tools/${tool.slug}`}>{tool.title} ↗</a>)}</nav>
+    <section id="faq" class="shell" aria-labelledby="service-search-title">
+      <div class="tool-faq">
+        <div>
+          <h2 id="service-search-title">{searchContent.heading}</h2>
+          <p class="section-description">{searchContent.body}</p>
+        </div>
+        <div>{searchContent.faqs.map(([question, answer]) => <details><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div>
+      </div>
+      <div class="service-search-more">
+        {relatedReading && <p><a class="text-link" href={relatedReading.href}>{relatedReading.title} ↗</a></p>}
+        <h3>Put numbers behind the next decision</h3>
+        <nav class="seo-related" aria-label="Related free calculators">{relatedTools.map(tool => <a class="text-link" href={`/tools/${tool.slug}`}>{tool.title} ↗</a>)}</nav>
+      </div>
     </section>
     <Approach focused sectionNumber="03" client:visible />
     <Assurance showFitCriteria={false} sectionNumber="04" client:visible />
 
-    <section class="related-services section-space" aria-labelledby="related-title">
+    <section id="related" class="related-services section-space" aria-labelledby="related-title">
       <div class="shell">
         <p class="eyebrow-accent">05 / The connected layer</p>
         <h2 id="related-title">This leak is rarely alone.</h2>
         <div class="related-service-grid">
           {related.map(item => (
             <a href={`/services/${item.slug}`}>
-              <span>{item.navLabel}</span>
-              <strong>{item.navDescription}</strong>
+              <Image src={relatedBee[item.slug as RelatedBeeSlug]} width={64} height={64} format="webp" alt="" loading="lazy" />
+              <div>
+                <span>{item.navLabel}</span>
+                <strong>{item.navDescription}</strong>
+              </div>
               <ArrowIcon />
             </a>
           ))}

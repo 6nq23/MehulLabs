@@ -4,17 +4,18 @@ import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvide
 import { ScrollProgress } from './ScrollProgress';
 import { LeadCapturePopup } from './LeadCapturePopup';
 
-/** Keeps the navigation and document-wide scrolling behavior in one React island. */
+/** Keeps document-wide scrolling, analytics events and the lead popup in one React island. */
 interface SiteRuntimeProps {
-  pathname?: string;
+  /** The 404 page and other noindex pages never show the lead popup. */
+  showLeadPopup?: boolean;
 }
 
-export function SiteRuntime({ pathname = '/' }: SiteRuntimeProps) {
+export function SiteRuntime({ showLeadPopup = true }: SiteRuntimeProps) {
   return (
     <SmoothScrollProvider>
       <ConversionEvents />
       <ScrollProgress />
-      <LeadCapturePopup />
-          </SmoothScrollProvider>
+      {showLeadPopup && <LeadCapturePopup />}
+    </SmoothScrollProvider>
   );
 }

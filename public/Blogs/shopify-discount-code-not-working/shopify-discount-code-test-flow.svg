@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify discount code controlled test flow</title>
+  <desc id="desc">A flow from copying the failed cart through status, eligibility, market, combination, and route checks to either a configuration fix or theme and app isolation.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="100" y="110" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" fill="#131313">Stop guessing. Change one condition.</text>
+  <text x="100" y="164" font-family="Inter, Arial, sans-serif" font-size="26" fill="#707178">A controlled cart turns a generic rejection into a specific owner and action.</text>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <rect x="100" y="250" width="292" height="118" rx="24" fill="#131313"/>
+    <text x="246" y="300" font-size="26" font-weight="800" fill="#facc15">COPY FAILURE</text>
+    <text x="246" y="338" font-size="22" fill="#f6f5f1">same cart and customer</text>
+    <path d="M392 309h74" stroke="#131313" stroke-width="5"/>
+    <path d="m452 296 18 13-18 13" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="478" y="250" width="292" height="118" rx="24" fill="#facc15" stroke="#131313" stroke-width="3"/>
+    <text x="624" y="300" font-size="26" font-weight="800" fill="#131313">READ MESSAGE</text>
+    <text x="624" y="338" font-size="22" fill="#131313">status, cart, or conflict</text>
+    <path d="M770 309h74" stroke="#131313" stroke-width="5"/>
+    <path d="m830 296 18 13-18 13" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="856" y="250" width="292" height="118" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="1002" y="300" font-size="26" font-weight="800" fill="#131313">TEST RULES</text>
+    <text x="1002" y="338" font-size="22" fill="#707178">one variable per run</text>
+    <path d="M1148 309h74" stroke="#131313" stroke-width="5"/>
+    <path d="m1208 296 18 13-18 13" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="1234" y="250" width="266" height="118" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="1367" y="300" font-size="26" font-weight="800" fill="#131313">RESET CART</text>
+    <text x="1367" y="338" font-size="22" fill="#707178">repeat the result</text>
+    <path d="M1002 368v92" stroke="#131313" stroke-width="5"/>
+    <path d="m989 446 13 18 13-18" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="730" y="460" width="544" height="126" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="1002" y="512" font-size="26" font-weight="800" fill="#131313">DOES NATIVE CHECKOUT PASS?</text>
+    <text x="1002" y="554" font-size="22" fill="#707178">compare with the failing route</text>
+    <path d="M1002 586v40H548v20" stroke="#131313" stroke-width="5" fill="none"/>
+    <path d="m535 632 13 18 13-18" fill="none" stroke="#131313" stroke-width="5"/>
+    <text x="758" y="616" font-size="22" font-weight="700" fill="#707178">NO</text>
+    <path d="M1002 626h398v20" stroke="#131313" stroke-width="5" fill="none"/>
+    <path d="m1387 632 13 18 13-18" fill="none" stroke="#131313" stroke-width="5"/>
+    <text x="1242" y="616" font-size="22" font-weight="700" fill="#707178">YES</text>
+    <rect x="288" y="660" width="520" height="124" rx="28" fill="#facc15" stroke="#131313" stroke-width="3"/>
+    <text x="548" y="710" font-size="30" font-weight="800" fill="#131313">FIX THE FAILED RULE</text>
+    <text x="548" y="750" font-size="23" fill="#131313">status, eligibility, market, or stacking</text>
+    <rect x="1136" y="660" width="364" height="124" rx="28" fill="#131313"/>
+    <text x="1318" y="710" font-size="30" font-weight="800" fill="#facc15">ISOLATE ROUTE</text>
+    <text x="1318" y="750" font-size="23" fill="#f6f5f1">theme, app, link, or draft</text>
+  </g>
+</svg>

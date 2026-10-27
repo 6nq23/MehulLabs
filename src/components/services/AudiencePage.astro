@@ -4,6 +4,8 @@ import { Assurance } from '@/components/sections/Assurance';
 import { Contact } from '@/components/sections/Contact';
 import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
 import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { relatedBee, type RelatedBeeSlug } from '@/data/relatedBees';
 import { audiences, type Audience } from '@/data/audiences';
 import { formatPilotPrice } from '@/data/offers';
 import { primaryCta, site } from '@/data/site';
@@ -142,14 +144,20 @@ const checkPrefix = 'Check it yourself:';
         <div class="related-service-grid">
           {serviceRoutes.map(item => (
             <a href={`/services/${item.slug}`}>
-              <span>{item.navLabel}</span>
-              <strong>{item.navDescription}</strong>
+              <Image src={relatedBee[item.slug as RelatedBeeSlug]} width={64} height={64} format="webp" alt="" loading="lazy" />
+              <div>
+                <span>{item.navLabel}</span>
+                <strong>{item.navDescription}</strong>
+              </div>
               <ArrowIcon />
             </a>
           ))}
           <a href={`/services/${other.slug}`}>
-            <span>{other.navLabel}</span>
-            <strong>{other.navDescription}</strong>
+            <Image src={relatedBee[other.slug as RelatedBeeSlug]} width={64} height={64} format="webp" alt="" loading="lazy" />
+            <div>
+              <span>{other.navLabel}</span>
+              <strong>{other.navDescription}</strong>
+            </div>
             <ArrowIcon />
           </a>
         </div>
