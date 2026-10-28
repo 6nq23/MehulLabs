@@ -4,7 +4,7 @@ draft: false
 title: "Bundle Pricing: A Practical Ecommerce Guide"
 description: "Use a 5-step bundle pricing model to protect margin, raise order value, and test discounts without confusing projected adoption with actual demand."
 publishedOn: "2026-09-19"
-updatedOn: "2026-10-19"
+updatedOn: "2026-10-28"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "8 min read"
@@ -46,6 +46,8 @@ Common formats include:
 - **Mix and match:** the customer selects from an eligible range.
 - **Buy more, save more:** quantity tiers with increasing discounts.
 - **Starter kit:** the minimum products needed to reach a first result.
+
+For a same-product offer, the [Shopify quantity breaks worked model](/blog/shopify-quantity-breaks) shows how to set profitable price tiers before choosing an app or native discount.
 
 ## How do you calculate a bundle price?
 

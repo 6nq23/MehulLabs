@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify quantity breaks balanced against a profit floor</title>
+  <desc id="desc">Three quantity tiers descend in unit price while a yellow contribution floor shows the safe limit.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="110" y="130" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3">WORKED PRICING MODEL</text>
+  <text x="110" y="205" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Shopify quantity breaks</text>
+  <text x="110" y="260" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="30">Set the floor before the discount ladder</text>
+  <line x1="130" y1="690" x2="1460" y2="690" stroke="#facc15" stroke-width="12"/>
+  <text x="1150" y="740" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">CONTRIBUTION FLOOR</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="150" y="390" width="350" height="245" rx="24" fill="#131313"/>
+    <text x="195" y="450" fill="#f6f5f1" font-size="27" font-weight="700">BASE</text>
+    <text x="195" y="535" fill="#facc15" font-size="58" font-weight="800">1 unit</text>
+    <text x="195" y="590" fill="#f6f5f1" font-size="27">Full unit price</text>
+    <rect x="625" y="435" width="350" height="200" rx="24" fill="#707178"/>
+    <text x="670" y="495" fill="#f6f5f1" font-size="27" font-weight="700">BREAK 1</text>
+    <text x="670" y="575" fill="#facc15" font-size="52" font-weight="800">3 units</text>
+    <rect x="1100" y="480" width="350" height="155" rx="24" fill="#131313"/>
+    <text x="1145" y="540" fill="#f6f5f1" font-size="27" font-weight="700">BREAK 2</text>
+    <text x="1145" y="600" fill="#facc15" font-size="44" font-weight="800">5 units</text>
+    <text x="110" y="830" fill="#707178" font-size="24">Quantities are illustrative. Price every tier from contribution, fulfilment and inventory.</text>
+  </g>
+</svg>
