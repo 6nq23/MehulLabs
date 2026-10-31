@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify abandoned email diagnostic checkpoints</title>
+  <desc id="desc">An email card travels from an abandoned checkout through trigger, audience, wait, send, delivery, and recovery checkpoints.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="110" y="120" font-size="34" font-weight="700">ABANDONED CHECKOUT</text>
+    <text x="110" y="182" font-size="64" font-weight="800">Trace the email, state by state</text>
+    <text x="110" y="236" font-size="28" fill="#707178">A missing message is an observable workflow, not one mystery.</text>
+
+    <rect x="110" y="320" width="360" height="330" rx="34" fill="#131313"/>
+    <rect x="158" y="374" width="264" height="184" rx="20" fill="#f6f5f1"/>
+    <path d="M158 402 L290 492 L422 402" fill="none" stroke="#facc15" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="390" cy="592" r="34" fill="#facc15"/>
+    <path d="M377 592 l10 10 18 -22" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="290" y="706" text-anchor="middle" font-size="26" font-weight="700">CONTROLLED TEST</text>
+
+    <path d="M505 488 H1420" stroke="#707178" stroke-width="8" stroke-linecap="round"/>
+    <g font-size="23" font-weight="700" text-anchor="middle">
+      <g><circle cx="570" cy="488" r="30" fill="#facc15"/><text x="570" y="496">1</text><text x="570" y="560">RECORD</text></g>
+      <g><circle cx="710" cy="488" r="30" fill="#facc15"/><text x="710" y="496">2</text><text x="710" y="560">TRIGGER</text></g>
+      <g><circle cx="850" cy="488" r="30" fill="#facc15"/><text x="850" y="496">3</text><text x="850" y="560">AUDIENCE</text></g>
+      <g><circle cx="990" cy="488" r="30" fill="#facc15"/><text x="990" y="496">4</text><text x="990" y="560">WAIT</text></g>
+      <g><circle cx="1130" cy="488" r="30" fill="#facc15"/><text x="1130" y="496">5</text><text x="1130" y="560">SEND</text></g>
+      <g><circle cx="1270" cy="488" r="30" fill="#facc15"/><text x="1270" y="496">6</text><text x="1270" y="560">DELIVER</text></g>
+      <g><circle cx="1410" cy="488" r="30" fill="#facc15"/><text x="1410" y="496">7</text><text x="1410" y="560">RECOVER</text></g>
+    </g>
+    <rect x="540" y="650" width="900" height="116" rx="26" fill="#facc15"/>
+    <text x="990" y="700" text-anchor="middle" font-size="28" font-weight="800">ONE CHANGE · ONE FRESH CHECKOUT · ONE RESULT</text>
+    <text x="990" y="738" text-anchor="middle" font-size="23">Find the first state without evidence. Fix that state first.</text>
+  </g>
+</svg>

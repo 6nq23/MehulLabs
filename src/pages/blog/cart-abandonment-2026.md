@@ -4,7 +4,7 @@ draft: false
 title: "Cart Abandonment in 2026: Why 70% of Carts Still Leak"
 description: "The cart abandonment rate in 2026 still averages 70.22% per Baymard. See the checkout reasons behind it, how to measure yours in Shopify and which fixes work."
 publishedOn: "2026-09-25"
-updatedOn: "2026-10-25"
+updatedOn: "2026-10-31"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "11 min read"
@@ -178,6 +178,8 @@ Real urgency, such as a genuine sale end date or a true dispatch cut-off, is fin
 Recovery works best as a short, consented sequence across the channels a customer has actually opted in to. Shopify Messaging offers three templates: recover abandoned checkout, recover abandoned cart and convert abandoned product browse. Each supports email or SMS, and by default they reach customers subscribed to email marketing.
 
 Shopify's [marketing automations guide](https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/marketing-automations/create) separates the three triggers. Abandoned checkout targets customers who started checkout but did not complete an order. Abandoned cart targets customers who added products but did not start checkout. Browse targets customers who viewed a product but left without adding it. Shopify lets you change the abandoned checkout audience to "All customers", but do that only where local law allows messaging a non-subscriber about an unfinished purchase.
+
+If a checkout reminder never arrives, use the [Shopify abandoned cart email troubleshooting flow](/blog/shopify-abandoned-cart-email-not-sending) to trace the record, eligibility, wait, send, delivery, and recovery link in order.
 
 <figure class="blog-feature-image blog-feature-image--inline">
   <img src="/Blogs/cart-abandonment-2026/cart-abandonment-recovery.png" alt="Abandoned cart recovery sequence across email, WhatsApp and SMS over 24 to 72 hours" width="1600" height="900" loading="lazy" decoding="async">

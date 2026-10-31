@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify free gift promotion control gates</title>
+  <desc id="desc">A shopping cart carrying a yellow gift box moves through qualification, checkout, inventory, and fulfilment control gates.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <path d="M150 126H1450" stroke="#131313" stroke-width="4"/>
+  <text x="150" y="210" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="700">A free gift is an order promise</text>
+  <text x="150" y="266" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="30">Carry it from qualification to the packed order.</text>
+
+  <g transform="translate(162 360)">
+    <path d="M0 24H70L105 184H328L374 70H92" fill="none" stroke="#131313" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="150" cy="238" r="24" fill="#131313"/>
+    <circle cx="296" cy="238" r="24" fill="#131313"/>
+    <rect x="158" y="42" width="120" height="118" rx="12" fill="#facc15" stroke="#131313" stroke-width="5"/>
+    <path d="M218 42V160M158 90H278" stroke="#131313" stroke-width="7"/>
+    <path d="M218 42C182 16 170 6 176 -8C184 -26 216 -10 218 42ZM218 42C254 16 266 6 260 -8C252 -26 220 -10 218 42Z" fill="#facc15" stroke="#131313" stroke-width="5"/>
+  </g>
+
+  <path d="M560 488H680" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+  <path d="M655 465L682 488L655 511" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="700" y="346" width="218" height="282" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <circle cx="809" cy="414" r="28" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <text x="809" y="490" text-anchor="middle" fill="#131313" font-size="28" font-weight="700">Qualify</text>
+    <text x="809" y="535" text-anchor="middle" fill="#707178" font-size="23">Rule and market</text>
+
+    <rect x="950" y="346" width="218" height="282" rx="24" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <circle cx="1059" cy="414" r="28" fill="#131313"/>
+    <path d="M1047 414L1057 424L1075 402" fill="none" stroke="#facc15" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1059" y="490" text-anchor="middle" fill="#131313" font-size="28" font-weight="700">Checkout</text>
+    <text x="1059" y="535" text-anchor="middle" fill="#131313" font-size="23">Price and stack</text>
+
+    <rect x="1200" y="346" width="218" height="282" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <path d="M1258 406H1360V476H1258Z" fill="none" stroke="#131313" stroke-width="5"/>
+    <path d="M1258 426L1309 454L1360 426" fill="none" stroke="#131313" stroke-width="5"/>
+    <text x="1309" y="520" text-anchor="middle" fill="#131313" font-size="28" font-weight="700">Fulfil</text>
+    <text x="1309" y="565" text-anchor="middle" fill="#707178" font-size="23">Stock and scan</text>
+  </g>
+
+  <rect x="150" y="704" width="1268" height="76" rx="18" fill="#131313"/>
+  <text x="784" y="754" text-anchor="middle" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600">One promise. One rule. One tested path.</text>
+</svg>

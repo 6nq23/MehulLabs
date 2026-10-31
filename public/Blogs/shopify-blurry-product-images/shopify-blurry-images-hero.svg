@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify product image quality path</title>
+  <desc id="desc">A sharp product image moves through source, theme, and browser checks before reaching a storefront screen.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="64" y="60" width="1472" height="780" rx="42" fill="#facc15"/>
+  <rect x="94" y="90" width="1412" height="720" rx="30" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+  <text x="150" y="190" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800" fill="#131313">Why does a sharp upload look blurry?</text>
+  <text x="150" y="246" font-family="Inter, Arial, sans-serif" font-size="28" fill="#707178">Trace the pixels that reach the storefront, not only the file in admin.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="150" y="340" width="330" height="290" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <rect x="190" y="382" width="250" height="150" rx="18" fill="#facc15"/>
+    <path d="M215 500l62-68 48 48 38-35 52 55z" fill="#131313"/>
+    <circle cx="380" cy="420" r="20" fill="#f6f5f1"/>
+    <text x="315" y="578" text-anchor="middle" font-size="30" font-weight="750" fill="#131313">SOURCE</text>
+    <text x="315" y="610" text-anchor="middle" font-size="22" fill="#707178">Is the master sharp?</text>
+
+    <path d="M505 485h105" stroke="#131313" stroke-width="10" stroke-linecap="round"/>
+    <path d="M590 456l34 29-34 29" fill="none" stroke="#131313" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="635" y="340" width="330" height="290" rx="28" fill="#131313"/>
+    <path d="M700 410h200M700 460h155M700 510h180" stroke="#facc15" stroke-width="18" stroke-linecap="round"/>
+    <text x="800" y="578" text-anchor="middle" font-size="30" font-weight="750" fill="#f6f5f1">THEME</text>
+    <text x="800" y="610" text-anchor="middle" font-size="22" fill="#f6f5f1">Which width is requested?</text>
+
+    <path d="M990 485h105" stroke="#131313" stroke-width="10" stroke-linecap="round"/>
+    <path d="M1075 456l34 29-34 29" fill="none" stroke="#131313" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="1120" y="340" width="330" height="290" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <rect x="1175" y="385" width="220" height="135" rx="16" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <path d="M1200 492l48-48 38 34 35-30 49 44z" fill="#131313"/>
+    <text x="1285" y="578" text-anchor="middle" font-size="30" font-weight="750" fill="#131313">BROWSER</text>
+    <text x="1285" y="610" text-anchor="middle" font-size="22" fill="#707178">What did it display?</text>
+
+    <rect x="385" y="700" width="830" height="68" rx="34" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <text x="800" y="744" text-anchor="middle" font-size="28" font-weight="800" fill="#131313">Find the first stage that loses enough pixels.</text>
+  </g>
+</svg>
+

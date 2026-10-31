@@ -4,7 +4,7 @@ draft: false
 title: "Holiday Discount Strategy 2026: How Deep Can You Go?"
 description: "How deep can a Shopify store discount this holiday season? Use margin ceilings, segment rules and Shopify's combination limits to set offers that still profit."
 publishedOn: "2026-10-06"
-updatedOn: "2026-10-27"
+updatedOn: "2026-10-29"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "10 min read"
@@ -94,7 +94,7 @@ Pick the type that matches the goal.
 | VIP early access | Loyalty and list growth | Leaked access links | Limit to a customer segment |
 | Loyalty reward | Repeat purchase | Points liability and stacking | Usually an app |
 
-Several details are worth checking. Shopify's Buy X get Y needs shoppers to add both items themselves, and the free or discounted "get" item is never added automatically. Those discounts also do not apply on the post-purchase checkout page. The free-shipping minimum counts product prices after other combinable discounts, so a stacked code can push an order below its threshold.
+Several details are worth checking. Shopify's Buy X get Y needs shoppers to add both items themselves, and the free or discounted "get" item is never added automatically. The [Shopify free gift with purchase control plan](/blog/shopify-free-gift-purchase) covers that manual-add catch, threshold economics, variants, stock, markets, and boundary testing. Those discounts also do not apply on the post-purchase checkout page. The free-shipping minimum counts product prices after other combinable discounts, so a stacked code can push an order below its threshold.
 
 Threshold design has a demand side too. [Baymard's research](https://baymard.com/lists/cart-abandonment-rate) reports that 40% of US online shoppers who abandoned a checkout cited extra costs, such as shipping, tax and fees, as too high. Free shipping removes one of the biggest surprises, but only set the threshold after checking average order value. Our [cart abandonment guide](/blog/cart-abandonment-2026) covers the checkout side, and [shipping cost increases in Q4 2026](/blog/holiday-shipping-deadlines-2026) explains why a fixed threshold may need to rise.
 

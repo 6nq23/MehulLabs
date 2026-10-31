@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Abandoned checkout email diagnostic flow</title>
+  <desc id="desc">A branching flow moves from checkout recorded through audience, wait, send, delivery, and recovery link checks, with evidence required at each gate.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="100" y="104" font-size="54" font-weight="800">Find the first missing piece of evidence</text>
+    <text x="100" y="154" font-size="26" fill="#707178">Do not rebuild the automation until the trace shows where it stopped.</text>
+
+    <g font-size="24" font-weight="700" text-anchor="middle">
+      <rect x="100" y="245" width="290" height="116" rx="26" fill="#131313"/>
+      <text x="245" y="294" fill="#f6f5f1">CHECKOUT</text><text x="245" y="326" fill="#f6f5f1">RECORDED?</text>
+      <rect x="460" y="245" width="290" height="116" rx="26" fill="#facc15"/>
+      <text x="605" y="294">TRIGGER +</text><text x="605" y="326">AUDIENCE PASS?</text>
+      <rect x="820" y="245" width="290" height="116" rx="26" fill="#facc15"/>
+      <text x="965" y="294">WAIT + SEND</text><text x="965" y="326">COMPLETED?</text>
+      <rect x="1180" y="245" width="290" height="116" rx="26" fill="#facc15"/>
+      <text x="1325" y="294">DELIVERED +</text><text x="1325" y="326">LINK WORKS?</text>
+    </g>
+
+    <g fill="none" stroke="#707178" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M390 303 H460"/><path d="M750 303 H820"/><path d="M1110 303 H1180"/>
+      <path d="M245 361 V466"/><path d="M605 361 V466"/><path d="M965 361 V466"/><path d="M1325 361 V466"/>
+    </g>
+    <g fill="#707178">
+      <path d="M448 286 l24 17 -24 17z"/><path d="M808 286 l24 17 -24 17z"/><path d="M1168 286 l24 17 -24 17z"/>
+      <path d="M228 454 l17 24 17 -24z"/><path d="M588 454 l17 24 17 -24z"/><path d="M948 454 l17 24 17 -24z"/><path d="M1308 454 l17 24 17 -24z"/>
+    </g>
+
+    <g font-size="22" text-anchor="middle">
+      <text x="425" y="282" fill="#707178">YES</text><text x="785" y="282" fill="#707178">YES</text><text x="1145" y="282" fill="#707178">YES</text>
+      <text x="280" y="418" fill="#707178">NO</text><text x="640" y="418" fill="#707178">NO</text><text x="1000" y="418" fill="#707178">NO</text><text x="1360" y="418" fill="#707178">NO</text>
+    </g>
+
+    <g font-size="23" text-anchor="middle">
+      <rect x="100" y="485" width="290" height="170" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <text x="245" y="530" font-weight="800">FIX CAPTURE</text><text x="245" y="570">Email, product, channel,</text><text x="245" y="604">address, bot filtering</text>
+      <rect x="460" y="485" width="290" height="170" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <text x="605" y="530" font-weight="800">FIX ELIGIBILITY</text><text x="605" y="570">Correct trigger, active flow,</text><text x="605" y="604">audience and consent</text>
+      <rect x="820" y="485" width="290" height="170" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <text x="965" y="530" font-weight="800">FIX EXECUTION</text><text x="965" y="570">Full delay, stop condition,</text><text x="965" y="604">workflow activity</text>
+      <rect x="1180" y="485" width="290" height="170" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <text x="1325" y="530" font-weight="800">FIX HANDOFF</text><text x="1325" y="570">Bounce, spam, domain,</text><text x="1325" y="604">market and cart state</text>
+    </g>
+
+    <rect x="260" y="735" width="1080" height="92" rx="26" fill="#131313"/>
+    <text x="800" y="791" text-anchor="middle" font-size="28" font-weight="800" fill="#f6f5f1">Evidence at every gate means the recovery path is ready.</text>
+  </g>
+</svg>
