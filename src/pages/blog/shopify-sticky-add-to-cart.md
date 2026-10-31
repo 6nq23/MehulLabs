@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Sticky Add to Cart: Test Before You Ship"
 description: "Use this Shopify sticky add to cart test plan to catch variant, cart-drawer, mobile, accessibility and profit failures before a wider rollout."
 publishedOn: "2026-10-25"
-updatedOn: "2026-10-25"
+updatedOn: "2026-10-31"
 category: "Shopify conversion"
 author: "Mehul"
 coverImage: "/Blogs/shopify-sticky-add-to-cart/sticky-add-to-cart-hero.svg"
@@ -25,7 +25,7 @@ Review mobile recordings or scroll data, then test the page on small and large p
 
 The bar should also disappear when the original product form returns, the footer enters view, or another essential control needs the same screen space. That prevents two competing purchase buttons and reduces collisions with chat, cookie, accessibility, and payment widgets.
 
-The [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) provides a wider product-page baseline. Fix unclear price, shipping, returns, imagery, and variant labels before adding a persistent button that merely follows the shopper past those gaps.
+The [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checklist) provides a wider product-page baseline. Fix unclear price, shipping, returns, [blurry Shopify product images](/blog/shopify-blurry-product-images), and variant labels before adding a persistent button that merely follows the shopper past those gaps.
 
 ## Shopify sticky add to cart failure modes
 

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative Shopify product image pixel budget</title>
+  <desc id="desc">An illustrative calculation compares rendered CSS width, device pixel ratio, required source width, and an undersized delivered image.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="100" y="105" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800" fill="#131313">The pixel-budget check</text>
+  <text x="100" y="155" font-family="Inter, Arial, sans-serif" font-size="26" fill="#707178">Illustrative example. Compare the live slot with the image the browser selected.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="100" y="235" width="400" height="190" rx="26" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="140" y="292" font-size="24" fill="#707178">RENDERED WIDTH</text>
+    <text x="140" y="372" font-size="64" font-weight="800" fill="#131313">760 CSS px</text>
+
+    <text x="545" y="350" font-size="70" font-weight="800" fill="#131313">×</text>
+
+    <rect x="650" y="235" width="360" height="190" rx="26" fill="#131313"/>
+    <text x="690" y="292" font-size="24" fill="#f6f5f1">SCREEN DENSITY</text>
+    <text x="690" y="372" font-size="64" font-weight="800" fill="#facc15">2× DPR</text>
+
+    <text x="1050" y="350" font-size="70" font-weight="800" fill="#131313">=</text>
+
+    <rect x="1150" y="235" width="350" height="190" rx="26" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <text x="1190" y="292" font-size="24" fill="#131313">PIXEL BUDGET</text>
+    <text x="1190" y="372" font-size="64" font-weight="800" fill="#131313">1,520 px</text>
+
+    <rect x="100" y="535" width="1400" height="230" rx="30" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="150" y="602" font-size="26" font-weight="750" fill="#131313">DELIVERED RESOURCE</text>
+    <rect x="150" y="644" width="650" height="54" rx="27" fill="#facc15"/>
+    <rect x="150" y="644" width="342" height="54" rx="27" fill="#131313"/>
+    <text x="845" y="684" font-size="36" font-weight="800" fill="#131313">800 px</text>
+    <text x="1050" y="684" font-size="28" fill="#707178">Short of the 1,520 px budget</text>
+    <text x="150" y="820" font-size="27" font-weight="700" fill="#131313">If currentSrc is undersized, fix the responsive request before re-exporting every source image.</text>
+  </g>
+</svg>
+
