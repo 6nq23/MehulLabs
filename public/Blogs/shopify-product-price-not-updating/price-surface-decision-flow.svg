@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Price surface decision flow</title>
+  <desc id="desc">A left-to-right decision flow compares the saved variant, market calculation, product and collection display, cart, and checkout to assign the repair owner.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="105" y="100" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700" fill="#131313">Which surface shows the first wrong price?</text>
+  <text x="105" y="150" font-family="Inter, Arial, sans-serif" font-size="27" fill="#707178">Keep the variant, market, currency, and session fixed while testing.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="105" y="230" width="330" height="120" rx="22" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <text x="140" y="278" font-size="27" font-weight="700" fill="#131313">Variant record</text>
+    <text x="140" y="316" font-size="23" fill="#131313">Owner: catalog or data writer</text>
+
+    <path d="M435 290h105" fill="none" stroke="#131313" stroke-width="5"/>
+    <path d="M522 273l23 17-23 17" fill="none" stroke="#131313" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="555" y="230" width="330" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="590" y="278" font-size="27" font-weight="700" fill="#131313">Market preview</text>
+    <text x="590" y="316" font-size="23" fill="#707178">Owner: catalog or currency rule</text>
+
+    <path d="M885 290h105" fill="none" stroke="#131313" stroke-width="5"/>
+    <path d="M972 273l23 17-23 17" fill="none" stroke="#131313" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="1005" y="230" width="490" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="1040" y="278" font-size="27" font-weight="700" fill="#131313">Product + collection pages</text>
+    <text x="1040" y="316" font-size="23" fill="#707178">Owner: theme, app, or price summary logic</text>
+
+    <path d="M1250 350v100" fill="none" stroke="#131313" stroke-width="5"/>
+    <path d="M1233 432l17 23 17-23" fill="none" stroke="#131313" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="1005" y="470" width="490" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="1040" y="518" font-size="27" font-weight="700" fill="#131313">Fresh cart</text>
+    <text x="1040" y="556" font-size="23" fill="#707178">Owner: variant, selling plan, or cart logic</text>
+
+    <path d="M1005 530H900" fill="none" stroke="#131313" stroke-width="5"/>
+    <path d="M918 513l-23 17 23 17" fill="none" stroke="#131313" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="555" y="470" width="330" height="120" rx="22" fill="#131313" stroke="#131313" stroke-width="4"/>
+    <text x="590" y="518" font-size="27" font-weight="700" fill="#f6f5f1">Checkout</text>
+    <text x="590" y="556" font-size="23" fill="#f6f5f1">Owner: final commerce rule</text>
+
+    <rect x="105" y="690" width="1390" height="112" rx="28" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <text x="145" y="738" font-size="29" font-weight="700" fill="#131313">One clean trace beats repeated edits.</text>
+    <text x="145" y="777" font-size="24" fill="#131313">Record the first mismatch, change one owner, then start a new shopper session.</text>
+  </g>
+</svg>
