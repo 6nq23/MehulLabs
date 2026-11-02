@@ -4,7 +4,7 @@ draft: false
 title: "Holiday Discount Strategy 2026: How Deep Can You Go?"
 description: "How deep can a Shopify store discount this holiday season? Use margin ceilings, segment rules and Shopify's combination limits to set offers that still profit."
 publishedOn: "2026-10-06"
-updatedOn: "2026-10-29"
+updatedOn: "2026-11-02"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "10 min read"
@@ -125,7 +125,7 @@ Translate that into practice with a few guardrails:
 - **Limit how often you discount.** A store that runs a sale every other week teaches shoppers that full price is a bluff.
 - **Show a clear reason and end date.** A holiday window is believable. An open-ended "sale" is not.
 - **Protect hero products.** Keep your best-known SKUs at or near list price and discount adjacent products or bundles.
-- **Prefer value over price cuts.** A free gift or bundle lifts perceived value without changing the anchor price on the product page.
+- **Prefer value over price cuts.** A free gift or bundle lifts perceived value without changing the anchor price on the product page. If a saved price does not reach the storefront, trace the [Shopify product price that is not updating](/blog/shopify-product-price-not-updating) before launching the offer.
 - **Watch full-price conversion in January.** If it falls sharply after the sale, the discount changed expectations.
 
 This is a judgment call, not a law. A brand built on being the cheapest option can discount freely; a premium brand has more to lose.

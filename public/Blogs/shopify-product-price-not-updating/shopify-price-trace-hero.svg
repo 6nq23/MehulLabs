@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify product price trace</title>
+  <desc id="desc">A price tag travels through variant, market, product page, collection, cart, and checkout surfaces to locate the first mismatch.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="82" y="72" width="1436" height="756" rx="42" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <text x="145" y="160" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="700" fill="#131313">Trace the price. Find the first mismatch.</text>
+  <text x="145" y="212" font-family="Inter, Arial, sans-serif" font-size="28" fill="#707178">One variant can show different amounts across the shopper path.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <path d="M205 350h176l58 58-58 58H205l-58-58z" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <circle cx="205" cy="408" r="19" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="292" y="400" text-anchor="middle" font-size="25" font-weight="700" fill="#131313">Saved</text>
+    <text x="292" y="434" text-anchor="middle" font-size="25" fill="#131313">variant</text>
+
+    <path d="M455 408h88" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round"/>
+    <path d="M526 390l23 18-23 18" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="565" y="322" width="210" height="172" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <circle cx="670" cy="382" r="35" fill="#facc15"/>
+    <path d="M635 382h70M670 347c-18 19-18 51 0 70M670 347c18 19 18 51 0 70" fill="none" stroke="#131313" stroke-width="4"/>
+    <text x="670" y="461" text-anchor="middle" font-size="27" font-weight="700" fill="#131313">Market</text>
+
+    <path d="M795 408h88" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round"/>
+    <path d="M866 390l23 18-23 18" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="905" y="322" width="210" height="172" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <rect x="950" y="352" width="120" height="72" rx="10" fill="#facc15"/>
+    <text x="1010" y="398" text-anchor="middle" font-size="28" font-weight="700" fill="#131313">PRICE</text>
+    <text x="1010" y="461" text-anchor="middle" font-size="27" font-weight="700" fill="#131313">Storefront</text>
+
+    <path d="M1135 408h88" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round"/>
+    <path d="M1206 390l23 18-23 18" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="1245" y="322" width="210" height="172" rx="24" fill="#131313" stroke="#131313" stroke-width="4"/>
+    <path d="M1292 370h113l-14 62h-84z" fill="#facc15"/>
+    <circle cx="1323" cy="454" r="10" fill="#f6f5f1"/>
+    <circle cx="1380" cy="454" r="10" fill="#f6f5f1"/>
+    <text x="1350" y="478" text-anchor="middle" font-size="24" font-weight="700" fill="#f6f5f1">Cart + checkout</text>
+
+    <rect x="192" y="620" width="1216" height="92" rx="46" fill="#131313"/>
+    <text x="800" y="677" text-anchor="middle" font-size="31" font-weight="700" fill="#f6f5f1">Stop at the first wrong amount. Repair only that owner.</text>
+  </g>
+</svg>
