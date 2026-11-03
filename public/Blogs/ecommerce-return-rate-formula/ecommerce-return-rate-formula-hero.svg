@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ecommerce return rate formula comparison</title>
+  <desc id="desc">A visual showing orders, units, and revenue flowing into three separately labeled return rate formulas.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="80" y="72" width="1440" height="756" rx="36" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <rect x="112" y="108" width="200" height="42" rx="21" fill="#facc15"/>
+  <text x="212" y="137" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#131313">WORKED METRIC</text>
+  <text x="112" y="230" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800" fill="#131313">One return event.</text>
+  <text x="112" y="300" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800" fill="#131313">Three useful rates.</text>
+  <text x="112" y="352" font-family="Inter, Arial, sans-serif" font-size="28" fill="#707178">Match each numerator to the same unit and purchase cohort.</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="112" y="430" width="416" height="278" rx="28" fill="#131313"/>
+    <circle cx="164" cy="482" r="20" fill="#facc15"/>
+    <text x="200" y="492" font-size="30" font-weight="700" fill="#f6f5f1">ORDER RATE</text>
+    <text x="152" y="565" font-size="25" fill="#f6f5f1">returned orders</text>
+    <line x1="152" y1="588" x2="488" y2="588" stroke="#facc15" stroke-width="4"/>
+    <text x="152" y="633" font-size="25" fill="#f6f5f1">eligible orders × 100</text>
+    <text x="152" y="674" font-size="22" fill="#facc15">Customer journeys</text>
+
+    <rect x="592" y="430" width="416" height="278" rx="28" fill="#facc15"/>
+    <circle cx="644" cy="482" r="20" fill="#131313"/>
+    <text x="680" y="492" font-size="30" font-weight="700" fill="#131313">UNIT RATE</text>
+    <text x="632" y="565" font-size="25" fill="#131313">units returned</text>
+    <line x1="632" y1="588" x2="968" y2="588" stroke="#131313" stroke-width="4"/>
+    <text x="632" y="633" font-size="25" fill="#131313">units sold × 100</text>
+    <text x="632" y="674" font-size="22" fill="#131313">Product and variant</text>
+
+    <rect x="1072" y="430" width="416" height="278" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <circle cx="1124" cy="482" r="20" fill="#facc15"/>
+    <text x="1160" y="492" font-size="30" font-weight="700" fill="#131313">REVENUE RATE</text>
+    <text x="1112" y="565" font-size="25" fill="#131313">returned item value</text>
+    <line x1="1112" y1="588" x2="1448" y2="588" stroke="#facc15" stroke-width="4"/>
+    <text x="1112" y="633" font-size="25" fill="#131313">original value × 100</text>
+    <text x="1112" y="674" font-size="22" fill="#707178">Commercial exposure</text>
+  </g>
+  <path d="M548 570h24M1028 570h24" stroke="#707178" stroke-width="6" stroke-linecap="round"/>
+  <text x="800" y="778" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#707178">LABEL THE DENOMINATOR • CLOSE THE COHORT • THEN COMPARE</text>
+</svg>
