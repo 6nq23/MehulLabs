@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Return Window Overrides: A Holiday Setup"
 description: "Shopify return window overrides now target markets, collections, products, or variants. Use this 6-step holiday setup to protect clarity and margin now."
 publishedOn: "2026-10-18"
-updatedOn: "2026-10-19"
+updatedOn: "2026-11-03"
 category: "COD & order operations"
 author: "Mehul"
 readTime: "8 min read"
@@ -72,7 +72,7 @@ Good override candidates have a clear operational reason:
 - Clearance groups where the commercial policy is already different.
 - Market-specific assortments that must reflect local terms.
 
-Avoid an override when the real problem is inaccurate descriptions, weak sizing information, poor packaging, or inconsistent support. A tighter deadline will not repair those causes. Use your return reasons to fix the product page and fulfillment flow instead.
+Avoid an override when the real problem is inaccurate descriptions, weak sizing information, poor packaging, or inconsistent support. A tighter deadline will not repair those causes. Use your return reasons to fix the product page and fulfillment flow, then measure the change with a consistent [ecommerce return rate formula](/blog/ecommerce-return-rate-formula).
 
 The [holiday discount strategy](/blog/holiday-discount-strategy-2026) can help separate a promotional price decision from a returns-policy decision. Sale pricing and return eligibility are related, but they are not the same control.
 
