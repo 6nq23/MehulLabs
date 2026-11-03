@@ -1,0 +1,110 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:18:11.400105+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "ecommerce inventory aging report",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "Inventory Aging Report: What It Is, Why It Matters & How to ...",
+            "url": "https://www.finaleinventory.com/guides/inventory-planning-software/inventory-aging-report/",
+            "description": "An inventory aging report serves as your early warning system, tracking how long items remain in stock and identifying potential deadstock before it damages ...Read more",
+            "emphasizedKeywords": [
+              "serves as your early warning system"
+            ]
+          },
+          {
+            "position": 2,
+            "title": "Inventory Aging Reports: A Guide to Monitoring and ...",
+            "url": "https://www.shipbob.com/blog/inventory-aging-report/",
+            "description": "Inventory aging reports play a critical role in optimizing inventory management and maintaining the financial health of ecommerce businesses.Read more",
+            "emphasizedKeywords": [
+              "Inventory aging reports",
+              "ecommerce"
+            ]
+          },
+          {
+            "position": 3,
+            "title": "Inventory Aging Report: What It Is & How to Use It (2026)",
+            "url": "https://www.shopify.com/blog/inventory-aging-report",
+            "description": "Learn how to use an inventory aging report to calculate inventory age, identify slow-moving stock, and improve cash flow with timely action.",
+            "emphasizedKeywords": [
+              "Learn how to use an inventory aging report"
+            ]
+          },
+          {
+            "position": 4,
+            "title": "Inventory Aging Report for Ecommerce: Action Guide",
+            "url": "https://www.247fulfillment.co/blogs/news/inventory-aging-report-ecommerce",
+            "description": "Direct answer: An inventory aging report should show how long each unit has been in stock and connect every age band to a specific decision.Read more",
+            "emphasizedKeywords": [
+              "how long each unit has been in stock"
+            ]
+          },
+          {
+            "position": 5,
+            "title": "7 Best Inventory Aging Report Tools for Retail",
+            "url": "https://cashmarginpartners.com/blog/7-best-inventory-aging-report-tools-for-retail",
+            "description": "An inventory aging report tool shows how long each SKU has sat in stock, when it last sold and what it cost. This list ranks seven for ...Read more",
+            "emphasizedKeywords": [
+              "how long each SKU has sat in stock, when it last sold and what it cost"
+            ]
+          },
+          {
+            "position": 6,
+            "title": "Inventory Aging",
+            "url": "https://www.alexanderjarvis.com/what-is-inventory-aging-in-ecommerce/",
+            "description": "Inventory aging in ecommerce tracks how long your products sit unsold, typically categorized as fresh (0-60 days), aging (60-180 days), or dead stock (180+ ...Read more",
+            "emphasizedKeywords": [
+              "how long your products sit unsold"
+            ]
+          },
+          {
+            "position": 7,
+            "title": "What Is a NetSuite Inventory Aging Report and Why Is It ...",
+            "url": "https://netsuite.folio3.com/blog/what-is-a-netsuite-inventory-aging-report-and-why-is-it-important/",
+            "description": "NetSuite Inventory Aging Report helps businesses track and manage inventory by age, reduce excess stock, and improve cash flow.",
+            "emphasizedKeywords": [
+              "track and manage inventory by age"
+            ]
+          },
+          {
+            "position": 8,
+            "title": "Inventory Aging: The Hidden Cause of Ecommerce Problems",
+            "url": "https://www.linkedin.com/posts/xorosoft-inc._ecommerce-inventorymanagement-erp-activity-7495925059988074496-BjGz",
+            "description": "Inventory Aging: The Hidden Cause of Ecommerce Problems ... Inventory aging report showing stock grouped into aging buckets by days on hand.Read more",
+            "emphasizedKeywords": [
+              "Inventory aging report"
+            ]
+          },
+          {
+            "position": 9,
+            "title": "Aging Inventory: How to Calculate, Analysis & Report",
+            "url": "https://www.polestaranalytics.com/blog/inventory-aging-analysis-report",
+            "description": "Calculation of inventory age can be done with Inventory Age (Days) = Current Date - Date Added. For example, let's say an item with Item Code ...Read more",
+            "emphasizedKeywords": [
+              "Inventory Age (Days) = Current Date - Date Added"
+            ]
+          }
+        ],
+        "peopleAlsoAsk": [],
+        "relatedQueries": [
+          {
+            "title": "Ecommerce inventory aging report sample",
+            "url": "https://www.google.com/search?lr=lang_en&sca_esv=83f312d482a6a4fe&gl=us&hl=en&tbs=lr:lang_1en&sxsrf=AKL5yDimowRoNHQbkB360ESCDbv3M52XSQ:1793715477943&q=Ecommerce+inventory+aging+report+sample&sa=X&ved=2ahUKEwjVt47v_uuXAxV9JUQIHYz3KwUQ1QJ6BAgyEAE"
+          },
+          {
+            "title": "Ecommerce inventory aging report example",
+            "url": "https://www.google.com/search?lr=lang_en&sca_esv=83f312d482a6a4fe&gl=us&hl=en&tbs=lr:lang_1en&sxsrf=AKL5yDimowRoNHQbkB360ESCDbv3M52XSQ:1793715477943&q=Ecommerce+inventory+aging+report+example&sa=X&ved=2ahUKEwjVt47v_uuXAxV9JUQIHYz3KwUQ1QJ6BAgzEAE"
+          }
+        ]
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}

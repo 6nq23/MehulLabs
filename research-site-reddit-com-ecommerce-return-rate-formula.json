@@ -1,0 +1,25 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:19:31.637188+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "site:reddit.com ecommerce return rate formula",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "How to Find Return Rate? : r/shopify",
+            "url": "https://www.reddit.com/r/shopify/comments/lhwfq6/how_to_find_return_rate/",
+            "description": "Hi!\n\nI tried searching around but all I was able to find was return value. I'm wondering how to see number of returns within Shopify so I can calculate ..."
+          }
+        ],
+        "peopleAlsoAsk": [],
+        "relatedQueries": []
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}

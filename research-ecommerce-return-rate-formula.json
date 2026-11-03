@@ -1,0 +1,145 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:15:54.742229+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "ecommerce return rate formula",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "Ecommerce returns: best practices, policy examples, and ...",
+            "url": "https://www.shippypro.com/blog/en/ecommerce-returns",
+            "description": "Return rates can vary drastically based on the product category. On average, return rates for all products tend to be around 15 to 30% in the ...",
+            "emphasizedKeywords": [
+              "around 15 to 30"
+            ]
+          },
+          {
+            "position": 2,
+            "title": "Pondering the Cost of Ecommerce Returns",
+            "url": "https://www.practicalecommerce.com/pondering-the-cost-of-ecommerce-returns",
+            "description": "Cost of Returns = (Total Units Sales x Return Rate) x (Avg. Shipping Costs for Returns + Avg. Restocking Costs + Avg. Discounting and ...",
+            "emphasizedKeywords": [
+              "Cost of Returns = (Total Units Sales x Return Rate"
+            ]
+          },
+          {
+            "position": 3,
+            "title": "Return rate - Lifesight",
+            "url": "https://lifesight.io/glossary/return-rate/",
+            "description": "Formula Return Rate = (Total Number of Items Returned / Total Number of Items Sold) * 100 Example :Return Rate = (50 / 1,000) * 100 = 5%",
+            "emphasizedKeywords": [
+              "Formula Return Rate",
+              "Return Rate"
+            ]
+          },
+          {
+            "position": 4,
+            "title": "20+ Ecommerce Return Stats | Verified & Sourced 2026",
+            "url": "https://gitnux.org/ecommerce-return-statistics/",
+            "description": "return rates averaging 30% to 35%, far above the general online average. These returns cost retailers between 8% and vie15% of total revenue. ...",
+            "emphasizedKeywords": [
+              "return rates averaging 30% to 35"
+            ]
+          },
+          {
+            "position": 5,
+            "title": "Calculating ROI in Automated Returns Management",
+            "url": "https://wesupplylabs.com/calculating-roi-in-automated-returns-management/",
+            "description": "The formula for ROI return is calculated by subtracting the initial cost of the investment from its final value, then dividing (ROI = Net income / Cost of ...",
+            "emphasizedKeywords": [
+              "formula",
+              "return"
+            ]
+          },
+          {
+            "position": 6,
+            "title": "5 Ways to Reduce Your eCommerce Return Rate",
+            "url": "https://www.conjura.com/blog/5-ways-to-reduce-your-ecommerce-return-rate",
+            "description": "To calculate your average return rate, you'll need to divide the total number of returned items by the total number of units sold within a ...",
+            "emphasizedKeywords": [
+              "divide the total number of returned items by the total number of units sold"
+            ]
+          },
+          {
+            "position": 7,
+            "title": "Reducing Your E‑Commerce Return Rate",
+            "url": "https://www.bloomreach.com/en/blog/best-practices-for-reducing-your-e-commerce-return-rate",
+            "description": "Learn how to use user experience improvements to reduce your ecommerce return rate and change the behavior of your high returners.",
+            "emphasizedKeywords": [
+              "Learn how to use user experience improvements"
+            ]
+          },
+          {
+            "position": 8,
+            "title": "eCommerce Returns 101: A Comprehensive Guide for ...",
+            "url": "https://upsell.com/blog/ecommerce-returns",
+            "description": "return rates for eCommerce purchases can be as high as around 30%, compared to 8-10% for brick-and-mortar stores.",
+            "emphasizedKeywords": [
+              "return",
+              "eCommerce"
+            ]
+          },
+          {
+            "position": 9,
+            "title": "Ecommerce return rates that reveal operational and ...",
+            "url": "https://g10fulfillment.com/blog/ecommerce-return-rates",
+            "description": "Understand what drives ecommerce return rates and how structured operations, WMS visibility, and support reduce costly returns.",
+            "emphasizedKeywords": [
+              "ecommerce return"
+            ]
+          }
+        ],
+        "peopleAlsoAsk": [
+          {
+            "answer": null,
+            "question": "How do you calculate the conversion rate in e-commerce?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "What is the 80/20 rule in ecommerce?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "Is e-commerce still profitable in 2026?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "How to calculate retail return rate?",
+            "title": null,
+            "url": null,
+            "date": null
+          }
+        ],
+        "relatedQueries": [
+          {
+            "title": "Ecommerce return rate formula example",
+            "url": "https://www.google.com/search?lr=lang_en&sca_esv=83f312d482a6a4fe&gl=us&hl=en&tbs=lr:lang_1en&sxsrf=AKL5yDh_KPnKq07wrQECFpZ7QsgUSY7csQ:1793715344644&q=Ecommerce+return+rate+formula+example&sa=X&ved=2ahUKEwiK9sev_uuXAxXWe_UHHdLgMh8Q1QJ6BAhAEAE"
+          },
+          {
+            "title": "Item return rate system Chinese Drama",
+            "url": "https://www.google.com/search?lr=lang_en&sca_esv=83f312d482a6a4fe&gl=us&hl=en&tbs=lr:lang_1en&sxsrf=AKL5yDh_KPnKq07wrQECFpZ7QsgUSY7csQ:1793715344644&q=Item+return+rate+system+Chinese+Drama&sa=X&ved=2ahUKEwiK9sev_uuXAxXWe_UHHdLgMh8Q1QJ6BAg_EAE"
+          },
+          {
+            "title": "Item return rate system dailymotion",
+            "url": "https://www.google.com/search?lr=lang_en&sca_esv=83f312d482a6a4fe&gl=us&hl=en&tbs=lr:lang_1en&sxsrf=AKL5yDh_KPnKq07wrQECFpZ7QsgUSY7csQ:1793715344644&q=Item+return+rate+system+dailymotion&sa=X&ved=2ahUKEwiK9sev_uuXAxXWe_UHHdLgMh8Q1QJ6BAhBEAE"
+          }
+        ]
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}

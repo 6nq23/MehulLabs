@@ -1,0 +1,129 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:16:17.170381+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "Shopify inventory not updating",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "Top 9 Common Shopify Inventory Issues and Ways to Fix ...",
+            "url": "https://nul.global/blog/shopify-inventory-issues",
+            "description": "Inventory Not Updating After Refunds or Returns. Refund or return workflows often fail to restock inventory automatically, especially when ...Read more",
+            "emphasizedKeywords": [
+              "Inventory Not Updating After Refunds or Returns"
+            ]
+          },
+          {
+            "position": 2,
+            "title": "Quantity of products available not updating!",
+            "url": "https://community.shopify.com/t/quantity-of-products-available-not-updating/584070/9",
+            "description": "Hi, Randomly today when I've been trying to add inventory quantities to products in my store it is not updating on the back end.",
+            "emphasizedKeywords": [
+              "inventory",
+              "not updating"
+            ]
+          },
+          {
+            "position": 3,
+            "title": "What should I do if my inventory is not updating accurately ...",
+            "url": "https://help.stock-sync.com/en/article/what-should-i-do-if-my-inventory-is-not-updating-accurately-between-two-shopify-stores-p277cg/",
+            "description": "Ensure the correct inventory location is selected when mapping the Quantity field. If the wrong location is chosen, updates will not appear. If products are not ...Read more",
+            "emphasizedKeywords": [
+              "Ensure the correct inventory location is selected"
+            ]
+          },
+          {
+            "position": 4,
+            "title": "Inventory not updating",
+            "url": "https://community.shopify.com/t/inventory-not-updating/383832/4",
+            "description": "I understand how frustrating it can be when your inventory doesn't match up, especially when Shopify is showing stock that isn't actually there.Read more",
+            "emphasizedKeywords": [
+              "inventory",
+              "Shopify"
+            ]
+          },
+          {
+            "position": 5,
+            "title": "Shopify inventory loading issues",
+            "url": "https://www.facebook.com/groups/805346047094813/posts/1747813556181386/",
+            "description": "Our apologies today. We are having major issues with Shopify. It's not loading the new inventory, displaying the old sold inventory.",
+            "emphasizedKeywords": [
+              "not loading the new inventory"
+            ]
+          },
+          {
+            "position": 6,
+            "title": "Products automatically staying with no stock",
+            "url": "https://community.shopify.com/c/technical-q-a/products-automatically-staying-with-no-stock/m-p/2191307",
+            "description": "Hey! The products from my website are automatically saying without stock even tho there is stock in the back office."
+          },
+          {
+            "position": 7,
+            "title": "Quantity of products available not updating!",
+            "url": "https://community.shopify.com/t/quantity-of-products-available-not-updating/584070/5",
+            "description": "Hi, Randomly today when I've been trying to add inventory quantities to products in my store it is not updating on the back end.",
+            "emphasizedKeywords": [
+              "inventory",
+              "not updating"
+            ]
+          },
+          {
+            "position": 8,
+            "title": "Shopify Inventory Not Syncing? Here's How to Fix It",
+            "url": "https://www.lasyncro.com/blog/why-shopify-inventory-not-syncing",
+            "description": "When Shopify inventory stops syncing, the cause is usually an app conflict, a failed webhook, a location mismatch, or an API rate limit.",
+            "emphasizedKeywords": [
+              "an app conflict, a failed webhook, a location mismatch, or an API rate limit"
+            ]
+          },
+          {
+            "position": 9,
+            "title": "Why is stock not updating from our system to Shopify?",
+            "url": "https://community.shopify.com/t/why-is-stock-not-updating-from-our-system-to-shopify/75838",
+            "description": "Issue: Inventory from an external system is not syncing to Shopify. The poster notes that “0 stock” was (or should be) updated, but stock ...Read more",
+            "emphasizedKeywords": [
+              "Inventory from an external system is not syncing to Shopify"
+            ]
+          }
+        ],
+        "peopleAlsoAsk": [
+          {
+            "answer": null,
+            "question": "How to not track inventory on Shopify?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "Why is my Shopify store not loading?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "How to bulk edit more than 50 products in Shopify?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "Why isn't my order showing on Shopify?",
+            "title": null,
+            "url": null,
+            "date": null
+          }
+        ],
+        "relatedQueries": []
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}
