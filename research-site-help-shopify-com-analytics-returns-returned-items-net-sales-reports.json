@@ -1,0 +1,118 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:21:06.658986+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "site:help.shopify.com analytics returns returned items net sales reports",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "Sales reports",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/sales-report",
+            "description": "go to Analytics > Reports . Returns The value of goods returned by a customer. The reports include every line item and shipping charge … value of returned ...",
+            "emphasizedKeywords": [
+              "Analytics",
+              "Reports",
+              "Returns",
+              "goods returned",
+              "reports",
+              "item",
+              "returned"
+            ]
+          },
+          {
+            "position": 2,
+            "title": "Sales discrepancies in Shopify Analytics",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/discrepancies/sales-discrepancies",
+            "description": "Returns and refunds are two separate items in your reports. Sales reports include your returns and the Payments finance report includes refunds. To get a report ...Read more",
+            "emphasizedKeywords": [
+              "Returns and refunds are two separate items in your reports"
+            ]
+          },
+          {
+            "position": 3,
+            "title": "Finance reports",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/finances-report",
+            "description": "With Shopify's finance reports, you can track key financial information such as product sales, payments, and gift card sales.",
+            "emphasizedKeywords": [
+              "track key financial information"
+            ]
+          },
+          {
+            "position": 4,
+            "title": "Analytics data points (fields) reference",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/analytics-fields",
+            "description": "Complete reference of all metrics and dimensions available in Shopify Analytics reports, organized by category.",
+            "emphasizedKeywords": [
+              "Analytics reports"
+            ]
+          },
+          {
+            "position": 5,
+            "title": "Retail sales reports",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/retail-sales-reports",
+            "description": "Use Shopify's retail sales reports to track your product sales by product, SKU, vendor, type, point of sale location, and staff.",
+            "emphasizedKeywords": [
+              "track your product sales"
+            ]
+          },
+          {
+            "position": 6,
+            "title": "Customers reports",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/customers-reports",
+            "description": "The Returning customers report displays data about all your customers whose order history includes two or more orders.",
+            "emphasizedKeywords": [
+              "Returning",
+              "report"
+            ]
+          },
+          {
+            "position": 7,
+            "title": "Shopify POS Analytics",
+            "url": "https://help.shopify.com/en/manual/sell-in-person/shopify-pos/analytics-on-pos",
+            "description": "The Analytics screen on Shopify POS lets you review your store's Daily Sales report and provides insight about your net sales, average order value, and average ...",
+            "emphasizedKeywords": [
+              "provides insight about your net sales"
+            ]
+          },
+          {
+            "position": 8,
+            "title": "Overview of the new Shopify reports",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/reports-overview",
+            "description": "You can filter data, select the metrics and dimensions, comparing Net sales over the last 30 days to the previous 30-day period, Net sales or Amount spent per ...",
+            "emphasizedKeywords": [
+              "Net sales",
+              "Net sales"
+            ]
+          },
+          {
+            "position": 9,
+            "title": "Profit reports",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports",
+            "description": "It's calculated by subtracting the cost from net sales. Discounts and refunds affect your profit margin. If you sold discounted products or issued refunds ...Read more",
+            "emphasizedKeywords": [
+              "net sales",
+              "products"
+            ]
+          },
+          {
+            "position": 10,
+            "title": "Behavior reports",
+            "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/behaviour-reports",
+            "description": "Use the Online store cart analysis tool to help you understand your customers' shopping behavior.",
+            "emphasizedKeywords": [
+              "Use the Online store cart analysis tool"
+            ]
+          }
+        ],
+        "peopleAlsoAsk": [],
+        "relatedQueries": []
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}
