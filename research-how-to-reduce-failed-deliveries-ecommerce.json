@@ -1,0 +1,121 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:16:06.234867+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "how to reduce failed deliveries ecommerce",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "How to reduce delivery failures with software | Shopurgrocery",
+            "url": "https://www.linkedin.com/posts/shopurgrocery1_10-ways-delivery-software-can-help-you-reduce-activity-7302231258070204416-oxml",
+            "description": "Struggling with failed deliveries? Our latest blog explores 10 effective strategies to minimize delivery failures using advanced delivery ...",
+            "emphasizedKeywords": [
+              "10 effective strategies to minimize delivery failures"
+            ]
+          },
+          {
+            "position": 2,
+            "title": "Failed Deliveries Checklist for Retailers",
+            "url": "https://www.connexzia.com/blog/failed-deliveries-checklist-for-retailers-retail-ecommerce",
+            "description": "Learn practical failed deliveries strategies for retailers, including controls, KPIs, risks, and implementation guidance.",
+            "emphasizedKeywords": [
+              "Learn practical failed deliveries strategies for retailers"
+            ]
+          },
+          {
+            "position": 3,
+            "title": "Unsuccessful delivery attempt in eCommerce: how to prevent it",
+            "url": "https://parceltrackr.com/blog/unsuccessful-delivery-attempt-in-ecommerce-how-to-prevent-it/",
+            "description": "In this article, we will explore the reasons for failed delivery attempts and provide some solutions to prevent unsuccessful deliveries. We hope ...Read more",
+            "emphasizedKeywords": [
+              "failed delivery",
+              "prevent unsuccessful deliveries"
+            ]
+          },
+          {
+            "position": 4,
+            "title": "10 Strategies Reduce E-commerce Delivery Delays with ...",
+            "url": "https://fareye.com/au/en/resources/blogs/reduce-e-commerce-delivery-delays",
+            "description": "Optimize inventory management: Leverage technology for route optimization: Offer flexible delivery options:",
+            "emphasizedKeywords": [
+              "Optimize inventory management"
+            ]
+          },
+          {
+            "position": 5,
+            "title": "6 Tips to Ensure Accurate Last-Mile Delivery in E-Commerce",
+            "url": "https://www.linkedin.com/advice/0/how-can-you-ensure-accurate-last-mile-delivery-e-commerce-03yuf",
+            "description": "1. Track and update your orders ; 2. Optimize your routes and schedules ; 3. Offer flexible delivery options ; 4. Collect and analyze feedback ; 5.Read more",
+            "emphasizedKeywords": [
+              "1. Track and update your orders"
+            ]
+          },
+          {
+            "position": 6,
+            "title": "How to reduce failed deliveries for retail stores",
+            "url": "https://www.linkedin.com/top-content/supply-chain-management/effective-order-fulfillment-strategies/how-to-reduce-failed-deliveries-for-retail-stores/",
+            "description": "By partnering with tech-enabled transportation providers and deploying smaller, agile vehicles, brands can quickly restock high-demand stores, reducing ...Read more",
+            "emphasizedKeywords": [
+              "By partnering with tech-enabled transportation providers"
+            ]
+          },
+          {
+            "position": 7,
+            "title": "How to avoid Failed Deliveries during Festive season? An ...",
+            "url": "https://blog.ecourierz.com/2020/01/how-to-avoid-failed-deliveries-during.html",
+            "description": "You need to ensure you have the staffing and inventory to support heavy demands. If everything isn't in place to meet the increase in demand, it ...Read more",
+            "emphasizedKeywords": [
+              "ensure you have the staffing and inventory to support heavy demands"
+            ]
+          },
+          {
+            "position": 8,
+            "title": "E-commerce delivery delays: Top causes & solutions - Elogy",
+            "url": "https://elogy.io/en/ecommerce-delivery-delays-causes/",
+            "description": "From warehouse bottlenecks to carrier issues: explore the main causes of e-commerce delivery delays and how to fix them.",
+            "emphasizedKeywords": [
+              "explore the main causes of e-commerce delivery delays"
+            ]
+          }
+        ],
+        "peopleAlsoAsk": [
+          {
+            "answer": null,
+            "question": "What are the issues in e-commerce?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "What is causing shipping delays in 2026?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "Which courier is best for e-commerce?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "How to handle delivery delays issue?",
+            "title": null,
+            "url": null,
+            "date": null
+          }
+        ],
+        "relatedQueries": []
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}

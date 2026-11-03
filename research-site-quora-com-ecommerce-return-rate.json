@@ -1,0 +1,99 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:20:23.740047+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "site:quora.com ecommerce return rate",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "Why are return rates high in fashion e-commerce?",
+            "url": "https://www.quora.com/Why-are-return-rates-high-in-fashion-e-commerce",
+            "description": "The average return rate for online retailers is near 18% as compared to 8–10% in brick and mortar. The reason behind such a high return ...Read more",
+            "emphasizedKeywords": [
+              "near 18"
+            ]
+          },
+          {
+            "position": 2,
+            "title": "Ecommerce return rates rose in retail's longest holiday season yet ...",
+            "url": "https://ecommercerising.quora.com/https-www-insiderintelligence-com-content-ecommerce-return-rates-rose-retail-s-longest-holiday-season-yet",
+            "description": "At least 10% of US ecommerce orders were returned each week from last November through mid-January, according to Salesforce. The return rate was as high as ...",
+            "emphasizedKeywords": [
+              "ecommerce",
+              "return rate"
+            ]
+          },
+          {
+            "position": 3,
+            "title": "What is the average return rate for apparel online, and ...",
+            "url": "https://www.quora.com/What-is-the-average-return-rate-for-apparel-online-and-what-are-best-practices-to-avoid-returns",
+            "description": "What is the average return rate for apparel online, and what are best practices to avoid returns?"
+          },
+          {
+            "position": 4,
+            "title": "How do retailers reduce their eCommerce return rates?",
+            "url": "https://www.quora.com/How-do-retailers-reduce-their-eCommerce-return-rates",
+            "description": "How do retailers reduce their eCommerce return rates?"
+          },
+          {
+            "position": 5,
+            "title": "What is the average return rate for online fashion retailers?",
+            "url": "https://www.quora.com/What-is-the-average-return-rate-for-online-fashion-retailers",
+            "description": "The average return rate for online retailers is near 18% as compared to 8–10% in brick and mortar.",
+            "emphasizedKeywords": [
+              "near 18"
+            ]
+          },
+          {
+            "position": 6,
+            "title": "Why do e-commerce stores experience higher return rates ...",
+            "url": "https://www.quora.com/Why-do-e-commerce-stores-experience-higher-return-rates-compared-to-brick-and-mortar-stores",
+            "description": "Why do e-commerce stores experience higher return rates compared to brick-and-mortar stores?"
+          },
+          {
+            "position": 7,
+            "title": "What is the definition of return rate in online retail ...",
+            "url": "https://www.quora.com/What-is-the-definition-of-return-rate-in-online-retail-Is-it-the-number-of-returned-items-or-is-it-the-value-of-the-returned-items-that-is-measured",
+            "description": "It's anywhere between 12% to 30% and increases during festivals. In big companies it is near 15% most of the time. It ranges from 17% to 25%.",
+            "emphasizedKeywords": [
+              "12% to 30"
+            ]
+          },
+          {
+            "position": 8,
+            "title": "What is the typical rate of products returned to online retailers?",
+            "url": "https://www.quora.com/What-is-the-typical-rate-of-products-returned-to-online-retailers",
+            "description": "It depends on the category (apparel, books, cds), and your shipping and packing service and your return policy. 1. Apparel can have more returns than books, ...",
+            "emphasizedKeywords": [
+              "return",
+              "returns"
+            ]
+          },
+          {
+            "position": 9,
+            "title": "What is the average return rate for e-commerce cosmetics ...",
+            "url": "https://www.quora.com/What-is-the-average-return-rate-for-e-commerce-cosmetics-industries",
+            "description": "What is the average return rate for e-commerce cosmetics industries?"
+          },
+          {
+            "position": 10,
+            "title": "How can e-commerce businesses reduce product return ...",
+            "url": "https://www.quora.com/How-can-e-commerce-businesses-reduce-product-return-rates-without-hurting-customer-satisfaction",
+            "description": "Here are a few ways retailers reduce their eCommerce return rates- They tie up with shipping solutions that ensure fast delivery of products. ...",
+            "emphasizedKeywords": [
+              "They tie up with shipping solutions that ensure fast delivery of products"
+            ]
+          }
+        ],
+        "peopleAlsoAsk": [],
+        "relatedQueries": []
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}

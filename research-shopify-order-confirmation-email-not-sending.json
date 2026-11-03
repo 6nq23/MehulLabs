@@ -1,0 +1,139 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:17:37.401896+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "Shopify order confirmation email not sending",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "How to resend an order confirmation when the initial one ...",
+            "url": "https://community.shopify.com/t/how-to-resend-an-order-confirmation-when-the-initial-one-wasnt-sent/70460/2",
+            "description": "At this stage there isn't a way within the Shopify admin natively to resend an order confirmation email if none was sent through in the first ...Read more",
+            "emphasizedKeywords": [
+              "Shopify",
+              "order confirmation email",
+              "sent"
+            ]
+          },
+          {
+            "position": 2,
+            "title": "Shopify Shipping Confirmation Email Not Sending",
+            "url": "https://www.facebook.com/fb-answers/shopify-shipping-confirmation-email-not-sending/?locale=pl_PL",
+            "description": "The quickest fix is to check your spam/junk folder and make sure your domain is authenticated, or use a third-party email service like Klaviyo for better ...Read more",
+            "emphasizedKeywords": [
+              "email"
+            ]
+          },
+          {
+            "position": 3,
+            "title": "Order Confirmation Email",
+            "url": "https://community.shopify.com/c/shopify-discussions/order-confirmation-email/m-p/2974232",
+            "description": "Disable order confirmation & send a custom email – Go to Settings > Notifications > Order Confirmation and turn off Shopify's built-in emails.Read more",
+            "emphasizedKeywords": [
+              "order confirmation",
+              "send",
+              "email",
+              "Order Confirmation",
+              "Shopify's",
+              "emails"
+            ]
+          },
+          {
+            "position": 4,
+            "title": "Order Confirmation emails taking hours to send",
+            "url": "https://community.shopify.com/t/order-confirmation-emails-taking-hours-to-send/71810",
+            "description": "We are working with one of our app's customers - they are having an issue where their order confirmation emails are not sending for 2+ hours ...",
+            "emphasizedKeywords": [
+              "order confirmation emails are not sending for 2+ hours"
+            ]
+          },
+          {
+            "position": 5,
+            "title": "Why is my order confirmation email for digital products blank?",
+            "url": "https://community.shopify.com/t/why-is-my-order-confirmation-email-for-digital-products-blank/75758",
+            "description": "There may be some sort of shipping/physical coding that is tripping it up. I tried contacting Shopify support but they sent me here.",
+            "emphasizedKeywords": [
+              "There may be some sort of shipping/physical coding that is tripping it up"
+            ]
+          },
+          {
+            "position": 6,
+            "title": "Product Image Not Showing In Order Confirmation Emails",
+            "url": "https://community.shopify.com/t/product-image-not-showing-in-order-confirmation-emails/307666",
+            "description": "For my order confirmation email received by a customer, the product image is missing (showing as a broken image link).",
+            "emphasizedKeywords": [
+              "order confirmation email"
+            ]
+          },
+          {
+            "position": 7,
+            "title": "Sending an order confirmation by email after adding ...",
+            "url": "https://community.shopify.com/t/sending-an-order-confirmation-by-email-after-adding-email-manually-to-order/171123",
+            "description": "Go to Settings > Checkout and accounts Select what contact method customers use to check out to email. How to resend an order confirmation when ...",
+            "emphasizedKeywords": [
+              "Select what contact method customers use to check out to email"
+            ]
+          },
+          {
+            "position": 8,
+            "title": "Why are my order notification emails not coming through ...",
+            "url": "https://community.shopify.com/t/why-are-my-order-notification-emails-not-coming-through-anymore/247172",
+            "description": "Go to Settings > Notifications. In Staff order notifications, delete any recipients not receiving emails. Click Add Recipient to re-add the ...",
+            "emphasizedKeywords": [
+              "order",
+              "not",
+              "emails"
+            ]
+          },
+          {
+            "position": 9,
+            "title": "Order Confirmation Email",
+            "url": "https://community.shopify.com/c/shopify-discussions/order-confirmation-email/m-p/3075300",
+            "description": "I would like to use a workflow to decide which orders should get the order confirmation email. However, I have a few questions.",
+            "emphasizedKeywords": [
+              "orders",
+              "order confirmation email"
+            ]
+          }
+        ],
+        "peopleAlsoAsk": [
+          {
+            "answer": null,
+            "question": "Why haven't I gotten a confirmation email?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "Is it better to cancel or refund an order on Shopify?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "Can I completely disable order confirmation emails in Shopify?",
+            "title": null,
+            "url": null,
+            "date": null
+          },
+          {
+            "answer": null,
+            "question": "How do I resend a confirmation email?",
+            "title": null,
+            "url": null,
+            "date": null
+          }
+        ],
+        "relatedQueries": []
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}

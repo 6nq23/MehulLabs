@@ -1,0 +1,18 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:20:18.377770+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "site:community.shopify.com return rate ecommerce",
+        "page": 1,
+        "organicResults": [],
+        "peopleAlsoAsk": [],
+        "relatedQueries": []
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}

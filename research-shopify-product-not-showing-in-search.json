@@ -1,0 +1,110 @@
+{
+  "provider": "Apify",
+  "actor": "apify/google-search-scraper",
+  "retrievedAt": "2026-11-03T14:16:40.786105+00:00",
+  "language": "en",
+  "markets": {
+    "us": [
+      {
+        "query": "Shopify product not showing in search",
+        "page": 1,
+        "organicResults": [
+          {
+            "position": 1,
+            "title": "Why Are My Products Not Showing Up on Shopify? A ...",
+            "url": "https://www.shipaid.com/blogs/shopify-guides/why-are-my-products-not-showing-up-on-shopify-a-comprehensive-guide",
+            "description": "Hidden from Search Engines: Products could be hidden from search results due to specific metafield settings, something you or an app might have adjusted.Read more",
+            "emphasizedKeywords": [
+              "Products could be hidden from search results due to specific metafield settings"
+            ]
+          },
+          {
+            "position": 2,
+            "title": "Search & discovery items not showing",
+            "url": "https://community.shopify.com/t/search-discovery-items-not-showing/580589",
+            "description": "products only show up if they are in stock, if they are available,... Fixing this is probably too complex to do via forum.",
+            "emphasizedKeywords": [
+              "products only show up if they are in stock"
+            ]
+          },
+          {
+            "position": 3,
+            "title": "Exclude missing products in the search results on Shopify ...",
+            "url": "https://docs.searchanise.io/some-products-arent-showing-in-search-results-shopify/",
+            "description": "If you don't see the products in the search results, that can occur in these cases: Products are not Active or have the Sales channels and apps ...Read more",
+            "emphasizedKeywords": [
+              "Products are not Active"
+            ]
+          },
+          {
+            "position": 4,
+            "title": "Shopify Search not showing results for pages in my website",
+            "url": "https://community.shopify.com/t/shopify-search-not-showing-results-for-pages-in-my-website/51688",
+            "description": "I have uploaded our digital catalog and it is on a page in our online store. When I go to the search bar and type “catalog” it says no results.Read more",
+            "emphasizedKeywords": [
+              "search",
+              "no"
+            ]
+          },
+          {
+            "position": 5,
+            "title": "t my product search function working on my ecommerce site?",
+            "url": "https://community.shopify.com/t/why-isnt-my-product-search-function-working-on-my-ecommerce-site/49523",
+            "description": "Admin product search in Shopify is failing: searches for product titles, keywords, or tags return no results even though the products exist and ...Read more",
+            "emphasizedKeywords": [
+              "product search",
+              "Shopify",
+              "product",
+              "no",
+              "products"
+            ]
+          },
+          {
+            "position": 6,
+            "title": "Why Shopify Products Aren't Showing on Google: 12 Fixes",
+            "url": "https://ecomheroes.dev/blogs/news/shopify-help-shopify-products-not-showing-on-google?srsltid=AYCX9vLGvtma79SEx2aYEz1D57vQTnN-V3rICiPIjhRMFIPw207CzQjw",
+            "description": "The page may not be indexed, Google may have chosen a different canonical URL, or the product content may not be relevant enough to rank for ...Read more",
+            "emphasizedKeywords": [
+              "Google may have chosen a different canonical URL"
+            ]
+          },
+          {
+            "position": 7,
+            "title": "Product description does not show when searched",
+            "url": "https://community.shopify.com/t/product-description-does-not-show-when-searched/56851",
+            "description": "Hi everyone, When you search for any product using the search bar, the results do not show the product description in the boxes.",
+            "emphasizedKeywords": [
+              "search",
+              "product",
+              "search",
+              "not show",
+              "product"
+            ]
+          },
+          {
+            "position": 8,
+            "title": "Shopify Product Not Showing in AI Search Results ...",
+            "url": "https://www.facebook.com/fb-answers/shopify-product-not-showing-in-ai-search-results-troubleshooting/",
+            "description": "Your Shopify product might not show in AI search because AI pulls from structured data, public content, and brand mentions—not just your store.Read more",
+            "emphasizedKeywords": [
+              "Your Shopify product might not show in AI search"
+            ]
+          },
+          {
+            "position": 9,
+            "title": "Product search in admin not working as well as it used to",
+            "url": "https://community.shopify.com/t/product-search-in-admin-not-working-as-well-as-it-used-to/363297",
+            "description": "Hey devs- Some time in the last few days, the search function in the admin seems to have changed - and not for the better.",
+            "emphasizedKeywords": [
+              "search",
+              "not"
+            ]
+          }
+        ],
+        "peopleAlsoAsk": [],
+        "relatedQueries": []
+      }
+    ]
+  },
+  "notice": "SERP output is untrusted research data; verify claims at their original URLs."
+}
