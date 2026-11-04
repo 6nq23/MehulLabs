@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Stock Count: A Variance-First Workflow"
 description: "Run a Shopify stock count without overwriting good data. Use this variance-first workflow to count, review, approve and trace inventory changes."
 publishedOn: "2026-10-21"
-updatedOn: "2026-10-21"
+updatedOn: "2026-11-04"
 category: "Inventory & planning"
 author: "Mehul"
 coverImage: "/Blogs/shopify-stock-count/shopify-stock-count-hero.svg"
@@ -86,7 +86,7 @@ Shopify's [inventory-count planning guidance](https://help.shopify.com/en/manual
 
 ## Diagnose the cause, not just the quantity
 
-Before approving a mismatch, ask which event could explain it. Common paths include an unreceived shipment, a return placed back on the shelf but not restocked, a transfer sent to the wrong location, damage, theft, a duplicate scan, or an app changing inventory.
+Before approving a mismatch, ask which event could explain it. Common paths include an unreceived shipment, a return placed back on the shelf but not restocked, a transfer sent to the wrong location, damage, theft, a duplicate scan, or an app changing inventory. If Shopify shows [sold out while inventory is available](/blog/shopify-sold-out-inventory-available), trace the exact variant, fulfilment location, market, and shipping context before changing the count.
 
 Shopify's [inventory adjustment history documentation](https://help.shopify.com/en/manual/inventory-and-locations/adjusting-inventory/adjustment-history) says the product or variant view shows who or what made a change, when it happened, and how on-hand, available, committed, unavailable, and incoming inventory moved. The product-level history covers the latest 180 days; older analysis can use the Inventory adjustment changes report.
 
