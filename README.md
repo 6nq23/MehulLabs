@@ -1,6 +1,7 @@
 ## Sitemap and Google Search Console
 
 
+
 Submit **https://www.mlabsgrowth.com/sitemap.xml** in Google Search Console → Sitemaps. If the domain is already displayed beside the input, enter `sitemap.xml`. Submit it once; Google can revisit the same URL for updates.
 
 The sitemap is generated automatically with each production build and deployment. New Markdown articles under `src/pages/blog/` are discovered without editing a URL list. Use `publishedOn: "YYYY-MM-DD"` and, when the article changes substantially, `updatedOn: "YYYY-MM-DD"` in its frontmatter. The sitemap uses `updatedOn`, falling back to `publishedOn`, for each article’s `lastmod`. Adding a file locally does not update the live sitemap until you rebuild and deploy. Preview builds keep the sitemap empty.
