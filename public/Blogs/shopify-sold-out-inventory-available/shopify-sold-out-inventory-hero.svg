@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify inventory exists but the storefront says sold out</title>
+  <desc id="desc">A product inventory record with available stock faces a storefront card marked sold out, separated by checks for location, market, and shipping.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="90" y="90" width="1420" height="720" rx="40" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+  <text x="150" y="180" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Inventory exists. Can this shopper buy it?</text>
+  <text x="150" y="232" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="28">The answer depends on more than the product total.</text>
+
+  <rect x="150" y="305" width="440" height="370" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <text x="195" y="370" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">SHOPIFY ADMIN</text>
+  <text x="195" y="445" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">Variant: Blue / M</text>
+  <text x="195" y="520" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="30">Available</text>
+  <rect x="410" y="478" width="120" height="58" rx="29" fill="#facc15"/>
+  <text x="470" y="518" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">YES</text>
+  <text x="195" y="595" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="25">Stock is recorded at a location</text>
+  <text x="195" y="632" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="25">inside the store.</text>
+
+  <path d="M625 490 H950" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round"/>
+  <path d="M925 465 L955 490 L925 515" fill="none" stroke="#131313" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="665" y="350" width="245" height="82" rx="20" fill="#facc15"/>
+  <text x="787" y="385" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">LOCATION</text>
+  <text x="787" y="415" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">MARKET · SHIPPING</text>
+  <text x="787" y="565" text-anchor="middle" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="25">The missing link</text>
+  <text x="787" y="600" text-anchor="middle" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="25">is usually in this context.</text>
+
+  <rect x="990" y="305" width="440" height="370" rx="28" fill="#131313"/>
+  <text x="1035" y="370" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">STOREFRONT</text>
+  <rect x="1035" y="410" width="350" height="105" rx="18" fill="#f6f5f1"/>
+  <text x="1070" y="458" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Blue / Medium</text>
+  <text x="1070" y="495" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="23">Selected by the shopper</text>
+  <rect x="1035" y="555" width="350" height="72" rx="18" fill="#facc15"/>
+  <text x="1210" y="603" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">SOLD OUT</text>
+
+  <text x="150" y="755" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Trace the exact variant through fulfilment, market, shipping, and theme output.</text>
+</svg>

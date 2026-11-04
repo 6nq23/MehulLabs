@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify availability context decision flow</title>
+  <desc id="desc">A left-to-right flow checks the exact variant, available inventory, online fulfilment location, market and shipping eligibility, then storefront output.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="110" y="125" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Trace the shopper's availability context</text>
+  <text x="110" y="177" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="28">Stop at the first check that contradicts the intended sale.</text>
+
+  <path d="M235 390 H1365" fill="none" stroke="#707178" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1338 365 L1368 390 L1338 415" fill="none" stroke="#707178" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="90" y="275" width="250" height="230" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <circle cx="215" cy="315" r="24" fill="#facc15"/>
+    <text x="215" y="324" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">A</text>
+    <text x="215" y="380" text-anchor="middle" fill="#131313" font-size="29" font-weight="700">Exact variant</text>
+    <text x="215" y="423" text-anchor="middle" fill="#707178" font-size="23">Same option and</text>
+    <text x="215" y="455" text-anchor="middle" fill="#707178" font-size="23">submitted variant ID</text>
+
+    <rect x="380" y="275" width="250" height="230" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <circle cx="505" cy="315" r="24" fill="#facc15"/>
+    <text x="505" y="324" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">B</text>
+    <text x="505" y="380" text-anchor="middle" fill="#131313" font-size="29" font-weight="700">Available stock</text>
+    <text x="505" y="423" text-anchor="middle" fill="#707178" font-size="23">Not committed, held,</text>
+    <text x="505" y="455" text-anchor="middle" fill="#707178" font-size="23">or merely incoming</text>
+
+    <rect x="670" y="275" width="250" height="230" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <circle cx="795" cy="315" r="24" fill="#facc15"/>
+    <text x="795" y="324" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">C</text>
+    <text x="795" y="380" text-anchor="middle" fill="#131313" font-size="29" font-weight="700">Online location</text>
+    <text x="795" y="423" text-anchor="middle" fill="#707178" font-size="23">Eligible to fulfil</text>
+    <text x="795" y="455" text-anchor="middle" fill="#707178" font-size="23">Online Store orders</text>
+
+    <rect x="960" y="275" width="250" height="230" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <circle cx="1085" cy="315" r="24" fill="#facc15"/>
+    <text x="1085" y="324" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">D</text>
+    <text x="1085" y="370" text-anchor="middle" fill="#131313" font-size="27" font-weight="700">Market +</text>
+    <text x="1085" y="403" text-anchor="middle" fill="#131313" font-size="27" font-weight="700">shipping</text>
+    <text x="1085" y="442" text-anchor="middle" fill="#707178" font-size="23">Catalog and country</text>
+    <text x="1085" y="474" text-anchor="middle" fill="#707178" font-size="23">Origin, zone, and rate</text>
+
+    <rect x="1250" y="275" width="250" height="230" rx="24" fill="#131313"/>
+    <circle cx="1375" cy="315" r="24" fill="#facc15"/>
+    <text x="1375" y="324" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">E</text>
+    <text x="1375" y="380" text-anchor="middle" fill="#f6f5f1" font-size="29" font-weight="700">Storefront output</text>
+    <text x="1375" y="423" text-anchor="middle" fill="#f6f5f1" font-size="23">Theme and apps show</text>
+    <text x="1375" y="455" text-anchor="middle" fill="#f6f5f1" font-size="23">the same final state</text>
+
+    <rect x="215" y="610" width="1170" height="125" rx="26" fill="#facc15"/>
+    <text x="800" y="660" text-anchor="middle" fill="#131313" font-size="28" font-weight="700">Decision rule</text>
+    <text x="800" y="706" text-anchor="middle" fill="#131313" font-size="26">Repair the earliest broken context, then retest the complete cart and checkout path.</text>
+  </g>
+</svg>
