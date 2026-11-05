@@ -4,7 +4,7 @@ draft: false
 title: "Inventory Reorder Points: A Practical Guide"
 description: "Calculate a reorder point in 3 steps using daily sales, lead time, and safety stock, then avoid the stockout and cash-flow mistakes a formula misses."
 publishedOn: "2026-09-15"
-updatedOn: "2026-10-22"
+updatedOn: "2026-11-05"
 category: "Inventory operations"
 author: "Mehul"
 readTime: "8 min read"
@@ -40,6 +40,8 @@ The reorder point is the on-hand or inventory-position level at which a replenis
 Shopify's *Reorder Point Formula: A Retailer's Guide* expresses the formula as sales velocity multiplied by lead time, plus safety stock. When safety stock is entered as days, the same relationship becomes daily sales multiplied by lead time plus buffer days.
 
 The trigger level and the quantity to purchase are different decisions, a split that [inventory planning software](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-handling-reordering-policies) also makes. Supplier minimums, case packs, demand forecasts, shelf life, storage, cash, and incoming purchase orders determine how much to buy.
+
+Once the trigger is defensible, a [Shopify low stock alert](/blog/shopify-low-stock-alert) can turn it into one owned notification without repeating the reorder calculation inside the workflow.
 
 ## How do you calculate a reorder point?
 

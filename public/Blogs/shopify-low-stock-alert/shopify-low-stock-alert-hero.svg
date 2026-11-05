@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify low stock alert control panel</title>
+  <desc id="desc">A low stock inventory card crosses a yellow threshold and routes an alert to an operations owner.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="110" y="135" font-size="56" font-weight="800">LOW STOCK, WITH A DECISION ATTACHED</text>
+    <text x="112" y="185" font-size="28" fill="#707178">Variant context → threshold crossing → named owner</text>
+
+    <rect x="110" y="260" width="650" height="455" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="155" y="320" font-size="26" font-weight="700">VARIANT INVENTORY</text>
+    <text x="155" y="375" font-size="34" font-weight="800">Blue / Large · WH-02</text>
+    <text x="155" y="425" font-size="24" fill="#707178">Available units</text>
+    <text x="155" y="505" font-size="72" font-weight="800">89</text>
+    <rect x="155" y="550" width="520" height="42" rx="21" fill="#707178" opacity="0.24"/>
+    <rect x="155" y="550" width="300" height="42" rx="21" fill="#facc15"/>
+    <line x1="468" y1="530" x2="468" y2="615" stroke="#131313" stroke-width="4"/>
+    <text x="420" y="655" font-size="24" font-weight="700">Threshold 90</text>
+
+    <path d="M790 485 H930" fill="none" stroke="#131313" stroke-width="6"/>
+    <path d="M930 485 L900 465 V505 Z" fill="#131313"/>
+
+    <rect x="965" y="275" width="525" height="420" rx="28" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <circle cx="1040" cy="355" r="34" fill="#131313"/>
+    <text x="1040" y="367" font-size="32" font-weight="800" text-anchor="middle" fill="#facc15">!</text>
+    <text x="1100" y="365" font-size="30" font-weight="800">THRESHOLD CROSSED</text>
+    <line x1="1020" y1="410" x2="1435" y2="410" stroke="#131313" stroke-width="3"/>
+    <text x="1020" y="465" font-size="25" font-weight="700">Owner</text>
+    <text x="1170" y="465" font-size="25">Buying team</text>
+    <text x="1020" y="520" font-size="25" font-weight="700">Action</text>
+    <text x="1170" y="520" font-size="25">Review reorder</text>
+    <text x="1020" y="575" font-size="25" font-weight="700">Context</text>
+    <text x="1170" y="575" font-size="25">SKU + location</text>
+    <rect x="1020" y="615" width="415" height="48" rx="24" fill="#131313"/>
+    <text x="1228" y="647" font-size="24" font-weight="700" text-anchor="middle" fill="#f6f5f1">ONE ALERT · ONE RESPONSE</text>
+
+    <text x="110" y="820" font-size="24" fill="#707178">Illustrative threshold shown for workflow design</text>
+  </g>
+</svg>
