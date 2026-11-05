@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify low stock threshold crossing flow</title>
+  <desc id="desc">A five-stage flow checks an inventory change, variant and location, threshold crossing, alert packet, and human decision.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="105" y="120" font-size="52" font-weight="800">THE ALERT IS A CONTROL LOOP</text>
+    <text x="108" y="168" font-size="26" fill="#707178">Detect the crossing once, then give the owner enough context to act.</text>
+
+    <g stroke="#131313" stroke-width="4">
+      <rect x="90" y="285" width="250" height="230" rx="24" fill="#f6f5f1"/>
+      <rect x="385" y="285" width="250" height="230" rx="24" fill="#f6f5f1"/>
+      <rect x="680" y="285" width="250" height="230" rx="24" fill="#facc15"/>
+      <rect x="975" y="285" width="250" height="230" rx="24" fill="#f6f5f1"/>
+      <rect x="1270" y="285" width="250" height="230" rx="24" fill="#f6f5f1"/>
+    </g>
+
+    <g font-size="22" font-weight="800">
+      <circle cx="135" cy="335" r="25" fill="#131313"/><text x="135" y="343" text-anchor="middle" fill="#f6f5f1">1</text>
+      <circle cx="430" cy="335" r="25" fill="#131313"/><text x="430" y="343" text-anchor="middle" fill="#f6f5f1">2</text>
+      <circle cx="725" cy="335" r="25" fill="#131313"/><text x="725" y="343" text-anchor="middle" fill="#facc15">3</text>
+      <circle cx="1020" cy="335" r="25" fill="#131313"/><text x="1020" y="343" text-anchor="middle" fill="#f6f5f1">4</text>
+      <circle cx="1315" cy="335" r="25" fill="#131313"/><text x="1315" y="343" text-anchor="middle" fill="#f6f5f1">5</text>
+    </g>
+
+    <g font-size="25" font-weight="800">
+      <text x="120" y="405">INVENTORY</text><text x="120" y="438">CHANGES</text>
+      <text x="415" y="405">MATCH SKU</text><text x="415" y="438">+ LOCATION</text>
+      <text x="710" y="405">CROSSES</text><text x="710" y="438">THRESHOLD?</text>
+      <text x="1005" y="405">SEND THE</text><text x="1005" y="438">CONTEXT</text>
+      <text x="1300" y="405">OWNER</text><text x="1300" y="438">DECIDES</text>
+    </g>
+    <g font-size="22" fill="#707178">
+      <text x="120" y="485">Order · app · edit</text>
+      <text x="415" y="485">Use sellable stock</text>
+      <text x="710" y="485" fill="#131313">Current ≤ limit</text>
+      <text x="1005" y="485">SKU · qty · link</text>
+      <text x="1300" y="485">Buy · move · hold</text>
+    </g>
+
+    <g fill="none" stroke="#131313" stroke-width="5">
+      <path d="M340 400 H375"/><path d="M375 400 L355 386 V414 Z" fill="#131313"/>
+      <path d="M635 400 H670"/><path d="M670 400 L650 386 V414 Z" fill="#131313"/>
+      <path d="M930 400 H965"/><path d="M965 400 L945 386 V414 Z" fill="#131313"/>
+      <path d="M1225 400 H1260"/><path d="M1260 400 L1240 386 V414 Z" fill="#131313"/>
+    </g>
+
+    <rect x="310" y="625" width="980" height="120" rx="24" fill="#131313"/>
+    <text x="800" y="676" font-size="28" font-weight="800" text-anchor="middle" fill="#f6f5f1">DUPLICATE GUARD</text>
+    <text x="800" y="716" font-size="24" text-anchor="middle" fill="#facc15">Previous quantity above threshold + current quantity at or below threshold</text>
+
+    <text x="105" y="835" font-size="23" fill="#707178">Illustrative workflow; adapt eligibility, location, and routing to the store.</text>
+  </g>
+</svg>
