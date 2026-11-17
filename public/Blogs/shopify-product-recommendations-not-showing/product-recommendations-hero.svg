@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify product recommendation diagnostic path</title>
+  <desc id="desc">A product card moves through intent, eligibility, API response, and theme rendering before appearing to a shopper.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="76" y="70" width="1448" height="760" rx="36" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <rect x="76" y="70" width="24" height="760" rx="12" fill="#facc15"/>
+  <text x="160" y="190" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">SHOPIFY STOREFRONT DIAGNOSTIC</text>
+  <text x="160" y="280" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Recommendations saved.</text>
+  <text x="160" y="354" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Why are they missing?</text>
+  <text x="160" y="430" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="28">Trace the first layer that fails.</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="160" y="525" width="252" height="150" rx="24" fill="#facc15" stroke="#131313" stroke-width="3"/>
+    <text x="286" y="588" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">INTENT</text>
+    <text x="286" y="626" text-anchor="middle" fill="#131313" font-size="22">Related or</text>
+    <text x="286" y="657" text-anchor="middle" fill="#131313" font-size="22">complementary?</text>
+    <path d="M420 600 H482" fill="none" stroke="#131313" stroke-width="5"/>
+    <path d="M468 586 L486 600 L468 614" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="494" y="525" width="252" height="150" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="620" y="588" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">ELIGIBILITY</text>
+    <text x="620" y="626" text-anchor="middle" fill="#707178" font-size="22">Active, published,</text>
+    <text x="620" y="657" text-anchor="middle" fill="#707178" font-size="22">priced, available</text>
+    <path d="M754 600 H816" fill="none" stroke="#131313" stroke-width="5"/>
+    <path d="M802 586 L820 600 L802 614" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="828" y="525" width="252" height="150" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <text x="954" y="588" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">API RESPONSE</text>
+    <text x="954" y="626" text-anchor="middle" fill="#707178" font-size="22">Products returned</text>
+    <text x="954" y="657" text-anchor="middle" fill="#707178" font-size="22">for this context?</text>
+    <path d="M1088 600 H1150" fill="none" stroke="#131313" stroke-width="5"/>
+    <path d="M1136 586 L1154 600 L1136 614" fill="none" stroke="#131313" stroke-width="5"/>
+    <rect x="1162" y="525" width="252" height="150" rx="24" fill="#131313" stroke="#131313" stroke-width="3"/>
+    <text x="1288" y="588" text-anchor="middle" fill="#facc15" font-size="24" font-weight="700">THEME RENDER</text>
+    <text x="1288" y="626" text-anchor="middle" fill="#f6f5f1" font-size="22">Correct template,</text>
+    <text x="1288" y="657" text-anchor="middle" fill="#f6f5f1" font-size="22">script, and card</text>
+  </g>
+  <text x="160" y="752" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="24">Stop where the evidence changes.</text>
+</svg>

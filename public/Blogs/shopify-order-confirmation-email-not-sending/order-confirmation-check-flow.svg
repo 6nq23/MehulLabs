@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Seven-check order confirmation email flow</title>
+  <desc id="desc">A seven-step horizontal flow checks the order, contact, timeline, template, delivery, inbox, and repeat test.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="90" y="112" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Find the first failed check</text>
+  <text x="90" y="162" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="27">Move left to right. Stop when the evidence breaks.</text>
+  <line x1="150" y1="426" x2="1450" y2="426" stroke="#707178" stroke-width="6"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="70" y="286" width="190" height="280" rx="28" fill="#131313"/>
+      <circle cx="165" cy="338" r="28" fill="#facc15"/>
+      <text x="165" y="348" fill="#131313" font-size="25" font-weight="700">1</text>
+      <text x="165" y="414" fill="#f6f5f1" font-size="28" font-weight="700">ORDER</text>
+      <text x="165" y="464" fill="#f6f5f1" font-size="23">Exists in</text>
+      <text x="165" y="494" fill="#f6f5f1" font-size="23">admin?</text>
+    </g>
+    <g>
+      <rect x="282" y="286" width="190" height="280" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <circle cx="377" cy="338" r="28" fill="#facc15"/>
+      <text x="377" y="348" fill="#131313" font-size="25" font-weight="700">2</text>
+      <text x="377" y="414" fill="#131313" font-size="28" font-weight="700">CONTACT</text>
+      <text x="377" y="464" fill="#707178" font-size="23">Email on</text>
+      <text x="377" y="494" fill="#707178" font-size="23">the order?</text>
+    </g>
+    <g>
+      <rect x="494" y="286" width="190" height="280" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <circle cx="589" cy="338" r="28" fill="#facc15"/>
+      <text x="589" y="348" fill="#131313" font-size="25" font-weight="700">3</text>
+      <text x="589" y="414" fill="#131313" font-size="28" font-weight="700">EVENT</text>
+      <text x="589" y="464" fill="#707178" font-size="23">Timeline</text>
+      <text x="589" y="494" fill="#707178" font-size="23">entry?</text>
+    </g>
+    <g>
+      <rect x="706" y="286" width="190" height="280" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <circle cx="801" cy="338" r="28" fill="#facc15"/>
+      <text x="801" y="348" fill="#131313" font-size="25" font-weight="700">4</text>
+      <text x="801" y="414" fill="#131313" font-size="28" font-weight="700">TEMPLATE</text>
+      <text x="801" y="464" fill="#707178" font-size="23">Test copy</text>
+      <text x="801" y="494" fill="#707178" font-size="23">renders?</text>
+    </g>
+    <g>
+      <rect x="918" y="286" width="190" height="280" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <circle cx="1013" cy="338" r="28" fill="#facc15"/>
+      <text x="1013" y="348" fill="#131313" font-size="25" font-weight="700">5</text>
+      <text x="1013" y="414" fill="#131313" font-size="28" font-weight="700">DELIVERY</text>
+      <text x="1013" y="464" fill="#707178" font-size="23">Resend has</text>
+      <text x="1013" y="494" fill="#707178" font-size="23">a result?</text>
+    </g>
+    <g>
+      <rect x="1130" y="286" width="190" height="280" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <circle cx="1225" cy="338" r="28" fill="#facc15"/>
+      <text x="1225" y="348" fill="#131313" font-size="25" font-weight="700">6</text>
+      <text x="1225" y="414" fill="#131313" font-size="28" font-weight="700">INBOX</text>
+      <text x="1225" y="464" fill="#707178" font-size="23">All folders</text>
+      <text x="1225" y="494" fill="#707178" font-size="23">searched?</text>
+    </g>
+    <g>
+      <rect x="1342" y="286" width="190" height="280" rx="28" fill="#facc15" stroke="#131313" stroke-width="4"/>
+      <circle cx="1437" cy="338" r="28" fill="#131313"/>
+      <text x="1437" y="348" fill="#facc15" font-size="25" font-weight="700">7</text>
+      <text x="1437" y="414" fill="#131313" font-size="28" font-weight="700">RETEST</text>
+      <text x="1437" y="464" fill="#131313" font-size="23">Fresh order</text>
+      <text x="1437" y="494" fill="#131313" font-size="23">passes?</text>
+    </g>
+  </g>
+  <rect x="320" y="650" width="960" height="112" rx="30" fill="#131313"/>
+  <text x="800" y="696" text-anchor="middle" fill="#facc15" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">OPERATOR RULE</text>
+  <text x="800" y="735" text-anchor="middle" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="27">One change. One fresh order. One recorded result.</text>
+</svg>

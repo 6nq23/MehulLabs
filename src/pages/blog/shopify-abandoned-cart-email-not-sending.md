@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Abandoned Cart Email Not Sending? Trace It"
 description: "Fix a Shopify abandoned cart email not sending by tracing checkout capture, eligibility, timing, delivery, and the recovery link in a controlled test."
 publishedOn: "2026-10-31"
-updatedOn: "2026-10-31"
+updatedOn: "2026-11-07"
 category: "AI marketing & automation"
 author: "Mehul"
 coverImage: "/Blogs/shopify-abandoned-cart-email-not-sending/shopify-abandoned-email-hero.svg"
@@ -14,6 +14,8 @@ coverImageAlt: "Abandoned checkout email moving through seven diagnostic checkpo
 A Shopify abandoned cart email not sending is usually a failure at one specific point: Shopify did not record the checkout, the customer was not eligible, the wait did not finish, the message did not send, or the inbox filtered it. Trace those states in order with one controlled checkout before changing the copy or adding another app.
 
 Shopify distinguishes an abandoned cart from an abandoned checkout. The cart automation targets someone who added a product but did not start checkout; the checkout automation targets someone who entered checkout but did not order. The wider [cart abandonment guide](/blog/cart-abandonment-2026) explains that funnel difference and the recovery options around it.
+
+If the order completed but its transactional message is missing, use the [Shopify order confirmation email checklist](/blog/shopify-order-confirmation-email-not-sending) instead of changing the recovery automation.
 
 <figure class="blog-feature-image"><img src="/Blogs/shopify-abandoned-cart-email-not-sending/shopify-abandoned-email-hero.svg" alt="Abandoned checkout email moving through seven diagnostic checkpoints" width="1600" height="900" fetchpriority="high" decoding="async"><figcaption>Trace the checkout record, trigger, audience, wait, send, delivery, and recovery link as separate states.</figcaption></figure>
 

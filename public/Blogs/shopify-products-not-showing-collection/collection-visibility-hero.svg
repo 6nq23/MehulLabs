@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify collection product visibility diagnostic</title>
+  <desc id="desc">A collection grid passes through membership, publication, market, and storefront checks before products become visible.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="90" y="80" width="1420" height="740" rx="42" fill="#131313"/>
+  <text x="150" y="180" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="700">Products missing from a collection?</text>
+  <text x="150" y="235" fill="#facc15" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">Find the first layer that removes them.</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="150" y="320" width="280" height="190" rx="24" fill="#f6f5f1"/>
+    <text x="190" y="385" fill="#131313" font-size="28" font-weight="700">Collection</text>
+    <text x="190" y="425" fill="#707178" font-size="24">Membership</text>
+    <rect x="190" y="460" width="150" height="14" rx="7" fill="#facc15"/>
+    <path d="M450 415h75" stroke="#facc15" stroke-width="12" stroke-linecap="round"/>
+    <path d="M505 390l28 25-28 25" fill="none" stroke="#facc15" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="550" y="320" width="280" height="190" rx="24" fill="#f6f5f1"/>
+    <text x="590" y="385" fill="#131313" font-size="28" font-weight="700">Product</text>
+    <text x="590" y="425" fill="#707178" font-size="24">Publication</text>
+    <rect x="590" y="460" width="150" height="14" rx="7" fill="#facc15"/>
+    <path d="M850 415h75" stroke="#facc15" stroke-width="12" stroke-linecap="round"/>
+    <path d="M905 390l28 25-28 25" fill="none" stroke="#facc15" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="950" y="320" width="280" height="190" rx="24" fill="#f6f5f1"/>
+    <text x="990" y="385" fill="#131313" font-size="28" font-weight="700">Market</text>
+    <text x="990" y="425" fill="#707178" font-size="24">Eligibility</text>
+    <rect x="990" y="460" width="150" height="14" rx="7" fill="#facc15"/>
+    <path d="M1250 415h75" stroke="#facc15" stroke-width="12" stroke-linecap="round"/>
+    <path d="M1305 390l28 25-28 25" fill="none" stroke="#facc15" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1350" y="320" width="100" height="190" rx="24" fill="#facc15"/>
+    <path d="M1380 410l17 18 31-38" fill="none" stroke="#131313" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="150" y="625" fill="#f6f5f1" font-size="36" font-weight="700">One product. Two URLs. One controlled test.</text>
+    <text x="150" y="685" fill="#707178" font-size="25">Compare the direct product page with the plain collection URL.</text>
+    <rect x="150" y="730" width="650" height="12" rx="6" fill="#facc15"/>
+  </g>
+</svg>

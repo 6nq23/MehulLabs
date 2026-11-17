@@ -4,7 +4,7 @@ draft: false
 title: "Ecommerce Return Rate Formula: A Worked Example"
 description: "Use the ecommerce return rate formula correctly across orders, units, and revenue, with a worked example and a cohort method that avoids timing errors."
 publishedOn: "2026-11-03"
-updatedOn: "2026-11-03"
+updatedOn: "2026-11-14"
 category: "COD & order operations"
 author: "Mehul"
 coverImage: "/Blogs/ecommerce-return-rate-formula/ecommerce-return-rate-formula-hero.svg"
@@ -28,6 +28,8 @@ Use a physical-return numerator when the question is about products coming back.
 Labels matter.
 
 Do not call a refund rate a return rate. Shopify's [returns and exchanges guidance](https://help.shopify.com/en/manual/fulfillment/managing-orders/returns/creating-returns) explains that a refund without a return does not record a return reason, while a processed return can include exchange items, fees, money refunded, or money collected. Those are related events, not interchangeable ones.
+
+When the money movement itself stalls, use the [Shopify refund pending checks](/blog/shopify-refund-pending) to separate provider processing from a customer-bank delay before changing the return record.
 
 ## Choose the denominator before comparing results
 

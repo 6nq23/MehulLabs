@@ -4,7 +4,7 @@ draft: false
 title: "Free Shipping Threshold: A Profit-First Formula"
 description: "Calculate a free shipping threshold from order value, margin and delivery cost, then test it across markets without giving away profit on every order."
 publishedOn: "2026-10-20"
-updatedOn: "2026-10-20"
+updatedOn: "2026-11-17"
 category: "Ecommerce profit & finance"
 author: "Mehul"
 coverImage: "/Blogs/free-shipping-threshold/free-shipping-threshold-hero.svg"
@@ -74,6 +74,8 @@ Average order value describes past baskets. It does not tell you whether the nex
 - **Parcel check:** recalculate packaging, weight, dimensional weight and pick-and-pack cost for those baskets.
 - **Discount check:** test the threshold after product and order discounts. Shopify's Help Center says price-based shipping tiers can offer free shipping above a minimum order value ([Shopify Help Center](https://help.shopify.com/en/manual/fulfillment/setup/shipping-rates/setting-up-shipping-rates)). It also warns that a gap between tiers can leave the shopper with no rate at checkout.
 - **Returns check:** reserve for refunds, exchanges and failed deliveries using the rate that fits the products in the larger basket.
+
+If the expected rate vanishes at checkout, use the [Shopify shipping rates diagnostic](/blog/shopify-shipping-rates-not-showing) to isolate the cart, address, profile, location and provider before changing the threshold.
 
 If the candidate fails only for heavy or remote orders, do not inflate the threshold for everyone. A separate shipping profile, product rule or regional rate can preserve a simple promise for the profitable core.
 
