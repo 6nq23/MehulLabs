@@ -4,7 +4,7 @@ draft: false
 title: "RTO Costs: A Practical Guide for Ecommerce"
 description: "Learn the 4-part RTO cost formula, model COD and prepaid returns separately, and find the delivery failures that are draining ecommerce profit."
 publishedOn: "2026-09-13"
-updatedOn: "2026-10-19"
+updatedOn: "2026-11-16"
 category: "COD & order operations"
 author: "Mehul"
 readTime: "8 min read"
@@ -38,6 +38,8 @@ Putting a number on that cost shows where confirmation, address quality, courier
 RTO occurs when an ecommerce parcel is returned to the origin because delivery was not completed. Common causes include an incorrect or incomplete address, a customer [refusing the shipment, repeated failed attempts](https://pe.usps.com/text/dmm300/507.htm), inability to contact the customer, a delayed delivery, or a courier serviceability problem.
 
 RTO is different from a normal post-delivery return. In an RTO event, the customer usually never accepts the parcel. That matters because payment collection, return reasons, inventory condition, and courier charges can all differ.
+
+When a parcel appears stuck before delivery, use the [Shopify order tracking handoff test](/blog/shopify-order-tracking-not-updating) to separate carrier silence from a stale storefront status before classifying it as a failed delivery.
 
 The unit to count is a settled order outcome.
 

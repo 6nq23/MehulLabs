@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Collection visibility troubleshooting flow</title>
+  <desc id="desc">A flow checks collection membership, publication, market, clean URL, clean theme, and app code in sequence.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="100" y="105" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700">Stop at the first failed visibility gate</text>
+  <text x="100" y="155" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="25">Later layers cannot restore a product removed upstream.</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="100" y="230" width="380" height="140" rx="24" fill="#131313"/>
+    <text x="140" y="285" fill="#facc15" font-size="23" font-weight="700">ADMIN</text>
+    <text x="140" y="330" fill="#f6f5f1" font-size="30" font-weight="700">Collection membership</text>
+    <path d="M500 300h90" stroke="#707178" stroke-width="10" stroke-linecap="round"/>
+    <path d="M570 278l25 22-25 22" fill="none" stroke="#707178" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="610" y="230" width="380" height="140" rx="24" fill="#131313"/>
+    <text x="650" y="285" fill="#facc15" font-size="23" font-weight="700">PRODUCT</text>
+    <text x="650" y="330" fill="#f6f5f1" font-size="30" font-weight="700">Status and publishing</text>
+    <path d="M1010 300h90" stroke="#707178" stroke-width="10" stroke-linecap="round"/>
+    <path d="M1080 278l25 22-25 22" fill="none" stroke="#707178" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1120" y="230" width="380" height="140" rx="24" fill="#131313"/>
+    <text x="1160" y="285" fill="#facc15" font-size="23" font-weight="700">AUDIENCE</text>
+    <text x="1160" y="330" fill="#f6f5f1" font-size="30" font-weight="700">Market availability</text>
+    <path d="M1310 390v70" stroke="#707178" stroke-width="10" stroke-linecap="round"/>
+    <path d="M1288 440l22 25 22-25" fill="none" stroke="#707178" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1120" y="485" width="380" height="140" rx="24" fill="#131313"/>
+    <text x="1160" y="540" fill="#facc15" font-size="23" font-weight="700">URL</text>
+    <text x="1160" y="585" fill="#f6f5f1" font-size="30" font-weight="700">No saved filters</text>
+    <path d="M1100 555h-90" stroke="#707178" stroke-width="10" stroke-linecap="round"/>
+    <path d="M1030 533l-25 22 25 22" fill="none" stroke="#707178" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="610" y="485" width="380" height="140" rx="24" fill="#131313"/>
+    <text x="650" y="540" fill="#facc15" font-size="23" font-weight="700">THEME</text>
+    <text x="650" y="585" fill="#f6f5f1" font-size="30" font-weight="700">Clean preview passes</text>
+    <path d="M590 555h-90" stroke="#707178" stroke-width="10" stroke-linecap="round"/>
+    <path d="M520 533l-25 22 25 22" fill="none" stroke="#707178" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="100" y="485" width="380" height="140" rx="24" fill="#facc15"/>
+    <text x="140" y="540" fill="#131313" font-size="23" font-weight="700">RENDERING</text>
+    <text x="140" y="585" fill="#131313" font-size="30" font-weight="700">Inspect apps and code</text>
+    <rect x="100" y="710" width="1400" height="95" rx="22" fill="#131313"/>
+    <text x="145" y="770" fill="#f6f5f1" font-size="27" font-weight="600">PASS moves forward. FAIL assigns the repair to that layer.</text>
+  </g>
+</svg>

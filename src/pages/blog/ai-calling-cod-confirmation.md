@@ -4,7 +4,7 @@ draft: false
 title: "AI Calling for COD Orders: Cut RTO Without a Call Team"
 description: "COD orders returned at 58% in India's festive quarter vs under 15% for prepaid. See how AI calls and WhatsApp confirm COD orders before dispatch."
 publishedOn: "2026-10-04"
-updatedOn: "2026-10-19"
+updatedOn: "2026-11-08"
 category: "COD & order operations"
 author: "Mehul"
 readTime: "12 min read"
@@ -127,7 +127,7 @@ A working workflow has five stages: score the order, message on WhatsApp, call w
 
 ## Wiring the result into Shopify
 
-Shopify records COD as a manual payment method, and its [manual payments documentation](https://help.shopify.com/en/manual/payments/manual-payments) says these orders stay unpaid until the merchant marks them paid after collecting cash.
+Shopify records COD as a manual payment method, and its [manual payments documentation](https://help.shopify.com/en/manual/payments/manual-payments) says these orders stay unpaid until the merchant marks them paid after collecting cash. The [Shopify payment pending decision framework](/blog/shopify-payment-pending) separates that expected COD state from provider processing, payout delays and customer bank authorizations.
 
 That gives you a clean trigger. Every new order with a COD payment method enters the confirmation workflow.
 

@@ -4,7 +4,7 @@ draft: false
 title: "Bundle Pricing: A Practical Ecommerce Guide"
 description: "Use a 5-step bundle pricing model to protect margin, raise order value, and test discounts without confusing projected adoption with actual demand."
 publishedOn: "2026-09-19"
-updatedOn: "2026-10-28"
+updatedOn: "2026-11-06"
 category: "Shopify conversion"
 author: "Mehul"
 readTime: "8 min read"
@@ -36,6 +36,8 @@ The calculation begins with list value, discount, and total product cost. It end
 Bundle pricing offers two or more products together, often for less than their combined individual prices. Shopify Help Center's *Product bundles* describes bundles as multiple products sold together, including fixed bundles, multipacks, and mix-and-match offers.
 
 The commercial value can come from several places: a larger basket, better product discovery, lower acquisition cost per item, simpler selection, or movement of complementary inventory.
+
+If Shopify hides the complementary items you selected, use the [product recommendations troubleshooting path](/blog/shopify-product-recommendations-not-showing) before judging the offer.
 
 The discount itself is not the strategy. The offer must create a reason to buy the set.
 
