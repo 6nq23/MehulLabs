@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Discount Code Not Working? A Test Plan"
 description: "Shopify discount code not working? Use a controlled cart test to isolate dates, eligibility, stacking, market, channel, draft-order, and app failures."
 publishedOn: "2026-10-27"
-updatedOn: "2026-11-14"
+updatedOn: "2026-11-18"
 category: "Shopify conversion"
 author: "Mehul"
 coverImage: "/Blogs/shopify-discount-code-not-working/shopify-discount-code-failure-hero.svg"
@@ -88,6 +88,8 @@ Do not disable every automatic offer at once. Remove one competing discount, res
 ## Draft orders, links, themes, and apps
 
 Draft orders follow different rules. Shopify's [draft-order discount documentation](https://help.shopify.com/en/manual/fulfillment/managing-orders/create-orders/discounts) says customers cannot apply codes at checkout from a draft invoice or link by default. The merchant must enable that option for each draft. Shipping codes and Buy X get Y codes are not supported on draft orders.
+
+If the invoice itself is missing or its payment link fails, use the [Shopify draft order invoice handoff](/blog/shopify-draft-order-invoice) to separate email delivery from checkout access before changing the discount.
 
 Shareable links have their own boundary. Shopify says a native [shareable discount link](https://help.shopify.com/en/manual/discounts/managing-discounts) carries one active discount, and links for codes created by third-party apps cannot be generated from Shopify Admin. Verify the destination product qualifies and that redirects preserve the intended path.
 

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify draft order invoice handoff</title>
+  <desc id="desc">A saved draft order moves through invoice delivery and a checkout link toward a paid order.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="88" y="82" width="1424" height="736" rx="42" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+  <text x="146" y="166" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">DRAFT ORDER HANDOFF</text>
+  <text x="146" y="246" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">Did the invoice fail—or the checkout?</text>
+  <rect x="146" y="326" width="340" height="252" rx="28" fill="#131313"/>
+  <text x="188" y="390" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">SAVED DRAFT</text>
+  <rect x="188" y="426" width="154" height="98" rx="14" fill="#f6f5f1"/>
+  <line x1="210" y1="453" x2="320" y2="453" stroke="#707178" stroke-width="7" stroke-linecap="round"/>
+  <line x1="210" y1="479" x2="298" y2="479" stroke="#707178" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="401" cy="476" r="44" fill="#facc15"/>
+  <path d="M380 476L396 492L424 458" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M526 452H646" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+  <path d="M620 424L652 452L620 480" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="686" y="316" width="364" height="272" rx="30" fill="#facc15" stroke="#131313" stroke-width="5"/>
+  <text x="730" y="380" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">CUSTOMER ROUTE</text>
+  <path d="M748 425H988V520H748Z" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <path d="M748 425L868 494L988 425" fill="none" stroke="#131313" stroke-width="5" stroke-linejoin="round"/>
+  <text x="768" y="558" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="24">Email or copied link</text>
+  <path d="M1090 452H1200" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1174 424L1206 452L1174 480" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1240" y="326" width="214" height="252" rx="30" fill="#131313"/>
+  <circle cx="1347" cy="414" r="44" fill="#facc15"/>
+  <path d="M1326 414L1342 430L1372 396" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1283" y="510" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="800">PAID</text>
+  <text x="1269" y="548" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="24">order created</text>
+  <text x="146" y="690" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Trace the boundary:</text>
+  <text x="146" y="738" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="28">contact · delivery · link · checkout · payment</text>
+</svg>
