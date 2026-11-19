@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Sticky Add to Cart: Test Before You Ship"
 description: "Use this Shopify sticky add to cart test plan to catch variant, cart-drawer, mobile, accessibility and profit failures before a wider rollout."
 publishedOn: "2026-10-25"
-updatedOn: "2026-11-01"
+updatedOn: "2026-11-19"
 category: "Shopify conversion"
 author: "Mehul"
 coverImage: "/Blogs/shopify-sticky-add-to-cart/sticky-add-to-cart-hero.svg"
@@ -31,7 +31,7 @@ The [Shopify conversion audit checklist](/guides/shopify-conversion-audit-checkl
 
 Most failures come from treating the bar as a visual duplicate. Shopify's [product template documentation](https://shopify.dev/docs/storefronts/themes/architecture/templates/product/overview) explains that the product form can include a variant selector, quantity input, accelerated checkout buttons, and line-item properties. A sticky control must preserve the parts that affect the order.
 
-Watch for these mistakes:
+Watch for these mistakes. If the main control already fails, diagnose the [Shopify add to cart button not working](/blog/shopify-add-to-cart-not-working) before testing a sticky copy:
 
 - **Variant drift:** the main selector shows one size or colour while the sticky bar submits another variant.
 - **Quantity drift:** the shopper changes quantity in one control, but the other keeps its default.

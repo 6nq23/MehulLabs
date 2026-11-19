@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify add to cart diagnostic flow</title>
+  <desc id="desc">A flowchart routes button outcomes to browser, product state, request response, and cart feedback checks.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <text x="800" y="92" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">What happens after the click?</text>
+  <text x="800" y="137" text-anchor="middle" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="24">Follow the observed outcome instead of guessing at the cause.</text>
+
+  <g fill="none" stroke="#131313" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M800 272v74H270v72"/>
+    <path d="M800 346H620v72"/>
+    <path d="M800 346h180v72"/>
+    <path d="M800 346h530v72"/>
+  </g>
+  <g fill="#131313">
+    <path d="M255 402l15 24 15-24z"/>
+    <path d="M605 402l15 24 15-24z"/>
+    <path d="M965 402l15 24 15-24z"/>
+    <path d="M1315 402l15 24 15-24z"/>
+  </g>
+
+  <rect x="550" y="178" width="500" height="94" rx="22" fill="#facc15" stroke="#131313" stroke-width="4"/>
+  <text x="800" y="237" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Click ADD TO CART once</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="90" y="426" width="360" height="126" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="270" y="480" text-anchor="middle" fill="#131313" font-size="28" font-weight="700">No request</text>
+    <text x="270" y="520" text-anchor="middle" fill="#707178" font-size="23">Click handler or overlay</text>
+
+    <rect x="440" y="426" width="360" height="126" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="620" y="480" text-anchor="middle" fill="#131313" font-size="28" font-weight="700">Request rejected</text>
+    <text x="620" y="520" text-anchor="middle" fill="#707178" font-size="23">Variant or form payload</text>
+
+    <rect x="800" y="426" width="360" height="126" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="980" y="480" text-anchor="middle" fill="#131313" font-size="28" font-weight="700">Request succeeds</text>
+    <text x="980" y="520" text-anchor="middle" fill="#707178" font-size="23">Drawer or count stays stale</text>
+
+    <rect x="1150" y="426" width="360" height="126" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="1330" y="480" text-anchor="middle" fill="#131313" font-size="28" font-weight="700">Duplicate requests</text>
+    <text x="1330" y="520" text-anchor="middle" fill="#707178" font-size="23">Competing event handlers</text>
+
+    <rect x="90" y="640" width="360" height="126" rx="22" fill="#131313"/>
+    <text x="270" y="694" text-anchor="middle" fill="#f6f5f1" font-size="27" font-weight="700">Inspect Console</text>
+    <text x="270" y="734" text-anchor="middle" fill="#facc15" font-size="23">Test a fresh theme</text>
+
+    <rect x="440" y="640" width="360" height="126" rx="22" fill="#131313"/>
+    <text x="620" y="694" text-anchor="middle" fill="#f6f5f1" font-size="27" font-weight="700">Read the response</text>
+    <text x="620" y="734" text-anchor="middle" fill="#facc15" font-size="23">Verify the variant ID</text>
+
+    <rect x="800" y="640" width="360" height="126" rx="22" fill="#131313"/>
+    <text x="980" y="694" text-anchor="middle" fill="#f6f5f1" font-size="27" font-weight="700">Trace cart events</text>
+    <text x="980" y="734" text-anchor="middle" fill="#facc15" font-size="23">Check rendered sections</text>
+
+    <rect x="1150" y="640" width="360" height="126" rx="22" fill="#131313"/>
+    <text x="1330" y="694" text-anchor="middle" fill="#f6f5f1" font-size="27" font-weight="700">Remove one handler</text>
+    <text x="1330" y="734" text-anchor="middle" fill="#facc15" font-size="23">Re-test the exact path</text>
+  </g>
+  <g fill="none" stroke="#131313" stroke-width="5" stroke-linecap="round">
+    <path d="M270 552v72"/><path d="M620 552v72"/><path d="M980 552v72"/><path d="M1330 552v72"/>
+  </g>
+  <g fill="#131313">
+    <path d="M255 608l15 24 15-24z"/><path d="M605 608l15 24 15-24z"/><path d="M965 608l15 24 15-24z"/><path d="M1315 608l15 24 15-24z"/>
+  </g>
+</svg>
