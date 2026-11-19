@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify add to cart failure diagnosis</title>
+  <desc id="desc">A product card, add to cart button, and broken path leading to diagnostic layers for variant, request, and cart feedback.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="92" y="88" width="1416" height="724" rx="34" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <text x="150" y="176" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">The button is only the visible symptom</text>
+  <text x="150" y="225" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="26">Trace the purchase path before changing theme code.</text>
+
+  <rect x="150" y="300" width="430" height="390" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <rect x="188" y="340" width="354" height="126" rx="18" fill="#facc15"/>
+  <path d="M310 370h110l26 70H284z" fill="#131313"/>
+  <circle cx="323" cy="441" r="13" fill="#f6f5f1"/>
+  <circle cx="412" cy="441" r="13" fill="#f6f5f1"/>
+  <text x="188" y="520" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Product page</text>
+  <rect x="188" y="555" width="354" height="82" rx="14" fill="#131313"/>
+  <text x="365" y="607" text-anchor="middle" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">ADD TO CART</text>
+
+  <path d="M600 496h150" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+  <path d="M720 460l42 36-42 36" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="676" cy="496" r="34" fill="#facc15" stroke="#131313" stroke-width="4"/>
+  <path d="M660 480l32 32M692 480l-32 32" stroke="#131313" stroke-width="7" stroke-linecap="round"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="800" y="300" width="650" height="94" rx="18" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <circle cx="850" cy="347" r="20" fill="#facc15"/>
+    <text x="890" y="357" fill="#131313" font-size="28" font-weight="700">Variant state</text>
+    <text x="1110" y="357" fill="#707178" font-size="24">Is the selected item sellable?</text>
+
+    <rect x="800" y="420" width="650" height="94" rx="18" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <circle cx="850" cy="467" r="20" fill="#facc15"/>
+    <text x="890" y="477" fill="#131313" font-size="28" font-weight="700">Cart request</text>
+    <text x="1094" y="477" fill="#707178" font-size="24">Did the endpoint accept it?</text>
+
+    <rect x="800" y="540" width="650" height="94" rx="18" fill="#f6f5f1" stroke="#131313" stroke-width="3"/>
+    <circle cx="850" cy="587" r="20" fill="#facc15"/>
+    <text x="890" y="597" fill="#131313" font-size="28" font-weight="700">Cart feedback</text>
+    <text x="1098" y="597" fill="#707178" font-size="24">Did the shopper see the result?</text>
+  </g>
+  <text x="800" y="704" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Observe → isolate → fix → re-test</text>
+</svg>
