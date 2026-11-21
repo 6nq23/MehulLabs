@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify checkout button handoff</title>
+  <desc id="desc">A cart interface passes a tested order through a checkout button into Shopify hosted checkout.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="110" y="128" font-size="34" font-weight="700" letter-spacing="3">SHOPIFY CHECKOUT BUTTON</text>
+    <text x="110" y="202" font-size="64" font-weight="800">Find the broken handoff</text>
+    <text x="110" y="254" font-size="26" fill="#707178">Cart interface → submit control → hosted checkout</text>
+
+    <rect x="110" y="340" width="390" height="360" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+    <text x="155" y="405" font-size="25" font-weight="700">CART</text>
+    <rect x="155" y="448" width="300" height="54" rx="10" fill="#131313"/>
+    <text x="180" y="483" font-size="22" fill="#f6f5f1">Product + variant</text>
+    <rect x="155" y="524" width="300" height="54" rx="10" fill="#131313"/>
+    <text x="180" y="559" font-size="22" fill="#f6f5f1">Quantity + market</text>
+    <rect x="155" y="600" width="300" height="54" rx="10" fill="#131313"/>
+    <text x="180" y="635" font-size="22" fill="#f6f5f1">Required controls</text>
+
+    <path d="M500 520 H665" stroke="#131313" stroke-width="10" stroke-linecap="round"/>
+    <path d="M635 490 L675 520 L635 550" fill="none" stroke="#131313" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="675" y="410" width="290" height="220" rx="34" fill="#facc15" stroke="#131313" stroke-width="6"/>
+    <text x="820" y="482" font-size="24" font-weight="700" text-anchor="middle">CHECKOUT</text>
+    <text x="820" y="528" font-size="24" font-weight="700" text-anchor="middle">BUTTON</text>
+    <text x="820" y="576" font-size="22" text-anchor="middle">submit + redirect</text>
+
+    <path d="M965 520 H1130" stroke="#131313" stroke-width="10" stroke-linecap="round"/>
+    <path d="M1100 490 L1140 520 L1100 550" fill="none" stroke="#131313" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="1140" y="340" width="350" height="360" rx="28" fill="#131313"/>
+    <text x="1190" y="405" font-size="25" font-weight="700" fill="#facc15">HOSTED CHECKOUT</text>
+    <rect x="1190" y="448" width="250" height="54" rx="10" fill="#f6f5f1"/>
+    <text x="1215" y="483" font-size="22">Contact</text>
+    <rect x="1190" y="524" width="250" height="54" rx="10" fill="#f6f5f1"/>
+    <text x="1215" y="559" font-size="22">Delivery</text>
+    <rect x="1190" y="600" width="250" height="54" rx="10" fill="#f6f5f1"/>
+    <text x="1215" y="635" font-size="22">Payment</text>
+
+    <text x="110" y="798" font-size="24" font-weight="700">Test one fixed cart. Follow the first failed transition.</text>
+    <circle cx="1460" cy="790" r="18" fill="#facc15" stroke="#131313" stroke-width="4"/>
+  </g>
+</svg>
