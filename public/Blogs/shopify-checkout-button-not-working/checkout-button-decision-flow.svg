@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Checkout button failure decision flow</title>
+  <desc id="desc">A flowchart routes a failed Shopify checkout button test to cart interface, form, theme or app, and hosted checkout owners.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="90" y="92" font-size="42" font-weight="800">Follow the first failed handoff</text>
+    <text x="90" y="138" font-size="24" fill="#707178">Keep the cart fixed while each test removes one possible owner.</text>
+
+    <rect x="90" y="210" width="300" height="120" rx="22" fill="#facc15" stroke="#131313" stroke-width="5"/>
+    <text x="240" y="262" font-size="24" font-weight="700" text-anchor="middle">PRESS CHECKOUT</text>
+    <text x="240" y="300" font-size="22" text-anchor="middle">one fixed cart</text>
+
+    <path d="M390 270 H500" stroke="#131313" stroke-width="7"/>
+    <path d="M478 250 L505 270 L478 290" fill="none" stroke="#131313" stroke-width="7" stroke-linejoin="round"/>
+
+    <rect x="505" y="210" width="300" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+    <text x="655" y="258" font-size="24" font-weight="700" text-anchor="middle">BUTTON RECEIVES</text>
+    <text x="655" y="296" font-size="24" font-weight="700" text-anchor="middle">THE CLICK?</text>
+
+    <path d="M655 330 V410" stroke="#131313" stroke-width="7"/>
+    <text x="675" y="380" font-size="22" font-weight="700">NO</text>
+    <rect x="505" y="410" width="300" height="150" rx="22" fill="#131313"/>
+    <text x="655" y="460" font-size="24" font-weight="700" fill="#facc15" text-anchor="middle">CART INTERFACE</text>
+    <text x="655" y="500" font-size="22" fill="#f6f5f1" text-anchor="middle">overlay · disabled state</text>
+    <text x="655" y="534" font-size="22" fill="#f6f5f1" text-anchor="middle">required control</text>
+
+    <path d="M805 270 H915" stroke="#131313" stroke-width="7"/>
+    <path d="M893 250 L920 270 L893 290" fill="none" stroke="#131313" stroke-width="7" stroke-linejoin="round"/>
+    <text x="846" y="245" font-size="22" font-weight="700">YES</text>
+
+    <rect x="920" y="210" width="300" height="120" rx="22" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+    <text x="1070" y="258" font-size="24" font-weight="700" text-anchor="middle">FORM SUBMITS OR</text>
+    <text x="1070" y="296" font-size="24" font-weight="700" text-anchor="middle">NAVIGATES?</text>
+
+    <path d="M1070 330 V410" stroke="#131313" stroke-width="7"/>
+    <text x="1090" y="380" font-size="22" font-weight="700">NO</text>
+    <rect x="920" y="410" width="300" height="150" rx="22" fill="#131313"/>
+    <text x="1070" y="460" font-size="24" font-weight="700" fill="#facc15" text-anchor="middle">THEME OR APP</text>
+    <text x="1070" y="500" font-size="22" fill="#f6f5f1" text-anchor="middle">form · script · callback</text>
+    <text x="1070" y="534" font-size="22" fill="#f6f5f1" text-anchor="middle">drawer state</text>
+
+    <path d="M1220 270 H1325" stroke="#131313" stroke-width="7"/>
+    <path d="M1303 250 L1330 270 L1303 290" fill="none" stroke="#131313" stroke-width="7" stroke-linejoin="round"/>
+    <text x="1260" y="245" font-size="22" font-weight="700">YES</text>
+
+    <rect x="1330" y="210" width="180" height="350" rx="22" fill="#facc15" stroke="#131313" stroke-width="5"/>
+    <text x="1420" y="270" font-size="23" font-weight="700" text-anchor="middle">HOSTED</text>
+    <text x="1420" y="305" font-size="23" font-weight="700" text-anchor="middle">CHECKOUT</text>
+    <line x1="1365" y1="345" x2="1475" y2="345" stroke="#131313" stroke-width="4"/>
+    <text x="1420" y="395" font-size="22" text-anchor="middle">status</text>
+    <text x="1420" y="435" font-size="22" text-anchor="middle">inventory</text>
+    <text x="1420" y="475" font-size="22" text-anchor="middle">delivery</text>
+    <text x="1420" y="515" font-size="22" text-anchor="middle">payment</text>
+
+    <rect x="90" y="655" width="1420" height="120" rx="22" fill="#f6f5f1" stroke="#707178" stroke-width="4"/>
+    <text x="135" y="710" font-size="25" font-weight="700">RELEASE RULE</text>
+    <text x="135" y="750" font-size="23">Re-test cart page + drawer, mobile + desktop, guest + signed-in, and every important market.</text>
+  </g>
+</svg>

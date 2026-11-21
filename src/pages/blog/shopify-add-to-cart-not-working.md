@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Add to Cart Button Not Working? Fix It"
 description: "Fix a Shopify add to cart button not working by tracing browser, variant, product form, cart request, app and theme failures in the right order."
 publishedOn: "2026-11-19"
-updatedOn: "2026-11-19"
+updatedOn: "2026-11-21"
 category: "Shopify conversion"
 author: "Mehul"
 coverImage: "/Blogs/shopify-add-to-cart-not-working/add-to-cart-failure-hero.svg"
@@ -14,6 +14,8 @@ coverImageAlt: "Shopify product page with a broken add to cart path"
 If your Shopify add to cart button is not working, first determine whether the click fails, the cart request fails, or the cart updates without visible feedback. Test one affected product in a private window and an unmodified theme preview; that split usually tells you where to investigate next.
 
 Do not start by pasting replacement code. A generic snippet can hide the symptom while leaving the wrong variant, a broken app event, or a stale cart drawer in place.
+
+If the correct item reaches the cart but its final purchase control fails, use the [Shopify checkout button handoff test](/blog/shopify-checkout-button-not-working) instead of repeating product-form changes.
 
 <figure class="blog-feature-image"><img src="/Blogs/shopify-add-to-cart-not-working/add-to-cart-failure-hero.svg" alt="Shopify product page with a broken add to cart path" width="1600" height="900" fetchpriority="high" decoding="async"><figcaption>A useful diagnosis follows the purchase path from click to variant, request, cart state, and visible feedback.</figcaption></figure>
 
