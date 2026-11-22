@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Payment method visibility decision flow</title>
+  <desc id="desc">A flow routes a missing checkout payment method through payment-step access, provider state, global visibility, and market or customer context checks.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="800" y="75" text-anchor="middle" font-size="54" font-weight="800">Trace the first failed boundary</text>
+    <text x="800" y="120" text-anchor="middle" font-size="25" fill="#707178">Do not change gateways until the missing context is reproducible.</text>
+
+    <rect x="590" y="160" width="420" height="92" rx="22" fill="#131313"/>
+    <text x="800" y="218" text-anchor="middle" font-size="28" font-weight="700" fill="#f6f5f1">Does the payment step load?</text>
+
+    <path d="M590 206H400V330" fill="none" stroke="#707178" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="470" y="190" font-size="23" font-weight="700" fill="#707178">NO</text>
+    <rect x="160" y="330" width="480" height="118" rx="22" fill="#facc15"/>
+    <text x="400" y="378" text-anchor="middle" font-size="27" font-weight="800">Fix the earlier checkout step</text>
+    <text x="400" y="414" text-anchor="middle" font-size="23">Shipping, cart, or checkout access</text>
+
+    <path d="M800 252V330" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+    <text x="820" y="302" font-size="23" font-weight="700">YES</text>
+    <rect x="680" y="330" width="520" height="118" rx="22" fill="#131313"/>
+    <text x="940" y="378" text-anchor="middle" font-size="27" font-weight="700" fill="#f6f5f1">Is the primary provider active?</text>
+    <text x="940" y="414" text-anchor="middle" font-size="23" fill="#f6f5f1">No hold, warning, or unfinished setup</text>
+
+    <path d="M1200 389H1390V520" fill="none" stroke="#707178" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1260" y="372" font-size="23" font-weight="700" fill="#707178">NO</text>
+    <rect x="1130" y="520" width="380" height="118" rx="22" fill="#facc15"/>
+    <text x="1320" y="568" text-anchor="middle" font-size="27" font-weight="800">Resolve provider state</text>
+    <text x="1320" y="604" text-anchor="middle" font-size="23">Activation, setup, or account</text>
+
+    <path d="M940 448V520" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+    <text x="960" y="494" font-size="23" font-weight="700">YES</text>
+    <rect x="680" y="520" width="420" height="118" rx="22" fill="#131313"/>
+    <text x="890" y="568" text-anchor="middle" font-size="27" font-weight="700" fill="#f6f5f1">Missing for every shopper?</text>
+    <text x="890" y="604" text-anchor="middle" font-size="23" fill="#f6f5f1">Use the fixed cart matrix</text>
+
+    <path d="M680 579H520V710" fill="none" stroke="#707178" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="600" y="562" font-size="23" font-weight="700" fill="#707178">YES</text>
+    <rect x="250" y="710" width="540" height="118" rx="22" fill="#facc15"/>
+    <text x="520" y="758" text-anchor="middle" font-size="27" font-weight="800">Audit method and customization</text>
+    <text x="520" y="794" text-anchor="middle" font-size="23">Activation, provider, hide, or rename rule</text>
+
+    <path d="M890 638V710" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+    <text x="910" y="684" font-size="23" font-weight="700">NO</text>
+    <rect x="830" y="710" width="540" height="118" rx="22" fill="#facc15"/>
+    <text x="1100" y="758" text-anchor="middle" font-size="27" font-weight="800">Compare shopper context</text>
+    <text x="1100" y="794" text-anchor="middle" font-size="23">Market, currency, entity, login, device</text>
+  </g>
+</svg>
+

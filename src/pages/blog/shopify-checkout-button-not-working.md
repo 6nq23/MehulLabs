@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Checkout Button Not Working? Find the Break"
 description: "Shopify checkout button not working? Use a controlled cart test to isolate button, theme, app, device, redirect, and hosted checkout failures."
 publishedOn: "2026-11-21"
-updatedOn: "2026-11-21"
+updatedOn: "2026-11-23"
 category: "Shopify conversion"
 author: "Mehul"
 coverImage: "/Blogs/shopify-checkout-button-not-working/checkout-handoff-hero.svg"
@@ -31,6 +31,8 @@ Then classify what the shopper sees:
 | One device or market fails | Browser, privacy control, locale, market-specific app rule |
 
 This distinction matters. A payment error after checkout loads is not a checkout-button failure. Shopify's [checkout payment troubleshooting](https://help.shopify.com/en/manual/checkout-settings/troubleshooting-checkout-payments) directs payment failures to the abandoned checkout or order timeline, while a dead button leaves the shopper in the cart.
+
+If checkout loads but an expected card, wallet, or local option is absent, use the [Shopify payment-method visibility matrix](/blog/shopify-payment-methods-not-showing) before changing the cart or theme.
 
 ## Separate the cart from hosted checkout
 
