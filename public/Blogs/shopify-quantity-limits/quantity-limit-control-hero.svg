@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify quantity limit control comparison</title>
+  <desc id="desc">Three control cards compare a storewide per-variant cap, B2B catalog rules, and conditional checkout validation.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="100" y="118" font-size="60" font-weight="800">One rule. Three control layers.</text>
+    <text x="100" y="170" font-size="28" fill="#707178">Match the enforcement method to the rule's scope.</text>
+
+    <rect x="100" y="245" width="430" height="500" rx="30" fill="#131313"/>
+    <circle cx="165" cy="320" r="34" fill="#facc15"/>
+    <text x="165" y="331" text-anchor="middle" font-size="28" font-weight="800">1</text>
+    <text x="220" y="330" font-size="31" font-weight="800" fill="#f6f5f1">Storewide cap</text>
+    <text x="145" y="405" font-size="25" fill="#f6f5f1">Same maximum</text>
+    <text x="145" y="440" font-size="25" fill="#f6f5f1">for eligible variants</text>
+    <rect x="145" y="515" width="340" height="92" rx="18" fill="#f6f5f1"/>
+    <text x="315" y="572" text-anchor="middle" font-size="28" font-weight="800">Native setting</text>
+    <text x="145" y="680" font-size="23" fill="#facc15">Fast, broad, per variant</text>
+
+    <rect x="585" y="245" width="430" height="500" rx="30" fill="#facc15"/>
+    <circle cx="650" cy="320" r="34" fill="#131313"/>
+    <text x="650" y="331" text-anchor="middle" font-size="28" font-weight="800" fill="#f6f5f1">2</text>
+    <text x="705" y="330" font-size="31" font-weight="800">B2B rules</text>
+    <text x="630" y="405" font-size="25">Minimum, maximum,</text>
+    <text x="630" y="440" font-size="25">and pack increment</text>
+    <rect x="630" y="515" width="340" height="92" rx="18" fill="#131313"/>
+    <text x="800" y="572" text-anchor="middle" font-size="28" font-weight="800" fill="#f6f5f1">Catalog rule</text>
+    <text x="630" y="680" font-size="23" font-weight="700">Variant-specific wholesale</text>
+
+    <rect x="1070" y="245" width="430" height="500" rx="30" fill="#131313"/>
+    <circle cx="1135" cy="320" r="34" fill="#facc15"/>
+    <text x="1135" y="331" text-anchor="middle" font-size="28" font-weight="800">3</text>
+    <text x="1190" y="330" font-size="31" font-weight="800" fill="#f6f5f1">Conditional</text>
+    <text x="1115" y="405" font-size="25" fill="#f6f5f1">Product, customer,</text>
+    <text x="1115" y="440" font-size="25" fill="#f6f5f1">cart, or launch logic</text>
+    <rect x="1115" y="515" width="340" height="92" rx="18" fill="#f6f5f1"/>
+    <text x="1285" y="572" text-anchor="middle" font-size="27" font-weight="800">Validation rule</text>
+    <text x="1115" y="680" font-size="23" fill="#facc15">Precise, server enforced</text>
+
+    <text x="800" y="825" text-anchor="middle" font-size="27" font-weight="700">Define who, what, channel, and time window first.</text>
+  </g>
+</svg>

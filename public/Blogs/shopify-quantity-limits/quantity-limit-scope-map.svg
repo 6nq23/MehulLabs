@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify quantity limit scope decision flow</title>
+  <desc id="desc">A branching flow selects a native add-to-cart cap, B2B catalog rule, or checkout validation from the rule scope.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="90" y="105" font-size="56" font-weight="800">Choose by scope, not by widget</text>
+    <text x="90" y="154" font-size="27" fill="#707178">Start with the rule that checkout must enforce.</text>
+
+    <rect x="520" y="215" width="560" height="110" rx="26" fill="#131313"/>
+    <text x="800" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#facc15">RULE</text>
+    <text x="800" y="300" text-anchor="middle" font-size="28" font-weight="800" fill="#f6f5f1">Who can buy how many of what?</text>
+
+    <path d="M800 325V395M800 395H270V465M800 395V465M800 395H1330V465" fill="none" stroke="#707178" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="80" y="465" width="380" height="125" rx="24" fill="#facc15"/>
+    <text x="270" y="510" text-anchor="middle" font-size="25" font-weight="800">Same maximum</text>
+    <text x="270" y="548" text-anchor="middle" font-size="24">for every eligible</text>
+    <text x="270" y="580" text-anchor="middle" font-size="24">online-store variant?</text>
+
+    <rect x="610" y="465" width="380" height="125" rx="24" fill="#facc15"/>
+    <text x="800" y="510" text-anchor="middle" font-size="25" font-weight="800">B2B minimum, maximum,</text>
+    <text x="800" y="548" text-anchor="middle" font-size="24">or case-pack increment</text>
+    <text x="800" y="580" text-anchor="middle" font-size="24">by catalog variant?</text>
+
+    <rect x="1140" y="465" width="380" height="125" rx="24" fill="#facc15"/>
+    <text x="1330" y="510" text-anchor="middle" font-size="25" font-weight="800">Product, buyer, cart,</text>
+    <text x="1330" y="548" text-anchor="middle" font-size="24">channel, or launch</text>
+    <text x="1330" y="580" text-anchor="middle" font-size="24">condition changes?</text>
+
+    <path d="M270 590V660M800 590V660M1330 590V660" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+
+    <rect x="80" y="660" width="380" height="130" rx="24" fill="#131313"/>
+    <text x="270" y="712" text-anchor="middle" font-size="27" font-weight="800" fill="#f6f5f1">Native add-to-cart cap</text>
+    <text x="270" y="754" text-anchor="middle" font-size="23" fill="#facc15">Confirm documented exceptions</text>
+
+    <rect x="610" y="660" width="380" height="130" rx="24" fill="#131313"/>
+    <text x="800" y="712" text-anchor="middle" font-size="27" font-weight="800" fill="#f6f5f1">B2B catalog rule</text>
+    <text x="800" y="754" text-anchor="middle" font-size="23" fill="#facc15">Show rules on the product page</text>
+
+    <rect x="1140" y="660" width="380" height="130" rx="24" fill="#131313"/>
+    <text x="1330" y="712" text-anchor="middle" font-size="27" font-weight="800" fill="#f6f5f1">Checkout validation</text>
+    <text x="1330" y="754" text-anchor="middle" font-size="23" fill="#facc15">Keep storefront copy in sync</text>
+
+    <text x="800" y="850" text-anchor="middle" font-size="25" font-weight="700">Test below, at, and above every boundary.</text>
+  </g>
+</svg>
