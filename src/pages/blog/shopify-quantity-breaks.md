@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Quantity Breaks: Set Profitable Price Tiers"
 description: "Shopify quantity breaks can lift units per order without wrecking margin. Use this worked model to set tiers, choose a setup, and test the offer."
 publishedOn: "2026-10-28"
-updatedOn: "2026-10-28"
+updatedOn: "2026-11-23"
 category: "Shopify conversion"
 author: "Mehul"
 coverImage: "/Blogs/shopify-quantity-breaks/shopify-quantity-breaks-hero.svg"
@@ -58,6 +58,8 @@ This is the decision point. If the business requires at least 14 contribution pe
 ## Choose a setup that matches the offer
 
 Shopify gives merchants several routes, but they are not interchangeable.
+
+If the main question is enforcement rather than pricing, use the [Shopify quantity-limit scope test](/blog/shopify-quantity-limits) to choose between a storewide cap, B2B catalog rules, and checkout validation.
 
 | Requirement | Practical route | Main limitation to test |
 |---|---|---|
