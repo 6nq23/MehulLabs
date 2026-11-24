@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify cart state and drawer interface</title>
+  <desc id="desc">A server cart record passes through a section response into a storefront cart drawer, with checkpoints between each layer.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <rect x="90" y="82" width="1420" height="736" rx="34" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <text x="150" y="172" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">The cart can work while the drawer fails</text>
+  <text x="150" y="222" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="26">Compare state, returned markup, and the visible interface.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="145" y="315" width="350" height="330" rx="28" fill="#131313"/>
+    <text x="320" y="376" text-anchor="middle" fill="#facc15" font-size="29" font-weight="700">SERVER CART</text>
+    <rect x="195" y="420" width="250" height="70" rx="14" fill="#f6f5f1"/>
+    <text x="320" y="464" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">Correct line item</text>
+    <rect x="195" y="510" width="250" height="70" rx="14" fill="#f6f5f1"/>
+    <text x="320" y="554" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">Current totals</text>
+
+    <rect x="625" y="315" width="350" height="330" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="800" y="376" text-anchor="middle" fill="#131313" font-size="29" font-weight="700">SECTION RESPONSE</text>
+    <path d="M700 430h200M700 478h200M700 526h140" stroke="#707178" stroke-width="18" stroke-linecap="round"/>
+    <rect x="700" y="568" width="200" height="45" rx="12" fill="#facc15"/>
+    <text x="800" y="598" text-anchor="middle" fill="#131313" font-size="22" font-weight="700">HTML returned</text>
+
+    <rect x="1105" y="315" width="350" height="330" rx="28" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="1280" y="376" text-anchor="middle" fill="#131313" font-size="29" font-weight="700">CART DRAWER</text>
+    <rect x="1160" y="415" width="240" height="72" rx="14" fill="#facc15"/>
+    <text x="1280" y="460" text-anchor="middle" fill="#131313" font-size="24" font-weight="700">Visible item</text>
+    <rect x="1160" y="510" width="240" height="72" rx="14" fill="#131313"/>
+    <text x="1280" y="555" text-anchor="middle" fill="#f6f5f1" font-size="24" font-weight="700">CHECKOUT</text>
+  </g>
+
+  <g fill="none" stroke="#131313" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M510 480h92"/><path d="M575 452l32 28-32 28"/>
+    <path d="M990 480h92"/><path d="M1055 452l32 28-32 28"/>
+  </g>
+  <circle cx="558" cy="480" r="22" fill="#facc15" stroke="#131313" stroke-width="4"/>
+  <circle cx="1038" cy="480" r="22" fill="#facc15" stroke="#131313" stroke-width="4"/>
+  <text x="800" y="735" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Find the first layer where the states disagree.</text>
+</svg>
