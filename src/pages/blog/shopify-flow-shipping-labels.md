@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Flow Shipping Labels: A Safe Launch Checklist"
 description: "Shopify Flow can now buy shipping labels automatically. Use this 6-step checklist to test eligibility, weights, exceptions, billing, and alerts safely."
 publishedOn: "2026-10-16"
-updatedOn: "2026-10-19"
+updatedOn: "2026-11-25"
 category: "COD & order operations"
 author: "Mehul"
 readTime: "9 min read"
@@ -114,6 +114,8 @@ Check the origin, destination, service, package, total weight, ship date, price,
 Shopify keeps completed Flow runs for 14 days. The [workflow monitoring guide](https://help.shopify.com/en/manual/shopify-flow/manage/monitor) lets teams filter runs by errors, actions taken, trigger type, retries, time, and raw event text such as an order ID.
 
 Review the pilot daily. A completed run should match a label on the Shipping labels page. An error should have one owner, a documented cause, and a decision to fix, retry, or process the order manually. Shopify also supports a Workflow error occurred trigger for targeted notifications.
+
+If a manual or automated purchase fails, use the [shipping-label failure-stage map](/blog/shopify-shipping-label-not-working) to separate eligibility, carrier, billing, file, and printer problems before retrying.
 
 <!-- [UNIQUE INSIGHT] -->
 The success metric is not "workflow completed." It is "the correct label was purchased for the correct fulfillment at the expected cost, while every excluded order remained visible to a person."
