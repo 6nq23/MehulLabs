@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Two-cart automatic discount test</title>
+  <desc id="desc">A qualifying cart and a boundary cart pass through eligibility, combination, and checkout checks.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <path d="M110 130H1490" stroke="#131313" stroke-width="4"/>
+  <text x="110" y="92" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3">CONTROLLED PROMOTION TEST</text>
+  <text x="110" y="206" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">One offer. Two carts.</text>
+  <text x="110" y="264" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="30">Change one condition and find the first unexpected result.</text>
+
+  <rect x="110" y="340" width="540" height="390" rx="34" fill="#facc15" stroke="#131313" stroke-width="5"/>
+  <text x="155" y="402" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">QUALIFYING CONTROL</text>
+  <path d="M180 485H275L310 625H515L555 505H300" fill="none" stroke="#131313" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="345" cy="661" r="17" fill="#131313"/>
+  <circle cx="478" cy="661" r="17" fill="#131313"/>
+  <rect x="330" y="520" width="78" height="66" rx="10" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <rect x="423" y="544" width="70" height="42" rx="10" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <text x="155" y="706" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">Every required condition is present</text>
+
+  <path d="M690 530H820" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+  <path d="M795 505L825 530L795 555" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="850" y="340" width="640" height="390" rx="34" fill="#131313"/>
+  <text x="900" y="402" fill="#facc15" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">RULE CHECK</text>
+  <rect x="900" y="445" width="160" height="92" rx="18" fill="#f6f5f1"/>
+  <text x="980" y="482" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">ELIGIBLE</text>
+  <text x="980" y="513" text-anchor="middle" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="22">cart</text>
+  <rect x="1090" y="445" width="160" height="92" rx="18" fill="#f6f5f1"/>
+  <text x="1170" y="482" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">COMBINE</text>
+  <text x="1170" y="513" text-anchor="middle" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="22">offers</text>
+  <rect x="1280" y="445" width="160" height="92" rx="18" fill="#f6f5f1"/>
+  <text x="1360" y="482" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">VERIFY</text>
+  <text x="1360" y="513" text-anchor="middle" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="22">checkout</text>
+  <path d="M1062 491H1082M1252 491H1272" stroke="#facc15" stroke-width="6" stroke-linecap="round"/>
+  <rect x="900" y="584" width="540" height="92" rx="18" fill="#facc15"/>
+  <text x="1170" y="622" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">EXPECTED RESULT = EVIDENCE</text>
+  <text x="1170" y="654" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="22">Change one field only</text>
+
+  <text x="110" y="824" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">MlabsGrowth</text>
+  <text x="1490" y="824" text-anchor="end" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="24">Shopify automatic discount diagnostics</text>
+</svg>

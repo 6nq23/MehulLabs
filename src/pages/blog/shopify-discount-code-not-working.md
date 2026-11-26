@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Discount Code Not Working? A Test Plan"
 description: "Shopify discount code not working? Use a controlled cart test to isolate dates, eligibility, stacking, market, channel, draft-order, and app failures."
 publishedOn: "2026-10-27"
-updatedOn: "2026-11-18"
+updatedOn: "2026-11-26"
 category: "Shopify conversion"
 author: "Mehul"
 coverImage: "/Blogs/shopify-discount-code-not-working/shopify-discount-code-failure-hero.svg"
@@ -12,6 +12,8 @@ coverImageAlt: "Shopify discount code passing through a chain of checkout eligib
 ---
 
 When a Shopify discount code is not working, rebuild the failing checkout and test one rule at a time. Start with the exact error message, then check status, cart eligibility, customer, market, combinations, channel, and any app or draft-order path. Random edits make the failure harder to locate.
+
+If the offer should apply without a code, use the [Shopify automatic discount two-cart test](/blog/shopify-automatic-discount-not-working) to isolate eligibility, combinations, market rules, and app conflicts.
 
 If the customer entered stored value rather than a promotion, use the [Shopify gift card failure framework](/blog/shopify-gift-card-not-working) to check creation, delivery, balance, currency, and redemption instead.
 
