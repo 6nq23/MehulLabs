@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Order Confirmation Email Not Sending? 7 Checks"
 description: "Shopify order confirmation email not sending? Use seven checks to separate order creation, notification generation, delivery, and inbox placement."
 publishedOn: "2026-11-07"
-updatedOn: "2026-11-07"
+updatedOn: "2026-11-27"
 category: "COD & order operations"
 author: "Mehul"
 coverImage: "/Blogs/shopify-order-confirmation-email-not-sending/order-confirmation-email-hero.svg"
@@ -71,6 +71,8 @@ Finally, preview the order confirmation and send a test. Confirm the subject, bu
 An order confirmation is a transactional customer notification. An abandoned-checkout recovery or post-purchase campaign is a marketing automation with its own trigger, audience, wait, and delivery record.
 
 If the order completed, diagnose the native confirmation first. If the order did not complete, use the [abandoned cart email trace](/blog/shopify-abandoned-cart-email-not-sending) instead. Combining both problems under “email automation” leads teams to change the wrong workflow.
+
+If storefront contact enquiries are missing instead, follow the [Shopify contact form email handoff](/blog/shopify-contact-form-not-receiving-email) from submission state to Sender email and inbox delivery.
 
 Customer and staff messages also serve different recipients. A buyer can receive an order confirmation while the warehouse receives no new-order alert, or the reverse. Check the affected recipient and notification type before changing settings.
 
