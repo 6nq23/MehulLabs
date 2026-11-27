@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shopify contact form email handoff</title>
+  <desc id="desc">A contact message moves from a storefront form through Shopify and into the destination team inbox.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <path d="M110 132H1490" stroke="#131313" stroke-width="4"/>
+  <text x="110" y="94" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3">CONTACT FORM HANDOFF</text>
+  <text x="110" y="218" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Submission is not delivery.</text>
+  <text x="110" y="276" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="30">Prove each handoff before changing the next system.</text>
+
+  <rect x="110" y="360" width="380" height="300" rx="32" fill="#facc15" stroke="#131313" stroke-width="5"/>
+  <text x="300" y="420" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">STOREFRONT</text>
+  <rect x="175" y="465" width="250" height="130" rx="18" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+  <path d="M200 492L300 555L400 492" fill="none" stroke="#131313" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="300" y="628" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">Submit one control</text>
+
+  <path d="M515 510H650" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+  <path d="M620 483L655 510L620 537" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="680" y="360" width="300" height="300" rx="32" fill="#131313"/>
+  <text x="830" y="420" text-anchor="middle" fill="#facc15" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">SHOPIFY</text>
+  <circle cx="830" cy="520" r="68" fill="#f6f5f1"/>
+  <path d="M795 520L820 545L868 495" fill="none" stroke="#131313" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="628" text-anchor="middle" fill="#f6f5f1" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">Accepted or rejected</text>
+
+  <path d="M1005 510H1140" stroke="#131313" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1110 483L1145 510L1110 537" fill="none" stroke="#131313" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="1170" y="360" width="320" height="300" rx="32" fill="#f6f5f1" stroke="#131313" stroke-width="5"/>
+  <text x="1330" y="420" text-anchor="middle" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">TEAM INBOX</text>
+  <rect x="1225" y="472" width="210" height="118" rx="16" fill="#facc15" stroke="#131313" stroke-width="4"/>
+  <path d="M1248 498L1330 552L1412 498" fill="none" stroke="#131313" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1330" y="628" text-anchor="middle" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">Received and owned</text>
+
+  <rect x="110" y="720" width="1380" height="76" rx="18" fill="#131313"/>
+  <text x="800" y="769" text-anchor="middle" fill="#facc15" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800">THE FIRST FAILED HANDOFF OWNS THE NEXT TEST</text>
+  <text x="110" y="850" fill="#131313" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">MlabsGrowth</text>
+  <text x="1490" y="850" text-anchor="end" fill="#707178" font-family="Inter, Arial, sans-serif" font-size="24">Shopify contact form diagnostics</text>
+</svg>
