@@ -4,7 +4,7 @@ draft: false
 title: "Shopify Filters Not Showing? A Diagnostic Fix"
 description: "Shopify filters not showing? Diagnose theme settings, catalog data, platform limits, indexing, and market-specific failures in the right order."
 publishedOn: "2026-10-26"
-updatedOn: "2026-11-10"
+updatedOn: "2026-11-28"
 category: "Shopify conversion"
 author: "Mehul"
 coverImage: "/Blogs/shopify-filters-not-showing/shopify-filters-diagnostic-hero.svg"
@@ -33,6 +33,8 @@ Start with what the shopper sees. A missing filter panel, a missing value, an em
 If products are absent before any filter is applied, use the [collection visibility diagnostic](/blog/shopify-products-not-showing-collection) before changing filter settings.
 
 Shopify says only filters that apply to products in the current collection or search result are displayed in its [Search & Discovery filter documentation](https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters). A missing filter can therefore be correct behavior when the collection contains no usable values.
+
+If the whole search result is missing or irrelevant before a filter is applied, use the [Shopify storefront search diagnostic](/blog/shopify-search-not-working) before changing filter settings.
 
 ## The fastest diagnostic order
 
